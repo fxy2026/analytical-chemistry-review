@@ -1,0 +1,324 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十章 吸光光度法 | 分析化学1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<link rel="stylesheet" href="toc.css">
+<style>
+:root{--pri:#1a5276;--acc:#c0392b;--bg:#fffef9;--card:#fff;--border:#e0d8c8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);color:#333;line-height:1.9;padding:20px;max-width:1000px;margin:0 auto;}
+h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
+h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
+h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
+.sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
+.tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+table{width:100%;border-collapse:collapse;margin:12px 0;}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
+th{background:var(--pri);color:#fff;}
+tr:nth-child(even){background:#f9f7f2;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
+.nav-bar a:hover{background:#1a5276;color:#fff;}
+ul,ol{margin-left:20px;margin-bottom:8px;}
+details{margin:8px 0;}
+details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+</style>
+</head><body>
+
+<div class="nav-bar">
+  <a href="index.html">首页</a>
+  <a href="ch9.html">&larr; 第九章</a>
+  <a href="ch6.html">第六章</a>
+  <a href="ch7.html">第七章</a>
+</div>
+
+<h1>第十章 吸光光度法</h1>
+
+<!-- ==================== 10.1 ==================== -->
+<h2>10.1 光的吸收基础</h2>
+
+<div class="card">
+  <h3>电磁波谱</h3>
+  <table>
+    <tr><th>区域</th><th>波长范围</th><th>分析方法</th></tr>
+    <tr><td>紫外光 (UV)</td><td>200~400 nm</td><td>紫外分光光度法</td></tr>
+    <tr><td>可见光 (Vis)</td><td>400~760 nm</td><td>可见分光光度法</td></tr>
+    <tr><td>近红外</td><td>760~2500 nm</td><td>近红外光谱法</td></tr>
+    <tr><td>红外 (IR)</td><td>2.5~25 $\mu$m</td><td>红外光谱法</td></tr>
+  </table>
+
+  <h3>互补色</h3>
+  <p>物质呈现的颜色是它<strong>吸收光的互补色</strong>。</p>
+  <table>
+    <tr><th>吸收光颜色</th><th>吸收波长 / nm</th><th>呈现颜色（互补色）</th></tr>
+    <tr><td>紫</td><td>400~450</td><td>黄绿</td></tr>
+    <tr><td>蓝</td><td>450~480</td><td>黄</td></tr>
+    <tr><td>绿蓝</td><td>480~490</td><td>橙</td></tr>
+    <tr><td>蓝绿</td><td>490~500</td><td>红</td></tr>
+    <tr><td>绿</td><td>500~560</td><td>紫红</td></tr>
+    <tr><td>黄绿</td><td>560~580</td><td>紫</td></tr>
+    <tr><td>黄</td><td>580~600</td><td>蓝</td></tr>
+    <tr><td>橙</td><td>600~650</td><td>绿蓝</td></tr>
+    <tr><td>红</td><td>650~760</td><td>蓝绿</td></tr>
+  </table>
+
+  <h3>吸收光谱与 $\lambda_{max}$</h3>
+  <p>以波长 $\lambda$ 为横轴、吸光度 $A$ 为纵轴绘制的曲线即<strong>吸收光谱（吸收曲线）</strong>。</p>
+  <p>吸光度最大处对应的波长称为<strong>最大吸收波长 $\lambda_{max}$</strong>，在此波长下测量灵敏度最高。</p>
+
+  <div class="tip">$\lambda_{max}$ 是物质的特征值，可用于物质的定性鉴别。吸收光谱的形状和 $\lambda_{max}$ 与物质浓度无关。</div>
+</div>
+
+<!-- ==================== 10.2 ==================== -->
+<h2>10.2 Lambert-Beer 定律</h2>
+
+<div class="card">
+  <div class="fb">
+    <div class="t">Lambert-Beer 定律</div>
+    $$\boxed{A = \kappa bc = -\lg T}$$
+    <p>其中：</p>
+    <ul>
+      <li>$A$ --- 吸光度（absorbance），无量纲</li>
+      <li>$\kappa$ --- 摩尔吸光系数（$\text{L} \cdot \text{mol}^{-1} \cdot \text{cm}^{-1}$），与波长、物质性质和温度有关，与浓度无关</li>
+      <li>$b$ --- 光程（液层厚度），单位 cm</li>
+      <li>$c$ --- 浓度，单位 $\text{mol/L}$</li>
+      <li>$T$ --- 透射比（transmittance），$T = I/I_0$</li>
+    </ul>
+  </div>
+
+  <p><strong>吸光度的加和性</strong>：多组分混合体系中</p>
+  $$A_{总} = A_1 + A_2 + \cdots = \kappa_1 bc_1 + \kappa_2 bc_2 + \cdots$$
+  <p>这是多组分同时测定的理论基础。</p>
+
+  <div class="note">当浓度用 $\text{g/L}$ 表示时，比例系数称为<strong>吸光系数 $a$</strong>（单位 $\text{L} \cdot \text{g}^{-1} \cdot \text{cm}^{-1}$），与摩尔吸光系数关系：$\kappa = a \times M$。</div>
+</div>
+
+<!-- ==================== 10.3 ==================== -->
+<h2>10.3 灵敏度</h2>
+
+<div class="card">
+  <h3>摩尔吸光系数 $\kappa$</h3>
+  <p>$\kappa$ 越大，灵敏度越高。$\kappa$ 的物理意义：当 $c = 1\;\text{mol/L}$，$b = 1\;\text{cm}$ 时的吸光度。</p>
+
+  <table>
+    <tr><th>$\kappa$ 范围 / ($\text{L} \cdot \text{mol}^{-1} \cdot \text{cm}^{-1}$)</th><th>灵敏度评价</th></tr>
+    <tr><td>$< 10^3$</td><td>不灵敏</td></tr>
+    <tr><td>$10^3 \sim 10^4$</td><td>中等灵敏</td></tr>
+    <tr><td>$10^4 \sim 10^5$</td><td>灵敏</td></tr>
+    <tr><td>$> 10^5$</td><td>高灵敏</td></tr>
+  </table>
+
+  <div class="fb">
+    <div class="t">Sandell 灵敏度 $S$</div>
+    $$S = \frac{M}{\kappa}\;\;(\mu\text{g/cm}^2)$$
+    <p>物理意义：当 $A = 0.001$ 时，光程截面 1 cm$^2$ 上所含被测物质的质量（$\mu$g）。$S$ 越小，方法越灵敏。</p>
+  </div>
+</div>
+
+<!-- ==================== 10.4 ==================== -->
+<h2>10.4 准确度与Beer定律的偏离</h2>
+
+<div class="card">
+  <h3>最佳吸光度范围</h3>
+  <div class="fb">
+    <div class="t">透射比测量误差分析</div>
+    <p>浓度的相对误差 $\frac{dc}{c}$ 与透射比 $T$ 的关系：</p>
+    $$\frac{dc}{c} = \frac{0.434}{\lg T} \cdot \frac{dT}{T}$$
+    <p>当 $dT/T$ 恒定时（光度计读数误差恒定），$\frac{dc}{c}$ 在 $T = 36.8\%$（$A = 0.434$）时最小。</p>
+    <p>实际最佳测量范围：</p>
+    $$\boxed{A = 0.2 \sim 0.8\;\;(T = 15\% \sim 65\%)}$$
+  </div>
+
+  <div class="tip">测量时应通过调节浓度或液层厚度，使吸光度落在 0.2~0.8 范围内，以获得最佳准确度。</div>
+</div>
+
+<div class="card">
+  <h3>Beer 定律偏离的原因</h3>
+
+  <h3>化学因素（真偏离）</h3>
+  <ul>
+    <li><strong>溶液中的化学平衡</strong>：浓度变化导致解离度、缔合度变化，使有效吸光物质浓度与分析浓度不成正比</li>
+    <li><strong>溶剂效应</strong>：溶质-溶剂相互作用随浓度变化</li>
+    <li><strong>pH 变化</strong>：有色物质的存在形态随 pH 变化</li>
+  </ul>
+
+  <h3>仪器因素（假偏离）</h3>
+  <ul>
+    <li><strong>非单色光</strong>：Beer 定律严格适用于单色光。实际仪器使用的光有一定带宽，会产生负偏离（实测 A 偏低）。在 $\lambda_{max}$ 处测量可减小此影响（吸收曲线平坦处 $\kappa$ 变化小）</li>
+    <li><strong>杂散光</strong>：到达检测器的非目标波长光，导致负偏离，尤其在高浓度时严重</li>
+    <li><strong>反射和散射损失</strong></li>
+  </ul>
+
+  <div class="warn">Beer 定律是<strong>浓度趋于零时的极限定律</strong>，严格来说只在低浓度下才精确成立。高浓度时因分子间相互作用增大而偏离。</div>
+</div>
+
+<!-- ==================== 10.5 ==================== -->
+<h2>10.5 显色反应与显色条件</h2>
+
+<div class="card">
+  <h3>显色反应的要求</h3>
+  <ul>
+    <li>选择性好，干扰少</li>
+    <li>灵敏度高（$\kappa$ 大）</li>
+    <li>有色产物组成恒定，化学性质稳定</li>
+    <li>有色产物与试剂间颜色差异大（对比度高）</li>
+    <li>反应条件易于控制</li>
+  </ul>
+
+  <h3>常用显色剂</h3>
+  <table>
+    <tr><th>显色剂</th><th>测定离子</th><th>$\lambda_{max}$/nm</th><th>$\kappa$/(L&middot;mol$^{-1}$&middot;cm$^{-1}$)</th><th>产物颜色</th></tr>
+    <tr><td>1,10-邻菲罗啉（phen）</td><td>$\text{Fe}^{2+}$</td><td>510</td><td>$1.1 \times 10^4$</td><td>橙红</td></tr>
+    <tr><td>双硫腙（dithizone）</td><td>$\text{Pb}^{2+}$, $\text{Hg}^{2+}$, $\text{Zn}^{2+}$</td><td>各异</td><td>$10^4 \sim 10^5$</td><td>红色</td></tr>
+    <tr><td>二甲酚橙（XO）</td><td>$\text{Bi}^{3+}$, $\text{Zr}^{4+}$</td><td>各异</td><td>$10^4$</td><td>紫红</td></tr>
+    <tr><td>铬天青 S</td><td>$\text{Al}^{3+}$</td><td>620</td><td>$10^5$（加 CPC）</td><td>蓝色</td></tr>
+    <tr><td>过氧化氢</td><td>$\text{Ti}^{4+}$</td><td>410</td><td>$7.4 \times 10^2$</td><td>黄色</td></tr>
+    <tr><td>丁二酮肟</td><td>$\text{Ni}^{2+}$</td><td>470</td><td>$1.4 \times 10^4$</td><td>红色</td></tr>
+    <tr><td>磺基水杨酸</td><td>$\text{Fe}^{3+}$</td><td>各异</td><td>$10^3$</td><td>紫/黄/红</td></tr>
+  </table>
+</div>
+
+<!-- ==================== 10.6 ==================== -->
+<h2>10.6 测定条件的选择</h2>
+
+<div class="card">
+  <h3>1. 测量波长的选择</h3>
+  <p>一般选择 $\lambda_{max}$ 以获得<strong>最高灵敏度</strong>。</p>
+  <p>若在 $\lambda_{max}$ 处有干扰物质吸收，可选择灵敏度稍低但选择性更好的波长。</p>
+
+  <h3>2. 参比溶液的选择</h3>
+  <table>
+    <tr><th>参比溶液</th><th>适用情况</th></tr>
+    <tr><td>纯溶剂（蒸馏水）</td><td>显色剂和其他试剂在测量波长无吸收</td></tr>
+    <tr><td>试剂空白</td><td>显色剂在测量波长有吸收（最常用）</td></tr>
+    <tr><td>试样空白</td><td>试样溶液本身有背景吸收</td></tr>
+  </table>
+
+  <h3>3. 显色条件的控制</h3>
+  <ul>
+    <li><strong>显色剂用量</strong>：通常过量以确保显色完全，但过量太多可能引起空白值增大或干扰。通过实验确定最佳用量。</li>
+    <li><strong>溶液酸度（pH）</strong>：影响显色反应的平衡和有色产物的稳定性。通过绘制 $A$-pH 曲线确定最佳 pH 范围。</li>
+    <li><strong>显色时间和温度</strong>：有些反应需要加热或放置一定时间才能显色完全。</li>
+    <li><strong>溶剂</strong>：有机溶剂可能增强灵敏度或改善选择性。</li>
+  </ul>
+
+  <h3>4. 干扰的消除</h3>
+  <ul>
+    <li>控制酸度</li>
+    <li>加入掩蔽剂（$\text{F}^-$, $\text{CN}^-$, 抗坏血酸等）</li>
+    <li>选择适当波长避开干扰吸收</li>
+    <li>萃取分离</li>
+    <li>氧化还原法改变干扰离子价态</li>
+  </ul>
+</div>
+
+<!-- ==================== 10.7 ==================== -->
+<h2>10.7 定量分析方法</h2>
+
+<div class="card">
+  <h3>1. 标准曲线法（校准曲线法）</h3>
+  <p>配制一系列已知浓度的标准溶液，在相同条件下测量吸光度，绘制 $A$-$c$ 标准曲线。然后在相同条件下测量试样的吸光度，从标准曲线上查得浓度。</p>
+  <div class="tip">标准曲线法是最常用的方法，要求标准溶液与试样溶液的基体尽量一致（消除基体效应）。</div>
+
+  <h3>2. 标准加入法</h3>
+  <p>适用于基体效应显著但无法完全模拟基体时。</p>
+  <p>取多份相同体积的试样，分别加入不同量的标准溶液（其中一份不加），显色定容后测量吸光度。</p>
+  <p>以加入标准溶液的浓度 $c_s$ 为横轴，$A$ 为纵轴作图，外推直线与横轴交点的绝对值即为试样浓度 $c_x$。</p>
+
+  <div class="warn">标准加入法要求 Beer 定律严格成立（$A$-$c$ 为直线），且不能消除由空白引起的系统误差。</div>
+
+  <h3>3. 示差分光光度法（差示法）</h3>
+  <p>用<strong>标准溶液</strong>（而非空白）作参比，测量试样与标准之间吸光度的差值，扩大了可测量的浓度范围，提高了高浓度样品的测量精度。</p>
+  <p>适用于常规方法中吸光度超出最佳范围（$A > 0.8$）的高浓度样品。</p>
+
+  <h3>4. 双波长法</h3>
+  <p>选择两个波长 $\lambda_1$ 和 $\lambda_2$，测量同一溶液在两个波长下吸光度之差：$\Delta A = A_{\lambda_1} - A_{\lambda_2}$</p>
+  <p>若干扰物在两个波长下的吸光度相等（等吸收点），则 $\Delta A$ 只与被测物有关，消除了干扰和背景影响。</p>
+
+  <h3>5. 多组分同时测定</h3>
+  <p>基于吸光度的加和性。对 $n$ 个组分，在 $n$ 个波长处分别测量：</p>
+  $$A_{\lambda_i} = \sum_{j=1}^{n} \kappa_{j,\lambda_i} \cdot b \cdot c_j \quad (i = 1, 2, \ldots, n)$$
+  <p>解联立方程组即可求出各组分浓度。</p>
+
+  <div class="note">多组分测定要求各组分的吸收光谱有足够差异（选择的波长处各组分 $\kappa$ 差异大），否则方程组病态，结果误差大。</div>
+</div>
+
+<div class="ex">
+  <strong>例题（标准曲线法）：</strong>用邻菲罗啉光度法测 $\text{Fe}^{2+}$。配制标准溶液并测量吸光度如下（$b = 1$ cm, $\lambda = 510$ nm）：
+
+  <table>
+    <tr><th>$c_{Fe}$ / ($\mu$g/mL)</th><td>0</td><td>0.5</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td></tr>
+    <tr><th>$A$</th><td>0.000</td><td>0.098</td><td>0.200</td><td>0.395</td><td>0.600</td><td>0.790</td></tr>
+  </table>
+
+  <p>试样溶液测得 $A_x = 0.350$，求铁浓度。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>从标准曲线可得斜率 $\approx 0.198\;\text{mL}/\mu\text{g}$（由线性回归），$A_x = 0.350$ 对应</p>
+    <p>$c_x = \frac{0.350}{0.198} \approx 1.77\;\mu\text{g/mL}$</p>
+  </div>
+</div>
+
+<!-- ==================== 10.8 ==================== -->
+<h2>10.8 络合物组成的测定</h2>
+
+<div class="card">
+  <h3>1. 摩尔比法（饱和法）</h3>
+  <div class="fb">
+    <div class="t">原理</div>
+    <p>固定金属离子 M 的浓度，改变配位体 L 的浓度（或反之），测量吸光度 $A$。以 $c_L/c_M$（摩尔比）为横轴，$A$ 为纵轴作图。</p>
+    <p>曲线由两段直线组成：配位前 $A$ 随 $c_L/c_M$ 线性增大，配位饱和后 $A$ 趋于恒定。两段直线交点处的 $c_L/c_M$ 即为<strong>络合比 $n$</strong>。</p>
+  </div>
+
+  <div class="tip">摩尔比法适用于稳定性较高的配合物（$K$ 大）。若配合物不太稳定，交点附近曲线弯曲，可通过外推两段直线来确定交点。</div>
+
+  <h3>2. 连续变化法（Job 法/等摩尔系列法）</h3>
+  <div class="fb">
+    <div class="t">原理</div>
+    <p>保持 $c_M + c_L = c$（总浓度恒定），改变 $c_M/(c_M + c_L)$ 的比值（从 0 到 1），测量吸光度。</p>
+    <p>以 $x = c_M/(c_M + c_L)$ 为横轴，$A$（或校正后的 $A$）为纵轴作图，曲线极大值处对应的 $x$ 值满足：</p>
+    $$n = \frac{1 - x_{max}}{x_{max}}$$
+    <p>例如 $x_{max} = 0.5$ 时 $n = 1$（1:1 络合），$x_{max} = 0.33$ 时 $n = 2$（1:2 络合）。</p>
+  </div>
+
+  <div class="note">Job 法要求溶液中只形成一种络合物。若体系中存在多种逐级络合物，结果可能不准确。</div>
+</div>
+
+<div class="ex">
+  <strong>例题：</strong>用 Job 法研究 $\text{Fe}^{2+}$ 与邻菲罗啉（phen）的络合物。保持 $c_{Fe} + c_{phen} = 1.0 \times 10^{-4}$ mol/L，测量结果如下：
+
+  <table>
+    <tr><th>$c_{Fe}/(c_{Fe}+c_{phen})$</th><td>0.1</td><td>0.2</td><td>0.25</td><td>0.3</td><td>0.4</td><td>0.5</td></tr>
+    <tr><th>$A$</th><td>0.10</td><td>0.19</td><td>0.22</td><td>0.19</td><td>0.15</td><td>0.10</td></tr>
+  </table>
+
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$A$ 最大值在 $x_{max} \approx 0.25$ 处。</p>
+    <p>$n = \frac{1 - 0.25}{0.25} = 3$</p>
+    <p>络合物组成为 $\text{Fe(phen)}_3^{2+}$，即 1:3 络合。</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3>两种方法的比较</h3>
+  <table>
+    <tr><th>方法</th><th>操作</th><th>适用条件</th><th>优点</th></tr>
+    <tr><td>摩尔比法</td><td>固定一种组分浓度，改变另一种</td><td>$K$ 较大</td><td>操作直观，可判断稳定性</td></tr>
+    <tr><td>Job 法</td><td>总浓度恒定，改变比例</td><td>只形成一种络合物</td><td>灵敏，可确定任意比值</td></tr>
+  </table>
+</div>
+
+<script src="toc.js"></script>
+<script src="auth.js"></script>
+<script src="progress.js"></script>
+</body></html>

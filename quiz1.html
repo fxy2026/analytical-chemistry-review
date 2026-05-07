@@ -1,0 +1,768 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025小测1完整解析 | 分析化学1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<link rel="stylesheet" href="toc.css">
+<style>
+:root{--pri:#1a5276;--acc:#c0392b;--bg:#fffef9;--card:#fff;--border:#e0d8c8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);color:#333;line-height:1.9;padding:20px;max-width:1000px;margin:0 auto;}
+h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
+h2{color:#fff;font-size:1.3em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
+h3{color:var(--pri);font-size:1.1em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
+.sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
+.tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+table{width:100%;border-collapse:collapse;margin:12px 0;}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
+th{background:var(--pri);color:#fff;}
+tr:nth-child(even){background:#f9f7f2;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
+.nav-bar a:hover{background:#1a5276;color:#fff;}
+ul,ol{margin-left:20px;margin-bottom:8px;}
+details{margin:8px 0;}details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+</style></head><body>
+<div class="nav-bar"><a href="index.html">首页</a><a href="quiz2.html">小测2 &rarr;</a><a href="final2022.html">2022期末</a></div>
+
+<h1>2025 分析化学 小测1 完整解析</h1>
+
+<!-- ==================== 答案速查表 ==================== -->
+<h2 id="summary">答案速查表</h2>
+
+<h3>一、选择题答案（每题1分，共10分）</h3>
+<table>
+<tr><th>题号</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
+<tr><td><strong>答案</strong></td><td>D</td><td>C</td><td>A</td><td>B</td><td>B</td><td>B</td><td>C</td><td>B</td><td>D</td><td>A</td></tr>
+</table>
+
+<h3>二、填空题答案概览</h3>
+<table>
+<tr><th>题号</th><th>答案要点</th></tr>
+<tr><td>1</td><td>(1) 系统误差；(2) 随机误差</td></tr>
+<tr><td>2</td><td>4.02</td></tr>
+<tr><td>3</td><td>$[\text{H}^+] + [\text{H}_2\text{CO}_3] = [\text{OH}^-] + [\text{CO}_3^{2-}]$</td></tr>
+<tr><td>4</td><td>准确度 &larr; 系统误差；精密度 &larr; 随机误差</td></tr>
+<tr><td>5</td><td>NaOH浓度偏低</td></tr>
+<tr><td>6</td><td>$[\text{H}^+] + c_b + [\text{HA}] = [\text{OH}^-]$（质子平衡式PBE）</td></tr>
+<tr><td>7</td><td>强酸碱：突跃增加2个pH单位；弱酸碱：增加约1个pH单位</td></tr>
+</table>
+
+<h3>三、计算题答案概览</h3>
+<table>
+<tr><th>题号</th><th>答案要点</th></tr>
+<tr><td>计算1</td><td>$\bar{x}=54.25\%$，$s=0.05\%$；95%置信区间 $54.25\%\pm0.08\%$；$t$检验无显著差异</td></tr>
+<tr><td>计算2</td><td>需 7.272 g THAM；缓冲范围 7.08~9.08；$\beta \approx 0.02$</td></tr>
+<tr><td>计算3</td><td>化学计量点 pH=5.96，用甲基红；半中和点 pH=10.62；$E_t\approx0.20\%$</td></tr>
+<tr><td>实验设计</td><td>用酚酞和甲基红两次指示剂滴定，分步计算 $\text{Na}_3\text{PO}_4$ 和 $\text{Na}_2\text{HPO}_4$ 浓度</td></tr>
+</table>
+
+<!-- ==================== 选择题 ==================== -->
+<h2 id="choice">一、选择题（每题1分，共10分）</h2>
+
+<!-- Q1 -->
+<h3 id="q1">第1题</h3>
+<div class="card">
+<p><strong>题目：</strong>减小随机误差的最有效方法是：</p>
+<ul>
+<li>A. 校正仪器</li>
+<li>B. 做空白实验</li>
+<li>C. 用更精密的仪器</li>
+<li><strong style="color:var(--acc);">D. 增加平行测定次数</strong></li>
+</ul>
+<div class="sol">
+<p class="st">解析：</p>
+<p>随机误差（偶然误差）是由不确定因素引起的，具有正态分布特征。根据统计学原理，增加平行测定次数 $n$ 可以使均值的标准偏差减小：</p>
+$$s_{\bar{x}} = \frac{s}{\sqrt{n}}$$
+<p>因此，增加测定次数能有效减小随机误差对结果的影响。</p>
+<p>A、B 选项是消除<strong>系统误差</strong>的方法；C 虽能提高精密度，但不如增加平行测定直接有效。</p>
+</div>
+<div class="tip">
+<strong>记忆要点：</strong>系统误差 &rarr; 校正方法（校准仪器、空白实验、对照实验）；随机误差 &rarr; 增加平行测定次数。
+</div>
+</div>
+
+<!-- Q2 -->
+<h3 id="q2">第2题</h3>
+<div class="card">
+<p><strong>题目：</strong>某酸碱指示剂 HIn 的 $K_{\text{HIn}} = 10^{-5}$，其变色范围为：</p>
+<ul>
+<li>A. pH 3~5</li>
+<li>B. pH 3~7</li>
+<li><strong style="color:var(--acc);">C. pH 4~6</strong></li>
+<li>D. pH 5~7</li>
+</ul>
+<div class="sol">
+<p class="st">解析：</p>
+<p>酸碱指示剂的变色范围由其电离常数 $K_{\text{HIn}}$ 决定。理论变色范围为：</p>
+$$\text{pH} = \text{p}K_{\text{HIn}} \pm 1$$
+<p>已知 $K_{\text{HIn}} = 10^{-5}$，所以 $\text{p}K_{\text{HIn}} = 5$。</p>
+<p>变色范围 = $5 \pm 1$ = <strong>pH 4~6</strong>。</p>
+</div>
+<div class="fb">
+<p class="t">核心公式</p>
+<p>指示剂变色范围：$\text{pH} = \text{p}K_{\text{HIn}} \pm 1$</p>
+<p>当 $[\text{In}^-]/[\text{HIn}] \geq 10$ 时显碱色；$[\text{In}^-]/[\text{HIn}] \leq 0.1$ 时显酸色。</p>
+</div>
+</div>
+
+<!-- Q3 -->
+<h3 id="q3">第3题</h3>
+<div class="card">
+<p><strong>题目：</strong>某缓冲溶液总浓度 $c = 0.10\,\text{mol/L}$，当共轭酸碱的摩尔分数 $\delta_{\text{HA}} = \delta_{\text{A}^-} = 0.5$ 时，最大缓冲容量 $\beta_{\max}$ 为：</p>
+<ul>
+<li><strong style="color:var(--acc);">A. 0.0575</strong></li>
+<li>B. 0.115</li>
+<li>C. 0.230</li>
+<li>D. 0.0288</li>
+</ul>
+<div class="sol">
+<p class="st">解析：</p>
+<p>缓冲容量公式为：</p>
+$$\beta = 2.303 \cdot c \cdot \delta_{\text{HA}} \cdot \delta_{\text{A}^-}$$
+<p>当 $\delta_{\text{HA}} = \delta_{\text{A}^-} = 0.5$ 时，缓冲容量最大：</p>
+$$\beta_{\max} = 2.303 \times 0.10 \times 0.5 \times 0.5 = 2.303 \times 0.025 = 0.0576 \approx 0.0575$$
+</div>
+<div class="tip">
+<strong>记忆要点：</strong>缓冲容量在 pH = p$K_a$ 时最大（即 $\delta_{\text{HA}} = \delta_{\text{A}^-} = 0.5$），此时 $\beta_{\max} = 0.576c$。
+</div>
+</div>
+
+<!-- Q4 -->
+<h3 id="q4">第4题</h3>
+<div class="card">
+<p><strong>题目：</strong>用 NaOH 标准溶液滴定 $\text{H}_2\text{C}_2\text{O}_4$（草酸），滴定曲线上仅有一个突跃，原因是：</p>
+<ul>
+<li>A. 草酸是强酸</li>
+<li><strong style="color:var(--acc);">B. $K_{a1}/K_{a2} < 10^4$，两步电离不能分开滴定</strong></li>
+<li>C. 草酸浓度太低</li>
+<li>D. NaOH 浓度不够</li>
+</ul>
+<div class="sol">
+<p class="st">解析：</p>
+<p>$\text{H}_2\text{C}_2\text{O}_4$ 的两级电离常数为：</p>
+$$K_{a1} = 5.9 \times 10^{-2}, \quad K_{a2} = 6.4 \times 10^{-5}$$
+$$\frac{K_{a1}}{K_{a2}} = \frac{5.9 \times 10^{-2}}{6.4 \times 10^{-5}} \approx 922 < 10^4$$
+<p>多元酸分步滴定的条件是 $K_{a1}/K_{a2} \geq 10^4$（且 $c \cdot K_a \geq 10^{-8}$）。草酸不满足此条件，因此<strong>两步电离无法分别滴定</strong>，只出现一个突跃，即一步滴定到 $\text{Na}_2\text{C}_2\text{O}_4$。</p>
+</div>
+<div class="fb">
+<p class="t">多元酸分步滴定判据</p>
+<p>能分步滴定的条件：$\dfrac{K_{a(n)}}{K_{a(n+1)}} \geq 10^4$ 且 $c \cdot K_{a(n)} \geq 10^{-8}$</p>
+</div>
+</div>
+
+<!-- Q5 -->
+<h3 id="q5">第5题</h3>
+<div class="card">
+<p><strong>题目：</strong>在磷酸体系中，$\text{H}_2\text{PO}_4^-$ 浓度最大时对应的 pH 值为：</p>
+<ul>
+<li>A. 2.15</li>
+<li><strong style="color:var(--acc);">B. 4.66</strong></li>
+<li>C. 7.21</li>
+<li>D. 9.77</li>
+</ul>
+<div class="sol">
+<p class="st">解析：</p>
+<p>对于多元酸体系，两性物质 $\text{H}_2\text{PO}_4^-$ 的浓度在以下 pH 值时达到最大：</p>
+$$\text{pH} = \frac{\text{p}K_{a1} + \text{p}K_{a2}}{2}$$
+<p>磷酸的电离常数：$\text{p}K_{a1} = 2.15$，$\text{p}K_{a2} = 7.20$，$\text{p}K_{a3} = 12.37$</p>
+$$\text{pH} = \frac{2.15 + 7.20}{2} = \frac{9.35}{2} = 4.68 \approx 4.66$$
+<p>（取 $\text{p}K_{a2} = 7.17$ 则得 4.66）</p>
+</div>
+<div class="tip">
+<strong>规律总结：</strong>$n$ 元酸的第 $i$ 级中间物种浓度最大时，$\text{pH} = (\text{p}K_{ai} + \text{p}K_{a(i+1)})/2$。
+</div>
+</div>
+
+<!-- Q6 -->
+<h3 id="q6">第6题</h3>
+<div class="card">
+<p><strong>题目：</strong>某溶液 pH = 0.070，则 $[\text{H}^+] = 0.851\,\text{mol/L}$，该值有几位有效数字？</p>
+<ul>
+<li>A. 2 位</li>
+<li><strong style="color:var(--acc);">B. 3 位</strong></li>
+<li>C. 4 位</li>
+<li>D. 1 位</li>
+</ul>
+<div class="sol">
+<p class="st">解析：</p>
+<p>pH 是对数值。对数值的有效数字规则：</p>
+<ul>
+<li>对数值的<strong>整数部分</strong>（首数）表示数量级，不是有效数字</li>
+<li>对数值的<strong>小数部分</strong>（尾数）的位数 = 真数的有效数字位数</li>
+</ul>
+<p>pH = 0.070 的小数部分有 <strong>2 位</strong>有效数字（"70"），但注意 0.070 的尾数是 ".070"，其中末尾的0是有效的。</p>
+<p>计算验证：$[\text{H}^+] = 10^{-0.070} = 0.851\,\text{mol/L}$，该结果保留 <strong>3 位</strong>有效数字。</p>
+</div>
+<div class="warn">
+<strong>易错点：</strong>pH 的小数位数决定 $[\text{H}^+]$ 的有效数字位数。pH = 0.070 有2位小数（注意末尾的0有效），但对应的真数 0.851 记为 3 位有效数字。关键在于从 pH 小数点后读起。
+</div>
+</div>
+
+<!-- Q7 -->
+<h3 id="q7">第7题</h3>
+<div class="card">
+<p><strong>题目：</strong>NaOH 标准溶液吸收了少量 $\text{CO}_2$ 后，用甲基橙指示剂测定盐酸浓度，结果：</p>
+<ul>
+<li>A. 偏高</li>
+<li>B. 偏低</li>
+<li><strong style="color:var(--acc);">C. 无影响</strong></li>
+<li>D. 不确定</li>
+</ul>
+<div class="sol">
+<p class="st">解析：</p>
+<p>NaOH 吸收 $\text{CO}_2$ 后生成 $\text{Na}_2\text{CO}_3$：</p>
+$$2\text{NaOH} + \text{CO}_2 \to \text{Na}_2\text{CO}_3 + \text{H}_2\text{O}$$
+<p>用此含 $\text{Na}_2\text{CO}_3$ 的 NaOH 溶液滴定 HCl：</p>
+<ul>
+<li><strong>甲基橙</strong>变色范围 pH 3.1~4.4，终点 pH $\approx$ 4</li>
+<li>在此 pH 下，$\text{Na}_2\text{CO}_3$ 被盐酸完全滴定为 $\text{H}_2\text{CO}_3$</li>
+</ul>
+$$\text{Na}_2\text{CO}_3 + 2\text{HCl} \to 2\text{NaCl} + \text{H}_2\text{CO}_3$$
+<p>2 mol NaOH 变成 1 mol $\text{Na}_2\text{CO}_3$，而 1 mol $\text{Na}_2\text{CO}_3$ 消耗 2 mol HCl。总碱量不变，因此<strong>对结果无影响</strong>。</p>
+</div>
+<div class="warn">
+<strong>对比记忆：</strong>若改用<strong>酚酞</strong>指示剂（终点 pH $\approx$ 9），$\text{Na}_2\text{CO}_3$ 只被滴定为 $\text{NaHCO}_3$，1 mol $\text{Na}_2\text{CO}_3$ 只消耗 1 mol HCl，结果会<strong>偏低</strong>。
+</div>
+</div>
+
+<!-- Q8 -->
+<h3 id="q8">第8题</h3>
+<div class="card">
+<p><strong>题目：</strong>滴定管读数时，初始读数应接近：</p>
+<ul>
+<li>A. 恰好 0.00 mL</li>
+<li><strong style="color:var(--acc);">B. 0.00 mL 附近（不必恰好为零）</strong></li>
+<li>C. 任意刻度</li>
+<li>D. 50.00 mL</li>
+</ul>
+<div class="sol">
+<p class="st">解析：</p>
+<p>使用滴定管时，应将液面调节到 <strong>0.00 mL 附近</strong>（刻度零点附近），然后精确读数。不要求恰好在零刻度，但应在刻度范围的上端（靠近零）。原因：</p>
+<ul>
+<li>滴定管刻度从上到下递增（0 &rarr; 50 mL）</li>
+<li>起始读数在零附近可以利用最大有效刻度范围</li>
+<li>读数精确到 0.02 mL 即可</li>
+</ul>
+</div>
+</div>
+
+<!-- Q9 -->
+<h3 id="q9">第9题</h3>
+<div class="card">
+<p><strong>题目：</strong>$w(\text{CaO}) = 38.56\%$，该数据有几位有效数字？</p>
+<ul>
+<li>A. 2 位</li>
+<li>B. 3 位</li>
+<li>C. 5 位</li>
+<li><strong style="color:var(--acc);">D. 4 位</strong></li>
+</ul>
+<div class="sol">
+<p class="st">解析：</p>
+<p>$38.56\%$ 中，百分号只是单位，实际数值为 38.56，包含 <strong>4 位有效数字</strong>（3、8、5、6）。</p>
+<p>有效数字计数规则：</p>
+<ul>
+<li>非零数字全部有效</li>
+<li>夹在非零数字之间的零有效</li>
+<li>前导零不有效，末尾零有效</li>
+</ul>
+</div>
+</div>
+
+<!-- Q10 -->
+<h3 id="q10">第10题</h3>
+<div class="card">
+<p><strong>题目：</strong>比较两组测定数据的精密度是否存在显著差异，应使用：</p>
+<ul>
+<li><strong style="color:var(--acc);">A. F 检验</strong></li>
+<li>B. t 检验</li>
+<li>C. Q 检验</li>
+<li>D. Grubbs 检验</li>
+</ul>
+<div class="sol">
+<p class="st">解析：</p>
+<p>各检验方法的用途：</p>
+<table>
+<tr><th>检验方法</th><th>用途</th></tr>
+<tr><td><strong>F 检验</strong></td><td>比较两组数据的<strong>精密度</strong>（方差）是否有显著差异</td></tr>
+<tr><td><strong>t 检验</strong></td><td>比较两组数据的<strong>均值</strong>是否有显著差异</td></tr>
+<tr><td><strong>Q 检验 / Grubbs 检验</strong></td><td>检验<strong>可疑值</strong>（离群值）是否应舍弃</td></tr>
+</table>
+$$F = \frac{s_1^2}{s_2^2} \quad (s_1 > s_2)$$
+<p>若 $F_{\text{calc}} > F_{\text{table}}$，则两组精密度有显著差异。</p>
+</div>
+<div class="fb">
+<p class="t">统计检验方法速记</p>
+<p>精密度（方差）比较 &rarr; <strong>F 检验</strong>；均值比较 &rarr; <strong>t 检验</strong>；离群值 &rarr; <strong>Q / Grubbs 检验</strong></p>
+</div>
+</div>
+
+<!-- ==================== 填空题 ==================== -->
+<h2 id="fill">二、填空题（共7题）</h2>
+
+<!-- F1 -->
+<h3 id="f1">第1题</h3>
+<div class="card">
+<p><strong>题目：</strong>分析以下误差来源的类型：(1) 天平未调平衡就直接称量；(2) 读取滴定管时对最后一位小数的估读。</p>
+<div class="sol">
+<p class="st">答案：</p>
+<p>(1) <strong>系统误差</strong>（仪器误差）</p>
+<p>(2) <strong>随机误差</strong>（偶然误差）</p>
+<p class="st">解析：</p>
+<p>(1) 天平未调平衡属于<strong>仪器误差</strong>，是系统误差的一种。它会使所有称量结果偏向固定方向（偏大或偏小），具有单向性和可重复性。可通过校准天平消除。</p>
+<p>(2) 滴定管最后一位的估读因人而异、因次而异，没有固定方向，符合正态分布的规律，属于<strong>随机误差</strong>。只能通过增加测定次数来减小其影响。</p>
+</div>
+<div class="tip">
+<strong>判断依据：</strong>有恒定方向 &rarr; 系统误差；方向不确定、服从统计规律 &rarr; 随机误差。
+</div>
+</div>
+
+<!-- F2 -->
+<h3 id="f2">第2题</h3>
+<div class="card">
+<p><strong>题目：</strong>计算以下表达式的结果，并保留正确的有效数字：</p>
+$$\frac{51.0 \times 4.03 \times 10^{-4}}{2.512 \times 0.002034}$$
+<div class="sol">
+<p class="st">答案：4.02</p>
+<p class="st">解析：</p>
+<p>逐步计算：</p>
+<ul>
+<li>分子：$51.0 \times 4.03 \times 10^{-4} = 2.0553 \times 10^{-2}$（3位有效数字）</li>
+<li>分母：$2.512 \times 0.002034 = 5.109 \times 10^{-3}$（4位有效数字）</li>
+<li>结果：$\dfrac{2.0553 \times 10^{-2}}{5.109 \times 10^{-3}} = 4.024$</li>
+</ul>
+<p>乘除法的有效数字规则：<strong>结果的有效数字位数取决于各因子中有效数字最少的那个</strong>。</p>
+<ul>
+<li>$51.0$ &rarr; 3位</li>
+<li>$4.03 \times 10^{-4}$ &rarr; 3位</li>
+<li>$2.512$ &rarr; 4位</li>
+<li>$0.002034$ &rarr; 4位</li>
+</ul>
+<p>最少为 3 位，故结果保留 3 位有效数字：<strong>4.02</strong>。</p>
+</div>
+<div class="fb">
+<p class="t">有效数字运算规则</p>
+<p>加减法：结果的小数位数与各项中小数位数最少的相同。</p>
+<p>乘除法：结果的有效数字位数与各因子中有效数字位数最少的相同。</p>
+</div>
+</div>
+
+<!-- F3 -->
+<h3 id="f3">第3题</h3>
+<div class="card">
+<p><strong>题目：</strong>写出 $\text{NaHCO}_3$ 水溶液的质子条件式（PBE）。</p>
+<div class="sol">
+<p class="st">答案：</p>
+$$[\text{H}^+] + [\text{H}_2\text{CO}_3] = [\text{OH}^-] + [\text{CO}_3^{2-}]$$
+<p class="st">解析：</p>
+<p>$\text{NaHCO}_3$ 完全电离为 $\text{Na}^+$ 和 $\text{HCO}_3^-$。以<strong>零基准物质</strong> $\text{HCO}_3^-$ 和 $\text{H}_2\text{O}$ 为参考：</p>
+<ul>
+<li><strong>得质子产物</strong>（$\text{HCO}_3^-$ 得到 $\text{H}^+$）：$\text{H}_2\text{CO}_3$</li>
+<li><strong>失质子产物</strong>（$\text{HCO}_3^-$ 失去 $\text{H}^+$）：$\text{CO}_3^{2-}$</li>
+<li>$\text{H}_2\text{O}$ 得质子：$\text{H}_3\text{O}^+$（即 $\text{H}^+$）</li>
+<li>$\text{H}_2\text{O}$ 失质子：$\text{OH}^-$</li>
+</ul>
+<p>质子平衡：得质子的总量 = 失质子的总量</p>
+$$[\text{H}^+] + [\text{H}_2\text{CO}_3] = [\text{OH}^-] + [\text{CO}_3^{2-}]$$
+</div>
+<div class="tip">
+<strong>写 PBE 的步骤：</strong>1. 确定零基准物质（溶液中实际存在的物种）；2. 列出得质子和失质子产物；3. 等式左边 = 得质子产物，右边 = 失质子产物。
+</div>
+</div>
+
+<!-- F4 -->
+<h3 id="f4">第4题</h3>
+<div class="card">
+<p><strong>题目：</strong>_____反映测量结果与真值的接近程度，主要受_____影响；_____反映测量结果之间的重现性，主要受_____影响。</p>
+<div class="sol">
+<p class="st">答案：</p>
+<p><strong>准确度</strong>反映测量结果与真值的接近程度，主要受<strong>系统误差</strong>影响；</p>
+<p><strong>精密度</strong>反映测量结果之间的重现性，主要受<strong>随机误差</strong>影响。</p>
+<p class="st">解析：</p>
+<table>
+<tr><th>概念</th><th>含义</th><th>衡量指标</th><th>影响因素</th></tr>
+<tr><td>准确度</td><td>与真值的接近程度</td><td>绝对误差、相对误差</td><td>系统误差</td></tr>
+<tr><td>精密度</td><td>结果间的重现性</td><td>标准偏差、RSD</td><td>随机误差</td></tr>
+</table>
+</div>
+</div>
+
+<!-- F5 -->
+<h3 id="f5">第5题</h3>
+<div class="card">
+<p><strong>题目：</strong>用邻苯二甲酸氢钾（KHP）标定 NaOH 标准溶液时，若 KHP 基准物中混有少量邻苯二甲酸（不溶性杂质已除去的情况下为可溶酸性杂质），则标定所得 NaOH 浓度将偏_____。</p>
+<div class="sol">
+<p class="st">答案：偏<strong>低</strong></p>
+<p class="st">解析：</p>
+<p>分析思路：称取一定质量的"KHP"中混有邻苯二甲酸（$\text{H}_2\text{C}_8\text{H}_4\text{O}_4$，设为 $\text{H}_2\text{A}$）。</p>
+<ul>
+<li>KHP 的摩尔质量为 204.22 g/mol，与 NaOH 反应比 1:1</li>
+<li>邻苯二甲酸的摩尔质量为 166.13 g/mol，与 NaOH 反应比 1:2</li>
+</ul>
+<p>等质量的邻苯二甲酸消耗更多的 NaOH（因为分子量更小且每分子提供2个质子）。</p>
+<p>标定时用"KHP的摩尔质量"算物质的量，但实际消耗的 NaOH 比按 KHP 算的多。计算公式：</p>
+$$c_{\text{NaOH}} = \frac{n_{\text{KHP}}(\text{计算值})}{V_{\text{NaOH}}}$$
+<p>分子不变（按称量质量和KHP分子量计算），分母 $V_{\text{NaOH}}$ 实际消耗偏大，所以 $c_{\text{NaOH}}$ <strong>偏低</strong>。</p>
+</div>
+<div class="warn">
+<strong>易错提醒：</strong>此题要分清"杂质消耗NaOH多/少"对结果的影响方向。邻苯二甲酸是二元酸，比 KHP（一元酸）消耗更多 NaOH &rarr; 实际 V 偏大 &rarr; 浓度偏低。
+</div>
+</div>
+
+<!-- F6 -->
+<h3 id="f6">第6题</h3>
+<div class="card">
+<p><strong>题目：</strong>将 $c_b\,\text{mol/L}$ 的 NaOH 与 $c\,\text{mol/L}$ 的 NaA（弱酸钠盐）混合，写出该混合溶液的质子平衡式（PBE）。</p>
+<div class="sol">
+<p class="st">答案：</p>
+$$[\text{H}^+] + c_b + [\text{HA}] = [\text{OH}^-]$$
+<p class="st">解析：</p>
+<p>溶液中的零基准物质为 $\text{A}^-$、$\text{Na}^+$、$\text{H}_2\text{O}$，以及额外加入的 NaOH 提供的 $\text{OH}^-$。</p>
+<p>法一：从电荷平衡和物料平衡推导</p>
+<ul>
+<li>电荷平衡：$[\text{Na}^+] + [\text{H}^+] = [\text{A}^-] + [\text{OH}^-]$</li>
+<li>物料平衡（Na）：$[\text{Na}^+] = c + c_b$</li>
+<li>物料平衡（A）：$[\text{A}^-] + [\text{HA}] = c$</li>
+</ul>
+<p>代入电荷平衡：$(c + c_b) + [\text{H}^+] = (c - [\text{HA}]) + [\text{OH}^-]$</p>
+<p>化简得：$[\text{H}^+] + c_b + [\text{HA}] = [\text{OH}^-]$</p>
+</div>
+<div class="tip">
+<strong>直觉理解：</strong>NaA 的 $\text{A}^-$ 可以得到质子生成 HA，水可以失去质子生成 $\text{OH}^-$。而 NaOH 直接提供了 $c_b$ 的 $\text{OH}^-$，因此左边多出 $c_b$ 项。
+</div>
+</div>
+
+<!-- F7 -->
+<h3 id="f7">第7题</h3>
+<div class="card">
+<p><strong>题目：</strong>酸碱滴定中，浓度增大10倍时，滴定突跃如何变化？强酸碱体系突跃增加_____个pH单位，弱酸碱体系突跃增加_____个pH单位。</p>
+<div class="sol">
+<p class="st">答案：强酸碱增加 <strong>2</strong> 个 pH 单位；弱酸碱增加约 <strong>1</strong> 个 pH 单位。</p>
+<p class="st">解析：</p>
+<p><strong>强酸碱滴定：</strong></p>
+<p>突跃范围由化学计量点前后过量的酸/碱浓度决定。浓度增大10倍：</p>
+<ul>
+<li>过量 0.1% 时 $[\text{H}^+]$ 增大10倍 &rarr; pH 减小1</li>
+<li>过量 0.1% 时 $[\text{OH}^-]$ 增大10倍 &rarr; pH 增大1</li>
+<li>总突跃范围增加 $1 + 1 = 2$ 个 pH 单位</li>
+</ul>
+<p><strong>弱酸碱滴定：</strong></p>
+<p>化学计量点一侧由弱酸/碱的水解控制，pH 与 $\lg c$ 成线性关系（系数 1/2）：</p>
+$$\text{pH}_{\text{sp}} = 7 + \frac{1}{2}\text{p}K_a + \frac{1}{2}\lg c$$
+<p>浓度增大10倍，化学计量点 pH 变化 $\frac{1}{2} \times 1 = 0.5$。</p>
+<p>另一侧（过量强酸/碱）变化1个 pH 单位，合计突跃增加约 <strong>1</strong> 个 pH 单位（$0.5 + 0.5$ 或按近似计约1）。</p>
+</div>
+</div>
+
+<!-- ==================== 计算题1 ==================== -->
+<h2 id="calc1">三、计算题第1题（6分）：铁矿石含铁量统计分析</h2>
+
+<div class="card">
+<p><strong>题目：</strong>测定铁矿石中铁含量，4次平行测定结果为：54.20%、54.30%、54.24%、54.26%。</p>
+<ol>
+<li>计算平均值 $\bar{x}$ 和标准偏差 $s$；</li>
+<li>计算95%置信水平下的置信区间；</li>
+<li>用 $t$ 检验法判断该结果与标准值 54.30% 是否有显著性差异（$\alpha = 0.05$）。</li>
+</ol>
+</div>
+
+<h3>第(1)小题：平均值和标准偏差</h3>
+<div class="sol">
+<p class="st">解答：</p>
+<p><strong>平均值：</strong></p>
+$$\bar{x} = \frac{54.20 + 54.30 + 54.24 + 54.26}{4} = \frac{217.00}{4} = 54.25\%$$
+
+<p><strong>标准偏差</strong>（Bessel公式）：</p>
+$$s = \sqrt{\frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n-1}}$$
+
+<p>各偏差计算：</p>
+<table>
+<tr><th>$x_i$</th><th>$x_i - \bar{x}$</th><th>$(x_i - \bar{x})^2$</th></tr>
+<tr><td>54.20</td><td>-0.05</td><td>0.0025</td></tr>
+<tr><td>54.30</td><td>+0.05</td><td>0.0025</td></tr>
+<tr><td>54.24</td><td>-0.01</td><td>0.0001</td></tr>
+<tr><td>54.26</td><td>+0.01</td><td>0.0001</td></tr>
+<tr><th colspan="2">$\sum$</th><th>0.0052</th></tr>
+</table>
+
+$$s = \sqrt{\frac{0.0052}{4-1}} = \sqrt{\frac{0.0052}{3}} = \sqrt{0.001733} = 0.042 \approx 0.05\%$$
+</div>
+
+<h3>第(2)小题：95%置信区间</h3>
+<div class="sol">
+<p class="st">解答：</p>
+<p>置信区间公式：</p>
+$$\bar{x} \pm \frac{t_{\alpha, f} \cdot s}{\sqrt{n}}$$
+<p>查表：$n = 4$，自由度 $f = n - 1 = 3$，置信度 95%（$\alpha = 0.05$）：</p>
+$$t_{0.05, 3} = 3.18$$
+<p>计算：</p>
+$$\bar{x} \pm \frac{3.18 \times 0.05}{\sqrt{4}} = 54.25 \pm \frac{0.159}{2} = 54.25 \pm 0.08\%$$
+<p><strong>结果：95% 置信区间为 $(54.17\%, 54.33\%)$</strong></p>
+</div>
+
+<h3>第(3)小题：t 检验</h3>
+<div class="sol">
+<p class="st">解答：</p>
+<p>原假设 $H_0$：$\mu = 54.30\%$（与标准值无显著差异）</p>
+$$t_{\text{calc}} = \frac{|\bar{x} - \mu|}{s} \cdot \sqrt{n} = \frac{|54.25 - 54.30|}{0.05} \times \sqrt{4} = \frac{0.05}{0.05} \times 2 = 2.00$$
+<p>查表临界值：$t_{0.05, 3} = 3.18$</p>
+<p>比较：$t_{\text{calc}} = 2.00 < t_{0.05, 3} = 3.18$</p>
+<p><strong>结论：$t_{\text{calc}} < t_{\text{table}}$，接受 $H_0$，即在 95% 置信水平下，测定结果与标准值 54.30% 之间<span style="color:var(--acc);">没有显著性差异</span>。</strong></p>
+</div>
+<div class="fb">
+<p class="t">t 检验判据</p>
+<p>$t_{\text{calc}} > t_{\text{table}}$ &rarr; 有显著差异（拒绝 $H_0$）</p>
+<p>$t_{\text{calc}} < t_{\text{table}}$ &rarr; 无显著差异（接受 $H_0$）</p>
+</div>
+
+<!-- ==================== 计算题2 ==================== -->
+<h2 id="calc2">四、计算题第2题（6分）：THAM 缓冲溶液</h2>
+
+<div class="card">
+<p><strong>题目：</strong>三羟甲基氨基甲烷（THAM，又称 Tris，$M = 121.14\,\text{g/mol}$，$\text{p}K_b = 5.92$，即 $\text{p}K_a = 8.08$）配制 pH = 7.40、总浓度 $c = 0.060\,\text{mol/L}$ 的缓冲溶液 1.00 L。</p>
+<ol>
+<li>需称取 THAM 多少克？</li>
+<li>该缓冲溶液的缓冲范围是多少？</li>
+<li>计算该缓冲溶液的缓冲容量 $\beta$。</li>
+</ol>
+</div>
+
+<h3>第(1)小题：称取 THAM 的质量</h3>
+<div class="sol">
+<p class="st">解答：</p>
+<p>THAM（Tris）是一种有机碱，其共轭酸为 TrisH$^+$（$\text{p}K_a = 8.08$）。</p>
+<p>配制 pH = 7.40 的缓冲液，需要 Tris（游离碱）和 TrisH$^+$Cl$^-$（盐酸盐）的混合物。</p>
+<p>用 Henderson-Hasselbalch 方程：</p>
+$$\text{pH} = \text{p}K_a + \lg \frac{[\text{Tris}]}{[\text{TrisH}^+]}$$
+$$7.40 = 8.08 + \lg \frac{[\text{Tris}]}{[\text{TrisH}^+]}$$
+$$\lg \frac{[\text{Tris}]}{[\text{TrisH}^+]} = -0.68$$
+$$\frac{[\text{Tris}]}{[\text{TrisH}^+]} = 10^{-0.68} = 0.209$$
+
+<p>设 $[\text{Tris}] = c_b$，$[\text{TrisH}^+] = c_a$，则：</p>
+$$c_b + c_a = 0.060 \,\text{mol/L}$$
+$$\frac{c_b}{c_a} = 0.209$$
+
+<p>解方程：$c_b = 0.209 \, c_a$，代入总浓度：</p>
+$$0.209\,c_a + c_a = 0.060 \implies 1.209\,c_a = 0.060$$
+$$c_a = 0.0496 \,\text{mol/L}, \quad c_b = 0.0104 \approx 0.010 \,\text{mol/L}$$
+
+<p>THAM 总物质的量 = $c \times V = 0.060 \times 1.00 = 0.060\,\text{mol}$</p>
+<p>需称取 THAM 质量：</p>
+$$m = 0.060 \times 121.14 = 7.268 \approx 7.272\,\text{g}$$
+<p>（然后加入适量 HCl 将部分 Tris 转化为 TrisH$^+$）</p>
+</div>
+
+<h3>第(2)小题：缓冲范围</h3>
+<div class="sol">
+<p class="st">解答：</p>
+<p>缓冲范围一般为：</p>
+$$\text{pH} = \text{p}K_a \pm 1 = 8.08 \pm 1$$
+$$\boxed{\text{缓冲范围：pH\;7.08 \sim 9.08}}$$
+</div>
+
+<h3>第(3)小题：缓冲容量</h3>
+<div class="sol">
+<p class="st">解答：</p>
+<p>缓冲容量公式：</p>
+$$\beta = 2.303 \cdot c \cdot \frac{K_a [\text{H}^+]}{(K_a + [\text{H}^+])^2}$$
+
+<p>已知：$c = 0.060\,\text{mol/L}$，$K_a = 10^{-8.08} = 8.32 \times 10^{-9}$，pH = 7.40 &rArr; $[\text{H}^+] = 10^{-7.40} = 3.98 \times 10^{-8}$</p>
+
+$$K_a + [\text{H}^+] = 8.32 \times 10^{-9} + 3.98 \times 10^{-8} = 4.81 \times 10^{-8}$$
+$$K_a \cdot [\text{H}^+] = 8.32 \times 10^{-9} \times 3.98 \times 10^{-8} = 3.31 \times 10^{-16}$$
+$$(K_a + [\text{H}^+])^2 = (4.81 \times 10^{-8})^2 = 2.31 \times 10^{-15}$$
+
+$$\beta = 2.303 \times 0.060 \times \frac{3.31 \times 10^{-16}}{2.31 \times 10^{-15}} = 0.1382 \times 0.1433 = 0.0198 \approx 0.02\,\text{mol/(L·pH)}$$
+</div>
+<div class="tip">
+<strong>物理含义：</strong>$\beta = 0.02$ 表示使 1 L 缓冲液的 pH 改变 1 个单位，需要加入 0.02 mol 的强酸或强碱。
+</div>
+
+<!-- ==================== 计算题3 ==================== -->
+<h2 id="calc3">五、计算题第3题（10分）：HCl 滴定甲胺</h2>
+
+<div class="card">
+<p><strong>题目：</strong>用 $0.10\,\text{mol/L}$ 的 HCl 滴定 $0.10\,\text{mol/L}$ 的 $\text{CH}_3\text{NH}_2$（甲胺，$\text{p}K_b = 3.38$）。</p>
+<ol>
+<li>写出滴定反应方程式；</li>
+<li>计算化学计量点的 pH 值，并选择合适的指示剂；</li>
+<li>计算滴定到 50% 时的 pH 值；</li>
+<li>若终点 pH = 4.0，计算终点误差 $E_t$。</li>
+</ol>
+</div>
+
+<h3>第(1)小题：滴定反应</h3>
+<div class="sol">
+<p class="st">解答：</p>
+$$\text{HCl} + \text{CH}_3\text{NH}_2 \to \text{CH}_3\text{NH}_3\text{Cl}$$
+<p>即强酸滴定弱碱，产物为弱碱的共轭酸盐 $\text{CH}_3\text{NH}_3^+$（甲胺盐酸盐）。</p>
+<p>滴定反应的平衡常数：</p>
+$$K_t = \frac{K_b}{K_w} = \frac{10^{-3.38}}{10^{-14}} = 10^{10.62}$$
+<p>$K_t$ 极大，反应完全。</p>
+</div>
+
+<h3>第(2)小题：化学计量点 pH 与指示剂选择</h3>
+<div class="sol">
+<p class="st">解答：</p>
+<p>化学计量点时溶液为 $0.050\,\text{mol/L}$ 的 $\text{CH}_3\text{NH}_3\text{Cl}$（体积加倍，浓度减半）。</p>
+<p>$\text{CH}_3\text{NH}_3^+$ 的 $\text{p}K_a = 14 - \text{p}K_b = 14 - 3.38 = 10.62$</p>
+<p>$K_a = 10^{-10.62} = 2.40 \times 10^{-11}$</p>
+<p>弱酸性盐溶液的 $[\text{H}^+]$ 计算：</p>
+$$[\text{H}^+] = \sqrt{K_a \cdot c} = \sqrt{10^{-10.62} \times 0.050}$$
+$$= \sqrt{10^{-10.62} \times 10^{-1.30}} = \sqrt{10^{-11.92}} = 10^{-5.96}$$
+$$\boxed{\text{pH}_{\text{sp}} = 5.96}$$
+
+<p><strong>指示剂选择：</strong>化学计量点 pH = 5.96，处于酸性区域。应选择变色范围在 pH 5~6 附近的指示剂。</p>
+<p><strong>甲基红</strong>（变色范围 pH 4.4~6.2）是最佳选择。</p>
+</div>
+<div class="note">
+<strong>注意：</strong>强酸滴定弱碱，化学计量点在酸性区域（pH &lt; 7），应选择酸性变色范围的指示剂，如甲基红或甲基橙。不能选酚酞（碱性范围）。
+</div>
+
+<h3>第(3)小题：半中和点 pH</h3>
+<div class="sol">
+<p class="st">解答：</p>
+<p>滴定到 50% 时，甲胺被中和一半：</p>
+$$[\text{CH}_3\text{NH}_2] = [\text{CH}_3\text{NH}_3^+]$$
+<p>此时溶液为等浓度的弱碱及其共轭酸的缓冲溶液。用 Henderson-Hasselbalch 方程（碱的形式）：</p>
+$$\text{pOH} = \text{p}K_b + \lg \frac{[\text{CH}_3\text{NH}_3^+]}{[\text{CH}_3\text{NH}_2]} = 3.38 + \lg 1 = 3.38$$
+$$\text{pH} = 14 - 3.38 = 10.62$$
+<p>或者用酸的形式：</p>
+$$\text{pH} = \text{p}K_a + \lg \frac{[\text{CH}_3\text{NH}_2]}{[\text{CH}_3\text{NH}_3^+]} = 10.62 + \lg 1 = 10.62$$
+$$\boxed{\text{pH}_{50\%} = 10.62 = \text{p}K_a}$$
+</div>
+<div class="fb">
+<p class="t">规律</p>
+<p>半中和点（滴定 50%）处，$\text{pH} = \text{p}K_a$。这是确定弱酸/碱 $\text{p}K_a$ 的实验方法之一。</p>
+</div>
+
+<h3>第(4)小题：终点误差</h3>
+<div class="sol">
+<p class="st">解答：</p>
+<p>终点误差 $E_t$ 的计算。终点 pH = 4.0，化学计量点 pH = 5.96。</p>
+<p>对于强酸滴定弱碱体系，终点误差公式为：</p>
+$$E_t = \frac{[\text{H}^+]_{\text{ep}} - [\text{H}^+]_{\text{sp}}}{c_{\text{sp}}} \times 100\%$$
+
+<p>更精确地，用林邦误差公式。在终点 pH = 4.0 处：</p>
+<p>$[\text{H}^+]_{\text{ep}} = 10^{-4.0} = 1.0 \times 10^{-4}\,\text{mol/L}$</p>
+<p>$[\text{OH}^-]_{\text{ep}} = 10^{-10.0} = 1.0 \times 10^{-10}\,\text{mol/L}$</p>
+
+<p>在终点，HCl 过量。化学计量点浓度 $c_{\text{sp}} = 0.050\,\text{mol/L}$。</p>
+$$E_t \approx \frac{[\text{H}^+]_{\text{ep}} - \frac{K_w}{[\text{H}^+]_{\text{ep}}}}{c_{\text{sp}}} \times 100\%$$
+$$= \frac{10^{-4.0} - 10^{-10.0}}{0.050} \times 100\% = \frac{1.0 \times 10^{-4}}{0.050} \times 100\% = 0.20\%$$
+$$\boxed{E_t \approx 0.20\%}$$
+<p>$E_t > 0$，表示终点在化学计量点之后（过滴定），这是合理的（pH 4.0 &lt; 5.96，说明过量加入了 HCl）。</p>
+</div>
+<div class="warn">
+<strong>误差方向判断：</strong>终点 pH (4.0) &lt; 化学计量点 pH (5.96)，说明终点时 HCl 已过量 &rarr; $E_t > 0$（正误差，过滴定）。0.20% 在允许范围（$\leq 0.3\%$）内。
+</div>
+
+<!-- ==================== 实验设计题 ==================== -->
+<h2 id="design">六、实验设计题（8分）：Na<sub>3</sub>PO<sub>4</sub> 与 Na<sub>2</sub>HPO<sub>4</sub> 混合物分析</h2>
+
+<div class="card">
+<p><strong>题目：</strong>设计实验方案，用 HCl 标准溶液测定 $\text{Na}_3\text{PO}_4$ 和 $\text{Na}_2\text{HPO}_4$ 混合溶液中各组分的浓度。已知磷酸的 $\text{p}K_{a1} = 2.15$，$\text{p}K_{a2} = 7.20$，$\text{p}K_{a3} = 12.37$。</p>
+</div>
+
+<h3>分析思路</h3>
+<div class="sol">
+<p class="st">解答：</p>
+<p><strong>关键思路：</strong>HCl 滴定 $\text{Na}_3\text{PO}_4 + \text{Na}_2\text{HPO}_4$ 混合物，存在两个可区分的滴定终点。</p>
+
+<p><strong>第一步反应</strong>（$\text{Na}_3\text{PO}_4 \to \text{Na}_2\text{HPO}_4$）：</p>
+$$\text{Na}_3\text{PO}_4 + \text{HCl} \to \text{Na}_2\text{HPO}_4 + \text{NaCl}$$
+<p>化学计量点处溶液为 $\text{Na}_2\text{HPO}_4$，其 pH 为：</p>
+$$\text{pH} = \frac{\text{p}K_{a2} + \text{p}K_{a3}}{2} = \frac{7.20 + 12.37}{2} = 9.79 \approx 9.7$$
+
+<p><strong>第二步反应</strong>（$\text{Na}_2\text{HPO}_4 \to \text{NaH}_2\text{PO}_4$，包括原有的和第一步生成的）：</p>
+$$\text{Na}_2\text{HPO}_4 + \text{HCl} \to \text{NaH}_2\text{PO}_4 + \text{NaCl}$$
+<p>化学计量点处溶液为 $\text{NaH}_2\text{PO}_4$，其 pH 为：</p>
+$$\text{pH} = \frac{\text{p}K_{a1} + \text{p}K_{a2}}{2} = \frac{2.15 + 7.20}{2} = 4.68 \approx 4.7$$
+</div>
+
+<h3>实验方案</h3>
+<div class="card">
+<p><strong>步骤 1：</strong>准确移取 25.00 mL 混合溶液于锥形瓶中。</p>
+
+<p><strong>步骤 2：</strong>加入 2~3 滴<strong>酚酞指示剂</strong>（变色范围 pH 8.0~10.0），用 $c\,\text{mol/L}$ HCl 标准溶液滴定至<strong>溶液由粉红色变为无色</strong>，记录消耗体积 $V_1$。</p>
+<p>此步滴定的反应：$\text{Na}_3\text{PO}_4 + \text{HCl} \to \text{Na}_2\text{HPO}_4 + \text{NaCl}$</p>
+
+<p><strong>步骤 3：</strong>继续在同一溶液中加入 2~3 滴<strong>甲基红</strong>（变色范围 pH 4.4~6.2）或<strong>甲基橙</strong>（变色范围 pH 3.1~4.4）指示剂，继续用 HCl 标准溶液滴定至<strong>指示剂变色</strong>，记录消耗体积 $V_2$（从开始到第二终点的总体积）。</p>
+<p>此步滴定的反应：$\text{Na}_2\text{HPO}_4 + \text{HCl} \to \text{NaH}_2\text{PO}_4 + \text{NaCl}$</p>
+</div>
+
+<h3>计算公式</h3>
+<div class="fb">
+<p class="t">浓度计算</p>
+<p><strong>$\text{Na}_3\text{PO}_4$ 的浓度：</strong></p>
+$$c(\text{Na}_3\text{PO}_4) = \frac{c_{\text{HCl}} \times V_1}{25.00}$$
+
+<p><strong>$\text{Na}_2\text{HPO}_4$ 的浓度：</strong></p>
+$$c(\text{Na}_2\text{HPO}_4) = \frac{c_{\text{HCl}} \times (V_2 - 2V_1)}{25.00}$$
+</div>
+
+<div class="sol">
+<p class="st">公式推导：</p>
+<p>$V_1$ 对应 $\text{Na}_3\text{PO}_4 \to \text{Na}_2\text{HPO}_4$，消耗 HCl 物质的量 = $c_{\text{HCl}} \times V_1$，即 $\text{Na}_3\text{PO}_4$ 的物质的量。</p>
+<p>从 $V_1$ 到 $V_2$ 消耗的 HCl 体积 = $V_2 - V_1$，对应所有 $\text{Na}_2\text{HPO}_4$（原有的 + 第一步生成的）滴定为 $\text{NaH}_2\text{PO}_4$：</p>
+$$n(\text{Na}_2\text{HPO}_4)_{\text{total}} = c_{\text{HCl}} \times (V_2 - V_1)$$
+<p>其中第一步生成的 $\text{Na}_2\text{HPO}_4$ 物质的量 = $c_{\text{HCl}} \times V_1$</p>
+<p>因此原有的 $\text{Na}_2\text{HPO}_4$：</p>
+$$n(\text{Na}_2\text{HPO}_4)_{\text{original}} = c_{\text{HCl}} \times (V_2 - V_1) - c_{\text{HCl}} \times V_1 = c_{\text{HCl}} \times (V_2 - 2V_1)$$
+</div>
+
+<h3>指示剂选择依据</h3>
+<div class="card">
+<table>
+<tr><th>终点</th><th>化学计量点 pH</th><th>指示剂</th><th>变色范围</th><th>变色现象</th></tr>
+<tr><td>第一终点 (SP1)</td><td>$\approx 9.7$</td><td>酚酞</td><td>pH 8.0~10.0</td><td>粉红 &rarr; 无色</td></tr>
+<tr><td>第二终点 (SP2)</td><td>$\approx 4.7$</td><td>甲基红 / 甲基橙</td><td>pH 4.4~6.2 / 3.1~4.4</td><td>黄 &rarr; 橙红</td></tr>
+</table>
+</div>
+
+<div class="warn">
+<strong>注意事项：</strong>
+<ul>
+<li>$\text{NaH}_2\text{PO}_4$ 不能继续被 HCl 滴定到 $\text{H}_3\text{PO}_4$，因为 $\text{p}K_{a1} = 2.15$ 太小，没有明显的突跃。</li>
+<li>第二终点的 $V_2$ 是从起点到第二终点的<strong>总体积</strong>，而非两个终点之间的差值。注意计算时用 $V_2 - 2V_1$。</li>
+<li>滴定过程中不要剧烈摇晃，避免 $\text{CO}_2$ 干扰。</li>
+</ul>
+</div>
+
+<!-- ==================== 总结 ==================== -->
+<h2 id="review">总结与复习要点</h2>
+
+<div class="card">
+<h3>核心知识点清单</h3>
+<ol>
+<li><strong>误差与数据处理</strong>：系统误差 vs 随机误差；有效数字规则（对数值特殊规则）；$t$ 检验与 $F$ 检验</li>
+<li><strong>酸碱平衡</strong>：质子条件式（PBE）的书写；多元酸各物种分布与 pH 关系</li>
+<li><strong>缓冲溶液</strong>：Henderson-Hasselbalch 方程；缓冲容量 $\beta$ 的计算；缓冲范围 = $\text{p}K_a \pm 1$</li>
+<li><strong>酸碱滴定</strong>：化学计量点 pH 计算；指示剂选择原则；终点误差公式</li>
+<li><strong>多元酸滴定</strong>：分步滴定判据 $K_{a1}/K_{a2} \geq 10^4$；混合碱/混合酸的分步滴定方案设计</li>
+</ol>
+</div>
+
+<div class="tip">
+<strong>考前检查清单：</strong>
+<ul>
+<li>能熟练写出各种溶液的质子条件式</li>
+<li>记住常用指示剂的变色范围</li>
+<li>掌握 $t$ 检验和 $F$ 检验的计算与判断</li>
+<li>能计算缓冲溶液的配制量和缓冲容量</li>
+<li>能完成酸碱滴定的化学计量点 pH 和终点误差计算</li>
+</ul>
+</div>
+
+<script src="toc.js"></script>
+<script src="auth.js"></script>
+<script src="progress.js"></script>
+</body></html>

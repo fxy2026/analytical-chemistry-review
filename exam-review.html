@@ -1,0 +1,852 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>备考指南与考点分析 | 分析化学1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<link rel="stylesheet" href="toc.css">
+<style>
+:root{--pri:#1a5276;--acc:#c0392b;--bg:#fffef9;--card:#fff;--border:#e0d8c8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);color:#333;line-height:1.9;padding:20px;max-width:1000px;margin:0 auto;}
+h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
+h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
+h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
+.sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
+.tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+table{width:100%;border-collapse:collapse;margin:12px 0;}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
+th{background:var(--pri);color:#fff;}
+tr:nth-child(even){background:#f9f7f2;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
+.nav-bar a:hover{background:#1a5276;color:#fff;}
+ul,ol{margin-left:20px;margin-bottom:8px;}
+details{margin:8px 0;}
+details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+.freq{display:inline-block;padding:2px 8px;border-radius:3px;font-size:.8em;font-weight:bold;color:#fff;}
+.freq-high{background:#e74c3c;}
+.freq-mid{background:#f39c12;}
+.freq-low{background:#27ae60;}
+</style>
+</head>
+<body>
+
+<div class="nav-bar">
+  <a href="index.html">首页</a>
+  <a href="formulas.html">公式速查</a>
+  <a href="#overview">考试概况</a>
+  <a href="#freq">考频排序</a>
+  <a href="#top10">十大考点</a>
+  <a href="#traps">十大陷阱</a>
+  <a href="#criteria">判据对比</a>
+  <a href="#quiz">真题解析</a>
+  <a href="#strategy">答题策略</a>
+</div>
+
+<h1>备考指南与考点分析</h1>
+
+<!-- ============================== Section 1 ============================== -->
+<h2 id="overview">一、考试概况与题型分析</h2>
+
+<div class="card">
+<h3>小测1 试卷结构（总分50分）</h3>
+<table>
+<tr><th>题型</th><th>分值</th><th>题量</th><th>考察特点</th></tr>
+<tr><td>选择题</td><td>10%（10分）</td><td>10题</td><td>概念辨析、判断推理，每题1分</td></tr>
+<tr><td>填空题</td><td>10%（10分）</td><td>~10空</td><td>公式应用、计算结果、名词填写</td></tr>
+<tr><td>计算题</td><td>22%（22分）</td><td>3题</td><td>完整计算过程，步骤分明</td></tr>
+<tr><td>实验设计题</td><td>8%（8分）</td><td>1题</td><td>方案设计、指示剂选择、原理说明</td></tr>
+</table>
+</div>
+
+<div class="tip">
+<strong>期末推测：</strong>期末考试总分100分，预计题型结构类似（选择+填空+计算+实验/综合），但范围扩展至全部章节（Ch1-Ch10）。计算题比重可能进一步加大。
+</div>
+
+<div class="fb">
+<div class="t">时间分配建议（以50分/90分钟为例）</div>
+<ul>
+<li>选择题：10-12分钟（每题1分钟，不纠结）</li>
+<li>填空题：12-15分钟（注意有效数字和单位）</li>
+<li>计算题：45-50分钟（第3题最重，分配20分钟）</li>
+<li>实验设计题：10-12分钟（要点完整即可，不需要长篇大论）</li>
+<li>检查：5-10分钟（重点检查有效数字和正负号）</li>
+</ul>
+</div>
+
+<!-- ============================== Section 2 ============================== -->
+<h2 id="freq">二、各章考频与重要性排序</h2>
+
+<table>
+<tr><th>章节</th><th>重要性</th><th>常见题型</th><th>备考建议</th></tr>
+<tr>
+  <td>Ch5 酸碱滴定</td>
+  <td><span class="freq freq-high">最高</span></td>
+  <td>选择、填空、计算、实验设计</td>
+  <td>全面掌握，计算必考</td>
+</tr>
+<tr>
+  <td>Ch3 误差与数据处理</td>
+  <td><span class="freq freq-high">高</span></td>
+  <td>选择、填空、计算（统计分析）</td>
+  <td>t/F/Q检验务必掌握</td>
+</tr>
+<tr>
+  <td>Ch6 配位滴定</td>
+  <td><span class="freq freq-high">中高</span></td>
+  <td>计算、选择</td>
+  <td>条件稳定常数、pH控制</td>
+</tr>
+<tr>
+  <td>Ch7 氧化还原滴定</td>
+  <td><span class="freq freq-high">中高</span></td>
+  <td>计算、选择</td>
+  <td>电位计算、判据、碘量法</td>
+</tr>
+<tr>
+  <td>Ch9 沉淀滴定</td>
+  <td><span class="freq freq-mid">中</span></td>
+  <td>选择、填空</td>
+  <td>三种方法对比、溶度积</td>
+</tr>
+<tr>
+  <td>Ch10 吸光光度法</td>
+  <td><span class="freq freq-mid">中</span></td>
+  <td>选择、计算</td>
+  <td>Beer定律、相对误差</td>
+</tr>
+<tr>
+  <td>Ch1 概述 / Ch2 基础</td>
+  <td><span class="freq freq-low">基础</span></td>
+  <td>选择、填空</td>
+  <td>概念为主，快速过</td>
+</tr>
+</table>
+
+<div class="warn">
+<strong>核心规律：</strong>酸碱滴定（Ch5）占比最大，几乎每种题型都会涉及。误差统计（Ch3）紧随其后，计算题中也常作为独立大题出现。配位和氧化还原属于"第二梯队"。
+</div>
+
+<!-- ============================== Section 3 ============================== -->
+<h2 id="top10">三、十大必考高频知识点</h2>
+
+<h3>1. 有效数字规则 <span class="freq freq-high">必考</span></h3>
+<div class="card">
+<p><strong>核心规则：</strong></p>
+<ul>
+<li>普通数据：从第一个非零数字起计数</li>
+<li><strong>pH、pKa 等对数值：有效数字只看小数部分！</strong></li>
+<li>pH = 11.05 → 只有<strong>2位</strong>有效数字（小数点后05）</li>
+<li>pH = 3.458 → <strong>3位</strong>有效数字</li>
+<li>反对数：$[\text{H}^+] = 10^{-11.01}$，小数部分2位 → 结果保留2位有效数字</li>
+</ul>
+<p><strong>修约规则：四舍六入五成双</strong></p>
+<ul>
+<li>5后有非零数字：进位（如 2.355001 → 2.36）</li>
+<li>5后全零或无数字：看5前面的数，奇进偶不进（如 2.345 → 2.34，2.335 → 2.34）</li>
+</ul>
+</div>
+
+<h3>2. pH计算公式选择（决策树） <span class="freq freq-high">必考</span></h3>
+<div class="card">
+<p><strong>一元弱酸 HA（浓度 $c$，解离常数 $K_a$）：</strong></p>
+<ul>
+<li>若 $c/K_a \geq 500$：$[\text{H}^+] = \sqrt{cK_a}$（最简式）</li>
+<li>若 $20 \leq c/K_a < 500$：$[\text{H}^+] = \frac{-K_a + \sqrt{K_a^2 + 4cK_a}}{2}$（一元二次）</li>
+<li>若 $c/K_a < 20$：需用精确式（含 $K_w$）</li>
+</ul>
+<p><strong>两性物质（如 $\text{NaH}_2\text{PO}_4$）：</strong></p>
+<ul>
+<li>若 $c \geq 10K_{a1}$ 且 $cK_{a2} \geq 10K_w$：$[\text{H}^+] = \sqrt{K_{a1} \cdot K_{a2}}$</li>
+<li>注意：最简式<strong>不含浓度 $c$</strong>，但使用前<strong>必须验证条件</strong></li>
+</ul>
+</div>
+
+<h3>3. 缓冲溶液pH与缓冲能力 <span class="freq freq-high">必考</span></h3>
+<div class="card">
+<p>Henderson-Hasselbalch 方程：</p>
+$$\text{pH} = \text{p}K_a + \lg\frac{c(\text{A}^-)}{c(\text{HA})}$$
+<ul>
+<li><strong>选择缓冲对：</strong>$\text{p}K_a$ 尽量接近目标 pH</li>
+<li><strong>有效缓冲范围：</strong>$\text{p}K_a \pm 1$</li>
+<li><strong>缓冲能力最强：</strong>缓冲比 = 1，即 $c(\text{HA}) = c(\text{A}^-)$</li>
+<li>例：配 pH = 9.00 的缓冲液 → 选 NH$_3$·H$_2$O/NH$_4$Cl（$\text{p}K_a = 9.26$）</li>
+</ul>
+</div>
+
+<h3>4. 质子条件式（PBE）书写 <span class="freq freq-high">必考</span></h3>
+<div class="card">
+<p><strong>步骤：</strong></p>
+<ol>
+<li>确定零水准（溶液中大量存在的物种 + H$_2$O）</li>
+<li>得质子产物放左边，失质子产物放右边</li>
+<li>注意系数：失去/得到 $n$ 个质子，系数为 $n$</li>
+</ol>
+<div class="ex">
+<strong>例：NaH$_2$PO$_4$ 溶液</strong><br>
+零水准：H$_2$PO$_4^-$ 和 H$_2$O<br>
+PBE：$[\text{H}_3\text{PO}_4] + [\text{H}^+] = [\text{HPO}_4^{2-}] + 2[\text{PO}_4^{3-}] + [\text{OH}^-]$<br>
+注意 PO$_4^{3-}$ 前的系数 2（H$_2$PO$_4^-$ 失去 2 个质子变成 PO$_4^{3-}$）
+</div>
+</div>
+
+<h3>5. 四大滴定可行性判据 <span class="freq freq-high">必考</span></h3>
+<div class="card">
+<table>
+<tr><th>滴定类型</th><th>判据</th><th>含义</th></tr>
+<tr><td>酸碱（直接滴定）</td><td>$cK_a \geq 10^{-8}$</td><td>酸性够强、浓度够大</td></tr>
+<tr><td>酸碱（分步滴定）</td><td>$K_{a1}/K_{a2} > 10^5$</td><td>两级解离常数相差足够大</td></tr>
+<tr><td>配位滴定</td><td>$\lg c_{\text{sp}}K'_{MY} \geq 6$</td><td>条件稳定常数足够大</td></tr>
+<tr><td>氧化还原滴定</td><td>$\Delta\varphi^{0'} \geq 0.4\text{V}$</td><td>电位差足够大（$\approx \lg K' \geq 6$）</td></tr>
+</table>
+<div class="tip">
+<strong>记忆技巧：</strong>所有判据的本质都是要求<strong>平衡常数够大</strong>（$K' \geq 10^6$），对应反应完成度 $\geq 99.9\%$。
+</div>
+</div>
+
+<h3>6. 终点误差计算 <span class="freq freq-high">必考</span></h3>
+<div class="card">
+<p><strong>强酸-强碱滴定（林邦公式）：</strong></p>
+$$E_t = \frac{[\text{H}^+]_{ep} - [\text{OH}^-]_{ep}}{c_{\text{sp}}} \times 100\%$$
+<p><strong>弱酸-强碱滴定：</strong></p>
+$$E_t = \frac{10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}}{\sqrt{K_t} \cdot c_{\text{sp}}} \times 100\%$$
+<p>其中 $\Delta\text{pH} = \text{pH}_{ep} - \text{pH}_{sp}$，$K_t = K_a/K_w$</p>
+<div class="warn">
+<strong>正负号含义：</strong>$E_t > 0$ 为过滴定（多加了滴定剂），$E_t < 0$ 为欠滴定（少加了滴定剂）。
+</div>
+</div>
+
+<h3>7. 统计检验三步法 <span class="freq freq-high">必考</span></h3>
+<div class="card">
+<p><strong>严格按顺序执行：</strong></p>
+<ol>
+<li><strong>Q 检验</strong> → 剔除离群值（先清洗数据）
+$$Q = \frac{|x_{\text{可疑}} - x_{\text{邻近}}|}{x_{\max} - x_{\min}}$$
+若 $Q_{\text{计}} > Q_{\text{表}}$，剔除该值</li>
+<li><strong>F 检验</strong> → 比较两组数据的精密度
+$$F = \frac{s_1^2}{s_2^2} \quad (s_1 > s_2)$$
+若 $F_{\text{计}} > F_{\text{表}}$，精密度有显著差异</li>
+<li><strong>t 检验</strong> → 比较准确度（均值与标准值/两组均值）
+$$t = \frac{|\bar{x} - \mu_0|}{s} \sqrt{n}$$
+若 $t_{\text{计}} > t_{\text{表}}$，有显著性差异</li>
+</ol>
+<div class="warn">
+<strong>顺序不能反！</strong>先 Q（清洗数据）→ 再 F（比精密度）→ 最后 t（比准确度）。
+</div>
+</div>
+
+<h3>8. 置信区间 <span class="freq freq-mid">高频</span></h3>
+<div class="card">
+$$\mu = \bar{x} \pm \frac{t_{(\alpha, f)} \cdot s}{\sqrt{n}}$$
+<ul>
+<li>$f = n - 1$（自由度）</li>
+<li>$t_{(\alpha, f)}$ 查表，常用：$t_{0.05, 5} = 2.571$</li>
+<li>含义：有 $(1-\alpha)\times 100\%$ 的把握，真值落在此区间内</li>
+</ul>
+</div>
+
+<h3>9. 指示剂选择原则 <span class="freq freq-mid">高频</span></h3>
+<div class="card">
+<ul>
+<li><strong>核心原则：</strong>指示剂变色点应尽量接近化学计量点 pH</li>
+<li>强酸-强碱：计量点 pH = 7.0，突跃大（4.3~9.7），甲基橙/甲基红/酚酞均可，但越接近7终点误差越小</li>
+<li>弱酸-强碱：计量点偏碱（如 pH 8~9），选酚酞</li>
+<li>强酸-弱碱：计量点偏酸（如 pH 5~6），选甲基橙/甲基红</li>
+<li>配位滴定：金属指示剂应在 $\text{p}M_{\text{sp}}$ 附近变色</li>
+</ul>
+</div>
+
+<h3>10. 实验方案设计思路 <span class="freq freq-mid">高频</span></h3>
+<div class="card">
+<p><strong>经典题型：混合物中各组分的分别测定</strong></p>
+<p>设计思路：</p>
+<ol>
+<li>分析各组分的性质差异（强酸/弱酸/极弱酸）</li>
+<li>利用性质差异分步滴定或特殊处理</li>
+<li>选择合适的指示剂标记各步终点</li>
+<li>写出计算公式</li>
+</ol>
+<div class="ex">
+<strong>经典例题：</strong>HCl + H$_3$BO$_3$ 混合液的测定<br>
+关键：H$_3$BO$_3$ 极弱（$\text{p}K_a = 9.24$），$cK_a < 10^{-8}$，无法直接滴定<br>
+技巧：加入<strong>甘油（丙三醇）</strong>，与 H$_3$BO$_3$ 络合使酸性增强至可滴定<br>
+步骤：先甲基橙终点滴 HCl → 加甘油 → 酚酞终点滴 H$_3$BO$_3$
+</div>
+</div>
+
+<!-- ============================== Section 4 ============================== -->
+<h2 id="traps">四、十大易错陷阱</h2>
+
+<div class="card">
+<h3>陷阱 1：pH有效数字只看小数部分</h3>
+<p>pH = 11.05 只有 <strong>2位</strong> 有效数字，不是4位！整数部分（11）只反映数量级（$10^{-11}$），不算有效数字。</p>
+<div class="warn">同理：pKa = 4.74 是 2 位有效数字，pOH = 2.150 是 3 位有效数字。</div>
+</div>
+
+<div class="card">
+<h3>陷阱 2：四舍六入五成双</h3>
+<p>5 后无非零数字时，看 5 前面的数字：</p>
+<ul>
+<li>2.345 → 2.34（4是偶数，不进位）</li>
+<li>2.335 → 2.34（3是奇数，进位）</li>
+<li>2.3450 → 2.34（5后面是0，仍看前一位，4偶不进）</li>
+<li>2.3451 → 2.35（5后有非零数字1，直接进位）</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>陷阱 3：增加平行实验 ≠ 消除系统误差</h3>
+<p>增加平行实验次数只能<strong>减小随机误差</strong>（提高精密度），<strong>不能</strong>发现或消除系统误差。</p>
+<p>消除系统误差的方法：对照实验、空白实验、仪器校正、更换方法。</p>
+</div>
+
+<div class="card">
+<h3>陷阱 4：NaOH吸收CO$_2$后用酚酞终点滴HCl → 偏高</h3>
+<p>NaOH + CO$_2$ → Na$_2$CO$_3$。酚酞终点下 Na$_2$CO$_3$ 只反应到 NaHCO$_3$（消耗1mol HCl），而原来2mol NaOH可中和2mol HCl。</p>
+<p>结果：同体积NaOH中和能力下降 → 需要更多NaOH才能到终点 → 计算出的HCl浓度<strong>偏高</strong>。</p>
+</div>
+
+<div class="card">
+<h3>陷阱 5：弱酸稀释10倍，突跃下限不变，上限降1个pH</h3>
+<ul>
+<li>突跃下限 ≈ 半当量点附近 pH（由 pKa 决定），与浓度无关</li>
+<li>突跃上限由计量点后过量碱浓度决定，稀释10倍 → 上限降约1个pH</li>
+<li>例：0.1 mol/L 时突跃 7.74~9.7 → 0.01 mol/L 时约 7.74~8.7</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>陷阱 6：两性物质最简式不含浓度——但要验证条件</h3>
+<p>$[\text{H}^+] = \sqrt{K_{a1} \cdot K_{a2}}$ 看似与浓度无关，但使用条件是：</p>
+<ul>
+<li>$c \geq 10K_{a1}$（浓度远大于第一级解离常数）</li>
+<li>$cK_{a2} \geq 10K_w$（第二级解离足够强）</li>
+</ul>
+<p>浓度太低时条件不满足，不能使用此最简式！</p>
+</div>
+
+<div class="card">
+<h3>陷阱 7：统计检验顺序 Q → F → t</h3>
+<p><strong>绝对不能反！</strong></p>
+<ol>
+<li><strong>Q检验</strong>先做：剔除离群值，清洗数据</li>
+<li><strong>F检验</strong>次做：比较两组精密度是否有显著差异</li>
+<li><strong>t检验</strong>最后：比较准确度（均值是否一致）</li>
+</ol>
+<p>原因：含离群值的数据做 t 检验会得到错误结论；F 检验不通过时 t 检验的公式不同。</p>
+</div>
+
+<div class="card">
+<h3>陷阱 8：终点误差 $E_t$ 的正负号</h3>
+<ul>
+<li>$E_t > 0$：<strong>过滴定</strong>（终点时多加了滴定剂）</li>
+<li>$E_t < 0$：<strong>欠滴定</strong>（终点时少加了滴定剂）</li>
+</ul>
+<p>别搞反！用强碱滴弱酸时，若 pH$_{ep}$ > pH$_{sp}$（终点偏碱），$\Delta$pH > 0，代入公式 $E_t$ 为负值，表示过滴定方向...但注意公式中分子是 $10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}$ 恒为负。需根据滴定类型仔细判断。</p>
+</div>
+
+<div class="card">
+<h3>陷阱 9：配位滴定中 $K'_{MY}$ 随pH变化</h3>
+<p>$\lg K'_{MY} = \lg K_{MY} - \lg\alpha_{Y(H)}$</p>
+<p>不同 pH 下，$\alpha_{Y(H)}$ 不同 → $K'_{MY}$ 不同 → 滴定可行性也不同。</p>
+<p>pH 越高，$\alpha_{Y(H)}$ 越小，$K'_{MY}$ 越大，滴定越有利——但要防止金属离子水解！</p>
+</div>
+
+<div class="card">
+<h3>陷阱 10：碘量法间接法中淀粉指示剂要近终点时才加</h3>
+<p>间接碘量法中，淀粉指示剂不能一开始就加入。</p>
+<ul>
+<li>原因：高浓度 I$_2$ 与淀粉形成的深蓝色络合物不易分解，导致终点拖后</li>
+<li>正确做法：滴定至溶液呈浅黄色时再加入淀粉，继续滴至蓝色刚好褪去</li>
+</ul>
+</div>
+
+<!-- ============================== Section 5 ============================== -->
+<h2 id="criteria">五、四大滴定判据对比表</h2>
+
+<table>
+<tr><th>滴定方法</th><th>判据</th><th>物理意义</th><th>等价说法</th></tr>
+<tr>
+  <td>酸碱（直接）</td>
+  <td>$cK_a \geq 10^{-8}$</td>
+  <td>$K_a$ 和浓度 $c$ 都足够大</td>
+  <td>突跃 $\geq$ 0.3 pH</td>
+</tr>
+<tr>
+  <td>酸碱（分步）</td>
+  <td>$K_{a1}/K_{a2} > 10^5$</td>
+  <td>两级解离常数差距足够大</td>
+  <td>两个突跃不重叠</td>
+</tr>
+<tr>
+  <td>配位滴定</td>
+  <td>$\lg c_{\text{sp}}K'_{MY} \geq 6$</td>
+  <td>条件稳定常数足够大</td>
+  <td>反应完成度 $\geq$ 99.9%</td>
+</tr>
+<tr>
+  <td>配位（选择性）</td>
+  <td>$\Delta\lg cK' \geq 6$</td>
+  <td>两种金属条件常数差距够大</td>
+  <td>可选择性滴定一种</td>
+</tr>
+<tr>
+  <td>氧化还原</td>
+  <td>$\Delta\varphi^{0'} \geq 0.4\text{V}$</td>
+  <td>条件电位差足够大</td>
+  <td>$\lg K' \geq 6$（$n=1$时）</td>
+</tr>
+</table>
+
+<div class="note">
+<strong>统一本质：</strong>所有判据归根结底都要求 $K'_{\text{反应}} \geq 10^6$，即反应在化学计量点的完成度 $\geq 99.9\%$，才能产生足够大的突跃供指示剂检测。
+</div>
+
+<!-- ============================== Section 6 ============================== -->
+<h2 id="quiz">六、2026 小测1 真题完整解析</h2>
+
+<!-- ===== 选择题 ===== -->
+<h3>选择题（每题1分，共10分）</h3>
+<p><strong>答案速查：B, A, D, D, A, D, B, B, D, D</strong></p>
+
+<details>
+<summary>第1题：4位有效数字的是？ —— 答案 B</summary>
+<div class="sol">
+<div class="st">答案：B. w(Ca) = 36.18%</div>
+<ul>
+<li>A. pH = 11.05 → 对数值只看小数部分，仅 2 位有效数字</li>
+<li><strong>B. 36.18% → 3、6、1、8 共 4 位 ✓</strong></li>
+<li>C. 1000 → 末尾零不确定（1~4位均可能），无法判定</li>
+<li>D. $\pi$ → 无理数，有无限位</li>
+</ul>
+<p><strong>考点：</strong>对数值有效数字规则</p>
+</div>
+</details>
+
+<details>
+<summary>第2题：NaOH吸收CO$_2$后酚酞终点滴HCl → 结果？ —— 答案 A</summary>
+<div class="sol">
+<div class="st">答案：A. 偏高</div>
+<p>NaOH + CO$_2$ → Na$_2$CO$_3$。酚酞终点下 Na$_2$CO$_3$ + HCl → NaHCO$_3$（只消耗1mol HCl，而非原来2mol NaOH对应的2mol HCl）。NaOH中和能力变弱 → 消耗更多NaOH体积 → 计算出的HCl浓度偏高。</p>
+<p><strong>考点：</strong>系统误差分析、CO$_2$对NaOH的影响</p>
+</div>
+</details>
+
+<details>
+<summary>第3题：属于随机误差的是？ —— 答案 D</summary>
+<div class="sol">
+<div class="st">答案：D. 最后一位估测不准</div>
+<ul>
+<li>A. 试剂含待测组分 → 系统误差（始终正偏）</li>
+<li>B. 砝码腐蚀 → 系统误差（单方向偏）</li>
+<li>C. 终点与计量点不一致 → 系统误差（方法误差）</li>
+<li><strong>D. 读数末位估测不准 → 随机误差（时大时小，服从正态分布）</strong></li>
+</ul>
+<p><strong>考点：</strong>系统误差 vs 随机误差的判别</p>
+</div>
+</details>
+
+<details>
+<summary>第4题：强酸-强碱滴定，终点误差最小的指示剂？ —— 答案 D</summary>
+<div class="sol">
+<div class="st">答案：D. 酚酞 &lt; 甲基红 &lt; 甲基橙</div>
+<p>化学计量点 pH = 7.00。指示剂终点越接近7.00，误差越小：</p>
+<ul>
+<li>酚酞终点 pH ≈ 9.0，偏离 2.0</li>
+<li>甲基红终点 pH ≈ 5.5，偏离 1.5</li>
+<li>甲基橙终点 pH ≈ 4.0，偏离 3.0</li>
+</ul>
+<p>终点误差：甲基橙 > 酚酞 > 甲基红，即误差从小到大排序为 D。</p>
+<p><strong>考点：</strong>终点误差与指示剂变色点的关系</p>
+</div>
+</details>
+
+<details>
+<summary>第5题：能用NaOH直接滴定的是？ —— 答案 A</summary>
+<div class="sol">
+<div class="st">答案：A. HCOOH（甲酸）</div>
+<p>判据：$cK_a \geq 10^{-8}$（$c = 0.1$ mol/L）</p>
+<table>
+<tr><th>物质</th><th>$K_a$</th><th>$cK_a$</th><th>能否滴定</th></tr>
+<tr><td>HCOOH</td><td>$10^{-3.45}$</td><td>$10^{-4.45}$</td><td><strong>能 ✓</strong></td></tr>
+<tr><td>H$_3$BO$_3$</td><td>$10^{-9.22}$</td><td>$10^{-10.22}$</td><td>不能</td></tr>
+<tr><td>NH$_4^+$</td><td>$10^{-9.26}$</td><td>$10^{-10.26}$</td><td>不能</td></tr>
+<tr><td>H$_2$O$_2$</td><td>$10^{-12}$</td><td>$10^{-13}$</td><td>不能</td></tr>
+</table>
+<p><strong>考点：</strong>酸碱直接滴定可行性判据</p>
+</div>
+</details>
+
+<details>
+<summary>第6题：配制pH=9.00的缓冲液选？ —— 答案 D</summary>
+<div class="sol">
+<div class="st">答案：D. NH$_3$·H$_2$O / NH$_4$Cl</div>
+<table>
+<tr><th>选项</th><th>缓冲对</th><th>pKa</th><th>缓冲范围</th></tr>
+<tr><td>A</td><td>甲酸/甲酸钠</td><td>3.74</td><td>2.7~4.7</td></tr>
+<tr><td>B</td><td>乙酸/乙酸钠</td><td>4.74</td><td>3.7~5.7</td></tr>
+<tr><td>C</td><td>羟胺/羟胺盐酸盐</td><td>5.96</td><td>5.0~6.9</td></tr>
+<tr><td><strong>D</strong></td><td><strong>NH$_3$·H$_2$O/NH$_4$Cl</strong></td><td><strong>9.26</strong></td><td><strong>8.3~10.3</strong></td></tr>
+</table>
+<p>pH = 9.00 落在 D 的缓冲范围中心。</p>
+<p><strong>考点：</strong>缓冲溶液选择原则（pKa 接近目标 pH）</p>
+</div>
+</details>
+
+<details>
+<summary>第7题：弱酸浓度稀释10倍后突跃变化？ —— 答案 B</summary>
+<div class="sol">
+<div class="st">答案：B. 下限不变，上限降约1个pH</div>
+<p>突跃下限由 pKa 决定（Henderson-Hasselbalch 方程，半当量点附近），与浓度无关。突跃上限由计量点后过量碱浓度决定，浓度降低10倍 → 上限降约1个pH单位。</p>
+<p>例：0.1 mol/L 时突跃 7.74~9.7 → 0.01 mol/L 时约 7.74~8.7</p>
+<p><strong>考点：</strong>浓度对滴定突跃的影响</p>
+</div>
+</details>
+
+<details>
+<summary>第8题：H$_2$PO$_4^-$ 分布系数最大时的pH？ —— 答案 B</summary>
+<div class="sol">
+<div class="st">答案：B. pH = 4.66</div>
+<p>多元酸中间型体分布系数最大时：</p>
+$$\text{pH} = \frac{\text{p}K_{a1} + \text{p}K_{a2}}{2} = \frac{2.12 + 7.20}{2} = 4.66$$
+<p><strong>考点：</strong>分布系数与 pH 的关系</p>
+</div>
+</details>
+
+<details>
+<summary>第9题：缓冲能力最强的NH$_3$/NH$_4$Cl混合比？ —— 答案 D</summary>
+<div class="sol">
+<div class="st">答案：D. V(NH$_3$) : V(NH$_4$Cl) = 1 : 10</div>
+<p>缓冲能力最强 → 缓冲比 = 1 → $n(\text{NH}_3) = n(\text{NH}_4^+)$</p>
+$$\frac{1.0 \times V_1}{0.1 \times V_2} = 1 \implies V_1 : V_2 = 0.1 : 1.0 = 1 : 10$$
+<p><strong>考点：</strong>缓冲能力与缓冲比的关系</p>
+</div>
+</details>
+
+<details>
+<summary>第10题：不能减免系统误差的是？ —— 答案 D</summary>
+<div class="sol">
+<div class="st">答案：D. 增加平行实验次数</div>
+<ul>
+<li>A. 对照实验 → 发现系统误差 ✓</li>
+<li>B. 空白实验 → 消除试剂/器皿引入的系统误差 ✓</li>
+<li>C. 仪器校正 → 消除仪器系统误差 ✓</li>
+<li><strong>D. 增加平行实验次数 → 只减小随机误差，不能减免系统误差</strong></li>
+</ul>
+<p><strong>考点：</strong>系统误差 vs 随机误差的消除方法</p>
+</div>
+</details>
+
+<!-- ===== 填空题 ===== -->
+<h3>填空题（共10分）</h3>
+
+<div class="card">
+<h3>第1空：pH = 11.01，求 [H$^+$]</h3>
+<p>pH有效数字看小数部分 → 2位 → 结果保留2位有效数字</p>
+$$[\text{H}^+] = 10^{-11.01} = 9.8 \times 10^{-12} \text{ mol/L}$$
+</div>
+
+<div class="card">
+<h3>第2空：已知 $K_b = 1.9 \times 10^{-9}$，求共轭酸的 $K_a$</h3>
+$$K_a = \frac{K_w}{K_b} = \frac{1.0 \times 10^{-14}}{1.9 \times 10^{-9}} = 5.3 \times 10^{-6}$$
+</div>
+
+<div class="card">
+<h3>第3空：NaH$_2$PO$_4$ 溶液的PBE、零水准、酸碱性质、pH公式</h3>
+<ul>
+<li><strong>零水准：</strong>H$_2$PO$_4^-$ 和 H$_2$O</li>
+<li><strong>PBE：</strong>$[\text{H}_3\text{PO}_4] + [\text{H}^+] = [\text{HPO}_4^{2-}] + 2[\text{PO}_4^{3-}] + [\text{OH}^-]$</li>
+<li><strong>酸碱性质：</strong>两性物质</li>
+<li><strong>最适用公式：</strong>$[\text{H}^+] = \sqrt{K_{a1} \cdot K_{a2}}$</li>
+</ul>
+<div class="tip">验证条件：$c = 0.1 \geq 10K_{a1} = 0.076$ ✓，$cK_{a2} = 10^{-8.2} \geq 10K_w = 10^{-13}$ ✓</div>
+</div>
+
+<div class="card">
+<h3>第4空：H$_2$C$_2$O$_4$ 用 NaOH 滴定有几个突跃？</h3>
+<p>$K_{a1}/K_{a2} = 10^{-1.25+4.29} = 10^{3.04} \approx 1.1 \times 10^3$</p>
+<p>$10^{3.04} \ll 10^5$，不能分步滴定 → <strong>只有1个突跃</strong>（两个H$^+$一起被滴定）</p>
+</div>
+
+<div class="card">
+<h3>第5空：滴定管放出5 mL的有效数字；相对误差 ≤ 0.1% 的最小体积</h3>
+<p>放出 5.00 mL → <strong>3位有效数字</strong></p>
+<p>滴定管两次读数绝对误差 = $\pm 0.02$ mL</p>
+$$\frac{0.02}{V} \leq 0.1\% \implies V \geq \frac{0.02}{0.001} = 20 \text{ mL}$$
+<p><strong>答：3位；20 mL</strong></p>
+</div>
+
+<div class="card">
+<h3>第6空：Q检验判断可疑值是否保留</h3>
+<p>数据排序：42.18, 42.32, 42.34, 42.38，可疑值 42.18</p>
+$$Q_{\text{计}} = \frac{|42.18 - 42.32|}{42.38 - 42.18} = \frac{0.14}{0.20} = 0.70$$
+<p>$n = 4$，$Q_{0.95} = 0.84$</p>
+<p>$Q_{\text{计}} = 0.70 < Q_{0.95} = 0.84$ → <strong>保留</strong></p>
+</div>
+
+<!-- ===== 计算题 ===== -->
+<h3>计算题（共22分）</h3>
+
+<h3>计算第1题（5分）：铁矿石中 Fe$_2$O$_3$ 的质量分数</h3>
+<div class="card">
+<p><strong>已知：</strong>K$_2$Cr$_2$O$_7$ 浓度 0.01667 mol/L，消耗 23.78 mL，样品 0.3500 g</p>
+<p><strong>反应：</strong>Cr$_2$O$_7^{2-}$ + 6Fe$^{2+}$ + 14H$^+$ → 2Cr$^{3+}$ + 6Fe$^{3+}$ + 7H$_2$O</p>
+<div class="sol">
+<div class="st">完整解答</div>
+<p><strong>Step 1：</strong>K$_2$Cr$_2$O$_7$ 的物质的量</p>
+$$n(\text{K}_2\text{Cr}_2\text{O}_7) = 0.01667 \times 23.78 \times 10^{-3} = 3.964 \times 10^{-4} \text{ mol}$$
+
+<p><strong>Step 2：</strong>Fe$^{2+}$ 的物质的量（1 mol K$_2$Cr$_2$O$_7$ 对应 6 mol Fe$^{2+}$）</p>
+$$n(\text{Fe}^{2+}) = 6 \times 3.964 \times 10^{-4} = 2.378 \times 10^{-3} \text{ mol}$$
+
+<p><strong>Step 3：</strong>Fe$_2$O$_3$ 的物质的量（2 mol Fe → 1 mol Fe$_2$O$_3$）</p>
+$$n(\text{Fe}_2\text{O}_3) = \frac{2.378 \times 10^{-3}}{2} = 1.189 \times 10^{-3} \text{ mol}$$
+
+<p><strong>Step 4：</strong>Fe$_2$O$_3$ 的质量</p>
+$$m(\text{Fe}_2\text{O}_3) = 1.189 \times 10^{-3} \times 159.69 = 0.1899 \text{ g}$$
+
+<p><strong>Step 5：</strong>质量分数</p>
+$$w(\text{Fe}_2\text{O}_3) = \frac{0.1899}{0.3500} \times 100\% = \boxed{54.26\%}$$
+</div>
+</div>
+
+<h3>计算第2题（7分）：统计分析</h3>
+<div class="card">
+<p><strong>已知：</strong>6次测定值 54.26%, 54.20%, 54.32%, 54.23%, 54.25%, 54.28%；标准值 $\mu_0 = 54.28\%$</p>
+
+<div class="sol">
+<div class="st">(1) 平均值和标准偏差（2分）</div>
+$$\bar{x} = \frac{54.26 + 54.20 + 54.32 + 54.23 + 54.25 + 54.28}{6} = \frac{325.54}{6} = 54.257\% \approx 54.26\%$$
+
+<table>
+<tr><th>$x_i$</th><th>$x_i - \bar{x}$</th><th>$(x_i - \bar{x})^2$</th></tr>
+<tr><td>54.26</td><td>+0.003</td><td>0.000009</td></tr>
+<tr><td>54.20</td><td>-0.057</td><td>0.003249</td></tr>
+<tr><td>54.32</td><td>+0.063</td><td>0.003969</td></tr>
+<tr><td>54.23</td><td>-0.027</td><td>0.000729</td></tr>
+<tr><td>54.25</td><td>-0.007</td><td>0.000049</td></tr>
+<tr><td>54.28</td><td>+0.023</td><td>0.000529</td></tr>
+<tr><th colspan="2">$\sum$</th><th>0.008534</th></tr>
+</table>
+
+$$s = \sqrt{\frac{0.008534}{5}} = \sqrt{0.001707} = 0.041\%$$
+
+<p><strong>答：$\bar{x} = 54.26\%$，$s = 0.041\%$</strong></p>
+</div>
+
+<div class="sol">
+<div class="st">(2) 95%置信度的置信区间（1分）</div>
+<p>$f = n - 1 = 5$，查表 $t_{0.05, 5} = 2.571$</p>
+$$\mu = \bar{x} \pm \frac{t \cdot s}{\sqrt{n}} = 54.26 \pm \frac{2.571 \times 0.041}{\sqrt{6}} = 54.26 \pm \frac{0.105}{2.449} = 54.26 \pm 0.04\%$$
+<p><strong>答：置信区间为 54.22% ~ 54.30%</strong></p>
+</div>
+
+<div class="sol">
+<div class="st">(3) 与标准值有无显著性差异（2分）</div>
+$$t_{\text{计}} = \frac{|\bar{x} - \mu_0|}{s} \cdot \sqrt{n} = \frac{|54.257 - 54.28|}{0.041} \times \sqrt{6} = \frac{0.023}{0.041} \times 2.449 = 0.561 \times 2.449 = 1.37$$
+<p>$t_{\text{计}} = 1.37 < t_{0.05, 5} = 2.571$</p>
+<p><strong>结论：无显著性差异。</strong>在95%置信度下，分析结果与标准值之间无显著性差异。</p>
+</div>
+
+<div class="sol">
+<div class="st">(4) Q检验离群值（2分）</div>
+<p>数据排序：54.20, 54.23, 54.25, 54.26, 54.28, 54.32</p>
+<p>极差 = 54.32 - 54.20 = 0.12</p>
+$$Q_{\min} = \frac{54.23 - 54.20}{54.32 - 54.20} = \frac{0.03}{0.12} = 0.25$$
+$$Q_{\max} = \frac{54.32 - 54.28}{54.32 - 54.20} = \frac{0.04}{0.12} = 0.33$$
+<p>$n = 6$，$Q_{0.95} = 0.63$</p>
+<p>$Q_{\min} = 0.25 < 0.63$，$Q_{\max} = 0.33 < 0.63$</p>
+<p><strong>结论：无离群值，所有数据均保留。</strong></p>
+</div>
+</div>
+
+<h3>计算第3题（10分）：弱酸 HA 的滴定</h3>
+<div class="card">
+<p><strong>已知：</strong>0.1000 mol/L NaOH 滴定 20.00 mL 0.1000 mol/L HA，加入 18.00 mL NaOH 时 pH = 5.82</p>
+
+<div class="sol">
+<div class="st">(1) 滴定反应方程式（2分）</div>
+$$\text{HA} + \text{NaOH} \to \text{NaA} + \text{H}_2\text{O}$$
+</div>
+
+<div class="sol">
+<div class="st">(2) 计算 pKa（2分）</div>
+<p>$n(\text{HA}) = 0.1000 \times 20.00 = 2.000$ mmol</p>
+<p>$n(\text{NaOH}) = 0.1000 \times 18.00 = 1.800$ mmol</p>
+<p>剩余 HA = 2.000 - 1.800 = 0.200 mmol，生成 A$^-$ = 1.800 mmol</p>
+$$\text{pH} = \text{p}K_a + \lg\frac{c(\text{A}^-)}{c(\text{HA})} \implies 5.82 = \text{p}K_a + \lg\frac{1.800}{0.200} = \text{p}K_a + 0.954$$
+$$\boxed{\text{p}K_a = 5.82 - 0.954 = 4.87}$$
+</div>
+
+<div class="sol">
+<div class="st">(3) 化学计量点pH及指示剂选择（2分）</div>
+<p>计量点时 HA 完全中和为 NaA：</p>
+$$c(\text{NaA}) = \frac{2.000}{20.00 + 20.00} = 0.0500 \text{ mol/L}$$
+<p>$K_b = K_w / K_a = 10^{-14} / 10^{-4.87} = 10^{-9.13}$</p>
+<p>验证近似条件：$c/K_b \gg 100$ ✓，$cK_b \geq 10K_w$ ✓</p>
+$$[\text{OH}^-] = \sqrt{c \cdot K_b} = \sqrt{0.0500 \times 10^{-9.13}} = \sqrt{3.71 \times 10^{-11}} = 6.09 \times 10^{-6}$$
+$$\text{pOH} = 5.22 \implies \boxed{\text{pH}_{sp} = 14 - 5.22 = 8.78}$$
+<p>计量点在碱性区（pH ≈ 8.78） → <strong>选用酚酞</strong>（变色范围 8.0~9.8）</p>
+</div>
+
+<div class="sol">
+<div class="st">(4) 滴定曲线要点（2分）</div>
+<ul>
+<li>起始 pH ≈ $\frac{1}{2}(4.87 - \lg 0.1) = \frac{1}{2}(4.87 + 1) \approx 2.94$</li>
+<li>半当量点（V = 10 mL）：pH = pKa = 4.87</li>
+<li>化学计量点（V = 20 mL）：pH = 8.78</li>
+<li>突跃范围约 7.7~10</li>
+<li>曲线形状：起始平缓 → 半当量点附近有拐点 → 突跃 → 过量碱区平缓上升</li>
+</ul>
+</div>
+
+<div class="sol">
+<div class="st">(5) 终点误差计算（2分）</div>
+<p>酚酞终点 pH$_{ep}$ = 9.1，计量点 pH$_{sp}$ = 8.78</p>
+<p>$\Delta\text{pH} = 9.1 - 8.78 = 0.32$</p>
+<p>$K_t = K_a / K_w = 10^{-4.87} / 10^{-14} = 10^{9.13}$</p>
+$$E_t = \frac{10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}}{\sqrt{K_t} \cdot c_{sp}} \times 100\%$$
+$$= \frac{10^{-0.32} - 10^{0.32}}{\sqrt{10^{9.13}} \times 0.0500} \times 100\% = \frac{0.479 - 2.089}{10^{4.565} \times 0.0500} \times 100\%$$
+$$= \frac{-1.610}{36760 \times 0.0500} \times 100\% = \frac{-1.610}{1838} \times 100\% = \boxed{-0.09\%}$$
+<p>$E_t$ 为负值，但这里表示终点略偏碱于计量点。误差极小，在允许范围内。</p>
+</div>
+</div>
+
+<!-- ===== 实验设计题 ===== -->
+<h3>实验设计题（8分）：HCl 和 H$_3$BO$_3$ 混合溶液的测定</h3>
+
+<div class="card">
+<div class="sol">
+<div class="st">原理分析</div>
+<ul>
+<li>HCl 是强酸，可直接用 NaOH 滴定</li>
+<li>H$_3$BO$_3$ 极弱酸（$\text{p}K_a = 9.24$），$cK_a = 0.1 \times 10^{-9.24} = 10^{-10.24} < 10^{-8}$，<strong>不能直接滴定</strong></li>
+<li>解决方法：加入<strong>丙三醇（甘油）</strong>，H$_3$BO$_3$ 与甘油络合形成强酸性硼酸甘油酯，表观 $K_a$ 增大至 $\sim 10^{-5}$，满足滴定条件</li>
+</ul>
+</div>
+
+<div class="sol">
+<div class="st">实验流程</div>
+<p><strong>第一步：滴定 HCl</strong></p>
+<ul>
+<li>取混合液适量 → 加<strong>甲基橙</strong>指示剂</li>
+<li>用 NaOH 标准液（$c$ mol/L）滴定至溶液由红色→橙黄色（pH ≈ 4.0）</li>
+<li>记录消耗体积 $V_1$ mL</li>
+<li>反应：HCl + NaOH → NaCl + H$_2$O</li>
+<li>此 pH 下 H$_3$BO$_3$ 太弱，不参与反应</li>
+</ul>
+<p><strong>第二步：加入甘油</strong></p>
+<ul>
+<li>向同一锥形瓶中加入<strong>过量丙三醇</strong>，充分混匀</li>
+<li>H$_3$BO$_3$ + 甘油 → 硼酸甘油酯络合酸（酸性增强）</li>
+</ul>
+<p><strong>第三步：滴定 H$_3$BO$_3$</strong></p>
+<ul>
+<li>加<strong>酚酞</strong>指示剂</li>
+<li>继续用 NaOH 标准液滴定至溶液由无色→粉红色（pH ≈ 9）</li>
+<li>记录消耗体积 $V_2$ mL</li>
+</ul>
+</div>
+
+<div class="sol">
+<div class="st">指示剂选择理由</div>
+<table>
+<tr><th>步骤</th><th>指示剂</th><th>变色范围</th><th>选择理由</th></tr>
+<tr><td>第一步（HCl）</td><td>甲基橙</td><td>pH 3.1~4.4</td><td>终点 pH ≈ 4 时 H$_3$BO$_3$ 不被中和</td></tr>
+<tr><td>第三步（H$_3$BO$_3$）</td><td>酚酞</td><td>pH 8.0~9.8</td><td>硼酸甘油酯计量点在碱性区</td></tr>
+</table>
+</div>
+
+<div class="sol">
+<div class="st">计算公式</div>
+$$c(\text{HCl}) = \frac{c(\text{NaOH}) \times V_1}{V_{\text{样}}}$$
+$$c(\text{H}_3\text{BO}_3) = \frac{c(\text{NaOH}) \times V_2}{V_{\text{样}}}$$
+</div>
+</div>
+
+<!-- ============================== Section 7 ============================== -->
+<h2 id="strategy">七、答题策略与实用技巧</h2>
+
+<h3>时间分配策略</h3>
+<div class="card">
+<table>
+<tr><th>阶段</th><th>策略</th><th>注意事项</th></tr>
+<tr><td>开卷前2分钟</td><td>快速浏览全卷，了解题量和分值分布</td><td>标记有把握和没把握的题</td></tr>
+<tr><td>选择题</td><td>每题 ≤ 1分钟，不确定的先标记跳过</td><td>不要在一题上花太多时间</td></tr>
+<tr><td>填空题</td><td>每空 ≤ 1.5分钟，注意有效数字</td><td>公式结果务必带单位</td></tr>
+<tr><td>计算题</td><td>按分值分配时间，先做有把握的</td><td>步骤写清楚，可得步骤分</td></tr>
+<tr><td>实验设计</td><td>要点完整但不啰嗦</td><td>原理+步骤+指示剂+计算公式</td></tr>
+<tr><td>最后10分钟</td><td>检查有效数字、单位、正负号</td><td>回头做标记的跳过题</td></tr>
+</table>
+</div>
+
+<h3>公式书写规范</h3>
+<div class="card">
+<ul>
+<li><strong>Henderson-Hasselbalch 方程：</strong>写为 $\text{pH} = \text{p}K_a + \lg\frac{c_b}{c_a}$，不要用 $\log$ 或 $\ln$</li>
+<li><strong>标准偏差公式：</strong>分母是 $n-1$ 不是 $n$（样本标准偏差用 Bessel 校正）</li>
+<li><strong>t 检验公式：</strong>$t = \frac{|\bar{x} - \mu|}{s}\sqrt{n}$，注意 $\sqrt{n}$ 在分子</li>
+<li><strong>终点误差公式：</strong>分清强酸-强碱和弱酸-强碱用不同公式</li>
+</ul>
+</div>
+
+<h3>计算过程展示规范</h3>
+<div class="card">
+<ol>
+<li><strong>列出已知量</strong>（含单位）</li>
+<li><strong>写出公式</strong>（原始形式）</li>
+<li><strong>代入数据</strong>（保留足够多的中间位数）</li>
+<li><strong>得出结果</strong>（正确有效数字 + 单位）</li>
+<li><strong>必要时验证</strong>（如检验近似条件是否满足）</li>
+</ol>
+<div class="tip">
+<strong>得分技巧：</strong>即使最终结果算错，写出正确的公式和合理的代入过程仍可得步骤分。因此<strong>一定要写过程</strong>，不要只写答案。
+</div>
+</div>
+
+<h3>常见单位换算陷阱</h3>
+<div class="card">
+<table>
+<tr><th>易错点</th><th>正确做法</th></tr>
+<tr><td>mL → L</td><td>$\times 10^{-3}$，如 23.78 mL = 0.02378 L</td></tr>
+<tr><td>mmol → mol</td><td>$\times 10^{-3}$</td></tr>
+<tr><td>百分浓度 → mol/L</td><td>需要密度和摩尔质量换算</td></tr>
+<tr><td>pKa → Ka</td><td>$K_a = 10^{-\text{p}K_a}$，如 pKa = 4.87 → $K_a = 10^{-4.87}$</td></tr>
+<tr><td>$\Delta\varphi$ 单位</td><td>V（伏特），不是 mV</td></tr>
+</table>
+</div>
+
+<h3>考前最后检查清单</h3>
+<div class="fb">
+<div class="t">上考场前确认你能默写：</div>
+<ol>
+<li>四大滴定判据及其数值</li>
+<li>Henderson-Hasselbalch 方程</li>
+<li>标准偏差、置信区间、t检验公式</li>
+<li>Q检验公式及检验顺序（Q→F→t）</li>
+<li>终点误差公式（强酸-强碱、弱酸-强碱各一个）</li>
+<li>pH计算公式选择的条件判据</li>
+<li>PBE书写方法</li>
+<li>常用指示剂的变色范围（甲基橙 3.1~4.4，甲基红 4.4~6.2，酚酞 8.0~9.8）</li>
+<li>有效数字规则（尤其是对数值）和修约规则</li>
+<li>各种消除/减小误差的方法</li>
+</ol>
+</div>
+
+<div class="note">
+<strong>心态提醒：</strong>分析化学考试的计算量较大，但公式相对固定。考前重点背公式和判据，考场上重点在正确选择公式和细心计算。遇到难题先跳过，把有把握的分数拿到手。
+</div>
+
+<script src="toc.js"></script>
+<script src="auth.js"></script>
+<script src="progress.js"></script>
+</body>
+</html>

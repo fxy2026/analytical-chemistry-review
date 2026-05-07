@@ -1,0 +1,350 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第七章 氧化还原滴定法 | 分析化学1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<link rel="stylesheet" href="toc.css">
+<style>
+:root{--pri:#1a5276;--acc:#c0392b;--bg:#fffef9;--card:#fff;--border:#e0d8c8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);color:#333;line-height:1.9;padding:20px;max-width:1000px;margin:0 auto;}
+h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
+h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
+h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
+.sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
+.tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+table{width:100%;border-collapse:collapse;margin:12px 0;}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
+th{background:var(--pri);color:#fff;}
+tr:nth-child(even){background:#f9f7f2;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
+.nav-bar a:hover{background:#1a5276;color:#fff;}
+ul,ol{margin-left:20px;margin-bottom:8px;}
+details{margin:8px 0;}
+details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+</style>
+</head><body>
+
+<div class="nav-bar">
+  <a href="index.html">首页</a>
+  <a href="ch6.html">&larr; 第六章</a>
+  <a href="ch9.html">第九章 &rarr;</a>
+  <a href="ch10.html">第十章</a>
+</div>
+
+<h1>第七章 氧化还原滴定法</h1>
+
+<!-- ==================== 7.1 ==================== -->
+<h2>7.1 条件电位与Nernst方程</h2>
+
+<div class="card">
+  <h3>Nernst方程</h3>
+  <div class="fb">
+    <div class="t">标准 Nernst 方程</div>
+    $$\varphi = \varphi^0 + \frac{0.0592}{n}\lg\frac{[\text{Ox}]}{[\text{Red}]}$$
+    <p>其中 $\varphi^0$ 为标准电极电位，$n$ 为电子转移数。</p>
+  </div>
+
+  <h3>条件电位</h3>
+  <div class="fb">
+    <div class="t">条件电位 $\varphi^{0'}$</div>
+    $$\boxed{\varphi^{0'} = \varphi^0 + \frac{0.0592}{n}\lg\frac{\alpha_{\text{Red}}}{\alpha_{\text{Ox}}}}$$
+    <p>条件电位考虑了离子强度、副反应（配位、酸碱等）对电对实际氧化还原能力的影响。</p>
+    <p>使用条件电位后 Nernst 方程变为：</p>
+    $$\varphi = \varphi^{0'} + \frac{0.0592}{n}\lg\frac{c_{\text{Ox}}}{c_{\text{Red}}}$$
+  </div>
+
+  <div class="tip">条件电位比标准电位更能反映实际溶液条件下电对的氧化还原能力。在分析计算中，应优先使用条件电位。</div>
+</div>
+
+<div class="card">
+  <h3>影响条件电位的因素</h3>
+  <ul>
+    <li><strong>离子强度</strong>：通过活度系数影响</li>
+    <li><strong>酸度</strong>：含 $\text{H}^+$ 参与的电对（如 $\text{MnO}_4^-/\text{Mn}^{2+}$）受 pH 影响显著</li>
+    <li><strong>配位效应</strong>：配位剂优先稳定某一氧化态时改变电位。如 $\text{Fe}^{3+}/\text{Fe}^{2+}$ 加 $\text{F}^-$ 后电位降低（$\text{F}^-$ 主要配位 $\text{Fe}^{3+}$）；加邻菲罗啉后电位升高（主要配位 $\text{Fe}^{2+}$）</li>
+    <li><strong>沉淀效应</strong>：某一氧化态生成沉淀使其浓度降低</li>
+  </ul>
+</div>
+
+<!-- ==================== 7.2 ==================== -->
+<h2>7.2 氧化还原反应的平衡常数与定量判据</h2>
+
+<div class="card">
+  <div class="fb">
+    <div class="t">平衡常数</div>
+    <p>对反应 $n_2\text{Ox}_1 + n_1\text{Red}_2 \rightleftharpoons n_2\text{Red}_1 + n_1\text{Ox}_2$：</p>
+    $$\boxed{\lg K = \frac{n_1 n_2 (\varphi_1^{0'} - \varphi_2^{0'})}{0.0592} = \frac{n(\varphi_1^{0'} - \varphi_2^{0'})}{0.0592}}$$
+    <p>其中 $n = n_1 \cdot n_2$（当 $n_1 = n_2$ 时），或更一般地 $n$ 为电子转移总数。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">定量反应判据</div>
+    $$\boxed{\Delta\varphi^{0'} = \varphi_1^{0'} - \varphi_2^{0'} \geq 0.4\;\text{V}}$$
+    <p>（对 $n_1 = n_2 = 1$ 的情况，此时 $\lg K \geq 6.8$）</p>
+    <p>一般来说，$\lg K \geq 6$ 即可认为反应定量完成（反应完成度 $\geq 99.9\%$）。</p>
+  </div>
+
+  <div class="warn">注意：$\Delta\varphi^{0'} \geq 0.4$ V 仅是经验判据，具体还需考虑 $n$ 值。当 $n$ 较大时，所需 $\Delta\varphi^{0'}$ 可以更小。例如 $n = 2$ 时 $\Delta\varphi^{0'} \geq 0.2$ V 即可。</div>
+</div>
+
+<!-- ==================== 7.3 ==================== -->
+<h2>7.3 氧化还原滴定曲线</h2>
+
+<div class="card">
+  <h3>以 $\text{Ce}^{4+}$ 滴定 $\text{Fe}^{2+}$ 为例</h3>
+  <p>反应：$\text{Ce}^{4+} + \text{Fe}^{2+} \rightarrow \text{Ce}^{3+} + \text{Fe}^{3+}$</p>
+
+  <p><strong>化学计量点前</strong>（如滴定 50% 时）：</p>
+  $$\varphi = \varphi^{0'}_{Fe^{3+}/Fe^{2+}} + 0.0592\lg\frac{[\text{Fe}^{3+}]}{[\text{Fe}^{2+}]}$$
+  <p>50% 时 $[\text{Fe}^{3+}] = [\text{Fe}^{2+}]$，故 $\varphi = \varphi^{0'}_{Fe^{3+}/Fe^{2+}} = 0.68$ V</p>
+
+  <p><strong>化学计量点后</strong>（如滴定 200% 时）：</p>
+  $$\varphi = \varphi^{0'}_{Ce^{4+}/Ce^{3+}} + 0.0592\lg\frac{[\text{Ce}^{4+}]}{[\text{Ce}^{3+}]}$$
+  <p>200% 时 $[\text{Ce}^{4+}] = [\text{Ce}^{3+}]$，故 $\varphi = \varphi^{0'}_{Ce^{4+}/Ce^{3+}} = 1.44$ V</p>
+
+  <div class="fb">
+    <div class="t">化学计量点电位</div>
+    $$\boxed{\varphi_{sp} = \frac{n_1\varphi_1^{0'} + n_2\varphi_2^{0'}}{n_1 + n_2}}$$
+    <p>对 $\text{Ce}^{4+}/\text{Fe}^{2+}$ 体系（$n_1 = n_2 = 1$）：</p>
+    $$\varphi_{sp} = \frac{0.68 + 1.44}{2} = 1.06\;\text{V}$$
+  </div>
+
+  <div class="note"><strong>对称电对</strong>：当 $n_1 = n_2$ 时，化学计量点在突跃中央（对称曲线）。当 $n_1 \neq n_2$ 时（如 $\text{MnO}_4^-/\text{Fe}^{2+}$，$n_1=5, n_2=1$），化学计量点偏向高电位一侧。</div>
+</div>
+
+<div class="ex">
+  <strong>例题：</strong>在 1 mol/L $\text{H}_2\text{SO}_4$ 中，用 $\text{Ce}^{4+}$（$\varphi^{0'}=1.44$ V）滴定 $\text{Fe}^{2+}$（$\varphi^{0'}=0.68$ V），求化学计量点电位及 $\lg K$。
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$\varphi_{sp} = \frac{1 \times 1.44 + 1 \times 0.68}{1+1} = 1.06\;\text{V}$</p>
+    <p>$\lg K = \frac{1 \times (1.44 - 0.68)}{0.0592} = \frac{0.76}{0.0592} = 12.8$</p>
+    <p>$K$ 非常大，反应完全定量。</p>
+  </div>
+</div>
+
+<!-- ==================== 7.4 ==================== -->
+<h2>7.4 氧化还原指示剂</h2>
+
+<div class="card">
+  <h3>指示剂类型</h3>
+
+  <div class="fb">
+    <div class="t">1. 自身指示剂</div>
+    <p>滴定剂本身有颜色变化。最典型：$\text{KMnO}_4$（$\text{MnO}_4^-$ 紫红色，$\text{Mn}^{2+}$ 几乎无色）。滴定终点多半滴 $\text{KMnO}_4$ 即呈粉红色。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">2. 特殊指示剂</div>
+    <p><strong>淀粉指示剂</strong>用于碘量法：淀粉与 $\text{I}_2$ 形成深蓝色吸附化合物。</p>
+    <div class="warn">淀粉指示剂应在<strong>近终点</strong>时加入（滴定碘法中溶液变浅黄后再加），否则大量 $\text{I}_2$ 被淀粉吸附不易释放，造成终点拖后。</div>
+  </div>
+
+  <div class="fb">
+    <div class="t">3. 氧化还原指示剂</div>
+    <p>其氧化态和还原态颜色不同，变色取决于溶液电位：</p>
+    $$\varphi = \varphi^{0'}_{In} + \frac{0.0592}{n}\lg\frac{[\text{In}_{\text{Ox}}]}{[\text{In}_{\text{Red}}]}$$
+    <p>变色范围：$\varphi^{0'}_{In} \pm \frac{0.0592}{n}$</p>
+  </div>
+
+  <table>
+    <tr><th>指示剂</th><th>$\varphi^{0'}$/V</th><th>颜色（氧化态/还原态）</th></tr>
+    <tr><td>二苯胺磺酸钠</td><td>0.84</td><td>紫色/无色</td></tr>
+    <tr><td>邻二氮菲亚铁（ferroin）</td><td>1.06</td><td>淡蓝/红色</td></tr>
+    <tr><td>次甲基蓝</td><td>0.53</td><td>蓝色/无色</td></tr>
+  </table>
+
+  <div class="tip">选择指示剂的原则：指示剂的 $\varphi^{0'}_{In}$ 应尽量接近 $\varphi_{sp}$，且落在滴定突跃范围内。</div>
+</div>
+
+<!-- ==================== 7.5 ==================== -->
+<h2>7.5 影响氧化还原反应速率的因素</h2>
+
+<div class="card">
+  <ul>
+    <li><strong>反应物浓度</strong>：浓度越大，反应速率越快</li>
+    <li><strong>温度</strong>：升温加速反应（$\text{KMnO}_4$ 法用 $\text{Na}_2\text{C}_2\text{O}_4$ 标定时需加热至 75~85 &deg;C）</li>
+    <li><strong>催化剂</strong>：$\text{KMnO}_4$ 与 $\text{C}_2\text{O}_4^{2-}$ 反应中，$\text{Mn}^{2+}$ 为自催化剂；加入 $\text{OsO}_4$ 或 $\text{ICl}$ 催化 $\text{Ce}^{4+}$-$\text{As}(\text{III})$ 反应</li>
+    <li><strong>诱导反应</strong>：一个反应诱导另一个热力学上可行但动力学上缓慢的反应发生。诱导反应会引起<strong>诱导误差</strong>（如 $\text{KMnO}_4$ 法中 $\text{Cl}^-$ 的干扰部分源于诱导效应）</li>
+  </ul>
+</div>
+
+<!-- ==================== 7.6 ==================== -->
+<h2>7.6 预处理：预氧化与预还原</h2>
+
+<div class="card">
+  <p>滴定前需将待测物定量转化为某一特定氧化态，称为预处理。</p>
+
+  <h3>预氧化剂</h3>
+  <table>
+    <tr><th>氧化剂</th><th>用途</th><th>除去过量的方法</th></tr>
+    <tr><td>$(\text{NH}_4)_2\text{S}_2\text{O}_8$（过硫酸铵）</td><td>氧化 $\text{Mn}^{2+}$ 为 $\text{MnO}_4^-$, $\text{Cr}^{3+}$ 为 $\text{Cr}_2\text{O}_7^{2-}$</td><td>煮沸分解</td></tr>
+    <tr><td>$\text{NaBiO}_3$（铋酸钠）</td><td>氧化 $\text{Mn}^{2+}$ 为 $\text{MnO}_4^-$</td><td>过滤除去（不溶性固体）</td></tr>
+    <tr><td>$\text{HClO}_4$（高氯酸）</td><td>高温下的强氧化剂</td><td>稀释冷却后失去氧化性</td></tr>
+    <tr><td>$\text{H}_2\text{O}_2$</td><td>氧化多种还原态离子</td><td>煮沸分解</td></tr>
+  </table>
+
+  <h3>预还原剂</h3>
+  <table>
+    <tr><th>还原剂</th><th>用途</th><th>除去过量的方法</th></tr>
+    <tr><td>$\text{SnCl}_2$</td><td>还原 $\text{Fe}^{3+}$ 为 $\text{Fe}^{2+}$</td><td>加 $\text{HgCl}_2$（见铁的测定）</td></tr>
+    <tr><td>Jones 还原器（锌汞齐）</td><td>还原多种金属离子</td><td>通过分离</td></tr>
+    <tr><td>银还原器</td><td>选择性还原 $\text{Fe}^{3+}$</td><td>通过分离</td></tr>
+  </table>
+
+  <div class="warn"><strong>关键原则</strong>：过量的预氧化/还原剂必须能够方便地除去，否则会干扰后续滴定。</div>
+</div>
+
+<!-- ==================== 7.7 ==================== -->
+<h2>7.7 高锰酸钾法</h2>
+
+<div class="card">
+  <h3>基本特性</h3>
+  <p>$\text{KMnO}_4$ 在强酸性介质中：$\text{MnO}_4^- + 8\text{H}^+ + 5e^- \rightarrow \text{Mn}^{2+} + 4\text{H}_2\text{O}$，$\varphi^0 = 1.51$ V</p>
+  <p><strong>自身指示剂</strong>：终点溶液呈粉红色（0.02 mL 0.02 mol/L $\text{KMnO}_4$ 可使 50 mL 溶液显色）。</p>
+
+  <div class="warn">$\text{KMnO}_4$ 不是基准物质（含 $\text{MnO}_2$ 等杂质），需标定。配制时需煮沸、静置、过滤除去 $\text{MnO}_2$，保存于棕色瓶中。</div>
+
+  <h3>用 $\text{Na}_2\text{C}_2\text{O}_4$ 标定 $\text{KMnO}_4$</h3>
+  <p>反应：$2\text{MnO}_4^- + 5\text{C}_2\text{O}_4^{2-} + 16\text{H}^+ \rightarrow 2\text{Mn}^{2+} + 10\text{CO}_2 + 8\text{H}_2\text{O}$</p>
+
+  <div class="fb">
+    <div class="t">"三度一点"操作要点</div>
+    <ul>
+      <li><strong>酸度</strong>：0.5~1 mol/L $\text{H}_2\text{SO}_4$（不可用 HCl 或 $\text{HNO}_3$）</li>
+      <li><strong>温度</strong>：加热至 75~85 &deg;C（不可煮沸，否则 $\text{H}_2\text{C}_2\text{O}_4$ 分解）</li>
+      <li><strong>速度</strong>：开始逐滴加入并搅拌，待 $\text{Mn}^{2+}$ 生成（自催化）后可加快</li>
+      <li><strong>终点</strong>：最后半滴 $\text{KMnO}_4$ 使溶液呈粉红色，30 s 不褪</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>$\text{KMnO}_4$ 法的应用</h3>
+  <ul>
+    <li>测定 $\text{Fe}^{2+}$（直接滴定）</li>
+    <li>测定 $\text{Ca}^{2+}$（间接法：沉淀为 $\text{CaC}_2\text{O}_4$，酸溶后滴定 $\text{C}_2\text{O}_4^{2-}$）</li>
+    <li>测定 $\text{H}_2\text{O}_2$（直接滴定：$2\text{MnO}_4^- + 5\text{H}_2\text{O}_2 + 6\text{H}^+ \rightarrow 5\text{O}_2 + 2\text{Mn}^{2+} + 8\text{H}_2\text{O}$）</li>
+    <li>测定软锰矿中 $\text{MnO}_2$ 含量</li>
+  </ul>
+</div>
+
+<!-- ==================== 7.8 ==================== -->
+<h2>7.8 重铬酸钾法</h2>
+
+<div class="card">
+  <h3>基本特性</h3>
+  <p>$\text{Cr}_2\text{O}_7^{2-} + 14\text{H}^+ + 6e^- \rightarrow 2\text{Cr}^{3+} + 7\text{H}_2\text{O}$，$\varphi^0 = 1.33$ V</p>
+
+  <h3>$\text{K}_2\text{Cr}_2\text{O}_7$ 法的优点</h3>
+  <ul>
+    <li>$\text{K}_2\text{Cr}_2\text{O}_7$ 可作<strong>基准物质</strong>（高纯、稳定、$M$ 大）直接配制标准溶液</li>
+    <li>在 HCl 介质中也可使用（$\text{KMnO}_4$ 不行）</li>
+    <li>标准溶液极其稳定</li>
+  </ul>
+
+  <h3>铁矿石中铁含量的测定（经典方法）</h3>
+  <div class="card">
+    <ol>
+      <li><strong>溶样</strong>：用 HCl 溶解铁矿石</li>
+      <li><strong>预还原</strong>：滴加 $\text{SnCl}_2$ 还原 $\text{Fe}^{3+}$ 至 $\text{Fe}^{2+}$
+        <p>$\text{Sn}^{2+} + 2\text{Fe}^{3+} \rightarrow \text{Sn}^{4+} + 2\text{Fe}^{2+}$</p>
+        <div class="warn">加 $\text{SnCl}_2$ 至溶液恰好变为浅黄色后，再多加 1~2 滴（不可过量太多！）</div>
+      </li>
+      <li><strong>除去过量 $\text{SnCl}_2$</strong>：立即加入过量 $\text{HgCl}_2$
+        <p>$\text{Sn}^{2+} + 2\text{HgCl}_2 \rightarrow \text{Sn}^{4+} + \text{Hg}_2\text{Cl}_2\downarrow(\text{白色})$</p>
+        <div class="warn">
+          生成<strong>白色丝状</strong> $\text{Hg}_2\text{Cl}_2$ 沉淀为正常。<br>
+          若无白色沉淀 &rarr; $\text{SnCl}_2$ 不足，$\text{Fe}^{3+}$ 未完全还原，弃去重做。<br>
+          若生成<strong>灰黑色</strong>沉淀 &rarr; $\text{SnCl}_2$ 过量太多，$\text{Hg}_2\text{Cl}_2$ 被还原为 Hg，会消耗 $\text{K}_2\text{Cr}_2\text{O}_7$，弃去重做。
+        </div>
+      </li>
+      <li><strong>加入 S-P 混酸</strong>（$\text{H}_2\text{SO}_4 + \text{H}_3\text{PO}_4$）
+        <ul>
+          <li>$\text{H}_2\text{SO}_4$：提供酸性介质</li>
+          <li>$\text{H}_3\text{PO}_4$：与 $\text{Fe}^{3+}$ 形成无色 $\text{Fe(HPO}_4)^+$ 配合物，消除 $\text{Fe}^{3+}$ 黄色对终点的干扰，同时降低 $\text{Fe}^{3+}/\text{Fe}^{2+}$ 的条件电位</li>
+        </ul>
+      </li>
+      <li><strong>滴定</strong>：以<strong>二苯胺磺酸钠</strong>为指示剂，用 $\text{K}_2\text{Cr}_2\text{O}_7$ 标准溶液滴定至紫色</li>
+    </ol>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题：</strong>称取铁矿石 0.5000 g，溶解后用 0.01667 mol/L $\text{K}_2\text{Cr}_2\text{O}_7$ 标准溶液滴定，消耗 35.20 mL，求铁含量（$w_{Fe}$）。
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$n_{Cr_2O_7^{2-}} = 0.01667 \times 35.20 \times 10^{-3} = 5.868 \times 10^{-4}\;\text{mol}$</p>
+    <p>$\text{Cr}_2\text{O}_7^{2-} + 6\text{Fe}^{2+} + 14\text{H}^+ \rightarrow 2\text{Cr}^{3+} + 6\text{Fe}^{3+} + 7\text{H}_2\text{O}$</p>
+    <p>$n_{Fe} = 6 \times n_{Cr_2O_7^{2-}} = 6 \times 5.868 \times 10^{-4} = 3.521 \times 10^{-3}\;\text{mol}$</p>
+    <p>$w_{Fe} = \frac{3.521 \times 10^{-3} \times 55.85}{0.5000} \times 100\% = 39.34\%$</p>
+  </div>
+</div>
+
+<!-- ==================== 7.9 ==================== -->
+<h2>7.9 碘量法</h2>
+
+<div class="card">
+  <h3>基本原理</h3>
+  <p>$\text{I}_2 + 2e^- \rightleftharpoons 2\text{I}^-$，$\varphi^0 = 0.545$ V</p>
+  <p>碘量法利用 $\text{I}_2/\text{I}^-$ 电对的中等电位，可进行两类滴定：</p>
+
+  <div class="fb">
+    <div class="t">直接碘滴定法（碘滴定法）</div>
+    <p>用 $\text{I}_2$ 标准溶液直接滴定<strong>还原性</strong>物质（$\varphi^{0'} < 0.545$ V 的电对）。</p>
+    <p>例：测 $\text{As}(\text{III})$, $\text{Sn}^{2+}$, $\text{SO}_3^{2-}$, 抗坏血酸等。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">间接碘量法（滴定碘法）</div>
+    <p>用还原性物质 $\text{I}^-$（过量 KI）与氧化性物质反应，析出定量 $\text{I}_2$，再用 $\text{Na}_2\text{S}_2\text{O}_3$ 标准溶液滴定。</p>
+    <p>$\text{I}_2 + 2\text{S}_2\text{O}_3^{2-} \rightarrow 2\text{I}^- + \text{S}_4\text{O}_6^{2-}$</p>
+    <p>例：测 $\text{Cu}^{2+}$, $\text{Cr}_2\text{O}_7^{2-}$, 溶解氧, $\text{H}_2\text{O}_2$ 等。</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3>$\text{Na}_2\text{S}_2\text{O}_3$ 标准溶液</h3>
+  <ul>
+    <li>$\text{Na}_2\text{S}_2\text{O}_3 \cdot 5\text{H}_2\text{O}$ 不是基准物质（含水量不定），需标定</li>
+    <li>配制：用新煮沸冷却的蒸馏水，加少量 $\text{Na}_2\text{CO}_3$（碱性防分解）</li>
+    <li>标定：用 $\text{K}_2\text{Cr}_2\text{O}_7$ 基准物（酸性下与过量 KI 反应生成 $\text{I}_2$，再用 $\text{Na}_2\text{S}_2\text{O}_3$ 滴定）</li>
+  </ul>
+
+  <div class="warn">
+    <strong>碘量法注意事项：</strong>
+    <ul>
+      <li>避免 $\text{I}_2$ 挥发：加过量 KI（形成 $\text{I}_3^-$），密塞，快速滴定</li>
+      <li>防止 $\text{I}^-$ 被空气氧化（$4\text{I}^- + \text{O}_2 + 4\text{H}^+ \rightarrow 2\text{I}_2 + 2\text{H}_2\text{O}$）：避免强酸性、避免阳光直射、反应后立即滴定</li>
+      <li>淀粉指示剂在近终点时加入（滴定碘法中溶液变浅黄色时）</li>
+      <li>$\text{Na}_2\text{S}_2\text{O}_3$ 不可在酸性中使用（会分解）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>碘量法测铜</h3>
+  <p>反应：$2\text{Cu}^{2+} + 4\text{I}^- \rightarrow 2\text{CuI}\downarrow + \text{I}_2$</p>
+  <p>生成的 $\text{I}_2$ 用 $\text{Na}_2\text{S}_2\text{O}_3$ 滴定。</p>
+
+  <div class="tip">CuI 沉淀会吸附 $\text{I}_2$ 导致终点拖后、结果偏低。解决方法：近终点时加入 $\text{KSCN}$，将 CuI 转化为更不溶的 CuSCN，释放被吸附的 $\text{I}_2$。</div>
+
+  <h3>碘量法中的放大（倍量）反应</h3>
+  <p>利用某些反应中电子转移倍数不同实现信号放大。例如：</p>
+  <p>$\text{IO}_3^- + 5\text{I}^- + 6\text{H}^+ \rightarrow 3\text{I}_2 + 3\text{H}_2\text{O}$</p>
+  <p>1 mol $\text{IO}_3^-$ 产生 3 mol $\text{I}_2$，消耗 6 mol $\text{Na}_2\text{S}_2\text{O}_3$，实现 6 倍放大。</p>
+</div>
+
+<script src="toc.js"></script>
+<script src="auth.js"></script>
+<script src="progress.js"></script>
+</body></html>

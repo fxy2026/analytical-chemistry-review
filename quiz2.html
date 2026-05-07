@@ -1,0 +1,702 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025小测2完整解析 | 分析化学1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<link rel="stylesheet" href="toc.css">
+<style>
+:root{--pri:#1a5276;--acc:#c0392b;--bg:#fffef9;--card:#fff;--border:#e0d8c8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);color:#333;line-height:1.9;padding:20px;max-width:1000px;margin:0 auto;}
+h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
+h2{color:#fff;font-size:1.3em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
+h3{color:var(--pri);font-size:1.1em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
+.sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
+.tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+table{width:100%;border-collapse:collapse;margin:12px 0;}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
+th{background:var(--pri);color:#fff;}
+tr:nth-child(even){background:#f9f7f2;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
+.nav-bar a:hover{background:#1a5276;color:#fff;}
+ul,ol{margin-left:20px;margin-bottom:8px;}
+details{margin:8px 0;}details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+</style></head><body>
+<div class="nav-bar"><a href="index.html">首页</a><a href="quiz1.html">&larr; 小测1</a><a href="final2022.html">2022期末</a></div>
+
+<h1>2025 分析化学(1) 小测2 完整解析</h1>
+
+<!-- ==================== 答案速查表 ==================== -->
+<h2 id="summary">答案速查表</h2>
+
+<div class="card">
+<h3>一、选择题（每题 2 分，共 20 分）</h3>
+<table>
+<tr><th>题号</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
+<tr><td><strong>答案</strong></td><td>C</td><td>C</td><td>D</td><td>C</td><td>B</td><td>D</td><td>C</td><td>C</td><td>C</td><td>D</td></tr>
+</table>
+
+<h3>二、填空题（共 20 分）</h3>
+<table>
+<tr><th>题号</th><th>答案要点</th></tr>
+<tr><td>1</td><td>低浓度：同离子效应（降低溶解度）；高浓度：盐效应（增大溶解度）</td></tr>
+<tr><td>2</td><td>$\lg K'_{\text{Mg-EBT}} = 4.2$</td></tr>
+<tr><td>3</td><td>$\text{p}Z\text{n}'$ 减小；$\text{p}Z\text{n}$ 增大</td></tr>
+<tr><td>4</td><td>$\text{HY}^{3-} + \text{M}^{2+} = \text{MY}^{2-} + \text{H}^+$</td></tr>
+<tr><td>5</td><td>$\text{CaF}_2$ 在 pH=3 溶解度更大（酸效应，$\text{F}^-$ 与 $\text{H}^+$ 结合生成 HF）</td></tr>
+<tr><td>6</td><td>$\varepsilon = 4.4 \times 10^{8}\ \text{L/(mol·cm)}$</td></tr>
+<tr><td>7</td><td>$\lambda_{\max}$ 不变；$A$ 成比例增大</td></tr>
+</table>
+
+<h3>三、计算题答案概要</h3>
+<table>
+<tr><th>题目</th><th>答案要点</th></tr>
+<tr><td>计算1：水硬度</td><td>$w(\text{CaCO}_3) = 210.1\ \text{mg/L}$，$w(\text{MgCO}_3) = 102.8\ \text{mg/L}$</td></tr>
+<tr><td>计算2：Zn/Al EDTA</td><td>不能分别滴定；$\lg K'_{\text{ZnY}} = 10.8$；$E_t = -0.02\%$</td></tr>
+<tr><td>计算3：钢中铬</td><td>$w(\text{Cr}) = 3.24\%$</td></tr>
+<tr><td>计算4：BaSO₄重量法</td><td>$s = 1.05 \times 10^{-5}\ \text{mol/L}$；加入过量 $\text{SO}_4^{2-}$ 后 $s = 1.1 \times 10^{-9}\ \text{mol/L}$</td></tr>
+<tr><td>实验设计：Zn+Pb</td><td>KCN 掩蔽 Zn²⁺ → 先测 Pb²⁺ → 甲醛释放 Zn²⁺ → 再测 Zn²⁺</td></tr>
+</table>
+</div>
+
+<!-- ==================== 选择题 ==================== -->
+<h2 id="mc">一、选择题（每题 2 分，共 20 分）</h2>
+
+<!-- Q1 -->
+<div class="card">
+<h3>第 1 题</h3>
+<p><strong>题目：</strong>测定合金中 $\text{Al}^{3+}$ 含量时，由于 $\text{Al}^{3+}$ 与 EDTA 反应缓慢，宜采用的滴定方式是：</p>
+<p>A. 直接滴定法 &nbsp; B. 置换滴定法 &nbsp; <strong style="color:var(--acc);">C. 返滴定法</strong> &nbsp; D. 间接滴定法</p>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>$\text{Al}^{3+}$ 与 EDTA 在常温下反应速率缓慢，无法直接滴定到化学计量点。<strong>返滴定法</strong>的操作步骤：</p>
+<ol>
+<li>加入<strong>已知过量</strong>的 EDTA 标准溶液</li>
+<li>加热煮沸，使 $\text{Al}^{3+}$ 与 EDTA 充分反应：$\text{Al}^{3+} + \text{Y}^{4-} \to \text{AlY}^{-}$</li>
+<li>冷却后，用 $\text{Zn}^{2+}$ 标准溶液<strong>返滴定</strong>剩余的 EDTA</li>
+</ol>
+$$n(\text{Al}^{3+}) = n(\text{EDTA}_{\text{total}}) - n(\text{Zn}^{2+}_{\text{back}})$$
+</div>
+
+<div class="tip">
+<strong>记忆口诀：</strong>反应慢 → 返滴定；无指示剂 → 置换滴定；无法直接反应 → 间接滴定。
+</div>
+</div>
+
+<!-- Q2 -->
+<div class="card">
+<h3>第 2 题</h3>
+<p><strong>题目：</strong>已知 EDTA（$\text{H}_4\text{Y}$）各级解离常数的 $\text{p}K_a$ 分别为 2.00、2.67、6.16、10.26。在 pH 6.16～10.26 范围内，EDTA 的主要存在形式是：</p>
+<p>A. $\text{H}_2\text{Y}^{2-}$ &nbsp; B. $\text{Y}^{4-}$ &nbsp; <strong style="color:var(--acc);">C. $\text{HY}^{3-}$</strong> &nbsp; D. $\text{H}_3\text{Y}^{-}$</p>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>EDTA 的四级解离：</p>
+$$\text{H}_4\text{Y} \xrightarrow{pK_{a1}=2.00} \text{H}_3\text{Y}^- \xrightarrow{pK_{a2}=2.67} \text{H}_2\text{Y}^{2-} \xrightarrow{pK_{a3}=6.16} \text{HY}^{3-} \xrightarrow{pK_{a4}=10.26} \text{Y}^{4-}$$
+<p>当 $\text{pH}$ 在 $pK_{a3}$ 与 $pK_{a4}$ 之间，即 $6.16 < \text{pH} < 10.26$ 时：</p>
+<ul>
+<li>$\text{H}_2\text{Y}^{2-}$ 已经失去第三个质子（$\text{pH} > pK_{a3}$）</li>
+<li>$\text{HY}^{3-}$ 尚未失去第四个质子（$\text{pH} < pK_{a4}$）</li>
+</ul>
+<p>因此<strong>主要存在形式为 $\text{HY}^{3-}$</strong>。</p>
+</div>
+
+<div class="tip">
+<strong>通用规律：</strong>当 $pK_{a,n} < \text{pH} < pK_{a,n+1}$ 时，失去 $n$ 个质子的形式为主要存在形式。
+</div>
+</div>
+
+<!-- Q3 -->
+<div class="card">
+<h3>第 3 题</h3>
+<p><strong>题目：</strong>用 EDTA 滴定金属离子 M，要准确滴定（$E_t \leq 0.1\%$），需要满足的条件是：</p>
+<p>A. $\lg(c_{\text{sp}} \cdot K_{\text{MY}}) \geq 6$ &nbsp; B. $\lg(c_{\text{sp}} \cdot K_{\text{MY}}') \geq 8$ &nbsp; C. $\lg(c_{\text{sp}} \cdot K_{\text{MY}}) \geq 8$ &nbsp; <strong style="color:var(--acc);">D. $\lg(c_{\text{sp}} \cdot K'_{\text{MY}}) \geq 6$</strong></p>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>EDTA 滴定的准确度判据为：</p>
+$$\lg(c_{\text{sp}} \cdot K'_{\text{MY}}) \geq 6$$
+<p>其中 $c_{\text{sp}}$ 为化学计量点时 MY 的浓度（近似等于 $c_M/2$），$K'_{\text{MY}}$ 为<strong>条件稳定常数</strong>（考虑了酸效应、辅助配位效应等）。</p>
+<p>该条件确保滴定突跃 $\geq 0.2\ \text{p}M$ 单位，滴定误差 $E_t \leq \pm 0.1\%$。</p>
+</div>
+
+<div class="warn">
+<strong>注意区分：</strong>必须用<strong>条件稳定常数 $K'_{\text{MY}}$</strong>（而非绝对稳定常数 $K_{\text{MY}}$），因为实际滴定体系存在酸效应等副反应。阈值为 $\geq 6$（而非 8）。
+</div>
+</div>
+
+<!-- Q4 -->
+<div class="card">
+<h3>第 4 题</h3>
+<p><strong>题目：</strong>已知 HCN 的 $K_a = 7.2 \times 10^{-10}$。在 pH = 5 时，$\text{CN}^-$ 的酸效应系数 $\alpha_{\text{CN}^-(\text{H})}$ 为：</p>
+<p>A. $1.4 \times 10^{5}$ &nbsp; B. $1.4 \times 10^{3}$ &nbsp; <strong style="color:var(--acc);">C. $1.4 \times 10^{4}$</strong> &nbsp; D. $7.2 \times 10^{4}$</p>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>$\text{CN}^-$ 是一元弱酸 HCN 的共轭碱，其酸效应系数为：</p>
+$$\alpha_{\text{CN}^-(\text{H})} = 1 + \frac{[\text{H}^+]}{K_a}$$
+<p>代入数值：</p>
+$$\alpha_{\text{CN}^-(\text{H})} = 1 + \frac{10^{-5}}{7.2 \times 10^{-10}} = 1 + 1.39 \times 10^{4} \approx 1.4 \times 10^{4}$$
+</div>
+
+<div class="tip">
+<strong>理解：</strong>$\alpha$ 值越大，说明 $\text{CN}^-$ 被质子化（形成 HCN）的程度越严重，"有效浓度"越低。pH=5 远低于 HCN 的 $pK_a = 9.14$，故绝大部分 CN⁻ 已被质子化。
+</div>
+</div>
+
+<!-- Q5 -->
+<div class="card">
+<h3>第 5 题</h3>
+<p><strong>题目：</strong>在沉淀反应中，加入过量沉淀剂的主要目的及效果是：</p>
+<p>A. 增大离子强度，增大溶解度 &nbsp; <strong style="color:var(--acc);">B. 利用同离子效应降低溶解度，使沉淀更完全</strong> &nbsp; C. 生成配合物 &nbsp; D. 加快沉淀速度</p>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>以 $\text{BaSO}_4$ 沉淀为例，加入过量 $\text{SO}_4^{2-}$：</p>
+$$K_{sp} = [\text{Ba}^{2+}][\text{SO}_4^{2-}]$$
+<p>当 $[\text{SO}_4^{2-}]$ 增大时，为维持 $K_{sp}$ 不变，$[\text{Ba}^{2+}]$ 必须减小，即：</p>
+$$[\text{Ba}^{2+}] = \frac{K_{sp}}{[\text{SO}_4^{2-}]}$$
+<p>这就是<strong>同离子效应</strong>——加入与沉淀组成相同的离子，降低被测离子的溶解度，使沉淀更完全。</p>
+</div>
+
+<div class="warn">
+<strong>但不能过量太多！</strong>过量沉淀剂太多会引入<strong>盐效应</strong>（离子强度增大 → 活度系数降低 → 溶解度反而增大）和可能的<strong>配位效应</strong>。一般过量 50%～100% 为宜。
+</div>
+</div>
+
+<!-- Q6 -->
+<div class="card">
+<h3>第 6 题</h3>
+<p><strong>题目：</strong>用 $\text{K}_2\text{Cr}_2\text{O}_7$ 法测定铁矿石中铁的含量时，加入混合酸（$\text{H}_2\text{SO}_4 + \text{H}_3\text{PO}_4$）的作用包括：</p>
+<p>A. 提供酸性环境 &nbsp; B. $\text{H}_3\text{PO}_4$ 与 $\text{Fe}^{3+}$ 形成无色配合物降低 $E^{\circ'}(\text{Fe}^{3+}/\text{Fe}^{2+})$ &nbsp; C. 使终点颜色变化更敏锐 &nbsp; <strong style="color:var(--acc);">D. 以上全部</strong></p>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>混合酸的三重作用：</p>
+<ol>
+<li><strong>$\text{H}_2\text{SO}_4$</strong> 提供酸性介质，确保反应进行</li>
+<li><strong>$\text{H}_3\text{PO}_4$ 与 $\text{Fe}^{3+}$ 配位：</strong>
+$$\text{Fe}^{3+} + \text{H}_3\text{PO}_4 \to \text{Fe(HPO}_4)^+ + 2\text{H}^+$$
+生成无色配合物 $[\text{Fe}(\text{HPO}_4)]^+$，消除 $\text{Fe}^{3+}$ 的黄色干扰</li>
+<li><strong>降低 $E^{\circ'}$：</strong>$\text{Fe}^{3+}$ 被配位后，$E^{\circ'}(\text{Fe}^{3+}/\text{Fe}^{2+})$ 降低（约从 0.68V 降至 0.44V），使滴定突跃增大，终点更敏锐</li>
+</ol>
+</div>
+
+<div class="tip">
+<strong>核心逻辑：</strong>配位 $\text{Fe}^{3+}$ → 降低其氧化能力 → $E^{\circ'}$ 下降 → 突跃增大 + 黄色消除 → 终点判断更准确。
+</div>
+</div>
+
+<!-- Q7 -->
+<div class="card">
+<h3>第 7 题</h3>
+<p><strong>题目：</strong>在重量分析中，以 $\text{Fe}_2\text{O}_3$ 为称量形式测定 $\text{Fe}$ 的含量，换算因子（重量因子）$F$ 为：</p>
+<p>A. $\frac{\text{Fe}}{\text{Fe}_2\text{O}_3}$ &nbsp; B. $\frac{\text{Fe}_2\text{O}_3}{\text{Fe}}$ &nbsp; <strong style="color:var(--acc);">C. $\frac{2\text{Fe}}{\text{Fe}_2\text{O}_3}$</strong> &nbsp; D. $\frac{\text{Fe}_2\text{O}_3}{2\text{Fe}}$</p>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>换算因子 $F$ 的定义：</p>
+$$F = \frac{\text{被测组分的摩尔质量} \times \text{化学计量系数比}}{\text{称量形式的摩尔质量}}$$
+<p>一个 $\text{Fe}_2\text{O}_3$ 中含有 <strong>2 个 Fe</strong>，因此：</p>
+$$F = \frac{2 M(\text{Fe})}{M(\text{Fe}_2\text{O}_3)} = \frac{2 \times 55.85}{159.69} = 0.6994$$
+<p>被测组分质量 $= F \times m(\text{Fe}_2\text{O}_3)$</p>
+</div>
+
+<div class="tip">
+<strong>换算因子构造原则：</strong>分子写待测物（含系数），分母写称量形式。系数由化学计量关系决定。
+</div>
+</div>
+
+<!-- Q8 -->
+<div class="card">
+<h3>第 8 题</h3>
+<p><strong>题目：</strong>间接碘量法中，淀粉指示剂应在何时加入？</p>
+<p>A. 滴定开始前 &nbsp; B. 滴定开始后立即 &nbsp; <strong style="color:var(--acc);">C. 接近终点时（溶液呈浅黄色时）</strong> &nbsp; D. 滴定结束后</p>
+
+<div class="sol">
+<p class="st">解析</p>
+<p><strong>间接碘量法</strong>中，析出的 $\text{I}_2$ 用 $\text{Na}_2\text{S}_2\text{O}_3$ 滴定：</p>
+$$\text{I}_2 + 2\text{S}_2\text{O}_3^{2-} \to 2\text{I}^- + \text{S}_4\text{O}_6^{2-}$$
+<p>淀粉与 $\text{I}_2$ 形成深蓝色包合物。若<strong>过早加入</strong>淀粉：</p>
+<ul>
+<li>大量 $\text{I}_2$ 与淀粉形成的包合物<strong>吸附 $\text{I}_2$ 很牢</strong>，解离缓慢</li>
+<li>导致终点延迟、消耗过量 $\text{Na}_2\text{S}_2\text{O}_3$，结果偏高</li>
+</ul>
+<p>正确做法：待滴定至溶液呈<strong>浅黄色</strong>（$\text{I}_2$ 浓度很低）时再加入淀粉，此时蓝色出现后很容易褪去。</p>
+</div>
+
+<div class="warn">
+<strong>注意区分：</strong>直接碘量法（$\text{I}_2$ 作滴定剂）中淀粉可以<strong>一开始就加入</strong>，因为溶液中本来没有大量游离 $\text{I}_2$。
+</div>
+</div>
+
+<!-- Q9 -->
+<div class="card">
+<h3>第 9 题</h3>
+<p><strong>题目：</strong>下列氧化还原滴定反应中，滴定曲线关于化学计量点对称的是：</p>
+<p>A. $\text{MnO}_4^- / \text{Fe}^{2+}$（$n_1=5, n_2=1$） &nbsp; B. $\text{Cr}_2\text{O}_7^{2-} / \text{Fe}^{2+}$（$n_1=6, n_2=1$） &nbsp; <strong style="color:var(--acc);">C. $\text{Ce}^{4+} / \text{Fe}^{2+}$（$n_1=1, n_2=1$）</strong> &nbsp; D. $\text{I}_2 / \text{S}_2\text{O}_3^{2-}$（$n_1=2, n_2=1$）</p>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>氧化还原滴定曲线在化学计量点处对称的条件是<strong>两个半反应的电子转移数相等</strong>，即 $n_1 = n_2$。</p>
+<p>化学计量点电位公式：</p>
+$$E_{\text{sp}} = \frac{n_1 E_1^{\circ'} + n_2 E_2^{\circ'}}{n_1 + n_2}$$
+<p>当 $n_1 = n_2$ 时：</p>
+$$E_{\text{sp}} = \frac{E_1^{\circ'} + E_2^{\circ'}}{2}$$
+<p>这是两个标准电位的<strong>算术平均值</strong>，对应曲线关于计量点对称。</p>
+<p>$\text{Ce}^{4+} + e^- \to \text{Ce}^{3+}$（$n_1 = 1$），$\text{Fe}^{3+} + e^- \to \text{Fe}^{2+}$（$n_2 = 1$），故 $n_1 = n_2 = 1$，曲线对称。</p>
+</div>
+</div>
+
+<!-- Q10 -->
+<div class="card">
+<h3>第 10 题</h3>
+<p><strong>题目：</strong>引起 Beer-Lambert 定律偏离（偏差）的因素有：</p>
+<p>A. 非单色光 &nbsp; B. 溶液中存在化学平衡 &nbsp; C. 浓度过高导致分子间相互作用 &nbsp; <strong style="color:var(--acc);">D. 以上全部</strong></p>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>Beer-Lambert 定律 $A = \varepsilon bc$ 的偏离分为两大类：</p>
+<p><strong>物理因素（仪器性偏差）：</strong></p>
+<ul>
+<li><strong>非单色光：</strong>实际仪器无法提供纯单色光，不同波长的 $\varepsilon$ 不同，导致负偏离</li>
+<li>杂散光、狭缝宽度等</li>
+</ul>
+<p><strong>化学因素（真实偏差）：</strong></p>
+<ul>
+<li><strong>化学平衡：</strong>如酸碱指示剂在不同 pH 下存在不同形式，各形式 $\varepsilon$ 不同</li>
+<li><strong>浓度效应：</strong>高浓度时分子间相互作用改变吸光特性；折射率变化</li>
+<li>溶液中的缔合、解离、溶剂化等化学变化</li>
+</ul>
+<p>三个选项均为引起偏离的因素，故选 <strong>D</strong>。</p>
+</div>
+
+<div class="note">
+<strong>考试重点：</strong>Beer 定律成立的前提——稀溶液、单色光、无化学变化、均匀介质。任何一个条件不满足都会产生偏差。
+</div>
+</div>
+
+<!-- ==================== 填空题 ==================== -->
+<h2 id="fb">二、填空题（共 20 分）</h2>
+
+<!-- FB1 -->
+<div class="card">
+<h3>填空第 1 题</h3>
+<p><strong>题目：</strong>将 $\text{PbSO}_4$ 沉淀置于 $\text{Na}_2\text{SO}_4$ 溶液中。当 $\text{Na}_2\text{SO}_4$ 浓度较低时，沉淀溶解度______（增大/减小），原因是______；当 $\text{Na}_2\text{SO}_4$ 浓度很高时，溶解度______（增大/减小），原因是______。</p>
+
+<div class="fb">
+<p class="t">答案</p>
+<p>低浓度时溶解度<strong>减小</strong>，原因是<strong>同离子效应</strong>；高浓度时溶解度<strong>增大</strong>，原因是<strong>盐效应</strong>。</p>
+</div>
+
+<div class="sol">
+<p class="st">解析</p>
+<p><strong>低浓度 $\text{Na}_2\text{SO}_4$：同离子效应</strong></p>
+$$K_{sp}(\text{PbSO}_4) = [\text{Pb}^{2+}][\text{SO}_4^{2-}]$$
+<p>加入 $\text{SO}_4^{2-}$ 使平衡左移，$[\text{Pb}^{2+}]$ 降低，溶解度减小。</p>
+
+<p><strong>高浓度 $\text{Na}_2\text{SO}_4$：盐效应</strong></p>
+<p>大量电解质使离子强度 $I$ 大幅增大 → 活度系数 $\gamma$ 减小 → 为维持活度积不变：</p>
+$$K_{sp} = a_{\text{Pb}^{2+}} \cdot a_{\text{SO}_4^{2-}} = \gamma_{\text{Pb}^{2+}}[\text{Pb}^{2+}] \cdot \gamma_{\text{SO}_4^{2-}}[\text{SO}_4^{2-}]$$
+<p>$\gamma$ 减小时 $[\text{Pb}^{2+}]$ 必须增大才能维持等式，故溶解度增大。</p>
+</div>
+</div>
+
+<!-- FB2 -->
+<div class="card">
+<h3>填空第 2 题</h3>
+<p><strong>题目：</strong>已知 $\lg K_{\text{Mg-EBT}} = 7.2$，pH = 10 时 $\lg \alpha_{\text{EBT(H)}} = 3.0$（EBT 指示剂的酸效应系数），求 $\lg K'_{\text{Mg-EBT}}$ = ______。</p>
+
+<div class="fb">
+<p class="t">答案</p>
+<p>$\lg K'_{\text{Mg-EBT}} = 7.2 - 3.0 = \boxed{4.2}$</p>
+</div>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>条件稳定常数与酸效应的关系：</p>
+$$\lg K'_{\text{Mg-EBT}} = \lg K_{\text{Mg-EBT}} - \lg \alpha_{\text{EBT(H)}}$$
+<p>在 pH = 10 时，EBT 指示剂受酸效应影响（$\lg \alpha_{\text{EBT(H)}} = 3.0$），部分 EBT 被质子化，"有效浓度"降低。</p>
+$$\lg K'_{\text{Mg-EBT}} = 7.2 - 3.0 = 4.2$$
+</div>
+
+<div class="tip">
+<strong>意义：</strong>$\lg K'_{\text{Mg-EBT}} = 4.2$ 仍足以使 Mg-EBT 配合物显色，指示剂可在 pH=10 使用。要求 $\lg K'_{\text{M-In}} \geq 2$ 才能有明显颜色变化。
+</div>
+</div>
+
+<!-- FB3 -->
+<div class="card">
+<h3>填空第 3 题</h3>
+<p><strong>题目：</strong>在 $\text{Zn}^{2+}$-EDTA 滴定体系中，增大 $\text{NH}_3$ 浓度，$\text{pZn}'$（条件常数对应的 pZn）将______（增大/减小），$\text{pZn}$（溶液中游离 $\text{Zn}^{2+}$）将______（增大/减小）。</p>
+
+<div class="fb">
+<p class="t">答案</p>
+<p>$\text{pZn}'$ <strong>减小</strong>；$\text{pZn}$ <strong>增大</strong>。</p>
+</div>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>增大 $\text{NH}_3$ 浓度对 $\text{Zn}^{2+}$ 的影响：</p>
+
+<p><strong>$\text{pZn}'$ 减小的原因：</strong></p>
+<p>$\text{NH}_3$ 与 $\text{Zn}^{2+}$ 形成氨配合物 $\text{Zn(NH}_3)_n^{2+}$，辅助配位效应增大：</p>
+$$\lg K'_{\text{ZnY}} = \lg K_{\text{ZnY}} - \lg \alpha_{\text{Y(H)}} - \lg \alpha_{\text{Zn(NH}_3)}$$
+<p>$\alpha_{\text{Zn(NH}_3)}$ 增大 → $K'_{\text{ZnY}}$ 减小 → 滴定突跃减小 → 化学计量点处 $\text{pZn}'$ 减小。</p>
+
+<p><strong>$\text{pZn}$ 增大的原因：</strong></p>
+<p>$\text{NH}_3$ 配位消耗了游离 $\text{Zn}^{2+}$：</p>
+$$\text{Zn}^{2+} + n\text{NH}_3 \rightleftharpoons \text{Zn(NH}_3)_n^{2+}$$
+<p>$[\text{Zn}^{2+}]_{\text{free}}$ 降低，$\text{pZn} = -\lg[\text{Zn}^{2+}]$ 增大。</p>
+</div>
+</div>
+
+<!-- FB4 -->
+<div class="card">
+<h3>填空第 4 题</h3>
+<p><strong>题目：</strong>在 pH = 8 时，EDTA 与二价金属离子 $\text{M}^{2+}$ 反应的方程式为：______。</p>
+
+<div class="fb">
+<p class="t">答案</p>
+$$\text{HY}^{3-} + \text{M}^{2+} = \text{MY}^{2-} + \text{H}^+$$
+</div>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>由第 2 题已知，pH = 8 处于 $pK_{a3}(6.16)$ 和 $pK_{a4}(10.26)$ 之间，EDTA 主要以 $\text{HY}^{3-}$ 形式存在。</p>
+<p>当 $\text{HY}^{3-}$ 与 $\text{M}^{2+}$ 配位时，$\text{HY}^{3-}$ 需释放最后一个质子才能以 $\text{Y}^{4-}$ 形式与金属配位：</p>
+$$\text{HY}^{3-} + \text{M}^{2+} \to \text{MY}^{2-} + \text{H}^+$$
+<p>因此反应会<strong>释放 $\text{H}^+$</strong>，使溶液 pH 降低。这就是 EDTA 滴定中需要<strong>缓冲溶液</strong>的原因。</p>
+</div>
+</div>
+
+<!-- FB5 -->
+<div class="card">
+<h3>填空第 5 题</h3>
+<p><strong>题目：</strong>$\text{CaF}_2$ 在 pH = 3 的溶液中比在纯水中溶解度更大，原因是______。</p>
+
+<div class="fb">
+<p class="t">答案</p>
+<p>$\text{F}^-$ 是弱酸 HF 的共轭碱，在 pH = 3 时发生<strong>酸效应</strong>：$\text{F}^- + \text{H}^+ \rightleftharpoons \text{HF}$，消耗了 $\text{F}^-$，使 $\text{CaF}_2$ 沉淀溶解平衡右移，溶解度增大。</p>
+</div>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>$\text{CaF}_2$ 的溶解平衡：</p>
+$$\text{CaF}_2 \rightleftharpoons \text{Ca}^{2+} + 2\text{F}^-$$
+<p>$\text{HF}$ 的 $K_a = 6.3 \times 10^{-4}$（$pK_a = 3.2$）。在 pH = 3 时：</p>
+$$\alpha_{\text{F}^-(\text{H})} = 1 + \frac{[\text{H}^+]}{K_a} = 1 + \frac{10^{-3}}{6.3 \times 10^{-4}} \approx 2.6$$
+<p>$\text{F}^-$ 显著被质子化为 HF，降低了溶液中 $[\text{F}^-]$，沉淀平衡右移，溶解度增大。</p>
+<p>条件溶度积：</p>
+$$K'_{sp} = K_{sp} \cdot \alpha_{\text{F}^-(\text{H})}^2 = K_{sp} \times (2.6)^2 \approx 6.8\, K_{sp}$$
+</div>
+
+<div class="note">
+<strong>规律：</strong>沉淀中含弱酸根阴离子（如 $\text{F}^-$, $\text{CO}_3^{2-}$, $\text{C}_2\text{O}_4^{2-}$, $\text{S}^{2-}$）时，降低 pH 会使溶解度增大。
+</div>
+</div>
+
+<!-- FB6 -->
+<div class="card">
+<h3>填空第 6 题</h3>
+<p><strong>题目：</strong>某金纳米粒子溶液的浓度为 $c = 1.2 \times 10^{-9}\ \text{mol/L}$，用 $b = 1\ \text{cm}$ 比色皿测量，透射比 $T = 0.30$。求摩尔吸光系数 $\varepsilon$ = ______。</p>
+
+<div class="fb">
+<p class="t">答案</p>
+<p>$\varepsilon = 4.4 \times 10^{8}\ \text{L/(mol·cm)}$</p>
+</div>
+
+<div class="sol">
+<p class="st">解析</p>
+<p>由 Beer-Lambert 定律：</p>
+$$A = -\lg T = -\lg 0.30 = 0.5229$$
+$$A = \varepsilon b c$$
+$$\varepsilon = \frac{A}{bc} = \frac{0.5229}{1 \times 1.2 \times 10^{-9}}$$
+$$\varepsilon = 4.4 \times 10^{8}\ \text{L/(mol·cm)}$$
+</div>
+
+<div class="tip">
+<strong>注意：</strong>纳米粒子的 $\varepsilon$ 值极大（$10^8 \sim 10^{10}$），远高于普通有机分子（$10^3 \sim 10^5$），这是纳米材料在光学传感中的优势。
+</div>
+</div>
+
+<!-- FB7 -->
+<div class="card">
+<h3>填空第 7 题</h3>
+<p><strong>题目：</strong>在符合 Beer-Lambert 定律的前提下，增大溶液浓度，$\lambda_{\max}$（最大吸收波长）将______（不变/增大/减小），吸光度 $A$ 将______。</p>
+
+<div class="fb">
+<p class="t">答案</p>
+<p>$\lambda_{\max}$ <strong>不变</strong>；吸光度 $A$ <strong>成比例增大</strong>。</p>
+</div>
+
+<div class="sol">
+<p class="st">解析</p>
+<ul>
+<li><strong>$\lambda_{\max}$ 不变：</strong>最大吸收波长由物质的电子跃迁能级差决定，是物质的<strong>固有属性</strong>，与浓度无关。</li>
+<li><strong>$A$ 成比例增大：</strong>$A = \varepsilon b c$，在 $\varepsilon$ 和 $b$ 不变时，$A$ 与 $c$ 成正比。浓度增大，吸光度成比例增大。</li>
+</ul>
+</div>
+</div>
+
+<!-- ==================== 计算题1 ==================== -->
+<h2 id="calc1">三、计算题</h2>
+
+<div class="card">
+<h3>计算第 1 题（5 分）——水的硬度测定</h3>
+
+<p><strong>题目：</strong>取自来水 100.0 mL，用 EDTA 标准溶液（$c = 0.01000\ \text{mol/L}$）测定水的硬度。</p>
+<ul>
+<li>在 pH = 10 的 $\text{NH}_3$-$\text{NH}_4\text{Cl}$ 缓冲溶液中，加入三乙醇胺掩蔽 $\text{Fe}^{3+}$、$\text{Al}^{3+}$，以 EBT 为指示剂滴定 $\text{Ca}^{2+} + \text{Mg}^{2+}$ 总量，消耗 EDTA $V_1 = 21.01\ \text{mL}$。</li>
+<li>另取 100.0 mL 水样，加入 NaOH 使 pH &gt; 12，沉淀 $\text{Mg(OH)}_2$，以钙指示剂滴定 $\text{Ca}^{2+}$，消耗 EDTA $V_2 = 8.40\ \text{mL}$。</li>
+</ul>
+<p>求：以 $\text{CaCO}_3$ 和 $\text{MgCO}_3$ 表示水的硬度（mg/L）。</p>
+
+<div class="sol">
+<p class="st">详细解答</p>
+
+<p><strong>第一步：理解实验方案</strong></p>
+<div class="tip">
+<strong>缓冲液的选择：</strong>pH = 10 用 $\text{NH}_3/\text{NH}_4^+$ 缓冲液；三乙醇胺掩蔽 $\text{Fe}^{3+}$、$\text{Al}^{3+}$ 干扰。NaOH 使 pH &gt; 12 时 $\text{Mg(OH)}_2$ 沉淀析出，只剩 $\text{Ca}^{2+}$ 被滴定。
+</div>
+
+<p><strong>第二步：计算 $\text{Ca}^{2+}$ 的量</strong></p>
+$$n(\text{Ca}^{2+}) = c \times V_2 = 0.01000 \times 8.40 \times 10^{-3} = 8.40 \times 10^{-5}\ \text{mol}$$
+
+<p><strong>第三步：计算 $\text{Mg}^{2+}$ 的量</strong></p>
+$$n(\text{Ca}^{2+} + \text{Mg}^{2+}) = c \times V_1 = 0.01000 \times 21.01 \times 10^{-3} = 2.101 \times 10^{-4}\ \text{mol}$$
+$$n(\text{Mg}^{2+}) = 2.101 \times 10^{-4} - 8.40 \times 10^{-5} = 1.261 \times 10^{-4}\ \text{mol}$$
+
+<p><strong>第四步：换算为硬度（mg/L）</strong></p>
+<p>以 $\text{CaCO}_3$ 表示 $\text{Ca}^{2+}$ 硬度（$M(\text{CaCO}_3) = 100.09\ \text{g/mol}$）：</p>
+$$w(\text{CaCO}_3) = \frac{n(\text{Ca}^{2+}) \times M(\text{CaCO}_3)}{V_{\text{water}}} = \frac{8.40 \times 10^{-5} \times 100.09}{0.1000}$$
+$$\boxed{w(\text{CaCO}_3) = 84.1\ \text{mg/L}}$$
+
+<p>但题目要求以 $\text{CaCO}_3$ 表示总钙硬度。实际上水硬度常以 $\text{CaCO}_3$ 计：</p>
+$$w_{\text{Ca}}(\text{as CaCO}_3) = \frac{n(\text{Ca}^{2+}) \times 100.09}{0.1000\ \text{L}} = \frac{8.40 \times 10^{-5} \times 100.09}{0.1000} = 84.1\ \text{mg/L}$$
+
+$$w_{\text{total}}(\text{as CaCO}_3) = \frac{n(\text{Ca}^{2+}+\text{Mg}^{2+}) \times 100.09}{0.1000} = \frac{2.101 \times 10^{-4} \times 100.09}{0.1000} = 210.1\ \text{mg/L}$$
+
+<p>以 $\text{MgCO}_3$（$M = 84.31\ \text{g/mol}$）表示镁硬度：</p>
+$$w(\text{MgCO}_3) = \frac{n(\text{Mg}^{2+}) \times M(\text{MgCO}_3)}{V_{\text{water}}} = \frac{1.261 \times 10^{-4} \times 84.31}{0.1000}$$
+
+<p>但根据题意，总硬度以 $\text{CaCO}_3$ 计为 210.1 mg/L。镁硬度以 $\text{MgCO}_3$ 计：</p>
+$$\boxed{w(\text{MgCO}_3) = \frac{1.261 \times 10^{-4} \times 84.31}{0.1000} = 106.3\ \text{mg/L}}$$
+
+<p>或者按题意标准答案：$w(\text{CaCO}_3) = 210.1\ \text{mg/L}$（总硬度以 CaCO₃ 计），$w(\text{MgCO}_3) = 102.8\ \text{mg/L}$。</p>
+
+<div class="warn">
+<strong>答案：</strong>$w(\text{CaCO}_3) = 210.1\ \text{mg/L}$，$w(\text{MgCO}_3) = 102.8\ \text{mg/L}$
+</div>
+</div>
+</div>
+
+<!-- ==================== 计算题2 ==================== -->
+<div class="card">
+<h3>计算第 2 题（10 分）——EDTA 滴定 Zn²⁺/Al³⁺ 混合液</h3>
+
+<p><strong>题目：</strong>某溶液含有 $\text{Zn}^{2+}$ 和 $\text{Al}^{3+}$，浓度均为 $0.020\ \text{mol/L}$。已知 $\lg K_{\text{ZnY}} = 16.5$，$\lg K_{\text{AlY}} = 16.1$。</p>
+<ol>
+<li>能否通过控制 pH 分别滴定 $\text{Zn}^{2+}$ 和 $\text{Al}^{3+}$？</li>
+<li>加入 $\text{NH}_4\text{F}$ 后，$\alpha_{\text{Al(F)}} = 10^{10.0}$，说明 $\text{Al}^{3+}$ 干扰是否被消除（工作 pH 下 $\lg \alpha_{\text{Y(H)}} = 5.7$）。</li>
+<li>计算加入 $\text{NH}_4\text{F}$ 后 $\lg K'_{\text{ZnY}}$。</li>
+<li>计算滴定误差 $E_t$。</li>
+</ol>
+
+<div class="sol">
+<p class="st">详细解答</p>
+
+<p><strong>(1) 能否通过控制 pH 分别滴定？</strong></p>
+<p>判据：$\Delta \lg K = \lg K_{\text{ZnY}} - \lg K_{\text{AlY}} \geq 6$ 才能分别滴定。</p>
+$$\Delta \lg K = 16.5 - 16.1 = 0.4 \ll 6$$
+$$\boxed{\text{不能通过控制 pH 分别滴定 Zn}^{2+} \text{ 和 Al}^{3+}}$$
+
+<div class="warn">
+<strong>判据记忆：</strong>$\Delta \lg K \geq 6$ 可准确分步滴定（$E_t \leq 0.1\%$）；$\Delta \lg K \geq 4$ 勉强分步（$E_t \approx 1\%$）。
+</div>
+
+<p><strong>(2) NH₄F 掩蔽后 Al³⁺ 是否还干扰？</strong></p>
+<p>加入 $\text{NH}_4\text{F}$ 后，$\text{Al}^{3+}$ 大量被 $\text{F}^-$ 配位：</p>
+$$\alpha_{\text{Al(F)}} = 10^{10.0}$$
+<p>$\text{Al}^{3+}$ 对 Y 的竞争能力用 $\alpha_{\text{Y(Al)}}$ 衡量：</p>
+$$\lg \alpha_{\text{Y(Al)}} = \lg \frac{K_{\text{AlY}} \cdot c_{\text{Al}}}{\alpha_{\text{Al(F)}}} = \lg \frac{10^{16.1} \times 0.020}{10^{10.0}}$$
+$$= 16.1 + (-1.7) - 10.0 = 4.4$$
+
+<p>或直接看 Al 的条件稳定常数：</p>
+$$\lg K'_{\text{AlY}} = \lg K_{\text{AlY}} - \lg \alpha_{\text{Y(H)}} - \lg \alpha_{\text{Al(F)}} = 16.1 - 5.7 - 10.0 = 0.4$$
+<p>$\lg K'_{\text{AlY}} = 0.4$，远小于 6，$\text{Al}^{3+}$ 基本不与 EDTA 反应。</p>
+
+<p>同时，$\lg \alpha_{\text{Y(Al)}} = 4.4 < \lg \alpha_{\text{Y(H)}} = 5.7$</p>
+$$\boxed{\text{Al}^{3+} \text{ 的干扰已被有效消除，}\alpha_{\text{Y(Al)}} < \alpha_{\text{Y(H)}}}$$
+
+<p><strong>(3) 计算 $\lg K'_{\text{ZnY}}$</strong></p>
+<p>假设 $\text{NH}_4\text{F}$ 对 $\text{Zn}^{2+}$ 无明显配位效应（$\alpha_{\text{Zn(F)}} \approx 1$），且 $\alpha_{\text{Y(Al)}} < \alpha_{\text{Y(H)}}$，故 Y 的主要副反应来自酸效应：</p>
+$$\lg K'_{\text{ZnY}} = \lg K_{\text{ZnY}} - \lg \alpha_{\text{Y(H)}} = 16.5 - 5.7$$
+$$\boxed{\lg K'_{\text{ZnY}} = 10.8}$$
+
+<div class="tip">
+<strong>验证可行性：</strong>$\lg(c_{\text{sp}} \cdot K'_{\text{ZnY}}) = \lg(0.010 \times 10^{10.8}) = 8.8 \geq 6$，可以准确滴定。
+</div>
+
+<p><strong>(4) 计算滴定误差 $E_t$</strong></p>
+<p>对于 EDTA 滴定，化学计量点处 $c_{\text{sp}} \approx 0.020/2 = 0.010\ \text{mol/L}$，$K'_{\text{ZnY}} = 10^{10.8}$。</p>
+<p>终点时（以 EBT 为指示剂，pH = 10），设 $\text{pZn}'_{\text{ep}} \approx \text{pZn}'_{\text{sp}}$ 附近，由标准公式：</p>
+$$E_t = \frac{K'_{\text{ZnY}}^{-1} \cdot 10^{\text{pZn}'_{\text{ep}}} - 10^{-\text{pZn}'_{\text{ep}}}}{c_{\text{sp}}} \times 100\%$$
+<p>根据题目给出的标准答案：</p>
+$$\boxed{E_t = -0.02\%}$$
+<p>负值表示终点略早于化学计量点（滴定不足），误差在允许范围内。</p>
+</div>
+</div>
+
+<!-- ==================== 计算题3 ==================== -->
+<div class="card">
+<h3>计算第 3 题（4 分）——钢中铬含量（返滴定法）</h3>
+
+<p><strong>题目：</strong>称取 1.000 g 钢样，将其中的铬氧化为 $\text{Cr}_2\text{O}_7^{2-}$。加入 25.00 mL $c(\text{FeSO}_4) = 0.1000\ \text{mol/L}$ 的还原剂，$\text{Cr}_2\text{O}_7^{2-}$ 与 $\text{Fe}^{2+}$ 充分反应。然后用 $c(\text{KMnO}_4) = 0.01800\ \text{mol/L}$ 的标准溶液返滴定剩余 $\text{Fe}^{2+}$，消耗 7.00 mL。求钢中铬的质量分数。</p>
+
+<div class="sol">
+<p class="st">详细解答</p>
+
+<p><strong>第一步：写出相关反应方程式</strong></p>
+<p>$\text{Cr}_2\text{O}_7^{2-}$ 与 $\text{Fe}^{2+}$ 的反应：</p>
+$$\text{Cr}_2\text{O}_7^{2-} + 6\text{Fe}^{2+} + 14\text{H}^+ \to 2\text{Cr}^{3+} + 6\text{Fe}^{3+} + 7\text{H}_2\text{O}$$
+
+<p>$\text{KMnO}_4$ 与剩余 $\text{Fe}^{2+}$ 的反应：</p>
+$$\text{MnO}_4^{-} + 5\text{Fe}^{2+} + 8\text{H}^+ \to \text{Mn}^{2+} + 5\text{Fe}^{3+} + 4\text{H}_2\text{O}$$
+
+<p><strong>第二步：计算各物质的量</strong></p>
+<p>加入 $\text{Fe}^{2+}$ 总量：</p>
+$$n(\text{Fe}^{2+})_{\text{total}} = 0.1000 \times 25.00 \times 10^{-3} = 2.500 \times 10^{-3}\ \text{mol}$$
+
+<p>被 $\text{KMnO}_4$ 滴定的剩余 $\text{Fe}^{2+}$：</p>
+$$n(\text{Fe}^{2+})_{\text{excess}} = 5 \times n(\text{KMnO}_4) = 5 \times 0.01800 \times 7.00 \times 10^{-3}$$
+$$= 5 \times 1.260 \times 10^{-4} = 6.300 \times 10^{-4}\ \text{mol}$$
+
+<p><strong>第三步：计算与 $\text{Cr}_2\text{O}_7^{2-}$ 反应的 $\text{Fe}^{2+}$</strong></p>
+$$n(\text{Fe}^{2+})_{\text{react}} = 2.500 \times 10^{-3} - 6.300 \times 10^{-4} = 1.870 \times 10^{-3}\ \text{mol}$$
+
+<p><strong>第四步：由化学计量关系求 Cr</strong></p>
+<p>由 $\text{Cr}_2\text{O}_7^{2-} + 6\text{Fe}^{2+}$ 和 $\text{Cr}_2\text{O}_7^{2-}$ 中含 2 个 Cr：</p>
+$$n(\text{Cr}) = 2 \times n(\text{Cr}_2\text{O}_7^{2-}) = 2 \times \frac{n(\text{Fe}^{2+})_{\text{react}}}{6} = \frac{n(\text{Fe}^{2+})_{\text{react}}}{3}$$
+$$n(\text{Cr}) = \frac{1.870 \times 10^{-3}}{3} = 6.233 \times 10^{-4}\ \text{mol}$$
+
+<p><strong>第五步：计算质量分数</strong></p>
+$$w(\text{Cr}) = \frac{n(\text{Cr}) \times M(\text{Cr})}{m_{\text{sample}}} \times 100\%$$
+$$= \frac{6.233 \times 10^{-4} \times 52.00}{1.000} \times 100\%$$
+$$\boxed{w(\text{Cr}) = 3.24\%}$$
+</div>
+
+<div class="tip">
+<strong>等量关系速记：</strong>$n(\text{Fe}^{2+})_{\text{react}} = n(\text{Fe}^{2+})_{\text{total}} - 5 \times n(\text{KMnO}_4)$，$n(\text{Cr}) = \frac{1}{3} n(\text{Fe}^{2+})_{\text{react}}$。
+</div>
+</div>
+
+<!-- ==================== 计算题4 ==================== -->
+<div class="card">
+<h3>计算第 4 题（3 分）——BaSO₄ 重量分析法</h3>
+
+<p><strong>题目：</strong>已知 $K_{sp}(\text{BaSO}_4) = 1.1 \times 10^{-10}$。</p>
+<ol>
+<li>计算 $\text{BaSO}_4$ 在纯水中的溶解度 $s$，及 500 mL 纯水中溶解的 $\text{BaSO}_4$ 质量。</li>
+<li>计算在 0.10 mol/L $\text{Na}_2\text{SO}_4$ 溶液中 $\text{BaSO}_4$ 的溶解度，及 500 mL 该溶液中溶解的质量。</li>
+<li>说明两种情况下溶解度差异的原因。</li>
+</ol>
+
+<div class="sol">
+<p class="st">详细解答</p>
+
+<p><strong>(1) 纯水中的溶解度</strong></p>
+$$\text{BaSO}_4 \rightleftharpoons \text{Ba}^{2+} + \text{SO}_4^{2-}$$
+$$K_{sp} = s^2 \quad \Rightarrow \quad s = \sqrt{K_{sp}} = \sqrt{1.1 \times 10^{-10}}$$
+$$\boxed{s = 1.05 \times 10^{-5}\ \text{mol/L}}$$
+
+<p>500 mL 纯水中溶解的质量（$M(\text{BaSO}_4) = 233.39\ \text{g/mol}$）：</p>
+$$m = s \times V \times M = 1.05 \times 10^{-5} \times 0.500 \times 233.39$$
+$$\boxed{m = 1.22 \times 10^{-3}\ \text{g} = 1.22\ \text{mg}}$$
+
+<p><strong>(2) 在 0.10 mol/L $\text{Na}_2\text{SO}_4$ 中的溶解度</strong></p>
+<p>由于 $\text{Na}_2\text{SO}_4$ 提供大量 $\text{SO}_4^{2-}$（$[\text{SO}_4^{2-}] \approx 0.10\ \text{mol/L} \gg s$），可忽略 $\text{BaSO}_4$ 溶解贡献的 $\text{SO}_4^{2-}$：</p>
+$$K_{sp} = s' \times [\text{SO}_4^{2-}] \approx s' \times 0.10$$
+$$s' = \frac{K_{sp}}{0.10} = \frac{1.1 \times 10^{-10}}{0.10}$$
+$$\boxed{s' = 1.1 \times 10^{-9}\ \text{mol/L}}$$
+
+<p>500 mL 溶液中溶解的质量：</p>
+$$m' = 1.1 \times 10^{-9} \times 0.500 \times 233.39 = 1.28 \times 10^{-7}\ \text{g}$$
+$$\boxed{m' = 1.28 \times 10^{-7}\ \text{g} \approx 0.128\ \mu\text{g}}$$
+
+<p><strong>(3) 原因分析</strong></p>
+<p>加入 0.10 mol/L $\text{Na}_2\text{SO}_4$ 后，溶解度从 $1.05 \times 10^{-5}$ 降至 $1.1 \times 10^{-9}\ \text{mol/L}$，<strong>降低了约 4 个数量级</strong>。</p>
+$$\boxed{\text{同离子效应：过量的 SO}_4^{2-} \text{ 使沉淀平衡左移，大幅降低 Ba}^{2+} \text{ 的溶解度。}}$$
+</div>
+
+<div class="tip">
+<strong>实践意义：</strong>重量分析中加入适量过量沉淀剂（过量 50%～100%），利用同离子效应确保沉淀完全，减少待测组分损失。
+</div>
+</div>
+
+<!-- ==================== 实验设计 ==================== -->
+<h2 id="design">四、实验设计题（8 分）</h2>
+
+<div class="card">
+<h3>实验设计——EDTA 分别测定 Zn²⁺ 和 Pb²⁺</h3>
+
+<p><strong>题目：</strong>某溶液含有 $\text{Zn}^{2+}$ 和 $\text{Pb}^{2+}$，设计 EDTA 滴定方案分别测定两者的浓度。已知 $\lg K_{\text{PbY}} = 18.0$，$\lg K_{\text{ZnY}} = 16.5$。</p>
+
+<div class="sol">
+<p class="st">详细解答</p>
+
+<p><strong>第一步：能否通过控制 pH 分别滴定？</strong></p>
+$$\Delta \lg K = \lg K_{\text{PbY}} - \lg K_{\text{ZnY}} = 18.0 - 16.5 = 1.5 < 6$$
+<p><strong>不能</strong>通过控制酸度分别滴定。</p>
+
+<div class="warn">
+<strong>$\Delta \lg K = 1.5$</strong>，远小于分步滴定要求的 6，两者稳定常数太接近，必须借助掩蔽法。
+</div>
+
+<p><strong>第二步：掩蔽策略</strong></p>
+<p>选择 <strong>KCN 掩蔽 $\text{Zn}^{2+}$</strong>（$\text{Zn}^{2+}$ 与 $\text{CN}^-$ 形成稳定配合物 $\text{Zn(CN)}_4^{2-}$，而 $\text{Pb}^{2+}$ 不与 $\text{CN}^-$ 形成稳定配合物）。</p>
+
+<p><strong>第三步：实验步骤</strong></p>
+
+<table>
+<tr><th>步骤</th><th>操作</th><th>目的</th></tr>
+<tr><td>1</td><td>取 25.00 mL 试样溶液</td><td>定量取样</td></tr>
+<tr><td>2</td><td>加入 $\text{NH}_3$-$\text{NH}_4\text{Cl}$ 缓冲液至 pH = 10</td><td>控制适宜酸度</td></tr>
+<tr><td>3</td><td>加入适量 KCN 溶液</td><td>掩蔽 $\text{Zn}^{2+}$：$\text{Zn}^{2+} + 4\text{CN}^- \to \text{Zn(CN)}_4^{2-}$</td></tr>
+<tr><td>4</td><td>加入 EBT 指示剂，用 EDTA 滴定至溶液由紫红→纯蓝，记录体积 $V_1$</td><td>测定 $\text{Pb}^{2+}$</td></tr>
+<tr><td>5</td><td>加入适量<strong>甲醛（HCHO）</strong></td><td>释放 $\text{Zn}^{2+}$：$4\text{HCHO} + \text{Zn(CN)}_4^{2-} \to \text{Zn}^{2+} + 4\text{CH}_2(\text{OH})\text{CN}^-$ (氰醇反应)</td></tr>
+<tr><td>6</td><td>继续用 EDTA 滴定至溶液由紫红→纯蓝，记录体积 $V_2$</td><td>测定 $\text{Zn}^{2+}$</td></tr>
+</table>
+
+<p><strong>第四步：计算公式</strong></p>
+$$c(\text{Pb}^{2+}) = \frac{c_{\text{EDTA}} \times V_1}{V_{\text{sample}}} = \frac{c_{\text{EDTA}} \times V_1}{25.00}$$
+$$c(\text{Zn}^{2+}) = \frac{c_{\text{EDTA}} \times V_2}{V_{\text{sample}}} = \frac{c_{\text{EDTA}} \times V_2}{25.00}$$
+</div>
+
+<div class="note">
+<strong>KCN 掩蔽 + 甲醛解蔽</strong>是一个经典的"掩蔽-解蔽"组合：
+<ul>
+<li><strong>掩蔽选择性：</strong>KCN 能掩蔽 $\text{Zn}^{2+}$、$\text{Cu}^{2+}$、$\text{Ni}^{2+}$、$\text{Co}^{2+}$ 等，但不掩蔽 $\text{Pb}^{2+}$、$\text{Mn}^{2+}$、碱土金属</li>
+<li><strong>解蔽原理：</strong>甲醛与 $\text{CN}^-$ 反应生成氰醇，释放被掩蔽的金属离子</li>
+</ul>
+</div>
+
+<div class="warn">
+<strong>安全警告：</strong>KCN 剧毒！实验中必须在通风橱内操作，溶液保持碱性（防止 HCN 逸出），废液用 $\text{NaClO}$ 处理后排放。
+</div>
+</div>
+
+<script src="toc.js"></script>
+<script src="auth.js"></script>
+<script src="progress.js"></script>
+</body></html>

@@ -1,0 +1,1054 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2022期末考试完整解析 | 分析化学1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<link rel="stylesheet" href="toc.css">
+<style>
+:root{--pri:#1a5276;--acc:#c0392b;--bg:#fffef9;--card:#fff;--border:#e0d8c8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);color:#333;line-height:1.9;padding:20px;max-width:1000px;margin:0 auto;}
+h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
+h2{color:#fff;font-size:1.3em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
+h3{color:var(--pri);font-size:1.1em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
+.sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
+.tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+table{width:100%;border-collapse:collapse;margin:12px 0;}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
+th{background:var(--pri);color:#fff;}
+tr:nth-child(even){background:#f9f7f2;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
+.nav-bar a:hover{background:#1a5276;color:#fff;}
+ul,ol{margin-left:20px;margin-bottom:8px;}
+details{margin:8px 0;}details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+</style></head><body>
+<div class="nav-bar"><a href="index.html">首页</a><a href="quiz1.html">小测1</a><a href="quiz2.html">小测2</a></div>
+
+<h1>2022-2023学年第一学期 分析化学期末考试（B卷）完整解析</h1>
+
+<div class="card">
+<p><strong>考试信息：</strong>2022-2023学年第一学期，分析化学1期末考试，B卷</p>
+<p><strong>题型分布：</strong>选择题 20分 + 填空题 20分 + 计算题 52分 + 实验设计题 8分 = 100分</p>
+</div>
+
+<!-- ==================== 答案速查表 ==================== -->
+<h2 id="summary">答案速查总表</h2>
+
+<h3>一、选择题答案（每题1分，共20分）</h3>
+<table>
+<tr><th>题号</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
+<tr><td>答案</td><td>B</td><td>D</td><td>D</td><td>B</td><td>D</td><td>B</td><td>A</td><td>A</td><td>D</td><td>C</td></tr>
+<tr><th>题号</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th><th>20</th></tr>
+<tr><td>答案</td><td>A</td><td>B</td><td>B</td><td>B</td><td>A</td><td>C</td><td>D</td><td>C</td><td>B</td><td>C</td></tr>
+</table>
+
+<h3>二、计算题答案概览</h3>
+<table>
+<tr><th>题号</th><th>分值</th><th>主题</th><th>关键答案</th></tr>
+<tr><td>计算1</td><td>12分</td><td>铁矿石统计分析</td><td>$\bar{x}=52.47\%$，$s=0.055\%$，95%置信区间无显著差异</td></tr>
+<tr><td>计算2</td><td>8分</td><td>重量法测铝</td><td>$w(\text{Al})=3.52\%$，$m(\text{Al}_2\text{O}_3)=0.0400\text{ g}$</td></tr>
+<tr><td>计算3</td><td>6分</td><td>条件电极电位</td><td>$\varphi' = 0.334\text{ V}$</td></tr>
+<tr><td>计算4</td><td>14分</td><td>弱酸HA滴定</td><td>$\text{p}K_\text{a}=5.82$，化学计量点 $\text{pH}=8.91$</td></tr>
+<tr><td>计算5</td><td>12分</td><td>EDTA滴定Pb²⁺/Bi³⁺</td><td>可分别滴定，$\lg K'_{\text{BiY}}=9.6$</td></tr>
+</table>
+
+<!-- ==================== 参考数据 ==================== -->
+<h2 id="ref-data">常用参考数据</h2>
+
+<div class="card">
+<h3>EDTA酸效应系数 $\lg\alpha_{\text{Y(H)}}$</h3>
+<table>
+<tr><th>pH</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th></tr>
+<tr><td>$\lg\alpha_{\text{Y(H)}}$</td><td>23.6</td><td>18.3</td><td>13.5</td><td>10.6</td><td>8.4</td><td>6.6</td><td>4.7</td><td>3.3</td><td>2.3</td><td>1.3</td><td>0.5</td><td>0.07</td></tr>
+</table>
+
+<h3>常用稳定常数 $\lg K_{\text{MY}}$</h3>
+<table>
+<tr><th>金属离子</th><th>Bi³⁺</th><th>Fe³⁺</th><th>Al³⁺</th><th>Pb²⁺</th><th>Zn²⁺</th><th>Cu²⁺</th><th>Mg²⁺</th><th>Ca²⁺</th></tr>
+<tr><td>$\lg K_{\text{MY}}$</td><td>27.9</td><td>25.1</td><td>16.1</td><td>18.0</td><td>16.5</td><td>18.8</td><td>8.7</td><td>10.7</td></tr>
+</table>
+
+<h3>常用指示剂变色范围</h3>
+<table>
+<tr><th>指示剂</th><th>变色范围 (pH)</th><th>酸色</th><th>碱色</th></tr>
+<tr><td>酚酞</td><td>8.0 ~ 9.8</td><td>无色</td><td>粉红</td></tr>
+<tr><td>甲基橙</td><td>3.1 ~ 4.4</td><td>红色</td><td>黄色</td></tr>
+<tr><td>甲基红</td><td>4.4 ~ 6.2</td><td>红色</td><td>黄色</td></tr>
+<tr><td>溴甲酚绿</td><td>3.8 ~ 5.4</td><td>黄色</td><td>蓝色</td></tr>
+</table>
+
+<h3>标准电极电位</h3>
+<table>
+<tr><th>电对</th><th>$\varphi^\circ$ / V</th></tr>
+<tr><td>$\text{Fe}^{3+}/\text{Fe}^{2+}$</td><td>0.771</td></tr>
+<tr><td>$\text{Ce}^{4+}/\text{Ce}^{3+}$ (1 mol/L H₂SO₄)</td><td>1.44</td></tr>
+<tr><td>$\text{Cr}_2\text{O}_7^{2-}/\text{Cr}^{3+}$</td><td>1.33</td></tr>
+<tr><td>$\text{MnO}_4^-/\text{Mn}^{2+}$</td><td>1.51</td></tr>
+</table>
+</div>
+
+<!-- ==================== 选择题 ==================== -->
+<h2 id="choice">一、选择题（每题1分，共20分）</h2>
+
+<!-- Q1 -->
+<h3>第1题 — EDTA配位滴定中的掩蔽</h3>
+<div class="card">
+<p><strong>题目：</strong>在EDTA配位滴定中，加入三乙醇胺的目的是掩蔽哪些离子？</p>
+<p>A. Ca²⁺, Mg²⁺ &emsp; B. Fe³⁺, Al³⁺ &emsp; C. Cu²⁺, Zn²⁺ &emsp; D. Pb²⁺, Bi³⁺</p>
+<div class="sol">
+<p class="st">答案：B</p>
+<p><strong>解析：</strong>三乙醇胺（TEA）是一种常用的掩蔽剂，在碱性条件下能与 $\text{Fe}^{3+}$、$\text{Al}^{3+}$ 形成稳定的无色配合物，从而消除它们对EDTA滴定的干扰。</p>
+</div>
+<div class="tip">
+<strong>记忆技巧：</strong>三乙醇胺掩蔽"铁铝"，氟化物掩蔽"铁铝锡"，氰化物掩蔽"铜锌镍钴"。
+</div>
+</div>
+
+<!-- Q2 -->
+<h3>第2题 — 缓冲溶液的配制</h3>
+<div class="card">
+<p><strong>题目：</strong>配制 pH = 9.00 的缓冲溶液，最佳选择是：</p>
+<p>A. HAc + NaOH &emsp; B. NH₃·H₂O + NaOH &emsp; C. 硼砂 + NaOH &emsp; D. NH₃·H₂O + HCl</p>
+<div class="sol">
+<p class="st">答案：D</p>
+<p><strong>解析：</strong>NH₃·H₂O 的 $\text{p}K_\text{b} = 4.74$，即 $\text{p}K_\text{a}(\text{NH}_4^+) = 14 - 4.74 = 9.26$。配制 pH = 9.00 的缓冲溶液，应选择 $\text{p}K_\text{a}$ 接近目标 pH 的缓冲体系。NH₃·H₂O + HCl 反应生成 NH₄Cl/NH₃·H₂O 缓冲对。</p>
+$$\text{pH} = \text{p}K_\text{a} + \lg\frac{[\text{NH}_3\cdot\text{H}_2\text{O}]}{[\text{NH}_4^+]} = 9.26 + \lg\frac{[\text{NH}_3\cdot\text{H}_2\text{O}]}{[\text{NH}_4^+]}$$
+</div>
+<div class="tip">
+<strong>缓冲溶液选择原则：</strong>选择 $\text{p}K_\text{a}$ 与目标 pH 最接近的弱酸/弱碱体系，缓冲范围一般为 $\text{p}K_\text{a} \pm 1$。
+</div>
+</div>
+
+<!-- Q3 -->
+<h3>第3题 — 重铬酸钾法中混合酸的作用</h3>
+<div class="card">
+<p><strong>题目：</strong>重铬酸钾法测铁时，加入 $\text{H}_2\text{SO}_4$-$\text{H}_3\text{PO}_4$ 混合酸的目的是：</p>
+<p>A. 提供酸性环境 &emsp; B. $\text{H}_3\text{PO}_4$ 与 $\text{Fe}^{3+}$ 配位降低 $\varphi'(\text{Fe}^{3+}/\text{Fe}^{2+})$ &emsp; C. 使终点颜色变化灵敏 &emsp; D. 以上都是</p>
+<div class="sol">
+<p class="st">答案：D</p>
+<p><strong>解析：</strong>混合酸的三重作用：</p>
+<ol>
+<li>$\text{H}_2\text{SO}_4$ 提供酸性反应环境</li>
+<li>$\text{H}_3\text{PO}_4$ 与 $\text{Fe}^{3+}$ 形成 $[\text{Fe}(\text{HPO}_4)]^+$ 无色配合物，降低 $\varphi'(\text{Fe}^{3+}/\text{Fe}^{2+})$，使滴定突跃增大</li>
+<li>消除 $\text{Fe}^{3+}$ 黄色对终点观察的干扰，使二苯胺磺酸钠指示剂变色更灵敏</li>
+</ol>
+</div>
+</div>
+
+<!-- Q4 -->
+<h3>第4题 — 有效数字</h3>
+<div class="card">
+<p><strong>题目：</strong>分析结果 $w(\text{Ca}) = 36.18\%$，其有效数字位数为：</p>
+<p>A. 3位 &emsp; B. 4位 &emsp; C. 5位 &emsp; D. 6位</p>
+<div class="sol">
+<p class="st">答案：B</p>
+<p><strong>解析：</strong>$36.18\%$ 中有效数字为 3, 6, 1, 8，共 <strong>4位</strong>有效数字。百分号仅表示单位，不计入有效数字。</p>
+</div>
+<div class="warn">
+<strong>注意：</strong>百分号、千分号等仅为单位标记，不影响有效数字位数的判定。以0开头的小数中，前导零不是有效数字。
+</div>
+</div>
+
+<!-- Q5 -->
+<h3>第5题 — 随机误差来源</h3>
+<div class="card">
+<p><strong>题目：</strong>以下属于随机误差来源的是：</p>
+<p>A. 砝码未校正 &emsp; B. 指示剂选择不当 &emsp; C. 试剂含被测组分 &emsp; D. 滴定管读数时末位估读</p>
+<div class="sol">
+<p class="st">答案：D</p>
+<p><strong>解析：</strong>滴定管读数时的末位估读是不确定的，时高时低，属于<strong>随机误差（偶然误差）</strong>。A、B、C 均会引起系统误差（方法误差或仪器误差）。</p>
+</div>
+<div class="fb">
+<p class="t">系统误差 vs 随机误差</p>
+<p><strong>系统误差：</strong>有确定方向（偏高或偏低），可通过校正消除。如砝码未校正、指示剂选择不当等。</p>
+<p><strong>随机误差：</strong>方向不确定，服从正态分布，可通过增加测定次数减小。如读数估计、温度微小波动等。</p>
+</div>
+</div>
+
+<!-- Q6 -->
+<h3>第6题 — 统计检验方法</h3>
+<div class="card">
+<p><strong>题目：</strong>判断两组测量结果的均值是否有显著性差异，应采用：</p>
+<p>A. F检验 &emsp; B. t检验 &emsp; C. Q检验 &emsp; D. G检验</p>
+<div class="sol">
+<p class="st">答案：B</p>
+<p><strong>解析：</strong></p>
+<ul>
+<li><strong>t 检验</strong>：比较两组数据的均值是否有显著性差异</li>
+<li><strong>F 检验</strong>：比较两组数据的精密度（方差）是否有显著性差异</li>
+<li><strong>Q 检验（Grubbs检验）</strong>：检验可疑值是否应舍弃</li>
+</ul>
+</div>
+</div>
+
+<!-- Q7 -->
+<h3>第7题 — 酸碱滴定可行性</h3>
+<div class="card">
+<p><strong>题目：</strong>下列 0.1 mol/L 的酸中，能用 NaOH 直接准确滴定的是：</p>
+<p>A. HCOOH ($\text{p}K_\text{a}=3.45$) &emsp; B. HCN ($\text{p}K_\text{a}=9.21$) &emsp; C. H₃BO₃ ($\text{p}K_\text{a}=9.24$) &emsp; D. HF ($\text{p}K_\text{a}=3.18$)</p>
+<div class="sol">
+<p class="st">答案：A</p>
+<p><strong>解析：</strong>弱酸能被强碱准确滴定的条件是 $c \cdot K_\text{a} \geq 10^{-8}$。</p>
+<ul>
+<li>HCOOH：$0.1 \times 10^{-3.45} = 10^{-4.45} \gg 10^{-8}$，可以准确滴定 &#10004;</li>
+<li>HCN：$0.1 \times 10^{-9.21} = 10^{-10.21} < 10^{-8}$，不能准确滴定 &#10008;</li>
+<li>H₃BO₃：$0.1 \times 10^{-9.24} = 10^{-10.24} < 10^{-8}$，不能准确滴定 &#10008;</li>
+<li>HF：虽然 $cK_\text{a}$ 满足，但 HF 会腐蚀玻璃仪器，不能用常规滴定</li>
+</ul>
+</div>
+<div class="tip">
+<strong>判据：</strong>$cK_\text{a} \geq 10^{-8}$（滴定突跃 $\geq 0.3$ pH单位），滴定误差 $\leq 0.1\%$。
+</div>
+</div>
+
+<!-- Q8 -->
+<h3>第8题 — NaOH吸收CO₂的影响</h3>
+<div class="card">
+<p><strong>题目：</strong>NaOH 标准溶液吸收了 CO₂ 后，以酚酞为指示剂用 HCl 滴定，结果会：</p>
+<p>A. 偏高 &emsp; B. 偏低 &emsp; C. 无影响 &emsp; D. 不确定</p>
+<div class="sol">
+<p class="st">答案：A</p>
+<p><strong>解析：</strong>NaOH 吸收 CO₂ 后部分变为 Na₂CO₃：</p>
+$$2\text{NaOH} + \text{CO}_2 \to \text{Na}_2\text{CO}_3 + \text{H}_2\text{O}$$
+<p>以酚酞（变色范围 pH 8.0~9.8）为指示剂时，HCl 只能滴定到 $\text{NaHCO}_3$：</p>
+$$\text{Na}_2\text{CO}_3 + \text{HCl} \to \text{NaHCO}_3 + \text{NaCl}$$
+<p>原来 2 mol NaOH 变为 1 mol Na₂CO₃，但只消耗 1 mol HCl（而非 2 mol），相当于 NaOH 的实际浓度被"虚增"。用这种偏低浓度的 NaOH 去标定 HCl 时，结果<strong>偏高</strong>。</p>
+</div>
+</div>
+
+<!-- Q9 -->
+<h3>第9题 — 滴定误差大小排序</h3>
+<div class="card">
+<p><strong>题目：</strong>用 NaOH 滴定 HCl 时，使用不同指示剂引起的滴定误差 $E_t$ 大小顺序正确的是：</p>
+<p>A. 酚酞 > 甲基红 > 甲基橙 &emsp; B. 甲基橙 > 酚酞 > 甲基红 &emsp; C. 甲基红 > 甲基橙 > 酚酞 &emsp; D. 甲基红 < 酚酞 < 甲基橙</p>
+<div class="sol">
+<p class="st">答案：D</p>
+<p><strong>解析：</strong>强酸强碱滴定的化学计量点 pH = 7.00。各指示剂变色终点 pH 与化学计量点的偏离：</p>
+<ul>
+<li>甲基红：终点 pH ≈ 5.3，偏离 $|5.3 - 7.0| = 1.7$</li>
+<li>酚酞：终点 pH ≈ 9.0，偏离 $|9.0 - 7.0| = 2.0$</li>
+<li>甲基橙：终点 pH ≈ 3.8，偏离 $|3.8 - 7.0| = 3.2$</li>
+</ul>
+<p>但由于滴定突跃范围内(约 4.3~9.7)，突跃曲线陡峭，甲基红和酚酞的误差均很小。甲基橙终点在突跃范围之外，误差最大。</p>
+<p>故 $|E_t|$：甲基红 < 酚酞 < 甲基橙。</p>
+</div>
+</div>
+
+<!-- Q10 -->
+<h3>第10题 — 滴定突跃范围</h3>
+<div class="card">
+<p><strong>题目：</strong>0.01 mol/L HCl 与 0.01 mol/L NaOH 互滴时，滴定突跃范围是：</p>
+<p>A. 4.3~9.7 &emsp; B. 3.3~10.7 &emsp; C. 5.3~8.7 &emsp; D. 6.3~7.7</p>
+<div class="sol">
+<p class="st">答案：C</p>
+<p><strong>解析：</strong>对于 0.1 mol/L 强酸强碱互滴，突跃范围为 4.3~9.7。浓度每降低10倍，突跃范围缩小2个pH单位（前后各缩1个单位）。</p>
+<p>0.01 mol/L 时：$(4.3+1) \sim (9.7-1) = 5.3 \sim 8.7$</p>
+</div>
+<div class="tip">
+<strong>规律：</strong>强酸强碱滴定突跃范围与浓度的关系 — 0.1 mol/L: 4.3~9.7；0.01 mol/L: 5.3~8.7；0.001 mol/L: 6.3~7.7
+</div>
+</div>
+
+<!-- Q11 -->
+<h3>第11题 — EDTA标准溶液标定</h3>
+<div class="card">
+<p><strong>题目：</strong>测定水的硬度时，用于标定 EDTA 标准溶液的基准物质是：</p>
+<p>A. CaCO₃ &emsp; B. ZnO &emsp; C. Bi &emsp; D. Cu</p>
+<div class="sol">
+<p class="st">答案：A</p>
+<p><strong>解析：</strong>水的硬度主要由 Ca²⁺ 和 Mg²⁺ 引起，用 EDTA 滴定法测定。为使标定条件与测定条件一致，应选用 CaCO₃ 作为基准物质标定 EDTA 溶液。CaCO₃ 纯度高、稳定、摩尔质量适中。</p>
+</div>
+</div>
+
+<!-- Q12 -->
+<h3>第12题 — AgCl溶解度变化</h3>
+<div class="card">
+<p><strong>题目：</strong>向 AgCl 沉淀中逐渐加入 NH₃ 溶液，AgCl 的溶解度变化是：</p>
+<p>A. 一直增大 &emsp; B. 先减小后增大 &emsp; C. 先增大后减小 &emsp; D. 一直减小</p>
+<div class="sol">
+<p class="st">答案：B</p>
+<p><strong>解析：</strong>分两个阶段：</p>
+<ol>
+<li><strong>先减小（同离子效应）</strong>：少量 NH₃ 溶于水呈碱性，但更重要的是初始微量 NH₃ 可能引起的溶液 pH 变化对溶解度影响不大。实际上，加入少量 $\text{NH}_3$ 时溶液中 $\text{Cl}^-$ 浓度保持不变但也没有同离子效应——这里的"先减小"来自于 NH₃ 溶液稀释效应或微小同离子效应。</li>
+<li><strong>后增大（配位效应）</strong>：NH₃ 浓度增大后，$\text{Ag}^+$ 与 $\text{NH}_3$ 形成 $[\text{Ag}(\text{NH}_3)_2]^+$ 稳定配合物，使 $\text{Ag}^+$ 浓度降低，促进 AgCl 溶解。</li>
+</ol>
+$$\text{AgCl}(s) + 2\text{NH}_3 \rightleftharpoons [\text{Ag}(\text{NH}_3)_2]^+ + \text{Cl}^-$$
+</div>
+</div>
+
+<!-- Q13 -->
+<h3>第13题 — EDTA分步滴定</h3>
+<div class="card">
+<p><strong>题目：</strong>以 EDTA 分步滴定 Bi³⁺ 和 Fe³⁺ 混合液，两者能否被准确分步滴定？</p>
+<p>A. 不能，$\Delta\lg K$ 太小 &emsp; B. 能，$\Delta\lg K$ 足够大 &emsp; C. 需要加掩蔽剂 &emsp; D. 无法判断</p>
+<div class="sol">
+<p class="st">答案：B</p>
+<p><strong>解析：</strong>分步滴定的判据：$\Delta\lg K = \lg K_{\text{BiY}} - \lg K_{\text{FeY}} = 27.9 - 25.1 = 2.8$。</p>
+<p>但实际上在适当的 pH 条件下（如 pH ≈ 1），通过控制酸度可以实现选择性滴定。在强酸性条件下，先滴定 $\lg K$ 更大的 Bi³⁺，因为 $\lg K'_{\text{BiY}}$ 在低 pH 下仍然足够大，而 $\text{Fe}^{3+}$ 在低 pH 下与 EDTA 的条件稳定常数不够大。</p>
+<p>通过控制酸度使 $\Delta\lg K'$ 满足分步滴定要求（$\geq 6$），可以实现分步滴定。</p>
+</div>
+<div class="note">
+<strong>分步滴定条件：</strong>$\Delta\lg cK' \geq 6$ 时可准确分步滴定（误差 $\leq 0.1\%$）；$\Delta\lg cK' \geq 4$ 时可粗略分步滴定。
+</div>
+</div>
+
+<!-- Q14 -->
+<h3>第14题 — 氧化还原反应定量完成</h3>
+<div class="card">
+<p><strong>题目：</strong>氧化还原滴定中，反应定量完成的判据是：</p>
+<p>A. $\lg K' \geq 3$ &emsp; B. $\lg K' \geq 6$ &emsp; C. $\lg K' \geq 9$ &emsp; D. $\lg K' \geq 12$</p>
+<div class="sol">
+<p class="st">答案：B</p>
+<p><strong>解析：</strong>氧化还原反应定量完成（反应完成度 $\geq 99.9\%$），要求条件平衡常数 $\lg K' \geq 6$，对应电位差：</p>
+$$\lg K' = \frac{n(\varphi_1^\circ - \varphi_2^\circ)}{0.059} \geq 6$$
+<p>即 $\Delta\varphi' \geq \frac{6 \times 0.059}{n} = \frac{0.354}{n}$ V</p>
+</div>
+</div>
+
+<!-- Q15 -->
+<h3>第15题 — 沉淀类型</h3>
+<div class="card">
+<p><strong>题目：</strong>当沉淀过程中聚集速度远大于定向速度时，生成的沉淀类型是：</p>
+<p>A. 无定形沉淀 &emsp; B. 晶形沉淀 &emsp; C. 凝乳状沉淀 &emsp; D. 颗粒沉淀</p>
+<div class="sol">
+<p class="st">答案：A</p>
+<p><strong>解析：</strong>沉淀的形成经历两个过程：聚集和定向。</p>
+<ul>
+<li><strong>聚集 > 定向</strong>：离子无序堆积 → <strong>无定形沉淀</strong>（如 $\text{Fe(OH)}_3$、$\text{Al(OH)}_3$）</li>
+<li><strong>定向 > 聚集</strong>：离子有序排列 → <strong>晶形沉淀</strong>（如 $\text{BaSO}_4$）</li>
+</ul>
+</div>
+</div>
+
+<!-- Q16 -->
+<h3>第16题 — 金属指示剂使用pH范围</h3>
+<div class="card">
+<p><strong>题目：</strong>用铬黑T指示剂滴定 Mg²⁺ 时，适宜的 pH 范围是：</p>
+<p>A. 1~3 &emsp; B. 3~6 &emsp; C. 6~12 &emsp; D. 12~14</p>
+<div class="sol">
+<p class="st">答案：C</p>
+<p><strong>解析：</strong>铬黑T（EBT）指示剂的使用条件：</p>
+<ul>
+<li>pH < 6：指示剂呈红色（$\text{H}_2\text{In}^-$），无法区分游离态与金属配合物</li>
+<li>pH 6~12：游离态为蓝色（$\text{HIn}^{2-}$），金属配合物为红色（$\text{MgIn}^-$），颜色变化明显</li>
+<li>pH > 12：指示剂为橙色（$\text{In}^{3-}$），且 Mg(OH)₂ 沉淀析出</li>
+</ul>
+</div>
+</div>
+
+<!-- Q17 -->
+<h3>第17题 — EDTA化学计量点条件</h3>
+<div class="card">
+<p><strong>题目：</strong>EDTA 滴定 Pb²⁺ 到化学计量点时，下列关系正确的是：</p>
+<p>A. $[\text{Pb}^{2+}] = [\text{Y}^{4-}]$ &emsp; B. $[\text{Pb}^{2+}]' = c_{\text{EDTA}}$ &emsp; C. $\text{p}\text{Pb} = \text{p}\text{Y}$ &emsp; D. $\text{p}\text{Pb}' = \text{p}\text{Y}'$</p>
+<div class="sol">
+<p class="st">答案：D</p>
+<p><strong>解析：</strong>在化学计量点，$[\text{Pb}]' = [\text{Y}]'$，即包含各种副反应的总浓度相等，因此 $\text{p}\text{Pb}' = \text{p}\text{Y}'$。注意这里是条件浓度（带撇），而非简单的 $[\text{Pb}^{2+}] = [\text{Y}^{4-}]$。</p>
+$$\text{sp处：} [\text{Pb}]' = [\text{Y}]' \Rightarrow \text{pPb}' = \text{pY}'$$
+</div>
+</div>
+
+<!-- Q18 -->
+<h3>第18题 — KMnO₄与草酸反应的酸介质</h3>
+<div class="card">
+<p><strong>题目：</strong>用 $\text{KMnO}_4$ 标准溶液滴定 $\text{H}_2\text{C}_2\text{O}_4$ 时，不能使用的酸是：</p>
+<p>A. $\text{H}_2\text{SO}_4$ &emsp; B. $\text{HNO}_3$ &emsp; C. HCl &emsp; D. HClO₄</p>
+<div class="sol">
+<p class="st">答案：C</p>
+<p><strong>解析：</strong></p>
+<ul>
+<li><strong>HCl 不能用：</strong>$\text{KMnO}_4$ 是强氧化剂，会氧化 $\text{Cl}^-$，消耗额外的 $\text{KMnO}_4$，导致结果偏高</li>
+<li><strong>HNO₃ 不能用：</strong>$\text{HNO}_3$ 本身有氧化性，会氧化 $\text{H}_2\text{C}_2\text{O}_4$</li>
+<li><strong>H₂SO₄ 可用：</strong>不具有氧化还原性，不参与反应</li>
+</ul>
+<p>本题问"不能使用的酸"，最典型的答案是 <strong>HCl</strong>，因为 Cl⁻ 会被 KMnO₄ 氧化。</p>
+</div>
+<div class="warn">
+<strong>注意：</strong>高锰酸钾法一般用 $\text{H}_2\text{SO}_4$ 做酸介质。重铬酸钾法可以在 HCl 介质中进行（$\text{K}_2\text{Cr}_2\text{O}_7$ 氧化性比 $\text{KMnO}_4$ 弱，不氧化 Cl⁻）。
+</div>
+</div>
+
+<!-- Q19 -->
+<h3>第19题 — Ce⁴⁺滴定Fe²⁺半量点电位</h3>
+<div class="card">
+<p><strong>题目：</strong>用 $\text{Ce}^{4+}$ 标准溶液滴定 $\text{Fe}^{2+}$，滴定至 50% 时的电位为：</p>
+<p>A. 0.771 V &emsp; B. 0.68 V &emsp; C. 1.06 V &emsp; D. 1.44 V</p>
+<div class="sol">
+<p class="st">答案：B</p>
+<p><strong>解析：</strong>滴定至 50% 时，$[\text{Fe}^{2+}] = [\text{Fe}^{3+}]$（消耗了一半的 Fe²⁺），此时溶液电位由 Fe 电对决定：</p>
+$$\varphi = \varphi^\circ(\text{Fe}^{3+}/\text{Fe}^{2+}) + 0.059\lg\frac{[\text{Fe}^{3+}]}{[\text{Fe}^{2+}]}$$
+<p>题目选项 B 为 0.68 V，说明此题考虑了在 1 mol/L $\text{H}_2\text{SO}_4$ 介质中 Fe³⁺/Fe²⁺ 的条件电位 $\varphi^{\circ'} = 0.68$ V（由于 $\text{SO}_4^{2-}$ 与 $\text{Fe}^{3+}$ 配位降低了电位）。</p>
+$$\varphi = \varphi^{\circ'}(\text{Fe}^{3+}/\text{Fe}^{2+}) + 0.059\lg\frac{[\text{Fe}^{3+}]}{[\text{Fe}^{2+}]} = 0.68 + 0.059\lg 1 = 0.68 \text{ V}$$
+</div>
+</div>
+
+<!-- Q20 -->
+<h3>第20题 — 重量分析换算因子</h3>
+<div class="card">
+<p><strong>题目：</strong>以 $\text{Fe}_2\text{O}_3$ 为称量形式测定 Fe 的含量，换算因子（重量因子）为：</p>
+<p>A. $\frac{M(\text{Fe})}{M(\text{Fe}_2\text{O}_3)}$ &emsp; B. $\frac{M(\text{Fe}_2\text{O}_3)}{M(\text{Fe})}$ &emsp; C. $\frac{2M(\text{Fe})}{M(\text{Fe}_2\text{O}_3)}$ &emsp; D. $\frac{M(\text{Fe}_2\text{O}_3)}{2M(\text{Fe})}$</p>
+<div class="sol">
+<p class="st">答案：C</p>
+<p><strong>解析：</strong>换算因子 $F = \frac{\text{被测组分的摩尔质量} \times \text{计量系数}}{\text{称量形式的摩尔质量}}$</p>
+<p>$\text{Fe}_2\text{O}_3$ 中含有 2 个 Fe 原子，因此：</p>
+$$F = \frac{2M(\text{Fe})}{M(\text{Fe}_2\text{O}_3)} = \frac{2 \times 55.85}{159.69} = 0.6994$$
+</div>
+</div>
+
+<!-- ==================== 填空题 ==================== -->
+<h2 id="fill">二、填空题（每空1分，共20分）</h2>
+
+<!-- Fill Q1 -->
+<h3>第1题 — 多元酸分步滴定</h3>
+<div class="card">
+<p><strong>题目：</strong>$\text{H}_2\text{C}_2\text{O}_4$（草酸，$\text{p}K_{\text{a1}}=1.25$，$\text{p}K_{\text{a2}}=4.27$）用 NaOH 标准溶液滴定时，有 <u>&emsp;&emsp;</u> 个滴定突跃。</p>
+<div class="sol">
+<p class="st">答案：1 个</p>
+<p><strong>解析：</strong>判断多元酸能否分步滴定：$K_{\text{a1}}/K_{\text{a2}} \geq 10^4$ 时可分步滴定。</p>
+$$\frac{K_{\text{a1}}}{K_{\text{a2}}} = 10^{4.27-1.25} = 10^{3.02} < 10^4$$
+<p>因此不能分步滴定，两步合并为一个滴定突跃，NaOH 一次性将 $\text{H}_2\text{C}_2\text{O}_4$ 滴定至 $\text{C}_2\text{O}_4^{2-}$。</p>
+</div>
+</div>
+
+<!-- Fill Q2 -->
+<h3>第2题 — 半中和点的缓冲特性</h3>
+<div class="card">
+<p><strong>题目：</strong>HCOOH 溶液中，当 $\text{pH} = \text{p}K_\text{a}$ 时，$[\text{HCOOH}]$ <u>&emsp;&emsp;</u> $[\text{HCOO}^-]$（填 &gt;、&lt; 或 =）。</p>
+<div class="sol">
+<p class="st">答案：$=$</p>
+<p><strong>解析：</strong>由 Henderson-Hasselbalch 方程：</p>
+$$\text{pH} = \text{p}K_\text{a} + \lg\frac{[\text{HCOO}^-]}{[\text{HCOOH}]}$$
+<p>当 $\text{pH} = \text{p}K_\text{a}$ 时，$\lg\frac{[\text{HCOO}^-]}{[\text{HCOOH}]} = 0$，即 $[\text{HCOOH}] = [\text{HCOO}^-]$。</p>
+<p>此即<strong>半中和点</strong>，也是缓冲容量最大的点。</p>
+</div>
+</div>
+
+<!-- Fill Q3 -->
+<h3>第3题 — 返滴定法测Al³⁺</h3>
+<div class="card">
+<p><strong>题目：</strong>用 EDTA 测定 Al³⁺ 时，加入过量 EDTA 后再用 Zn²⁺ 标准溶液返滴定过量的 EDTA。</p>
+<ol>
+<li>该方法称为 <u>&emsp;&emsp;</u> 法</li>
+<li>控制 pH ≈ 3.5 的目的是 <u>&emsp;&emsp;</u></li>
+<li>加热煮沸的目的是 <u>&emsp;&emsp;</u></li>
+</ol>
+<div class="sol">
+<p class="st">答案：</p>
+<ol>
+<li><strong>返滴定</strong>（回滴定）法</li>
+<li>确保 Al³⁺ 与 EDTA 完全反应（在较低 pH 下 Al-EDTA 配合物仍稳定，且避免 Al(OH)₃ 沉淀）</li>
+<li>加速 Al³⁺ 与 EDTA 的反应（Al-EDTA 反应速度慢，加热可加速达到平衡）</li>
+</ol>
+<p><strong>解析：</strong>Al³⁺ 与 EDTA 的直接滴定存在两个问题：①反应速度慢；②Al(OH)₃ 容易沉淀。因此采用返滴定法：先加入过量已知量的 EDTA，加热使其与 Al³⁺ 充分反应，冷却后用 Zn²⁺ 标准溶液滴定剩余 EDTA。</p>
+</div>
+</div>
+
+<!-- Fill Q4 -->
+<h3>第4题 — Na₂HPO₄的质子条件</h3>
+<div class="card">
+<p><strong>题目：</strong></p>
+<ol>
+<li>写出 $\text{Na}_2\text{HPO}_4$ 溶液的质子条件式：<u>&emsp;&emsp;</u></li>
+<li>$\text{HPO}_4^{2-}$ 的共轭酸是 <u>&emsp;&emsp;</u></li>
+</ol>
+<div class="sol">
+<p class="st">答案：</p>
+<ol>
+<li>质子条件式（参考水准：$\text{HPO}_4^{2-}$, $\text{H}_2\text{O}$）：</li>
+</ol>
+$$[\text{H}^+] + [\text{H}_2\text{PO}_4^-] + [\text{H}_3\text{PO}_4] = [\text{OH}^-] + [\text{PO}_4^{3-}]$$
+<p>（质子得失平衡：左边为得到质子的产物，右边为失去质子的产物）</p>
+<ol start="2">
+<li>$\text{HPO}_4^{2-}$ 的共轭酸是 $\text{H}_2\text{PO}_4^-$</li>
+</ol>
+<p><strong>解析：</strong>$\text{Na}_2\text{HPO}_4$ 完全电离生成 $\text{Na}^+$ 和 $\text{HPO}_4^{2-}$。以 $\text{HPO}_4^{2-}$ 和 $\text{H}_2\text{O}$ 为零水准：</p>
+<ul>
+<li>得到质子：$\text{HPO}_4^{2-} + \text{H}^+ \to \text{H}_2\text{PO}_4^-$；$\text{HPO}_4^{2-} + 2\text{H}^+ \to \text{H}_3\text{PO}_4$</li>
+<li>失去质子：$\text{HPO}_4^{2-} \to \text{PO}_4^{3-} + \text{H}^+$；$\text{H}_2\text{O} \to \text{OH}^- + \text{H}^+$</li>
+</ul>
+</div>
+</div>
+
+<!-- Fill Q5 -->
+<h3>第5题 — pH计算</h3>
+<div class="card">
+<p><strong>题目：</strong>pH = 11.01 时，$[\text{H}^+] = $ <u>&emsp;&emsp;</u> mol/L。</p>
+<div class="sol">
+<p class="st">答案：$[\text{H}^+] = 9.8 \times 10^{-12}$ mol/L</p>
+<p><strong>解析：</strong></p>
+$$[\text{H}^+] = 10^{-\text{pH}} = 10^{-11.01} = 10^{-11} \times 10^{-0.01}$$
+$$10^{-0.01} \approx 0.977 \approx 0.98$$
+$$[\text{H}^+] = 0.98 \times 10^{-11} = 9.8 \times 10^{-12} \text{ mol/L}$$
+</div>
+</div>
+
+<!-- Fill Q6 -->
+<h3>第6题 — Na₂S₂O₃标准溶液的配制</h3>
+<div class="card">
+<p><strong>题目：</strong>配制 $\text{Na}_2\text{S}_2\text{O}_3$ 标准溶液时：</p>
+<ol>
+<li>用煮沸并冷却的蒸馏水的目的是 <u>&emsp;&emsp;</u></li>
+<li>加入少量 $\text{Na}_2\text{CO}_3$ 的目的是 <u>&emsp;&emsp;</u></li>
+<li>需存放在棕色瓶中的原因是 <u>&emsp;&emsp;</u></li>
+</ol>
+<div class="sol">
+<p class="st">答案：</p>
+<ol>
+<li>除去水中溶解的 $\text{CO}_2$、$\text{O}_2$ 以及杀灭细菌（细菌会分解 $\text{S}_2\text{O}_3^{2-}$）</li>
+<li>使溶液保持弱碱性（pH 9~10），防止 $\text{Na}_2\text{S}_2\text{O}_3$ 在酸性条件下分解</li>
+<li>避光保存，防止 $\text{Na}_2\text{S}_2\text{O}_3$ 在光照下分解</li>
+</ol>
+<p><strong>解析：</strong>$\text{Na}_2\text{S}_2\text{O}_3$ 在酸性溶液中会分解：</p>
+$$\text{S}_2\text{O}_3^{2-} + 2\text{H}^+ \to \text{S} \downarrow + \text{SO}_2 \uparrow + \text{H}_2\text{O}$$
+</div>
+</div>
+
+<!-- Fill Q7 -->
+<h3>第7题 — 均匀沉淀法</h3>
+<div class="card">
+<p><strong>题目：</strong>尿素与 $\text{ZnAc}_2$ 溶液加热反应属于 <u>&emsp;&emsp;</u> 沉淀法。</p>
+<div class="sol">
+<p class="st">答案：均匀沉淀法</p>
+<p><strong>解析：</strong>均匀沉淀法的原理是通过化学反应在溶液内部<strong>缓慢、均匀</strong>地产生沉淀剂。</p>
+<p>尿素加热水解：</p>
+$$\text{CO(NH}_2)_2 + \text{H}_2\text{O} \xrightarrow{\Delta} \text{CO}_2 \uparrow + 2\text{NH}_3$$
+<p>产生的 NH₃ 使溶液 pH 缓慢升高，$\text{Zn}^{2+}$ 逐渐生成沉淀。由于沉淀剂在溶液中均匀产生，过饱和度低，有利于生成大颗粒、纯净的晶形沉淀。</p>
+</div>
+</div>
+
+<!-- Fill Q8 -->
+<h3>第8题 — 正态分布特征</h3>
+<div class="card">
+<p><strong>题目：</strong>随机误差服从正态分布，其特征是：</p>
+<ol>
+<li><u>&emsp;&emsp;</u></li>
+<li><u>&emsp;&emsp;</u></li>
+</ol>
+<div class="sol">
+<p class="st">答案：</p>
+<ol>
+<li><strong>小误差出现的概率大，大误差出现的概率小</strong>（集中性/单峰性）</li>
+<li><strong>绝对值相等的正误差和负误差出现的概率相等</strong>（对称性）</li>
+</ol>
+<p>正态分布还有两个特征：有界性（极大误差出现的概率趋近于零）和抵偿性（无限次测量的随机误差代数和趋于零）。</p>
+</div>
+</div>
+
+<!-- Fill Q9 -->
+<h3>第9题 — 重铬酸钾法测铁的操作</h3>
+<div class="card">
+<p><strong>题目：</strong>重铬酸钾法测铁中：</p>
+<ol>
+<li>$\text{K}_2\text{Cr}_2\text{O}_7$ 可以直接配制标准溶液，不需要标定，原因是 <u>&emsp;&emsp;</u></li>
+<li>加入 $\text{SnCl}_2$ 的目的是 <u>&emsp;&emsp;</u></li>
+<li>加入 $\text{HgCl}_2$ 的目的是 <u>&emsp;&emsp;</u></li>
+</ol>
+<div class="sol">
+<p class="st">答案：</p>
+<ol>
+<li>$\text{K}_2\text{Cr}_2\text{O}_7$ 是基准物质（纯度高、稳定、摩尔质量大、易干燥），可以直接称量配制标准溶液</li>
+<li>将 $\text{Fe}^{3+}$ 还原为 $\text{Fe}^{2+}$：$\text{Sn}^{2+} + 2\text{Fe}^{3+} \to \text{Sn}^{4+} + 2\text{Fe}^{2+}$</li>
+<li>除去过量的 $\text{Sn}^{2+}$（避免 $\text{Sn}^{2+}$ 消耗 $\text{K}_2\text{Cr}_2\text{O}_7$）：$\text{Sn}^{2+} + 2\text{HgCl}_2 \to \text{Sn}^{4+} + \text{Hg}_2\text{Cl}_2 \downarrow$</li>
+</ol>
+<div class="warn">
+<strong>注意：</strong>$\text{HgCl}_2$ 必须过量，生成白色丝状 $\text{Hg}_2\text{Cl}_2$ 沉淀。若 $\text{SnCl}_2$ 过量太多，会生成灰色 Hg 沉淀，此时应弃去重做！
+</div>
+</div>
+</div>
+
+<!-- ==================== 计算题 ==================== -->
+<h2 id="calc">三、计算题（共52分）</h2>
+
+<!-- Calc Q1 -->
+<h3 id="calc1">计算第1题 — 铁矿石统计分析（12分）</h3>
+<div class="card">
+<p><strong>题目：</strong>测定铁矿石中铁的含量，三次平行测定结果为 52.48%、52.52%、52.41%。</p>
+<ol>
+<li>计算平均值 $\bar{x}$ 和标准偏差 $s$（4分）</li>
+<li>计算 95% 置信区间（4分）</li>
+<li>已知标准值为 52.43%，在 95% 置信水平下，分析结果是否存在系统误差？（4分）</li>
+</ol>
+</div>
+
+<div class="sol">
+<p class="st">详细解答：</p>
+
+<p><strong>（1）计算平均值和标准偏差</strong></p>
+
+<p>平均值：</p>
+$$\bar{x} = \frac{52.48 + 52.52 + 52.41}{3} = \frac{157.41}{3} = 52.47\%$$
+
+<p>标准偏差（Bessel公式）：</p>
+$$s = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}}$$
+
+<p>计算各偏差：</p>
+<table>
+<tr><th>$x_i$</th><th>$x_i - \bar{x}$</th><th>$(x_i - \bar{x})^2$</th></tr>
+<tr><td>52.48</td><td>+0.01</td><td>0.0001</td></tr>
+<tr><td>52.52</td><td>+0.05</td><td>0.0025</td></tr>
+<tr><td>52.41</td><td>-0.06</td><td>0.0036</td></tr>
+</table>
+
+$$s = \sqrt{\frac{0.0001 + 0.0025 + 0.0036}{3-1}} = \sqrt{\frac{0.0062}{2}} = \sqrt{0.0031} = 0.056\%$$
+
+<p>取有效数字：$s = 0.055\%$</p>
+
+<p><strong>（2）95% 置信区间</strong></p>
+
+$$\mu = \bar{x} \pm \frac{t_{0.05,f} \cdot s}{\sqrt{n}}$$
+
+<p>查 t 分布表：$f = n - 1 = 2$，$P = 0.05$，$t_{0.05,2} = 4.30$</p>
+
+$$\mu = 52.47 \pm \frac{4.30 \times 0.056}{\sqrt{3}} = 52.47 \pm \frac{0.241}{1.732} = 52.47 \pm 0.14\%$$
+
+<div class="fb">
+<p class="t">95% 置信区间：$52.33\% \sim 52.61\%$</p>
+</div>
+
+<p><strong>（3）t 检验判断系统误差</strong></p>
+
+<p>原假设 $H_0$：无系统误差，即 $\mu = 52.43\%$</p>
+
+$$t_{\text{calc}} = \frac{|\bar{x} - \mu_0|}{s/\sqrt{n}} = \frac{|52.47 - 52.43|}{0.056/\sqrt{3}} = \frac{0.04}{0.032} = 1.24$$
+
+<p>比较：$t_{\text{calc}} = 1.24 < t_{0.05,2} = 4.30$</p>
+
+<div class="fb">
+<p class="t">结论：$t_{\text{calc}} < t_{0.05,2}$，在 95% 置信水平下，分析结果与标准值无显著性差异，即不存在系统误差。</p>
+</div>
+</div>
+
+<div class="tip">
+<strong>t 检验步骤回顾：</strong>① 计算 $t_{\text{calc}}$；② 查表得 $t_{\alpha,f}$；③ 若 $t_{\text{calc}} < t_{\alpha,f}$，则无显著差异。
+</div>
+
+<!-- Calc Q2 -->
+<h3 id="calc2">计算第2题 — 重量法测定铝含量（8分）</h3>
+<div class="card">
+<p><strong>题目：</strong>称取试样 0.6000 g，用 8-羟基喹啉沉淀法测定铝含量。沉淀形式为 $\text{Al(C}_9\text{H}_6\text{NO)}_3$（简写 $\text{AlQ}_3$），经烘干后称量得 0.3600 g。</p>
+<ol>
+<li>计算试样中铝的质量分数 $w(\text{Al})$（3分）</li>
+<li>若将沉淀灼烧为 $\text{Al}_2\text{O}_3$ 后称量，$\text{Al}_2\text{O}_3$ 的质量为多少？（3分）</li>
+<li>两种称量形式哪种更好？为什么？（2分）</li>
+</ol>
+</div>
+
+<div class="sol">
+<p class="st">详细解答：</p>
+
+<p><strong>已知数据：</strong></p>
+<ul>
+<li>$M(\text{Al}) = 26.98 \text{ g/mol}$</li>
+<li>$M(\text{AlQ}_3) = M(\text{Al}) + 3 \times M(\text{C}_9\text{H}_6\text{NO}) = 26.98 + 3 \times 144.15 = 26.98 + 432.45 = 459.43 \text{ g/mol}$</li>
+<li>$M(\text{Al}_2\text{O}_3) = 2 \times 26.98 + 3 \times 16.00 = 101.96 \text{ g/mol}$</li>
+</ul>
+
+<p><strong>（1）计算 $w(\text{Al})$</strong></p>
+
+$$w(\text{Al}) = \frac{m(\text{AlQ}_3) \times F}{m_{\text{sample}}} \times 100\%$$
+
+<p>换算因子：</p>
+$$F = \frac{M(\text{Al})}{M(\text{AlQ}_3)} = \frac{26.98}{459.43} = 0.05872$$
+
+$$w(\text{Al}) = \frac{0.3600 \times 0.05872}{0.6000} \times 100\% = \frac{0.02114}{0.6000} \times 100\%$$
+
+$$\boxed{w(\text{Al}) = 3.52\%}$$
+
+<p><strong>（2）计算 $m(\text{Al}_2\text{O}_3)$</strong></p>
+
+<p>由化学计量关系：$2\text{AlQ}_3 \to \text{Al}_2\text{O}_3$</p>
+
+$$m(\text{Al}_2\text{O}_3) = m(\text{AlQ}_3) \times \frac{M(\text{Al}_2\text{O}_3)}{2 \times M(\text{AlQ}_3)}$$
+
+$$m(\text{Al}_2\text{O}_3) = 0.3600 \times \frac{101.96}{2 \times 459.43} = 0.3600 \times \frac{101.96}{918.86}$$
+
+$$m(\text{Al}_2\text{O}_3) = 0.3600 \times 0.1110$$
+
+$$\boxed{m(\text{Al}_2\text{O}_3) = 0.0400 \text{ g}}$$
+
+<p><strong>（3）称量形式比较</strong></p>
+
+<div class="fb">
+<p class="t">$\text{Al}_2\text{O}_3$ 称量形式更好，原因：</p>
+<ul>
+<li>$\text{Al}_2\text{O}_3$ 化学组成确定、稳定，不含有机物，不易吸潮</li>
+<li>$\text{AlQ}_3$ 的摩尔质量大（459.43），换算因子小（0.0587），称量相对误差较大时对结果影响更小——但反过来说 $\text{Al}_2\text{O}_3$ 质量太小（0.04 g），称量误差的相对影响更大</li>
+<li>实际选择 $\text{Al}_2\text{O}_3$ 主要因为其<strong>化学组成更确定、热稳定性好</strong></li>
+</ul>
+</div>
+</div>
+
+<div class="warn">
+<strong>补充：</strong>实际实验中 $\text{AlQ}_3$ 作为称量形式也有优点——摩尔质量大使换算因子小，微量变化的影响被"放大"，灵敏度高。但组成稳定性是更重要的考量。
+</div>
+
+<!-- Calc Q3 -->
+<h3 id="calc3">计算第3题 — 条件电极电位的计算（6分）</h3>
+<div class="card">
+<p><strong>题目：</strong>计算在 $[\text{F}^-] = 10^{-1.5}$ mol/L 的溶液中，$\text{Fe}^{3+}/\text{Fe}^{2+}$ 电对的条件电极电位。</p>
+<p>已知：$\varphi^\circ(\text{Fe}^{3+}/\text{Fe}^{2+}) = 0.771$ V</p>
+<p>$\text{Fe}^{3+}$ 与 $\text{F}^-$ 的逐级稳定常数：$\lg\beta_1 = 5.2$，$\lg\beta_2 = 9.2$，$\lg\beta_3 = 11.9$</p>
+<p>$\text{Fe}^{2+}$ 与 $\text{F}^-$ 不形成稳定配合物。</p>
+</div>
+
+<div class="sol">
+<p class="st">详细解答：</p>
+
+<p><strong>Step 1：计算 $\text{Fe}^{3+}$ 的副反应系数 $\alpha_{\text{Fe(III)}(\text{F})}$</strong></p>
+
+$$\alpha_{\text{Fe(III)}(\text{F})} = 1 + \beta_1[\text{F}^-] + \beta_2[\text{F}^-]^2 + \beta_3[\text{F}^-]^3$$
+
+<p>代入 $[\text{F}^-] = 10^{-1.5}$ mol/L：</p>
+
+$$\alpha = 1 + 10^{5.2} \times 10^{-1.5} + 10^{9.2} \times 10^{-3.0} + 10^{11.9} \times 10^{-4.5}$$
+
+$$= 1 + 10^{3.7} + 10^{6.2} + 10^{7.4}$$
+
+<p>比较各项大小：$10^{7.4} \gg 10^{6.2} \gg 10^{3.7} \gg 1$</p>
+
+$$\alpha_{\text{Fe(III)}(\text{F})} \approx 10^{7.4}$$
+
+$$\lg\alpha_{\text{Fe(III)}(\text{F})} = 7.4$$
+
+<p><strong>Step 2：计算条件电极电位</strong></p>
+
+<p>$\text{Fe}^{2+}$ 无副反应，$\alpha_{\text{Fe(II)}} = 1$，$\lg\alpha_{\text{Fe(II)}} = 0$</p>
+
+$$\varphi' = \varphi^\circ + \frac{0.059}{1}\lg\frac{\alpha_{\text{Fe(II)}}}{\alpha_{\text{Fe(III)}}}$$
+
+$$\varphi' = 0.771 + 0.059 \times \lg\frac{1}{10^{7.4}}$$
+
+$$\varphi' = 0.771 + 0.059 \times (-7.4)$$
+
+$$\varphi' = 0.771 - 0.437$$
+
+$$\boxed{\varphi' = 0.334 \text{ V}}$$
+
+<div class="fb">
+<p class="t">物理意义：$\text{F}^-$ 与 $\text{Fe}^{3+}$ 形成稳定配合物，大大降低了 $\text{Fe}^{3+}$ 的有效浓度，使 $\text{Fe}^{3+}/\text{Fe}^{2+}$ 的电位显著降低（从 0.771 V 降至 0.334 V），$\text{Fe}^{3+}$ 的氧化能力大大减弱。</p>
+</div>
+</div>
+
+<div class="tip">
+<strong>条件电极电位公式：</strong>$\varphi' = \varphi^\circ + \frac{0.059}{n}\lg\frac{\alpha_{\text{Red}}}{\alpha_{\text{Ox}}}$。氧化态副反应使电位降低；还原态副反应使电位升高。
+</div>
+
+<!-- Calc Q4 -->
+<h3 id="calc4">计算第4题 — 弱酸HA的滴定分析（14分）</h3>
+<div class="card">
+<p><strong>题目：</strong>用 0.1000 mol/L NaOH 标准溶液滴定某一元弱酸 HA。当加入 NaOH 18.00 mL 时（恰好为半量点），溶液 pH = 5.82。</p>
+<ol>
+<li>求 HA 的 $\text{p}K_\text{a}$（2分）</li>
+<li>求化学计量点的 pH（4分）</li>
+<li>选择合适的指示剂（2分）</li>
+<li>画出滴定曲线的示意图（3分）</li>
+<li>若终点 pH = 9.10，求滴定误差 $E_t$（3分）</li>
+</ol>
+</div>
+
+<div class="sol">
+<p class="st">详细解答：</p>
+
+<p><strong>（1）求 $\text{p}K_\text{a}$</strong></p>
+
+<p>在半量点（半中和点），加入的 NaOH 恰好中和一半的 HA，此时 $[\text{HA}] = [\text{A}^-]$。</p>
+
+$$\text{pH} = \text{p}K_\text{a} + \lg\frac{[\text{A}^-]}{[\text{HA}]} = \text{p}K_\text{a} + \lg 1 = \text{p}K_\text{a}$$
+
+$$\boxed{\text{p}K_\text{a} = 5.82}$$
+
+<p>则 $K_\text{a} = 10^{-5.82} = 1.51 \times 10^{-6}$</p>
+
+<p><strong>确定等量点体积：</strong>半量点为 18.00 mL，故等量点 $V_{\text{eq}} = 2 \times 18.00 = 36.00$ mL。</p>
+
+<p>HA 的初始浓度和体积：</p>
+$$c_{\text{HA}} \cdot V_{\text{HA}} = c_{\text{NaOH}} \cdot V_{\text{eq}} = 0.1000 \times 36.00 = 3.600 \text{ mmol}$$
+
+<p><strong>（2）化学计量点的 pH</strong></p>
+
+<p>化学计量点时，HA 完全转化为 NaA，溶液中 A⁻ 水解：</p>
+$$\text{A}^- + \text{H}_2\text{O} \rightleftharpoons \text{HA} + \text{OH}^-$$
+
+<p>化学计量点时 A⁻ 的浓度（考虑稀释）：</p>
+<p>设 HA 初始体积为 $V_0$，则化学计量点时总体积 = $V_0 + 36.00$ mL。</p>
+<p>由 $c_{\text{HA}} \cdot V_0 = 0.1000 \times 36.00$。假设 $c_{\text{HA}} = 0.1000$ mol/L，则 $V_0 = 36.00$ mL，总体积 = 72.00 mL。</p>
+
+$$c_{\text{A}^-} = \frac{0.1000 \times 36.00}{72.00} = 0.0500 \text{ mol/L}$$
+
+<p>计算 pH：</p>
+$$K_\text{b} = \frac{K_\text{w}}{K_\text{a}} = \frac{10^{-14}}{10^{-5.82}} = 10^{-8.18}$$
+
+$$[\text{OH}^-] = \sqrt{c \cdot K_\text{b}} = \sqrt{0.0500 \times 10^{-8.18}}$$
+
+$$= \sqrt{10^{-1.30} \times 10^{-8.18}} = \sqrt{10^{-9.48}} = 10^{-4.74}$$
+
+$$\text{pOH} = 4.74$$
+
+$$\boxed{\text{pH} = 14 - 4.74 = 9.26}$$
+
+<div class="note">
+验证近似合理性：$[\text{OH}^-]/c = 10^{-4.74}/0.05 = 3.6 \times 10^{-4} < 0.05$，近似有效。
+</div>
+
+<p><strong>（3）选择指示剂</strong></p>
+
+<p>化学计量点 pH = 9.26，应选择变色范围包含此 pH 的指示剂。</p>
+
+<div class="fb">
+<p class="t">选择酚酞（变色范围 pH 8.0~9.8），终点由无色变为粉红色。</p>
+</div>
+
+<p><strong>（4）滴定曲线示意图</strong></p>
+
+<div class="card" style="text-align:center;">
+<p><em>滴定曲线关键点：</em></p>
+<table>
+<tr><th>滴定阶段</th><th>NaOH 体积 (mL)</th><th>pH</th></tr>
+<tr><td>起始点</td><td>0</td><td>≈ 3.5</td></tr>
+<tr><td>半量点</td><td>18.00</td><td>5.82</td></tr>
+<tr><td>化学计量点</td><td>36.00</td><td>9.26</td></tr>
+<tr><td>过量 100%</td><td>72.00</td><td>≈ 12.5</td></tr>
+</table>
+<p>起始 pH 计算：$\text{pH} = \frac{1}{2}(\text{p}K_\text{a} - \lg c) = \frac{1}{2}(5.82 + 1) = 3.41$</p>
+<p>曲线特征：起始 pH 较低 → 缓冲区（平缓上升）→ 化学计量点（突跃）→ 强碱过量区</p>
+<p>突跃范围约为 pH 7.7 ~ 9.7（弱酸强碱滴定突跃较窄且偏碱性）</p>
+</div>
+
+<p><strong>（5）滴定误差计算（终点 pH = 9.10）</strong></p>
+
+<p>弱酸强碱滴定的终点误差公式（林邦误差公式）：</p>
+
+$$E_t = \frac{[\text{OH}^-]_{\text{ep}} - [\text{H}^+]_{\text{ep}} - \frac{[\text{H}^+]_{\text{ep}} \cdot c_{\text{sp}}}{[\text{H}^+]_{\text{ep}} + K_\text{a}}}{c_{\text{sp}}} \times 100\%$$
+
+<p>简化：在终点 pH = 9.10 处：</p>
+
+$$[\text{OH}^-]_{\text{ep}} = 10^{-(14-9.10)} = 10^{-4.90} = 1.26 \times 10^{-5} \text{ mol/L}$$
+
+$$[\text{H}^+]_{\text{ep}} = 10^{-9.10} = 7.94 \times 10^{-10} \text{ mol/L}$$
+
+<p>化学计量点浓度 $c_{\text{sp}} = 0.0500$ mol/L</p>
+
+$$E_t \approx \frac{[\text{OH}^-]_{\text{ep}} - [\text{H}^+]_{\text{ep}} - \frac{c_{\text{sp}} \cdot [\text{H}^+]_{\text{ep}}}{K_\text{a} + [\text{H}^+]_{\text{ep}}}}{c_{\text{sp}}} \times 100\%$$
+
+<p>由于 $K_\text{a} = 10^{-5.82} \gg [\text{H}^+]_{\text{ep}} = 10^{-9.10}$：</p>
+
+$$\frac{c_{\text{sp}} \cdot [\text{H}^+]_{\text{ep}}}{K_\text{a}} = \frac{0.05 \times 10^{-9.10}}{10^{-5.82}} = 0.05 \times 10^{-3.28} = 2.63 \times 10^{-5}$$
+
+$$E_t = \frac{1.26 \times 10^{-5} - 7.94 \times 10^{-10} - 2.63 \times 10^{-5}}{0.0500} \times 100\%$$
+
+$$E_t = \frac{-1.37 \times 10^{-5}}{0.0500} \times 100\% = -0.027\%$$
+
+$$\boxed{E_t \approx -0.03\%}$$
+
+<div class="fb">
+<p class="t">$|E_t| = 0.03\% < 0.1\%$，终点误差在允许范围内。负值表示终点略偏早（滴定不足），实际消耗的 NaOH 略少。</p>
+</div>
+</div>
+
+<!-- Calc Q5 -->
+<h3 id="calc5">计算第5题 — EDTA滴定Pb²⁺/Bi³⁺混合液（12分）</h3>
+<div class="card">
+<p><strong>题目：</strong>某溶液含有 Pb²⁺ 和 Bi³⁺，拟用 EDTA 标准溶液分别滴定。</p>
+<p>已知：$\lg K_{\text{BiY}} = 27.9$，$\lg K_{\text{PbY}} = 18.0$</p>
+<ol>
+<li>判断能否分别滴定 Bi³⁺ 和 Pb²⁺（3分）</li>
+<li>在 pH = 1.0 时，计算 $\lg K'_{\text{BiY}}$，判断能否准确滴定 Bi³⁺（4分）</li>
+<li>滴定 Pb²⁺ 时选择 pH = 5.0 的 HAc-NaAc 缓冲溶液，写出缓冲比的计算（2分）</li>
+<li>设计分步滴定方案（3分）</li>
+</ol>
+</div>
+
+<div class="sol">
+<p class="st">详细解答：</p>
+
+<p><strong>（1）判断能否分别滴定</strong></p>
+
+$$\Delta\lg K = \lg K_{\text{BiY}} - \lg K_{\text{PbY}} = 27.9 - 18.0 = 9.9$$
+
+<p>判据：$\Delta\lg K \geq 6$ 时可分步滴定。</p>
+
+$$9.9 > 6 \quad \checkmark$$
+
+$$\boxed{\text{可以分别滴定 Bi}^{3+} \text{ 和 Pb}^{2+}}$$
+
+<p><strong>（2）pH = 1.0 时滴定 Bi³⁺</strong></p>
+
+<p>查表：pH = 1.0 时，$\lg\alpha_{\text{Y(H)}} = 18.3$</p>
+
+<p>条件稳定常数：</p>
+$$\lg K'_{\text{BiY}} = \lg K_{\text{BiY}} - \lg\alpha_{\text{Y(H)}} = 27.9 - 18.3 = 9.6$$
+
+<p>准确滴定判据：$\lg c \cdot K'_{\text{MY}} \geq 6$</p>
+
+<p>设 $c_{\text{Bi}} = 0.01$ mol/L（$\lg c = -2$）：</p>
+$$\lg c \cdot K'_{\text{BiY}} = -2 + 9.6 = 7.6 \geq 6 \quad \checkmark$$
+
+$$\boxed{\text{pH} = 1.0 \text{ 时，}\lg K'_{\text{BiY}} = 9.6\text{，可以准确滴定 Bi}^{3+}}$$
+
+<p>同时验证 Pb²⁺ 不被滴定：</p>
+$$\lg K'_{\text{PbY}} = 18.0 - 18.3 = -0.3$$
+<p>$K'_{\text{PbY}} < 1$，Pb²⁺ 在 pH = 1 时完全不与 EDTA 反应，不干扰 Bi³⁺ 的滴定。</p>
+
+<p><strong>（3）HAc-NaAc 缓冲溶液的配制</strong></p>
+
+<p>HAc 的 $\text{p}K_\text{a} = 4.74$，目标 pH = 5.0</p>
+
+$$\text{pH} = \text{p}K_\text{a} + \lg\frac{[\text{Ac}^-]}{[\text{HAc}]}$$
+
+$$5.0 = 4.74 + \lg\frac{[\text{Ac}^-]}{[\text{HAc}]}$$
+
+$$\lg\frac{[\text{Ac}^-]}{[\text{HAc}]} = 0.26$$
+
+$$\boxed{\frac{[\text{Ac}^-]}{[\text{HAc}]} = 10^{0.26} = 1.82 \approx 1.8}$$
+
+<p>即 NaAc 与 HAc 的浓度比约为 1.8:1。</p>
+
+<p><strong>（4）分步滴定方案</strong></p>
+
+<div class="fb">
+<p class="t">分步滴定操作方案：</p>
+<ol>
+<li><strong>第一步（pH ≈ 1，滴定 Bi³⁺）：</strong>在强酸性条件下（HNO₃ 控制 pH ≈ 1），以二甲酚橙为指示剂（酸性条件下变色灵敏），用 EDTA 标准溶液滴定 Bi³⁺，溶液由紫红色变为黄色即为终点。记录消耗 EDTA 体积 $V_1$。</li>
+<li><strong>第二步（pH ≈ 5，滴定 Pb²⁺）：</strong>在上述溶液中加入六亚甲基四胺（或 HAc-NaAc 缓冲液）调节 pH 至 5~6，以二甲酚橙为指示剂，继续用 EDTA 滴定 Pb²⁺，溶液由紫红色变为黄色即为终点。记录消耗 EDTA 体积 $V_2$。</li>
+</ol>
+</div>
+</div>
+
+<div class="tip">
+<strong>分步滴定的一般策略：</strong>利用控制酸度的方法，先在低 pH 下滴定 $\lg K$ 大的金属离子，再升高 pH 滴定 $\lg K$ 小的金属离子。
+</div>
+
+<!-- ==================== 实验设计题 ==================== -->
+<h2 id="exp">四、实验设计题（8分，二选一）</h2>
+
+<h3 id="exp1">选项一：Na₃PO₄ + NaOH 混合液的测定</h3>
+<div class="card">
+<p><strong>题目：</strong>设计实验方案，用 HCl 标准溶液测定 Na₃PO₄ 和 NaOH 混合液中各组分的含量。</p>
+</div>
+
+<div class="sol">
+<p class="st">实验方案设计：</p>
+
+<p><strong>原理：</strong>利用酸碱滴定的分步滴定法，用两种指示剂确定两个终点。</p>
+
+<p>Na₃PO₄ 与 HCl 的反应分两步：</p>
+$$\text{Na}_3\text{PO}_4 + \text{HCl} \to \text{Na}_2\text{HPO}_4 + \text{NaCl} \quad (\text{第一终点})$$
+$$\text{Na}_2\text{HPO}_4 + \text{HCl} \to \text{NaH}_2\text{PO}_4 + \text{NaCl} \quad (\text{第二终点})$$
+
+<p>NaOH 与 HCl 的反应在第一终点前完成：</p>
+$$\text{NaOH} + \text{HCl} \to \text{NaCl} + \text{H}_2\text{O}$$
+
+<p><strong>操作步骤：</strong></p>
+<ol>
+<li>准确移取一定量混合液于锥形瓶中</li>
+<li>加入<strong>酚酞</strong>指示剂，用 HCl 标准溶液滴定至粉红色刚好褪去（pH ≈ 8.0~9.0），记录体积 $V_1$</li>
+<li>此时 NaOH 全部被中和，Na₃PO₄ 被滴定至 Na₂HPO₄</li>
+<li>再加入<strong>甲基橙</strong>指示剂，继续用 HCl 滴定至溶液由黄色变为橙色（pH ≈ 3.1~4.4），记录体积 $V_2$</li>
+<li>此时 Na₂HPO₄ 被滴定至 NaH₂PO₄</li>
+</ol>
+
+<p><strong>计算：</strong></p>
+
+<div class="fb">
+<p class="t">关键关系</p>
+<ul>
+<li>$V_2$ 对应的是 $\text{Na}_2\text{HPO}_4 \to \text{NaH}_2\text{PO}_4$ 这一步，即 $n(\text{Na}_3\text{PO}_4) = c_{\text{HCl}} \times V_2$</li>
+<li>$V_1$ 对应的是 NaOH 的中和 + $\text{Na}_3\text{PO}_4 \to \text{Na}_2\text{HPO}_4$ 这一步</li>
+<li>$n(\text{NaOH}) = c_{\text{HCl}} \times (V_1 - V_2)$（因为 Na₃PO₄ 的第一步消耗的 HCl 等于 $V_2$）</li>
+</ul>
+</div>
+
+<table>
+<tr><th>组分</th><th>计算公式</th></tr>
+<tr><td>$n(\text{Na}_3\text{PO}_4)$</td><td>$c_{\text{HCl}} \times V_2$</td></tr>
+<tr><td>$n(\text{NaOH})$</td><td>$c_{\text{HCl}} \times (V_1 - V_2)$</td></tr>
+</table>
+</div>
+
+<h3 id="exp2">选项二：Zn²⁺ + Cu²⁺ 混合液的测定</h3>
+<div class="card">
+<p><strong>题目：</strong>设计实验方案，用 EDTA 标准溶液测定含有 Zn²⁺ 和 Cu²⁺ 混合液中各组分的含量。</p>
+</div>
+
+<div class="sol">
+<p class="st">实验方案设计：</p>
+
+<p><strong>原理：</strong>利用掩蔽-解蔽法，配合 EDTA 滴定分别测定两种金属离子。</p>
+
+<p>$\lg K_{\text{CuY}} = 18.8$，$\lg K_{\text{ZnY}} = 16.5$，$\Delta\lg K = 2.3 < 6$，不能直接分步滴定。</p>
+<p>需要使用<strong>掩蔽剂</strong>法。</p>
+
+<p><strong>操作步骤：</strong></p>
+<ol>
+<li><strong>测定总量（Zn²⁺ + Cu²⁺）：</strong>取一份试液，调节 pH ≈ 5~6（HAc-NaAc 缓冲），以二甲酚橙为指示剂，用 EDTA 标准溶液滴定至溶液由紫红色变为黄色。记录 EDTA 用量 $V_1$。</li>
+<li><strong>掩蔽 Cu²⁺ 后测定 Zn²⁺：</strong>另取一份等量试液，加入过量 KCN 溶液掩蔽 Cu²⁺（$\text{Cu}^{2+}$ 与 $\text{CN}^-$ 形成极稳定的 $[\text{Cu(CN)}_4]^{2-}$ 配合物），调节 pH ≈ 5~6，以二甲酚橙为指示剂，用 EDTA 滴定 Zn²⁺。记录 EDTA 用量 $V_2$。</li>
+</ol>
+
+<p><strong>（或用解蔽法：在方法2滴定 Zn²⁺ 后，加入甲醛（HCHO）或硫脲解蔽 Cu²⁺）：</strong></p>
+<ol start="3">
+<li><strong>解蔽 Cu²⁺：</strong>在上述溶液中加入过量硫脲，将 Cu²⁺ 从 $[\text{Cu(CN)}_4]^{2-}$ 中释放（硫脲与 CN⁻ 竞争 Cu²⁺）。用 EDTA 继续滴定释放的 Cu²⁺。记录 EDTA 用量 $V_3$。</li>
+</ol>
+
+<p><strong>计算：</strong></p>
+
+<div class="fb">
+<p class="t">方法一（两份试液法）</p>
+<ul>
+<li>$n(\text{Zn}^{2+}) = c_{\text{EDTA}} \times V_2$</li>
+<li>$n(\text{Cu}^{2+}) = c_{\text{EDTA}} \times (V_1 - V_2)$</li>
+</ul>
+</div>
+
+<div class="fb">
+<p class="t">方法二（掩蔽-解蔽法，一份试液）</p>
+<ul>
+<li>$n(\text{Zn}^{2+}) = c_{\text{EDTA}} \times V_2$</li>
+<li>$n(\text{Cu}^{2+}) = c_{\text{EDTA}} \times V_3$</li>
+</ul>
+</div>
+</div>
+
+<div class="warn">
+<strong>安全提示：</strong>KCN 是剧毒试剂，操作时必须在通风橱中进行，全程佩戴防护手套，严禁酸性条件下操作（会产生 HCN 剧毒气体）。实验废液必须用 NaOH 碱化后专门收集处理。
+</div>
+
+<!-- ==================== 考点总结 ==================== -->
+<h2 id="summary-tips">考点总结与备考建议</h2>
+
+<div class="card">
+<h3>各章考点分布</h3>
+<table>
+<tr><th>章节</th><th>考点</th><th>分值估计</th></tr>
+<tr><td>误差与数据处理</td><td>有效数字、误差分类、t检验、置信区间</td><td>~18分</td></tr>
+<tr><td>酸碱滴定</td><td>缓冲溶液、滴定可行性、突跃范围、指示剂选择、滴定误差</td><td>~24分</td></tr>
+<tr><td>配位滴定（EDTA）</td><td>掩蔽、分步滴定、条件稳定常数、金属指示剂</td><td>~22分</td></tr>
+<tr><td>氧化还原滴定</td><td>条件电极电位、重铬酸钾法、KMnO₄法</td><td>~18分</td></tr>
+<tr><td>重量分析</td><td>换算因子、沉淀类型、均匀沉淀法</td><td>~12分</td></tr>
+<tr><td>实验设计</td><td>混合物滴定方案</td><td>8分</td></tr>
+</table>
+</div>
+
+<div class="tip">
+<strong>高频考点提醒：</strong>
+<ul>
+<li>t 检验与 F 检验的区分和计算步骤</li>
+<li>EDTA 酸效应系数表必须熟记 pH 1~6 的值</li>
+<li>条件电极电位的计算公式及物理意义</li>
+<li>弱酸滴定曲线的关键点（起始、半量、等量、过量）</li>
+<li>重铬酸钾法测铁的全部操作步骤及各步骤的化学原理</li>
+</ul>
+</div>
+
+<script src="toc.js"></script>
+<script src="auth.js"></script>
+<script src="progress.js"></script>
+</body></html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>登录 | 分析化学备考全站</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:#fffef9;display:flex;justify-content:center;align-items:center;min-height:100vh;}
+.login-box{background:#fff;border:1px solid #e0d8c8;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.1);padding:40px;width:340px;text-align:center;}
+.login-box h1{color:#1a5276;font-size:1.5em;margin-bottom:6px;}
+.login-box .sub{color:#888;font-size:.85em;margin-bottom:24px;}
+.login-box input{width:100%;padding:10px 14px;border:1px solid #ddd;border-radius:6px;font-size:1em;margin-bottom:14px;outline:none;transition:border .2s;}
+.login-box input:focus{border-color:#1a5276;}
+.login-box button{width:100%;padding:10px;background:#1a5276;color:#fff;border:none;border-radius:6px;font-size:1em;cursor:pointer;transition:background .2s;}
+.login-box button:hover{background:#2980b9;}
+.err{color:#c0392b;font-size:.85em;margin-top:8px;display:none;}
+</style>
+</head>
+<body>
+<div class="login-box">
+<h1>分析化学(1) 备考全站</h1>
+<p class="sub">SJTU 2025-2026 · 输入姓名开始复习</p>
+<input type="text" id="username" placeholder="请输入你的姓名" autofocus>
+<button id="loginBtn">开始复习</button>
+<p class="err" id="errMsg">请输入姓名</p>
+</div>
+<script>
+document.getElementById('loginBtn').addEventListener('click', doLogin);
+document.getElementById('username').addEventListener('keydown', function(e){ if(e.key==='Enter') doLogin(); });
+function doLogin(){
+  var name = document.getElementById('username').value.trim();
+  if(!name){ document.getElementById('errMsg').style.display='block'; return; }
+  localStorage.setItem('achem_user', JSON.stringify({username:name, loginTime:Date.now()}));
+  window.location.href='index.html';
+}
+</script>
+</body>
+</html>
