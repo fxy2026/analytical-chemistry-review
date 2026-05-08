@@ -139,9 +139,17 @@ console.log('🔨 Building analytical chemistry review site...');
 console.log(`   Source: ${SRC}`);
 console.log(`   Output: ${DIST}`);
 
-// Clean dist
+// Clean dist (try rmSync first; if OneDrive locks the folder, empty its contents instead)
 if (fs.existsSync(DIST)) {
-  fs.rmSync(DIST, { recursive: true });
+  try {
+    fs.rmSync(DIST, { recursive: true });
+  } catch (e) {
+    // Folder locked – remove contents one by one
+    for (const entry of fs.readdirSync(DIST)) {
+      const p = path.join(DIST, entry);
+      try { fs.rmSync(p, { recursive: true }); } catch (_) {}
+    }
+  }
 }
 mkdirp(DIST);
 
