@@ -31,20 +31,86 @@ tr:nth-child(even){background:#f9f7f2;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
 details{margin:8px 0;}
 details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+.ppt-img{display:block;max-width:100%;margin:12px auto;border:1px solid #e0d8c8;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ppt-caption{text-align:center;font-size:.82em;color:#888;margin:-6px 0 12px;}
 </style>
 </head><body>
 
 <div class="nav-bar">
   <a href="index.html">首页</a>
-  <a href="ch9.html">&larr; 第九章</a>
+  <a href="ch1.html">第一章</a>
+  <a href="ch3.html">第三章</a>
+  <a href="ch5-1.html">第五章(上)</a>
+  <a href="ch5-2.html">第五章(下)</a>
   <a href="ch6.html">第六章</a>
   <a href="ch7.html">第七章</a>
+  <a href="ch9.html">第九章</a>
+  <a href="ch10.html" style="background:#1a5276;color:#fff;">第十章</a>
+  <a href="formulas.html">公式表</a>
+  <a href="exam-review.html">备考</a>
+  <a href="quiz1.html">小测1</a>
+  <a href="quiz2.html">小测2</a>
+  <a href="final2022.html">期末真题</a>
 </div>
 
 <h1>第十章 吸光光度法</h1>
 
 <!-- ==================== 10.1 ==================== -->
 <h2>10.1 光的吸收基础</h2>
+<img class="ppt-img" src="temp_pages/ch10_p5.png" alt="分光光度法基本原理">
+<p class="ppt-caption">PPT: 分光光度法基本原理 — 分子光谱</p>
+
+<div class="card">
+  <h3>分光光度法的特点</h3>
+  <div class="fb">
+    <div class="t">四大特点</div>
+    <ul>
+      <li><strong>灵敏度高</strong>：常用于试样中质量分数为 $1\% \sim 10^{-5}\%$ 的微量组分的测试</li>
+      <li><strong>准确度较高</strong>：相对误差 $2\% \sim 5\%$</li>
+      <li><strong>仪器简单</strong>：操作方便，检测快速</li>
+      <li><strong>应用广泛</strong>：几乎所有的无机离子和许多有机物都可以直接或间接进行测试</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>吸收光谱的产生</h3>
+  <img class="ppt-img" src="temp_pages/ch10_p5.png" alt="吸收光谱产生">
+  <p class="ppt-caption">PPT: 分子光谱 — 电子跃迁与带状光谱</p>
+  <div class="fb">
+    <div class="t">分子光谱</div>
+    <p>紫外和可见光谱属于<strong>分子光谱</strong>。分子中除了电子相对原子核运动外，还存在核间相对位移引起的振动和转动，它呈带状光谱，相对比较复杂。</p>
+    <p>分子吸收光子时，发生电子跃迁（$S_0 \to S_1, S_2$），吸收的能量对应特定波长。</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3>物质对光的选择性吸收</h3>
+  <img class="ppt-img" src="temp_pages/ch10_p6.png" alt="光的选择性吸收">
+  <p class="ppt-caption">PPT: 单色光、复合光与互补色光</p>
+  <div class="fb">
+    <div class="t">基本概念</div>
+    <ul>
+      <li><strong>单色光</strong>：具有同一波长的光</li>
+      <li><strong>复合光</strong>：由不同波长组合成的光（如太阳光）</li>
+      <li><strong>紫外光</strong>：波长在 200~400 nm 范围的光</li>
+      <li><strong>可见光</strong>：人眼内感觉到的光，400~760 nm（<span style="color:red;">红</span><span style="color:orange;">橙</span><span style="color:#CC0;">黄</span><span style="color:green;">绿</span><span style="color:cyan;">青</span><span style="color:blue;">蓝</span><span style="color:purple;">紫</span>）</li>
+      <li><strong>互补色光</strong>：若两种单色光按一定比例混合可得白光，则它们为互补色光（如黄+蓝）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>物质颜色与光的关系</h3>
+  <img class="ppt-img" src="temp_pages/ch10_p8.png" alt="物质颜色与光">
+  <p class="ppt-caption">PPT: 物质对光的选择性吸收与颜色</p>
+  <p>物质的颜色是由于它们对不同波长的光具有选择性吸收：</p>
+  <ul>
+    <li><strong>完全吸收</strong>所有光 $\to$ 物质呈<strong>黑色</strong></li>
+    <li><strong>完全透过</strong>所有光 $\to$ 物质呈<strong>无色</strong></li>
+    <li><strong>选择性吸收</strong>某种颜色的光 $\to$ 物质呈现该光的<strong>互补色</strong></li>
+  </ul>
+</div>
 
 <div class="card">
   <h3>电磁波谱</h3>
@@ -76,12 +142,47 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <p>吸光度最大处对应的波长称为<strong>最大吸收波长 $\lambda_{max}$</strong>，在此波长下测量灵敏度最高。</p>
 
   <div class="tip">$\lambda_{max}$ 是物质的特征值，可用于物质的定性鉴别。吸收光谱的形状和 $\lambda_{max}$ 与物质浓度无关。</div>
+
+  <div class="fb">
+    <div class="t">考点：$\lambda_{max}$ 与浓度的关系（Quiz 2 填空第7题）</div>
+    <p>当溶液浓度增大时：</p>
+    <ul>
+      <li>$\lambda_{max}$ <strong>不变</strong>（它是物质的固有特征，由分子结构决定）</li>
+      <li>吸光度 $A$ <strong>按比例增大</strong>（根据 Beer 定律 $A = \kappa bc$）</li>
+    </ul>
+    <p>即吸收曲线的形状和峰位不变，只是整条曲线在纵轴方向等比例上移。</p>
+  </div>
 </div>
 
 <!-- ==================== 10.2 ==================== -->
 <h2>10.2 Lambert-Beer 定律</h2>
+<img class="ppt-img" src="temp_pages/ch10_p10.png" alt="Lambert-Beer定律">
+<p class="ppt-caption">PPT: Lambert-Beer定律</p>
 
 <div class="card">
+  <h3>光通过溶液时的光强分配</h3>
+  <img class="ppt-img" src="temp_pages/ch10_p11.png" alt="光强分配">
+  <p class="ppt-caption">PPT: 入射光通过溶液的光强分配</p>
+  <div class="fb">
+    <div class="t">光强关系</div>
+    <p>当一束平行单色光通过任何均匀、非散射固态、液态或气态介质时：</p>
+    $$I'_0 = I_a + I_t + I_r$$
+    <p>其中 $I'_0$ 为入射光强度，$I_a$ 为吸收光强度，$I_t$ 为透过光强度，$I_r$ 为反射光强度。</p>
+    <p>入射光垂直照射，反射光强很小；同时采用<strong>参比溶液</strong>进行校正，$I_r$ 的影响可以相互抵消。因此实际处理中：</p>
+    $$I_0 = I_a + I_t$$
+  </div>
+</div>
+
+<div class="card">
+  <h3>定律的推导</h3>
+  <img class="ppt-img" src="temp_pages/ch10_p12.png" alt="T和A的定义">
+  <p class="ppt-caption">PPT: 透射比与吸光度的定义</p>
+  <p><strong>Lambert 定律</strong>（1760年）：当一束单色光通过均匀的透明介质时，吸光度与光程长度 $b$ 成正比：</p>
+  $$A \propto b$$
+  <p><strong>Beer 定律</strong>（1852年）：当一束单色光通过均匀的吸光物质溶液时，吸光度与溶液浓度 $c$ 成正比：</p>
+  $$A \propto c$$
+  <p>将两者联合，得到 <strong>Lambert-Beer 定律</strong>：</p>
+
   <div class="fb">
     <div class="t">Lambert-Beer 定律</div>
     $$\boxed{A = \kappa bc = -\lg T}$$
@@ -95,11 +196,63 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     </ul>
   </div>
 
+  <h3>透射比 $T$ 与吸光度 $A$ 的关系</h3>
+  <p>透射比定义为透射光强度与入射光强度之比：</p>
+  $$T = \frac{I}{I_0}$$
+  <p>吸光度与透射比的换算关系：</p>
+  $$\boxed{A = -\lg T = \lg\frac{1}{T} = \lg\frac{I_0}{I}}$$
+  <p>常见换算：</p>
+  <table>
+    <tr><th>$T$（%T）</th><th>$A$</th><th>$T$（%T）</th><th>$A$</th></tr>
+    <tr><td>100%</td><td>0</td><td>10%</td><td>1.000</td></tr>
+    <tr><td>80%</td><td>0.097</td><td>5%</td><td>1.301</td></tr>
+    <tr><td>50%</td><td>0.301</td><td>1%</td><td>2.000</td></tr>
+    <tr><td>36.8%</td><td>0.434</td><td>0.1%</td><td>3.000</td></tr>
+    <tr><td>30%</td><td>0.523</td><td>0.01%</td><td>4.000</td></tr>
+    <tr><td>20%</td><td>0.699</td><td>0%</td><td>$\infty$</td></tr>
+  </table>
+
+  <div class="ex">
+    <strong>例题：%T 与 A 的换算</strong>
+    <p>某溶液的透射比 $T = 30\%$，求其吸光度。</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>$A = -\lg T = -\lg(0.30) = 0.5229$</p>
+    </div>
+  </div>
+
   <p><strong>吸光度的加和性</strong>：多组分混合体系中</p>
   $$A_{总} = A_1 + A_2 + \cdots = \kappa_1 bc_1 + \kappa_2 bc_2 + \cdots$$
   <p>这是多组分同时测定的理论基础。</p>
 
-  <div class="note">当浓度用 $\text{g/L}$ 表示时，比例系数称为<strong>吸光系数 $a$</strong>（单位 $\text{L} \cdot \text{g}^{-1} \cdot \text{cm}^{-1}$），与摩尔吸光系数关系：$\kappa = a \times M$。</div>
+  <div class="fb">
+    <div class="t">Beer 定律的各种表达形式</div>
+    <img class="ppt-img" src="temp_pages/ch10_p13.png" alt="Beer定律各形式">
+    <p class="ppt-caption">PPT: Beer 定律的不同表达形式</p>
+    <table>
+      <tr><th>表达式</th><th>比例系数</th><th>单位</th><th>浓度单位</th></tr>
+      <tr><td>$A = abc$</td><td>$a$（吸光系数）</td><td>$\text{L} \cdot \text{g}^{-1} \cdot \text{cm}^{-1}$</td><td>$c$：$\text{g/L}$</td></tr>
+      <tr><td>$A = \kappa bc$</td><td>$\kappa$（摩尔吸光系数）</td><td>$\text{L} \cdot \text{mol}^{-1} \cdot \text{cm}^{-1}$</td><td>$c$：$\text{mol/L}$</td></tr>
+    </table>
+    <p>两者的换算关系：</p>
+    $$\boxed{\kappa = a \times M}$$
+    <p>其中 $M$ 为吸光物质的摩尔质量（$\text{g/mol}$）。</p>
+    <p>当浓度用比吸光系数表示时：$A_{1\text{cm}}^{1\%} = a \times 10 = \kappa \times 10/M$（即浓度为 1 g/100mL、光程 1 cm 时的吸光度）。</p>
+  </div>
+
+  <div class="tip"><strong>$\kappa$、$a$ 和 $A_{1\text{cm}}^{1\%}$ 的特点：</strong>它们都与入射光波长、温度和物质性质有关，但<strong>与浓度无关</strong>。$\kappa$ 数值越大，表示该方法测定该物质的灵敏度越高。</div>
+</div>
+
+<div class="ex">
+  <strong>例题（Quiz 2 填空第6题 --- 金纳米粒子）：</strong>某金纳米粒子溶液在 520 nm 处的透射比为 30%。已知液层厚度 $b = 1$ cm，溶液浓度 $c = 1.2 \times 10^{-9}$ mol/L，求该金纳米粒子在 520 nm 处的摩尔吸光系数 $\kappa$。
+  <div class="sol">
+    <div class="st">解：</div>
+    <p><strong>第一步：</strong>由 $T$ 求 $A$</p>
+    $$A = -\lg T = -\lg(0.30) = 0.5229$$
+    <p><strong>第二步：</strong>由 Beer 定律求 $\kappa$</p>
+    $$\kappa = \frac{A}{bc} = \frac{0.5229}{1 \times 1.2 \times 10^{-9}} = 4.4 \times 10^{8}\;\text{L} \cdot \text{mol}^{-1} \cdot \text{cm}^{-1}$$
+  </div>
+  <div class="tip">$\kappa = 4.4 \times 10^{8}$ 是一个<strong>极其巨大的</strong>摩尔吸光系数！常规有机显色剂的 $\kappa$ 通常在 $10^4 \sim 10^5$ 量级。金纳米粒子之所以具有如此超高的 $\kappa$，是因为<strong>表面等离子体共振（Surface Plasmon Resonance, SPR）</strong>效应：纳米尺度金颗粒中的自由电子在入射光电场作用下发生集体振荡，对特定波长的光产生极强的吸收和散射。</div>
 </div>
 
 <!-- ==================== 10.3 ==================== -->
@@ -111,21 +264,46 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <table>
     <tr><th>$\kappa$ 范围 / ($\text{L} \cdot \text{mol}^{-1} \cdot \text{cm}^{-1}$)</th><th>灵敏度评价</th></tr>
-    <tr><td>$< 10^3$</td><td>不灵敏</td></tr>
-    <tr><td>$10^3 \sim 10^4$</td><td>中等灵敏</td></tr>
-    <tr><td>$10^4 \sim 10^5$</td><td>灵敏</td></tr>
-    <tr><td>$> 10^5$</td><td>高灵敏</td></tr>
+    <tr><td>$< 10^4$</td><td>低灵敏度</td></tr>
+    <tr><td>$10^4 \sim 5 \times 10^4$</td><td>中等灵敏度</td></tr>
+    <tr><td>$6 \times 10^4 \sim 10^5$</td><td>高灵敏度</td></tr>
+    <tr><td>$> 10^5$</td><td>超高灵敏度</td></tr>
   </table>
+  <div class="tip">一般认为，$\kappa > 10^4$ 才算灵敏的光度法。</div>
 
   <div class="fb">
     <div class="t">Sandell 灵敏度 $S$</div>
     $$S = \frac{M}{\kappa}\;\;(\mu\text{g/cm}^2)$$
     <p>物理意义：当 $A = 0.001$ 时，光程截面 1 cm$^2$ 上所含被测物质的质量（$\mu$g）。$S$ 越小，方法越灵敏。</p>
   </div>
+
+  <div class="ex">
+    <strong>例题：灵敏度计算</strong>
+    <p>用邻菲罗啉法测 Fe$^{2+}$，$\kappa = 1.1 \times 10^4$ L/(mol&middot;cm)，$M_{Fe} = 55.85$ g/mol。求 Sandell 灵敏度。</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      $$S = \frac{M}{\kappa} = \frac{55.85}{1.1 \times 10^4} = 0.0051\;\mu\text{g/cm}^2$$
+      <p>即当 $A = 0.001$ 时，每 cm$^2$ 截面上有 0.0051 $\mu$g 的铁。$S$ 值小，说明方法灵敏。</p>
+    </div>
+  </div>
+
+  <div class="ex">
+    <strong>例题（PPT 综合示例）：</strong>用氟磷酸分光光度法测定铌。50 mL 溶液中含铌 50.0 $\mu$g，用 2.0 cm 吸收池测得透光率为 19.9%（$M_{\text{Nb}} = 92.91$）。计算吸光系数 $a$、摩尔吸光系数 $\kappa$ 和 Sandell 灵敏度 $S$。
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>(1) $A = \lg\dfrac{1}{T} = \lg\dfrac{1}{0.199} = 0.701$</p>
+      <p>(2) 浓度 $c = \dfrac{50.0 \times 10^{-6}}{50.0 \times 10^{-3}} = 0.001\;\text{g/L}$</p>
+      <p>(3) $a = \dfrac{A}{bc} = \dfrac{0.701}{2.0 \times 0.001} = 350.5\;\text{L} \cdot \text{g}^{-1} \cdot \text{cm}^{-1}$</p>
+      <p>(4) $\kappa = Ma = 92.91 \times 350.5 = 3.26 \times 10^4\;\text{L} \cdot \text{mol}^{-1} \cdot \text{cm}^{-1}$</p>
+      <p>(5) $S = \dfrac{M}{\kappa} = \dfrac{92.91}{3.26 \times 10^4} = 2.85 \times 10^{-3}\;\mu\text{g/cm}^2$</p>
+    </div>
+  </div>
 </div>
 
 <!-- ==================== 10.4 ==================== -->
 <h2>10.4 准确度与Beer定律的偏离</h2>
+<img class="ppt-img" src="temp_pages/ch10_p15.png" alt="偏离Beer定律的因素">
+<p class="ppt-caption">PPT: 偏离Beer定律的因素</p>
 
 <div class="card">
   <h3>最佳吸光度范围</h3>
@@ -145,11 +323,29 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <h3>Beer 定律偏离的原因</h3>
 
   <h3>化学因素（真偏离）</h3>
+  <img class="ppt-img" src="temp_pages/ch10_p18.png" alt="化学偏离因素">
+  <p class="ppt-caption">PPT: 化学因素引起的偏离</p>
+  <p>某些有色化合物在溶液中发生<strong>离解、缔合、产生互变异构及光化分解</strong>，与溶剂反应等现象，导致其吸收光谱曲线的形状、最大吸收波长、吸光度等发生变化，引起对 Beer 定律的偏离。</p>
   <ul>
-    <li><strong>溶液中的化学平衡</strong>：浓度变化导致解离度、缔合度变化，使有效吸光物质浓度与分析浓度不成正比</li>
-    <li><strong>溶剂效应</strong>：溶质-溶剂相互作用随浓度变化</li>
-    <li><strong>pH 变化</strong>：有色物质的存在形态随 pH 变化</li>
+    <li><strong>离解</strong>：$\text{Cr}_2\text{O}_7^{2-} \rightleftharpoons 2\text{HCrO}_4^- \rightleftharpoons 2\text{CrO}_4^{2-} + 2\text{H}^+$</li>
+    <li><strong>络合</strong>：$\text{Fe}^{3+} + n\text{SCN}^- \rightleftharpoons \text{Fe(SCN)}_n^{3-n}$（不同浓度下 $n$ 值不同）</li>
+    <li><strong>缔合</strong>：$2\text{CrO}_4^{2-} + 2\text{H}^+ \rightleftharpoons \text{Cr}_2\text{O}_7^{2-} + \text{H}_2\text{O}$</li>
   </ul>
+
+  <div class="ex">
+    <strong>经典实例：$\text{Cr}_2\text{O}_7^{2-}$ / $\text{CrO}_4^{2-}$ 平衡</strong>
+    <p>在 $\text{K}_2\text{Cr}_2\text{O}_7$ 溶液中存在如下平衡：</p>
+    $$\text{Cr}_2\text{O}_7^{2-} + \text{H}_2\text{O} \rightleftharpoons 2\text{CrO}_4^{2-} + 2\text{H}^+$$
+    <p>$\text{Cr}_2\text{O}_7^{2-}$ 为橙色（$\lambda_{max} = 350$ nm），$\text{CrO}_4^{2-}$ 为黄色（$\lambda_{max} = 372$ nm）。</p>
+    <p>当改变溶液浓度时，平衡发生移动，两种铬物种的比例发生变化。若在 350 nm 或 372 nm 处测量，吸光度将不与总铬浓度成正比 --- 这就是<strong>化学因素引起的偏离</strong>。</p>
+    <p>解决方法：控制溶液 pH 使平衡完全偏向一侧（如加入 NaOH 使全部转化为 $\text{CrO}_4^{2-}$），或选择等吸收点波长（两物种 $\kappa$ 相等处）。</p>
+  </div>
+
+  <div class="ex">
+    <strong>实例：指示剂颜色与 pH</strong>
+    <p>酸碱指示剂（如甲基橙）是弱酸或弱碱，其酸式和碱式的颜色不同。改变浓度时，溶液的 pH 可能微弱变化，导致指示剂的酸碱式比例改变，从而使吸光度偏离 Beer 定律。</p>
+    <p>解决方法：使用缓冲溶液控制 pH。</p>
+  </div>
 
   <h3>仪器因素（假偏离）</h3>
   <ul>
@@ -158,11 +354,29 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <li><strong>反射和散射损失</strong></li>
   </ul>
 
+  <div class="card">
+    <h3>非单色光的影响（详解）</h3>
+    <p>Beer 定律要求入射光为严格单色光（仅含一个波长）。但实际仪器的单色器只能分出一个有限带宽的窄带光。</p>
+    <p>设通带含 $\lambda_1$ 和 $\lambda_2$ 两个波长，在这两个波长处物质的摩尔吸光系数分别为 $\kappa_1$ 和 $\kappa_2$。若 $\kappa_1 \neq \kappa_2$，实测吸光度为：</p>
+    $$A_{测} = \lg\frac{I_0^{(\lambda_1)} + I_0^{(\lambda_2)}}{I_0^{(\lambda_1)} \cdot 10^{-\kappa_1 bc} + I_0^{(\lambda_2)} \cdot 10^{-\kappa_2 bc}}$$
+    <p>这与理想的 $A = \kappa bc$ 之间存在偏差，浓度越高偏差越大 --- 产生<strong>负偏离</strong>（即实测 $A$ 低于理论值）。</p>
+    <p><strong>为什么在 $\lambda_{max}$ 处测量偏差最小？</strong></p>
+    <p>因为在吸收峰顶附近，吸收曲线较为平坦，通带内各波长处的 $\kappa$ 差异最小，$\kappa_1 \approx \kappa_2$，从而使非单色光引起的偏差最小。同时，$\lambda_{max}$ 处灵敏度最高。</p>
+    <div class="warn"><strong>带宽越宽，偏离越严重。</strong>这也是为什么高性能分光光度计要求更窄的光谱带宽。</div>
+  </div>
+
   <div class="warn">Beer 定律是<strong>浓度趋于零时的极限定律</strong>，严格来说只在低浓度下才精确成立。高浓度时因分子间相互作用增大而偏离。</div>
+
+  <div class="fb">
+    <div class="t">考点（Quiz 2 选择第10题）：哪些因素引起 Beer 定律偏离？</div>
+    <p><strong>所有上述因素</strong>（非单色光、杂散光、化学平衡移动、浓度过高等）都会导致 Beer 定律偏离。答案选"以上都是"。</p>
+  </div>
 </div>
 
 <!-- ==================== 10.5 ==================== -->
 <h2>10.5 显色反应与显色条件</h2>
+<img class="ppt-img" src="temp_pages/ch10_p20.png" alt="显色反应">
+<p class="ppt-caption">PPT: 显色反应条件的选择</p>
 
 <div class="card">
   <h3>显色反应的要求</h3>
@@ -173,6 +387,23 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <li>有色产物与试剂间颜色差异大（对比度高）</li>
     <li>反应条件易于控制</li>
   </ul>
+
+  <h3>显色反应的对比度要求</h3>
+  <p>显色剂颜色与有色化合物之间的颜色差别要大，即 $\Delta\lambda > 60\;\text{nm}$（测量波长与试剂最大吸收波长之差）。</p>
+
+  <h3>有机显色剂的优势</h3>
+  <img class="ppt-img" src="temp_pages/ch10_p21.png" alt="有机显色剂">
+  <p class="ppt-caption">PPT: 有机显色剂的特点</p>
+  <div class="fb">
+    <div class="t">有机显色剂（螯合剂）的五大优点</div>
+    <ul>
+      <li><strong>专属性强</strong>：绝大多数有机螯合剂在一定条件下只与少数或某一种金属离子反应，且同一种有机螯合剂与不同金属离子配位时，生成各有特征颜色的螯合物</li>
+      <li><strong>灵敏度高</strong>：大部分金属螯合物呈现鲜明的颜色，摩尔吸收系数大于 $10^4$</li>
+      <li><strong>稳定性好</strong>：金属螯合物都极稳定，一般离解常数很小，且耐抗辐射</li>
+      <li><strong>组成恒定</strong>：有色化合物组成恒定、化学性质稳定</li>
+      <li><strong>比率大</strong>：在有色螯合物中，金属所占的比率很低，提高了测定的灵敏度；但也导致螯合物难溶于水，需从有机溶剂中光度测定</li>
+    </ul>
+  </div>
 
   <h3>常用显色剂</h3>
   <table>
@@ -187,6 +418,66 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </table>
 </div>
 
+<div class="card">
+  <h3>重要有机显色剂详解</h3>
+  <img class="ppt-img" src="temp_pages/ch10_p22.png" alt="邻菲罗啉和双硫腙">
+  <p class="ppt-caption">PPT: 邻二氮菲与双硫腙</p>
+
+  <div class="fb">
+    <div class="t">偶氮胂 III</div>
+    <img class="ppt-img" src="temp_pages/ch10_p23.png" alt="偶氮胂III和铬天青S">
+    <p class="ppt-caption">PPT: 偶氮胂 III 和铬天青 S</p>
+    <ul>
+      <li>也称铀试剂 III，是变色酸的双偶氮衍生物</li>
+      <li>该试剂在一定条件下可与许多金属离子生成绿色、蓝色或紫色的螯合物</li>
+      <li>如测定 $\text{U(IV)}$，$\kappa = 1.2 \times 10^5$（$\lambda_{max} = 670\;\text{nm}$），超高灵敏度</li>
+      <li>只需要调整溶液的酸度，就可提高测试的选择性</li>
+    </ul>
+  </div>
+
+  <div class="fb">
+    <div class="t">铬天青 S</div>
+    <ul>
+      <li>属于三苯甲烷类显色剂，能与许多金属离子形成蓝色至紫色配合物</li>
+      <li>可用于 $\text{Be}$, $\text{Al}$, $\text{Y}$, $\text{Ti}$, $\text{Zr}$, $\text{Hf}$, $\text{Th}$, $\text{Cr}$, $\text{Fe}$, $\text{Pt}$, $\text{Cu}$, $\text{Ca}$, $\text{In}$ 等金属元素的光度测定</li>
+      <li>利用该试剂与 $\text{Th(IV)}$ 形成的有色配合物能被氟离子分解的性质，采用褪色法可间接测定氟</li>
+      <li>如 pH 5~5.8 测 $\text{Al}^{3+}$：$\kappa = 5.9 \times 10^4$（$\lambda_{max} = 530\;\text{nm}$），加 CPC（十六烷基三甲基溴化铵）后可达 $10^5$</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>重点：$\text{Fe}^{2+}$ + 邻菲罗啉（phen）体系（最常考）</h3>
+
+  <div class="fb">
+    <div class="t">反应方程式</div>
+    $$\text{Fe}^{2+} + 3\,\text{phen} \longrightarrow [\text{Fe(phen)}_3]^{2+}$$
+    <p>产物为<strong>橙红色</strong>，$\lambda_{max} = 510$ nm，$\kappa = 1.1 \times 10^4$ L/(mol&middot;cm)。</p>
+  </div>
+
+  <h3>实验条件</h3>
+  <ul>
+    <li><strong>pH 范围：2~9</strong>（通常使用 HAc-NaAc 缓冲溶液控制 pH 约为 3~5）</li>
+    <li><strong>还原剂：盐酸羟胺（$\text{NH}_2\text{OH} \cdot \text{HCl}$）或抗坏血酸</strong></li>
+    <li>phen 只与 $\text{Fe}^{2+}$ 显色，不与 $\text{Fe}^{3+}$ 显色，因此<strong>必须先将 $\text{Fe}^{3+}$ 还原为 $\text{Fe}^{2+}$</strong></li>
+  </ul>
+
+  <p>还原反应：</p>
+  $$2\text{Fe}^{3+} + 2\text{NH}_2\text{OH} \longrightarrow 2\text{Fe}^{2+} + \text{N}_2 + 2\text{H}_2\text{O} + 2\text{H}^+$$
+
+  <h3>邻菲罗啉法测铁的标准操作步骤</h3>
+  <ol>
+    <li>准确量取一定体积含 $\text{Fe}^{3+}$ 的试液，加入比色管中</li>
+    <li>加入盐酸羟胺溶液（还原 $\text{Fe}^{3+} \to \text{Fe}^{2+}$），摇匀，放置 2 min</li>
+    <li>加入邻菲罗啉溶液（适当过量，保证显色完全）</li>
+    <li>加入 HAc-NaAc 缓冲溶液控制 pH</li>
+    <li>以蒸馏水定容，摇匀，放置 10~15 min（显色完全）</li>
+    <li>以试剂空白为参比，在 510 nm 处测量吸光度</li>
+  </ol>
+
+  <div class="tip">这个体系几乎每年考试都会出现，或作为条件选择题，或作为标准曲线法计算题的背景。务必记住：三配位（1:3）、橙红色、510 nm、$\kappa = 1.1 \times 10^4$、先还原 Fe$^{3+}$。</div>
+</div>
+
 <!-- ==================== 10.6 ==================== -->
 <h2>10.6 测定条件的选择</h2>
 
@@ -197,13 +488,24 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <h3>2. 参比溶液的选择</h3>
   <table>
-    <tr><th>参比溶液</th><th>适用情况</th></tr>
-    <tr><td>纯溶剂（蒸馏水）</td><td>显色剂和其他试剂在测量波长无吸收</td></tr>
-    <tr><td>试剂空白</td><td>显色剂在测量波长有吸收（最常用）</td></tr>
-    <tr><td>试样空白</td><td>试样溶液本身有背景吸收</td></tr>
+    <tr><th>参比溶液</th><th>适用情况</th><th>消除的影响</th></tr>
+    <tr><td>纯溶剂（蒸馏水）</td><td>显色剂和其他试剂在测量波长无吸收</td><td>比色皿反射、溶剂吸收</td></tr>
+    <tr><td>试剂空白</td><td>显色剂在测量波长有吸收（最常用）</td><td>比色皿 + 溶剂 + 试剂吸收</td></tr>
+    <tr><td>试样空白</td><td>试样溶液本身有背景吸收</td><td>比色皿 + 溶剂 + 试剂 + 试样基体吸收</td></tr>
   </table>
 
+  <div class="note"><strong>参比溶液选择的核心原则：</strong>尽可能消除非被测物引起的吸收，使测得的吸光度只反映被测物的贡献。通常试剂空白最常用，因为大多数显色剂本身有颜色。</div>
+
   <h3>3. 显色条件的控制</h3>
+
+  <h3>3a. 最佳 pH 的确定 --- $A$-pH 曲线法</h3>
+  <p>配制一系列被测物浓度相同、pH 不同的溶液，加入相同量的显色剂，在 $\lambda_{max}$ 处测量吸光度。以 pH 为横轴，$A$ 为纵轴作图。</p>
+  <p>曲线中 $A$ 最大且恒定的 pH 区间即为<strong>最佳 pH 范围</strong>。在此范围内显色反应最完全、产物最稳定。</p>
+
+  <h3>3b. 最佳显色剂用量的确定 --- $A$-$c_R$ 曲线法</h3>
+  <p>固定被测物浓度和 pH，改变显色剂浓度 $c_R$，测量 $A$。以 $c_R$ 为横轴，$A$ 为纵轴作图。</p>
+  <p>曲线中 $A$ 趋于恒定的最小 $c_R$ 值即为最佳用量下限。通常取略高于此值的用量（适当过量），但不宜过多（避免空白值增大或形成其他络合物）。</p>
+
   <ul>
     <li><strong>显色剂用量</strong>：通常过量以确保显色完全，但过量太多可能引起空白值增大或干扰。通过实验确定最佳用量。</li>
     <li><strong>溶液酸度（pH）</strong>：影响显色反应的平衡和有色产物的稳定性。通过绘制 $A$-pH 曲线确定最佳 pH 范围。</li>
@@ -234,11 +536,58 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <p>取多份相同体积的试样，分别加入不同量的标准溶液（其中一份不加），显色定容后测量吸光度。</p>
   <p>以加入标准溶液的浓度 $c_s$ 为横轴，$A$ 为纵轴作图，外推直线与横轴交点的绝对值即为试样浓度 $c_x$。</p>
 
+  <div class="fb">
+    <div class="t">标准加入法的公式推导</div>
+    <p>未加标准的试样：</p>
+    $$A_x = \kappa \cdot b \cdot c_x$$
+    <p>加入标准后：</p>
+    $$A_{x+s} = \kappa \cdot b \cdot (c_x + c_s)$$
+    <p>两式相除：</p>
+    $$\frac{A_x}{A_{x+s}} = \frac{c_x}{c_x + c_s}$$
+    <p>解出：</p>
+    $$\boxed{c_x = \frac{A_x \cdot c_s}{A_{x+s} - A_x}}$$
+  </div>
+
+  <div class="ex">
+    <strong>例题：标准加入法计算</strong>
+    <p>取 10.00 mL 含 Cu$^{2+}$ 的试液，加入显色剂后定容至 50.00 mL，测得 $A_x = 0.320$。另取 10.00 mL 相同试液，加入 1.00 mL 浓度为 $1.00 \times 10^{-3}$ mol/L 的 Cu$^{2+}$ 标准溶液，同样处理后测得 $A_{x+s} = 0.480$。求试液中 Cu$^{2+}$ 浓度。</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>加入标准后，定容体积仍为 50.00 mL，加入 Cu$^{2+}$ 的量为：</p>
+      $$c_s = \frac{1.00 \times 10^{-3} \times 1.00}{50.00} = 2.00 \times 10^{-5}\;\text{mol/L}$$
+      <p>由标准加入法公式：</p>
+      $$c_x = \frac{A_x \cdot c_s}{A_{x+s} - A_x} = \frac{0.320 \times 2.00 \times 10^{-5}}{0.480 - 0.320} = \frac{6.40 \times 10^{-6}}{0.160} = 4.00 \times 10^{-5}\;\text{mol/L}$$
+      <p>这是定容后的浓度。试液原始浓度为：</p>
+      $$c_{原} = 4.00 \times 10^{-5} \times \frac{50.00}{10.00} = 2.00 \times 10^{-4}\;\text{mol/L}$$
+    </div>
+  </div>
+
   <div class="warn">标准加入法要求 Beer 定律严格成立（$A$-$c$ 为直线），且不能消除由空白引起的系统误差。</div>
 
   <h3>3. 示差分光光度法（差示法）</h3>
+<img class="ppt-img" src="temp_pages/ch10_p27.png" alt="示差光度法">
+<p class="ppt-caption">PPT: 示差光度法原理</p>
   <p>用<strong>标准溶液</strong>（而非空白）作参比，测量试样与标准之间吸光度的差值，扩大了可测量的浓度范围，提高了高浓度样品的测量精度。</p>
   <p>适用于常规方法中吸光度超出最佳范围（$A > 0.8$）的高浓度样品。</p>
+
+  <div class="fb">
+    <div class="t">示差法原理详解</div>
+    <p><strong>高浓度标准溶液作参比</strong>：将已知浓度为 $c_r$ 的标准溶液放在参比光路中，仪器调零（设其 $T = 100\%$，即 $A = 0$）。</p>
+    <p>试样的真实吸光度 $A_x = \kappa b c_x$，标准的真实吸光度 $A_r = \kappa b c_r$。</p>
+    <p>示差法测得的吸光度：</p>
+    $$\Delta A = A_x - A_r = \kappa b (c_x - c_r)$$
+    <p>由此可知：即使 $A_x$ 本身很大（如 $A_x = 2.5$），只要 $c_x$ 与 $c_r$ 相差不大，$\Delta A$ 可以落在最佳测量范围 0.2~0.8 内，大大提高了测量精度。</p>
+  </div>
+
+  <div class="ex">
+    <strong>例题：示差法</strong>
+    <p>某高浓度溶液的 $A = 2.200$，用浓度 $c_r$ 的标准溶液（$A_r = 2.000$）作参比。求示差法测得的读数。</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      $$\Delta A = A_x - A_r = 2.200 - 2.000 = 0.200$$
+      <p>$\Delta A = 0.200$ 落在最佳范围内，精度远优于直接测量 $A = 2.200$。</p>
+    </div>
+  </div>
 
   <h3>4. 双波长法</h3>
   <p>选择两个波长 $\lambda_1$ 和 $\lambda_2$，测量同一溶液在两个波长下吸光度之差：$\Delta A = A_{\lambda_1} - A_{\lambda_2}$</p>
@@ -268,8 +617,34 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 </div>
 
+<div class="ex">
+  <strong>例题：双组分同时测定</strong>
+  <p>某溶液含有 $\text{KMnO}_4$ 和 $\text{K}_2\text{Cr}_2\text{O}_7$。在 545 nm 和 440 nm 处测量吸光度（$b = 1$ cm）。已知：</p>
+  <table>
+    <tr><th></th><th>$\kappa_{545}$ / (L&middot;mol$^{-1}$&middot;cm$^{-1}$)</th><th>$\kappa_{440}$ / (L&middot;mol$^{-1}$&middot;cm$^{-1}$)</th></tr>
+    <tr><td>$\text{KMnO}_4$</td><td>2350</td><td>120</td></tr>
+    <tr><td>$\text{K}_2\text{Cr}_2\text{O}_7$</td><td>370</td><td>3680</td></tr>
+  </table>
+  <p>混合液测得 $A_{545} = 0.640$，$A_{440} = 0.550$。求两组分浓度。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>设 $\text{KMnO}_4$ 浓度为 $c_1$，$\text{K}_2\text{Cr}_2\text{O}_7$ 浓度为 $c_2$（mol/L）。建立方程组：</p>
+    $$2350\,c_1 + 370\,c_2 = 0.640 \quad \cdots(1)$$
+    $$120\,c_1 + 3680\,c_2 = 0.550 \quad \cdots(2)$$
+    <p>由 (1)：$c_1 = \frac{0.640 - 370\,c_2}{2350}$</p>
+    <p>代入 (2)：$120 \times \frac{0.640 - 370\,c_2}{2350} + 3680\,c_2 = 0.550$</p>
+    <p>$\frac{76.8 - 44400\,c_2}{2350} + 3680\,c_2 = 0.550$</p>
+    <p>$76.8 - 44400\,c_2 + 8648000\,c_2 = 1292.5$</p>
+    <p>$8603600\,c_2 = 1215.7$</p>
+    <p>$c_2 = 1.41 \times 10^{-4}$ mol/L</p>
+    <p>$c_1 = \frac{0.640 - 370 \times 1.41 \times 10^{-4}}{2350} = \frac{0.640 - 0.0522}{2350} = 2.50 \times 10^{-4}$ mol/L</p>
+  </div>
+</div>
+
 <!-- ==================== 10.8 ==================== -->
 <h2>10.8 络合物组成的测定</h2>
+<img class="ppt-img" src="temp_pages/ch10_p30.png" alt="络合物组成测定">
+<p class="ppt-caption">PPT: 络合物组成测定 — 等摩尔连续变化法与摩尔比法</p>
 
 <div class="card">
   <h3>1. 摩尔比法（饱和法）</h3>
@@ -281,16 +656,35 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="tip">摩尔比法适用于稳定性较高的配合物（$K$ 大）。若配合物不太稳定，交点附近曲线弯曲，可通过外推两段直线来确定交点。</div>
 
+  <div class="ex">
+    <strong>例题：摩尔比法</strong>
+    <p>固定 $c_M = 2.0 \times 10^{-5}$ mol/L，改变配位体 L 的浓度，测量吸光度：</p>
+    <table>
+      <tr><th>$c_L/c_M$</th><td>0.5</td><td>1.0</td><td>1.5</td><td>2.0</td><td>2.5</td><td>3.0</td><td>3.5</td><td>4.0</td></tr>
+      <tr><th>$A$</th><td>0.12</td><td>0.24</td><td>0.36</td><td>0.44</td><td>0.44</td><td>0.45</td><td>0.44</td><td>0.45</td></tr>
+    </table>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>$A$ 在 $c_L/c_M = 0.5 \sim 1.5$ 线性增长，在 $c_L/c_M \geq 2.0$ 后趋于恒定。</p>
+      <p>两段直线外推交点在 $c_L/c_M = 2$，因此 $n = 2$，络合物组成为 $\text{ML}_2$。</p>
+    </div>
+  </div>
+
   <h3>2. 连续变化法（Job 法/等摩尔系列法）</h3>
   <div class="fb">
     <div class="t">原理</div>
     <p>保持 $c_M + c_L = c$（总浓度恒定），改变 $c_M/(c_M + c_L)$ 的比值（从 0 到 1），测量吸光度。</p>
     <p>以 $x = c_M/(c_M + c_L)$ 为横轴，$A$（或校正后的 $A$）为纵轴作图，曲线极大值处对应的 $x$ 值满足：</p>
     $$n = \frac{1 - x_{max}}{x_{max}}$$
-    <p>例如 $x_{max} = 0.5$ 时 $n = 1$（1:1 络合），$x_{max} = 0.33$ 时 $n = 2$（1:2 络合）。</p>
+    <p>例如 $x_{max} = 0.5$ 时 $n = 1$（1:1 络合），$x_{max} = 0.33$ 时 $n = 2$（1:2 络合），$x_{max} = 0.25$ 时 $n = 3$（1:3 络合）。</p>
   </div>
 
-  <div class="note">Job 法要求溶液中只形成一种络合物。若体系中存在多种逐级络合物，结果可能不准确。</div>
+  <div class="note"><strong>Job 法的局限性：</strong>该方法假设溶液中只形成<strong>一种</strong>络合物。若体系中存在多种逐级络合物（$\text{ML}$、$\text{ML}_2$、$\text{ML}_3$ 同时存在），极大值位置会偏移，结果不可靠。此外，当络合比很大（如 1:6）时，曲线极大值不够尖锐，难以准确定位。</div>
+
+  <h3>从 Job 曲线的弯曲程度判断稳定性</h3>
+  <p>如果络合物非常稳定（$K$ 极大），则 Job 曲线在极大值处呈尖锐的角状（两段直线交叉）。若稳定性较低，极大值附近曲线明显弯曲。弯曲程度越大，说明离解越显著，$K$ 越小。</p>
+  <p>可以定量估算 $K$：将极大值处外推直线的 $A$ 值（$A_{ext}$）与实测最大 $A$ 值（$A_{max}$）进行比较。离解度 $\alpha$ 近似为：</p>
+  $$\alpha \approx 1 - \frac{A_{max}}{A_{ext}}$$
 </div>
 
 <div class="ex">
@@ -316,6 +710,222 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <tr><td>摩尔比法</td><td>固定一种组分浓度，改变另一种</td><td>$K$ 较大</td><td>操作直观，可判断稳定性</td></tr>
     <tr><td>Job 法</td><td>总浓度恒定，改变比例</td><td>只形成一种络合物</td><td>灵敏，可确定任意比值</td></tr>
   </table>
+</div>
+
+<!-- ==================== 10.9 ==================== -->
+<h2>10.9 分光光度计的基本组成</h2>
+
+<div class="card">
+  <h3>仪器结构框图</h3>
+  <div class="fb">
+    <div class="t">五大组件</div>
+    <p style="text-align:center;font-size:1.1em;letter-spacing:2px;">
+      <strong>光源</strong> &rarr; <strong>单色器</strong> &rarr; <strong>样品池</strong> &rarr; <strong>检测器</strong> &rarr; <strong>信号显示</strong>
+    </p>
+  </div>
+
+  <h3>1. 光源</h3>
+  <table>
+    <tr><th>光源</th><th>适用波长范围</th><th>特点</th></tr>
+    <tr><td>钨灯/卤钨灯</td><td>340~2500 nm（可见-近红外）</td><td>发光稳定，寿命长，是可见分光光度计最常用光源</td></tr>
+    <tr><td>氘灯</td><td>185~400 nm（紫外）</td><td>紫外区连续光谱，UV 分光光度计标配</td></tr>
+    <tr><td>氙灯</td><td>200~800 nm（UV+Vis）</td><td>全波段连续光谱，光强高，常用于高端仪器</td></tr>
+  </table>
+  <div class="tip">UV-Vis 分光光度计通常配备<strong>两个光源</strong>（氘灯 + 钨灯），在约 340 nm 处自动切换。</div>
+
+  <h3>2. 单色器</h3>
+  <p>作用：从连续光源中分出所需波长的单色光。</p>
+  <ul>
+    <li><strong>棱镜</strong>：利用不同波长光的折射率差异进行色散。玻璃棱镜用于可见区，石英棱镜用于紫外区。色散非线性（短波段色散较好）。</li>
+    <li><strong>光栅（衍射光栅）</strong>：利用衍射原理分光。色散均匀（各波长段分辨率一致），是现代仪器的主流选择。</li>
+    <li><strong>滤光片</strong>：只能分出较宽波段的光（带宽大），用于简易比色计。</li>
+  </ul>
+
+  <h3>3. 样品池（比色皿）</h3>
+  <table>
+    <tr><th>材料</th><th>透过波长</th><th>适用范围</th></tr>
+    <tr><td>玻璃</td><td>&gt; 340 nm</td><td>仅可见区（Vis）</td></tr>
+    <tr><td>石英</td><td>&gt; 185 nm</td><td>紫外 + 可见区（UV+Vis）</td></tr>
+  </table>
+  <div class="warn"><strong>紫外区测量必须使用石英比色皿！</strong>玻璃在 340 nm 以下有强烈吸收，会严重干扰测量。可见区两者均可使用，但石英比色皿更贵。</div>
+  <p>常用光程长度：0.5 cm、1 cm、2 cm、3 cm、5 cm。1 cm 最常用。</p>
+
+  <h3>4. 检测器</h3>
+  <ul>
+    <li><strong>光电倍增管（PMT）</strong>：灵敏度极高，响应速度快，是高端分光光度计和荧光光度计的标准检测器。但一次只能检测一个波长。</li>
+    <li><strong>光电二极管阵列（PDA / DAD）</strong>：由数百个光电二极管组成阵列，可<strong>同时检测所有波长</strong>，在毫秒级内获得完整吸收光谱。用于二极管阵列分光光度计和 HPLC 检测器。</li>
+    <li><strong>硅光电池</strong>：结构简单、价廉，灵敏度较低，用于简易比色计。</li>
+  </ul>
+
+  <h3>5. 信号显示系统</h3>
+  <p>将检测器产生的电信号转换为可读取的数据。现代仪器通常直接用计算机采集、处理和显示。可直接读出 $A$、$T$（%）或浓度。</p>
+</div>
+
+<!-- ==================== 真题考点 ==================== -->
+<h2>真题考点精讲</h2>
+
+<div class="card">
+  <h3>考点 1：由 $T$, $b$, $c$ 计算 $\kappa$（高频题）</h3>
+  <div class="fb">
+    <div class="t">解题三步法</div>
+    <ol>
+      <li>若已知 $T$，先换算 $A = -\lg T$</li>
+      <li>代入 Beer 定律 $A = \kappa bc$</li>
+      <li>解出 $\kappa = A/(bc)$</li>
+    </ol>
+    <p>注意单位：$c$ 用 mol/L 时得到的是摩尔吸光系数 $\kappa$，用 g/L 时得到的是吸光系数 $a$。</p>
+  </div>
+
+  <div class="ex">
+    <strong>Quiz 2 填空第6题</strong>
+    <p>金纳米粒子溶液：$T = 30\%$，$b = 1$ cm，$c = 1.2 \times 10^{-9}$ mol/L。</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>$A = -\lg(0.30) = 0.5229$</p>
+      <p>$\kappa = \frac{0.5229}{1 \times 1.2 \times 10^{-9}} = 4.4 \times 10^{8}$ L/(mol&middot;cm)</p>
+    </div>
+  </div>
+
+  <h3>考点 2：$\lambda_{max}$ 与浓度的关系</h3>
+  <div class="fb">
+    <div class="t">Quiz 2 填空第7题</div>
+    <p>核心结论：增大浓度后，$\lambda_{max}$ <strong>不变</strong>（只与物质的分子结构有关），吸光度 $A$ <strong>增大</strong>（与 $c$ 成正比）。</p>
+  </div>
+
+  <h3>考点 3：Beer 定律偏离因素</h3>
+  <div class="fb">
+    <div class="t">Quiz 2 选择第10题</div>
+    <p>以下哪些因素会引起 Beer 定律偏离？</p>
+    <ul>
+      <li>非单色光（带宽过宽）--- 仪器因素</li>
+      <li>杂散光 --- 仪器因素</li>
+      <li>溶液中化学平衡移动 --- 化学因素</li>
+      <li>浓度过高导致分子间作用 --- 化学因素</li>
+    </ul>
+    <p><strong>答案：以上都是。</strong>所有上述因素均可导致偏离。</p>
+  </div>
+
+  <h3>考点 4：络合物组成测定</h3>
+  <p>Job 法和摩尔比法是两道典型大题的出题方向。需要掌握：</p>
+  <ul>
+    <li>Job 法：由 $x_{max}$ 求 $n = (1 - x_{max})/x_{max}$</li>
+    <li>摩尔比法：两段直线交点处的横坐标即为 $n$</li>
+    <li>Job 法前提：只形成<strong>一种</strong>络合物</li>
+  </ul>
+
+  <h3>考点 5：多组分同时测定（列方程组）</h3>
+  <p>两组分体系在两个波长处测量，利用吸光度加和性列方程：</p>
+  $$\begin{cases} A_{\lambda_1} = \kappa_{1,\lambda_1} b c_1 + \kappa_{2,\lambda_1} b c_2 \\ A_{\lambda_2} = \kappa_{1,\lambda_2} b c_1 + \kappa_{2,\lambda_2} b c_2 \end{cases}$$
+  <p>波长选择原则：$\lambda_1$ 选在组分 1 的 $\lambda_{max}$ 处，$\lambda_2$ 选在组分 2 的 $\lambda_{max}$ 处，使两方程中系数差异最大。</p>
+
+  <h3>考点 6：最佳测量条件选择</h3>
+  <ul>
+    <li>波长选 $\lambda_{max}$（灵敏度最高、非单色光偏差最小）</li>
+    <li>吸光度控制在 $A = 0.2 \sim 0.8$</li>
+    <li>参比溶液的正确选择（试剂空白最常用）</li>
+    <li>显色 pH 和显色剂用量由 $A$-pH 和 $A$-$c_R$ 曲线确定</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>常见计算题型总结</h3>
+  <table>
+    <tr><th>题型</th><th>关键公式</th><th>注意事项</th></tr>
+    <tr><td>由 $T$ 求 $\kappa$</td><td>$A = -\lg T$, $\kappa = A/(bc)$</td><td>注意 $T$ 是小数还是百分数</td></tr>
+    <tr><td>标准曲线法求浓度</td><td>由回归直线 $A = kc$ 得 $c = A/k$</td><td>标准溶液基体要与试样一致</td></tr>
+    <tr><td>标准加入法</td><td>$c_x = A_x c_s / (A_{x+s} - A_x)$</td><td>注意稀释因子</td></tr>
+    <tr><td>多组分同时测定</td><td>联立方程组解 $c_1, c_2$</td><td>波长选两组分 $\lambda_{max}$</td></tr>
+    <tr><td>Job 法求 $n$</td><td>$n = (1 - x_{max})/x_{max}$</td><td>只适用于单一络合物</td></tr>
+    <tr><td>摩尔比法求 $n$</td><td>两段直线交点的横坐标</td><td>配合物须足够稳定</td></tr>
+    <tr><td>示差法</td><td>$\Delta A = \kappa b(c_x - c_r)$</td><td>参比用高浓度标准</td></tr>
+  </table>
+</div>
+
+<div class="ex">
+  <strong>综合例题：邻菲罗啉法测铁的全流程计算</strong>
+  <p>取 50.00 mL 水样，加入盐酸羟胺和邻菲罗啉，用 HAc-NaAc 缓冲至 pH=4.5，转入 100 mL 容量瓶定容。以试剂空白为参比，用 1 cm 比色皿在 510 nm 处测得 $A = 0.440$。已知 $\kappa_{510} = 1.1 \times 10^4$ L/(mol&middot;cm)，$M_{Fe} = 55.85$ g/mol。求水样中铁的质量浓度（mg/L）。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p><strong>第一步：</strong>由 Beer 定律求定容后溶液中 Fe 的摩尔浓度</p>
+    $$c = \frac{A}{\kappa b} = \frac{0.440}{1.1 \times 10^4 \times 1} = 4.00 \times 10^{-5}\;\text{mol/L}$$
+    <p><strong>第二步：</strong>换算为质量浓度</p>
+    $$\rho = c \times M_{Fe} = 4.00 \times 10^{-5} \times 55.85 = 2.234 \times 10^{-3}\;\text{g/L} = 2.234\;\text{mg/L}$$
+    <p><strong>第三步：</strong>考虑稀释，求原水样浓度</p>
+    $$\rho_{原} = \rho \times \frac{V_{定容}}{V_{取样}} = 2.234 \times \frac{100}{50.00} = 4.47\;\text{mg/L}$$
+  </div>
+</div>
+
+<div class="card">
+  <h3>补充例题</h3>
+
+  <div class="ex">
+    <strong>例题：标准加入法</strong>
+    <p>取 25.00 mL 未知浓度的 Fe³⁺ 溶液，加入邻菲罗啉显色后定容至 50.00 mL，测得 $A_x = 0.300$。另取 25.00 mL 同一溶液，加入 1.00 mL 10.0 μg/mL 的 Fe³⁺ 标准液，同样显色定容至 50.00 mL，测得 $A_{x+s} = 0.480$。求未知液中 Fe³⁺ 的浓度（μg/mL）。</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>标准加入量：$c_s \times V_s = 10.0 \times 1.00 = 10.0$ μg</p>
+      <p>在 50 mL 中：$\rho_s = 10.0/50.00 = 0.200$ μg/mL</p>
+      <p>由标准加入法公式：$A_x / A_{x+s} = \rho_x / (\rho_x + \rho_s)$</p>
+      $$\frac{0.300}{0.480} = \frac{\rho_x}{\rho_x + 0.200}$$
+      $$0.300(\rho_x + 0.200) = 0.480\,\rho_x$$
+      $$0.300\,\rho_x + 0.060 = 0.480\,\rho_x$$
+      $$0.180\,\rho_x = 0.060 \implies \rho_x = 0.333\;\text{μg/mL}$$
+      <p>原始溶液浓度：$\rho_{原} = 0.333 \times 50/25 = \boxed{0.667\;\text{μg/mL}}$</p>
+    </div>
+  </div>
+
+  <div class="ex">
+    <strong>例题：双组分同时测定</strong>
+    <p>混合液含 $\text{KMnO}_4$ 和 $\text{K}_2\text{Cr}_2\text{O}_7$，在两个波长下测得吸光度：</p>
+    <table>
+    <tr><th></th><th>$\lambda_1 = 440$ nm</th><th>$\lambda_2 = 545$ nm</th></tr>
+    <tr><td>$\kappa(\text{KMnO}_4)$</td><td>$60$</td><td>$2350$</td></tr>
+    <tr><td>$\kappa(\text{K}_2\text{Cr}_2\text{O}_7)$</td><td>$370$</td><td>$10$</td></tr>
+    <tr><td>$A$（混合液，$b=1$ cm）</td><td>$0.430$</td><td>$0.389$</td></tr>
+    </table>
+    <p>求两组分浓度（mol/L）。</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>联立方程组（$b = 1$ cm）：</p>
+      $$60\,c_1 + 370\,c_2 = 0.430 \quad \cdots(1)$$
+      $$2350\,c_1 + 10\,c_2 = 0.389 \quad \cdots(2)$$
+      <p>由 (2)：$c_1 = (0.389 - 10\,c_2)/2350$</p>
+      <p>代入 (1)：$60 \times (0.389 - 10\,c_2)/2350 + 370\,c_2 = 0.430$</p>
+      <p>$0.009932 - 0.2553\,c_2 + 370\,c_2 = 0.430$</p>
+      <p>$369.7\,c_2 = 0.4201 \implies c_2 = 1.14 \times 10^{-3}\;\text{mol/L}$</p>
+      <p>$c_1 = (0.389 - 0.0114)/2350 = 1.61 \times 10^{-4}\;\text{mol/L}$</p>
+      <p>$\boxed{c(\text{KMnO}_4) = 1.61\times10^{-4}\;\text{mol/L}，\;c(\text{K}_2\text{Cr}_2\text{O}_7) = 1.14\times10^{-3}\;\text{mol/L}}$</p>
+    </div>
+  </div>
+</div>
+
+<div class="warn">
+<strong>常见陷阱：</strong>
+<ul>
+<li>Beer 定律的 $c$ 是<strong>光路中</strong>溶液的浓度（定容后的浓度），不是取样前的浓度</li>
+<li>$\kappa$ 的单位：L/(mol·cm)（摩尔吸光系数）vs L/(g·cm)（质量吸光系数），注意题目要求</li>
+<li>$A$ 具有加和性：$A_{总} = A_1 + A_2 + \cdots$，但 $T$ 是相乘：$T_{总} = T_1 \times T_2$</li>
+<li>示差法参比溶液浓度必须<strong>已知且准确</strong>，否则测量无意义</li>
+<li>等吸收点：两种吸光物质在某波长 $A$ 相同，不受平衡移动影响</li>
+</ul>
+</div>
+
+<div class="note">
+<strong>考前速记清单：</strong>
+<ul>
+  <li>Beer 定律：$A = \kappa b c = -\lg T$</li>
+  <li>$T = I_t / I_0$，$A = -\lg T = 2 - \lg T\%$</li>
+  <li>摩尔吸光系数 $\kappa$ 越大，灵敏度越高（一般 $\kappa > 10^4$ 为高灵敏度）</li>
+  <li>Sandell 灵敏度：$S = M / \kappa$（μg/cm²），$S$ 越小越灵敏</li>
+  <li>偏离 Beer 定律：化学因素（解离、缔合、溶剂化）+ 仪器因素（非单色光、杂散光）</li>
+  <li>测量最佳范围：$A = 0.2 \sim 0.8$，$A = 0.434$ 时 $\Delta c/c$ 最小</li>
+  <li>显色反应条件：显色剂用量（过量）、pH、温度、时间、溶剂</li>
+  <li>参比溶液选择：只有待测物吸光 → 溶剂空白；试剂也吸光 → 试剂空白</li>
+  <li>Job 法（连续变化法）：$c_M + c_L = \text{常数}$，$A$ 最大处对应络合比</li>
+  <li>摩尔比法：固定 $c_M$，改变 $c_L/c_M$，$A$ 不变处的 $c_L/c_M$ = 配位数</li>
+  <li>双组分测定：两波长两方程联立</li>
+  <li>标准加入法：$c_x = \frac{A_x}{A_{x+s} - A_x} \times \frac{c_s V_s}{V_{总}}$</li>
+</ul>
 </div>
 
 <script src="toc.js"></script>

@@ -21,6 +21,8 @@ h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid va
 .tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
 .warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
 .note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.exam{background:#fff0f0;border:2px solid #c0392b;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.exam .et{font-weight:bold;color:#c0392b;margin-bottom:6px;}
 table{width:100%;border-collapse:collapse;margin:12px 0;}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
 th{background:var(--pri);color:#fff;}
@@ -31,6 +33,8 @@ tr:nth-child(even){background:#f9f7f2;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
 details{margin:8px 0;}
 details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+.ppt-img{display:block;max-width:100%;margin:12px auto;border:1px solid #e0d8c8;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ppt-caption{text-align:center;font-size:.82em;color:#888;margin:-6px 0 12px;}
 </style>
 </head>
 <body>
@@ -38,20 +42,30 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 <div class="nav-bar">
   <a href="index.html">首页</a>
   <a href="ch1.html">第一章</a>
-  <a href="ch2.html">第二章</a>
   <a href="ch3.html" style="background:#1a5276;color:#fff;">第三章</a>
-  <a href="ch4.html">第四章</a>
-  <a href="ch5.html">第五章</a>
+  <a href="ch5-1.html">第五章(上)</a>
+  <a href="ch5-2.html">第五章(下)</a>
+  <a href="ch6.html">第六章</a>
+  <a href="ch7.html">第七章</a>
+  <a href="ch9.html">第九章</a>
+  <a href="ch10.html">第十章</a>
+  <a href="formulas.html">公式表</a>
+  <a href="exam-review.html">备考</a>
+  <a href="quiz1.html">小测1</a>
+  <a href="quiz2.html">小测2</a>
+  <a href="final2022.html">期末真题</a>
 </div>
 
 <h1>第三章 误差与分析数据处理</h1>
 
 <div class="warn">
-  <strong>高频考试章节！</strong>本章内容几乎每年必考，涵盖选择题、计算题、简答题。重点掌握：有效数字运算、置信区间计算、显著性检验（t 检验、F 检验）、可疑值取舍。
+  <strong>高频考试章节！</strong>本章内容几乎每年必考，涵盖选择题、计算题、简答题。重点掌握：有效数字运算（特别是对数有效数字规则）、置信区间计算、显著性检验（t 检验、F 检验）、可疑值取舍、误差传递。
 </div>
 
 <!-- ============================================================ -->
 <h2>3.1 误差与偏差</h2>
+<img class="ppt-img" src="temp_pages/ch3_p3.png" alt="误差的基本概念">
+<p class="ppt-caption">PPT: 误差的基本概念</p>
 
 <div class="card">
   <h3>真值与误差</h3>
@@ -80,6 +94,10 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <h3>偏差（Deviation）</h3>
   <p>当真值未知时，用<strong>偏差</strong>来衡量精密度：</p>
 
+  <p><strong>算术平均值：</strong>$\bar{x} = \dfrac{1}{n}\displaystyle\sum_{i=1}^n x_i$，表示数据的<strong>集中趋势</strong>。</p>
+
+  <p><strong>中位数（median, $\hat{x}$）：</strong>将数据按大小排列，位于正中间的数。$n$ 为奇数时取中间那个，$n$ 为偶数时取中间两个的平均值。中位数也可反映集中趋势，但效果不如平均值好。</p>
+
   <p><strong>绝对偏差：</strong> $d_i = x_i - \bar{x}$</p>
 
   <p><strong>相对偏差：</strong> $d_{r,i} = \dfrac{x_i - \bar{x}}{\bar{x}} \times 100\%$</p>
@@ -90,19 +108,39 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <p><strong>相对平均偏差：</strong></p>
   $$\bar{d}_r = \frac{\bar{d}}{\bar{x}} \times 100\%$$
 
-  <p><strong>标准偏差（样本）：</strong></p>
+  <p><strong>标准偏差（样本，Bessel 公式）：</strong></p>
   $$s = \sqrt{\frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n-1}}$$
 
   <p><strong>相对标准偏差（RSD / 变异系数 CV）：</strong></p>
   $$\text{RSD} = \frac{s}{\bar{x}} \times 100\%$$
 </div>
 
+<div class="card">
+  <h3>总体参数与样本统计量的区分</h3>
+  <table>
+    <tr><th></th><th>总体（$n \to \infty$）</th><th>样本（有限次测量）</th></tr>
+    <tr><td><strong>均值</strong></td><td>$\mu = \displaystyle\lim_{n\to\infty}\frac{1}{n}\sum x_i$（总体均值 = 真值）</td><td>$\bar{x} = \dfrac{1}{n}\displaystyle\sum x_i$（样本均值）</td></tr>
+    <tr><td><strong>标准偏差</strong></td><td>$\sigma = \sqrt{\dfrac{\sum(x_i-\mu)^2}{N}}$（除以 $N$）</td><td>$s = \sqrt{\dfrac{\sum(x_i-\bar{x})^2}{n-1}}$（除以 $n-1$）</td></tr>
+    <tr><td><strong>平均偏差</strong></td><td>$\delta = \dfrac{\sum|x_i - \mu|}{N}$</td><td>$\bar{d} = \dfrac{\sum|x_i - \bar{x}|}{n}$</td></tr>
+  </table>
+  <p>当 $n$ 很大时（$n > 50$），$n$ 与 $n-1$ 差别很小，此时 $s \approx \sigma$，$\bar{x} \approx \mu$。</p>
+  <p>$\delta$ 与 $\sigma$ 的近似关系：$\delta \approx 0.7979\sigma \approx 0.80\sigma$。</p>
+</div>
+
 <div class="tip">
-  <strong>为什么除以 $n-1$ 而非 $n$？</strong>因为 $\bar{x}$ 是从数据本身计算出来的，自由度为 $f = n - 1$。用 $n-1$ 作为除数可以得到总体方差的<strong>无偏估计</strong>。当 $n \to \infty$ 时，$s \to \sigma$（总体标准偏差）。
+  <strong>为什么除以 $n-1$ 而非 $n$？</strong>因为 $\bar{x}$ 是从数据本身计算出来的，自由度为 $f = n - 1$。用 $n-1$ 作为除数可以得到总体方差的<strong>无偏估计</strong>。当 $n \to \infty$ 时，$s \to \sigma$（总体标准偏差）。当 $n < 20$ 时，公式中的分母用 $n-1$；当 $n > 50$ 时，分母用 $n-1$ 或 $n$ 无关紧要。
 </div>
 
 <div class="note">
   <strong>标准偏差 vs 平均偏差：</strong>标准偏差更能突出大偏差的影响（因为取了平方），在统计检验中使用更广泛。考试中标准偏差的计算频率远高于平均偏差。
+</div>
+
+<div class="card">
+  <h3>均值的标准偏差（标准误差）</h3>
+  <p>通常用样本平均值 $\bar{x}$ 来估计总体均值 $\mu$。$\bar{x}$ 本身也有标准偏差，称为<strong>均值的标准偏差</strong>（标准误差）：</p>
+  $$s_{\bar{x}} = \frac{s}{\sqrt{n}}$$
+  <p>意义：它反映了平均值的分散程度比单次测量的分散程度更好。$n$ 越大，$s_{\bar{x}}$ 越小，$\bar{x}$ 作为 $\mu$ 的估计就越精确。</p>
+  <p>但由图可知，当 $n > 10$ 以后精度提高变缓，一般取 $n = 3\sim5$ 次测定即可。在实际工作中增加到 $n > 10$ 次已经没有太大意义。</p>
 </div>
 
 <!-- ============================================================ -->
@@ -115,6 +153,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <tr><td><strong>定义</strong></td><td>测量值与真值的接近程度</td><td>多次测量值之间的一致程度</td></tr>
     <tr><td><strong>衡量指标</strong></td><td>误差（绝对误差、相对误差）</td><td>偏差（标准偏差、RSD）</td></tr>
     <tr><td><strong>反映</strong></td><td>系统误差的大小</td><td>随机误差的大小</td></tr>
+    <tr><td><strong>改善方法</strong></td><td>消除系统误差（对照、空白、校准）</td><td>增加平行测定次数、改善操作</td></tr>
   </table>
 </div>
 
@@ -139,16 +178,23 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </ul>
 </div>
 
+<div class="exam">
+  <div class="et">Quiz 1 填空 Q4 考点</div>
+  <p>"精密度高是准确度高的<strong>前提</strong>"——这句话考的就是必要不充分条件的关系。准确度反映系统误差，精密度反映随机误差。两者从不同角度评价分析结果。</p>
+</div>
+
 <!-- ============================================================ -->
 <h2>3.3 系统误差与随机误差</h2>
+<img class="ppt-img" src="temp_pages/ch3_p10.png" alt="系统误差与随机误差">
+<p class="ppt-caption">PPT: 系统误差的来源与特点</p>
 
 <div class="card">
   <h3>系统误差（Systematic Error / 确定误差）</h3>
   <table>
     <tr><th>分类</th><th>来源</th><th>示例</th></tr>
-    <tr><td><strong>方法误差</strong></td><td>分析方法本身的缺陷</td><td>指示剂终点与化学计量点不一致；沉淀的溶解损失；副反应</td></tr>
-    <tr><td><strong>仪器/试剂误差</strong></td><td>仪器不准确、试剂不纯</td><td>砝码磨损、量器未校准、蒸馏水含杂质</td></tr>
-    <tr><td><strong>操作误差</strong></td><td>分析人员主观因素</td><td>对颜色变化判断偏差、读数习惯偏高/偏低</td></tr>
+    <tr><td><strong>方法误差</strong></td><td>分析方法本身的缺陷</td><td>指示剂终点与化学计量点不一致；沉淀的溶解损失；副反应；共沉淀</td></tr>
+    <tr><td><strong>仪器/试剂误差</strong></td><td>仪器不准确、试剂不纯</td><td>砝码磨损、量器未校准、蒸馏水含杂质、<strong>天平未调水平</strong></td></tr>
+    <tr><td><strong>操作误差</strong></td><td>分析人员主观因素</td><td>对颜色变化判断偏差、读数习惯偏高/偏低、过早/过迟判断终点</td></tr>
   </table>
 
   <p><strong>特点：</strong></p>
@@ -157,7 +203,38 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <li>具有<strong>重复性</strong>（同一条件下重复出现）</li>
     <li>可以通过对照实验、空白实验、校准仪器等方法<strong>发现和消除</strong></li>
     <li>影响<strong>准确度</strong></li>
+    <li>增加平行测定次数<strong>不能</strong>消除系统误差</li>
   </ul>
+</div>
+
+<div class="exam">
+  <div class="et">Quiz 1 填空 Q1 / 2022 期末 Q5 考点：系统误差 vs 随机误差判别</div>
+  <p>常见考题要求判断给定情景属于哪种误差：</p>
+  <table>
+    <tr><th>情景</th><th>误差类型</th><th>理由</th></tr>
+    <tr><td><strong>天平未调水平</strong></td><td>系统误差（仪器误差）</td><td>每次称量都朝同一方向偏，具有单向性和重复性</td></tr>
+    <tr><td><strong>滴定管最后一位读数估读</strong></td><td>随机误差</td><td>估读值时大时小，无固定偏向，属于不可控随机因素</td></tr>
+    <tr><td>砝码被腐蚀（偏轻）</td><td>系统误差（仪器误差）</td><td>每次称量结果都偏大（需加更多样品才能平衡）</td></tr>
+    <tr><td>温度微小波动导致体积读数不一致</td><td>随机误差</td><td>波动无固定方向，随机因素</td></tr>
+    <tr><td>指示剂变色点偏离化学计量点</td><td>系统误差（方法误差）</td><td>每次滴定都多消耗/少消耗标准溶液</td></tr>
+    <tr><td>称量过程中气流扰动</td><td>随机误差</td><td>无法控制和预测方向</td></tr>
+    <tr><td>试剂中含微量被测组分</td><td>系统误差（试剂误差）</td><td>每次都使结果偏高</td></tr>
+    <tr><td>读取量筒刻度时视线高低不一</td><td>随机误差</td><td>有时偏高有时偏低，无固定方向</td></tr>
+  </table>
+</div>
+
+<div class="fb">
+  <div class="t">回收率实验法（检查系统误差的重要方法）</div>
+  <p>向试样中加入已知量的被测组分（标准物质），按同样方法操作，检查加入量的回收百分比：</p>
+  $$\text{回收率}\% = \frac{C_{\text{加标试样}} - C_{\text{试样}}}{C_{\text{加标量}}} \times 100\%$$
+  <p>一般要求：常量组分回收率 $\approx 99\%$；微量组分回收率在 $90\%\sim110\%$ 之间。</p>
+</div>
+
+<div class="card">
+  <h3>过失误差（Gross Error / 粗大误差）</h3>
+  <p><strong>来源：</strong>由于操作者粗心大意、疏忽等原因造成的明显异常误差，如读错刻度、记错数据、加错试剂等。</p>
+  <p><strong>特点：</strong>属于应该避免和排除的失误，不属于正常的系统误差或随机误差。</p>
+  <p><strong>处理：</strong>含有过失误差的数据应当<strong>舍弃</strong>，不参与后续统计计算。发现后应<strong>重做</strong>实验。可用 Q 检验或 Grubbs 检验辅助判断。</p>
 </div>
 
 <div class="card">
@@ -176,31 +253,104 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 </div>
 
 <div class="fb">
-  <div class="t">减小误差的方法</div>
+  <div class="t">减小误差的方法（详细）</div>
   <table>
-    <tr><th>误差类型</th><th>减小方法</th></tr>
-    <tr><td><strong>系统误差</strong></td><td>对照实验（用标准试样验证）；空白实验（扣除试剂空白）；校准仪器；改进方法；回收率实验</td></tr>
-    <tr><td><strong>随机误差</strong></td><td>增加平行测定次数（取平均值）；控制实验条件；提高操作技能</td></tr>
+    <tr><th>误差类型</th><th>减小方法</th><th>具体操作</th></tr>
+    <tr><td rowspan="5"><strong>系统误差</strong></td><td>对照实验</td><td>用已知含量的标准试样验证方法准确性</td></tr>
+    <tr><td>空白实验</td><td>不加试样，走完全部流程，扣除试剂和器皿引入的空白值</td></tr>
+    <tr><td>校准仪器</td><td>定期校准天平、量器、pH 计等</td></tr>
+    <tr><td>改进方法</td><td>换用更准确的分析方法或加入掩蔽剂消除干扰</td></tr>
+    <tr><td>回收率实验</td><td>向试样中加入已知量被测物，检查回收百分比</td></tr>
+    <tr><td rowspan="3"><strong>随机误差</strong></td><td>增加平行测定次数</td><td>均值标准误差 $s/\sqrt{n}$ 随 $n$ 增大而减小</td></tr>
+    <tr><td>控制实验条件</td><td>恒温、避免气流、使用精密仪器</td></tr>
+    <tr><td>提高操作技能</td><td>规范操作手法、多加练习</td></tr>
   </table>
+</div>
+
+<div class="exam">
+  <div class="et">Quiz 1 选择 Q1 考点</div>
+  <p><strong>题目：</strong>增加平行测定次数可以减小（ ）。</p>
+  <p><strong>答案：随机误差。</strong>增加 $n$ 使得 $s/\sqrt{n}$ 减小，从而减小随机误差对均值的影响。但系统误差不受测定次数影响——即使测 100 次，如果天平没校准，误差照样存在。</p>
+</div>
+
+<div class="exam">
+  <div class="et">Quiz 1 选择 Q10 考点</div>
+  <p><strong>题目：</strong>比较两组数据的精密度应采用（ ）检验。</p>
+  <p><strong>答案：F 检验。</strong>F 检验比较的是两组数据的<strong>方差</strong>（$s^2$），从而判断精密度是否有显著差异。t 检验比较的是<strong>均值</strong>。切勿混淆！</p>
+</div>
+
+<div class="exam">
+  <div class="et">2022 期末 Q5 考点</div>
+  <p><strong>题目：</strong>滴定管最后一位读数的估读属于（ ）误差。</p>
+  <p><strong>答案：随机误差。</strong>每次估读时，人眼判断的微小偏差是无法控制、无固定方向的随机因素。这与"天平未调水平"（系统误差）形成典型对比。</p>
 </div>
 
 <!-- ============================================================ -->
 <h2>3.4 有效数字</h2>
+<img class="ppt-img" src="temp_pages/ch3_p46.png" alt="有效数字">
+<p class="ppt-caption">PPT: 有效数字的运算规则</p>
 
 <div class="card">
   <h3>有效数字的基本规则</h3>
+  <p><strong>有效数字的定义：</strong>有效数字是指分析工作中<strong>实际上能测量到的数据</strong>，由所有<strong>准确数字</strong>加上<strong>一位可疑数字（不确定数字）</strong>组成。</p>
+  $$\text{有效数字} = \text{（准确数字）} + \text{（一位可疑数据）}$$
+  <p>例：万分之一天平 $\pm 0.0001$ g，坩埚重 $10.3567$ g（最后一位 7 是可疑的，共 6 位有效数字）；滴定管 $\pm 0.01$ mL，度数 $10.07$ mL（最后一位 7 是可疑的，共 4 位有效数字）。</p>
+
   <ol>
     <li>数字中从左起第一个非零数字到最后一位数字（无论是否为零），都是有效数字</li>
     <li>例：$0.0108$ 有 <strong>3</strong> 位有效数字；$1.080$ 有 <strong>4</strong> 位有效数字</li>
     <li>数字前面的零不算有效数字，中间和末尾的零都算</li>
-    <li>pH、pK、lg 等<strong>对数值</strong>的有效数字位数仅由<strong>小数部分</strong>决定（整数部分仅表示数量级）
-      <ul>
-        <li>例：$\text{pH} = 11.20$ 有效数字为 <strong>2</strong> 位（0.20）</li>
-        <li>$\lg K = 5.32$ 有效数字为 <strong>2</strong> 位（0.32）</li>
-      </ul>
-    </li>
     <li>对于以"万""亿"等表示的数，改写为科学计数法更清楚。例如 "1500" 不明确，写成 $1.5 \times 10^3$（2 位）或 $1.500 \times 10^3$（4 位）</li>
   </ol>
+</div>
+
+<div class="fb">
+  <div class="t">有效数字位数与相对误差的关系</div>
+  <p>有效数字的位数直接反映了测定的<strong>相对误差</strong>：</p>
+  <p>例：物重 $0.5180$ g，实际重量为 $0.5180 \pm 0.0001$ g</p>
+  $$E_r = \pm \frac{0.0001}{0.5180} \times 100\% = \pm 0.02\%$$
+  <p>如果读成 $0.518$ g，则表示实际为 $0.518 \pm 0.001$ g</p>
+  $$E_r = \pm \frac{0.001}{0.518} \times 100\% = \pm 0.2\%$$
+  <p><strong>结论：有效数字越多，仪器越精密，测量越准确。</strong>不能随意多写或少写有效数字位数。</p>
+</div>
+
+<div class="fb">
+  <div class="t">对数有效数字规则（极其重要的考试高频考点！）</div>
+  <p>pH、pK、$\lg$ 等<strong>对数值</strong>的有效数字位数仅由<strong>小数部分的位数</strong>决定，整数部分仅表示数量级，不计入有效数字。</p>
+  <table>
+    <tr><th>对数值</th><th>小数部分</th><th>有效数字位数</th><th>说明</th></tr>
+    <tr><td>$\text{pH} = 11.20$</td><td>0.20（2 位小数）</td><td><strong>2</strong> 位</td><td>11 仅表示数量级 $10^{-11}$</td></tr>
+    <tr><td>$\text{pH} = 3.50$</td><td>0.50（2 位小数）</td><td><strong>2</strong> 位</td><td>3 仅表示数量级</td></tr>
+    <tr><td>$\lg K = 5.32$</td><td>0.32（2 位小数）</td><td><strong>2</strong> 位</td><td></td></tr>
+    <tr><td>$\text{pH} = 0.070$</td><td>0.070（3 位小数）</td><td><strong>3</strong> 位</td><td>注意末尾 0 计入！</td></tr>
+  </table>
+
+  <p><strong>反向应用：从对数值反算浓度时的有效数字</strong></p>
+  <p>pH 的小数位数决定了反对数结果的有效数字位数。例如：</p>
+  $$\text{pH} = 0.070 \implies [\text{H}^+] = 10^{-0.070} = 0.851 \text{ mol/L}$$
+  <p>pH 小数部分 0.070 有 3 位，所以 $[\text{H}^+]$ 应保留 <strong>3 位有效数字</strong>。</p>
+</div>
+
+<div class="exam">
+  <div class="et">Quiz 1 选择 Q6 考点</div>
+  <p><strong>题目：</strong>$\text{pH} = 0.070$，求 $[\text{H}^+]$ 应保留几位有效数字？</p>
+  <p><strong>答案：3 位有效数字。</strong>pH 小数部分 "070" 有 3 位数字（末尾 0 有效），所以 $[\text{H}^+] = 10^{-0.070} = 0.851$ mol/L，保留 3 位。</p>
+  <p><strong>易错点：</strong>很多同学误以为 pH = 0.070 有 2 位有效数字（以为前面的 0 不算）。记住：对数值看小数部分！"070" 这 3 个数字全部有效。</p>
+</div>
+
+<div class="exam">
+  <div class="et">Quiz 1 选择 Q9 / 2022 期末 Q4 考点：普通数值的有效数字</div>
+  <p><strong>题目：</strong>$w(\text{CaO}) = 38.56\%$ 有几位有效数字？</p>
+  <p><strong>答案：4 位。</strong>38.56 从第一个非零数字 3 到最后一位 6，共 4 位。百分号不影响有效数字。</p>
+  <p><strong>类似题目（2022 期末 Q4）：</strong>$w(\text{Ca}) = 36.18\%$ 有几位有效数字？答案同样是 <strong>4 位</strong>。</p>
+  <p><strong>更多练习：</strong></p>
+  <ul>
+    <li>$0.0250$：<strong>3</strong> 位（2, 5, 0 有效，前面的 0 不算）</li>
+    <li>$1.00 \times 10^{-3}$：<strong>3</strong> 位</li>
+    <li>$50.00$ mL：<strong>4</strong> 位</li>
+    <li>$\text{pH} = 12.45$：<strong>2</strong> 位（对数规则！看小数部分 .45）</li>
+    <li>$\text{p}K_a = 4.740$：<strong>3</strong> 位（看小数部分 .740）</li>
+  </ul>
 </div>
 
 <div class="card">
@@ -214,10 +364,22 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
         <li>5 后面有非零数字 &rarr; 进位（如 2.3501 &rarr; 2.4）</li>
         <li>5 后面全为零或无数字 &rarr; 看 5 前一位：奇数则进位，偶数则舍去</li>
         <li>例：$2.350 \to 2.4$（3 为奇数，进）；$2.450 \to 2.4$（4 为偶数，舍）</li>
-        <li>例：$3.250 \to 3.2$；$3.150 \to 3.2$</li>
+        <li>例：$3.250 \to 3.2$（2 为偶数，舍）；$3.150 \to 3.2$（1 为奇数，进）</li>
       </ul>
     </li>
   </ul>
+
+  <p><strong>更多练习（保留 3 位有效数字）：</strong></p>
+  <table>
+    <tr><th>原数</th><th>修约结果</th><th>说明</th></tr>
+    <tr><td>$0.02450$</td><td>$0.0244$</td><td>5 前面 4 是偶数，舍（注意保留到第 3 位有效数字 = 小数第 4 位）</td></tr>
+    <tr><td>$0.02550$</td><td>$0.0256$</td><td>5 前面 5 是奇数，进</td></tr>
+    <tr><td>$1.235$</td><td>$1.24$</td><td>5 前面 3 是奇数，进</td></tr>
+    <tr><td>$1.245$</td><td>$1.24$</td><td>5 前面 4 是偶数，舍</td></tr>
+    <tr><td>$1.2451$</td><td>$1.25$</td><td>5 后面有非零数 1，进位！</td></tr>
+    <tr><td>$0.3665$</td><td>$0.366$</td><td>5 前面 6 是偶数，舍</td></tr>
+    <tr><td>$0.3675$</td><td>$0.368$</td><td>5 前面 7 是奇数，进</td></tr>
+  </table>
 </div>
 
 <div class="warn">
@@ -236,6 +398,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <li>在运算过程中，可多保留一位，最终结果再修约</li>
     <li>倍数、分数（如 1/2、2）为准确数字，不影响有效数字位数</li>
     <li>相对原子质量根据需要取位</li>
+    <li>加减法和乘除法混合运算时，<strong>分步应用规则</strong>：先按各步规则判断，最终结果取最少的</li>
   </ul>
 </div>
 
@@ -249,8 +412,31 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 </div>
 
+<div class="exam">
+  <div class="et">Quiz 1 填空 Q2 考点：有效数字综合运算</div>
+  <p><strong>题目：</strong>按有效数字运算规则计算：$\dfrac{51.0 \times 4.03 \times 10^{-4}}{2.512 \times 0.002034} = ?$</p>
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p>分析各数有效数字位数：</p>
+    <ul>
+      <li>$51.0$：<strong>3</strong> 位</li>
+      <li>$4.03 \times 10^{-4}$：<strong>3</strong> 位</li>
+      <li>$2.512$：<strong>4</strong> 位</li>
+      <li>$0.002034$：<strong>4</strong> 位</li>
+    </ul>
+    <p>乘除法规则：结果保留 <strong>3 位</strong>有效数字（最少为 3 位）。</p>
+    <p>计算过程：</p>
+    $$\text{分子} = 51.0 \times 4.03 \times 10^{-4} = 2.0553 \times 10^{-2}$$
+    $$\text{分母} = 2.512 \times 0.002034 = 5.10941 \times 10^{-3}$$
+    $$\text{结果} = \frac{2.0553 \times 10^{-2}}{5.10941 \times 10^{-3}} = 4.0225... \approx 4.02$$
+    <p><strong>答案：$4.02$</strong>（3 位有效数字）</p>
+  </div>
+</div>
+
 <!-- ============================================================ -->
 <h2>3.5 正态分布</h2>
+<img class="ppt-img" src="temp_pages/ch3_p26.png" alt="正态分布">
+<p class="ppt-caption">PPT: 正态分布曲线</p>
 
 <div class="card">
   <h3>正态分布的概率密度函数</h3>
@@ -275,11 +461,26 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 </div>
 
 <div class="tip">
-  <strong>正态分布的特点：</strong>对称性（正负误差概率相等）、单峰性（小误差比大误差概率大）、有界性（大误差概率趋于零）、抵偿性（正负误差之和趋于零）。
+  <strong>正态分布的四大特点：</strong>
+  <ul>
+    <li><strong>对称性</strong>：正负误差概率相等，曲线以 $\mu$ 为对称轴</li>
+    <li><strong>单峰性</strong>：小误差比大误差概率大，$x = \mu$ 处概率密度最大</li>
+    <li><strong>有界性</strong>：大误差概率趋于零，超出 $\pm 3\sigma$ 几乎不可能</li>
+    <li><strong>抵偿性</strong>：正负误差之和趋于零，多次测量取平均可减小随机误差</li>
+  </ul>
+</div>
+
+<div class="exam">
+  <div class="et">2022 期末 填空 Q8 考点：正态分布性质</div>
+  <p><strong>题目：</strong>随机误差的正态分布具有哪些特点？</p>
+  <p><strong>答案：</strong>对称性（正负误差出现概率相等）、单峰性（小误差出现概率大于大误差）、有界性（误差不超过一定范围）、抵偿性（正负误差相互抵消，多次测量均值趋近真值）。</p>
+  <p><strong>背诵口诀：</strong>"对单有抵"——对称、单峰、有界、抵偿。</p>
 </div>
 
 <!-- ============================================================ -->
-<h2>3.6 t 分布</h2>
+<h2>3.6 t 分布与置信区间</h2>
+<img class="ppt-img" src="temp_pages/ch3_p31.png" alt="t分布">
+<p class="ppt-caption">PPT: t分布与置信区间</p>
 
 <div class="card">
   <h3>为什么需要 t 分布？</h3>
@@ -292,37 +493,46 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <h3>t 分布的特点</h3>
   <ul>
     <li>以 $t = 0$ 为中心的<strong>对称分布</strong>，形状类似正态分布但更"矮胖"</li>
-    <li>$f$ 越小，两尾越"肥"（偏离 0 的概率更大）</li>
+    <li>$f$ 越小，两尾越"肥"（偏离 0 的概率更大）——意味着小样本时不确定性更大</li>
     <li>当 $f \to \infty$ 时，$t$ 分布趋于正态分布</li>
     <li>当 $f > 30$ 时，$t$ 分布已与正态分布非常接近</li>
+    <li>$f$ 相同时，$\alpha$ 越小（置信水平越高），$t$ 值越大，置信区间越宽</li>
   </ul>
 </div>
 
 <div class="card">
-  <h3>t 值表（双侧，常用值）</h3>
+  <h3>t 值表（双侧，完整常用值）</h3>
   <table>
     <tr><th>$f$</th><th>$\alpha=0.10$ (90%)</th><th>$\alpha=0.05$ (95%)</th><th>$\alpha=0.02$ (98%)</th><th>$\alpha=0.01$ (99%)</th></tr>
     <tr><td>1</td><td>6.314</td><td>12.706</td><td>31.821</td><td>63.657</td></tr>
-    <tr><td>2</td><td>2.920</td><td>4.303</td><td>6.965</td><td>9.925</td></tr>
-    <tr><td>3</td><td>2.353</td><td>3.182</td><td>4.541</td><td>5.841</td></tr>
-    <tr><td>4</td><td>2.132</td><td>2.776</td><td>3.747</td><td>4.604</td></tr>
-    <tr><td>5</td><td>2.015</td><td>2.571</td><td>3.365</td><td>4.032</td></tr>
-    <tr><td>6</td><td>1.943</td><td>2.447</td><td>3.143</td><td>3.707</td></tr>
-    <tr><td>7</td><td>1.895</td><td>2.365</td><td>2.998</td><td>3.499</td></tr>
-    <tr><td>8</td><td>1.860</td><td>2.306</td><td>2.896</td><td>3.355</td></tr>
+    <tr><td>2</td><td>2.920</td><td><strong>4.303</strong></td><td>6.965</td><td>9.925</td></tr>
+    <tr><td>3</td><td>2.353</td><td><strong>3.182</strong></td><td>4.541</td><td>5.841</td></tr>
+    <tr><td>4</td><td>2.132</td><td><strong>2.776</strong></td><td>3.747</td><td>4.604</td></tr>
+    <tr><td>5</td><td>2.015</td><td><strong>2.571</strong></td><td>3.365</td><td>4.032</td></tr>
+    <tr><td>6</td><td>1.943</td><td><strong>2.447</strong></td><td>3.143</td><td>3.707</td></tr>
+    <tr><td>7</td><td>1.895</td><td><strong>2.365</strong></td><td>2.998</td><td>3.499</td></tr>
+    <tr><td>8</td><td>1.860</td><td><strong>2.306</strong></td><td>2.896</td><td>3.355</td></tr>
     <tr><td>9</td><td>1.833</td><td>2.262</td><td>2.821</td><td>3.250</td></tr>
     <tr><td>10</td><td>1.812</td><td>2.228</td><td>2.764</td><td>3.169</td></tr>
     <tr><td>15</td><td>1.753</td><td>2.131</td><td>2.602</td><td>2.947</td></tr>
     <tr><td>20</td><td>1.725</td><td>2.086</td><td>2.528</td><td>2.845</td></tr>
     <tr><td>$\infty$</td><td>1.645</td><td>1.960</td><td>2.326</td><td>2.576</td></tr>
   </table>
+  <div class="tip">
+    <strong>考试必背（$\alpha = 0.05$）：</strong>$f=2 \to 4.30$；$f=3 \to 3.18$；$f=4 \to 2.78$；$f=5 \to 2.57$；$f=6 \to 2.45$；$f=7 \to 2.37$；$f=8 \to 2.31$。这些值在计算题中使用最频繁！
+  </div>
 </div>
 
-<!-- ============================================================ -->
-<h2>3.7 置信区间</h2>
+<div class="card">
+  <h3>当 $\sigma$ 已知时的置信区间（u 分布）</h3>
+  <p>当实验室由于数据的长期积累，$\sigma$ 可以认为已知时，置信区间为：</p>
+  $$\mu = \bar{x} \pm u_{\alpha} \cdot \frac{\sigma}{\sqrt{n}}$$
+  <p>其中 $u_{\alpha}$ 为正态分布的临界值（如 $u_{0.05} = 1.96$，$u_{0.01} = 2.58$）。</p>
+  <p>此公式不依赖自由度，适用于 $\sigma$ 已知或 $n$ 很大（$n > 30$）的情况。</p>
+</div>
 
 <div class="fb">
-  <div class="t">置信区间公式</div>
+  <div class="t">当 $\sigma$ 未知时的置信区间公式（t 分布，最常用）</div>
   <p>在置信水平 $1 - \alpha$ 下，总体均值 $\mu$ 的置信区间为：</p>
   $$\mu = \bar{x} \pm t_{\alpha, f} \cdot \frac{s}{\sqrt{n}}$$
   <p>其中：</p>
@@ -365,8 +575,76 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 </div>
 
+<div class="exam">
+  <div class="et">Quiz 1 计算 Q1 完整解析：铁矿石统计分析</div>
+  <p><strong>题目：</strong>4 次平行测定铁矿石中铁的质量分数：54.20%, 54.30%, 54.24%, 54.26%。(1) 求 95% 置信区间；(2) 与标准值 54.30% 做 t 检验。</p>
+  <div class="sol">
+    <div class="st">详细解答：</div>
+
+    <p><strong>(1) 计算均值 $\bar{x}$：</strong></p>
+    $$\bar{x} = \frac{54.20 + 54.30 + 54.24 + 54.26}{4} = \frac{217.00}{4} = 54.25\%$$
+
+    <p><strong>(2) 用 Bessel 公式逐步计算标准偏差 $s$：</strong></p>
+    <table>
+      <tr><th>$x_i$</th><th>$x_i - \bar{x}$</th><th>$(x_i - \bar{x})^2$</th></tr>
+      <tr><td>54.20</td><td>$-0.05$</td><td>$0.0025$</td></tr>
+      <tr><td>54.30</td><td>$+0.05$</td><td>$0.0025$</td></tr>
+      <tr><td>54.24</td><td>$-0.01$</td><td>$0.0001$</td></tr>
+      <tr><td>54.26</td><td>$+0.01$</td><td>$0.0001$</td></tr>
+      <tr><th colspan="2">合计</th><th>$0.0052$</th></tr>
+    </table>
+    $$s = \sqrt{\frac{\sum(x_i - \bar{x})^2}{n-1}} = \sqrt{\frac{0.0052}{3}} = \sqrt{0.001733} = 0.042\%$$
+    <p>（有些解答取 $s = 0.043\%$，取决于中间保留位数，两者均可）</p>
+
+    <p><strong>(3) 95% 置信区间：</strong></p>
+    <p>$n = 4$，$f = 3$，查表 $t_{0.05, 3} = 3.182$</p>
+    $$\mu = \bar{x} \pm t_{0.05,3} \cdot \frac{s}{\sqrt{n}} = 54.25 \pm 3.182 \times \frac{0.042}{\sqrt{4}}$$
+    $$= 54.25 \pm 3.182 \times 0.021 = 54.25 \pm 0.07\%$$
+    <p><strong>答：95% 置信区间为 $(54.18\%, 54.32\%)$</strong></p>
+
+    <p><strong>(4) t 检验（与标准值 $\mu_0 = 54.30\%$ 比较）：</strong></p>
+    <p>$H_0$：$\bar{x}$ 与 $\mu_0$ 无显著差异</p>
+    $$t_{\text{calc}} = \frac{|\bar{x} - \mu_0|}{s / \sqrt{n}} = \frac{|54.25 - 54.30|}{0.042 / \sqrt{4}} = \frac{0.05}{0.021} = 2.38$$
+    <p>比较：$t_{\text{calc}} = 2.38 < t_{0.05, 3} = 3.182$</p>
+    <p><strong>结论：不能拒绝 $H_0$。在 95% 置信水平下，测定结果与标准值 54.30% 无显著差异，不存在显著的系统误差。</strong></p>
+  </div>
+</div>
+
+<div class="exam">
+  <div class="et">2022 期末 计算 Q1 完整解析：铁矿石统计分析</div>
+  <p><strong>题目：</strong>3 次平行测定铁矿石中铁的质量分数：52.48%, 52.52%, 52.41%。(1) 求 95% 置信区间；(2) 与真值 52.43% 做 t 检验。</p>
+  <div class="sol">
+    <div class="st">详细解答：</div>
+
+    <p><strong>(1) 计算均值：</strong></p>
+    $$\bar{x} = \frac{52.48 + 52.52 + 52.41}{3} = \frac{157.41}{3} = 52.47\%$$
+
+    <p><strong>(2) 计算标准偏差：</strong></p>
+    <table>
+      <tr><th>$x_i$</th><th>$x_i - \bar{x}$</th><th>$(x_i - \bar{x})^2$</th></tr>
+      <tr><td>52.48</td><td>$+0.01$</td><td>$0.0001$</td></tr>
+      <tr><td>52.52</td><td>$+0.05$</td><td>$0.0025$</td></tr>
+      <tr><td>52.41</td><td>$-0.06$</td><td>$0.0036$</td></tr>
+      <tr><th colspan="2">合计</th><th>$0.0062$</th></tr>
+    </table>
+    $$s = \sqrt{\frac{0.0062}{2}} = \sqrt{0.0031} = 0.056\%$$
+
+    <p><strong>(3) 95% 置信区间：</strong></p>
+    <p>$n = 3$，$f = 2$，查表 $t_{0.05, 2} = 4.303$</p>
+    $$\mu = 52.47 \pm 4.303 \times \frac{0.056}{\sqrt{3}} = 52.47 \pm 4.303 \times 0.0323 = 52.47 \pm 0.14\%$$
+    <p><strong>答：95% 置信区间为 $(52.33\%, 52.61\%)$</strong></p>
+
+    <p><strong>(4) t 检验（与真值 $\mu_0 = 52.43\%$ 比较）：</strong></p>
+    $$t_{\text{calc}} = \frac{|52.47 - 52.43|}{0.056/\sqrt{3}} = \frac{0.04}{0.0323} = 1.24$$
+    <p>比较：$t_{\text{calc}} = 1.24 < t_{0.05, 2} = 4.303$</p>
+    <p><strong>结论：$t_{\text{calc}} < t_{0.05,2}$，不能拒绝 $H_0$。在 95% 置信水平下，测定结果与真值无显著差异。</strong></p>
+
+    <p><strong>注意：</strong>$n=3$ 时 $f=2$，对应的 $t_{0.05,2} = 4.303$ 非常大，说明样本量很少时统计检验的"门槛"很高，不容易检出系统误差。这也是为什么增加平行测定次数对提高检测灵敏度很重要。</p>
+  </div>
+</div>
+
 <!-- ============================================================ -->
-<h2>3.8 显著性检验</h2>
+<h2>3.7 显著性检验</h2>
 
 <div class="card">
   <h3>显著性检验的基本思想</h3>
@@ -382,6 +660,41 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="warn">
   <strong>重要：检验顺序！</strong>当同时需要比较两组数据的均值和精密度时，<strong>先做 F 检验</strong>（比较方差/精密度），再做 <strong>t 检验</strong>（比较均值）。因为 t 检验的公式取决于两组数据方差是否相等。
+</div>
+
+<div class="fb">
+  <div class="t">检验决策树：完整流程</div>
+  <ol>
+    <li><strong>Step 1：Q 检验 / Grubbs 检验</strong> —— 先剔除离群值</li>
+    <li><strong>Step 2：F 检验</strong> —— 比较两组数据的精密度（方差）是否有显著差异</li>
+    <li><strong>Step 3：t 检验</strong> —— 根据 F 检验结果选择合适的 t 检验公式
+      <ul>
+        <li>若 F 检验表明方差无显著差异 → 用<strong>合并标准偏差</strong> $s_p$ 的公式</li>
+        <li>若 F 检验表明方差有显著差异 → 用 <strong>Welch t 检验</strong>（近似法）</li>
+      </ul>
+    </li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3>u 检验（$\sigma$ 已知时）</h3>
+  <p>当总体标准偏差 $\sigma$ 已知（如由大量历史数据积累）时，不需要 t 分布，直接用<strong>正态分布</strong>的 $u$ 统计量：</p>
+  $$u_{\text{calc}} = \frac{|\bar{x} - \mu_0|}{\sigma / \sqrt{n}}$$
+  <p><strong>判断：</strong>若 $|u_{\text{calc}}| > u_{\alpha}$（查正态分布表），则拒绝 $H_0$，差异显著。</p>
+  <p><strong>常用临界值：</strong>$u_{0.05} = 1.96$（双侧 95%），$u_{0.01} = 2.58$（双侧 99%）。</p>
+  <div class="tip">
+    <strong>u 检验 vs t 检验：</strong>关键区别在于 $\sigma$ 是否已知。$\sigma$ 已知用 u 检验，$\sigma$ 未知（用 $s$ 代替）则用 t 检验。当 $n$ 很大（$n > 30$）时，$s \approx \sigma$，两种检验结果趋于一致。
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题（u 检验）：</strong>某炼铁厂铁水的碳含量服从正态分布，$\mu = 4.55\%$，$\sigma = 0.08\%$。某天测试 5 炉铁水，碳含量分别为 4.28%, 4.40%, 4.42%, 4.35%, 4.37%，试判断平均值有无变化？（$\alpha = 0.05$）
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p>$\bar{x} = 4.36\%$，$H_0$：$\mu = \mu_0 = 4.55\%$</p>
+    $$u_{\text{calc}} = \frac{|4.36 - 4.55|}{0.08/\sqrt{5}} = \frac{0.19}{0.0358} = 5.3$$
+    <p>$|u_{\text{calc}}| = 5.3 > u_{0.05} = 1.96$，<strong>拒绝 $H_0$</strong>，碳含量平均值有显著变化。</p>
+  </div>
 </div>
 
 <div class="card">
@@ -404,12 +717,75 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 </div>
 
 <div class="card">
+  <h3>t 检验三：配对数据的显著性检验</h3>
+  <p>当两种方法<strong>对同一组样品</strong>分别进行测定（不同方法、相同样品），所得的两组数据是"配对"的，不能当作独立样本处理。</p>
+  <p><strong>方法：</strong>计算每对数据的差值 $d_i = x_{1i} - x_{2i}$，将问题转化为判断差值的总体均值是否为零。</p>
+  <p>$H_0$：两种方法无显著性差异（$\bar{d} = 0$）</p>
+
+  <p><strong>计算步骤：</strong></p>
+  <ol>
+    <li>计算每对差值 $d_i = x_{1i} - x_{2i}$</li>
+    <li>计算差值的平均值 $\bar{d} = \dfrac{\sum d_i}{n}$</li>
+    <li>计算差值的标准偏差 $s_d = \sqrt{\dfrac{\sum(d_i - \bar{d})^2}{n-1}}$</li>
+    <li>计算 t 值：</li>
+  </ol>
+  $$t_{\text{calc}} = \frac{|\bar{d}|}{s_d / \sqrt{n}} = \frac{|\bar{d}|}{s_d} \cdot \sqrt{n}$$
+  <p>自由度 $f = n - 1$（$n$ 为配对数）</p>
+  <p><strong>判断：</strong>若 $t_{\text{calc}} > t_{\alpha, f}$，则拒绝 $H_0$，两种方法有显著差异。</p>
+
+  <div class="warn">
+    <strong>配对 t 检验 vs 独立双样本 t 检验的区别：</strong>配对 t 检验用于"同一样品、不同方法"的情况；独立双样本 t 检验用于"同一方法（或不同方法）、不同样品"的情况。不要混淆！
+  </div>
+</div>
+
+<div class="exam">
+  <div class="et">2022 期末 Q6 考点：t 检验比较均值</div>
+  <p><strong>题目要点：</strong>比较两组分析数据的均值是否有显著差异时，应使用 t 检验。</p>
+  <p><strong>关键理解：</strong></p>
+  <ul>
+    <li>t 检验比较的是<strong>均值</strong>，回答"两组数据的中心位置是否一致"</li>
+    <li>F 检验比较的是<strong>方差（精密度）</strong>，回答"两组数据的离散程度是否一致"</li>
+    <li>做两均值 t 检验之前，<strong>必须先做 F 检验</strong>判断方差是否齐性</li>
+  </ul>
+</div>
+
+<div class="card">
   <h3>F 检验（方差比检验）</h3>
+  <img class="ppt-img" src="temp_pages/ch3_p42.png" alt="F检验">
+  <p class="ppt-caption">PPT: F检验 — 精密度比较</p>
   <p>比较两组数据的<strong>精密度</strong>（方差）是否有显著差异。</p>
   <p>$H_0$：两组数据精密度无显著差异（$\sigma_1^2 = \sigma_2^2$）</p>
   $$F_{\text{calc}} = \frac{s_1^2}{s_2^2} \quad (s_1 > s_2, \text{使} F \ge 1)$$
   <p>自由度：$f_1 = n_1 - 1$（大方差对应的自由度），$f_2 = n_2 - 1$</p>
   <p><strong>判断：</strong>若 $F_{\text{calc}} > F_{\alpha}(f_1, f_2)$（查 F 表），则拒绝 $H_0$，两组精密度有显著差异。</p>
+</div>
+
+<div class="card">
+  <h3>F 检验临界值表（$\alpha = 0.05$，部分常用值）</h3>
+  <table>
+    <tr><th>$f_1 \backslash f_2$</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr>
+    <tr><td><strong>2</strong></td><td>19.00</td><td>9.55</td><td>6.94</td><td>5.79</td><td>5.14</td><td>4.74</td><td>4.46</td></tr>
+    <tr><td><strong>3</strong></td><td>19.16</td><td>9.28</td><td>6.59</td><td>5.41</td><td>4.76</td><td>4.35</td><td>4.07</td></tr>
+    <tr><td><strong>4</strong></td><td>19.25</td><td>9.12</td><td>6.39</td><td>5.19</td><td>4.53</td><td>4.12</td><td>3.84</td></tr>
+    <tr><td><strong>5</strong></td><td>19.30</td><td>9.01</td><td>6.26</td><td>5.05</td><td>4.39</td><td>3.97</td><td>3.69</td></tr>
+    <tr><td><strong>6</strong></td><td>19.33</td><td>8.94</td><td>6.16</td><td>4.95</td><td>4.28</td><td>3.87</td><td>3.58</td></tr>
+  </table>
+  <div class="tip">
+    <strong>注意：</strong>$f_1$ 是大方差对应的自由度（分子），$f_2$ 是小方差对应的自由度（分母）。查表时行列不能搞反！
+  </div>
+</div>
+
+<div class="card">
+  <h3>F 检验：单尾检验与双尾检验</h3>
+  <table>
+    <tr><th></th><th>单尾检验（One-tailed）</th><th>双尾检验（Two-tailed）</th></tr>
+    <tr><td><strong>假设</strong></td><td>$H_0$：$\sigma_1^2 \ge \sigma_2^2$（或 $\le$）<br>$H_1$：$\sigma_1^2 < \sigma_2^2$（有方向性）</td><td>$H_0$：$\sigma_1^2 = \sigma_2^2$<br>$H_1$：$\sigma_1^2 \ne \sigma_2^2$（无方向性）</td></tr>
+    <tr><td><strong>F 计算</strong></td><td>$F = s_1^2 / s_2^2$（按假设方向排列）</td><td>$F = s_{\text{大}}^2 / s_{\text{小}}^2$（大方差在分子）</td></tr>
+    <tr><td><strong>判据</strong></td><td>$F > F_{\alpha}(f_1, f_2)$ 则拒绝</td><td>$F > F_{\alpha/2}(f_1, f_2)$ 则拒绝</td></tr>
+  </table>
+  <div class="tip">
+    <strong>考试中一般使用双尾检验</strong>（因为通常不事先知道哪个方差大），且教材提供的 F 表多为单尾值。双尾检验时：若使用 $\alpha = 0.05$ 的双尾检验，应查 $\alpha = 0.025$ 的单尾 F 表；但分析化学教材中常简化为直接查 $F_{\alpha}$ 表，大方差放分子即可。
+  </div>
 </div>
 
 <div class="ex">
@@ -437,12 +813,31 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 </div>
 
+<div class="ex">
+  <strong>例题 5b（F 检验 + t 检验联合）：</strong>甲乙两人分析同一试样：甲 $n_1=5$, $\bar{x}_1=25.30\%$, $s_1=0.12\%$；乙 $n_2=6$, $\bar{x}_2=25.10\%$, $s_2=0.10\%$。先做 F 检验再做 t 检验（$\alpha=0.05$）。
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p><strong>Step 1: F 检验</strong></p>
+    $$F_{\text{calc}} = \frac{s_1^2}{s_2^2} = \frac{(0.12)^2}{(0.10)^2} = \frac{0.0144}{0.0100} = 1.44$$
+    <p>$f_1 = 4$，$f_2 = 5$，查表 $F_{0.05}(4,5) = 5.19$</p>
+    <p>$F_{\text{calc}} = 1.44 < 5.19$，两组精密度<strong>无显著差异</strong>，可用合并标准偏差。</p>
+
+    <p><strong>Step 2: t 检验（合并标准偏差法）</strong></p>
+    $$s_p = \sqrt{\frac{(5-1)(0.12)^2 + (6-1)(0.10)^2}{5+6-2}} = \sqrt{\frac{4 \times 0.0144 + 5 \times 0.0100}{9}} = \sqrt{\frac{0.1076}{9}} = \sqrt{0.01196} = 0.109\%$$
+    $$t_{\text{calc}} = \frac{|25.30 - 25.10|}{0.109\sqrt{\frac{1}{5}+\frac{1}{6}}} = \frac{0.20}{0.109 \times 0.608} = \frac{0.20}{0.0663} = 3.02$$
+    <p>$f = 5+6-2 = 9$，查表 $t_{0.05,9} = 2.262$</p>
+    <p>$t_{\text{calc}} = 3.02 > 2.262$，<strong>拒绝 $H_0$，两人均值有显著差异</strong>。</p>
+  </div>
+</div>
+
 <!-- ============================================================ -->
-<h2>3.9 可疑值取舍</h2>
+<h2>3.8 可疑值取舍</h2>
+<img class="ppt-img" src="temp_pages/ch3_p48.png" alt="可疑值取舍">
+<p class="ppt-caption">PPT: 可疑值的取舍 — Grubbs检验与Q检验</p>
 
 <div class="card">
   <h3>离群值（可疑数据）</h3>
-  <p>一组数据中明显偏离其他值的数据称为<strong>离群值</strong>（outlier）。需要用统计方法判断是否应该舍去。</p>
+  <p>一组数据中明显偏离其他值的数据称为<strong>离群值</strong>（outlier）。需要用统计方法判断是否应该舍去，<strong>不能仅凭直觉随意取舍</strong>。</p>
 </div>
 
 <div class="card">
@@ -453,14 +848,25 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <p>检验最小值 $x_1$ 是否为离群值：</p>
   $$Q_{\text{calc}} = \frac{x_2 - x_1}{x_n - x_1}$$
   <p><strong>判断：</strong>若 $Q_{\text{calc}} > Q_{\alpha, n}$（查 Q 表），则舍去该可疑值。</p>
+
+  <p><strong>Q 检验步骤总结：</strong></p>
+  <ol>
+    <li>将数据从小到大排列</li>
+    <li>确定可疑值（最大或最小值）</li>
+    <li>计算 $Q = \dfrac{\text{可疑值与相邻值之差}}{\text{全距（最大值 - 最小值）}}$</li>
+    <li>查 Q 表，比较 $Q_{\text{calc}}$ 与 $Q_{\alpha,n}$</li>
+    <li>$Q_{\text{calc}} > Q_{\alpha,n}$ 则舍去，否则保留</li>
+  </ol>
 </div>
 
 <div class="card">
-  <h3>Q 检验临界值表（90% 置信水平）</h3>
+  <h3>Q 检验临界值表</h3>
+  <p><strong>90% 置信水平（$\alpha = 0.10$）：</strong></p>
   <table>
     <tr><th>$n$</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
     <tr><td>$Q_{0.10}$</td><td>0.941</td><td>0.765</td><td>0.642</td><td>0.560</td><td>0.507</td><td>0.468</td><td>0.437</td><td>0.412</td></tr>
   </table>
+  <p><strong>95% 置信水平（$\alpha = 0.05$）：</strong></p>
   <table>
     <tr><th>$n$</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
     <tr><td>$Q_{0.05}$</td><td>0.970</td><td>0.829</td><td>0.710</td><td>0.625</td><td>0.568</td><td>0.526</td><td>0.493</td><td>0.466</td></tr>
@@ -469,17 +875,33 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>Grubbs 检验法</h3>
-  <p>先计算均值 $\bar{x}$ 和标准偏差 $s$（包含可疑值），然后：</p>
+  <p>先计算均值 $\bar{x}$ 和标准偏差 $s$（<strong>包含可疑值</strong>），然后：</p>
   $$G_{\text{calc}} = \frac{|x_{\text{可疑}} - \bar{x}|}{s}$$
   <p><strong>判断：</strong>若 $G_{\text{calc}} > G_{\alpha, n}$（查 Grubbs 表），则舍去。</p>
   <p>Grubbs 检验比 Q 检验更<strong>严谨</strong>，适用于 $n \ge 3$ 的情况。</p>
+
+  <p><strong>Grubbs 检验步骤：</strong></p>
+  <ol>
+    <li>计算包含可疑值在内的所有数据的 $\bar{x}$ 和 $s$</li>
+    <li>计算 $G = |x_{\text{可疑}} - \bar{x}| / s$</li>
+    <li>查 Grubbs 临界值表</li>
+    <li>$G_{\text{calc}} > G_{\alpha,n}$ 则舍去</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3>Grubbs 检验临界值表（$\alpha = 0.05$）</h3>
+  <table>
+    <tr><th>$n$</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
+    <tr><td>$G_{0.05}$</td><td>1.153</td><td>1.463</td><td>1.672</td><td>1.822</td><td>1.938</td><td>2.032</td><td>2.110</td><td>2.176</td></tr>
+  </table>
 </div>
 
 <div class="card">
   <h3>4d 法（简便法）</h3>
   <p>若某数据与其余数据均值之差超过 $4\bar{d}$（4 倍平均偏差，注意计算 $\bar{d}$ 时<strong>不包含</strong>可疑值），则舍去。</p>
   <p>即：若 $|x_{\text{可疑}} - \bar{x}'| > 4\bar{d}'$，则舍去（$\bar{x}'$ 和 $\bar{d}'$ 均不含可疑值）。</p>
-  <div class="warn">此法较粗糙，仅作为快速初步判断。</div>
+  <div class="warn">此法较粗糙，仅作为快速初步判断。考试中优先使用 Q 检验或 Grubbs 检验。</div>
 </div>
 
 <div class="ex">
@@ -493,6 +915,119 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <p>因为 $Q_{\text{calc}} = 0.750 < Q_{0.10, 4} = 0.765$，<strong>保留</strong> 25.68。</p>
     <p>在 90% 置信水平下，该值不是离群值。</p>
   </div>
+</div>
+
+<div class="ex">
+  <strong>例题 6b（Grubbs 检验）：</strong>对上述数据（25.20, 25.30, 25.32, 25.68），用 Grubbs 检验法在 95% 置信水平下判断 25.68 是否应舍去。
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p>Step 1：计算包含可疑值的均值和标准偏差</p>
+    $$\bar{x} = \frac{25.20+25.30+25.32+25.68}{4} = 25.375$$
+    $$s = \sqrt{\frac{(25.20-25.375)^2+(25.30-25.375)^2+(25.32-25.375)^2+(25.68-25.375)^2}{3}}$$
+    $$= \sqrt{\frac{0.0306+0.0056+0.0030+0.0930}{3}} = \sqrt{\frac{0.1322}{3}} = \sqrt{0.04407} = 0.210$$
+
+    <p>Step 2：计算 G 值</p>
+    $$G_{\text{calc}} = \frac{|25.68 - 25.375|}{0.210} = \frac{0.305}{0.210} = 1.452$$
+
+    <p>Step 3：查 Grubbs 表，$n=4$, $\alpha=0.05$, $G_{0.05,4} = 1.463$</p>
+    <p>$G_{\text{calc}} = 1.452 < G_{0.05,4} = 1.463$，<strong>保留</strong> 25.68。</p>
+    <p>结论与 Q 检验一致：该值不是离群值。</p>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<h2>3.9 误差传递</h2>
+
+<div class="card">
+  <h3>误差传递的基本概念</h3>
+  <p>当最终结果 $R$ 是多个独立测量量的函数 $R = f(x_1, x_2, \ldots)$ 时，各测量量的误差（不确定度）会"传递"到最终结果中。误差传递公式告诉我们如何从各分量的误差计算合成误差。</p>
+</div>
+
+<div class="card">
+  <h3>系统误差的传递</h3>
+  <p><strong>加减法：</strong>若 $R = x_1 + x_2 - x_3$，则：</p>
+  $$E_R = E_{x_1} + E_{x_2} - E_{x_3}$$
+  <p>绝对误差<strong>直接传递</strong>（注意符号）。</p>
+
+  <p><strong>乘除法：</strong>若 $R = \dfrac{x_1 \cdot x_2}{x_3}$，则：</p>
+  $$\frac{E_R}{R} = \frac{E_{x_1}}{x_1} + \frac{E_{x_2}}{x_2} - \frac{E_{x_3}}{x_3}$$
+  <p>相对误差<strong>直接传递</strong>（注意符号）。</p>
+</div>
+
+<div class="fb">
+  <div class="t">随机误差的传递（考试重点！）</div>
+  <p><strong>加减法：</strong>若 $R = x_1 + x_2 - x_3$，各量独立，则：</p>
+  $$s_R = \sqrt{s_{x_1}^2 + s_{x_2}^2 + s_{x_3}^2}$$
+  <p>绝对标准偏差的<strong>方和根</strong>传递。</p>
+
+  <p><strong>乘除法：</strong>若 $R = \dfrac{x_1 \cdot x_2}{x_3}$，则：</p>
+  $$\left(\frac{s_R}{R}\right)^2 = \left(\frac{s_{x_1}}{x_1}\right)^2 + \left(\frac{s_{x_2}}{x_2}\right)^2 + \left(\frac{s_{x_3}}{x_3}\right)^2$$
+  <p>相对标准偏差的<strong>方和根</strong>传递。</p>
+
+  <p><strong>通用公式：</strong>若 $R = f(x_1, x_2, \ldots, x_k)$，则：</p>
+  $$s_R^2 = \left(\frac{\partial R}{\partial x_1}\right)^2 s_{x_1}^2 + \left(\frac{\partial R}{\partial x_2}\right)^2 s_{x_2}^2 + \cdots + \left(\frac{\partial R}{\partial x_k}\right)^2 s_{x_k}^2$$
+
+  <p><strong>幂运算：</strong>若 $R = mA^n$，则：</p>
+  $$\frac{E_R}{R} = n\frac{E_A}{A} \qquad \text{（系统误差）} \qquad \frac{s_R}{R} = n\frac{s_A}{A} \qquad \text{（随机误差）}$$
+  <p>分析结果的相对误差是测量值相对误差的<strong>指数 $n$ 倍</strong>。</p>
+
+  <p><strong>指数运算：</strong>若 $R = 10^A$，则：</p>
+  $$\frac{E_R}{R} = 2.303 E_A \qquad \text{（系统误差）} \qquad \frac{s_R}{R} = 2.303 s_A \qquad \text{（随机误差）}$$
+
+  <p><strong>对数运算：</strong>若 $R = a\lg A$，则：</p>
+  $$E_R = 0.434a \frac{E_A}{A} \qquad \text{（系统误差）} \qquad s_R = 0.434a \frac{s_A}{A} \qquad \text{（随机误差）}$$
+  <p>若 $R = \ln A$，则 $E_R = \dfrac{E_A}{A}$，$s_R = \dfrac{s_A}{A}$。</p>
+</div>
+
+<div class="card">
+  <h3>误差传递公式总结表</h3>
+  <table>
+    <tr><th>运算类型</th><th>计算式</th><th>系统误差传递</th><th>随机误差传递</th></tr>
+    <tr><td>加减运算</td><td>$R = aA + bB - cC$</td><td>$E_R = aE_A + bE_B - cE_C$</td><td>$s_R^2 = a^2s_A^2 + b^2s_B^2 + c^2s_C^2$</td></tr>
+    <tr><td>乘除运算</td><td>$R = \dfrac{mAB}{C}$</td><td>$\dfrac{E_R}{R} = \dfrac{E_A}{A}+\dfrac{E_B}{B}-\dfrac{E_C}{C}$</td><td>$\left(\dfrac{s_R}{R}\right)^2 = \left(\dfrac{s_A}{A}\right)^2 + \left(\dfrac{s_B}{B}\right)^2 + \left(\dfrac{s_C}{C}\right)^2$</td></tr>
+    <tr><td>幂运算</td><td>$R = aA^n$</td><td>$\dfrac{E_R}{R} = n\dfrac{E_A}{A}$</td><td>$\dfrac{s_R}{R} = n\dfrac{s_A}{A}$</td></tr>
+    <tr><td>指数运算 ($10^A$)</td><td>$R = 10^A$</td><td>$\dfrac{E_R}{R} = 2.303E_A$</td><td>$\dfrac{s_R}{R} = 2.303s_A$</td></tr>
+    <tr><td>指数运算 ($e^A$)</td><td>$R = e^A$</td><td>$\dfrac{E_R}{R} = E_A$</td><td>$\dfrac{s_R}{R} = s_A$</td></tr>
+    <tr><td>对数运算 ($\lg$)</td><td>$R = a\lg A$</td><td>$E_R = 0.434a\dfrac{E_A}{A}$</td><td>$s_R = 0.434a\dfrac{s_A}{A}$</td></tr>
+    <tr><td>对数运算 ($\ln$)</td><td>$R = \ln A$</td><td>$E_R = \dfrac{E_A}{A}$</td><td>$s_R = \dfrac{s_A}{A}$</td></tr>
+  </table>
+  <div class="tip">
+    <strong>记忆技巧：</strong>对于指数和对数关系，系统误差与随机误差的传递公式形式相同。$\lg$ 与 $\ln$ 的区别在于 $\lg$ 多一个系数 $0.434 = 1/\ln 10$。
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题 7（误差传递 -- 加减法）：</strong>
+  滴定分析中，终读数 $V_2 = 26.34$ mL（$s = 0.02$ mL），初读数 $V_1 = 0.22$ mL（$s = 0.02$ mL）。求体积差 $\Delta V = V_2 - V_1$ 的标准偏差。
+  <div class="sol">
+    <div class="st">解答：</div>
+    $$\Delta V = 26.34 - 0.22 = 26.12 \text{ mL}$$
+    $$s_{\Delta V} = \sqrt{s_{V_2}^2 + s_{V_1}^2} = \sqrt{0.02^2 + 0.02^2} = \sqrt{0.0008} = 0.028 \text{ mL}$$
+    <p>即每次滴定的体积读数标准偏差约为 0.03 mL。这就是为什么滴定管读两次的合成误差比单次读数的误差大。</p>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题 8（误差传递 -- 乘除法）：</strong>
+  用容量法测定 $w(\text{Fe})$：
+  $$w(\text{Fe}) = \frac{c \cdot V \cdot M}{m \times 1000} \times 100\%$$
+  已知 $c = 0.1020$ mol/L（RSD = 0.1%），$V = 25.34$ mL（RSD = 0.08%），$m = 0.5000$ g（RSD = 0.02%），$M$ 为精确常数。求 $w(\text{Fe})$ 的 RSD。
+  <div class="sol">
+    <div class="st">解答：</div>
+    $$\text{RSD}_R = \sqrt{(0.1\%)^2 + (0.08\%)^2 + (0.02\%)^2} = \sqrt{0.0100 + 0.0064 + 0.0004}\;\%$$
+    $$= \sqrt{0.0168}\;\% = 0.13\%$$
+    <p><strong>启示：</strong>总 RSD 主要由最大的分量决定（这里是浓度 $c$ 的 0.1%）。改善分析结果精度应优先改善误差最大的环节。</p>
+  </div>
+</div>
+
+<div class="tip">
+  <strong>误差传递的实践意义：</strong>
+  <ul>
+    <li>总误差主要由<strong>最大分量</strong>决定，改善最弱环节效果最大</li>
+    <li>加减法中，绝对误差大的项对结果影响最大</li>
+    <li>乘除法中，相对误差大的项对结果影响最大</li>
+    <li>两次读数（如滴定管初终读数）的合成标准偏差是单次标准偏差的 $\sqrt{2}$ 倍</li>
+  </ul>
 </div>
 
 <!-- ============================================================ -->
@@ -525,28 +1060,171 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </ul>
 </div>
 
+<div class="card">
+  <h3>相关系数的显著性检验</h3>
+  <p>计算得到 $r$ 后，需检验线性关系是否显著（$r$ 是否显著不等于零）：</p>
+  <p>$H_0$：总体相关系数 $\rho = 0$（无线性相关）</p>
+  <p><strong>方法：</strong>查<strong>相关系数临界值表</strong>，自由度 $f = n - 2$。若 $|r| > r_{\alpha, f}$（查表），则线性关系显著。</p>
+
+  <p><strong>相关系数临界值（$r$ 表，部分常用值）：</strong></p>
+  <table>
+    <tr><th>$f = n-2$</th><th>$\alpha=0.05$ (95%)</th><th>$\alpha=0.01$ (99%)</th></tr>
+    <tr><td>3</td><td>0.878</td><td>0.959</td></tr>
+    <tr><td>4</td><td>0.811</td><td>0.917</td></tr>
+    <tr><td>5</td><td>0.754</td><td>0.875</td></tr>
+    <tr><td>6</td><td>0.707</td><td>0.834</td></tr>
+    <tr><td>7</td><td>0.666</td><td>0.798</td></tr>
+    <tr><td>8</td><td>0.632</td><td>0.765</td></tr>
+    <tr><td>10</td><td>0.576</td><td>0.708</td></tr>
+    <tr><td>15</td><td>0.482</td><td>0.606</td></tr>
+    <tr><td>20</td><td>0.423</td><td>0.537</td></tr>
+  </table>
+  <div class="tip">
+    <strong>注意：</strong>相关系数 $r$ 高并不一定意味着线性关系好。当数据点少时，$r$ 即使很大也可能不显著（因为临界值也大）。必须做显著性检验才能下结论。
+  </div>
+</div>
+
+<div class="card">
+  <h3>标准曲线法的注意事项</h3>
+  <ul>
+    <li>由于仪器精密度和测量条件的微小变化，每次的标准曲线会略有不同</li>
+    <li>建立起来的分析直线只有一定的<strong>置信限</strong>，分析结果也有一定的<strong>置信区间</strong></li>
+    <li>对于每个测量值，较靠近标准曲线中间的数据精确度较好，越靠近两端精确度越差</li>
+    <li>回归分析法可以对各点的精确度、数据间的相关关系以及回归线的置信区间进行评价</li>
+  </ul>
+</div>
+
 <!-- ============================================================ -->
-<h2>3.11 本章总结与常见考试陷阱</h2>
+<h2>3.11 真题考点精讲</h2>
+
+<div class="warn">
+  <strong>本节汇总历年真题中涉及第三章的所有重要考点。</strong>考前务必逐一复习！
+</div>
+
+<div class="card">
+  <h3>Quiz 1 考点汇总</h3>
+  <table>
+    <tr><th>题号</th><th>题型</th><th>考点</th><th>答案要点</th></tr>
+    <tr><td>选择 Q1</td><td>选择</td><td>增加平行测定次数减小哪种误差？</td><td><strong>随机误差</strong>（$s/\sqrt{n}$ 减小）</td></tr>
+    <tr><td>选择 Q6</td><td>选择</td><td>pH = 0.070 求 $[\text{H}^+]$ 有效数字</td><td><strong>3 位</strong>（对数小数部分 "070" 有 3 位）</td></tr>
+    <tr><td>选择 Q9</td><td>选择</td><td>$w(\text{CaO})=38.56\%$ 有效数字</td><td><strong>4 位</strong></td></tr>
+    <tr><td>选择 Q10</td><td>选择</td><td>比较精密度用什么检验？</td><td><strong>F 检验</strong></td></tr>
+    <tr><td>填空 Q1</td><td>填空</td><td>天平未水平 / 滴定管末位估读</td><td>系统误差 / 随机误差</td></tr>
+    <tr><td>填空 Q2</td><td>填空</td><td>有效数字综合运算</td><td>$51.0 \times 4.03\times10^{-4}/(2.512\times0.002034) = 4.02$</td></tr>
+    <tr><td>填空 Q4</td><td>填空</td><td>准确度 vs 精密度的关系</td><td>精密度高是准确度高的前提（必要不充分）</td></tr>
+    <tr><td>计算 Q1</td><td>计算</td><td>置信区间 + t 检验</td><td>完整统计分析流程（见上方详解）</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>2022 期末考试考点汇总</h3>
+  <table>
+    <tr><th>题号</th><th>题型</th><th>考点</th><th>答案要点</th></tr>
+    <tr><td>Q4</td><td>选择/填空</td><td>$w(\text{Ca})=36.18\%$ 有效数字</td><td><strong>4 位</strong></td></tr>
+    <tr><td>Q5</td><td>选择/填空</td><td>滴定管末位估读属于什么误差？</td><td><strong>随机误差</strong></td></tr>
+    <tr><td>Q6</td><td>选择/填空</td><td>比较均值用什么检验？</td><td><strong>t 检验</strong></td></tr>
+    <tr><td>填空 Q8</td><td>填空</td><td>正态分布的特点</td><td>对称性、单峰性、有界性、抵偿性</td></tr>
+    <tr><td>计算 Q1</td><td>计算</td><td>置信区间 + t 检验</td><td>完整统计分析流程（见上方详解）</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>高频出题模式与陷阱总结</h3>
+
+  <p><strong>模式一：判断误差类型</strong></p>
+  <ul>
+    <li>关键判断标准：是否<strong>单向、可重复</strong> → 系统误差；<strong>随机波动、无固定方向</strong> → 随机误差</li>
+    <li>常考对比组：天平未水平（系统）vs 滴定管估读（随机）</li>
+  </ul>
+
+  <p><strong>模式二：有效数字判断</strong></p>
+  <ul>
+    <li>普通数值：从第一个非零位数到最后一位</li>
+    <li>对数值（pH、pK）：<strong>只看小数部分的位数！</strong>这是第一大陷阱</li>
+    <li>$w = xx.xx\%$ 形式：百分号不影响，直接数数字</li>
+  </ul>
+
+  <p><strong>模式三：统计检验计算题</strong></p>
+  <ul>
+    <li>几乎必考！标准流程：计算 $\bar{x}$ → 计算 $s$（Bessel 公式）→ 计算置信区间 → t 检验</li>
+    <li>核心易错点：查 t 表时 $f = n-1$，不是 $n$！</li>
+    <li>$n=3$ 时 $f=2$，$t_{0.05,2}=4.303$（很大，不容易检出差异）</li>
+    <li>$n=4$ 时 $f=3$，$t_{0.05,3}=3.182$（Quiz 1 计算题用到）</li>
+  </ul>
+
+  <p><strong>模式四：检验方法选择</strong></p>
+  <ul>
+    <li>比较精密度（方差） → <strong>F 检验</strong></li>
+    <li>比较均值与真值（$\sigma$ 已知） → <strong>u 检验</strong></li>
+    <li>比较均值与真值（$\sigma$ 未知） → <strong>t 检验（单样本）</strong></li>
+    <li>比较两组独立样本均值 → 先 F 检验，再 <strong>t 检验（双样本）</strong></li>
+    <li>同一组样品、两种方法的结果比较 → <strong>配对 t 检验</strong></li>
+    <li>判断离群值 → <strong>Q 检验 / Grubbs 检验</strong></li>
+    <li>判断线性回归是否显著 → <strong>$r$ 显著性检验</strong></li>
+  </ul>
+</div>
+
+<div class="exam">
+  <div class="et">综合练习：统计分析全流程</div>
+  <p><strong>题目：</strong>测定试样中某组分含量，6 次结果为：45.62%, 45.58%, 45.70%, 45.55%, 45.60%, 46.10%。(1) 用 Q 检验（95%）判断 46.10% 是否为离群值；(2) 若舍去后，计算 95% 置信区间；(3) 与标准值 45.50% 做 t 检验。</p>
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p><strong>(1) Q 检验：</strong></p>
+    <p>排列：45.55, 45.58, 45.60, 45.62, 45.70, 46.10</p>
+    $$Q_{\text{calc}} = \frac{46.10 - 45.70}{46.10 - 45.55} = \frac{0.40}{0.55} = 0.727$$
+    <p>$n=6$，查表 $Q_{0.05,6} = 0.625$</p>
+    <p>$Q_{\text{calc}} = 0.727 > 0.625$，<strong>舍去 46.10%</strong>。</p>
+
+    <p><strong>(2) 舍去后（$n=5$）计算置信区间：</strong></p>
+    $$\bar{x} = \frac{45.55+45.58+45.60+45.62+45.70}{5} = 45.61\%$$
+    <table>
+      <tr><th>$x_i$</th><th>$x_i - \bar{x}$</th><th>$(x_i - \bar{x})^2$</th></tr>
+      <tr><td>45.55</td><td>$-0.06$</td><td>$0.0036$</td></tr>
+      <tr><td>45.58</td><td>$-0.03$</td><td>$0.0009$</td></tr>
+      <tr><td>45.60</td><td>$-0.01$</td><td>$0.0001$</td></tr>
+      <tr><td>45.62</td><td>$+0.01$</td><td>$0.0001$</td></tr>
+      <tr><td>45.70</td><td>$+0.09$</td><td>$0.0081$</td></tr>
+      <tr><th colspan="2">合计</th><th>$0.0128$</th></tr>
+    </table>
+    $$s = \sqrt{\frac{0.0128}{4}} = \sqrt{0.0032} = 0.057\%$$
+    <p>$f=4$，$t_{0.05,4} = 2.776$</p>
+    $$\mu = 45.61 \pm 2.776 \times \frac{0.057}{\sqrt{5}} = 45.61 \pm 2.776 \times 0.0255 = 45.61 \pm 0.07\%$$
+    <p><strong>95% 置信区间：$(45.54\%, 45.68\%)$</strong></p>
+
+    <p><strong>(3) t 检验（与 $\mu_0 = 45.50\%$）：</strong></p>
+    $$t_{\text{calc}} = \frac{|45.61 - 45.50|}{0.057/\sqrt{5}} = \frac{0.11}{0.0255} = 4.31$$
+    <p>$t_{\text{calc}} = 4.31 > t_{0.05,4} = 2.776$，<strong>拒绝 $H_0$，存在显著的系统误差</strong>。</p>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<h2>3.12 本章总结与常见考试陷阱</h2>
 
 <div class="card">
   <h3>考点清单</h3>
   <table>
     <tr><th>知识点</th><th>考查方式</th><th>频率</th></tr>
-    <tr><td>有效数字运算</td><td>选择题、填空题</td><td>极高</td></tr>
+    <tr><td>有效数字运算（含对数规则）</td><td>选择题、填空题</td><td>极高</td></tr>
     <tr><td>四舍六入五成双</td><td>选择题</td><td>高</td></tr>
     <tr><td>误差、偏差概念区分</td><td>选择题、判断题</td><td>高</td></tr>
-    <tr><td>系统误差 vs 随机误差</td><td>简答题</td><td>高</td></tr>
+    <tr><td>系统误差 vs 随机误差判别</td><td>选择题、填空题、简答题</td><td>极高</td></tr>
     <tr><td>置信区间计算</td><td>计算题</td><td>极高</td></tr>
     <tr><td>t 检验</td><td>计算题</td><td>极高</td></tr>
-    <tr><td>F 检验</td><td>计算题</td><td>高</td></tr>
+    <tr><td>F 检验</td><td>选择题、计算题</td><td>高</td></tr>
     <tr><td>Q 检验 / Grubbs</td><td>计算题</td><td>高</td></tr>
-    <tr><td>准确度与精密度关系</td><td>选择题、简答题</td><td>中</td></tr>
-    <tr><td>线性回归</td><td>计算题</td><td>中</td></tr>
+    <tr><td>误差传递（含指数/对数）</td><td>计算题</td><td>中高</td></tr>
+    <tr><td>准确度与精密度关系</td><td>选择题、简答题</td><td>高</td></tr>
+    <tr><td>正态分布四大特点</td><td>填空题</td><td>高</td></tr>
+    <tr><td>u 检验（$\sigma$ 已知）</td><td>计算题</td><td>中</td></tr>
+    <tr><td>配对 t 检验</td><td>计算题</td><td>中</td></tr>
+    <tr><td>过失误差概念</td><td>选择题、简答题</td><td>中</td></tr>
+    <tr><td>回收率实验</td><td>选择题</td><td>中</td></tr>
+    <tr><td>线性回归与 $r$ 显著性检验</td><td>计算题</td><td>中</td></tr>
   </table>
 </div>
 
 <div class="warn">
-  <h3>常见考试陷阱</h3>
+  <h3>常见考试陷阱（完整版）</h3>
   <ol>
     <li><strong>"精密度高则准确度高"</strong> -- 错！精密度高是准确度高的必要条件，不是充分条件。可能存在系统误差导致精密度高但准确度低。</li>
     <li><strong>"增加测量次数可以减小系统误差"</strong> -- 错！增加测量次数只能减小<strong>随机误差</strong>（均值的标准误差 $s/\sqrt{n}$ 减小），系统误差不能通过增加次数消除。</li>
@@ -556,6 +1234,13 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <li><strong>标准偏差除以 $n$ 还是 $n-1$</strong>：样本标准偏差用 $n-1$，总体标准偏差用 $N$。考试中几乎都是样本标准偏差，用 $n-1$！</li>
     <li><strong>Q 检验中极差的计算</strong>：分母是全距 $x_n - x_1$，分子是可疑值与相邻值之差，不要搞反。</li>
     <li><strong>置信区间的理解</strong>：不是"真值有 95% 的概率在这个区间内"，而是"如果重复做很多次实验，95% 的置信区间会包含真值"。</li>
+    <li><strong>Grubbs 检验的均值和 $s$</strong>：必须<strong>包含可疑值</strong>一起计算！很多同学误以为要先去掉可疑值再算。</li>
+    <li><strong>t 值查表时的自由度</strong>：是 $f = n-1$，不是 $n$。$n=4$ 次测定，查 $f=3$ 对应的 t 值。</li>
+    <li><strong>F 检验中大方差放分子</strong>：$F = s_{\text{大}}^2 / s_{\text{小}}^2$，保证 $F \ge 1$。$f_1$ 是大方差对应的自由度。</li>
+    <li><strong>对数有效数字的反向应用</strong>：从 pH 求 $[\text{H}^+]$ 时，pH 小数部分的位数 = 结果的有效数字位数。不要用 pH 的"总位数"。</li>
+    <li><strong>u 检验和 t 检验混淆</strong>：$\sigma$ 已知用 u 检验（查正态分布表），$\sigma$ 未知用 t 检验（查 t 分布表）。两者公式类似但查的表不同！</li>
+    <li><strong>配对数据误用独立 t 检验</strong>：同一组样品用两种方法测定，应用<strong>配对 t 检验</strong>（算差值 $d_i$），不能用独立双样本 t 检验。</li>
+    <li><strong>有效数字 = 准确数字 + 一位可疑数字</strong>：不是想写几位就写几位，位数由仪器精度决定。多写或少写都是错误的。</li>
   </ol>
 </div>
 
@@ -568,15 +1253,24 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <tr><td>RSD</td><td>$\text{RSD} = \dfrac{s}{\bar{x}} \times 100\%$</td><td>相对离散程度</td></tr>
     <tr><td>置信区间</td><td>$\mu = \bar{x} \pm t_{\alpha,f}\dfrac{s}{\sqrt{n}}$</td><td>估计总体均值</td></tr>
     <tr><td>t 检验（与标准值）</td><td>$t = \dfrac{|\bar{x}-\mu_0|}{s/\sqrt{n}}$</td><td>检验系统误差</td></tr>
+    <tr><td>t 检验（两均值）</td><td>$t = \dfrac{|\bar{x}_1-\bar{x}_2|}{s_p\sqrt{1/n_1+1/n_2}}$</td><td>两组均值比较</td></tr>
+    <tr><td>合并标准偏差</td><td>$s_p = \sqrt{\dfrac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}}$</td><td>方差齐性时</td></tr>
     <tr><td>F 检验</td><td>$F = \dfrac{s_1^2}{s_2^2}$（$s_1>s_2$）</td><td>比较精密度</td></tr>
     <tr><td>Q 检验</td><td>$Q = \dfrac{x_{\text{可疑}}-x_{\text{相邻}}}{x_n-x_1}$</td><td>离群值检验</td></tr>
     <tr><td>Grubbs 检验</td><td>$G = \dfrac{|x_{\text{可疑}}-\bar{x}|}{s}$</td><td>离群值检验</td></tr>
+    <tr><td>u 检验（$\sigma$ 已知）</td><td>$u = \dfrac{|\bar{x}-\mu_0|}{\sigma/\sqrt{n}}$</td><td>$\sigma$ 已知时检验系统误差</td></tr>
+    <tr><td>配对 t 检验</td><td>$t = \dfrac{|\bar{d}|}{s_d/\sqrt{n}}$</td><td>配对数据比较</td></tr>
+    <tr><td>误差传递（加减）</td><td>$s_R = \sqrt{s_1^2 + s_2^2 + \cdots}$</td><td>绝对误差传递</td></tr>
+    <tr><td>误差传递（乘除）</td><td>$\left(\dfrac{s_R}{R}\right)^2 = \sum\left(\dfrac{s_i}{x_i}\right)^2$</td><td>相对误差传递</td></tr>
+    <tr><td>误差传递（幂）</td><td>$\dfrac{s_R}{R} = n\dfrac{s_A}{A}$（$R=mA^n$）</td><td>幂运算误差传递</td></tr>
+    <tr><td>误差传递（指数 $10^A$）</td><td>$\dfrac{s_R}{R} = 2.303s_A$</td><td>指数运算误差传递</td></tr>
+    <tr><td>误差传递（对数 $\lg A$）</td><td>$s_R = 0.434\dfrac{s_A}{A}$</td><td>对数运算误差传递</td></tr>
     <tr><td>相关系数</td><td>$r = \dfrac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum(x_i-\bar{x})^2\sum(y_i-\bar{y})^2}}$</td><td>线性相关程度</td></tr>
   </table>
 </div>
 
 <div class="note">
-  <strong>学习建议：</strong>本章公式多且计算量大。建议：(1) 牢记所有核心公式；(2) 每个检验方法都亲手算一遍完整例题；(3) 理解每种检验的适用条件和判断准则；(4) 注意先 F 后 t 的检验顺序；(5) 有效数字和四舍六入五成双是填空/选择的高频考点，要多练习。
+  <strong>学习建议：</strong>本章公式多且计算量大。建议：(1) 牢记所有核心公式，尤其是 Bessel 公式和置信区间公式；(2) 每个检验方法都亲手算一遍完整例题；(3) 理解每种检验的适用条件和判断准则；(4) 注意先 F 后 t 的检验顺序；(5) 有效数字（特别是对数有效数字规则）和四舍六入五成双是填空/选择的高频考点，要多练习；(6) 牢记 $\alpha=0.05$ 时 $f=2$ 到 $f=8$ 的 t 值；(7) 误差传递虽然计算不难，但概念要清楚：加减法传绝对误差，乘除法传相对误差。
 </div>
 
 <script src="toc.js"></script>

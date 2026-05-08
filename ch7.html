@@ -31,30 +31,72 @@ tr:nth-child(even){background:#f9f7f2;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
 details{margin:8px 0;}
 details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+.ppt-img{display:block;max-width:100%;margin:12px auto;border:1px solid #e0d8c8;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ppt-caption{text-align:center;font-size:.82em;color:#888;margin:-6px 0 12px;}
 </style>
 </head><body>
 
 <div class="nav-bar">
   <a href="index.html">首页</a>
-  <a href="ch6.html">&larr; 第六章</a>
-  <a href="ch9.html">第九章 &rarr;</a>
+  <a href="ch1.html">第一章</a>
+  <a href="ch3.html">第三章</a>
+  <a href="ch5-1.html">第五章(上)</a>
+  <a href="ch5-2.html">第五章(下)</a>
+  <a href="ch6.html">第六章</a>
+  <a href="ch7.html" style="background:#1a5276;color:#fff;">第七章</a>
+  <a href="ch9.html">第九章</a>
   <a href="ch10.html">第十章</a>
+  <a href="formulas.html">公式表</a>
+  <a href="exam-review.html">备考</a>
+  <a href="quiz1.html">小测1</a>
+  <a href="quiz2.html">小测2</a>
+  <a href="final2022.html">期末真题</a>
 </div>
 
 <h1>第七章 氧化还原滴定法</h1>
 
 <!-- ==================== 7.1 ==================== -->
 <h2>7.1 条件电位与Nernst方程</h2>
+<img class="ppt-img" src="temp_pages/ch7_p5.png" alt="不可逆电对">
+<p class="ppt-caption">PPT: 可逆电对与不可逆电对</p>
+<img class="ppt-img" src="temp_pages/ch7_p9.png" alt="条件电位">
+<p class="ppt-caption">PPT: 条件电位的概念</p>
+
+<div class="card">
+  <h3>可逆电对与不可逆电对</h3>
+  <p>根据电极反应能否在任一瞬间迅速建立氧化还原平衡，电对分为：</p>
+  <div class="fb">
+    <div class="t">可逆电对</div>
+    <p>在反应的任一瞬间<strong>能</strong>迅速建立平衡，实测电位与 Nernst 方程计算值一致。</p>
+    <p>例：$\text{Fe}^{3+}/\text{Fe}^{2+}$、$\text{Ce}^{4+}/\text{Ce}^{3+}$、$\text{I}_2/\text{I}^-$</p>
+  </div>
+  <div class="fb">
+    <div class="t">不可逆电对</div>
+    <p>在反应的任一瞬间<strong>不能</strong>迅速建立平衡，实测电位与 Nernst 方程计算值不一致或相差很大。</p>
+    <p>例：$\text{MnO}_4^-/\text{Mn}^{2+}$、$\text{Cr}_2\text{O}_7^{2-}/\text{Cr}^{3+}$、$\text{CO}_2/\text{C}_2\text{O}_4^{2-}$、$\text{S}_4\text{O}_6^{2-}/\text{S}_2\text{O}_3^{2-}$</p>
+  </div>
+  <div class="warn"><strong>判断方法</strong>：能否在氧化还原反应的任一瞬间建立真正的平衡，或实测电位与理论电位是否相等。不可逆电对在滴定曲线计算中只能在化学计量点前后用另一电对（可逆的）进行计算。</div>
+</div>
 
 <div class="card">
   <h3>Nernst方程</h3>
   <div class="fb">
     <div class="t">标准 Nernst 方程</div>
     $$\varphi = \varphi^0 + \frac{0.0592}{n}\lg\frac{[\text{Ox}]}{[\text{Red}]}$$
-    <p>其中 $\varphi^0$ 为标准电极电位，$n$ 为电子转移数。</p>
+    <p>其中 $\varphi^0$ 为标准电极电位，$n$ 为电子转移数。严格地说，方程中的浓度应替换为活度 $a$。在实际分析中，由于活度系数和副反应的影响，需引入<strong>条件电位</strong>。</p>
   </div>
 
-  <h3>条件电位</h3>
+  <h3>条件电位的推导</h3>
+  <div class="card">
+    <p>考虑电对 $\text{Ox} + ne^- \rightleftharpoons \text{Red}$，若 Ox 和 Red 都存在副反应（配位、沉淀、酸碱等），令：</p>
+    <ul>
+      <li>$\alpha_\text{Ox}$：Ox 的副反应系数（$\alpha_\text{Ox} = c_\text{Ox}/[\text{Ox}]$，$c_\text{Ox}$ 为总分析浓度）</li>
+      <li>$\alpha_\text{Red}$：Red 的副反应系数</li>
+    </ul>
+    <p>则 $[\text{Ox}] = c_\text{Ox}/\alpha_\text{Ox}$，$[\text{Red}] = c_\text{Red}/\alpha_\text{Red}$，代入 Nernst 方程：</p>
+    $$\varphi = \varphi^0 + \frac{0.0592}{n}\lg\frac{c_\text{Ox}/\alpha_\text{Ox}}{c_\text{Red}/\alpha_\text{Red}} = \varphi^0 + \frac{0.0592}{n}\lg\frac{\alpha_\text{Red}}{\alpha_\text{Ox}} + \frac{0.0592}{n}\lg\frac{c_\text{Ox}}{c_\text{Red}}$$
+  </div>
+
   <div class="fb">
     <div class="t">条件电位 $\varphi^{0'}$</div>
     $$\boxed{\varphi^{0'} = \varphi^0 + \frac{0.0592}{n}\lg\frac{\alpha_{\text{Red}}}{\alpha_{\text{Ox}}}}$$
@@ -74,17 +116,93 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <li><strong>配位效应</strong>：配位剂优先稳定某一氧化态时改变电位。如 $\text{Fe}^{3+}/\text{Fe}^{2+}$ 加 $\text{F}^-$ 后电位降低（$\text{F}^-$ 主要配位 $\text{Fe}^{3+}$）；加邻菲罗啉后电位升高（主要配位 $\text{Fe}^{2+}$）</li>
     <li><strong>沉淀效应</strong>：某一氧化态生成沉淀使其浓度降低</li>
   </ul>
+
+  <div class="note">
+    <strong>规律总结</strong>：
+    <ul>
+      <li>配位剂（或沉淀剂）主要作用于<strong>氧化态</strong>（$\alpha_\text{Ox}$ 增大）&rarr; 条件电位<strong>降低</strong>，氧化态的氧化能力减弱</li>
+      <li>配位剂（或沉淀剂）主要作用于<strong>还原态</strong>（$\alpha_\text{Red}$ 增大）&rarr; 条件电位<strong>升高</strong>，还原态更容易被氧化</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>酸度对条件电位的影响 -- 含 $\text{H}^+$ 参与的电对</h3>
+  <img class="ppt-img" src="temp_pages/ch7_p17.png" alt="酸度影响条件电位">
+  <p class="ppt-caption">PPT: 酸度对条件电位的影响 -- As(V)/As(III)</p>
+  <p>对于 $\text{H}^+$ 直接参与的电对，如 $\text{H}_3\text{AsO}_4/\text{H}_3\text{AsO}_3$（$\varphi^0 = 0.559$ V），条件电位与 pH 密切相关。</p>
+  <div class="fb">
+    <div class="t">精确处理方法</div>
+    <p>将 Nernst 方程中的 $[\text{Ox}]$ 和 $[\text{Red}]$ 展开为总浓度和分布系数：</p>
+    $$\varphi = \varphi^0_{\text{H}_3\text{AsO}_4/\text{H}_3\text{AsO}_3} + \frac{0.0592}{2}\lg\frac{\delta_{\text{H}_3\text{AsO}_4}}{\delta_{\text{H}_3\text{AsO}_3}} + \frac{0.0592}{2}\lg\frac{c_{\text{As(V)}}}{c_{\text{As(III)}}}$$
+    <p>其中 $\delta$ 为各存在形态的分布系数，与 pH 和酸的 $K_a$ 有关。因此：</p>
+    $$\varphi^{0'} = \varphi^0 + \frac{0.0592}{2}\lg\frac{\delta_{\text{H}_3\text{AsO}_4}}{\delta_{\text{H}_3\text{AsO}_3}}$$
+    <p>当 pH 变化时，$\delta$ 值变化，条件电位随之改变。如 $\text{H}_3\text{AsO}_4$ 的 $pK_a$ 为 2.2, 7.0, 11.5，$\text{H}_3\text{AsO}_3$ 的 $pK_a$ 为 9.2，不同 pH 下分布分数差异很大。</p>
+  </div>
+  <div class="tip"><strong>简化结论</strong>：对含 $\text{H}^+$ 参与的电对，酸度增大通常使条件电位<strong>升高</strong>（氧化能力增强）。例如 $\text{MnO}_4^-$ 在强酸性介质中氧化能力最强（$\varphi^{0'} = 1.51$ V），而在中性或碱性介质中氧化能力减弱。</div>
+</div>
+
+<!-- 条件电位 - 完整计算例题 -->
+<div class="ex">
+  <strong>例题1：Fe(III)-F 配位体系的条件电位计算</strong>
+  <p>已知 $\text{Fe}^{3+}/\text{Fe}^{2+}$ 的 $\varphi^0 = 0.771$ V。$\text{Fe}^{3+}$ 与 $\text{F}^-$ 的逐级稳定常数为 $\lg\beta_1=5.2$, $\lg\beta_2=9.2$, $\lg\beta_3=11.9$。$\text{Fe}^{2+}$ 与 $\text{F}^-$ 基本不配位（$\alpha_{\text{Fe(II)}} \approx 1$）。若 $[\text{F}^-] = 10^{-1.5}$ mol/L，求条件电位 $\varphi^{0'}$。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p><strong>第一步</strong>：计算 $\text{Fe}^{3+}$ 的副反应系数</p>
+    $$\alpha_{\text{Fe(III)}(\text{F})} = 1 + \beta_1[\text{F}^-] + \beta_2[\text{F}^-]^2 + \beta_3[\text{F}^-]^3$$
+    $$= 1 + 10^{5.2}\times 10^{-1.5} + 10^{9.2}\times 10^{-3.0} + 10^{11.9}\times 10^{-4.5}$$
+    $$= 1 + 10^{3.7} + 10^{6.2} + 10^{7.4}$$
+    <p>取最大项：$\alpha_{\text{Fe(III)}(\text{F})} \approx 10^{7.4}$</p>
+    <p><strong>第二步</strong>：由于 $\text{Fe}^{2+}$ 与 $\text{F}^-$ 几乎不配位，$\alpha_{\text{Fe(II)}} \approx 1$</p>
+    <p><strong>第三步</strong>：计算条件电位</p>
+    $$\varphi^{0'} = \varphi^0 + \frac{0.0592}{1}\lg\frac{\alpha_\text{Red}}{\alpha_\text{Ox}} = 0.771 + 0.0592\times\lg\frac{1}{10^{7.4}}$$
+    $$= 0.771 + 0.0592\times(-7.4) = 0.771 - 0.438 = \boxed{0.333\;\text{V}}$$
+    <p>条件电位从 0.771 V 大幅降至 0.333 V，说明 $\text{F}^-$ 配位使 $\text{Fe}^{3+}$ 的氧化能力显著减弱。</p>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题2：邻菲罗啉（phen）对 Fe 电对的影响</strong>
+  <p>邻菲罗啉（1,10-phenanthroline, phen）主要与 $\text{Fe}^{2+}$ 形成极稳定的 $[\text{Fe(phen)}_3]^{2+}$ 配合物（红色，ferroin），而与 $\text{Fe}^{3+}$ 的配合物较弱。定性分析条件电位如何变化。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>phen 主要稳定 $\text{Fe}^{2+}$（还原态），故 $\alpha_\text{Red} \gg \alpha_\text{Ox}$。</p>
+    $$\varphi^{0'} = \varphi^0 + \frac{0.0592}{1}\lg\frac{\alpha_\text{Red}}{\alpha_\text{Ox}} > \varphi^0$$
+    <p>条件电位<strong>升高</strong>（实际测定 $\varphi^{0'} \approx 1.06$ V）。这意味着 $\text{Fe}^{2+}$ 被 phen 稳定后，更难被氧化，相当于该电对的氧化能力增强。</p>
+    <p>这正是 ferroin 可用作 $\text{Ce}^{4+}/\text{Fe}^{2+}$ 滴定指示剂的原因（$\varphi^{0'}_\text{In} = 1.06$ V 恰好接近 $\varphi_{sp}$）。</p>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题3：H<sub>3</sub>PO<sub>4</sub> 在 K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> 法中的作用</strong>
+  <p>在 $\text{K}_2\text{Cr}_2\text{O}_7$ 法测铁中，滴定前加入 $\text{H}_3\text{PO}_4$。已知 $\text{H}_3\text{PO}_4$ 与 $\text{Fe}^{3+}$ 形成 $\text{Fe(HPO}_4)^+$ 等无色配合物（$\lg\beta \approx 9.4$），而与 $\text{Fe}^{2+}$ 配合能力很弱。分析其作用。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>加入 $\text{H}_3\text{PO}_4$ 后：</p>
+    <ol>
+      <li><strong>降低条件电位</strong>：$\text{H}_3\text{PO}_4$ 主要配位氧化态 $\text{Fe}^{3+}$，$\alpha_\text{Ox}$ 增大，$\varphi^{0'}$ 降低（从 0.68 V 降至约 0.44 V）</li>
+      <li><strong>消除颜色干扰</strong>：$\text{Fe}^{3+}$ 在 HCl 溶液中呈黄色，与 $\text{Fe(HPO}_4)^+$ 配合后变无色，有利于终点观察</li>
+      <li><strong>增大滴定突跃</strong>：$\varphi^{0'}_{\text{Fe}}$ 降低使 $\Delta\varphi^{0'}$ 增大（从 $1.33 - 0.68 = 0.65$ V 增至 $1.33 - 0.44 = 0.89$ V），突跃范围增大，终点更敏锐</li>
+    </ol>
+    <p>这就是为什么 $\text{K}_2\text{Cr}_2\text{O}_7$ 法测铁要使用 $\text{H}_2\text{SO}_4 + \text{H}_3\text{PO}_4$ 混合酸。</p>
+  </div>
 </div>
 
 <!-- ==================== 7.2 ==================== -->
 <h2>7.2 氧化还原反应的平衡常数与定量判据</h2>
 
 <div class="card">
+  <h3>平衡常数的推导</h3>
+  <p>考虑反应 $n_2\text{Ox}_1 + n_1\text{Red}_2 \rightleftharpoons n_2\text{Red}_1 + n_1\text{Ox}_2$</p>
+  <p>其中电对1: $\text{Ox}_1 + n_1 e^- \rightleftharpoons \text{Red}_1$，$\varphi_1^{0'}$；<br>电对2: $\text{Ox}_2 + n_2 e^- \rightleftharpoons \text{Red}_2$，$\varphi_2^{0'}$。</p>
+  <p>在平衡时，两个电对的电位相等（$\varphi_1 = \varphi_2$）：</p>
+  $$\varphi_1^{0'} + \frac{0.0592}{n_1}\lg\frac{c_{\text{Ox}_1}}{c_{\text{Red}_1}} = \varphi_2^{0'} + \frac{0.0592}{n_2}\lg\frac{c_{\text{Ox}_2}}{c_{\text{Red}_2}}$$
+  <p>两边同乘 $n_1 n_2 / 0.0592$，经整理可得：</p>
+
   <div class="fb">
     <div class="t">平衡常数</div>
-    <p>对反应 $n_2\text{Ox}_1 + n_1\text{Red}_2 \rightleftharpoons n_2\text{Red}_1 + n_1\text{Ox}_2$：</p>
     $$\boxed{\lg K = \frac{n_1 n_2 (\varphi_1^{0'} - \varphi_2^{0'})}{0.0592} = \frac{n(\varphi_1^{0'} - \varphi_2^{0'})}{0.0592}}$$
-    <p>其中 $n = n_1 \cdot n_2$（当 $n_1 = n_2$ 时），或更一般地 $n$ 为电子转移总数。</p>
+    <p>其中 $n = n_1 \cdot n_2$（当电子转移数互质时），或更一般地 $n$ 为反应中实际电子转移总数（即 $n_1$ 和 $n_2$ 的最小公倍数）。</p>
   </div>
 
   <div class="fb">
@@ -94,23 +212,88 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <p>一般来说，$\lg K \geq 6$ 即可认为反应定量完成（反应完成度 $\geq 99.9\%$）。</p>
   </div>
 
-  <div class="warn">注意：$\Delta\varphi^{0'} \geq 0.4$ V 仅是经验判据，具体还需考虑 $n$ 值。当 $n$ 较大时，所需 $\Delta\varphi^{0'}$ 可以更小。例如 $n = 2$ 时 $\Delta\varphi^{0'} \geq 0.2$ V 即可。</div>
+  <div class="warn">注意：$\Delta\varphi^{0'} \geq 0.4$ V 仅是经验判据，具体还需考虑 $n$ 值。当 $n$ 较大时，所需 $\Delta\varphi^{0'}$ 可以更小。例如 $n = 2$ 时 $\Delta\varphi^{0'} \geq 0.2$ V 即可；$n = 3$ 时 $\Delta\varphi^{0'} \geq 0.12$ V。</div>
+
+  <div class="fb">
+    <div class="t">反应完全度</div>
+    <p>反应完全度是衡量化学计量点时反应完成程度的指标。对于 $n_1 = n_2 = 1$ 的对称反应（等浓度）：</p>
+    $$\text{完成度} = 1 - \frac{c_{sp,\text{Red}_2}}{c_0} \approx 1 - \frac{1}{\sqrt{K}}$$
+    <p>当 $\lg K \geq 6$ 时，完成度 $\geq 99.9\%$，满足定量分析要求。</p>
+    <table>
+      <tr><th>$\lg K$</th><th>完成度</th><th>能否用于滴定</th></tr>
+      <tr><td>3</td><td>96.8%</td><td>不能</td></tr>
+      <tr><td>4</td><td>99.0%</td><td>勉强</td></tr>
+      <tr><td>6</td><td>99.9%</td><td>可以</td></tr>
+      <tr><td>8</td><td>99.99%</td><td>优秀</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <h3>常见氧化还原反应 $\lg K$ 值</h3>
+  <table>
+    <tr><th>反应</th><th>$\varphi_1^{0'}$ / V</th><th>$\varphi_2^{0'}$ / V</th><th>$n$</th><th>$\lg K$</th></tr>
+    <tr><td>$\text{Ce}^{4+} + \text{Fe}^{2+}$</td><td>1.44</td><td>0.68</td><td>1</td><td>12.8</td></tr>
+    <tr><td>$\text{MnO}_4^- + 5\text{Fe}^{2+}$</td><td>1.51</td><td>0.68</td><td>5</td><td>70.1</td></tr>
+    <tr><td>$\text{Cr}_2\text{O}_7^{2-} + 6\text{Fe}^{2+}$</td><td>1.33</td><td>0.68</td><td>6</td><td>65.9</td></tr>
+    <tr><td>$\text{I}_2 + 2\text{S}_2\text{O}_3^{2-}$</td><td>0.545</td><td>0.08</td><td>2</td><td>15.7</td></tr>
+    <tr><td>$2\text{Cu}^{2+} + 4\text{I}^-$</td><td>0.16(CuI)</td><td>0.545</td><td>2</td><td>&mdash;</td></tr>
+  </table>
+  <div class="note">$\lg K$ 越大，反应越完全。一般要求 $\lg K \geq 6$，对应反应完成度 $\geq 99.9\%$。</div>
+</div>
+
+<div class="ex">
+  <strong>例题4：判断 Ce<sup>4+</sup> 能否定量滴定 Fe<sup>2+</sup></strong>
+  <p>在 1 mol/L $\text{H}_2\text{SO}_4$ 中，$\varphi^{0'}_{\text{Ce}^{4+}/\text{Ce}^{3+}} = 1.44$ V，$\varphi^{0'}_{\text{Fe}^{3+}/\text{Fe}^{2+}} = 0.68$ V。判断能否定量滴定。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$n_1 = n_2 = 1$，$n = 1$</p>
+    $$\lg K = \frac{1 \times (1.44 - 0.68)}{0.0592} = \frac{0.76}{0.0592} = 12.8$$
+    <p>$\lg K = 12.8 \gg 6$，因此 $\text{Ce}^{4+}$ 完全可以定量滴定 $\text{Fe}^{2+}$。</p>
+    <p>同时 $\Delta\varphi^{0'} = 0.76 \;\text{V} > 0.4\;\text{V}$，满足判据。</p>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题5：I<sub>2</sub> 能否滴定 S<sub>2</sub>O<sub>3</sub><sup>2-</sup>？</strong>
+  <p>已知 $\varphi^0_{\text{I}_2/\text{I}^-} = 0.545$ V，$\varphi^0_{\text{S}_4\text{O}_6^{2-}/\text{S}_2\text{O}_3^{2-}} = 0.08$ V。判断 $\text{I}_2$ 能否定量滴定 $\text{S}_2\text{O}_3^{2-}$。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>反应：$\text{I}_2 + 2\text{S}_2\text{O}_3^{2-} \rightarrow 2\text{I}^- + \text{S}_4\text{O}_6^{2-}$</p>
+    <p>$n_1 = 2$（I<sub>2</sub> 得 2 个电子），$n_2 = 2$（2 个 S<sub>2</sub>O<sub>3</sub><sup>2-</sup> 共失 2 个电子），$n = 2$</p>
+    $$\lg K = \frac{2 \times (0.545 - 0.08)}{0.0592} = \frac{2 \times 0.465}{0.0592} = 15.7$$
+    <p>$\lg K = 15.7 \gg 6$，反应非常完全，$\text{I}_2$ 可以定量滴定 $\text{S}_2\text{O}_3^{2-}$。</p>
+    <p>这就是碘量法中用 $\text{Na}_2\text{S}_2\text{O}_3$ 标准溶液滴定 $\text{I}_2$ 的理论基础。</p>
+  </div>
 </div>
 
 <!-- ==================== 7.3 ==================== -->
 <h2>7.3 氧化还原滴定曲线</h2>
+<img class="ppt-img" src="temp_pages/ch7_p21.png" alt="氧化还原滴定曲线">
+<p class="ppt-caption">PPT: 氧化还原滴定曲线</p>
 
 <div class="card">
-  <h3>以 $\text{Ce}^{4+}$ 滴定 $\text{Fe}^{2+}$ 为例</h3>
-  <p>反应：$\text{Ce}^{4+} + \text{Fe}^{2+} \rightarrow \text{Ce}^{3+} + \text{Fe}^{3+}$</p>
+  <h3>以 $\text{Ce}^{4+}$ 滴定 $\text{Fe}^{2+}$ 为例（对称曲线）</h3>
+  <p>反应：$\text{Ce}^{4+} + \text{Fe}^{2+} \rightarrow \text{Ce}^{3+} + \text{Fe}^{3+}$，$n_1 = n_2 = 1$</p>
+  <p>设 $\varphi^{0'}_{\text{Ce}} = 1.44$ V，$\varphi^{0'}_{\text{Fe}} = 0.68$ V</p>
 
-  <p><strong>化学计量点前</strong>（如滴定 50% 时）：</p>
-  $$\varphi = \varphi^{0'}_{Fe^{3+}/Fe^{2+}} + 0.0592\lg\frac{[\text{Fe}^{3+}]}{[\text{Fe}^{2+}]}$$
-  <p>50% 时 $[\text{Fe}^{3+}] = [\text{Fe}^{2+}]$，故 $\varphi = \varphi^{0'}_{Fe^{3+}/Fe^{2+}} = 0.68$ V</p>
+  <h3>完整滴定曲线计算</h3>
+  <table>
+    <tr><th>滴定百分数</th><th>计算方法</th><th>$\varphi$ / V</th></tr>
+    <tr><td>0%（起始）</td><td>仅有 $\text{Fe}^{2+}$，加微量 $\text{Fe}^{3+}$ 约 $10^{-5}$ M</td><td>$\approx 0.38$</td></tr>
+    <tr><td>50%</td><td>$\varphi = 0.68 + 0.0592\lg\dfrac{50}{50} = 0.68$</td><td>0.68</td></tr>
+    <tr><td>99.9%</td><td>$\varphi = 0.68 + 0.0592\lg\dfrac{99.9}{0.1} = 0.68 + 0.0592\times 3 = 0.86$</td><td>0.86</td></tr>
+    <tr><td><strong>100%（SP）</strong></td><td>$\varphi_{sp} = \dfrac{0.68 + 1.44}{2} = 1.06$</td><td><strong>1.06</strong></td></tr>
+    <tr><td>100.1%</td><td>$\varphi = 1.44 + 0.0592\lg\dfrac{0.1}{99.9} = 1.44 - 0.0592\times 3 = 1.26$</td><td>1.26</td></tr>
+    <tr><td>200%</td><td>$\varphi = 1.44 + 0.0592\lg\dfrac{100}{100} = 1.44$</td><td>1.44</td></tr>
+  </table>
 
-  <p><strong>化学计量点后</strong>（如滴定 200% 时）：</p>
-  $$\varphi = \varphi^{0'}_{Ce^{4+}/Ce^{3+}} + 0.0592\lg\frac{[\text{Ce}^{4+}]}{[\text{Ce}^{3+}]}$$
-  <p>200% 时 $[\text{Ce}^{4+}] = [\text{Ce}^{3+}]$，故 $\varphi = \varphi^{0'}_{Ce^{4+}/Ce^{3+}} = 1.44$ V</p>
+  <div class="fb">
+    <div class="t">突跃范围</div>
+    <p>从 99.9% 到 100.1%（即 $\pm 0.1\%$ 的滴定误差对应范围）：</p>
+    $$\text{突跃} = 0.86 \;\text{V} \sim 1.26\;\text{V} \quad (\Delta\varphi = 0.40\;\text{V})$$
+    <p>一般公式：对称曲线的突跃范围约为 $\varphi^{0'}_2 + 3\times\frac{0.0592}{n_2}$ 到 $\varphi^{0'}_1 - 3\times\frac{0.0592}{n_1}$</p>
+  </div>
 
   <div class="fb">
     <div class="t">化学计量点电位</div>
@@ -122,14 +305,82 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <div class="note"><strong>对称电对</strong>：当 $n_1 = n_2$ 时，化学计量点在突跃中央（对称曲线）。当 $n_1 \neq n_2$ 时（如 $\text{MnO}_4^-/\text{Fe}^{2+}$，$n_1=5, n_2=1$），化学计量点偏向高电位一侧。</div>
 </div>
 
+<!-- 不对称曲线 -->
+<div class="card">
+  <h3>不对称曲线：MnO<sub>4</sub><sup>-</sup> 滴定 Fe<sup>2+</sup></h3>
+  <p>反应：$\text{MnO}_4^- + 5\text{Fe}^{2+} + 8\text{H}^+ \rightarrow \text{Mn}^{2+} + 5\text{Fe}^{3+} + 4\text{H}_2\text{O}$</p>
+  <p>$n_1 = 5$（MnO<sub>4</sub><sup>-</sup> 得 5e），$n_2 = 1$（Fe<sup>2+</sup> 失 1e）</p>
+
+  <div class="fb">
+    <div class="t">化学计量点电位</div>
+    $$\varphi_{sp} = \frac{5 \times 1.51 + 1 \times 0.68}{5 + 1} = \frac{7.55 + 0.68}{6} = \frac{8.23}{6} = 1.37\;\text{V}$$
+    <p>$\varphi_{sp} = 1.37$ V 明显偏向高电位端（$\text{MnO}_4^-$ 一侧），这就是<strong>不对称曲线</strong>的特征。</p>
+  </div>
+
+  <div class="tip">
+    <strong>对称 vs 不对称曲线对比</strong>：
+    <table>
+      <tr><th>特征</th><th>对称（$n_1=n_2$）</th><th>不对称（$n_1 \neq n_2$）</th></tr>
+      <tr><td>化学计量点位置</td><td>突跃中央</td><td>偏向 $n$ 大的一侧</td></tr>
+      <tr><td>$\varphi_{sp}$ 计算</td><td>$\frac{\varphi_1^{0'}+\varphi_2^{0'}}{2}$</td><td>$\frac{n_1\varphi_1^{0'}+n_2\varphi_2^{0'}}{n_1+n_2}$</td></tr>
+      <tr><td>典型例子</td><td>$\text{Ce}^{4+}/\text{Fe}^{2+}$</td><td>$\text{MnO}_4^-/\text{Fe}^{2+}$</td></tr>
+      <tr><td>指示剂选择</td><td>较灵活</td><td>需注意偏向</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <h3>突跃范围的计算方法</h3>
+  <p>突跃范围由 $\pm 0.1\%$ 的滴定误差所对应的电位变化定义：</p>
+  <ul>
+    <li><strong>突跃下限</strong>（99.9% 处）：用被滴定物的电对计算</li>
+  </ul>
+  $$\varphi_{99.9\%} = \varphi_2^{0'} + \frac{0.0592}{n_2}\lg\frac{99.9}{0.1} = \varphi_2^{0'} + \frac{3 \times 0.0592}{n_2}$$
+  <ul>
+    <li><strong>突跃上限</strong>（100.1% 处）：用滴定剂的电对计算</li>
+  </ul>
+  $$\varphi_{100.1\%} = \varphi_1^{0'} + \frac{0.0592}{n_1}\lg\frac{0.1}{99.9} = \varphi_1^{0'} - \frac{3 \times 0.0592}{n_1}$$
+
+  <div class="warn"><strong>影响突跃大小的因素</strong>：(1) $\Delta\varphi^{0'}$ 越大，突跃越大；(2) $n_1, n_2$ 越大，突跃越大（因为 $\frac{0.0592}{n}$ 更小，突跃上下限更接近各自的 $\varphi^{0'}$）。</div>
+</div>
+
 <div class="ex">
-  <strong>例题：</strong>在 1 mol/L $\text{H}_2\text{SO}_4$ 中，用 $\text{Ce}^{4+}$（$\varphi^{0'}=1.44$ V）滴定 $\text{Fe}^{2+}$（$\varphi^{0'}=0.68$ V），求化学计量点电位及 $\lg K$。
+  <strong>例题6：</strong>在 1 mol/L $\text{H}_2\text{SO}_4$ 中，用 $\text{Ce}^{4+}$（$\varphi^{0'}=1.44$ V）滴定 $\text{Fe}^{2+}$（$\varphi^{0'}=0.68$ V），求化学计量点电位、突跃范围及 $\lg K$。
   <div class="sol">
     <div class="st">解：</div>
     <p>$\varphi_{sp} = \frac{1 \times 1.44 + 1 \times 0.68}{1+1} = 1.06\;\text{V}$</p>
     <p>$\lg K = \frac{1 \times (1.44 - 0.68)}{0.0592} = \frac{0.76}{0.0592} = 12.8$</p>
     <p>$K$ 非常大，反应完全定量。</p>
+    <p>突跃下限：$\varphi_{99.9\%} = 0.68 + 3 \times 0.0592 = 0.86\;\text{V}$</p>
+    <p>突跃上限：$\varphi_{100.1\%} = 1.44 - 3 \times 0.0592 = 1.26\;\text{V}$</p>
+    <p>突跃范围：$0.86 \sim 1.26\;\text{V}$，可选用 ferroin（$\varphi^{0'}_\text{In} = 1.06$ V）作指示剂。</p>
   </div>
+</div>
+
+<div class="card">
+  <h3>氧化还原滴定的终点误差公式</h3>
+  <img class="ppt-img" src="temp_pages/ch7_p35.png" alt="终点误差公式">
+  <p class="ppt-caption">PPT: 氧化还原滴定终点误差</p>
+  <img class="ppt-img" src="temp_pages/ch7_p37.png" alt="终点误差详细">
+  <p class="ppt-caption">PPT: 终点误差的详细推导</p>
+
+  <div class="fb">
+    <div class="t">一般终点误差公式（可逆对称电对，$n_1 = n_2 = 1$）</div>
+    $$\boxed{E_t = \frac{10^{\Delta\varphi / 0.0592} - 10^{-\Delta\varphi / 0.0592}}{10^{\Delta\varphi^{0'} / (2\times 0.0592)}} \times 100\%}$$
+    <p>其中 $\Delta\varphi = \varphi_{ep} - \varphi_{sp}$（指示剂变色点电位与化学计量点电位之差）。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">一般形式（$n_1 \neq n_2$ 时）</div>
+    $$E_t = \frac{10^{n_2\Delta\varphi / 0.0592} - 10^{-n_1\Delta\varphi / 0.0592}}{10^{n_1 n_2 \Delta\varphi^{0'} / [0.0592(n_1+n_2)]}} \times 100\%$$
+  </div>
+
+  <p><strong>分析</strong>：</p>
+  <ul>
+    <li>终点误差不仅与电位差 $\Delta\varphi$ 有关，还与电对半反应的得失电子数 $n$ 有关</li>
+    <li>条件电位差 $\Delta\varphi^{0'}$ 越大，终点误差越小（分母越大）</li>
+    <li>终点离化学计量点越近（$\Delta\varphi$ 越小），终点误差越小</li>
+  </ul>
 </div>
 
 <!-- ==================== 7.4 ==================== -->
@@ -145,8 +396,9 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="fb">
     <div class="t">2. 特殊指示剂</div>
-    <p><strong>淀粉指示剂</strong>用于碘量法：淀粉与 $\text{I}_2$ 形成深蓝色吸附化合物。</p>
+    <p><strong>淀粉指示剂</strong>：用于碘量法，淀粉与 $\text{I}_2$ 形成深蓝色吸附化合物。</p>
     <div class="warn">淀粉指示剂应在<strong>近终点</strong>时加入（滴定碘法中溶液变浅黄后再加），否则大量 $\text{I}_2$ 被淀粉吸附不易释放，造成终点拖后。</div>
+    <p><strong>$\text{Fe(SCN)}^{2+}$ 指示剂</strong>：$\text{Sn}^{2+} + 2\text{Fe}^{3+} = 2\text{Fe}^{2+} + \text{Sn}^{4+}$ 反应中，加入 $\text{SCN}^-$，当有 $\text{Fe}^{3+}$ 存在时显红色（$\text{Fe(SCN)}^{2+}$），还原完全后红色消失。这是一种利用特定反应产物颜色变化的特殊指示剂。</p>
   </div>
 
   <div class="fb">
@@ -204,8 +456,41 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <div class="warn"><strong>关键原则</strong>：过量的预氧化/还原剂必须能够方便地除去，否则会干扰后续滴定。</div>
 </div>
 
+<div class="card">
+  <h3>SnCl<sub>2</sub> + HgCl<sub>2</sub> 预还原铁的详细步骤</h3>
+  <p>在 $\text{K}_2\text{Cr}_2\text{O}_7$ 法测铁中，需将 $\text{Fe}^{3+}$ 预还原为 $\text{Fe}^{2+}$：</p>
+
+  <ol>
+    <li><strong>热 HCl 溶液中逐滴加入 $\text{SnCl}_2$</strong>：$\text{Sn}^{2+} + 2\text{Fe}^{3+} \rightarrow \text{Sn}^{4+} + 2\text{Fe}^{2+}$
+      <p>边加边摇匀，观察溶液颜色由深黄色逐渐变浅。当溶液变为<strong>浅黄色或接近无色</strong>时，再多加 <strong>1~2 滴</strong>（稍过量），停止加入。</p>
+    </li>
+    <li><strong>冷却</strong>：将溶液冷至室温（热溶液加 $\text{HgCl}_2$ 反应过快，不易控制）。</li>
+    <li><strong>快速加入 20 mL $\text{HgCl}_2$ 溶液</strong>（过量）：
+      <p>$\text{Sn}^{2+} + 2\text{HgCl}_2 \rightarrow \text{Sn}^{4+} + \text{Hg}_2\text{Cl}_2\downarrow$（白色丝状沉淀）</p>
+      <p>$\text{Hg}_2\text{Cl}_2$（甘汞）不与 $\text{K}_2\text{Cr}_2\text{O}_7$ 反应，不干扰滴定。</p>
+    </li>
+    <li><strong>静置 2~3 分钟</strong>后，观察沉淀颜色。</li>
+  </ol>
+
+  <div class="warn">
+    <strong>三种情况的判断：</strong>
+    <ul>
+      <li><strong>正常</strong>：白色丝状 $\text{Hg}_2\text{Cl}_2$ 沉淀 &rarr; 操作成功，可继续滴定</li>
+      <li><strong>无白色沉淀</strong> &rarr; $\text{SnCl}_2$ 加入不足，$\text{Fe}^{3+}$ 未被完全还原，<strong>必须弃去重做</strong></li>
+      <li><strong>灰黑色沉淀</strong> &rarr; $\text{SnCl}_2$ 过量太多，过量的 $\text{Sn}^{2+}$ 将 $\text{Hg}_2\text{Cl}_2$ 进一步还原为金属 Hg：
+        <p>$\text{Sn}^{2+} + \text{Hg}_2\text{Cl}_2 \rightarrow \text{Sn}^{4+} + 2\text{Hg}\downarrow(\text{灰黑色}) + 2\text{Cl}^-$</p>
+        <p>金属 Hg 能还原 $\text{K}_2\text{Cr}_2\text{O}_7$，导致结果偏高。<strong>必须弃去重做</strong>。</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tip"><strong>操作要诀</strong>：$\text{SnCl}_2$ 的用量是关键。宁可多做一次也不可冒险。实际操作中，当溶液变浅黄近无色后，仅多加 1~2 滴即可。加 $\text{HgCl}_2$ 时应一次快速加入，不可缓慢滴加。</div>
+</div>
+
 <!-- ==================== 7.7 ==================== -->
 <h2>7.7 高锰酸钾法</h2>
+<img class="ppt-img" src="temp_pages/ch7_p35.png" alt="KMnO4法">
+<p class="ppt-caption">PPT: 高锰酸钾法</p>
 
 <div class="card">
   <h3>基本特性</h3>
@@ -213,19 +498,57 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <p><strong>自身指示剂</strong>：终点溶液呈粉红色（0.02 mL 0.02 mol/L $\text{KMnO}_4$ 可使 50 mL 溶液显色）。</p>
 
   <div class="warn">$\text{KMnO}_4$ 不是基准物质（含 $\text{MnO}_2$ 等杂质），需标定。配制时需煮沸、静置、过滤除去 $\text{MnO}_2$，保存于棕色瓶中。</div>
+</div>
 
-  <h3>用 $\text{Na}_2\text{C}_2\text{O}_4$ 标定 $\text{KMnO}_4$</h3>
+<div class="card">
+  <h3>用 $\text{Na}_2\text{C}_2\text{O}_4$ 标定 $\text{KMnO}_4$ 的详细操作</h3>
   <p>反应：$2\text{MnO}_4^- + 5\text{C}_2\text{O}_4^{2-} + 16\text{H}^+ \rightarrow 2\text{Mn}^{2+} + 10\text{CO}_2 + 8\text{H}_2\text{O}$</p>
+
+  <h3>标准操作步骤</h3>
+  <ol>
+    <li>准确称取 $\text{Na}_2\text{C}_2\text{O}_4$ 基准物（已于 105~110 &deg;C 干燥 2 h），溶于水</li>
+    <li>加入 $\text{H}_2\text{SO}_4$ 使酸度为 0.5~1 mol/L</li>
+    <li>加热至 <strong>75~85 &deg;C</strong>（不可煮沸！）</li>
+    <li><strong>开始滴入 $\text{KMnO}_4$</strong>：第一滴加入后，紫红色褪色很慢（此时无 $\text{Mn}^{2+}$ 催化），须充分搅拌，等紫色完全褪去后再加第二滴</li>
+    <li>随着 $\text{Mn}^{2+}$ 积累（<strong>自催化</strong>），反应加速，可适当加快滴定速度</li>
+    <li>临近终点时减慢速度，最后半滴 $\text{KMnO}_4$ 使溶液呈<strong>粉红色，30 s 不褪</strong>即为终点</li>
+  </ol>
 
   <div class="fb">
     <div class="t">"三度一点"操作要点</div>
     <ul>
-      <li><strong>酸度</strong>：0.5~1 mol/L $\text{H}_2\text{SO}_4$（不可用 HCl 或 $\text{HNO}_3$）</li>
-      <li><strong>温度</strong>：加热至 75~85 &deg;C（不可煮沸，否则 $\text{H}_2\text{C}_2\text{O}_4$ 分解）</li>
-      <li><strong>速度</strong>：开始逐滴加入并搅拌，待 $\text{Mn}^{2+}$ 生成（自催化）后可加快</li>
+      <li><strong>酸度</strong>：0.5~1 mol/L $\text{H}_2\text{SO}_4$
+        <ul>
+          <li>酸度过低：生成 $\text{MnO}_2$（棕色），而非 $\text{Mn}^{2+}$，反应不按计量关系进行</li>
+          <li>酸度过高：$\text{H}_2\text{C}_2\text{O}_4$ 分解加快</li>
+        </ul>
+      </li>
+      <li><strong>温度</strong>：加热至 75~85 &deg;C
+        <ul>
+          <li>温度过低：反应太慢</li>
+          <li>煮沸：$\text{H}_2\text{C}_2\text{O}_4$ 分解（$\text{H}_2\text{C}_2\text{O}_4 \rightarrow \text{CO}_2 + \text{CO} + \text{H}_2\text{O}$），使结果偏高</li>
+        </ul>
+      </li>
+      <li><strong>速度</strong>：开始慢（等待自催化），中间快，近终点慢</li>
       <li><strong>终点</strong>：最后半滴 $\text{KMnO}_4$ 使溶液呈粉红色，30 s 不褪</li>
     </ul>
   </div>
+</div>
+
+<div class="card">
+  <h3>为什么不能用 HCl 或 HNO<sub>3</sub>？</h3>
+  <div class="warn">
+    <strong>不能用 HCl 的原因：</strong>
+    <ol>
+      <li><strong>$\text{Cl}^-$ 被氧化</strong>：$2\text{MnO}_4^- + 10\text{Cl}^- + 16\text{H}^+ \rightarrow 2\text{Mn}^{2+} + 5\text{Cl}_2 + 8\text{H}_2\text{O}$，消耗 $\text{KMnO}_4$，结果偏高</li>
+      <li><strong>诱导反应</strong>：$\text{MnO}_4^-$ 与 $\text{C}_2\text{O}_4^{2-}$ 的反应会<strong>诱导</strong> $\text{Cl}^-$ 被氧化（即使从热力学上看 $\text{Cl}^-$ 的氧化速度很慢，在 $\text{MnO}_4^-$-$\text{C}_2\text{O}_4^{2-}$ 反应的诱导下也会发生），引起显著的正误差</li>
+    </ol>
+  </div>
+  <div class="warn">
+    <strong>不能用 HNO<sub>3</sub> 的原因：</strong>
+    <p>$\text{HNO}_3$ 本身是氧化性酸，在加热条件下会氧化 $\text{C}_2\text{O}_4^{2-}$（或其他还原性被测物），导致 $\text{KMnO}_4$ 用量偏少，结果偏低。</p>
+  </div>
+  <div class="tip">因此 $\text{KMnO}_4$ 法只能使用 $\text{H}_2\text{SO}_4$ 作为酸性介质（$\text{SO}_4^{2-}$ 不被氧化，$\text{H}_2\text{SO}_4$ 也不是氧化性酸）。</div>
 </div>
 
 <div class="card">
@@ -238,8 +561,43 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </ul>
 </div>
 
+<div class="ex">
+  <strong>例题7：KMnO<sub>4</sub> 法间接测定 Ca<sup>2+</sup></strong>
+  <p>将含 $\text{Ca}^{2+}$ 的溶液用 $(\text{NH}_4)_2\text{C}_2\text{O}_4$ 沉淀为 $\text{CaC}_2\text{O}_4$，过滤洗涤后用 $\text{H}_2\text{SO}_4$ 溶解，加热至 75~85 &deg;C，用 0.02000 mol/L $\text{KMnO}_4$ 标准溶液滴定，消耗 25.00 mL。求 $\text{Ca}^{2+}$ 的物质的量。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$\text{CaC}_2\text{O}_4 \xrightarrow{\text{H}_2\text{SO}_4} \text{Ca}^{2+} + \text{C}_2\text{O}_4^{2-}$（酸溶）</p>
+    <p>$2\text{MnO}_4^- + 5\text{C}_2\text{O}_4^{2-} + 16\text{H}^+ \rightarrow 2\text{Mn}^{2+} + 10\text{CO}_2 + 8\text{H}_2\text{O}$</p>
+    <p>$n_{\text{MnO}_4^-} = 0.02000 \times 25.00 \times 10^{-3} = 5.000 \times 10^{-4}\;\text{mol}$</p>
+    <p>$n_{\text{C}_2\text{O}_4^{2-}} = \frac{5}{2} \times n_{\text{MnO}_4^-} = \frac{5}{2} \times 5.000 \times 10^{-4} = 1.250 \times 10^{-3}\;\text{mol}$</p>
+    <p>因 $\text{Ca}^{2+} : \text{C}_2\text{O}_4^{2-} = 1:1$（在 $\text{CaC}_2\text{O}_4$ 中），故：</p>
+    $$n_{\text{Ca}^{2+}} = n_{\text{C}_2\text{O}_4^{2-}} = 1.250 \times 10^{-3}\;\text{mol}$$
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题（PPT）：$\text{KMnO}_4$ 法测定软锰矿中 $\text{MnO}_2$ 含量</strong>
+  <img class="ppt-img" src="temp_pages/ch7_p49.png" alt="KMnO4法测MnO2">
+  <p class="ppt-caption">PPT: KMnO4法测软锰矿</p>
+  <p>称取软锰矿 0.3216 g，分析纯 $\text{Na}_2\text{C}_2\text{O}_4$ 0.3685 g，共置于同一烧杯中，加入 $\text{H}_2\text{SO}_4$，加热使反应完全，用 0.02400 mol/L $\text{KMnO}_4$ 溶液滴定剩余 $\text{Na}_2\text{C}_2\text{O}_4$，消耗 11.26 mL。求软锰矿中 $\text{MnO}_2$ 的质量分数。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p><strong>原理：</strong>$\text{MnO}_2$ 先与过量 $\text{Na}_2\text{C}_2\text{O}_4$ 反应：</p>
+    <p>$\text{MnO}_2 + \text{C}_2\text{O}_4^{2-} + 4\text{H}^+ \rightarrow \text{Mn}^{2+} + 2\text{CO}_2 + 2\text{H}_2\text{O}$（剩余 $\text{C}_2\text{O}_4^{2-}$）</p>
+    <p>再用 $\text{KMnO}_4$ 滴定剩余的 $\text{C}_2\text{O}_4^{2-}$：</p>
+    <p>$2\text{MnO}_4^- + 5\text{C}_2\text{O}_4^{2-} + 16\text{H}^+ \rightarrow 2\text{Mn}^{2+} + 10\text{CO}_2 + 8\text{H}_2\text{O}$</p>
+    <p><strong>计算</strong>：基本单元关系 $\text{MnO}_2 \sim \text{Na}_2\text{C}_2\text{O}_4$（1:1），$\text{KMnO}_4 \sim \frac{5}{2}\text{C}_2\text{O}_4^{2-}$</p>
+    <p>$n_{\text{C}_2\text{O}_4^{2-},\text{total}} = \frac{0.3685}{134.0} = 2.750 \times 10^{-3}\;\text{mol}$</p>
+    <p>$n_{\text{C}_2\text{O}_4^{2-},\text{excess}} = \frac{5}{2} \times n_{\text{KMnO}_4} = \frac{5}{2} \times 0.02400 \times 11.26 \times 10^{-3} = 6.756 \times 10^{-4}\;\text{mol}$</p>
+    <p>$n_{\text{MnO}_2} = n_{\text{C}_2\text{O}_4^{2-},\text{total}} - n_{\text{C}_2\text{O}_4^{2-},\text{excess}} = 2.750 \times 10^{-3} - 6.756 \times 10^{-4} = 2.074 \times 10^{-3}\;\text{mol}$</p>
+    $$w(\text{MnO}_2) = \frac{2.074 \times 10^{-3} \times 86.94}{0.3216} \times 100\% = 56.0\%$$
+  </div>
+</div>
+
 <!-- ==================== 7.8 ==================== -->
 <h2>7.8 重铬酸钾法</h2>
+<img class="ppt-img" src="temp_pages/ch7_p36.png" alt="K2Cr2O7法">
+<p class="ppt-caption">PPT: 重铬酸钾法</p>
 
 <div class="card">
   <h3>基本特性</h3>
@@ -271,7 +629,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
       <li><strong>加入 S-P 混酸</strong>（$\text{H}_2\text{SO}_4 + \text{H}_3\text{PO}_4$）
         <ul>
           <li>$\text{H}_2\text{SO}_4$：提供酸性介质</li>
-          <li>$\text{H}_3\text{PO}_4$：与 $\text{Fe}^{3+}$ 形成无色 $\text{Fe(HPO}_4)^+$ 配合物，消除 $\text{Fe}^{3+}$ 黄色对终点的干扰，同时降低 $\text{Fe}^{3+}/\text{Fe}^{2+}$ 的条件电位</li>
+          <li>$\text{H}_3\text{PO}_4$：与 $\text{Fe}^{3+}$ 形成无色 $\text{Fe(HPO}_4)^+$ 配合物，消除 $\text{Fe}^{3+}$ 黄色对终点的干扰，同时降低 $\text{Fe}^{3+}/\text{Fe}^{2+}$ 的条件电位，增大突跃范围</li>
         </ul>
       </li>
       <li><strong>滴定</strong>：以<strong>二苯胺磺酸钠</strong>为指示剂，用 $\text{K}_2\text{Cr}_2\text{O}_7$ 标准溶液滴定至紫色</li>
@@ -280,7 +638,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 </div>
 
 <div class="ex">
-  <strong>例题：</strong>称取铁矿石 0.5000 g，溶解后用 0.01667 mol/L $\text{K}_2\text{Cr}_2\text{O}_7$ 标准溶液滴定，消耗 35.20 mL，求铁含量（$w_{Fe}$）。
+  <strong>例题8：</strong>称取铁矿石 0.5000 g，溶解后用 0.01667 mol/L $\text{K}_2\text{Cr}_2\text{O}_7$ 标准溶液滴定，消耗 35.20 mL，求铁含量（$w_{Fe}$）。
   <div class="sol">
     <div class="st">解：</div>
     <p>$n_{Cr_2O_7^{2-}} = 0.01667 \times 35.20 \times 10^{-3} = 5.868 \times 10^{-4}\;\text{mol}$</p>
@@ -290,8 +648,28 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 </div>
 
+<div class="ex">
+  <strong>例题（PPT）：$\text{K}_2\text{Cr}_2\text{O}_7$ 法测白兰地酒精含量</strong>
+  <img class="ppt-img" src="temp_pages/ch7_p53.png" alt="K2Cr2O7法测白兰地">
+  <p class="ppt-caption">PPT: K2Cr2O7法应用实例</p>
+  <p>取白兰地样品 5.00 mL，稀释至 1.000 L。取稀释液 25.00 mL 蒸馏至 50.00 mL $\text{K}_2\text{Cr}_2\text{O}_7$ 标准溶液（0.02000 mol/L）中。加热氧化乙醇为乙酸：</p>
+  $$3\text{C}_2\text{H}_5\text{OH} + 2\text{Cr}_2\text{O}_7^{2-} + 16\text{H}^+ \rightarrow 4\text{Cr}^{3+} + 3\text{CH}_3\text{COOH} + 11\text{H}_2\text{O}$$
+  <p>冷却后加入 0.1253 mol/L $\text{FeSO}_4$ 标准溶液 20.00 mL（过量），用 7.46 mL 0.02000 mol/L $\text{K}_2\text{Cr}_2\text{O}_7$ 标准溶液返滴定至二苯胺磺酸钠终点。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>计量关系：$3\text{C}_2\text{H}_5\text{OH} \sim 2\text{Cr}_2\text{O}_7^{2-} \sim 12\text{Fe}^{2+} \sim 12e$</p>
+    <p>与乙醇反应的 $\text{Cr}_2\text{O}_7^{2-}$：</p>
+    <p>利用电子守恒：$n_e(\text{Cr}_2\text{O}_7^{2-},\text{total}) = n_e(\text{C}_2\text{H}_5\text{OH}) + n_e(\text{Fe}^{2+}) - n_e(\text{Cr}_2\text{O}_7^{2-},\text{back})$</p>
+    $$n_{\text{C}_2\text{H}_5\text{OH}} = \frac{(6\times 0.02000\times(50.00+7.46) - 0.1253\times 20.00) \times \frac{46.07}{4}}{25.00 \times 1000 \times 5.00} \times 1000$$
+    <p>最终 $w(\text{C}_2\text{H}_5\text{OH}) = 40.43\%$（v/v）。</p>
+    <div class="tip">此题综合运用了返滴定法和电子守恒。注意总反应中 1 mol 乙醇失 4 mol 电子（从 $-1$ 价碳氧化到 $0$ 价碳），所以 $3\text{C}_2\text{H}_5\text{OH} \sim 12e$。</div>
+  </div>
+</div>
+
 <!-- ==================== 7.9 ==================== -->
 <h2>7.9 碘量法</h2>
+<img class="ppt-img" src="temp_pages/ch7_p41.png" alt="碘量法">
+<p class="ppt-caption">PPT: 碘量法的原理与分类</p>
 
 <div class="card">
   <h3>基本原理</h3>
@@ -302,6 +680,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <div class="t">直接碘滴定法（碘滴定法）</div>
     <p>用 $\text{I}_2$ 标准溶液直接滴定<strong>还原性</strong>物质（$\varphi^{0'} < 0.545$ V 的电对）。</p>
     <p>例：测 $\text{As}(\text{III})$, $\text{Sn}^{2+}$, $\text{SO}_3^{2-}$, 抗坏血酸等。</p>
+    <p>淀粉指示剂在<strong>开始时即可加入</strong>，终点为溶液由无色变为蓝色。</p>
   </div>
 
   <div class="fb">
@@ -309,39 +688,288 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <p>用还原性物质 $\text{I}^-$（过量 KI）与氧化性物质反应，析出定量 $\text{I}_2$，再用 $\text{Na}_2\text{S}_2\text{O}_3$ 标准溶液滴定。</p>
     <p>$\text{I}_2 + 2\text{S}_2\text{O}_3^{2-} \rightarrow 2\text{I}^- + \text{S}_4\text{O}_6^{2-}$</p>
     <p>例：测 $\text{Cu}^{2+}$, $\text{Cr}_2\text{O}_7^{2-}$, 溶解氧, $\text{H}_2\text{O}_2$ 等。</p>
+    <p>淀粉指示剂在<strong>近终点时加入</strong>（溶液变浅黄色时），终点为蓝色褪去变无色。</p>
   </div>
 </div>
 
 <div class="card">
-  <h3>$\text{Na}_2\text{S}_2\text{O}_3$ 标准溶液</h3>
-  <ul>
-    <li>$\text{Na}_2\text{S}_2\text{O}_3 \cdot 5\text{H}_2\text{O}$ 不是基准物质（含水量不定），需标定</li>
-    <li>配制：用新煮沸冷却的蒸馏水，加少量 $\text{Na}_2\text{CO}_3$（碱性防分解）</li>
-    <li>标定：用 $\text{K}_2\text{Cr}_2\text{O}_7$ 基准物（酸性下与过量 KI 反应生成 $\text{I}_2$，再用 $\text{Na}_2\text{S}_2\text{O}_3$ 滴定）</li>
-  </ul>
+  <h3>$\text{Na}_2\text{S}_2\text{O}_3$ 标准溶液的配制</h3>
+  <p>$\text{Na}_2\text{S}_2\text{O}_3 \cdot 5\text{H}_2\text{O}$ <strong>不是基准物质</strong>（含结晶水量不确定，且可被细菌分解、空气氧化），需标定。</p>
 
+  <div class="fb">
+    <div class="t">配制步骤及原因</div>
+    <table>
+      <tr><th>步骤</th><th>原因</th></tr>
+      <tr><td>使用<strong>新煮沸并冷却</strong>的蒸馏水</td><td>煮沸除去水中溶解的 $\text{CO}_2$ 和 $\text{O}_2$，杀灭细菌。$\text{CO}_2$ 使溶液偏酸导致 $\text{S}_2\text{O}_3^{2-}$ 分解；$\text{O}_2$ 会氧化 $\text{S}_2\text{O}_3^{2-}$；细菌（硫杆菌）能分解 $\text{S}_2\text{O}_3^{2-}$</td></tr>
+      <tr><td>加入少量 $\text{Na}_2\text{CO}_3$（约 0.1 g/L）</td><td>保持溶液微碱性（pH $\approx$ 9~10），抑制分解反应 $\text{S}_2\text{O}_3^{2-} + 2\text{H}^+ \rightarrow \text{S}\downarrow + \text{SO}_2 + \text{H}_2\text{O}$</td></tr>
+      <tr><td>保存于<strong>棕色瓶</strong>中</td><td>避免光照加速分解</td></tr>
+      <tr><td>放置 1~2 周后标定</td><td>等待浓度稳定（初配制后浓度会缓慢变化）</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <h3>用 $\text{K}_2\text{Cr}_2\text{O}_7$ 标定 $\text{Na}_2\text{S}_2\text{O}_3$ 的完整步骤</h3>
+  <ol>
+    <li>准确称取 $\text{K}_2\text{Cr}_2\text{O}_7$ 基准物（已于 150 &deg;C 干燥），溶于水，移入碘量瓶</li>
+    <li>加入过量 KI（约 2 g）和 6 mol/L $\text{HCl}$ 5 mL</li>
+    <li>盖好瓶盖，在暗处放置 5 min（使反应完全）：
+      <p>$\text{Cr}_2\text{O}_7^{2-} + 6\text{I}^- + 14\text{H}^+ \rightarrow 2\text{Cr}^{3+} + 3\text{I}_2 + 7\text{H}_2\text{O}$</p>
+    </li>
+    <li>加水 100 mL 稀释</li>
+    <li>用 $\text{Na}_2\text{S}_2\text{O}_3$ 标准溶液滴定至溶液由棕色变为浅黄色</li>
+    <li>加入 2 mL 淀粉指示剂，继续滴定至蓝色恰好褪去即为终点</li>
+  </ol>
+  <p>计量关系：$\text{Cr}_2\text{O}_7^{2-} \sim 3\text{I}_2 \sim 6\text{S}_2\text{O}_3^{2-}$</p>
+
+  <div class="note">标定时要注意：(1) 暗处反应防止 $\text{I}^-$ 被光催化氧化；(2) 碘量瓶的水封防止 $\text{I}_2$ 挥发；(3) 淀粉在近终点时加入。</div>
+</div>
+
+<div class="card">
+  <h3>碘量法的误差来源</h3>
   <div class="warn">
-    <strong>碘量法注意事项：</strong>
-    <ul>
-      <li>避免 $\text{I}_2$ 挥发：加过量 KI（形成 $\text{I}_3^-$），密塞，快速滴定</li>
-      <li>防止 $\text{I}^-$ 被空气氧化（$4\text{I}^- + \text{O}_2 + 4\text{H}^+ \rightarrow 2\text{I}_2 + 2\text{H}_2\text{O}$）：避免强酸性、避免阳光直射、反应后立即滴定</li>
-      <li>淀粉指示剂在近终点时加入（滴定碘法中溶液变浅黄色时）</li>
-      <li>$\text{Na}_2\text{S}_2\text{O}_3$ 不可在酸性中使用（会分解）</li>
-    </ul>
+    <strong>碘量法注意事项（系统梳理）：</strong>
+    <table>
+      <tr><th>误差来源</th><th>影响</th><th>防止措施</th></tr>
+      <tr><td>$\text{I}_2$ 挥发</td><td>结果偏低</td><td>加过量 KI（形成 $\text{I}_3^-$）；密塞；快速滴定</td></tr>
+      <tr><td>$\text{I}^-$ 被空气氧化<br>$4\text{I}^- + \text{O}_2 + 4\text{H}^+ \rightarrow 2\text{I}_2 + 2\text{H}_2\text{O}$</td><td>结果偏高</td><td>避免强酸性；避免阳光直射；反应后立即滴定；不要剧烈摇动</td></tr>
+      <tr><td>淀粉加入过早（间接碘量法）</td><td>终点拖后</td><td>溶液变浅黄色时再加</td></tr>
+      <tr><td>$\text{Na}_2\text{S}_2\text{O}_3$ 在酸中分解</td><td>浓度不准</td><td>$\text{Na}_2\text{S}_2\text{O}_3$ 不可在酸性中使用；标定时先加 KI 和酸使析碘反应在酸性中完成，滴定在微酸性即可</td></tr>
+      <tr><td>CuI 吸附 $\text{I}_2$（测铜时）</td><td>结果偏低</td><td>近终点加 KSCN</td></tr>
+    </table>
   </div>
 </div>
 
 <div class="card">
-  <h3>碘量法测铜</h3>
+  <h3>碘量法测铜 -- 完整操作</h3>
   <p>反应：$2\text{Cu}^{2+} + 4\text{I}^- \rightarrow 2\text{CuI}\downarrow + \text{I}_2$</p>
   <p>生成的 $\text{I}_2$ 用 $\text{Na}_2\text{S}_2\text{O}_3$ 滴定。</p>
 
-  <div class="tip">CuI 沉淀会吸附 $\text{I}_2$ 导致终点拖后、结果偏低。解决方法：近终点时加入 $\text{KSCN}$，将 CuI 转化为更不溶的 CuSCN，释放被吸附的 $\text{I}_2$。</div>
+  <h3>详细步骤</h3>
+  <ol>
+    <li>取含 $\text{Cu}^{2+}$ 的弱酸性溶液（pH 3~4），加入过量 KI（约 3~4 g）</li>
+    <li>加盖，在暗处放置 3~5 min</li>
+    <li>用 $\text{Na}_2\text{S}_2\text{O}_3$ 滴定至浅黄色</li>
+    <li>加 2 mL 淀粉指示剂，溶液变蓝</li>
+    <li><strong>加入约 5 mL 10% KSCN 溶液</strong>：
+      <p>$\text{CuI} + \text{SCN}^- \rightarrow \text{CuSCN}\downarrow + \text{I}^-$</p>
+      <p>CuSCN 比 CuI 更不溶（$K_{sp}$ 更小），从 CuI 沉淀表面释放被吸附的 $\text{I}_2$。加入 KSCN 后蓝色可能重新加深。</p>
+    </li>
+    <li>继续用 $\text{Na}_2\text{S}_2\text{O}_3$ 滴定至蓝色褪去即为终点</li>
+  </ol>
+
+  <div class="tip">
+    <strong>计量关系</strong>：$2\text{Cu}^{2+} \sim \text{I}_2 \sim 2\text{S}_2\text{O}_3^{2-}$，即 $n_{\text{Cu}^{2+}} = n_{\text{S}_2\text{O}_3^{2-}}$
+  </div>
 
   <h3>碘量法中的放大（倍量）反应</h3>
   <p>利用某些反应中电子转移倍数不同实现信号放大。例如：</p>
   <p>$\text{IO}_3^- + 5\text{I}^- + 6\text{H}^+ \rightarrow 3\text{I}_2 + 3\text{H}_2\text{O}$</p>
   <p>1 mol $\text{IO}_3^-$ 产生 3 mol $\text{I}_2$，消耗 6 mol $\text{Na}_2\text{S}_2\text{O}_3$，实现 6 倍放大。</p>
+</div>
+
+<!-- ==================== 真题考点精讲 ==================== -->
+<h2>7.10 真题考点精讲</h2>
+
+<div class="card">
+  <h3>Quiz 2 典型题目</h3>
+
+  <div class="ex">
+    <strong>Quiz 2 Q6：K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> 法测铁中混合酸的作用</strong>
+    <p>在 $\text{K}_2\text{Cr}_2\text{O}_7$ 法测定铁含量时，滴定前加入 $\text{H}_2\text{SO}_4$-$\text{H}_3\text{PO}_4$ 混合酸，下列说法中正确的有？</p>
+    <p>A. $\text{H}_2\text{SO}_4$ 提供酸性介质 &nbsp; B. $\text{H}_3\text{PO}_4$ 与 $\text{Fe}^{3+}$ 配合消除黄色干扰 &nbsp; C. $\text{H}_3\text{PO}_4$ 降低 $\text{Fe}^{3+}/\text{Fe}^{2+}$ 条件电位 &nbsp; D. 使突跃范围增大</p>
+    <div class="sol">
+      <div class="st">解：ABCD 全部正确</div>
+      <ul>
+        <li>A. $\text{H}_2\text{SO}_4$ 提供 $\text{H}^+$，维持反应所需酸度</li>
+        <li>B. $\text{Fe}^{3+}$ 黄色 &rarr; $\text{Fe(HPO}_4)^+$ 无色，有利于终点判断</li>
+        <li>C. $\text{H}_3\text{PO}_4$ 配位氧化态 $\text{Fe}^{3+}$，$\alpha_\text{Ox}$ 增大，$\varphi^{0'}$ 降低</li>
+        <li>D. $\varphi^{0'}_\text{Fe}$ 降低 &rarr; $\Delta\varphi^{0'}$ 增大 &rarr; 突跃范围增大</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ex">
+    <strong>Quiz 2 Q8：间接碘量法中淀粉指示剂的加入时机</strong>
+    <p>间接碘量法（滴定碘法）中，淀粉指示剂应何时加入？</p>
+    <div class="sol">
+      <div class="st">解：在近终点时（溶液变为浅黄色时）加入</div>
+      <p>原因：若过早加入，大量 $\text{I}_2$ 与淀粉形成深蓝色包合物，$\text{I}_2$ 被紧密吸附在淀粉螺旋结构内，不易被 $\text{Na}_2\text{S}_2\text{O}_3$ 释放出来，导致终点拖后，滴定误差增大。</p>
+      <p>注意：在<strong>直接碘滴定法</strong>中，淀粉指示剂可在开始时加入（因为开始时溶液中没有 $\text{I}_2$，不存在吸附问题）。</p>
+    </div>
+  </div>
+
+  <div class="ex">
+    <strong>Quiz 2 Q9：Ce<sup>4+</sup> 滴定 Fe<sup>2+</sup> 为对称曲线的原因</strong>
+    <p>$\text{Ce}^{4+}$ 滴定 $\text{Fe}^{2+}$ 的滴定曲线为对称曲线，原因是什么？</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>因为两个电对的电子转移数相同：$n_1 = n_2 = 1$</p>
+      <p>$\text{Ce}^{4+} + e^- \rightarrow \text{Ce}^{3+}$ ($n_1 = 1$)</p>
+      <p>$\text{Fe}^{3+} + e^- \rightarrow \text{Fe}^{2+}$ ($n_2 = 1$)</p>
+      <p>当 $n_1 = n_2$ 时，$\varphi_{sp} = \frac{\varphi_1^{0'} + \varphi_2^{0'}}{2}$，化学计量点恰在突跃范围中央，曲线关于 SP 对称。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Quiz 2 计算题</h3>
+
+  <div class="ex">
+    <strong>Quiz 2 Calc Q3：钢中 Cr 含量的返滴定法</strong>
+    <p>称取钢样 1.000 g，用酸溶解后将 Cr 氧化为 $\text{Cr}_2\text{O}_7^{2-}$，恰好转入 250 mL 容量瓶中。取 25.00 mL 试液，加入 0.1000 mol/L $\text{FeSO}_4$ 标准溶液 25.00 mL（过量），用 0.01800 mol/L $\text{KMnO}_4$ 标准溶液返滴定剩余 $\text{Fe}^{2+}$，消耗 7.00 mL。求钢中 Cr 的质量分数 $w(\text{Cr})$。</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p><strong>第一步</strong>：写出反应方程式</p>
+      <p>$\text{Cr}_2\text{O}_7^{2-} + 6\text{Fe}^{2+} + 14\text{H}^+ \rightarrow 2\text{Cr}^{3+} + 6\text{Fe}^{3+} + 7\text{H}_2\text{O}$ &nbsp; ...(1)</p>
+      <p>$\text{MnO}_4^- + 5\text{Fe}^{2+} + 8\text{H}^+ \rightarrow \text{Mn}^{2+} + 5\text{Fe}^{3+} + 4\text{H}_2\text{O}$ &nbsp; ...(2)</p>
+
+      <p><strong>第二步</strong>：计算各物质的量</p>
+      <p>$n_{\text{Fe}^{2+},\text{total}} = 0.1000 \times 25.00 \times 10^{-3} = 2.500 \times 10^{-3}\;\text{mol}$</p>
+      <p>返滴定消耗：$n_{\text{MnO}_4^-} = 0.01800 \times 7.00 \times 10^{-3} = 1.260 \times 10^{-4}\;\text{mol}$</p>
+      <p>剩余 $\text{Fe}^{2+}$：$n_{\text{Fe}^{2+},\text{excess}} = 5 \times n_{\text{MnO}_4^-} = 5 \times 1.260 \times 10^{-4} = 6.300 \times 10^{-4}\;\text{mol}$</p>
+
+      <p><strong>第三步</strong>：与 $\text{Cr}_2\text{O}_7^{2-}$ 反应的 $\text{Fe}^{2+}$</p>
+      <p>$n_{\text{Fe}^{2+},\text{reacted}} = 2.500 \times 10^{-3} - 6.300 \times 10^{-4} = 1.870 \times 10^{-3}\;\text{mol}$</p>
+
+      <p><strong>第四步</strong>：计算 Cr 的量（注意 25.00 mL 是 250 mL 的 1/10）</p>
+      <p>由反应(1)：$n_{\text{Cr}_2\text{O}_7^{2-}} = \frac{1}{6} \times n_{\text{Fe}^{2+},\text{reacted}} = \frac{1.870 \times 10^{-3}}{6} = 3.117 \times 10^{-4}\;\text{mol}$</p>
+      <p>$n_{\text{Cr}} = 2 \times n_{\text{Cr}_2\text{O}_7^{2-}} = 2 \times 3.117 \times 10^{-4} = 6.233 \times 10^{-4}\;\text{mol}$（取 25.00 mL 中的）</p>
+      <p>总量（250 mL）：$n_{\text{Cr},\text{total}} = 6.233 \times 10^{-4} \times 10 = 6.233 \times 10^{-3}\;\text{mol}$</p>
+
+      $$w(\text{Cr}) = \frac{6.233 \times 10^{-3} \times 52.00}{1.000} \times 100\% = \boxed{3.24\%}$$
+
+      <div class="tip">
+        <strong>简洁的等量关系法</strong>（用等物质的量的电子转移）：<br>
+        与 Cr 反应的 $\text{Fe}^{2+}$ 的物质的量 = $0.1000 \times \frac{25.00}{1000} - 5 \times 0.01800 \times \frac{7.00}{1000}$<br>
+        $= 2.500 \times 10^{-3} - 6.300 \times 10^{-4} = 1.870 \times 10^{-3}\;\text{mol}$<br>
+        $n_\text{Cr} = \frac{1}{3} \times n_{\text{Fe}^{2+}} = \frac{1.870 \times 10^{-3}}{3} = 6.233 \times 10^{-4}\;\text{mol}$<br>
+        （因为 1 个 Cr 从 +6 降到 +3，失去 3 个电子；1 个 Fe<sup>2+</sup> 失去 1 个电子）<br>
+        $w(\text{Cr}) = \frac{6.233 \times 10^{-4} \times 10 \times 52.00}{1.000} = 3.24\%$
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>2022 期末考试典型题目</h3>
+
+  <div class="ex">
+    <strong>2022 Final Q3：H<sub>2</sub>SO<sub>4</sub>-H<sub>3</sub>PO<sub>4</sub> 混合酸的作用</strong>
+    <p>$\text{K}_2\text{Cr}_2\text{O}_7$ 法测铁时，加入 $\text{H}_2\text{SO}_4$-$\text{H}_3\text{PO}_4$ 混合酸的目的是什么？</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <ol>
+        <li><strong>$\text{H}_2\text{SO}_4$</strong>：提供反应所需酸性介质（$\text{Cr}_2\text{O}_7^{2-}$ 需在酸性条件下氧化 $\text{Fe}^{2+}$）</li>
+        <li><strong>$\text{H}_3\text{PO}_4$</strong> 有三重作用：
+          <ul>
+            <li>(a) 与生成的 $\text{Fe}^{3+}$ 配位形成 $[\text{Fe(HPO}_4)]^+$ 无色配合物，<strong>消除 $\text{Fe}^{3+}$ 的黄色</strong>对终点观察的干扰</li>
+            <li>(b) 配位 $\text{Fe}^{3+}$（氧化态），使 $\alpha_{\text{Fe(III)}}$ 增大，<strong>降低 $\text{Fe}^{3+}/\text{Fe}^{2+}$ 电对的条件电位</strong></li>
+            <li>(c) 条件电位降低使 $\Delta\varphi^{0'}$ 增大，<strong>增大滴定突跃范围</strong>，有利于准确判定终点，可使用 $\varphi^{0'} = 0.84$ V 的二苯胺磺酸钠作指示剂</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <strong>2022 Final Q18：KMnO<sub>4</sub> 法为什么不能用 HCl？</strong>
+    <p>用 $\text{KMnO}_4$ 标准溶液滴定 $\text{C}_2\text{O}_4^{2-}$ 时，为什么不能用 HCl 作酸性介质？</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>两个原因：</p>
+      <ol>
+        <li><strong>直接氧化</strong>：$\text{KMnO}_4$ 可氧化 HCl 中的 $\text{Cl}^-$：$2\text{MnO}_4^- + 10\text{Cl}^- + 16\text{H}^+ \rightarrow 2\text{Mn}^{2+} + 5\text{Cl}_2 + 8\text{H}_2\text{O}$，消耗额外的 $\text{KMnO}_4$，使结果偏高</li>
+        <li><strong>诱导反应</strong>：$\text{MnO}_4^-$ 氧化 $\text{C}_2\text{O}_4^{2-}$ 的反应会诱导 $\text{Cl}^-$ 被氧化（即所谓的诱导效应），即使在动力学上 $\text{Cl}^-$ 单独被 $\text{MnO}_4^-$ 氧化的速度较慢，在诱导反应的条件下也会显著发生，进一步消耗 $\text{KMnO}_4$</li>
+      </ol>
+      <p>因此 $\text{KMnO}_4$ 法只能使用 $\text{H}_2\text{SO}_4$。</p>
+    </div>
+  </div>
+
+  <div class="ex">
+    <strong>2022 Final Q19：Ce<sup>4+</sup> 滴定 Fe<sup>2+</sup> 至 50% 时的电位</strong>
+    <p>在 1 mol/L $\text{H}_2\text{SO}_4$ 中，用 $\text{Ce}^{4+}$（$\varphi^{0'} = 1.44$ V）滴定 $\text{Fe}^{2+}$（$\varphi^{0'} = 0.68$ V），当滴定至 50% 时，溶液电位为多少？</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>滴定 50% 时，$\text{Fe}^{2+}$ 被氧化了一半：$[\text{Fe}^{3+}] = [\text{Fe}^{2+}]$</p>
+      $$\varphi = \varphi^{0'}_{\text{Fe}^{3+}/\text{Fe}^{2+}} + 0.0592\lg\frac{[\text{Fe}^{3+}]}{[\text{Fe}^{2+}]} = 0.68 + 0.0592\lg 1 = \boxed{0.68\;\text{V}}$$
+      <p>化学计量点前的电位由被滴定物的电对控制。50% 时恰好 $[\text{Ox}] = [\text{Red}]$，$\lg$ 项为零，电位等于该电对的条件电位。</p>
+    </div>
+  </div>
+
+  <div class="ex">
+    <strong>2022 Final Calc Q3：条件电位计算（含 F<sup>-</sup> 配位）</strong>
+    <p>已知 $\text{Fe}^{3+}/\text{Fe}^{2+}$ 电对 $\varphi^0 = 0.771$ V。在含 $\text{F}^-$ 的溶液中，$\text{Fe}^{3+}$ 与 $\text{F}^-$ 的累积稳定常数 $\lg\beta_1=5.2$, $\lg\beta_2=9.2$, $\lg\beta_3=11.9$。$\text{Fe}^{2+}$ 基本不与 $\text{F}^-$ 配位。若 $[\text{F}^-] = 10^{-1.5}$ mol/L，求条件电位。</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>$\alpha_{\text{Fe(III)}(\text{F})} = 1 + \beta_1[\text{F}^-] + \beta_2[\text{F}^-]^2 + \beta_3[\text{F}^-]^3$</p>
+      <p>$= 1 + 10^{5.2-1.5} + 10^{9.2-3.0} + 10^{11.9-4.5}$</p>
+      <p>$= 1 + 10^{3.7} + 10^{6.2} + 10^{7.4} \approx 10^{7.4}$</p>
+      <p>$\alpha_{\text{Fe(II)}} = 1$</p>
+      $$\varphi^{0'} = 0.771 + 0.0592\lg\frac{1}{10^{7.4}} = 0.771 - 0.0592 \times 7.4 = 0.771 - 0.438 = \boxed{0.333\;\text{V}}$$
+      <p>$\text{F}^-$ 配位使电位大幅降低约 0.44 V。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>考点速查表</h3>
+  <table>
+    <tr><th>考点</th><th>核心要点</th><th>常见陷阱</th></tr>
+    <tr><td>条件电位方向</td><td>配位氧化态 &rarr; $\varphi^{0'}$ 降低<br>配位还原态 &rarr; $\varphi^{0'}$ 升高</td><td>不要搞反方向</td></tr>
+    <tr><td>定量判据</td><td>$\lg K \geq 6$ 或 $\Delta\varphi^{0'} \geq 0.4$ V（$n=1$）</td><td>$n$ 大时 $\Delta\varphi^{0'}$ 可更小</td></tr>
+    <tr><td>对称/不对称</td><td>$n_1 = n_2$：对称；$n_1 \neq n_2$：不对称</td><td>$\varphi_{sp}$ 公式中 $n$ 的加权</td></tr>
+    <tr><td>50% 处电位</td><td>$\varphi = \varphi^{0'}_\text{被滴定物}$</td><td>不是化学计量点电位</td></tr>
+    <tr><td>200% 处电位</td><td>$\varphi = \varphi^{0'}_\text{滴定剂}$</td><td>&mdash;</td></tr>
+    <tr><td>KMnO<sub>4</sub> 酸介质</td><td>只能用 $\text{H}_2\text{SO}_4$</td><td>HCl（诱导）、HNO<sub>3</sub>（氧化）均不可</td></tr>
+    <tr><td>淀粉加入时机</td><td>直接碘滴定法：开始时<br>间接碘量法：近终点时</td><td>两种方法的加入时机不同</td></tr>
+    <tr><td>SnCl<sub>2</sub>+HgCl<sub>2</sub></td><td>白色正常；无色重做；灰黑重做</td><td>灰黑色 Hg 会还原滴定剂</td></tr>
+    <tr><td>KSCN 在碘量测铜中</td><td>转化 CuI &rarr; CuSCN 释放 I<sub>2</sub></td><td>近终点时加，不是开始时加</td></tr>
+    <tr><td>Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub> 配制</td><td>煮沸水 + Na<sub>2</sub>CO<sub>3</sub> + 棕色瓶</td><td>不能用新鲜蒸馏水直接配</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>补充例题</h3>
+
+  <div class="ex">
+    <strong>例题9：MnO<sub>4</sub><sup>-</sup> 滴定 Fe<sup>2+</sup> 的化学计量点电位</strong>
+    <p>在 $\text{H}_2\text{SO}_4$ 介质中用 $\text{KMnO}_4$（$\varphi^{0'} = 1.51$ V）滴定 $\text{Fe}^{2+}$（$\varphi^{0'} = 0.68$ V），求 $\varphi_{sp}$ 并说明其特征。</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>$\text{MnO}_4^- + 5\text{Fe}^{2+} + 8\text{H}^+ \rightarrow \text{Mn}^{2+} + 5\text{Fe}^{3+} + 4\text{H}_2\text{O}$</p>
+      <p>$n_1 = 5$（MnO<sub>4</sub><sup>-</sup>），$n_2 = 1$（Fe<sup>2+</sup>）</p>
+      $$\varphi_{sp} = \frac{5 \times 1.51 + 1 \times 0.68}{5 + 1} = \frac{8.23}{6} = 1.37\;\text{V}$$
+      <p>$\varphi_{sp} = 1.37$ V 明显偏向高电位端（$\text{MnO}_4^-$ 一侧）。曲线不对称，$n_1 > n_2$ 故偏向 $\varphi_1^{0'}$。</p>
+      <p>注意：$\text{KMnO}_4$ 为自身指示剂，不需额外加指示剂。</p>
+    </div>
+  </div>
+
+  <div class="ex">
+    <strong>例题10：Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub> 浓度的标定计算</strong>
+    <p>准确称取 $\text{K}_2\text{Cr}_2\text{O}_7$ 基准物 0.1500 g，溶解后加入过量 KI 和 HCl，暗处反应后用 $\text{Na}_2\text{S}_2\text{O}_3$ 溶液滴定，消耗 30.50 mL。求 $\text{Na}_2\text{S}_2\text{O}_3$ 的浓度。（$M_{\text{K}_2\text{Cr}_2\text{O}_7} = 294.2$ g/mol）</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>计量关系：$\text{Cr}_2\text{O}_7^{2-} \sim 3\text{I}_2 \sim 6\text{S}_2\text{O}_3^{2-}$</p>
+      <p>$n_{\text{K}_2\text{Cr}_2\text{O}_7} = \frac{0.1500}{294.2} = 5.098 \times 10^{-4}\;\text{mol}$</p>
+      <p>$n_{\text{S}_2\text{O}_3^{2-}} = 6 \times n_{\text{K}_2\text{Cr}_2\text{O}_7} = 6 \times 5.098 \times 10^{-4} = 3.059 \times 10^{-3}\;\text{mol}$</p>
+      $$c_{\text{Na}_2\text{S}_2\text{O}_3} = \frac{3.059 \times 10^{-3}}{30.50 \times 10^{-3}} = \boxed{0.1003\;\text{mol/L}}$$
+    </div>
+  </div>
+
+  <div class="ex">
+    <strong>例题11：碘量法测定 Cu<sup>2+</sup> 含量</strong>
+    <p>含铜矿样 0.5000 g，溶解后取全部溶液，加过量 KI 使 $\text{Cu}^{2+}$ 反应完全，用 0.1000 mol/L $\text{Na}_2\text{S}_2\text{O}_3$ 标准溶液滴定析出的 $\text{I}_2$，消耗 24.00 mL。求 $w(\text{Cu})$。（$M_\text{Cu} = 63.55$）</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>$2\text{Cu}^{2+} + 4\text{I}^- \rightarrow 2\text{CuI}\downarrow + \text{I}_2$</p>
+      <p>$\text{I}_2 + 2\text{S}_2\text{O}_3^{2-} \rightarrow 2\text{I}^- + \text{S}_4\text{O}_6^{2-}$</p>
+      <p>总计量关系：$\text{Cu}^{2+} \sim \frac{1}{2}\text{I}_2 \sim \text{S}_2\text{O}_3^{2-}$，即 $n_{\text{Cu}^{2+}} = n_{\text{S}_2\text{O}_3^{2-}}$</p>
+      <p>$n_{\text{S}_2\text{O}_3^{2-}} = 0.1000 \times 24.00 \times 10^{-3} = 2.400 \times 10^{-3}\;\text{mol}$</p>
+      <p>$n_{\text{Cu}} = 2.400 \times 10^{-3}\;\text{mol}$</p>
+      $$w(\text{Cu}) = \frac{2.400 \times 10^{-3} \times 63.55}{0.5000} \times 100\% = \boxed{30.50\%}$$
+    </div>
+  </div>
 </div>
 
 <script src="toc.js"></script>

@@ -35,20 +35,27 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 .freq-high{background:#e74c3c;}
 .freq-mid{background:#f39c12;}
 .freq-low{background:#27ae60;}
+.ppt-img{display:block;max-width:100%;margin:12px auto;border:1px solid #e0d8c8;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ppt-caption{text-align:center;font-size:.82em;color:#888;margin:-6px 0 12px;}
 </style>
 </head>
 <body>
 
 <div class="nav-bar">
   <a href="index.html">首页</a>
-  <a href="formulas.html">公式速查</a>
-  <a href="#overview">考试概况</a>
-  <a href="#freq">考频排序</a>
-  <a href="#top10">十大考点</a>
-  <a href="#traps">十大陷阱</a>
-  <a href="#criteria">判据对比</a>
-  <a href="#quiz">真题解析</a>
-  <a href="#strategy">答题策略</a>
+  <a href="ch1.html">第一章</a>
+  <a href="ch3.html">第三章</a>
+  <a href="ch5-1.html">第五章(上)</a>
+  <a href="ch5-2.html">第五章(下)</a>
+  <a href="ch6.html">第六章</a>
+  <a href="ch7.html">第七章</a>
+  <a href="ch9.html">第九章</a>
+  <a href="ch10.html">第十章</a>
+  <a href="formulas.html">公式表</a>
+  <a href="exam-review.html">备考</a>
+  <a href="quiz1.html">小测1</a>
+  <a href="quiz2.html">小测2</a>
+  <a href="final2022.html">期末真题</a>
 </div>
 
 <h1>备考指南与考点分析</h1>
@@ -843,6 +850,165 @@ $$c(\text{H}_3\text{BO}_3) = \frac{c(\text{NaOH}) \times V_2}{V_{\text{样}}}$$
 
 <div class="note">
 <strong>心态提醒：</strong>分析化学考试的计算量较大，但公式相对固定。考前重点背公式和判据，考场上重点在正确选择公式和细心计算。遇到难题先跳过，把有把握的分数拿到手。
+</div>
+
+<h2>考前冲刺自测（10题）</h2>
+<p>以下 10 道快速计算题覆盖高频考点，建议限时 40 分钟完成。</p>
+
+<div class="card">
+<h3>自测题 1：有效数字</h3>
+<p>pH = 3.46，求 $[\text{H}^+]$，保留正确的有效数字位数。</p>
+<details>
+<summary>查看答案</summary>
+<div class="sol">
+<p>pH 小数部分 ".46" 为 2 位，$[\text{H}^+]$ 保留 <strong>2 位</strong>有效数字。</p>
+$$[\text{H}^+] = 10^{-3.46} = 3.5 \times 10^{-4}\;\text{mol/L}$$
+</div>
+</details>
+</div>
+
+<div class="card">
+<h3>自测题 2：缓冲溶液 pH</h3>
+<p>用 0.20 mol/L HAc（$pK_a = 4.74$）与 0.10 mol/L NaAc 等体积混合，求混合溶液 pH。</p>
+<details>
+<summary>查看答案</summary>
+<div class="sol">
+<p>等体积混合后：$c(\text{HAc}) = 0.10$，$c(\text{NaAc}) = 0.05$</p>
+$$\text{pH} = pK_a + \lg\frac{c_b}{c_a} = 4.74 + \lg\frac{0.05}{0.10} = 4.74 - 0.30 = 4.44$$
+</div>
+</details>
+</div>
+
+<div class="card">
+<h3>自测题 3：能否直接滴定？</h3>
+<p>浓度为 0.1 mol/L 的以下酸，哪些能用 NaOH 直接滴定？<br>
+A. HF（$K_a = 6.8\times10^{-4}$）&emsp; B. HCN（$K_a = 6.2\times10^{-10}$）&emsp; C. $\text{H}_2\text{S}$（$K_{a1}=1.3\times10^{-7}$）</p>
+<details>
+<summary>查看答案</summary>
+<div class="sol">
+<p>判据：$cK_a \geq 10^{-8}$</p>
+<ul>
+<li>A: $0.1 \times 6.8\times10^{-4} = 6.8\times10^{-5} \gg 10^{-8}$ ✓ 能滴定</li>
+<li>B: $0.1 \times 6.2\times10^{-10} = 6.2\times10^{-11} < 10^{-8}$ ✗ 不能</li>
+<li>C: $0.1 \times 1.3\times10^{-7} = 1.3\times10^{-8} \geq 10^{-8}$ ✓ 勉强能滴定第一步</li>
+</ul>
+<p><strong>答：A 和 C（第一步）能直接滴定。</strong></p>
+</div>
+</details>
+</div>
+
+<div class="card">
+<h3>自测题 4：t 检验</h3>
+<p>5 次测量某钢样的碳含量得 $\bar{x} = 0.326\%$，$s = 0.008\%$，标准值 $\mu_0 = 0.310\%$。问在 95% 置信度下是否存在系统误差？（$t_{0.05,4} = 2.776$）</p>
+<details>
+<summary>查看答案</summary>
+<div class="sol">
+$$t_{\text{calc}} = \frac{|\bar{x} - \mu_0|}{s}\sqrt{n} = \frac{|0.326 - 0.310|}{0.008}\sqrt{5} = \frac{0.016}{0.008} \times 2.236 = 4.47$$
+<p>$t_{\text{calc}} = 4.47 > t_{0.05,4} = 2.776$，<strong>存在显著性差异</strong>，有系统误差。</p>
+</div>
+</details>
+</div>
+
+<div class="card">
+<h3>自测题 5：EDTA 条件稳定常数</h3>
+<p>在 pH = 5.0 时用 EDTA 滴定 $\text{Zn}^{2+}$。已知 $\lg K_{\text{ZnY}} = 16.50$，pH = 5 时 $\lg\alpha_{Y(H)} = 6.6$。求 $\lg K'_{\text{ZnY}}$，能否准确滴定？</p>
+<details>
+<summary>查看答案</summary>
+<div class="sol">
+$$\lg K'_{\text{ZnY}} = \lg K_{\text{ZnY}} - \lg\alpha_{Y(H)} = 16.50 - 6.6 = 9.9$$
+<p>判据：$\lg cK' \geq 6$，$\lg(0.01 \times 10^{9.9}) = \lg(10^{7.9}) = 7.9 \geq 6$ ✓</p>
+<p><strong>能准确滴定。</strong></p>
+</div>
+</details>
+</div>
+
+<div class="card">
+<h3>自测题 6：氧化还原计量点电位</h3>
+<p>用 $\text{Ce}^{4+}$（$\varphi^{0'} = 1.44$ V，$n_1 = 1$）滴定 $\text{Fe}^{2+}$（$\varphi^{0'} = 0.68$ V，$n_2 = 1$），求化学计量点电位。</p>
+<details>
+<summary>查看答案</summary>
+<div class="sol">
+$$\varphi_{sp} = \frac{n_1\varphi_1^{0'} + n_2\varphi_2^{0'}}{n_1 + n_2} = \frac{1 \times 1.44 + 1 \times 0.68}{2} = 1.06\;\text{V}$$
+</div>
+</details>
+</div>
+
+<div class="card">
+<h3>自测题 7：Beer 定律计算</h3>
+<p>某溶液浓度 $c = 2.0\times10^{-5}$ mol/L，在 1 cm 比色皿中测得透射比 $T = 25\%$。求摩尔吸光系数 $\kappa$。</p>
+<details>
+<summary>查看答案</summary>
+<div class="sol">
+$$A = -\lg T = -\lg 0.25 = 0.602$$
+$$\kappa = \frac{A}{bc} = \frac{0.602}{1 \times 2.0\times10^{-5}} = 3.0 \times 10^{4}\;\text{L/(mol·cm)}$$
+</div>
+</details>
+</div>
+
+<div class="card">
+<h3>自测题 8：沉淀溶解度</h3>
+<p>$\text{AgCl}$ 的 $K_{sp} = 1.8\times10^{-10}$。在 0.10 mol/L NaCl 溶液中，$\text{AgCl}$ 的溶解度是多少？</p>
+<details>
+<summary>查看答案</summary>
+<div class="sol">
+<p>$\text{AgCl} \rightleftharpoons \text{Ag}^+ + \text{Cl}^-$，$[\text{Cl}^-] \approx 0.10$ mol/L（同离子效应）</p>
+$$[\text{Ag}^+] = \frac{K_{sp}}{[\text{Cl}^-]} = \frac{1.8\times10^{-10}}{0.10} = 1.8\times10^{-9}\;\text{mol/L}$$
+<p>$s = [\text{Ag}^+] = 1.8\times10^{-9}$ mol/L（比纯水中 $s = 1.3\times10^{-5}$ 小了近 4 个数量级）</p>
+</div>
+</details>
+</div>
+
+<div class="card">
+<h3>自测题 9：终点误差（弱酸-强碱）</h3>
+<p>0.1 mol/L HAc（$K_a = 1.8\times10^{-5}$）被 NaOH 滴定，酚酞终点 pH = 9.0，化学计量点 pH = 8.72。求终点误差 $E_t$。（$K_t = K_a/K_w = 1.8\times10^9$，$c_{sp} = 0.05$ mol/L）</p>
+<details>
+<summary>查看答案</summary>
+<div class="sol">
+<p>$\Delta\text{pH} = 9.0 - 8.72 = 0.28$</p>
+$$E_t = \frac{10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}}{\sqrt{K_t} \cdot c_{sp}} \times 100\%$$
+$$= \frac{10^{-0.28} - 10^{0.28}}{\sqrt{1.8\times10^9} \times 0.05} \times 100\% = \frac{0.525 - 1.905}{42426 \times 0.05} \times 100\%$$
+$$= \frac{-1.38}{2121} \times 100\% = -0.065\%$$
+<p>$|E_t| < 0.1\%$，可以接受。</p>
+</div>
+</details>
+</div>
+
+<div class="card">
+<h3>自测题 10：双指示剂法</h3>
+<p>混合碱液用 0.1000 mol/L HCl 滴定：酚酞终点消耗 $V_1 = 20.00$ mL，甲基橙终点又消耗 $V_2 = 10.00$ mL。判断混合碱的组成并计算各组分含量。</p>
+<details>
+<summary>查看答案</summary>
+<div class="sol">
+<p>$V_1 > V_2$：组成为 <strong>NaOH + Na₂CO₃</strong></p>
+<ul>
+<li>$n(\text{Na}_2\text{CO}_3) = c \times V_2 = 0.1000 \times 10.00 = 1.000$ mmol</li>
+<li>$n(\text{NaOH}) = c \times (V_1 - V_2) = 0.1000 \times (20.00 - 10.00) = 1.000$ mmol</li>
+</ul>
+<table>
+<tr><th>$V_1$ vs $V_2$</th><th>组成</th><th>NaOH</th><th>Na₂CO₃</th></tr>
+<tr><td>$V_1 > V_2$</td><td>NaOH + Na₂CO₃</td><td>$c(V_1-V_2)$</td><td>$cV_2$</td></tr>
+<tr><td>$V_1 = V_2$</td><td>纯 Na₂CO₃</td><td>0</td><td>$cV_1$</td></tr>
+<tr><td>$V_1 < V_2$</td><td>Na₂CO₃ + NaHCO₃</td><td>0</td><td>$cV_1$；NaHCO₃ = $c(V_2-V_1)$</td></tr>
+</table>
+</div>
+</details>
+</div>
+
+<h2>各章判据速查总表</h2>
+<div class="card">
+<table>
+<tr><th>章节</th><th>判据</th><th>数值条件</th><th>含义</th></tr>
+<tr><td rowspan="2">Ch5 酸碱</td><td>能否直接滴定</td><td>$cK_a \geq 10^{-8}$</td><td>突跃足够大</td></tr>
+<tr><td>能否分步滴定</td><td>$K_{a1}/K_{a2} \geq 10^5$</td><td>两步突跃分开</td></tr>
+<tr><td rowspan="3">Ch5 pH 计算</td><td>最简式条件</td><td>$c/K_a \geq 400$ 且 $cK_a \geq 20K_w$</td><td>忽略解离和水解</td></tr>
+<tr><td>多元酸按一元处理</td><td>$K_{a1}/K_{a2} \geq 500$</td><td>第二步解离可忽略</td></tr>
+<tr><td>两性物质简式</td><td>$c \gg K_{a1}$ 且 $cK_{a2} \gg K_w$</td><td>$[\text{H}^+] = \sqrt{K_{a1}K_{a2}}$</td></tr>
+<tr><td rowspan="2">Ch6 配位</td><td>能否准确滴定</td><td>$\lg cK' \geq 6$（$E_t \leq 0.3\%$）</td><td>终点误差足够小</td></tr>
+<tr><td>能否分别滴定</td><td>$\Delta\lg K \geq 5$</td><td>两金属突跃分开</td></tr>
+<tr><td rowspan="2">Ch7 氧化还原</td><td>反应完全性</td><td>$\lg K \geq 6$（$n = 1$ 时 $\Delta\varphi \geq 0.36$ V）</td><td>反应完全度 $\geq$ 99.9%</td></tr>
+<tr><td>可用指示剂</td><td>指示剂 $\varphi$ 在突跃范围内</td><td>终点颜色变化明显</td></tr>
+<tr><td>Ch10 光度</td><td>最佳测量范围</td><td>$A = 0.2\sim0.8$（$T = 15\%\sim65\%$）</td><td>$\Delta c/c$ 最小</td></tr>
+</table>
 </div>
 
 <script src="toc.js"></script>

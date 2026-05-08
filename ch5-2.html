@@ -21,6 +21,8 @@ h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid va
 .tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
 .warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
 .note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.exam{background:#fce4ec;border:2px solid #e91e63;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.exam .t{font-weight:bold;color:#c2185b;margin-bottom:6px;}
 table{width:100%;border-collapse:collapse;margin:12px 0;}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
 th{background:var(--pri);color:#fff;}
@@ -31,20 +33,34 @@ tr:nth-child(even){background:#f9f7f2;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
 details{margin:8px 0;}
 details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+.ppt-img{display:block;max-width:100%;margin:12px auto;border:1px solid #e0d8c8;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ppt-caption{text-align:center;font-size:.82em;color:#888;margin:-6px 0 12px;}
 </style>
 </head><body>
 
 <div class="nav-bar">
-  <a href="index.html">目录</a>
-  <a href="ch5-1.html">&laquo; 第五章(上)</a>
-  <a href="ch6.html">第六章 &raquo;</a>
+  <a href="index.html">首页</a>
+  <a href="ch1.html">第一章</a>
   <a href="ch3.html">第三章</a>
+  <a href="ch5-1.html">第五章(上)</a>
+  <a href="ch5-2.html" style="background:#1a5276;color:#fff;">第五章(下)</a>
+  <a href="ch6.html">第六章</a>
+  <a href="ch7.html">第七章</a>
+  <a href="ch9.html">第九章</a>
+  <a href="ch10.html">第十章</a>
+  <a href="formulas.html">公式表</a>
+  <a href="exam-review.html">备考</a>
+  <a href="quiz1.html">小测1</a>
+  <a href="quiz2.html">小测2</a>
+  <a href="final2022.html">期末真题</a>
 </div>
 
 <h1>第五章(下) 酸碱滴定法</h1>
 
 <!-- ==================== 1. 酸碱指示剂 ==================== -->
 <h2>一、酸碱指示剂</h2>
+<img class="ppt-img" src="temp_pages/ch5b_p2.png" alt="酸碱指示剂">
+<p class="ppt-caption">PPT: 酸碱指示剂原理</p>
 
 <h3>1.1 指示剂变色原理</h3>
 <div class="card">
@@ -61,24 +77,40 @@ $$\text{pH} = pK_{\text{HIn}} \pm 1$$
 <p>即变色范围约为<strong>2个pH单位</strong>。在 $\text{pH} = pK_{\text{HIn}}$ 时显混合色（变色点/理论变色点）。</p>
 </div>
 
-<h3>1.3 常用指示剂</h3>
+<div class="exam">
+<div class="t">Quiz 1 选择题 Q2</div>
+<p>已知某指示剂 $K_{\text{HIn}} = 10^{-5}$，则其变色范围为？</p>
+<p><strong>解：</strong>$pK_{\text{HIn}} = 5$，变色范围 = $pK_{\text{HIn}} \pm 1$ = <strong>pH 4 ~ 6</strong>。</p>
+</div>
+
+<h3>1.3 常用指示剂（完整表格）</h3>
 <div class="card">
 <table>
-<tr><th>指示剂</th><th>$pK_{\text{HIn}}$</th><th>变色范围</th><th>酸色</th><th>碱色</th></tr>
-<tr><td>甲基橙 (Methyl Orange)</td><td>3.4</td><td>3.1 ~ 4.4</td><td>红</td><td>黄</td></tr>
-<tr><td>甲基红 (Methyl Red)</td><td>5.0</td><td>4.4 ~ 6.2</td><td>红</td><td>黄</td></tr>
-<tr><td>溴甲酚绿 (Bromocresol Green)</td><td>4.7</td><td>3.8 ~ 5.4</td><td>黄</td><td>蓝</td></tr>
-<tr><td>溴百里酚蓝 (Bromothymol Blue)</td><td>7.1</td><td>6.0 ~ 7.6</td><td>黄</td><td>蓝</td></tr>
-<tr><td>酚酞 (Phenolphthalein)</td><td>9.1</td><td>8.0 ~ 10.0</td><td>无色</td><td>粉红</td></tr>
-<tr><td>百里酚酞 (Thymolphthalein)</td><td>10.0</td><td>9.3 ~ 10.5</td><td>无色</td><td>蓝</td></tr>
+<tr><th>指示剂</th><th>$pK_{\text{HIn}}$</th><th>变色范围</th><th>酸色</th><th>碱色</th><th>常用场景</th></tr>
+<tr><td>甲基橙 (Methyl Orange)</td><td>3.4</td><td>3.1 ~ 4.4</td><td>红</td><td>黄</td><td>强酸滴弱碱；$\text{Na}_2\text{CO}_3$第二终点</td></tr>
+<tr><td>溴甲酚绿 (Bromocresol Green)</td><td>4.7</td><td>3.8 ~ 5.4</td><td>黄</td><td>蓝</td><td>$\text{H}_3\text{PO}_4$第一终点</td></tr>
+<tr><td>甲基红 (Methyl Red)</td><td>5.0</td><td>4.4 ~ 6.2</td><td>红</td><td>黄</td><td>强酸滴弱碱；铵盐回滴</td></tr>
+<tr><td>溴百里酚蓝 (Bromothymol Blue)</td><td>7.1</td><td>6.0 ~ 7.6</td><td>黄</td><td>蓝</td><td>强酸-强碱（最佳）</td></tr>
+<tr><td>酚酞 (Phenolphthalein)</td><td>9.1</td><td>8.0 ~ 9.8</td><td>无色</td><td>粉红</td><td>强碱滴弱酸；$\text{Na}_2\text{CO}_3$第一终点</td></tr>
+<tr><td>百里酚酞 (Thymolphthalein)</td><td>10.0</td><td>9.4 ~ 10.6</td><td>无色</td><td>蓝</td><td>$\text{H}_3\text{PO}_4$第二终点</td></tr>
 </table>
 </div>
 
 <div class="note">
-<strong>实际变色范围 vs 理论变色范围：</strong>实际变色范围往往不对称于 $pK_{\text{HIn}}$，因为人眼对不同颜色的敏感度不同。例如酚酞的 $pK_{\text{HIn}} \approx 9.1$，但变色范围为 8.0~10.0。
+<strong>实际变色范围 vs 理论变色范围：</strong>实际变色范围往往不对称于 $pK_{\text{HIn}}$，因为人眼对不同颜色的敏感度不同。例如酚酞的 $pK_{\text{HIn}} \approx 9.1$，但实际变色范围约为 8.0~9.8。
 </div>
 
-<h3>1.4 影响变色范围的因素</h3>
+<h3>1.4 指示剂选择规则</h3>
+<div class="fb">
+<div class="t">指示剂选择三步法</div>
+<ol>
+  <li><strong>先算化学计量点 pH</strong>（$\text{pH}_{\text{sp}}$）</li>
+  <li><strong>确定突跃范围</strong>，指示剂变色范围须全部或部分落在突跃范围内</li>
+  <li><strong>选变色点最接近 $\text{pH}_{\text{sp}}$</strong> 的指示剂，使 $|E_t|$ 最小</li>
+</ol>
+</div>
+
+<h3>1.5 影响变色范围的因素</h3>
 <div class="card">
 <ul>
   <li><strong>指示剂用量</strong>：用量越多，变色越不灵敏，应尽量少用（1~3滴）</li>
@@ -91,32 +123,57 @@ $$\text{pH} = pK_{\text{HIn}} \pm 1$$
 
 <!-- ==================== 2. 强酸-强碱滴定曲线 ==================== -->
 <h2>二、强酸-强碱滴定曲线</h2>
+<img class="ppt-img" src="temp_pages/ch5b_p15.png" alt="酸碱滴定曲线">
+<p class="ppt-caption">PPT: 酸碱滴定曲线和指示剂的选择</p>
+<img class="ppt-img" src="temp_pages/ch5b_p22.png" alt="强酸滴定强碱">
+<p class="ppt-caption">PPT: 强酸-强碱滴定曲线</p>
 
-<h3>2.1 以 NaOH 滴定 HCl 为例</h3>
+<h3>2.1 以 NaOH 滴定 HCl 为例（完整计算）</h3>
 <div class="card">
 <p>设用 0.1000 mol/L NaOH 滴定 20.00 mL 0.1000 mol/L HCl：</p>
 
 <table>
 <tr><th>阶段</th><th>滴定分数</th><th>溶液组成</th><th>pH 计算</th><th>典型 pH</th></tr>
-<tr><td>滴定前</td><td>0%</td><td>HCl</td><td>$\text{pH} = -\lg c_{\text{HCl}}$</td><td>1.00</td></tr>
-<tr><td>滴定中（化学计量点前）</td><td>50%</td><td>HCl 过量</td><td>$\text{pH} = -\lg c_{\text{HCl,剩余}}$</td><td>1.48</td></tr>
-<tr><td></td><td>90%</td><td>HCl 少量过量</td><td></td><td>2.28</td></tr>
-<tr><td></td><td>99%</td><td></td><td></td><td>3.30</td></tr>
-<tr><td></td><td>99.9%</td><td></td><td></td><td>4.30</td></tr>
+<tr><td>滴定前</td><td>0%</td><td>HCl</td><td>$\text{pH} = -\lg c_{\text{HCl}} = -\lg 0.1$</td><td>1.00</td></tr>
+<tr><td>滴定中</td><td>50%</td><td>HCl 过量</td><td>$c_{\text{H}^+} = \frac{0.1\times20-0.1\times10}{30} = 0.0333$</td><td>1.48</td></tr>
+<tr><td></td><td>90%</td><td>HCl 少量过量</td><td>$c_{\text{H}^+} = \frac{0.1\times2}{38} = 5.26\times10^{-3}$</td><td>2.28</td></tr>
+<tr><td></td><td>99%</td><td></td><td>$c_{\text{H}^+} = \frac{0.1\times0.2}{39.8} = 5.03\times10^{-4}$</td><td>3.30</td></tr>
+<tr><td></td><td>99.9%</td><td></td><td>$c_{\text{H}^+} = \frac{0.1\times0.02}{39.98} = 5.0\times10^{-5}$</td><td>4.30</td></tr>
 <tr><td><strong>化学计量点</strong></td><td><strong>100%</strong></td><td><strong>NaCl</strong></td><td><strong>$\text{pH} = 7.00$</strong></td><td><strong>7.00</strong></td></tr>
-<tr><td></td><td>100.1%</td><td></td><td></td><td>9.70</td></tr>
-<tr><td>滴定后（过量）</td><td>101%</td><td>NaOH 过量</td><td>$\text{pH} = 14 + \lg c_{\text{NaOH,过量}}$</td><td>10.70</td></tr>
-<tr><td></td><td>200%</td><td></td><td></td><td>13.00</td></tr>
+<tr><td></td><td>100.1%</td><td>NaOH 微过量</td><td>$c_{\text{OH}^-} = \frac{0.1\times0.02}{40.02} = 5.0\times10^{-5}$</td><td>9.70</td></tr>
+<tr><td>滴定后</td><td>101%</td><td>NaOH 过量</td><td>$c_{\text{OH}^-} = \frac{0.1\times0.2}{40.2} = 4.98\times10^{-4}$</td><td>10.70</td></tr>
+<tr><td></td><td>200%</td><td>NaOH 大量过量</td><td>$c_{\text{OH}^-} = \frac{0.1\times20}{40} = 0.05$</td><td>12.70</td></tr>
 </table>
 </div>
 
-<h3>2.2 突跃范围</h3>
+<div class="tip">
+<strong>关键特征：</strong>化学计量点前后 $\pm 0.1\%$（即 99.9% 到 100.1%），pH 从 4.30 突变到 9.70，跳跃了 <strong>5.4 个 pH 单位</strong>。曲线关于化学计量点（pH=7）对称。
+</div>
+
+<h3>2.2 突跃范围与浓度效应</h3>
 <div class="fb">
 <div class="t">pH 突跃</div>
 <p>在化学计量点前后 $\pm 0.1\%$ 的范围内，pH 发生急剧变化。</p>
-<p><strong>0.1 mol/L 强酸-强碱：</strong>突跃范围 pH 4.30 ~ 9.70（约 5.4 个 pH 单位）</p>
-<p><strong>0.01 mol/L 强酸-强碱：</strong>突跃范围 pH 5.30 ~ 8.70（约 3.4 个 pH 单位）</p>
-<p>浓度越低，突跃范围越窄。</p>
+
+<table>
+<tr><th>浓度</th><th>突跃范围</th><th>突跃大小</th></tr>
+<tr><td>0.1 mol/L 强酸-强碱</td><td>pH 4.30 ~ 9.70</td><td>5.4 个 pH 单位</td></tr>
+<tr><td>0.01 mol/L 强酸-强碱</td><td>pH 5.30 ~ 8.70</td><td>3.4 个 pH 单位</td></tr>
+<tr><td>0.001 mol/L 强酸-强碱</td><td>pH 6.30 ~ 7.70</td><td>1.4 个 pH 单位</td></tr>
+</table>
+<p>浓度越低，突跃范围越窄。浓度每降低10倍，突跃两端各缩窄1个 pH 单位。</p>
+</div>
+
+<div class="exam">
+<div class="t">2022 期末 Q10</div>
+<p>0.01 mol/L HCl 用 0.01 mol/L NaOH 滴定，突跃范围为 <strong>5.3 ~ 8.7</strong>（注意是 HCl 被滴定，碱在前酸在后：8.7 ~ 5.3 写法也正确）。</p>
+</div>
+
+<div class="exam">
+<div class="t">Quiz 1 填空 Q7：浓度效应</div>
+<p><strong>强酸-强碱：</strong>浓度增大10倍 $\to$ 突跃范围增大约 <strong>2个 pH 单位</strong>（两端各扩1个）</p>
+<p><strong>弱酸-强碱：</strong>浓度增大10倍 $\to$ 突跃范围增大约 <strong>1个 pH 单位</strong>（仅下限扩1个，上限不变因为上限由 NaOH 过量决定）</p>
+<p>这是因为弱酸一侧的突跃下限由 $cK_a$ 共同决定，$c$ 增大10倍只影响一端。</p>
 </div>
 
 <h3>2.3 指示剂选择</h3>
@@ -126,8 +183,15 @@ $$\text{pH} = pK_{\text{HIn}} \pm 1$$
 <ul>
   <li><strong>甲基橙</strong>（3.1~4.4）：变色范围部分落入，可用但不最优</li>
   <li><strong>甲基红</strong>（4.4~6.2）：可用</li>
-  <li><strong>酚酞</strong>（8.0~10.0）：可用</li>
+  <li><strong>酚酞</strong>（8.0~9.8）：可用</li>
   <li><strong>溴百里酚蓝</strong>（6.0~7.6）：最佳（变色点最接近化学计量点）</li>
+</ul>
+<p>对于 0.01 mol/L 强酸-强碱滴定（突跃 5.3~8.7）：</p>
+<ul>
+  <li><strong>甲基橙</strong>（3.1~4.4）：<strong>不能用</strong>（完全落在突跃外）</li>
+  <li><strong>甲基红</strong>（4.4~6.2）：勉强可用（部分落入）</li>
+  <li><strong>溴百里酚蓝</strong>（6.0~7.6）：最佳</li>
+  <li><strong>酚酞</strong>（8.0~9.8）：部分落入，可用但误差稍大</li>
 </ul>
 </div>
 
@@ -136,7 +200,7 @@ $$\text{pH} = pK_{\text{HIn}} \pm 1$$
 
 <h3>3.1 以 NaOH 滴定 HAc 为例</h3>
 <div class="card">
-<p>设用 0.1000 mol/L NaOH 滴定 20.00 mL 0.1000 mol/L HAc（$K_a = 1.8\times10^{-5}$）：</p>
+<p>设用 0.1000 mol/L NaOH 滴定 20.00 mL 0.1000 mol/L HAc（$K_a = 1.8\times10^{-5}$，$pK_a = 4.74$）：</p>
 </div>
 
 <h3>3.2 四个阶段的 pH 计算</h3>
@@ -152,6 +216,22 @@ $$\text{pH} = 2.87$$
 <p>溶液中同时存在 HAc 和 NaAc，用 Henderson-Hasselbalch 方程：</p>
 $$\text{pH} = pK_a + \lg\frac{c_{\text{NaAc}}}{c_{\text{HAc}}} = pK_a + \lg\frac{n_{\text{NaAc}}}{n_{\text{HAc}}}$$
 <p>当滴定分数 = 50% 时，$n_{\text{NaAc}} = n_{\text{HAc}}$，$\text{pH} = pK_a = 4.74$（半当量点）</p>
+</div>
+
+<div class="card">
+<p><strong>弱酸-强碱滴定的完整数据：</strong></p>
+<table>
+<tr><th>滴定分数</th><th>pH 计算</th><th>pH 值</th></tr>
+<tr><td>0%</td><td>$\sqrt{K_a c} = \sqrt{1.8\times10^{-5}\times0.1}$</td><td>2.87</td></tr>
+<tr><td>10%</td><td>$pK_a + \lg(1/9) = 4.74 - 0.95$</td><td>3.79</td></tr>
+<tr><td>50%</td><td>$pK_a = 4.74$（半当量点）</td><td>4.74</td></tr>
+<tr><td>90%</td><td>$pK_a + \lg(9/1) = 4.74 + 0.95$</td><td>5.69</td></tr>
+<tr><td>99%</td><td>$pK_a + \lg(99/1) = 4.74 + 2.00$</td><td>6.74</td></tr>
+<tr><td>99.9%</td><td>$pK_a + \lg(999) = 4.74 + 3.00$</td><td>7.74</td></tr>
+<tr><td><strong>100%</strong></td><td><strong>$\text{pH} = 14 - \frac{1}{2}(pK_b + p c_{\text{sp}})$</strong></td><td><strong>8.72</strong></td></tr>
+<tr><td>100.1%</td><td>$\text{pH} = 14 + \lg c_{\text{NaOH,过量}}$</td><td>9.70</td></tr>
+<tr><td>200%</td><td>$c_{\text{OH}^-} = 0.1\times20/40 = 0.05$</td><td>12.70</td></tr>
+</table>
 </div>
 
 <div class="fb">
@@ -183,8 +263,70 @@ $$\text{pH} = 14 + \lg c_{\text{NaOH,过量}}$$
 </table>
 </div>
 
+<div class="card">
+<p><strong>常见滴定体系的突跃范围汇总：</strong></p>
+<table>
+<tr><th>滴定体系</th><th>浓度 (mol/L)</th><th>突跃范围</th><th>突跃大小</th><th>推荐指示剂</th></tr>
+<tr><td>HCl-NaOH</td><td>0.1</td><td>4.30 ~ 9.70</td><td>5.4</td><td>甲基橙/甲基红/酚酞</td></tr>
+<tr><td>HCl-NaOH</td><td>0.01</td><td>5.30 ~ 8.70</td><td>3.4</td><td>溴百里酚蓝</td></tr>
+<tr><td>HAc-NaOH</td><td>0.1</td><td>7.74 ~ 9.70</td><td>~2.0</td><td>酚酞</td></tr>
+<tr><td>HAc-NaOH</td><td>0.01</td><td>~7.2 ~ 8.7</td><td>~1.5</td><td>酚酞（勉强）</td></tr>
+<tr><td>$\text{NH}_3$-HCl</td><td>0.1</td><td>4.30 ~ 6.24</td><td>~1.9</td><td>甲基红</td></tr>
+<tr><td>$\text{CH}_3\text{NH}_2$-HCl</td><td>0.1</td><td>~3.0 ~ 7.7</td><td>~4.7</td><td>甲基红/甲基橙</td></tr>
+</table>
+</div>
+
 <div class="warn">
-<strong>指示剂选择：</strong>化学计量点 pH = 8.72，应选变色范围在碱性区域的指示剂。<strong>酚酞</strong>（8.0~10.0）最合适。<strong>不能用甲基橙</strong>（变色范围远离化学计量点）！
+<strong>指示剂选择：</strong>化学计量点 pH = 8.72，应选变色范围在碱性区域的指示剂。<strong>酚酞</strong>（8.0~9.8）最合适。<strong>不能用甲基橙</strong>（变色范围远离化学计量点）！
+</div>
+
+<!-- ==================== 3A. 强酸滴定弱碱 ==================== -->
+<h2>三A、强酸滴定弱碱</h2>
+
+<h3>3A.1 HCl 滴定 CH$_3$NH$_2$（Quiz 1 计算题 Q3 原题）</h3>
+<div class="exam">
+<div class="t">Quiz 1 计算题 Q3：HCl 滴定甲胺</div>
+<p>用 0.1000 mol/L HCl 滴定 20.00 mL 0.1000 mol/L $\text{CH}_3\text{NH}_2$（$pK_b = 3.38$）。</p>
+</div>
+
+<div class="fb">
+<div class="t">基本参数</div>
+<p>$\text{CH}_3\text{NH}_2$ 是弱碱，$pK_b = 3.38$，$K_b = 10^{-3.38} = 4.17\times10^{-4}$</p>
+<p>其共轭酸 $\text{CH}_3\text{NH}_3^+$：$pK_a = 14 - 3.38 = 10.62$，$K_a = 10^{-10.62} = 2.40\times10^{-11}$</p>
+<p>这是<strong>强酸滴定弱碱</strong>的情形，化学计量点产物为弱酸 $\text{CH}_3\text{NH}_3^+$，pH &lt; 7。</p>
+</div>
+
+<div class="card">
+<p><strong>各阶段 pH 计算：</strong></p>
+
+<p><strong>滴定前（0%）：纯弱碱</strong></p>
+$$[\text{OH}^-] = \sqrt{K_b \cdot c} = \sqrt{10^{-3.38} \times 0.1} = \sqrt{4.17\times10^{-5}} = 6.46\times10^{-3}$$
+$$\text{pOH} = 2.19, \quad \text{pH} = 11.81$$
+
+<p><strong>半当量点（50%）：缓冲体系</strong></p>
+<p>$\text{CH}_3\text{NH}_2$ 和 $\text{CH}_3\text{NH}_3^+$ 等量共存：</p>
+$$\text{pOH} = pK_b = 3.38, \quad \text{pH} = 14 - 3.38 = 10.62$$
+<p>等价地：$\text{pH} = pK_a = 10.62$（半当量点 pH = 共轭酸的 $pK_a$）</p>
+
+<p><strong>化学计量点（100%）：纯共轭酸 $\text{CH}_3\text{NH}_3^+$</strong></p>
+<p>$c_{\text{sp}} = 0.1 \times 20/40 = 0.05\;\text{mol/L}$</p>
+$$[\text{H}^+] = \sqrt{K_a \cdot c_{\text{sp}}} = \sqrt{10^{-10.62} \times 0.05}$$
+$$= \sqrt{2.40\times10^{-11} \times 0.05} = \sqrt{1.20\times10^{-12}} = 1.095\times10^{-6}$$
+$$\text{pH} = -\lg(1.095\times10^{-6}) = 5.96$$
+<p><strong>化学计量点 pH = 5.96</strong>，呈酸性。选<strong>甲基红</strong>（4.4~6.2）为指示剂。</p>
+
+<p><strong>过量后（200%）：HCl 大量过量</strong></p>
+$$c_{\text{H}^+} = \frac{0.1\times20}{40} = 0.05, \quad \text{pH} = 1.30$$
+</div>
+
+<h3>3A.2 强酸滴弱碱的通用特征</h3>
+<div class="tip">
+<strong>与强碱滴弱酸的对比：</strong>
+<ul>
+  <li>强碱滴弱酸：化学计量点 pH &gt; 7，选酚酞</li>
+  <li>强酸滴弱碱：化学计量点 pH &lt; 7，选甲基橙或甲基红</li>
+  <li>两者是"镜像"关系，公式中 $K_a \leftrightarrow K_b$</li>
+</ul>
 </div>
 
 <!-- ==================== 4. 直接滴定判据 ==================== -->
@@ -213,6 +355,8 @@ $cK_a = 0.1 \times 5.8\times10^{-10} = 5.8\times10^{-11} < 10^{-8}$<br>
 
 <!-- ==================== 5. 多元酸滴定 ==================== -->
 <h2>五、多元酸的滴定</h2>
+<img class="ppt-img" src="temp_pages/ch5b_p56.png" alt="多元酸滴定">
+<p class="ppt-caption">PPT: 多元酸分步滴定的判据</p>
 
 <h3>5.1 分步滴定判据</h3>
 <div class="fb">
@@ -222,6 +366,16 @@ $$\frac{K_{a1}}{K_{a2}} > 10^5 \quad (\text{有的教材取} > 10^4)$$
 <p>同时每一步还需满足 $cK_{ai} \geq 10^{-8}$ 的可滴定条件。</p>
 </div>
 
+<div class="note">
+<strong>严格 vs 宽松判据：</strong>
+<ul>
+<li>$K_{a1}/K_{a2} \geq 10^5$：严格判据，分步滴定精度高，两个突跃完全分开</li>
+<li>$K_{a1}/K_{a2} \geq 10^4$：宽松判据，可以勉强分步，但第一终点不够锐利</li>
+<li>$K_{a1}/K_{a2} < 10^4$：不能分步滴定，只能一步到位</li>
+</ul>
+<p>考试中若未特别说明，一般取 $10^4$ 为界。</p>
+</div>
+
 <h3>5.2 $\text{H}_3\text{PO}_4$ 的滴定</h3>
 <div class="card">
 <p>$\text{H}_3\text{PO}_4$：$K_{a1}=7.6\times10^{-3}$，$K_{a2}=6.3\times10^{-8}$，$K_{a3}=4.4\times10^{-13}$</p>
@@ -229,14 +383,14 @@ $$\frac{K_{a1}}{K_{a2}} > 10^5 \quad (\text{有的教材取} > 10^4)$$
 <table>
 <tr><th>步骤</th><th>$K_{ai}/K_{a,i+1}$</th><th>能否分步滴定？</th><th>$cK_a \geq 10^{-8}$？</th></tr>
 <tr><td>第一步 $\to \text{H}_2\text{PO}_4^-$</td><td>$K_{a1}/K_{a2} = 1.2\times10^5 > 10^5$</td><td>可以</td><td>$0.1\times7.6\times10^{-3} \gg 10^{-8}$ ✓</td></tr>
-<tr><td>第二步 $\to \text{HPO}_4^{2-}$</td><td>$K_{a2}/K_{a3} = 1.4\times10^5 > 10^5$</td><td>可以</td><td>$0.1\times6.3\times10^{-8} = 6.3\times10^{-9}$ ✓ (勉强)</td></tr>
-<tr><td>第三步 $\to \text{PO}_4^{3-}$</td><td>—</td><td>—</td><td>$0.1\times4.4\times10^{-13} \ll 10^{-8}$ ✗</td></tr>
+<tr><td>第二步 $\to \text{HPO}_4^{2-}$</td><td>$K_{a2}/K_{a3} = 1.4\times10^5 > 10^5$</td><td>可以</td><td>$0.1\times6.3\times10^{-8} = 6.3\times10^{-9} &lt; 10^{-8}$（勉强可用，突跃较小）</td></tr>
+<tr><td>第三步 $\to \text{PO}_4^{3-}$</td><td>--</td><td>--</td><td>$0.1\times4.4\times10^{-13} \ll 10^{-8}$ ✗</td></tr>
 </table>
 
 <p><strong>结论：</strong>$\text{H}_3\text{PO}_4$ 可以滴定到<strong>两个终点</strong>：</p>
 <ul>
-  <li>第一终点：$\text{H}_3\text{PO}_4 \to \text{NaH}_2\text{PO}_4$，pH $\approx$ 4.7，选<strong>甲基橙</strong>或<strong>溴甲酚绿</strong></li>
-  <li>第二终点：$\text{NaH}_2\text{PO}_4 \to \text{Na}_2\text{HPO}_4$，pH $\approx$ 9.8，选<strong>酚酞</strong>或<strong>百里酚酞</strong></li>
+  <li>第一终点（SP1）：$\text{H}_3\text{PO}_4 \to \text{NaH}_2\text{PO}_4$，$\text{pH} \approx \frac{pK_{a1}+pK_{a2}}{2} = \frac{2.12+7.20}{2} = 4.66 \approx 4.7$，选<strong>甲基橙</strong>或<strong>溴甲酚绿</strong></li>
+  <li>第二终点（SP2）：$\text{NaH}_2\text{PO}_4 \to \text{Na}_2\text{HPO}_4$，$\text{pH} \approx \frac{pK_{a2}+pK_{a3}}{2} = \frac{7.20+12.36}{2} = 9.78 \approx 9.8$，选<strong>酚酞</strong>或<strong>百里酚酞</strong></li>
   <li>第三步不可滴定（$K_{a3}$ 太小）</li>
 </ul>
 </div>
@@ -244,8 +398,14 @@ $$\frac{K_{a1}}{K_{a2}} > 10^5 \quad (\text{有的教材取} > 10^4)$$
 <h3>5.3 $\text{H}_2\text{C}_2\text{O}_4$ (草酸) 的滴定</h3>
 <div class="card">
 <p>$\text{H}_2\text{C}_2\text{O}_4$：$K_{a1}=5.9\times10^{-2}$，$K_{a2}=6.4\times10^{-5}$</p>
-$$K_{a1}/K_{a2} = 5.9\times10^{-2}/6.4\times10^{-5} \approx 920 \ll 10^5$$
+$$K_{a1}/K_{a2} = 5.9\times10^{-2}/6.4\times10^{-5} \approx 920 \ll 10^4$$
 <p><strong>结论：</strong>$K_{a1}/K_{a2}$ 太小，不能分步滴定。只能一次性滴定到 $\text{Na}_2\text{C}_2\text{O}_4$，即<strong>只有一个终点</strong>。消耗 NaOH 的物质的量为草酸的2倍。</p>
+</div>
+
+<div class="exam">
+<div class="t">Quiz 1 选择题 Q4 / 2022 期末填空 Q1</div>
+<p>草酸只有一个突跃（一个终点），因为 $K_{a1}/K_{a2} \approx 920 < 10^4$。</p>
+<p>这是<strong>高频考点</strong>。务必记住：草酸不能分步滴定！</p>
 </div>
 
 <h3>5.4 $\text{Na}_2\text{CO}_3$ 的滴定（强酸滴弱碱的盐）</h3>
@@ -260,8 +420,38 @@ $$K_{a1}/K_{a2} = 5.9\times10^{-2}/6.4\times10^{-5} \approx 920 \ll 10^5$$
 <p>第二终点：$\text{NaHCO}_3 \to \text{H}_2\text{CO}_3$（pH $\approx$ 3.9，甲基橙变色）</p>
 </div>
 
+<h3>5.5 Na$_3$PO$_4$ + Na$_2$HPO$_4$ 混合物的滴定</h3>
+<div class="exam">
+<div class="t">Quiz 1 实验设计题</div>
+<p>用 HCl 标准溶液滴定 $\text{Na}_3\text{PO}_4$ + $\text{Na}_2\text{HPO}_4$ 混合物。</p>
+</div>
+
+<div class="card">
+<p><strong>分析：</strong></p>
+<p>$\text{Na}_3\text{PO}_4$ 是三元碱，$\text{Na}_2\text{HPO}_4$ 是二元碱的第一步产物。用 HCl 滴定：</p>
+
+<p><strong>第一步（酚酞指示剂，滴至 pH $\approx$ 9.7）：</strong></p>
+<ul>
+  <li>$\text{Na}_3\text{PO}_4 + \text{HCl} \to \text{Na}_2\text{HPO}_4 + \text{NaCl}$（$\text{Na}_3\text{PO}_4$ 全部反应）</li>
+  <li>$\text{Na}_2\text{HPO}_4$ 在此 pH 不反应</li>
+  <li>消耗 HCl 体积 $V_1$，$V_1$ 对应 $\text{Na}_3\text{PO}_4$ 的量</li>
+</ul>
+
+<p><strong>第二步（甲基红指示剂，继续滴至 pH $\approx$ 4.7）：</strong></p>
+<ul>
+  <li>此时所有 $\text{Na}_2\text{HPO}_4$（原有的 + 第一步生成的）都被滴定到 $\text{NaH}_2\text{PO}_4$</li>
+  <li>消耗 HCl 体积 $V_2$</li>
+</ul>
+
+<p><strong>计算：</strong></p>
+$$n(\text{Na}_3\text{PO}_4) = c_{\text{HCl}} \cdot V_1$$
+$$n(\text{Na}_2\text{HPO}_4)_{\text{原有}} = c_{\text{HCl}} \cdot V_2 - c_{\text{HCl}} \cdot V_1 = c_{\text{HCl}}(V_2 - V_1)$$
+</div>
+
 <!-- ==================== 6. 终点误差 ==================== -->
 <h2>六、终点误差</h2>
+<img class="ppt-img" src="temp_pages/ch5b_p44.png" alt="终点误差">
+<p class="ppt-caption">PPT: 滴定终点误差计算</p>
 
 <div class="warn">终点误差是考试重点！务必掌握强酸-强碱和弱酸-强碱两种情况的公式。</div>
 
@@ -275,39 +465,65 @@ $$E_t = \frac{V_{\text{ep}} - V_{\text{sp}}}{V_{\text{sp}}} \times 100\%$$
 <h3>6.2 强酸-强碱滴定的终点误差</h3>
 <div class="fb">
 <div class="t">NaOH 滴定 HCl</div>
-$$E_t = \frac{[\text{OH}^-]_{\text{ep}} - [\text{H}^+]_{\text{ep}}}{c_{\text{sp}}} \times 100\%$$
+$$\boxed{E_t = \frac{[\text{OH}^-]_{\text{ep}} - [\text{H}^+]_{\text{ep}}}{c_{\text{sp}}} \times 100\%}$$
 <p>其中 $[\text{H}^+]_{\text{ep}}$ 和 $[\text{OH}^-]_{\text{ep}}$ 为终点时的 $\text{H}^+$ 和 $\text{OH}^-$ 浓度，$c_{\text{sp}}$ 为化学计量点时被测物的浓度。</p>
 
-<p>令 $\Delta\text{pH} = \text{pH}_{\text{ep}} - \text{pH}_{\text{sp}}$，则：</p>
-$$E_t = \frac{10^{-\text{pH}_{\text{ep}}} - 10^{\text{pH}_{\text{ep}}-pK_w}}{c_{\text{sp}}} \times 100\%$$
-<p>当终点偏酸（$\text{pH}_{\text{ep}} < 7$）：$E_t < 0$（未滴到）<br>
+<p>等价写法（利用 $\Delta\text{pH}$）：</p>
+$$E_t = \frac{10^{\text{pH}_{\text{ep}}-14} - 10^{-\text{pH}_{\text{ep}}}}{c_{\text{sp}}} \times 100\%$$
+<p>直接代入终点 $\text{pH}_{\text{ep}}$ 即可，分子 = $[\text{OH}^-]_{\text{ep}} - [\text{H}^+]_{\text{ep}}$。</p>
+
+<p>当终点偏酸（$\text{pH}_{\text{ep}} < 7$）：$E_t < 0$（未滴到/欠滴定）<br>
 当终点偏碱（$\text{pH}_{\text{ep}} > 7$）：$E_t > 0$（过量滴定）</p>
 </div>
 
 <h3>6.3 强碱滴定弱酸的终点误差（林邦误差公式）</h3>
 <div class="fb">
-<div class="t">林邦 (Lindberg) 公式</div>
-<p>用 NaOH 滴定弱酸 HA 时：</p>
-$$E_t = \frac{10^{\Delta\text{pH}} - 10^{-\Delta\text{pH}}}{c_{\text{sp}}} \times \frac{1}{\sqrt{K_a/K_w}} \times 100\%$$
-<p>更常用的形式：</p>
-$$\boxed{E_t = \frac{[\text{OH}^-]_{\text{ep}} - [\text{H}^+]_{\text{ep}} - c_{\text{sp}}\frac{[\text{H}^+]_{\text{ep}}}{[\text{H}^+]_{\text{ep}} + K_a}}{c_{\text{sp}}} \times 100\%}$$
-
-<p>简化形式（设 $\text{pH}_{\text{sp}}$ 为化学计量点 pH）：</p>
-$$E_t \approx \frac{10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}}{\sqrt{K_t} \cdot c_{\text{sp}}} \times 100\%$$
+<div class="t">林邦 (Lindberg) 公式 -- NaOH 滴定弱酸 HA</div>
+$$\boxed{E_t = \frac{10^{\Delta\text{pH}} - 10^{-\Delta\text{pH}}}{\sqrt{K_t \cdot c_{\text{sp}}}} \times 100\%}$$
 <p>其中 $K_t = K_a/K_w = 1/K_b$，$\Delta\text{pH} = \text{pH}_{\text{ep}} - \text{pH}_{\text{sp}}$。</p>
+<p>当 $\Delta\text{pH} > 0$（终点偏碱）：$E_t > 0$（过滴定）<br>
+当 $\Delta\text{pH} < 0$（终点偏酸）：$E_t < 0$（欠滴定）</p>
+</div>
+
+<div class="fb">
+<div class="t">强酸滴定弱碱的终点误差</div>
+<p>对于 HCl 滴定弱碱 B 的情况，林邦公式变为：</p>
+$$\boxed{E_t = \frac{10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}}{\sqrt{K_b/K_w \cdot c_{\text{sp}}}} \times 100\% = \frac{10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}}{\sqrt{K_t' \cdot c_{\text{sp}}}} \times 100\%}$$
+<p>其中 $K_t' = K_b/K_w = 1/K_a$（此处 $K_a$ 是共轭酸的），$\Delta\text{pH} = \text{pH}_{\text{ep}} - \text{pH}_{\text{sp}}$。</p>
+<p><strong>注意：</strong>滴定弱碱时，分子中 $10^{-\Delta\text{pH}}$ 和 $10^{\Delta\text{pH}}$ 的位置与滴定弱酸相反！也可以理解为：分母中使用的是 $K_b$（被滴物的 $K_b$）。</p>
 </div>
 
 <div class="card">
 <p><strong>符号约定：</strong></p>
 <ul>
-  <li>$E_t > 0$：过滴定（终点在化学计量点之后，偏碱）</li>
-  <li>$E_t < 0$：欠滴定（终点在化学计量点之前，偏酸）</li>
+  <li>$E_t > 0$：过滴定（终点在化学计量点之后）</li>
+  <li>$E_t < 0$：欠滴定（终点在化学计量点之前）</li>
   <li>$|E_t| \leq 0.1\%$ 一般认为可以接受</li>
 </ul>
 </div>
 
+<h3>6.4 $\lg(c_{\text{sp}} \cdot K_t)$ 与终点误差的关系（PPT p64）</h3>
+<div class="card">
+<p>当 $|\Delta\text{pH}| = 0.3$ 时，不同 $\lg(c_{\text{sp}} \cdot K_t)$ 对应的终点误差：</p>
+<table>
+<tr><th>$\lg(c_{\text{sp}} \cdot K_t)$</th><th>$|E_t|$</th><th>能否准确滴定？</th></tr>
+<tr><td>10.0</td><td>0.0015%</td><td>极佳</td></tr>
+<tr><td>8.0</td><td>0.015%</td><td>很好</td></tr>
+<tr><td>6.0</td><td>0.15%</td><td>勉强可接受</td></tr>
+<tr><td>4.0</td><td>1.5%</td><td>不可接受</td></tr>
+</table>
+<p><strong>规律：</strong>$\lg(c_{\text{sp}} \cdot K_t)$ 每减小2，$|E_t|$ 增大约10倍。要使 $|E_t| \leq 0.1\%$，需要 $\lg(c_{\text{sp}} \cdot K_t) \geq 6$，即 $c_{\text{sp}} \cdot K_t \geq 10^6$。</p>
+<p>对于弱酸被强碱滴定：$K_t = K_a/K_w$，所以条件等价于 $c_{\text{sp}} \cdot K_a/K_w \geq 10^6$，即 $c \cdot K_a \geq 10^{-8}$。这正是直接滴定判据的来源！</p>
+</div>
+
+<div class="tip">
+<strong>终点误差的等价形式（直接用浓度）：</strong>对于 NaOH 滴定弱酸 HA 的情形，林邦公式也可以写成：
+$$E_t = \left(\frac{[\text{H}^+]_{\text{ep}}}{c_{\text{sp}}} - \frac{[\text{A}^-]_{\text{ep}} \cdot \delta_0}{K_a}\right) \times 100\%$$
+其中 $\delta_0 = [\text{H}^+]_{\text{ep}}/([\text{H}^+]_{\text{ep}}+K_a)$。但在考试中，使用 $\Delta\text{pH}$ 形式更方便。
+</div>
+
 <div class="ex">
-<strong>例题：终点误差计算</strong><br>
+<strong>例题：NaOH 滴定 HAc 的终点误差</strong><br>
 用 0.1000 mol/L NaOH 滴定 20.00 mL 0.1000 mol/L HAc（$K_a=1.8\times10^{-5}$），以酚酞为指示剂（变色点 pH = 9.0）。计算终点误差。
 <div class="sol">
 <div class="st">解：</div>
@@ -321,44 +537,63 @@ $\text{pOH} = 5.28$，$\text{pH}_{\text{sp}} = 8.72$<br><br>
 $\text{pH}_{\text{ep}} = 9.0$（酚酞变色点）<br>
 $\Delta\text{pH} = 9.0 - 8.72 = +0.28$<br><br>
 
-在终点时：<br>
-$[\text{OH}^-]_{\text{ep}} = 10^{-(14-9.0)} = 10^{-5}$<br>
-$[\text{H}^+]_{\text{ep}} = 10^{-9.0}$<br><br>
-
-$$E_t = \frac{[\text{OH}^-]_{\text{ep}} - [\text{H}^+]_{\text{ep}}}{c_{\text{sp}}} \times 100\% \approx \frac{10^{-5} - 10^{-9}}{0.050} \times 100\%$$
-
-但这是强酸-强碱的公式。对于弱酸滴定，还需考虑未反应的 HAc 产生的 $[\text{H}^+]$。<br><br>
-
-使用简化林邦公式：<br>
 $K_t = K_a/K_w = 1.8\times10^{-5}/10^{-14} = 1.8\times10^{9}$<br>
-$\sqrt{K_t} = 4.24\times10^{4}$<br><br>
+$\sqrt{K_t \cdot c_{\text{sp}}} = \sqrt{1.8\times10^{9} \times 0.050} = \sqrt{9.0\times10^{7}} = 9.49\times10^{3}$<br><br>
 
-$$E_t = \frac{10^{-0.28} - 10^{0.28}}{\sqrt{K_t} \cdot c_{\text{sp}}} \times 100\% = \frac{0.525 - 1.905}{4.24\times10^4 \times 0.050} \times 100\%$$
-$$= \frac{-1.38}{2120} \times 100\% = -0.065\%$$
+$$E_t = \frac{10^{0.28} - 10^{-0.28}}{9.49\times10^{3}} \times 100\% = \frac{1.905 - 0.525}{9.49\times10^{3}} \times 100\%$$
+$$= \frac{1.38}{9490} \times 100\% = +0.015\%$$
 
-$|E_t| = 0.065\% < 0.1\%$，终点误差可以接受。<br>
-负号表示略有欠滴定（终点偏酸于化学计量点附近，但此处终点 pH > 化学计量点 pH，说明是过滴定...）<br><br>
-
-<strong>重新分析符号：</strong>$\Delta\text{pH} > 0$ 意味着终点偏碱于化学计量点，分子 $10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}} = 0.525 - 1.905 < 0$。<br>
-这里 $E_t < 0$？注意林邦公式中当 $\Delta\text{pH} > 0$ 时 $E_t < 0$ 的含义取决于具体定义。实际上此处 $|E_t| = 0.065\%$，无论符号，误差在可接受范围内。
+$|E_t| = 0.015\% < 0.1\%$，终点误差可以接受。正号表示略有过滴定。
 </div>
 </div>
 
-<!-- ==================== 7. 应用 ==================== -->
-<h2>七、酸碱滴定的应用</h2>
+<div class="exam">
+<div class="t">Quiz 1 计算题 Q3 第4问：CH$_3$NH$_2$ 滴定的终点误差</div>
+<p>用 0.1 mol/L HCl 滴定 0.1 mol/L $\text{CH}_3\text{NH}_2$（$pK_b=3.38$），以甲基橙为指示剂（终点 pH = 4.0），求 $E_t$。</p>
+<div class="sol">
+<div class="st">解：</div>
+<p>已知 $\text{pH}_{\text{sp}} = 5.96$（前面已算），$\text{pH}_{\text{ep}} = 4.0$</p>
+<p>$\Delta\text{pH} = 4.0 - 5.96 = -1.96$</p>
+<p>这是<strong>强酸滴弱碱</strong>的情形，使用林邦公式（弱碱版本）：</p>
+$$E_t = \frac{10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}}{\sqrt{K_b/K_w \cdot c_{\text{sp}}}} \times 100\%$$
+<p>其中 $K_b = 10^{-3.38}$，$K_b/K_w = 10^{-3.38}/10^{-14} = 10^{10.62}$</p>
+<p>$c_{\text{sp}} = 0.05\;\text{mol/L}$</p>
+<p>$\sqrt{K_b/K_w \cdot c_{\text{sp}}} = \sqrt{10^{10.62}\times 0.05} = \sqrt{10^{10.62}\times 5\times10^{-2}}$</p>
+<p>$= \sqrt{5\times10^{8.62}} = \sqrt{5\times4.17\times10^{8}} = \sqrt{2.09\times10^{9}} = 4.57\times10^{4}$</p>
+<p>分子：$10^{-(-1.96)} - 10^{-1.96} = 10^{1.96} - 10^{-1.96} = 91.2 - 0.0110 = 91.19$</p>
+$$E_t = \frac{91.19}{4.57\times10^4} \times 100\% = 0.20\%$$
+<p>$|E_t| = 0.20\% > 0.1\%$，终点误差偏大。这说明用甲基橙（pH=4.0）做终点不是最佳选择。如果用甲基红（pH=5.0），$\Delta\text{pH} = 5.0 - 5.96 = -0.96$，误差会更小。</p>
+</div>
+</div>
 
-<h3>7.1 CO$_2$ 的干扰</h3>
-<div class="card">
-<p>空气中的 $\text{CO}_2$ 溶于水生成 $\text{H}_2\text{CO}_3$，会干扰酸碱滴定：</p>
+<div class="exam">
+<div class="t">2022 期末 Q9：终点误差大小排序</div>
+<p>用 NaOH 滴定 HCl，分别用甲基红、酚酞、甲基橙作指示剂，$|E_t|$ 从小到大排序？</p>
+<div class="sol">
+<div class="st">解：</div>
+<p>化学计量点 pH = 7.00（强酸强碱）。</p>
 <ul>
-  <li><strong>NaOH 标准溶液</strong>：吸收 $\text{CO}_2$ 生成 $\text{Na}_2\text{CO}_3$，使浓度降低</li>
-  <li><strong>用酚酞为指示剂</strong>：$\text{Na}_2\text{CO}_3$ 只滴至 $\text{NaHCO}_3$，终点偏早，结果偏低</li>
-  <li><strong>用甲基橙为指示剂</strong>：$\text{Na}_2\text{CO}_3$ 滴至 $\text{H}_2\text{CO}_3$，影响较小</li>
+<li>甲基红变色点 $\approx$ pH 5.0，$|\Delta\text{pH}| = |5.0 - 7| = 2.0$</li>
+<li>酚酞变色点 $\approx$ pH 9.0，$|\Delta\text{pH}| = |9.0 - 7| = 2.0$</li>
+<li>甲基橙变色点 $\approx$ pH 4.0，$|\Delta\text{pH}| = |4.0 - 7| = 3.0$</li>
 </ul>
-<p><strong>解决方法：</strong>NaOH 标准溶液应避免接触空气，用碱石灰管保护；煮沸蒸馏水除 $\text{CO}_2$。</p>
+<p>但注意强酸-强碱 $E_t$ 公式中 $E_t \propto ([\text{OH}^-]_{\text{ep}} - [\text{H}^+]_{\text{ep}})$，不对称！</p>
+<ul>
+<li>甲基红（pH=5.0）：$|E_t| = |10^{-9} - 10^{-5}|/c_{\text{sp}} \times 100\%$，以 $10^{-5}$ 为主</li>
+<li>酚酞（pH=9.0）：$|E_t| = |10^{-5} - 10^{-9}|/c_{\text{sp}} \times 100\%$，也以 $10^{-5}$ 为主</li>
+<li>甲基橙（pH=4.0）：$|E_t| = |10^{-10} - 10^{-4}|/c_{\text{sp}} \times 100\%$，以 $10^{-4}$ 为主</li>
+</ul>
+<p><strong>答：$|E_t|$ 大小排序：甲基红 $\approx$ 酚酞 &lt; 甲基橙</strong></p>
+<p>即甲基红和酚酞误差接近且较小，甲基橙误差最大。</p>
+</div>
 </div>
 
-<h3>7.2 双指示剂法测定 NaOH + Na$_2$CO$_3$ 混合物</h3>
+<!-- ==================== 7. 双指示剂法 ==================== -->
+<h2>七、双指示剂法</h2>
+<img class="ppt-img" src="temp_pages/ch5b_p80.png" alt="双指示剂法流程图">
+<p class="ppt-caption">PPT: NaOH + Na2CO3 双指示剂法滴定流程图</p>
+
+<h3>7.1 NaOH + Na$_2$CO$_3$ 混合物</h3>
 <div class="fb">
 <div class="t">双指示剂法（经典考题）</div>
 <p>用 HCl 标准溶液滴定 NaOH 和 $\text{Na}_2\text{CO}_3$ 的混合溶液：</p>
@@ -387,41 +622,172 @@ NaOH 消耗的 HCl = $V_1 - V_2$<br>
 <strong>必须有 $V_1 \geq V_2$</strong>，否则说明没有 NaOH（可能是 $\text{Na}_2\text{CO}_3$ + $\text{NaHCO}_3$ 的混合物）。
 </div>
 
-<h3>7.3 各种碱性混合物的判断</h3>
+<h3>7.2 Na$_2$CO$_3$ + NaHCO$_3$ 混合物</h3>
+<div class="card">
+<p>用 HCl 标准溶液滴定：</p>
+
+<p><strong>第一步：加酚酞指示剂</strong>，滴至褪色，消耗 $V_1$</p>
+<ul>
+  <li>$\text{Na}_2\text{CO}_3 + \text{HCl} \to \text{NaHCO}_3 + \text{NaCl}$（$\text{Na}_2\text{CO}_3$ 变为 $\text{NaHCO}_3$）</li>
+  <li>$\text{NaHCO}_3$ 本身不反应（酚酞区间内）</li>
+</ul>
+
+<p><strong>第二步：加甲基橙指示剂</strong>，继续滴至变色，消耗 $V_2$</p>
+<ul>
+  <li>所有 $\text{NaHCO}_3$（原有的 + 第一步生成的）被完全滴定</li>
+</ul>
+
+<p><strong>计算：</strong></p>
+$$n(\text{Na}_2\text{CO}_3) = c_{\text{HCl}} \cdot V_1$$
+$$n(\text{NaHCO}_3)_{\text{原有}} = c_{\text{HCl}} \cdot (V_2 - V_1)$$
+<p>（因为 $V_2$ 对应所有 $\text{NaHCO}_3$，其中 $V_1$ 份是 $\text{Na}_2\text{CO}_3$ 生成的，$V_2 - V_1$ 份是原有的。）</p>
+<p><strong>特征：$V_1 < V_2$</strong>（第二步消耗更多 HCl）。</p>
+</div>
+
+<h3>7.3 各种碱性混合物的完整判断</h3>
 <div class="card">
 <table>
-<tr><th>$V_1$ 与 $V_2$ 的关系</th><th>混合物组成</th></tr>
-<tr><td>$V_2 = 0$</td><td>纯 NaOH</td></tr>
-<tr><td>$V_1 > V_2 > 0$</td><td>NaOH + $\text{Na}_2\text{CO}_3$</td></tr>
-<tr><td>$V_1 = V_2$</td><td>纯 $\text{Na}_2\text{CO}_3$</td></tr>
-<tr><td>$V_1 < V_2$</td><td>$\text{Na}_2\text{CO}_3$ + $\text{NaHCO}_3$</td></tr>
-<tr><td>$V_1 = 0$</td><td>纯 $\text{NaHCO}_3$</td></tr>
+<tr><th>$V_1$ 与 $V_2$ 的关系</th><th>混合物组成</th><th>各组分含量计算</th></tr>
+<tr><td>$V_2 = 0$</td><td>纯 NaOH</td><td>$n(\text{NaOH}) = cV_1$</td></tr>
+<tr><td>$V_1 > V_2 > 0$</td><td>NaOH + $\text{Na}_2\text{CO}_3$</td><td>$n(\text{Na}_2\text{CO}_3) = cV_2$; $n(\text{NaOH}) = c(V_1 - V_2)$</td></tr>
+<tr><td>$V_1 = V_2 > 0$</td><td>纯 $\text{Na}_2\text{CO}_3$</td><td>$n(\text{Na}_2\text{CO}_3) = cV_1 = cV_2$</td></tr>
+<tr><td>$0 < V_1 < V_2$</td><td>$\text{Na}_2\text{CO}_3$ + $\text{NaHCO}_3$</td><td>$n(\text{Na}_2\text{CO}_3) = cV_1$; $n(\text{NaHCO}_3) = c(V_2 - V_1)$</td></tr>
+<tr><td>$V_1 = 0$</td><td>纯 $\text{NaHCO}_3$</td><td>$n(\text{NaHCO}_3) = cV_2$</td></tr>
 </table>
 </div>
 
-<h3>7.4 凯氏定氮法 (Kjeldahl Method)</h3>
+<div class="note">
+<strong>为什么 NaOH + NaHCO$_3$ 不会同时出现？</strong><br>
+因为 NaOH 是强碱，会立即与 $\text{NaHCO}_3$ 反应：$\text{NaOH} + \text{NaHCO}_3 \to \text{Na}_2\text{CO}_3 + \text{H}_2\text{O}$。所以混合物中最多只能是三种组合之一：NaOH+$\text{Na}_2\text{CO}_3$、纯$\text{Na}_2\text{CO}_3$、$\text{Na}_2\text{CO}_3$+$\text{NaHCO}_3$。
+</div>
+
+<h3>7.4 BaCl$_2$ 排除法测 NaOH + Na$_2$CO$_3$（PPT p76-p78）</h3>
 <div class="card">
-<p>测定有机物中氮含量的经典方法：</p>
+<p>双指示剂法的替代方案：先用 $\text{BaCl}_2$ 沉淀 $\text{Na}_2\text{CO}_3$，再滴定 NaOH。</p>
+<p><strong>方法步骤：</strong></p>
 <ol>
-  <li><strong>消化</strong>：样品 + 浓 $\text{H}_2\text{SO}_4$ + 催化剂（$\text{CuSO}_4$、$\text{K}_2\text{SO}_4$），加热分解有机物，$\text{N} \to \text{NH}_4^+$</li>
-  <li><strong>蒸馏</strong>：加过量 NaOH 使 $\text{NH}_4^+ \to \text{NH}_3$$\uparrow$，蒸馏收集 $\text{NH}_3$ 于已知量的 $\text{H}_2\text{SO}_4$（或硼酸）吸收液中</li>
-  <li><strong>滴定</strong>：用 NaOH 标准溶液回滴过量的 $\text{H}_2\text{SO}_4$；或直接用 HCl 标准溶液滴定硼酸铵</li>
+  <li>取 NaOH + $\text{Na}_2\text{CO}_3$ 混合试样，加入过量 $\text{BaCl}_2$：$\text{Na}_2\text{CO}_3 + \text{BaCl}_2 \to \text{BaCO}_3 \downarrow + 2\text{NaCl}$</li>
+  <li>$\text{Na}_2\text{CO}_3$ 被完全沉淀，溶液中只剩 NaOH</li>
+  <li>以酚酞为指示剂，用 HCl 标准溶液滴定溶液中的 NaOH，消耗 $V_1$</li>
+  <li>$n(\text{NaOH}) = c_{\text{HCl}} \cdot V_1$</li>
 </ol>
-$$\text{N\%} = \frac{(c_1V_1 - c_2V_2) \times 14.01}{m_{\text{sample}} \times 1000} \times 100\%$$
-<p>其中 $c_1V_1$ 为吸收液中 $\text{H}_2\text{SO}_4$ 的当量，$c_2V_2$ 为回滴的 NaOH 的当量。</p>
+<p><strong>未加 $\text{BaCl}_2$</strong> 的另一份试样，直接用甲基橙为指示剂滴定（总碱量），消耗 $V_2$：</p>
+$$n(\text{NaOH}) + 2n(\text{Na}_2\text{CO}_3) = c_{\text{HCl}} \cdot V_2$$
+$$n(\text{Na}_2\text{CO}_3) = \frac{c_{\text{HCl}}(V_2 - V_1)}{2}$$
+<p><strong>优点：</strong>两次滴定相互独立，误差不累积。<strong>缺点：</strong>需要两份试样。</p>
 </div>
 
-<h3>7.5 硼酸 + 甘油增强法</h3>
+<h3>7.5 Na$_3$PO$_4$ + NaOH 混合物（2022 期末实验设计 Option 1）</h3>
+<div class="exam">
+<div class="t">2022 期末实验设计题</div>
+<p>用 HCl 标准溶液滴定 $\text{Na}_3\text{PO}_4$ + NaOH 混合物。</p>
+</div>
+
+<div class="card">
+<p><strong>分析思路（类比 $\text{Na}_2\text{CO}_3$ + NaOH）：</strong></p>
+
+<p><strong>第一步：酚酞指示剂</strong>，滴至褪色（pH $\approx$ 9.7），消耗 $V_1$</p>
+<ul>
+  <li>$\text{NaOH} + \text{HCl} \to \text{NaCl} + \text{H}_2\text{O}$（NaOH 全部反应）</li>
+  <li>$\text{Na}_3\text{PO}_4 + \text{HCl} \to \text{Na}_2\text{HPO}_4 + \text{NaCl}$（$\text{Na}_3\text{PO}_4$ 被滴定到 $\text{Na}_2\text{HPO}_4$）</li>
+</ul>
+
+<p><strong>第二步：甲基红指示剂</strong>，继续滴至变色（pH $\approx$ 4.7），消耗 $V_2$</p>
+<ul>
+  <li>$\text{Na}_2\text{HPO}_4 + \text{HCl} \to \text{NaH}_2\text{PO}_4 + \text{NaCl}$</li>
+</ul>
+
+<p><strong>计算：</strong></p>
+$$n(\text{Na}_3\text{PO}_4) = c_{\text{HCl}} \cdot V_2 \quad (\text{第二步的}V_2\text{对应全部}\text{Na}_2\text{HPO}_4\text{，即全部来自}\text{Na}_3\text{PO}_4)$$
+$$n(\text{NaOH}) = c_{\text{HCl}} \cdot (V_1 - V_2)$$
+</div>
+
+<!-- ==================== 8. NaOH吸收CO2问题 ==================== -->
+<h2>八、NaOH 吸收 CO$_2$ 问题</h2>
+
+<h3>8.1 CO$_2$ 的干扰机理</h3>
+<div class="card">
+<p>空气中的 $\text{CO}_2$ 溶于 NaOH 标准溶液中：</p>
+$$2\text{NaOH} + \text{CO}_2 \to \text{Na}_2\text{CO}_3 + \text{H}_2\text{O}$$
+<p>原来的纯 NaOH 溶液变成了 NaOH + $\text{Na}_2\text{CO}_3$ 混合液。</p>
+<p><strong>后果取决于使用的指示剂和被滴定的物质。</strong></p>
+</div>
+
+<h3>8.2 CO$_2$ 在水溶液中的分布形态（PPT p74-p75）</h3>
+<div class="card">
+<p>$\text{CO}_2$ 溶于水后以不同形态存在，取决于溶液 pH：</p>
+<table>
+<tr><th>pH 范围</th><th>主要形态</th><th>说明</th></tr>
+<tr><td>pH &lt; 6.4</td><td>$\text{CO}_2$（或 $\text{H}_2\text{CO}_3$）</td><td>分子态为主</td></tr>
+<tr><td>6.4 &lt; pH &lt; 10.3</td><td>$\text{HCO}_3^-$</td><td>碳酸氢根为主</td></tr>
+<tr><td>pH &gt; 10.3</td><td>$\text{CO}_3^{2-}$</td><td>碳酸根为主</td></tr>
+</table>
+<p><strong>对滴定的影响规则：</strong></p>
+<ul>
+  <li>当以<strong>甲基橙</strong>（MO）为指示剂，终点 pH $\approx$ 4.0 → $\text{CO}_2$ 以分子态存在 → <strong>不影响滴定结果</strong></li>
+  <li>当以<strong>酚酞</strong>（PP）为指示剂，终点 pH $\approx$ 9.0 → $\text{CO}_2$ 被 NaOH 转变为 $\text{HCO}_3^-$ → 由于 $\text{CO}_2$ 的影响产生误差，故<strong>CO$_2$ 对酚酞终点有影响</strong></li>
+</ul>
+</div>
+
+<h3>8.3 不同指示剂下的影响</h3>
+
 <div class="fb">
-<div class="t">硼酸不能直接滴定的解决方案</div>
-<p>$\text{H}_3\text{BO}_3$ 是极弱酸（$K_a = 5.8\times10^{-10}$），$cK_a \ll 10^{-8}$，不能直接滴定。</p>
-<p><strong>加入甘油（丙三醇）</strong>或甘露醇等多元醇后，硼酸与多元醇生成络合酸，酸性大大增强：</p>
-$$\text{H}_3\text{BO}_3 + 2\text{C}_3\text{H}_5(\text{OH})_3 \to \text{配合酸} \quad K_a' \approx 10^{-4}$$
-<p>此时 $cK_a' = 0.1 \times 10^{-4} = 10^{-5} \gg 10^{-8}$，满足滴定条件。用 NaOH 标准溶液滴定，酚酞为指示剂。</p>
+<div class="t">用酚酞指示剂：结果偏高！</div>
+<p>酚酞变色 pH $\approx$ 8~9，在此 pH 下：</p>
+<ul>
+  <li>NaOH 与 HCl（被测物）完全反应 ✓</li>
+  <li>$\text{Na}_2\text{CO}_3$ 只被滴到 $\text{NaHCO}_3$（消耗1个 $\text{H}^+$），而不是 $\text{H}_2\text{CO}_3$</li>
+</ul>
+<p>问题在于：2 mol NaOH 变成了 1 mol $\text{Na}_2\text{CO}_3$，而这 1 mol $\text{Na}_2\text{CO}_3$ 只消耗 1 mol HCl（到 $\text{NaHCO}_3$），等于 <strong>2 mol NaOH 的功能只发挥了 1 mol</strong>。</p>
+<p>因此，要达到终点需要<strong>更多的被测 HCl</strong>，即测定值偏高。</p>
 </div>
 
-<!-- ==================== 8. 指示剂选择决策指南 ==================== -->
-<h2>八、指示剂选择决策指南</h2>
+<div class="exam">
+<div class="t">2022 期末 Q8</div>
+<p>用吸收了 $\text{CO}_2$ 的 NaOH 溶液滴定 HCl，以酚酞为指示剂，结果偏<strong>高</strong>。</p>
+</div>
+
+<div class="fb">
+<div class="t">用甲基橙指示剂：无影响！</div>
+<p>甲基橙变色 pH $\approx$ 3.5~4.4，在此 pH 下：</p>
+<ul>
+  <li>$\text{Na}_2\text{CO}_3$ 被完全滴到 $\text{H}_2\text{CO}_3$（消耗2个 $\text{H}^+$）</li>
+  <li>2 mol NaOH 变成 1 mol $\text{Na}_2\text{CO}_3$，但 1 mol $\text{Na}_2\text{CO}_3$ 消耗 2 mol HCl</li>
+  <li>总消耗量不变，因此<strong>无影响</strong></li>
+</ul>
+</div>
+
+<div class="exam">
+<div class="t">Quiz 1 选择题 Q7</div>
+<p>用吸收了 $\text{CO}_2$ 的 NaOH 溶液滴定 HCl，以甲基橙为指示剂，对结果<strong>无影响</strong>。</p>
+</div>
+
+<div class="card">
+<p><strong>解决方法：</strong></p>
+<ul>
+  <li>NaOH 标准溶液应避免接触空气，用碱石灰管保护</li>
+  <li>煮沸蒸馏水除 $\text{CO}_2$</li>
+  <li>配制时用饱和 NaOH（$\text{Na}_2\text{CO}_3$ 不溶于浓 NaOH）上清液稀释</li>
+  <li>如已吸收 $\text{CO}_2$，选用甲基橙作指示剂可消除影响</li>
+</ul>
+</div>
+
+<h3>8.4 基准物质污染问题</h3>
+<div class="exam">
+<div class="t">Quiz 1 填空 Q5</div>
+<p>用邻苯二甲酸氢钾（KHP）标定 NaOH 溶液，若 KHP 中混有<strong>邻苯二甲酸（苯二甲酸）</strong>杂质，则标定结果使 NaOH 浓度偏<strong>低</strong>。</p>
+<div class="sol">
+<div class="st">分析：</div>
+<p>KHP（$\text{KHC}_8\text{H}_4\text{O}_4$, $M=204$）每摩尔消耗1 mol NaOH。</p>
+<p>邻苯二甲酸（$\text{H}_2\text{C}_8\text{H}_4\text{O}_4$, $M=166$）每摩尔消耗<strong>2 mol</strong> NaOH。</p>
+<p>相同质量下，邻苯二甲酸消耗更多 NaOH，即实际消耗的 NaOH 比按 KHP 计算的多。但我们按 KHP 的摩尔质量计算，$n(\text{KHP})_{\text{计}} = m/204$，实际上部分是苯二甲酸，其等效 NaOH 用量更大。因此，标定得到的 $c_{\text{NaOH}}$ 偏<strong>高</strong>。等等，重新分析：</p>
+<p>$m$ 克 KHP（含杂质）实际消耗 $V$ mL NaOH，$c = n_{\text{KHP计}}/V$。如果杂质消耗更多 NaOH，则 $V$ 更大，$c = n/V$ 偏低。</p>
+<p><strong>答：NaOH 浓度偏低。</strong></p>
+</div>
+</div>
+
+<!-- ==================== 9. 指示剂选择决策指南 ==================== -->
+<h2>九、指示剂选择决策指南</h2>
 
 <div class="fb">
 <div class="t">指示剂选择流程</div>
@@ -434,7 +800,7 @@ $$\text{H}_3\text{BO}_3 + 2\text{C}_3\text{H}_5(\text{OH})_3 \to \text{配合酸
    |
    +-- 强碱滴定弱酸：pH_sp > 7
    |     +-- 选变色范围在碱性区域的指示剂
-   |     +-- 首选酚酞 (8.0~10.0)
+   |     +-- 首选酚酞 (8.0~9.8)
    |     +-- 禁用甲基橙！
    |
    +-- 强酸滴定弱碱：pH_sp < 7
@@ -451,18 +817,259 @@ $$\text{H}_3\text{BO}_3 + 2\text{C}_3\text{H}_5(\text{OH})_3 \to \text{配合酸
 <div class="card">
 <table>
 <tr><th>滴定类型</th><th>化学计量点 pH</th><th>推荐指示剂</th><th>不宜用</th></tr>
-<tr><td>强酸-强碱 (0.1 mol/L)</td><td>7.00</td><td>甲基红、酚酞、甲基橙</td><td>—</td></tr>
+<tr><td>强酸-强碱 (0.1 mol/L)</td><td>7.00</td><td>甲基红、酚酞、甲基橙</td><td>--</td></tr>
+<tr><td>强酸-强碱 (0.01 mol/L)</td><td>7.00</td><td>溴百里酚蓝</td><td>甲基橙</td></tr>
 <tr><td>NaOH 滴定 HAc</td><td>~8.7</td><td>酚酞</td><td>甲基橙</td></tr>
 <tr><td>HCl 滴定 $\text{NH}_3$</td><td>~5.3</td><td>甲基红</td><td>酚酞</td></tr>
+<tr><td>HCl 滴定 $\text{CH}_3\text{NH}_2$</td><td>~5.96</td><td>甲基红</td><td>酚酞</td></tr>
 <tr><td>$\text{H}_3\text{PO}_4$ 第一终点</td><td>~4.7</td><td>甲基橙、溴甲酚绿</td><td>酚酞</td></tr>
 <tr><td>$\text{H}_3\text{PO}_4$ 第二终点</td><td>~9.8</td><td>酚酞、百里酚酞</td><td>甲基橙</td></tr>
-<tr><td>$\text{Na}_2\text{CO}_3$ 第一终点</td><td>~8.3</td><td>酚酞</td><td>—</td></tr>
-<tr><td>$\text{Na}_2\text{CO}_3$ 第二终点</td><td>~3.9</td><td>甲基橙</td><td>—</td></tr>
+<tr><td>$\text{Na}_2\text{CO}_3$ 第一终点</td><td>~8.3</td><td>酚酞</td><td>--</td></tr>
+<tr><td>$\text{Na}_2\text{CO}_3$ 第二终点</td><td>~3.9</td><td>甲基橙</td><td>--</td></tr>
 </table>
 </div>
 
-<!-- ==================== 9. 综合例题 ==================== -->
-<h2>九、综合例题</h2>
+<!-- ==================== 10. 应用 ==================== -->
+<h2>十、酸碱滴定的应用</h2>
+
+<h3>10.1 凯氏定氮法 (Kjeldahl Method)</h3>
+<div class="card">
+<p>测定有机物中氮含量的经典方法：</p>
+<ol>
+  <li><strong>消化</strong>：样品 + 浓 $\text{H}_2\text{SO}_4$ + 催化剂（$\text{CuSO}_4$、$\text{K}_2\text{SO}_4$），加热分解有机物，$\text{N} \to \text{NH}_4^+$</li>
+  <li><strong>蒸馏</strong>：加过量 NaOH 使 $\text{NH}_4^+ \to \text{NH}_3 \uparrow$，蒸馏收集 $\text{NH}_3$ 于已知量的 $\text{H}_2\text{SO}_4$（或硼酸）吸收液中</li>
+  <li><strong>滴定</strong>：用 NaOH 标准溶液回滴过量的 $\text{H}_2\text{SO}_4$；或直接用 HCl 标准溶液滴定硼酸铵</li>
+</ol>
+$$\text{N\%} = \frac{(c_1V_1 - c_2V_2) \times 14.01}{m_{\text{sample}} \times 1000} \times 100\%$$
+<p>其中 $c_1V_1$ 为吸收液中 $\text{H}_2\text{SO}_4$ 的当量，$c_2V_2$ 为回滴的 NaOH 的当量。</p>
+</div>
+
+<h3>10.2 甲醛法测定铵盐中的氮（PPT p90）</h3>
+<div class="fb">
+<div class="t">甲醛法原理</div>
+<p>$\text{NH}_4^+$ 是极弱酸（$K_a = 5.56\times10^{-10}$），$cK_a \ll 10^{-8}$，不能直接用 NaOH 滴定。</p>
+<p><strong>解决方案：</strong>加入过量中性甲醛溶液，甲醛与 $\text{NH}_4^+$ 反应生成六亚甲基四胺和强酸 $\text{H}^+$：</p>
+$$4\text{NH}_4^+ + 6\text{HCHO} \to (\text{CH}_2)_6\text{N}_4\text{H}^+ + 3\text{H}^+ + 6\text{H}_2\text{O}$$
+<p>反应释放的 $\text{H}^+$ 即可用 NaOH 标准溶液滴定。每个 $\text{NH}_4^+$ 释放一个可滴定的 $\text{H}^+$，因此：</p>
+$$n(\text{N}) = n(\text{NaOH})$$
+$$w(\text{N}) = \frac{c_{\text{NaOH}} \times V_{\text{NaOH}} \times 14.01}{m_s \times 1000} \times 100\%$$
+</div>
+
+<h3>10.3 酸碱滴定法测定 SiO$_2$（PPT p86）</h3>
+<div class="card">
+<p>硅酸盐中 $\text{SiO}_2$ 的测定方法：</p>
+<ol>
+  <li>用 KOH 熔融：$\text{SiO}_2 \xrightarrow{\text{KOH 熔融}} \text{K}_2\text{SiO}_3$</li>
+  <li>加 HF 处理，使硅转化为 $\text{K}_2\text{SiF}_6$ 沉淀</li>
+  <li>过滤，用 KCl-乙醇溶液洗涤</li>
+  <li>中和游离酸（酚酞指示剂）</li>
+  <li>加入沸水使 $\text{K}_2\text{SiF}_6$ 水解：$\text{K}_2\text{SiF}_6 + 3\text{H}_2\text{O} \to \text{H}_2\text{SiO}_3 + 2\text{KF} + 4\text{HF}$</li>
+  <li>用 NaOH 标准溶液滴定释放的 HF（酚酞指示剂），产物为 NaF</li>
+</ol>
+</div>
+
+<h3>10.4 不能直接滴定的弱酸碱的间接测定（PPT p91）</h3>
+<div class="fb">
+<div class="t">两种间接方法</div>
+<p><strong>方法一：化学反应增强酸碱性</strong></p>
+<ul>
+  <li>硼酸加甘油/甘露醇 → 增强酸性（见10.5节）</li>
+  <li>$\text{NH}_4^+$ 加甲醛 → 释放可滴定的 $\text{H}^+$（见10.2节）</li>
+</ul>
+
+<p><strong>方法二：离子交换法</strong></p>
+<p>将弱酸的盐通过强酸型阳离子交换树脂，将弱酸的阳离子换为 $\text{H}^+$，生成对应的强酸：</p>
+$$\text{R-SO}_3\text{H} + \text{NH}_4\text{Cl} \to \text{R-SO}_3\text{NH}_4 + \text{HCl}$$
+<p>流出液中的 HCl 即可用 NaOH 标准溶液直接滴定，间接求出 $\text{NH}_4\text{Cl}$ 的量。</p>
+<p>类似地，弱碱的盐可通过强碱型阴离子交换树脂转化：</p>
+$$\text{R-NR'}_3\text{-OH} + \text{KNO}_3 \to \text{R-NR'}_3\text{-NO}_3 + \text{KOH}$$
+<p>流出液中的 KOH 用 HCl 滴定，即得 $\text{KNO}_3$ 的量。</p>
+</div>
+
+<h3>10.5 硼酸 + 甘油增强法</h3>
+<div class="fb">
+<div class="t">硼酸不能直接滴定的解决方案</div>
+<p>$\text{H}_3\text{BO}_3$ 是极弱酸（$K_a = 5.8\times10^{-10}$），$cK_a \ll 10^{-8}$，不能直接滴定。</p>
+<p><strong>加入甘油（丙三醇）</strong>或甘露醇等多元醇后，硼酸与多元醇生成络合酸，酸性大大增强：</p>
+$$\text{H}_3\text{BO}_3 + 2\text{C}_3\text{H}_5(\text{OH})_3 \to \text{配合酸} \quad K_a' \approx 10^{-4}$$
+<p>此时 $cK_a' = 0.1 \times 10^{-4} = 10^{-5} \gg 10^{-8}$，满足滴定条件。用 NaOH 标准溶液滴定，酚酞为指示剂。</p>
+</div>
+
+<!-- ==================== 10A. 非水滴定 ==================== -->
+<h2>十A、非水滴定法简介（PPT p95-p98）</h2>
+<img class="ppt-img" src="temp_pages/ch5b_p95.png" alt="非水滴定法简介">
+<p class="ppt-caption">PPT: 非水滴定法简介 -- 拉平效应与区分效应</p>
+
+<div class="warn">非水滴定是本章的拓展内容，考试中可能以概念题或选择题形式出现。需掌握拉平效应和区分效应的概念。</div>
+
+<h3>10A.1 为什么需要非水滴定</h3>
+<div class="card">
+<p>在水溶液中，很多弱酸（$K_a < 10^{-8}$）和弱碱（$K_b < 10^{-8}$）无法直接准确滴定。通过更换溶剂，可以改变酸碱的相对强度，使原本不能滴定的物质变得可以滴定。</p>
+</div>
+
+<h3>10A.2 拉平效应 (Leveling Effect)</h3>
+<div class="fb">
+<div class="t">拉平效应</div>
+<p>在两性溶剂中，<strong>最强的酸是溶剂的共轭酸</strong>，<strong>最强的碱是溶剂的共轭碱</strong>。比溶剂共轭酸更强的酸都被"拉平"到同一强度。</p>
+<p><strong>例如在水中：</strong>$\text{HCl}$、$\text{HClO}_4$、$\text{HNO}_3$ 都是强酸，它们的酸性被"拉平"到 $\text{H}_3\text{O}^+$ 的水平，无法区分强弱。</p>
+<p><strong>惰性溶剂</strong>（如苯、CCl$_4$）没有拉平效应，但具有很好的区分效应。</p>
+</div>
+
+<h3>10A.3 区分效应 (Differentiating Effect)</h3>
+<div class="fb">
+<div class="t">区分效应</div>
+<p>能分辨酸（碱）强弱的能力。选择合适的溶剂可以使水中无法区分的酸（碱）表现出不同的强度。</p>
+<p><strong>例如在冰醋酸（HAc）中：</strong></p>
+<table>
+<tr><th>酸（水中均为强酸）</th><th>在 HAc 溶剂中的 $pK_a$</th></tr>
+<tr><td>$\text{HClO}_4$</td><td>4.87</td></tr>
+<tr><td>$\text{HCl}$</td><td>8.55</td></tr>
+<tr><td>$\text{H}_2\text{SO}_4$</td><td>7.24</td></tr>
+<tr><td>$\text{HNO}_3$</td><td>9.40</td></tr>
+</table>
+<p>在冰醋酸中，这些"强酸"的 $pK_a$ 差别很大，可以分别滴定！</p>
+</div>
+
+<h3>10A.4 溶剂的选择原则</h3>
+<div class="card">
+<p><strong>溶剂自身的离子积 $K_s$ 越小</strong>，分辨能力越强，滴定准确度越高。</p>
+<ul>
+  <li><strong>滴定弱碱</strong>（如药物生物碱）：选用<strong>酸性溶剂</strong>（冰醋酸），增强碱性；标准酸溶液用 $\text{HClO}_4$ 的冰醋酸溶液</li>
+  <li><strong>滴定弱酸</strong>：选用<strong>碱性溶剂</strong>（乙二胺、丁胺等），增强酸性；标准碱溶液用甲醇钠 $\text{CH}_3\text{ONa}$ 或氢氧化四丁基铵</li>
+  <li><strong>介电常数大</strong>的溶剂有利于离子对的离解，酸的强度增加</li>
+</ul>
+</div>
+
+<h3>10A.5 非水滴定的标准溶液和终点确定</h3>
+<div class="card">
+<p><strong>标准酸溶液：</strong>0.10 mol/L $\text{HClO}_4$ 的冰醋酸溶液</p>
+<p><strong>标准碱溶液：</strong>甲醇钠、氢氧化四丁基铵的苯甲醇溶液</p>
+<p><strong>终点确定方法：</strong></p>
+<ul>
+  <li><strong>指示剂法</strong>：结晶紫（碱性溶剂中滴定弱碱常用）</li>
+  <li><strong>电位法</strong>：用玻璃电极-甘汞电极组成测量体系，记录电位突跃</li>
+</ul>
+</div>
+
+<!-- ==================== 11. 真题考点精讲 ==================== -->
+<h2>十一、真题考点精讲</h2>
+
+<h3>11.1 Quiz 1 酸碱滴定部分全题解析</h3>
+
+<div class="exam">
+<div class="t">Quiz 1 选择题汇总</div>
+
+<p><strong>Q2：$K_{\text{HIn}} = 10^{-5}$，变色范围？</strong></p>
+<p>答：pH 4~6。（$pK_{\text{HIn}} \pm 1$）</p>
+
+<p><strong>Q4：$\text{H}_2\text{C}_2\text{O}_4$ 用 NaOH 滴定有几个突跃？</strong></p>
+<p>答：<strong>1个</strong>。$K_{a1}/K_{a2} \approx 920 < 10^4$，不能分步。</p>
+
+<p><strong>Q7：吸收了 $\text{CO}_2$ 的 NaOH 滴定 HCl，用甲基橙，影响？</strong></p>
+<p>答：<strong>无影响</strong>。$\text{Na}_2\text{CO}_3$ 在甲基橙终点完全被滴至 $\text{H}_2\text{CO}_3$，总碱量不变。</p>
+</div>
+
+<div class="exam">
+<div class="t">Quiz 1 填空题汇总</div>
+
+<p><strong>Q5：KHP 中混入邻苯二甲酸标定 NaOH，结果偏？</strong></p>
+<p>答：<strong>偏低</strong>。邻苯二甲酸（二元酸，$M$小）消耗更多 NaOH，$V$ 增大，$c = n/V$ 偏低。</p>
+
+<p><strong>Q7：浓度增大10倍对突跃范围的影响？</strong></p>
+<p>答：强酸-强碱突跃增大约 <strong>2个 pH 单位</strong>；弱酸-强碱突跃增大约 <strong>1个 pH 单位</strong>。</p>
+</div>
+
+<div class="exam">
+<div class="t">Quiz 1 计算题 Q3 完整解答</div>
+<p>0.1000 mol/L HCl 滴定 20.00 mL 0.1000 mol/L $\text{CH}_3\text{NH}_2$（$pK_b=3.38$）</p>
+<div class="sol">
+<div class="st">完整解答：</div>
+<p><strong>第1问：化学计量点 pH</strong></p>
+<p>$pK_a = 14 - 3.38 = 10.62$，$c_{\text{sp}} = 0.05$ mol/L</p>
+<p>$[\text{H}^+] = \sqrt{K_a \cdot c_{\text{sp}}} = \sqrt{10^{-10.62}\times0.05}$</p>
+<p>$= \sqrt{1.20\times10^{-12}} = 1.095\times10^{-6}$，<strong>pH = 5.96</strong></p>
+
+<p><strong>第2问：半当量点 pH</strong></p>
+<p>pH = $pK_a$ = <strong>10.62</strong></p>
+
+<p><strong>第3问：选择指示剂</strong></p>
+<p>化学计量点 pH = 5.96，选<strong>甲基红</strong>（4.4~6.2）。</p>
+
+<p><strong>第4问：终点误差（终点 pH = 4.0，甲基橙）</strong></p>
+<p>$\Delta\text{pH} = 4.0 - 5.96 = -1.96$</p>
+<p>$K_t' = K_b/K_w = 10^{-3.38}/10^{-14} = 10^{10.62}$</p>
+<p>$\sqrt{K_t' \cdot c_{\text{sp}}} = \sqrt{10^{10.62}\times0.05} = 4.57\times10^4$</p>
+<p>$E_t = \frac{10^{1.96} - 10^{-1.96}}{4.57\times10^4}\times100\% = \frac{91.2-0.011}{4.57\times10^4}\times100\% \approx 0.20\%$</p>
+<p>$|E_t| = 0.20\% > 0.1\%$，误差偏大。</p>
+</div>
+</div>
+
+<h3>11.2 2022 期末酸碱滴定部分全题解析</h3>
+
+<div class="exam">
+<div class="t">2022 期末填空 Q1</div>
+<p>草酸（$\text{H}_2\text{C}_2\text{O}_4$）用 NaOH 滴定有 <strong>1</strong> 个突跃。</p>
+<p>原因：$K_{a1}/K_{a2} = 5.9\times10^{-2}/6.4\times10^{-5} \approx 920 < 10^4$。</p>
+</div>
+
+<div class="exam">
+<div class="t">2022 期末 Q8</div>
+<p>吸收 $\text{CO}_2$ 的 NaOH 滴定 HCl，酚酞指示剂，结果偏<strong>高</strong>。</p>
+</div>
+
+<div class="exam">
+<div class="t">2022 期末 Q9</div>
+<p>NaOH 滴定 HCl，三种指示剂的 $|E_t|$ 排序：甲基红 $\approx$ 酚酞 &lt; 甲基橙。</p>
+</div>
+
+<div class="exam">
+<div class="t">2022 期末 Q10</div>
+<p>0.01 mol/L HCl 与 0.01 mol/L NaOH，突跃范围：<strong>5.3 ~ 8.7</strong>。</p>
+</div>
+
+<h3>11.3 2022 期末计算题 Q4：弱酸 HA 的完整滴定分析</h3>
+
+<div class="exam">
+<div class="t">2022 期末计算题 Q4</div>
+<p>某一元弱酸 HA（$pK_a = 5.0$），浓度 0.1 mol/L，体积 20.00 mL，用 0.1 mol/L NaOH 滴定。</p>
+<p>(1) 计算化学计量点 pH<br>
+(2) 选择合适指示剂<br>
+(3) 画出滴定曲线的大致趋势<br>
+(4) 若以酚酞（pH=9.0）为终点，计算 $E_t$</p>
+</div>
+
+<div class="sol">
+<div class="st">完整解答：</div>
+
+<p><strong>(1) 化学计量点 pH</strong></p>
+<p>$c_{\text{sp}} = 0.1 \times 20/40 = 0.05$ mol/L</p>
+<p>$K_b = K_w/K_a = 10^{-14}/10^{-5} = 10^{-9}$</p>
+<p>$[\text{OH}^-] = \sqrt{K_b \cdot c_{\text{sp}}} = \sqrt{10^{-9} \times 0.05} = \sqrt{5\times10^{-11}} = 7.07\times10^{-6}$</p>
+<p>$\text{pOH} = 5.15$，<strong>$\text{pH}_{\text{sp}} = 8.85$</strong></p>
+
+<p><strong>(2) 指示剂选择</strong></p>
+<p>化学计量点 pH = 8.85，在碱性区域。选<strong>酚酞</strong>（8.0~9.8），变色范围包含 8.85。</p>
+<p>不能选甲基橙（3.1~4.4）或甲基红（4.4~6.2），远离化学计量点。</p>
+
+<p><strong>(3) 滴定曲线特征</strong></p>
+<ul>
+  <li>起点：$\text{pH} = \frac{1}{2}(pK_a - \lg c) = \frac{1}{2}(5.0 + 1) = 3.0$</li>
+  <li>半当量点：$\text{pH} = pK_a = 5.0$（缓冲区平坦段中心）</li>
+  <li>化学计量点：$\text{pH} = 8.85$（不在 pH=7！）</li>
+  <li>突跃范围：约 pH 7.7 ~ 9.7（比强酸-强碱窄，且偏碱性）</li>
+  <li>曲线不对称，化学计量点偏上方</li>
+</ul>
+
+<p><strong>(4) 终点误差</strong></p>
+<p>$\text{pH}_{\text{ep}} = 9.0$，$\Delta\text{pH} = 9.0 - 8.85 = +0.15$</p>
+<p>$K_t = K_a/K_w = 10^{-5}/10^{-14} = 10^9$</p>
+<p>$\sqrt{K_t \cdot c_{\text{sp}}} = \sqrt{10^9 \times 0.05} = \sqrt{5\times10^7} = 7071$</p>
+$$E_t = \frac{10^{0.15} - 10^{-0.15}}{7071} \times 100\% = \frac{1.413 - 0.708}{7071}\times100\% = \frac{0.705}{7071}\times100\% = 0.010\%$$
+<p>$|E_t| = 0.010\% \ll 0.1\%$，误差很小，酚酞是极佳选择。</p>
+</div>
+
+<!-- ==================== 12. 综合例题 ==================== -->
+<h2>十二、综合例题</h2>
 
 <div class="ex">
 <strong>例题1：</strong>某工厂废液含 NaOH 和 $\text{Na}_2\text{CO}_3$，取 25.00 mL 废液，用 0.2000 mol/L HCl 滴定。加酚酞指示剂，至褪色用去 HCl 26.14 mL（$V_1$）；再加甲基橙指示剂，继续滴定至变色用去 HCl 5.00 mL（$V_2$）。求废液中 NaOH 和 $\text{Na}_2\text{CO}_3$ 的浓度。
@@ -474,8 +1081,7 @@ $n(\text{Na}_2\text{CO}_3) = c_{\text{HCl}} \times V_2 = 0.2000 \times 5.00 = 1.
 $c(\text{Na}_2\text{CO}_3) = 1.000/25.00 = 0.04000\;\text{mol/L}$<br><br>
 
 <strong>Step 2：计算 NaOH 的量</strong><br>
-$V_1$ 中包含：NaOH 全部 + $\text{Na}_2\text{CO}_3$ 的第一步（$V_2$ 量的一半对应第一步）<br>
-等等，$V_2$ 对应的是第二步，而第一步与第二步消耗等量 HCl，所以 $\text{Na}_2\text{CO}_3$ 第一步也消耗 5.00 mL。<br>
+$V_1$ 中包含：NaOH 全部 + $\text{Na}_2\text{CO}_3$ 的第一步（与 $V_2$ 等量）<br>
 NaOH 消耗的 HCl：$V_1 - V_2 = 26.14 - 5.00 = 21.14\;\text{mL}$<br>
 $n(\text{NaOH}) = 0.2000 \times 21.14 = 4.228\;\text{mmol}$<br>
 $c(\text{NaOH}) = 4.228/25.00 = 0.1691\;\text{mol/L}$<br><br>
@@ -508,9 +1114,6 @@ $\text{H}_3\text{PO}_4$：$pK_{a1}=2.12$，$pK_{a2}=7.20$，$pK_{a3}=12.36$<br><
 
 <strong>第一化学计量点：</strong>溶液为 $\text{NaH}_2\text{PO}_4$（两性物质）<br>
 $c_{\text{sp}} = 0.1000 \times 20.00/40.00 = 0.0500\;\text{mol/L}$<br>
-检查条件：$c \gg K_{a1}$（$0.05 \gg 7.6\times10^{-3}$？不太满足...但仍可近似）<br>
-$cK_{a2} = 0.05 \times 6.3\times10^{-8} = 3.2\times10^{-9}$<br>
-$K_w = 10^{-14}$，$cK_{a2} \gg K_w$ ✓<br>
 $$\text{pH} \approx \frac{pK_{a1} + pK_{a2}}{2} = \frac{2.12 + 7.20}{2} = 4.66$$
 
 <strong>第二化学计量点：</strong>溶液为 $\text{Na}_2\text{HPO}_4$（两性物质）<br>
@@ -521,8 +1124,53 @@ $$\text{pH} \approx \frac{pK_{a2} + pK_{a3}}{2} = \frac{7.20 + 12.36}{2} = 9.78$
 </div>
 </div>
 
-<!-- ==================== 10. 考试陷阱 ==================== -->
-<h2>十、常见考试陷阱</h2>
+<div class="ex">
+<strong>例题4：</strong>0.1 mol/L NaOH 滴定 0.1 mol/L $\text{NH}_4\text{Cl}$，能否直接滴定？若能，求化学计量点 pH 和选择指示剂。
+<div class="sol">
+<div class="st">解：</div>
+<p>$\text{NH}_4^+$ 是弱酸，$K_a = K_w/K_b = 10^{-14}/1.8\times10^{-5} = 5.56\times10^{-10}$</p>
+<p>$cK_a = 0.1\times5.56\times10^{-10} = 5.56\times10^{-11} < 10^{-8}$</p>
+<p><strong>不能直接滴定！</strong>$\text{NH}_4\text{Cl}$ 的酸性太弱。</p>
+<p>解决方法：加入过量 NaOH 后蒸馏出 $\text{NH}_3$，用硼酸吸收后再用 HCl 滴定（凯氏定氮法思路）。</p>
+</div>
+</div>
+
+<div class="ex">
+<strong>例题5（PPT p59-p60 综合例题）：</strong>用 0.1000 mol/L HCl 滴定 20.00 mL 0.1100 mol/L 的某一元弱碱 B 溶液，当加入 HCl 18.00 mL 时，溶液的 pH = 8.60。求：<br>
+(1) 该一元弱碱的 $pK_b$ 值<br>
+(2) 计量点时溶液的 pH 值<br>
+(3) 该强酸滴定弱碱的滴定突跃范围<br>
+(4) 若以甲基红为指示剂，滴定到 pH = 5.0 为终点，求终点误差
+<div class="sol">
+<div class="st">解：</div>
+<p><strong>(1) 求 $pK_b$</strong></p>
+<p>加入 HCl 18.00 mL 时，处于缓冲区域：</p>
+<p>剩余碱 $c_b = \dfrac{0.1100\times20.00 - 0.1000\times18.00}{38.00} = \dfrac{0.4\;\text{mmol}}{38.00\;\text{mL}}$</p>
+<p>已生成共轭酸 $c_a = \dfrac{0.1000\times18.00}{38.00} = \dfrac{1.8\;\text{mmol}}{38.00\;\text{mL}}$</p>
+<p>pH = 8.60，$\text{pOH} = 5.40$。由 $[\text{OH}^-] = K_b \cdot \dfrac{c_b}{c_a}$：</p>
+$$10^{-5.40} = K_b \times \frac{0.4}{1.8} \quad \Rightarrow \quad K_b = 1.79\times10^{-5}, \quad pK_b = 4.75$$
+
+<p><strong>(2) 计量点 pH</strong></p>
+<p>$pK_a = 14 - 4.75 = 9.25$，$c_{\text{sp}} = \dfrac{0.1100\times20.00}{42.00} = 0.05238\;\text{mol/L}$</p>
+$$[\text{H}^+] = \sqrt{K_a \cdot c_{\text{sp}}} = \sqrt{10^{-9.25}\times0.05238} = \sqrt{2.95\times10^{-11}} = 5.43\times10^{-6}$$
+$$\text{pH}_{\text{sp}} = 5.27$$
+
+<p><strong>(3) 突跃范围</strong></p>
+<p>突跃下限（滴定99.9%，HCl近似到位）：$\text{pH} \approx pK_a - \lg(c_{\text{sp}}/K_b) \approx 4.3$</p>
+<p>突跃上限（过量0.1%）：$c_{\text{H}^+} = \dfrac{0.1\times0.022}{42.02} \approx 5\times10^{-5}$，pH $\approx$ 4.30</p>
+<p>完整突跃范围约 <strong>pH 4.3 ~ 6.25</strong>。</p>
+
+<p><strong>(4) 终点误差</strong></p>
+<p>$\Delta\text{pH} = 5.0 - 5.27 = -0.27$</p>
+<p>$K_t' = K_b/K_w = 10^{-4.75}/10^{-14} = 10^{9.25}$</p>
+<p>$\sqrt{K_t' \cdot c_{\text{sp}}} = \sqrt{10^{9.25}\times0.05238} = \sqrt{9.31\times10^{7}} = 9.65\times10^{3}$</p>
+$$E_t = \frac{10^{0.27} - 10^{-0.27}}{9.65\times10^3}\times100\% = \frac{1.862 - 0.537}{9650}\times100\% = +0.014\%$$
+<p>$|E_t| = 0.014\% < 0.1\%$，误差可接受。</p>
+</div>
+</div>
+
+<!-- ==================== 13. 考试陷阱 ==================== -->
+<h2>十三、常见考试陷阱与易错点</h2>
 
 <div class="warn">
 <strong>陷阱1：弱酸滴定用错指示剂</strong><br>
@@ -531,7 +1179,7 @@ $$\text{pH} \approx \frac{pK_{a2} + pK_{a3}}{2} = \frac{7.20 + 12.36}{2} = 9.78$
 
 <div class="warn">
 <strong>陷阱2：多元酸分步滴定条件记错</strong><br>
-分步滴定要求 $K_{a1}/K_{a2} > 10^5$（不是 $> 10$、$> 100$、$> 1000$）。$\text{H}_2\text{C}_2\text{O}_4$ 的 $K_{a1}/K_{a2} \approx 920$，不能分步！
+分步滴定要求 $K_{a1}/K_{a2} > 10^4$（严格为 $10^5$）。$\text{H}_2\text{C}_2\text{O}_4$ 的 $K_{a1}/K_{a2} \approx 920$，不能分步！
 </div>
 
 <div class="warn">
@@ -556,16 +1204,48 @@ $K_{a3} = 4.4\times10^{-13}$ 极小，$cK_{a3} \ll 10^{-8}$，第三步无法滴
 直接滴定 $\text{H}_3\text{BO}_3$ 不可行（$K_a$ 太小）。这是考试中常出的"陷阱选择题"。
 </div>
 
+<div class="warn">
+<strong>陷阱7：NaOH 吸收 CO$_2$ 的影响与指示剂有关</strong><br>
+酚酞 → 偏高（$\text{Na}_2\text{CO}_3$ 只滴到 $\text{NaHCO}_3$，碱量"缩水"）<br>
+甲基橙 → 无影响（$\text{Na}_2\text{CO}_3$ 完全滴到 $\text{H}_2\text{CO}_3$，碱量不变）<br>
+<strong>绝不能一概而论说"偏高"或"无影响"，必须看指示剂！</strong>
+</div>
+
+<div class="warn">
+<strong>陷阱8：强酸滴弱碱的终点误差公式分子顺序</strong><br>
+滴定弱酸时分子为 $10^{\Delta\text{pH}} - 10^{-\Delta\text{pH}}$；滴定弱碱时分子为 $10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}$。<br>
+混淆顺序会导致符号相反！
+</div>
+
+<div class="warn">
+<strong>陷阱9：浓度效应的不对称性</strong><br>
+强酸-强碱浓度增大10倍：突跃<strong>两端各扩1个 pH</strong>，总共增大 <strong>2个 pH 单位</strong>。<br>
+弱酸-强碱浓度增大10倍：突跃<strong>仅下限扩1个 pH</strong>，总共增大 <strong>1个 pH 单位</strong>。<br>
+原因：弱酸体系的突跃上限由过量 NaOH 决定（与弱酸浓度无关），下限由 $cK_a$ 决定。
+</div>
+
 <div class="note">
 <strong>考前速记清单：</strong>
 <ul>
-  <li>直接滴定判据：$cK_a \geq 10^{-8}$</li>
-  <li>分步滴定判据：$K_{a1}/K_{a2} > 10^5$</li>
+  <li>直接滴定判据：$cK_a \geq 10^{-8}$（弱碱同理 $cK_b \geq 10^{-8}$）</li>
+  <li>分步滴定判据：$K_{a1}/K_{a2} > 10^4$（严格 $10^5$）</li>
   <li>强碱滴弱酸 → 酚酞；强酸滴弱碱 → 甲基橙/甲基红</li>
-  <li>化学计量点 pH：强-强 = 7；强碱-弱酸 > 7（用 $\sqrt{K_bc_{\text{sp}}}$）；强酸-弱碱 < 7</li>
-  <li>双指示剂法：NaOH = $c(V_1 - V_2)$，$\text{Na}_2\text{CO}_3 = cV_2$</li>
+  <li>化学计量点 pH：强-强 = 7；强碱-弱酸 > 7（用 $\sqrt{K_bc_{\text{sp}}}$）；强酸-弱碱 < 7（用 $\sqrt{K_ac_{\text{sp}}}$）</li>
+  <li>半当量点：滴弱酸 pH = $pK_a$；滴弱碱 pH = $pK_a$（共轭酸的）</li>
+  <li>双指示剂法：NaOH+$\text{Na}_2\text{CO}_3$ 中 NaOH = $c(V_1 - V_2)$，$\text{Na}_2\text{CO}_3 = cV_2$</li>
+  <li>$\text{Na}_2\text{CO}_3$+$\text{NaHCO}_3$ 中 $\text{Na}_2\text{CO}_3 = cV_1$，$\text{NaHCO}_3 = c(V_2 - V_1)$</li>
   <li>硼酸 + 甘油 → 可滴定</li>
-  <li>$\text{H}_3\text{PO}_4$：两个终点；$\text{H}_2\text{C}_2\text{O}_4$：一个终点</li>
+  <li>$\text{H}_3\text{PO}_4$：两个终点（SP1 pH$\approx$4.7，SP2 pH$\approx$9.8）</li>
+  <li>$\text{H}_2\text{C}_2\text{O}_4$：一个终点（$K_{a1}/K_{a2}$ 太小）</li>
+  <li>NaOH 吸 $\text{CO}_2$：酚酞偏高，甲基橙无影响</li>
+  <li>强酸强碱浓度 $\times 10$ → 突跃 $+2$ pH；弱酸强碱浓度 $\times 10$ → 突跃 $+1$ pH</li>
+  <li>CH$_3$NH$_2$（$pK_b=3.38$）被 HCl 滴定：SP pH = 5.96，半当量点 pH = 10.62</li>
+  <li>终点误差：$|E_t| \leq 0.1\%$ 可接受</li>
+  <li>甲醛法：$\text{NH}_4^+$ + HCHO → 释放 $\text{H}^+$，用 NaOH 滴定间接测氮</li>
+  <li>离子交换法：弱酸/碱盐过阳/阴离子树脂 → 转化为可滴定的强酸/碱</li>
+  <li>$\text{CO}_2$ 分布：pH &lt; 6.4 为 $\text{H}_2\text{CO}_3$；6.4~10.3 为 $\text{HCO}_3^-$；&gt;10.3 为 $\text{CO}_3^{2-}$</li>
+  <li>非水滴定：拉平效应（溶剂"拉平"强酸碱至同一水平）；区分效应（分辨酸碱强弱）</li>
+  <li>滴定弱碱用酸性溶剂（冰醋酸 + $\text{HClO}_4$）；滴定弱酸用碱性溶剂</li>
 </ul>
 </div>
 

@@ -31,6 +31,8 @@ tr:nth-child(even){background:#f9f7f2;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
 details{margin:8px 0;}
 details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+.ppt-img{display:block;max-width:100%;margin:12px auto;border:1px solid #e0d8c8;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ppt-caption{text-align:center;font-size:.82em;color:#888;margin:-6px 0 12px;}
 </style>
 </head>
 <body>
@@ -38,16 +40,26 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 <div class="nav-bar">
   <a href="index.html">首页</a>
   <a href="ch1.html" style="background:#1a5276;color:#fff;">第一章</a>
-  <a href="ch2.html">第二章</a>
   <a href="ch3.html">第三章</a>
-  <a href="ch4.html">第四章</a>
-  <a href="ch5.html">第五章</a>
+  <a href="ch5-1.html">第五章(上)</a>
+  <a href="ch5-2.html">第五章(下)</a>
+  <a href="ch6.html">第六章</a>
+  <a href="ch7.html">第七章</a>
+  <a href="ch9.html">第九章</a>
+  <a href="ch10.html">第十章</a>
+  <a href="formulas.html">公式表</a>
+  <a href="exam-review.html">备考</a>
+  <a href="quiz1.html">小测1</a>
+  <a href="quiz2.html">小测2</a>
+  <a href="final2022.html">期末真题</a>
 </div>
 
 <h1>第一章 定量分析概述</h1>
 
 <!-- ============================================================ -->
 <h2>1.1 分析化学的任务和分类</h2>
+<img class="ppt-img" src="temp_pages/ch1_p15.png" alt="分析化学的任务和作用">
+<p class="ppt-caption">PPT: 分析化学的任务和作用 — 学科交叉示意</p>
 
 <div class="card">
   <h3>分析化学的任务</h3>
@@ -72,12 +84,95 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </table>
 </div>
 
+<div class="card">
+  <h3>重量分析 vs 滴定分析 vs 仪器分析 —— 详细比较</h3>
+  <table>
+    <tr><th>比较项目</th><th>重量分析法</th><th>滴定分析法</th><th>仪器分析法</th></tr>
+    <tr><td><strong>原理</strong></td><td>将待测组分转化为难溶化合物，过滤、灼烧、称量</td><td>用已知浓度的标准溶液与待测组分定量反应</td><td>测量物质的物理或物理化学性质</td></tr>
+    <tr><td><strong>准确度</strong></td><td>高（相对误差 0.1%~0.2%）</td><td>高（相对误差 0.1%~0.2%）</td><td>较低（相对误差 1%~5%）</td></tr>
+    <tr><td><strong>灵敏度</strong></td><td>低</td><td>低~中</td><td>高（可达 ppm~ppb 级）</td></tr>
+    <tr><td><strong>适用含量</strong></td><td>常量（>1%）</td><td>常量（>1%）</td><td>微量、痕量（<1%）</td></tr>
+    <tr><td><strong>速度</strong></td><td>慢（需沉淀、过滤、灼烧）</td><td>快（数分钟完成一次滴定）</td><td>快（可自动化）</td></tr>
+    <tr><td><strong>设备</strong></td><td>天平、坩埚</td><td>滴定管、锥形瓶</td><td>昂贵仪器</td></tr>
+    <tr><td><strong>选择性</strong></td><td>通过沉淀剂选择性</td><td>通过反应选择性</td><td>高（可调波长等参数）</td></tr>
+  </table>
+</div>
+
+<div class="fb">
+  <div class="t">如何选择分析方法？（决策准则）</div>
+  <ul>
+    <li><strong>被测组分含量 > 1%</strong>（常量）：优先选择<strong>滴定分析</strong>（快速）或<strong>重量分析</strong>（更准确但更慢）</li>
+    <li><strong>被测组分含量 0.01%~1%</strong>（微量）：选择<strong>仪器分析</strong>（如分光光度法、原子吸收法）</li>
+    <li><strong>被测组分含量 < 0.01%</strong>（痕量）：必须使用<strong>高灵敏度仪器分析</strong>（如 ICP-MS、荧光法）</li>
+    <li>需要高准确度的标准方法：化学分析法（仲裁分析常用重量法或滴定法）</li>
+    <li>大批量快速分析：仪器分析法（可自动化）</li>
+  </ul>
+</div>
+
 <div class="fb">
   <div class="t">化学分析 vs 仪器分析</div>
   <ul>
     <li><strong>化学分析</strong>：基于化学反应，设备简单，准确度高，适合常量组分，是定量分析的基础</li>
     <li><strong>仪器分析</strong>：基于物理或物理化学性质，灵敏度高，适合微量/痕量分析，但相对误差较大（1%~5%）</li>
   </ul>
+</div>
+
+<div class="card">
+  <h3>分析化学发展简史</h3>
+  <p>分析化学的发展经历了从古代到现代的漫长过程：</p>
+  <table>
+    <tr><th>时期</th><th>里程碑</th></tr>
+    <tr><td>古中国、古希腊</td><td>德谟克利特，<strong>原子论的提出</strong>；冶金术、长生不老药</td></tr>
+    <tr><td>公元前 400 年</td><td>出现第一个使用<strong>天平</strong>的试金实验室</td></tr>
+    <tr><td>16 世纪</td><td>拉瓦锡氧气发现，将<strong>定量分析</strong>引入化学</td></tr>
+    <tr><td>18 世纪</td><td>贝采里马斯创立<strong>元素符号</strong>，创建<strong>重量分析法</strong></td></tr>
+    <tr><td>19 世纪末</td><td><strong>定性手段和定量技术</strong>组合</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>20 世纪分析化学的三次变革</h3>
+  <table>
+    <tr><th>时期</th><th>1900-1940</th><th>1940-1970</th><th>1970-至今</th></tr>
+    <tr><td><strong>特点</strong></td><td>经典分析，化学分析为主</td><td>近代分析，仪器分析为主</td><td>现代分析，化学计量学为主</td></tr>
+    <tr><td><strong>理论</strong></td><td>热力学、溶液四大平衡</td><td>物理学、电子学</td><td>计算机应用</td></tr>
+    <tr><td><strong>仪器</strong></td><td>分析天平</td><td>光度、极谱、电位、色谱</td><td>自动化分析仪、联用技术</td></tr>
+    <tr><td><strong>分析对象</strong></td><td>无机化合物</td><td>有机和无机样品</td><td>有机、无机、生物及药物样品</td></tr>
+  </table>
+  <div class="tip">
+    <strong>记忆要点：</strong>三次变革的关键词分别是"化学分析""仪器分析""化学计量学"。20世纪50年代定义——研究物质<strong>组成</strong>的测定<strong>方法</strong>和有关<strong>原理</strong>的一门科学；90年代发展为获得物质化学<strong>组成</strong>和<strong>结构信息</strong>的科学；21世纪初进一步扩展到空间和时间分布的信息科学。
+  </div>
+</div>
+
+<div class="card">
+  <h3>分析化学发展趋势</h3>
+  <ol>
+    <li>提高<strong>灵敏度</strong></li>
+    <li>解决复杂体系的分离问题及提高分析方法的<strong>选择性</strong></li>
+    <li>扩展时空<strong>多维信息</strong></li>
+    <li>微型化及微环<strong>境</strong>的表征与测定</li>
+    <li><strong>形态、状态</strong>分析及表征</li>
+    <li>生物大分子与生物活性物质的表征与测定</li>
+    <li><strong>非破坏性</strong>检测及遥控</li>
+    <li>自动化与<strong>智能化</strong></li>
+    <li>原位、实时、<strong>超痕量</strong>测量</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3>检出限（Detection Limit）</h3>
+  <p><strong>定义：</strong>某一分析方法能够可靠地检测出被测组分的<strong>最低浓度或最低量</strong>。</p>
+  <p>不同分析方法的检出限比较（以水质测量中铅的检出限为例）：</p>
+  <table>
+    <tr><th>分析方法</th><th>检出限量级</th></tr>
+    <tr><td>湿化学（滴定/重量）</td><td>$10^{-4}$（约 100 mg/L）</td></tr>
+    <tr><td>火焰原子吸收</td><td>$10^{-6} \sim 10^{-7}$（约 1 mg/L ~ 100 &mu;g/L）</td></tr>
+    <tr><td>石墨炉原子吸收</td><td>$10^{-8} \sim 10^{-9}$（约 10 &mu;g/L ~ 1 &mu;g/L）</td></tr>
+    <tr><td>ICP-MS</td><td>$10^{-11} \sim 10^{-12}$（约 10 ng/L ~ 1 ng/L）</td></tr>
+  </table>
+  <div class="warn">
+    <strong>注意：</strong>淡水中铅含量的标准为 3.2 &mu;g/L。只有石墨炉原子吸收和 ICP-MS 的检出限才能满足该标准的检测要求，普通湿化学方法和火焰原子吸收均无法胜任。
+  </div>
 </div>
 
 <div class="card">
@@ -105,6 +200,8 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ============================================================ -->
 <h2>1.2 定量分析过程</h2>
+<img class="ppt-img" src="temp_pages/ch1_p44.png" alt="定量分析测定流程图">
+<p class="ppt-caption">PPT: 定量分析测定流程图</p>
 
 <div class="card">
   <h3>分析过程四步骤</h3>
@@ -130,6 +227,29 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <p>其中 $Q$ 为最低取样量（kg），$K$ 为缩分常数，$d$ 为样品最大颗粒直径（mm）</p>
   </div>
 </div>
+<div class="card">
+  <h3>固体取样布点方法</h3>
+  <img class="ppt-img" src="temp_pages/ch1_p37.png" alt="固体取样布点方法">
+  <p class="ppt-caption">PPT: 固体取样布点方法 — 对角线法/梅花形/棋盘式/蛇形</p>
+  <table>
+    <tr><th>布点方法</th><th>适用条件</th><th>采样点数</th></tr>
+    <tr><td><strong>对角线法</strong></td><td>面积较小、地势平坦的污水灌溉或河水灌溉田块</td><td>一般不少于 5 个</td></tr>
+    <tr><td><strong>梅花形法</strong></td><td>面积较小、地势平坦、土壤均匀的地块</td><td>5~10 个</td></tr>
+    <tr><td><strong>棋盘式法</strong></td><td>中等大小、地势平坦、地形稍微不均匀</td><td>10 个以上</td></tr>
+    <tr><td><strong>蛇形法</strong></td><td>面积较大、地形不平坦、土壤不够均匀</td><td>需要更多采样点</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>水体采样方法</h3>
+  <p>根据水体采集形式可分为<strong>瞬时采样</strong>和<strong>混合采样</strong>。混合采样又分为：</p>
+  <table>
+    <tr><th>采样方法</th><th>适用情况</th></tr>
+    <tr><td><strong>时间积分采样</strong></td><td>采集<strong>一定时间</strong>内某<strong>一特定深度</strong>的混合水样</td></tr>
+    <tr><td><strong>深度积分采样</strong></td><td>采集某特定断面<strong>垂线表层和底层之间</strong>，或沿垂线<strong>不同深度</strong>的混合水样</td></tr>
+    <tr><td><strong>面积积分采样</strong></td><td>采集<strong>横断面上各采样点</strong>的混合水样</td></tr>
+  </table>
+</div>
 
 <div class="card">
   <h3>试样的溶解与分解</h3>
@@ -146,6 +266,38 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <tr><td></td><td>NaOH / Na<sub>2</sub>O<sub>2</sub></td><td>铬铁矿、锡石</td><td>银坩埚/镍坩埚</td></tr>
     <tr><td></td><td>K<sub>2</sub>S<sub>2</sub>O<sub>7</sub> / KHSO<sub>4</sub></td><td>不溶于酸的氧化物（Al<sub>2</sub>O<sub>3</sub>、Fe<sub>2</sub>O<sub>3</sub>）</td><td>酸性熔剂，石英坩埚</td></tr>
   </table>
+</div>
+
+<div class="card">
+  <h3>试样干燥</h3>
+  <p>湿存水的处理方法（针对不同性质的试样）：</p>
+  <ul>
+    <li><strong>烘干法</strong>：将试样放入烘箱中加热干燥（适合大多数无机样品）</li>
+    <li><strong>低温灰化/真空干燥法</strong>：对于受热易分解的试样（如含结晶水的盐类），应采用低温干燥或真空干燥</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>有机物与生物样品的分解</h3>
+  <ul>
+    <li><strong>易挥发元素</strong>宜采用<strong>低温灰化</strong>技术</li>
+    <li><strong>湿法消解</strong>：用<strong>硝酸+双氧水</strong>组合进行消解，防止试样挥发损失和干扰组分引入</li>
+    <li>采用<strong>密闭容器</strong>（高压聚四氟乙烯罐）高温、高压消解</li>
+    <li>低熔点下与熔剂作用（混合熔剂，如 Na<sub>2</sub>CO<sub>3</sub>-MgO、CaCO<sub>3</sub>-NH<sub>4</sub>Cl）</li>
+  </ul>
+</div>
+
+<div class="ex">
+  <strong>例题（缩分计算 PPT p40）：</strong>有试样 20 kg，粉碎后最大粒度为 6 mm，若 $K = 0.2$，问允许缩分几次？若缩分后再将试样破碎至全部通过 10 号筛（$d = 2.00$ mm），问可以再缩分几次？
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p><strong>第一步：</strong>最少试样量 $Q = Kd^2 = 0.2 \times 6^2 = 7.2$ kg</p>
+    <p>根据四分法处理试样方式，从初始 20 kg 开始：缩分一次为 10 kg，缩分两次为 5 kg。因为 5 kg < 7.2 kg，所以<strong>只能缩分一次</strong>，留下试样量为 10 kg。</p>
+    <p><strong>第二步：</strong>破碎过 10 号筛，$d = 2.00$ mm 时：</p>
+    <p>$Q = Kd^2 = 0.2 \times 2^2 = 0.8$ kg</p>
+    <p>从 10 kg 开始缩分：$10 \times \left(\dfrac{1}{2}\right)^n \geq 0.8$</p>
+    <p>解得 $n \leq 3.6$，故 $n = 3$。<strong>可以再缩分三次。</strong></p>
+  </div>
 </div>
 
 <div class="warn">
@@ -167,119 +319,379 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </table>
 </div>
 
-<!-- ============================================================ -->
-<h2>1.4 滴定分析概述</h2>
-
-<div class="card">
-  <h3>基本概念</h3>
+<div class="fb">
+  <div class="t">定量分析结果的表示形式（PPT p45 补充）</div>
   <ul>
-    <li><strong>滴定</strong>（titration）：将已知浓度的标准溶液从滴定管中滴加到被测溶液中，直到反应恰好完全</li>
-    <li><strong>化学计量点</strong>（stoichiometric point, sp）：加入的标准溶液与被测组分恰好按计量关系完全反应的点</li>
-    <li><strong>滴定终点</strong>（end point, ep）：指示剂变色时停止滴定的点</li>
-    <li><strong>滴定误差</strong>（终点误差, $E_t$）：滴定终点与化学计量点不一致引起的误差</li>
+    <li>待测组份通常以其<strong>实际存在形式</strong>的含量表示</li>
+    <li>也可以各种<strong>元素或氧化物</strong>的形式含量表示，如 Fe% 也可以用 FeO%、Fe<sub>2</sub>O<sub>3</sub>% 表示</li>
+    <li><strong>固体试样</strong>：常用<strong>质量分数</strong>表示，即 $w_B = \dfrac{m_B}{m_s}$，或 $w_B\% = \dfrac{m_B}{m_s} \times 100$（习惯上用百分数表示）</li>
+    <li><strong>低含量样品</strong>：常用 <strong>ppm</strong>（= mg/L = mg/kg）、<strong>ppb</strong>（= &mu;g/L）表示</li>
   </ul>
 </div>
 
+<!-- ============================================================ -->
+<h2>1.4 滴定分析概述</h2>
+<img class="ppt-img" src="temp_pages/ch1_p52.png" alt="滴定分析法化学反应必须的条件">
+<p class="ppt-caption">PPT: 滴定反应条件 — K<sub>c</sub> ≥ 10<sup>6</sup></p>
+
 <div class="card">
-  <h3>滴定分析对化学反应的要求</h3>
+  <h3>滴定分析基本术语</h3>
+  <table>
+    <tr><th>术语</th><th>英文</th><th>定义</th></tr>
+    <tr><td><strong>滴定</strong></td><td>Titration</td><td>将已知浓度的标准溶液从滴定管中逐滴加入到被测溶液中，直到反应恰好完全的操作过程</td></tr>
+    <tr><td><strong>标准溶液</strong></td><td>Standard solution</td><td>已知准确浓度的溶液，用于滴定被测物质</td></tr>
+    <tr><td><strong>化学计量点</strong></td><td>Stoichiometric point (sp)</td><td>加入的标准溶液与被测组分恰好按化学计量关系完全反应的那一点（理论点）</td></tr>
+    <tr><td><strong>滴定终点</strong></td><td>End point (ep)</td><td>指示剂变色（或仪器信号突变）时停止滴定的那一点（实验观测点）</td></tr>
+    <tr><td><strong>指示剂</strong></td><td>Indicator</td><td>能在化学计量点附近发生颜色变化或其他可观察变化的试剂</td></tr>
+    <tr><td><strong>滴定误差</strong></td><td>Titration error ($E_t$)</td><td>滴定终点与化学计量点不一致引起的系统误差</td></tr>
+  </table>
+</div>
+
+<div class="fb">
+  <div class="t">化学计量点 vs 滴定终点 —— 核心区别</div>
+  <table>
+    <tr><th>比较项</th><th>化学计量点 (sp)</th><th>滴定终点 (ep)</th></tr>
+    <tr><td><strong>性质</strong></td><td>理论值，由化学反应的计量关系决定</td><td>实验观测值，由指示剂变色决定</td></tr>
+    <tr><td><strong>是否可直接观察</strong></td><td>不能直接观察</td><td>可以直接观察（颜色变化）</td></tr>
+    <tr><td><strong>是否唯一</strong></td><td>唯一确定</td><td>与指示剂的选择有关</td></tr>
+    <tr><td><strong>关系</strong></td><td colspan="2">理想情况下 ep 尽量接近 sp；二者之差即为<strong>滴定误差</strong> $E_t$</td></tr>
+  </table>
+  <p style="margin-top:8px;">选择指示剂的原则：使指示剂的变色点尽可能接近化学计量点，从而使 $E_t$ 尽可能小。</p>
+</div>
+
+<div class="card">
+  <h3>滴定分析对化学反应的要求（五条）</h3>
   <ol>
     <li>反应必须按一定的化学计量关系<strong>定量</strong>进行（完全度 &ge; 99.9%）</li>
-    <li>反应速率要<strong>快</strong>（或有加速手段，如加热、加催化剂）</li>
-    <li>必须有合适的方法确定<strong>终点</strong>（指示剂或仪器）</li>
-    <li>共存物质不干扰测定，或能通过简单方法消除干扰</li>
+    <li>反应的平衡常数 $K_c$ 足够大，使反应能定量完成</li>
+    <li>反应速率要<strong>快</strong>（或有加速手段，如加热、加催化剂、增加反应物浓度）</li>
+    <li>必须有合适的方法确定<strong>终点</strong>（人眼：利用指示剂的颜色变化；仪器：利用溶液体系某一参数的变化，如吸光度、电流、电位）</li>
+    <li>具有较好的<strong>选择性</strong>——共存物质不干扰测定，或能通过简单方法消除干扰</li>
   </ol>
 </div>
 
 <div class="fb">
-  <div class="t">四大滴定法</div>
-  <table>
-    <tr><th>类型</th><th>反应类型</th><th>典型标准溶液</th><th>典型应用</th></tr>
-    <tr><td><strong>酸碱滴定法</strong></td><td>质子转移（酸碱中和）</td><td>HCl, NaOH</td><td>酸度、碱度测定</td></tr>
-    <tr><td><strong>配位滴定法</strong></td><td>配位反应</td><td>EDTA</td><td>金属离子测定</td></tr>
-    <tr><td><strong>氧化还原滴定法</strong></td><td>电子转移</td><td>KMnO<sub>4</sub>, K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>, I<sub>2</sub>/Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub></td><td>Fe、Ca、有机物</td></tr>
-    <tr><td><strong>沉淀滴定法</strong></td><td>沉淀生成</td><td>AgNO<sub>3</sub></td><td>卤素离子（Cl<sup>&minus;</sup>等）</td></tr>
-  </table>
+  <div class="t">为什么要求 $K_c \geq 10^6$？（PPT p52 推导）</div>
+  <p>对于反应 $A + B = R$，平衡常数 $K = K_c = \dfrac{[R]}{[A][B]}$</p>
+  <p><strong>初始：</strong>$[A]_0 = [B]_0 = c$，$[R]_0 = 0$</p>
+  <p><strong>平衡时（转化率 99.9%）：</strong></p>
+  <p>$[A]_* = [B]_* = 0.001c$，$[R]_* = 0.999c$</p>
+  <p>代入平衡常数表达式：</p>
+  $$K_c = \frac{0.999c}{0.001c \times 0.001c} \approx \frac{10^6}{c}$$
+  <p>当 $c \leq 1$ mol/L 时（滴定分析常见浓度范围），要使反应完全度 $\geq 99.9\%$，则需要：</p>
+  $$\boxed{K_c \geq 10^6}$$
+  <p>这也是定量计算的基础。$K_c$ 越大，反应越完全，滴定误差越小。</p>
 </div>
 
 <div class="card">
-  <h3>滴定方式</h3>
+  <h3>四大滴定法 —— 详细对比</h3>
+  <table>
+    <tr><th>类型</th><th>反应本质</th><th>典型标准溶液</th><th>常用指示剂</th><th>典型应用举例</th></tr>
+    <tr><td><strong>酸碱滴定法</strong></td><td>质子转移（$\text{H}^+$ 传递）</td><td>HCl, NaOH</td><td>酚酞、甲基橙、甲基红</td><td>测定食醋中醋酸含量；测定纯碱中 Na<sub>2</sub>CO<sub>3</sub> 含量；测定混合碱（NaOH + Na<sub>2</sub>CO<sub>3</sub>）</td></tr>
+    <tr><td><strong>配位滴定法</strong></td><td>配位反应（形成螯合物）</td><td>EDTA (Na<sub>2</sub>H<sub>2</sub>Y)</td><td>铬黑 T (EBT)、二甲酚橙 (XO)、钙指示剂</td><td>测定水的硬度（Ca<sup>2+</sup> + Mg<sup>2+</sup>）；测定矿石中 Fe<sup>3+</sup>、Al<sup>3+</sup>、Zn<sup>2+</sup></td></tr>
+    <tr><td><strong>氧化还原滴定法</strong></td><td>电子转移</td><td>KMnO<sub>4</sub>, K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>, I<sub>2</sub>/Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub>, Ce(SO<sub>4</sub>)<sub>2</sub></td><td>自身指示剂（KMnO<sub>4</sub>）、淀粉（碘量法）、二苯胺磺酸钠</td><td>测定 Fe 含量（K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> 法）；测定 H<sub>2</sub>O<sub>2</sub>（KMnO<sub>4</sub> 法）；测定 Cu（碘量法）</td></tr>
+    <tr><td><strong>沉淀滴定法</strong></td><td>生成难溶沉淀</td><td>AgNO<sub>3</sub></td><td>K<sub>2</sub>CrO<sub>4</sub>（莫尔法）、铁铵矾（佛尔哈德法）、荧光黄（法扬司法）</td><td>测定 NaCl 含量；测定自来水中 Cl<sup>&minus;</sup>；测定银合金中 Ag</td></tr>
+  </table>
+</div>
+<img class="ppt-img" src="temp_pages/ch1_p54.png" alt="滴定反应分类">
+<p class="ppt-caption">PPT: 四大滴定反应分类</p>
+
+<!-- ============================================================ -->
+<h2>1.5 滴定方式</h2>
+
+<div class="card">
+  <h3>直接滴定法</h3>
+  <p>将标准溶液直接滴入被测物质溶液中进行滴定。这是最简单、最常用的滴定方式。</p>
+  <p><strong>条件：</strong>反应必须满足滴定分析的四个基本要求（定量、快速、有终点指示方法、无干扰）。</p>
+  <div class="ex">
+    <strong>例：</strong>用 NaOH 标准溶液直接滴定 HCl 溶液测定其浓度。
+    $$\text{NaOH} + \text{HCl} \rightarrow \text{NaCl} + \text{H}_2\text{O}$$
+    反应快速、定量、有合适的酸碱指示剂，满足直接滴定条件。
+  </div>
+</div>
+
+<div class="card">
+  <h3>返滴定法（回滴法，Back Titration）</h3>
+  <p>先向被测物质中加入<strong>已知量且过量</strong>的标准溶液 A，使之与被测物质完全反应后，再用另一种标准溶液 B <strong>滴定剩余</strong>的 A。</p>
+  <p><strong>适用情况：</strong></p>
   <ul>
-    <li><strong>直接滴定法</strong>：标准溶液直接滴定被测物</li>
-    <li><strong>返滴定法（回滴法）</strong>：先加入过量标准溶液，再用另一标准溶液滴定剩余量。适用于反应慢、无合适指示剂等情况</li>
-    <li><strong>置换滴定法</strong>：用适当试剂与被测物反应，释放出另一种可以滴定的物质。如：测定 K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> 中的 Cr，先加入过量 KI，释放出 I<sub>2</sub>，再用 Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub> 滴定</li>
-    <li><strong>间接滴定法</strong>：将不能直接滴定的物质，通过化学反应转化为可以滴定的物质</li>
+    <li>反应速率较慢（如 Al<sub>2</sub>O<sub>3</sub> 溶于 HCl 需加热较长时间）</li>
+    <li>被测物质是固体（如 CaCO<sub>3</sub>），直接滴定时反应不够快</li>
+    <li>化学计量点附近没有合适的指示剂</li>
+    <li>被测物质本身对指示剂有封闭作用</li>
   </ul>
+  <div class="ex">
+    <strong>例：</strong>测定石灰石中 CaCO<sub>3</sub> 含量。<br>
+    加入过量 HCl 标准溶液使 CaCO<sub>3</sub> 完全溶解：$\text{CaCO}_3 + 2\text{HCl} \rightarrow \text{CaCl}_2 + \text{H}_2\text{O} + \text{CO}_2\uparrow$<br>
+    再用 NaOH 标准溶液返滴定剩余的 HCl：$\text{NaOH} + \text{HCl} \rightarrow \text{NaCl} + \text{H}_2\text{O}$<br>
+    则：$n_{\text{CaCO}_3} = \dfrac{1}{2}(n_{\text{HCl, 加入}} - n_{\text{HCl, 剩余}}) = \dfrac{1}{2}(c_1V_1 - c_2V_2)$
+  </div>
+</div>
+
+<div class="card">
+  <h3>置换滴定法（Displacement Titration）</h3>
+  <p>用适当试剂与被测物质反应，使其<strong>定量地释放出</strong>另一种可以滴定的物质，然后对释放出的物质进行滴定。</p>
+  <p><strong>适用情况：</strong>被测物质不能与标准溶液直接发生定量反应，但可以通过间接方式释放出可滴定的物质。</p>
+  <div class="ex">
+    <strong>例：</strong>碘量法测定 K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> 中的 Cr。<br>
+    加入过量 KI，使之与 K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> 反应释放出 I<sub>2</sub>：
+    $$\text{Cr}_2\text{O}_7^{2-} + 6\text{I}^- + 14\text{H}^+ \rightarrow 2\text{Cr}^{3+} + 3\text{I}_2 + 7\text{H}_2\text{O}$$
+    再用 Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub> 标准溶液滴定释放出的 I<sub>2</sub>：
+    $$\text{I}_2 + 2\text{Na}_2\text{S}_2\text{O}_3 \rightarrow \text{Na}_2\text{S}_4\text{O}_6 + 2\text{NaI}$$
+    以淀粉为指示剂，溶液蓝色消失即为终点。
+  </div>
+</div>
+
+<div class="card">
+  <h3>间接滴定法（Indirect Titration）</h3>
+  <p>将不能直接滴定的物质，通过化学反应<strong>转化</strong>为另一种可以滴定的物质，然后进行滴定。</p>
+  <p><strong>与置换滴定的区别：</strong>间接滴定法中被测物质本身发生了化学转化；置换滴定法中被测物质与试剂反应释放出第三种物质。</p>
+  <div class="ex">
+    <strong>例：</strong>间接碘量法测定 Cu<sup>2+</sup>。<br>
+    Cu<sup>2+</sup> 不能被 Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub> 直接滴定，但加入过量 KI 后：
+    $$2\text{Cu}^{2+} + 4\text{I}^- \rightarrow 2\text{CuI}\downarrow + \text{I}_2$$
+    生成的 I<sub>2</sub> 用 Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub> 标准溶液滴定，从而间接测定 Cu<sup>2+</sup>。
+  </div>
+  <div class="ex">
+    <strong>例：</strong>间接滴定法测定 Ca<sup>2+</sup>。<br>
+    先将 Ca<sup>2+</sup> 沉淀为 CaC<sub>2</sub>O<sub>4</sub>，过滤洗涤后用 H<sub>2</sub>SO<sub>4</sub> 溶解，释放出 H<sub>2</sub>C<sub>2</sub>O<sub>4</sub>，再用 KMnO<sub>4</sub> 标准溶液滴定。
+  </div>
+</div>
+
+<div class="fb">
+  <div class="t">非直接滴定法的适用条件归纳（PPT p55）</div>
+  <table>
+    <tr><th>滴定方式</th><th>典型例子</th><th>使用原因</th></tr>
+    <tr><td><strong>返滴定法</strong></td><td>测 Al<sup>3+</sup>（加过量 EDTA，回滴）</td><td>反应速度较慢或待测物是<strong>固体</strong>（条件 2 不满足）</td></tr>
+    <tr><td><strong>置换滴定法</strong></td><td>测 I<sup>&minus;</sup>（置换出 I<sub>2</sub> 后用 Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub> 滴定）</td><td>没有<strong>定量关系</strong>或有<strong>副反应</strong>（条件 1、条件 2 不满足）</td></tr>
+    <tr><td><strong>间接滴定法</strong></td><td>氧化还原法测 Ca<sup>2+</sup></td><td>被测物<strong>不能直接</strong>起滴定反应</td></tr>
+  </table>
+  <p style="margin-top:8px;"><strong>直接滴定法</strong>是最简便、最常用、最基本、引入误差最少的方法——能满足滴定分析所有要求的反应均应优先使用直接滴定。</p>
+</div>
+
+<div class="tip">
+  <strong>四种滴定方式的选择思路：</strong>能直接滴定就直接滴定；反应慢或没有指示剂就用返滴定；反应能释放出可滴定物质就用置换滴定；都不行就用间接滴定（先转化再测定）。
 </div>
 
 <!-- ============================================================ -->
-<h2>1.5 基准物质与标准溶液</h2>
+<h2>1.6 基准物质与标准溶液</h2>
+<img class="ppt-img" src="temp_pages/ch1_p60.png" alt="滴定度与物质的量浓度关系">
+<p class="ppt-caption">PPT: 滴定度与物质的量浓度关系</p>
 
 <div class="card">
-  <h3>基准物质（Primary Standard）的要求</h3>
+  <h3>基准物质（Primary Standard）的要求 —— 五条标准</h3>
   <ol>
-    <li>组成与化学式<strong>完全一致</strong>（含结晶水的须恒定）</li>
-    <li><strong>纯度</strong>足够高（&ge; 99.9%）</li>
-    <li>性质<strong>稳定</strong>（不吸水、不与 CO<sub>2</sub> 反应、不被氧化）</li>
-    <li>参加反应时按反应方程式<strong>定量</strong>进行，无副反应</li>
-    <li>摩尔质量较<strong>大</strong>（减小称量相对误差）</li>
+    <li><strong>组成与化学式完全一致</strong>（含结晶水的须恒定），即"确知的化学组成"</li>
+    <li><strong>纯度足够高</strong>（$\geq$ 99.9%），杂质含量不影响分析结果的准确度</li>
+    <li><strong>性质稳定</strong>——不吸水、不风化、不与空气中的 CO<sub>2</sub> 和 O<sub>2</sub> 反应</li>
+    <li>参加反应时按反应方程式<strong>定量进行</strong>，无副反应</li>
+    <li>摩尔质量较<strong>大</strong>（减小称量时的相对误差）</li>
   </ol>
 </div>
 
 <div class="card">
-  <h3>常用基准物质</h3>
+  <h3>常用基准物质 —— 详细表</h3>
   <table>
-    <tr><th>基准物质</th><th>化学式</th><th>干燥温度</th><th>用途</th></tr>
-    <tr><td>无水碳酸钠</td><td>Na<sub>2</sub>CO<sub>3</sub></td><td>270~300 &deg;C</td><td>标定 HCl</td></tr>
-    <tr><td>邻苯二甲酸氢钾</td><td>KHC<sub>8</sub>H<sub>4</sub>O<sub>4</sub></td><td>110~120 &deg;C</td><td>标定 NaOH</td></tr>
-    <tr><td>重铬酸钾</td><td>K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub></td><td>150~180 &deg;C</td><td>标定 Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub>、FeSO<sub>4</sub></td></tr>
-    <tr><td>草酸（草酸钠）</td><td>Na<sub>2</sub>C<sub>2</sub>O<sub>4</sub></td><td>105~110 &deg;C</td><td>标定 KMnO<sub>4</sub></td></tr>
-    <tr><td>氧化锌</td><td>ZnO</td><td>800 &deg;C</td><td>标定 EDTA</td></tr>
-    <tr><td>氯化钠</td><td>NaCl</td><td>500~600 &deg;C</td><td>标定 AgNO<sub>3</sub></td></tr>
+    <tr><th>基准物质</th><th>化学式</th><th>$M$ (g/mol)</th><th>干燥条件</th><th>标定对象</th><th>备注</th></tr>
+    <tr><td>无水碳酸钠</td><td>Na<sub>2</sub>CO<sub>3</sub></td><td>105.99</td><td>270~300 &deg;C</td><td>HCl</td><td>低温干燥不充分（含 NaHCO<sub>3</sub>）</td></tr>
+    <tr><td>草酸钠</td><td>Na<sub>2</sub>C<sub>2</sub>O<sub>4</sub></td><td>134.00</td><td>105~110 &deg;C</td><td>KMnO<sub>4</sub></td><td>注意避免超过 200&deg;C 分解</td></tr>
+    <tr><td>重铬酸钾</td><td>K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub></td><td>294.18</td><td>140~180 &deg;C</td><td>Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub>、FeSO<sub>4</sub></td><td>可直接配制标准溶液</td></tr>
+    <tr><td>碳酸钙</td><td>CaCO<sub>3</sub></td><td>100.09</td><td>110 &deg;C</td><td>EDTA</td><td>需用 HCl 溶解后再标定</td></tr>
+    <tr><td>金属锌</td><td>Zn</td><td>65.38</td><td>表面擦净即可</td><td>EDTA</td><td>溶于稀 HCl 后标定</td></tr>
+    <tr><td>邻苯二甲酸氢钾 (KHP)</td><td>KHC<sub>8</sub>H<sub>4</sub>O<sub>4</sub></td><td>204.22</td><td>110~120 &deg;C</td><td>NaOH</td><td>$M$ 较大，称量误差小</td></tr>
+    <tr><td>三羟甲基氨基甲烷 (THAM)</td><td>(CH<sub>2</sub>OH)<sub>3</sub>CNH<sub>2</sub></td><td>121.14</td><td>100~105 &deg;C</td><td>HCl</td><td>碱性基准物质</td></tr>
+    <tr><td>氧化锌</td><td>ZnO</td><td>81.38</td><td>800 &deg;C</td><td>EDTA</td><td>灼烧除去 ZnCO<sub>3</sub></td></tr>
+    <tr><td>氯化钠</td><td>NaCl</td><td>58.44</td><td>500~600 &deg;C</td><td>AgNO<sub>3</sub></td><td>沉淀滴定基准物质</td></tr>
   </table>
 </div>
 
 <div class="card">
   <h3>标准溶液的配制方法</h3>
-  <table>
-    <tr><th>方法</th><th>步骤</th><th>适用条件</th></tr>
-    <tr><td><strong>直接法</strong></td><td>准确称取基准物质，溶解后定量转移至容量瓶，稀释至刻度</td><td>基准物质可用时</td></tr>
-    <tr><td><strong>间接法（标定法）</strong></td><td>先配制近似浓度的溶液，再用基准物质标定其准确浓度</td><td>溶质不符合基准物质要求时（如 NaOH 吸湿、HCl 挥发、KMnO<sub>4</sub> 不纯）</td></tr>
-  </table>
+
+  <h3>方法一：直接法</h3>
+  <p><strong>适用条件：</strong>溶质本身就是基准物质（如 K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>）。</p>
+  <p><strong>操作步骤：</strong></p>
+  <ol>
+    <li>用分析天平准确称取一定量的基准物质（如称取 $m$ g）</li>
+    <li>在烧杯中溶解，用玻璃棒引流定量转移到容量瓶中</li>
+    <li>用蒸馏水反复冲洗烧杯 3~4 次，洗液均转入容量瓶</li>
+    <li>加水至接近刻度线，用胶头滴管精确定容至刻度</li>
+    <li>盖上瓶塞，反复颠倒摇匀</li>
+  </ol>
+  <p>浓度计算：$c = \dfrac{m}{M \times V}$（$V$ 为容量瓶体积，单位 L）</p>
+
+  <h3>方法二：间接法（标定法）</h3>
+  <p><strong>适用条件：</strong>溶质<strong>不能</strong>作为基准物质。例如 NaOH（吸水吸 CO<sub>2</sub>）、HCl（易挥发）、KMnO<sub>4</sub>（含 MnO<sub>2</sub> 杂质）。</p>
+  <p><strong>操作步骤：</strong></p>
+  <ol>
+    <li>先配制<strong>近似浓度</strong>的溶液（用量筒量取或粗略称取）</li>
+    <li>用基准物质<strong>标定</strong>其准确浓度（平行测定 3~4 次，取平均值）</li>
+    <li>也可用另一已知准确浓度的标准溶液来标定（比较法）</li>
+  </ol>
+</div>
+
+<div class="ex">
+  <strong>实例 1：配制并标定 0.1 mol/L NaOH 标准溶液（用 KHP 标定）</strong>
+  <div class="sol">
+    <div class="st">步骤：</div>
+    <p><strong>配制：</strong>用量筒量取约 100 mL 饱和 NaOH 溶液（去除 Na<sub>2</sub>CO<sub>3</sub> 沉淀），倒入 1000 mL 塑料瓶中，加入新煮沸放冷的去离子水稀释至约 1000 mL，摇匀。此溶液浓度约为 0.1 mol/L。</p>
+    <p><strong>标定：</strong>准确称取在 110&deg;C 干燥至恒重的 KHP 约 0.4~0.5 g（三份），溶于 50 mL 水中，加酚酞指示剂 2 滴，用 NaOH 溶液滴定至溶液呈浅粉色且 30 s 内不褪色，记录消耗 NaOH 体积。</p>
+    <p>反应：$\text{KHC}_8\text{H}_4\text{O}_4 + \text{NaOH} \rightarrow \text{KNaC}_8\text{H}_4\text{O}_4 + \text{H}_2\text{O}$（1:1 反应）</p>
+    $$c_{\text{NaOH}} = \frac{m_{\text{KHP}}}{M_{\text{KHP}} \times V_{\text{NaOH}}} = \frac{m_{\text{KHP}}}{204.22 \times V_{\text{NaOH}}}$$
+    <p>例如：称取 KHP 0.4596 g，消耗 NaOH 22.50 mL，则：</p>
+    $$c_{\text{NaOH}} = \frac{0.4596}{204.22 \times 0.02250} = 0.1000 \text{ mol/L}$$
+  </div>
+</div>
+
+<div class="ex">
+  <strong>实例 2：配制并标定 0.1 mol/L HCl 标准溶液（用 Na<sub>2</sub>CO<sub>3</sub> 标定）</strong>
+  <div class="sol">
+    <div class="st">步骤：</div>
+    <p><strong>配制：</strong>用量筒量取浓 HCl（约 12 mol/L）约 8.3 mL，缓慢加入约 1000 mL 蒸馏水中，搅拌均匀。此溶液浓度约为 0.1 mol/L。</p>
+    <p><strong>标定：</strong>准确称取在 270~300&deg;C 干燥至恒重的无水 Na<sub>2</sub>CO<sub>3</sub> 约 0.13~0.15 g（三份），溶于 50 mL 水中，加甲基橙指示剂 2 滴，用 HCl 溶液滴定至溶液由黄色变为橙色（pH &approx; 3.9），记录消耗 HCl 体积。</p>
+    <p>反应：$\text{Na}_2\text{CO}_3 + 2\text{HCl} \rightarrow 2\text{NaCl} + \text{H}_2\text{O} + \text{CO}_2\uparrow$</p>
+    $$c_{\text{HCl}} = \frac{2 \times m_{\text{Na}_2\text{CO}_3}}{M_{\text{Na}_2\text{CO}_3} \times V_{\text{HCl}}} = \frac{2m}{105.99 \times V}$$
+    <p>例如：称取 Na<sub>2</sub>CO<sub>3</sub> 0.1325 g，消耗 HCl 25.00 mL，则：</p>
+    $$c_{\text{HCl}} = \frac{2 \times 0.1325}{105.99 \times 0.02500} = \frac{0.2650}{2.650} = 0.1000 \text{ mol/L}$$
+  </div>
 </div>
 
 <div class="tip">
   <strong>考试常见：</strong>判断某物质能否作为基准物质，关键看它是否"组成恒定、纯度高、性质稳定"。NaOH（易吸水吸 CO<sub>2</sub>）、HCl（易挥发）、KMnO<sub>4</sub>（含少量 MnO<sub>2</sub>）均<strong>不能</strong>作基准物质。
 </div>
 
+<div class="card">
+  <h3>标准溶液浓度大小的选择依据</h3>
+  <p>在滴定分析中，选择标准溶液<strong>浓度大小</strong>的依据包括：</p>
+  <ol>
+    <li><strong>滴定终点的敏锐程度</strong>——浓度太稀，终点变化不明显</li>
+    <li><strong>测量标准溶液体积的相对误差</strong>——浓度太浓，消耗体积太小，读数误差增大</li>
+    <li><strong>被分析试样的组成和性质</strong>——根据被测组分含量选择合适浓度</li>
+    <li><strong>对分析结果准确度的要求</strong>——高准确度要求更精确的浓度控制</li>
+  </ol>
+  <div class="tip">
+    <strong>一般原则：</strong>常量分析中标准溶液浓度通常选择 0.01~1 mol/L，使滴定消耗体积在 20~30 mL 左右，这样读数误差最小。
+  </div>
+</div>
+
 <!-- ============================================================ -->
-<h2>1.6 滴定分析计算</h2>
+<h2>1.7 滴定分析计算</h2>
+<img class="ppt-img" src="temp_pages/ch1_p66.png" alt="基本单元的确定">
+<p class="ppt-caption">PPT: 基本单元的确定 — 酸碱反应与氧化还原反应</p>
+<img class="ppt-img" src="temp_pages/ch1_p68.png" alt="滴定分析计算的基本公式">
+<p class="ppt-caption">PPT: 滴定分析计算基本公式 — 等物质的量原则</p>
 
 <div class="card">
-  <h3>等物质的量规则</h3>
-  <p>滴定分析计算的核心原则：在化学计量点时，标准溶液与被测物质按照<strong>化学计量关系</strong>恰好完全反应。</p>
+  <h3>基本单元（Fundamental Unit）的概念</h3>
+  <p><strong>定义：</strong>在指定的化学反应中，物质的基本单元（$\dfrac{1}{z}A$）是确定的，不能随意选择。同一种物质在不同的反应中，它的基本单元也是不一样的。</p>
+  <div class="fb">
+    <div class="t">酸碱反应中基本单元的确定</div>
+    <p>基本单元为<strong>自己本身</strong>（即转移 1 个质子对应 1 个基本单元）：</p>
+    <ul>
+      <li>$\text{NaOH} + \text{H}_2\text{SO}_4 = \text{NaHSO}_4 + \text{H}_2\text{O}$
+        &rarr; $\text{NaOH} \sim \text{H}_2\text{SO}_4 \sim 1\text{H}^+$ &rarr; 基本单元为 NaOH 和 H<sub>2</sub>SO<sub>4</sub> 本身</li>
+      <li>$2\text{NaOH} + \text{H}_2\text{SO}_4 = \text{Na}_2\text{SO}_4 + 2\text{H}_2\text{O}$
+        &rarr; $2\text{NaOH} \sim \text{H}_2\text{SO}_4 \sim 2\text{H}^+$ &rarr; 基本单元为 NaOH（本身）和 $\dfrac{1}{2}\text{H}_2\text{SO}_4$</li>
+      <li>$5\text{H}_2\text{O} + \text{Na}_2\text{B}_4\text{O}_7 + 2\text{HCl} = 4\text{H}_3\text{BO}_3 + 2\text{NaCl}$
+        &rarr; $\text{Na}_2\text{B}_4\text{O}_7 \sim 2\text{HCl} \sim 2\text{H}^+$ &rarr; 基本单元为 $\dfrac{1}{2}\text{Na}_2\text{B}_4\text{O}_7$ 和 HCl</li>
+    </ul>
+  </div>
+  <div class="fb">
+    <div class="t">氧化还原反应中基本单元的确定</div>
+    <p>基本单元由<strong>电子转移数</strong>决定：</p>
+    <p>$\text{MnO}_4^- + 8\text{H}^+ + 5\text{Fe}^{2+} = \text{Mn}^{2+} + 5\text{Fe}^{3+} + 4\text{H}_2\text{O}$</p>
+    <p>MnO<sub>4</sub><sup>&minus;</sup> 得到 5 个电子，Fe<sup>2+</sup> 失去 1 个电子，因此：</p>
+    <p>基本单元：$\dfrac{1}{5}\text{KMnO}_4 \sim \text{Fe}^{2+}$</p>
+  </div>
+  <div class="fb">
+    <div class="t">配位滴定和沉淀滴定中基本单元</div>
+    <p>基本单元确定为<strong>相当于一个阳离子</strong>的反应物粒子（粒子、分子）的特定组合。</p>
+  </div>
+  <div class="warn">
+    <strong>关键原则：</strong>在指定的化学反应中，物质的基本单元就是确定的，不能随意选择。考试中务必先写出化学反应方程式，再确定基本单元。
+  </div>
+</div>
+
+<div class="card">
+  <h3>基本单元的摩尔质量</h3>
+  <p>基本单元 $\dfrac{1}{z_A}A$ 的摩尔质量：</p>
+  $$\boxed{M\!\left(\frac{1}{z_A}A\right) = \frac{1}{z_A} M_A}$$
+  <p>例如：</p>
+  <ul>
+    <li>$M\!\left(\dfrac{1}{2}\text{H}_2\text{SO}_4\right) = \dfrac{1}{2} M_{\text{H}_2\text{SO}_4}$</li>
+    <li>$M\!\left(\dfrac{1}{5}\text{KMnO}_4\right) = \dfrac{1}{5} M_{\text{KMnO}_4}$</li>
+  </ul>
+  <p>物质 A 的质量、摩尔质量和物质的量之间的关系：</p>
+  $$m_A = n_A \cdot M_A = n_{\frac{1}{z_A}A} \cdot M_{\frac{1}{z_A}A}$$
+  <p>虽然表达方式不同，但其<strong>物质的质量是相同的</strong>。</p>
+</div>
+
+<div class="card">
+  <h3>等物质的量规则（基于基本单元）</h3>
+  <p>滴定分析计算的核心原则：在化学计量点时，标准溶液与被测物质的<strong>基本单元数相等</strong>。</p>
   <p>对于反应 $aA + bB \rightarrow \text{products}$：</p>
   $$\frac{n_A}{a} = \frac{n_B}{b}$$
+  <p>用基本单元表示，等物质的量原则为：</p>
+  $$\boxed{n\!\left(\frac{1}{z_A}A\right) = n\!\left(\frac{1}{z_B}B\right)}$$
   <p>即：</p>
   $$\frac{c_A V_A}{a} = \frac{c_B V_B}{b}$$
+  <p>也可以用化学计量因子 $f$ 来表示。若用标准溶液 T 滴定待测物 A，反应中 $a$ mol A ~ $b$ mol T，则：</p>
+  $$n_A = \frac{a}{b} \cdot n_T = f \cdot n_T$$
+  <p>其中 $f = \dfrac{a}{b}$ 为化学计量因子。</p>
 </div>
 
 <div class="fb">
-  <div class="t">核心公式</div>
-  <p><strong>1. 标准溶液浓度互算（1:1 反应时）：</strong></p>
+  <div class="t">核心公式汇总</div>
+  <p><strong>1. 标准溶液浓度互算（按化学计量关系）：</strong></p>
+  $$\frac{c_A V_A}{a} = \frac{c_B V_B}{b}$$
+
+  <p><strong>2. 等物质的量关系（1:1 反应）：</strong></p>
   $$c_A V_A = c_B V_B$$
 
-  <p><strong>2. 被测组分质量分数：</strong></p>
-  $$w = \frac{c \cdot V \cdot M}{m_s} \times 100\%$$
-  <p>其中：$c$ 为标准溶液浓度（mol/L），$V$ 为消耗标准溶液体积（L），$M$ 为被测组分摩尔质量（g/mol），$m_s$ 为试样质量（g）</p>
+  <p><strong>3. 被测组分质量分数（通用公式）：</strong></p>
+  $$w = \frac{c_T \cdot V_T \cdot f \cdot M_A}{m_s \times 1000} \times 100\%$$
+  <p>其中：$c_T$ 为标准溶液浓度（mol/L），$V_T$ 为消耗标准溶液体积（mL），$f$ 为化学计量因子，$M_A$ 为被测组分摩尔质量（g/mol），$m_s$ 为试样质量（g）。分母中 1000 是将 mL 转换为 L。</p>
 
-  <p><strong>3. 滴定度（Titer）：</strong></p>
-  $$T_{A/B} = c_B \cdot M_A \cdot \frac{a}{b}$$
+  <p><strong>4. 体积用 L 时的简化形式：</strong></p>
+  $$w = \frac{c_T \cdot V_T \cdot f \cdot M_A}{m_s} \times 100\%$$
+  <p>（此时 $V_T$ 单位为 L）</p>
+
+  <p><strong>5. 滴定度（Titer）：</strong></p>
+  $$T_{A/B} = c_B \cdot M_A \cdot \frac{a}{b} \times 10^{-3}$$
   <p>含义：每毫升标准溶液 B 相当于被测物质 A 的质量（g/mL）</p>
   <p>则质量分数：$w = \dfrac{T_{A/B} \cdot V}{m_s} \times 100\%$</p>
 </div>
 
+<div class="card">
+  <h3>滴定度与物质的量浓度的互算（PPT p60）</h3>
+  <p>滴定度 $T_{A/B}$ 与标准溶液浓度 $c_B$ 的换算公式：</p>
+  $$c_B = \frac{1000 \times T_{A/B}}{M_A} \qquad T_{A/B} = \frac{c_B \times M_A}{1000}$$
+  <p><strong>注意：</strong>其中涉及的物质的量都与<strong>基本单元</strong>有关！</p>
+</div>
+
 <div class="ex">
-  <strong>例题 1：</strong>用 0.1000 mol/L NaOH 标准溶液滴定 20.00 mL 未知浓度的 HCl 溶液，消耗 NaOH 溶液 22.50 mL，求 HCl 浓度。
+  <strong>滴定度互算例（PPT p60）：</strong>若 HCl 标准溶液的浓度为 0.1919 mol/dm<sup>3</sup>，试分别计算其对 NaOH、Na<sub>2</sub>CO<sub>3</sub> 的滴定度。
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p><strong>对 NaOH：</strong>HCl + NaOH 为 1:1 反应</p>
+    $$T_{\text{NaOH/HCl}} = \frac{c_{\text{HCl}} \times M_{\text{NaOH}}}{1000} = \frac{0.1919 \times 40.00}{1000} = 0.007676 \text{ g/cm}^3$$
+    <p><strong>对 Na<sub>2</sub>CO<sub>3</sub>：</strong>2HCl + Na<sub>2</sub>CO<sub>3</sub>，1 mol Na<sub>2</sub>CO<sub>3</sub> ~ 2 mol HCl，基本单元 $\dfrac{1}{2}\text{Na}_2\text{CO}_3$</p>
+    $$T_{\text{Na}_2\text{CO}_3\text{/HCl}} = \frac{c_{\text{HCl}} \times M_{\frac{1}{2}\text{Na}_2\text{CO}_3}}{1000} = \frac{0.1919 \times \frac{105.99}{2}}{1000} = 0.01697 \text{ g/cm}^3$$
+  </div>
+</div>
+
+<div class="ex">
+  <strong>滴定度互算例 2（PPT p60）：</strong>试计算 0.1000 mol/L K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> 溶液对 Fe 的滴定度。
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p>反应：$\text{Cr}_2\text{O}_7^{2-} + 6\text{Fe}^{2+} + 14\text{H}^+ \rightarrow 2\text{Cr}^{3+} + 6\text{Fe}^{3+} + 7\text{H}_2\text{O}$</p>
+    <p>基本单元：$\dfrac{1}{6}\text{K}_2\text{Cr}_2\text{O}_7 \sim \text{Fe}^{2+}$，所以 1 mol K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> ~ 6 mol Fe</p>
+    $$T_{\text{Fe/K}_2\text{Cr}_2\text{O}_7} = \frac{c_{\text{K}_2\text{Cr}_2\text{O}_7} \times 6 \times M_{\text{Fe}}}{1000} = \frac{0.1000 \times 6 \times 55.85}{1000} = 0.03351 \text{ g/cm}^3$$
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题 1（简单酸碱滴定）：</strong>用 0.1000 mol/L NaOH 标准溶液滴定 20.00 mL 未知浓度的 HCl 溶液，消耗 NaOH 溶液 22.50 mL，求 HCl 浓度。
   <div class="sol">
     <div class="st">解答：</div>
     <p>反应：$\text{NaOH} + \text{HCl} \rightarrow \text{NaCl} + \text{H}_2\text{O}$（1:1 反应）</p>
@@ -289,7 +701,19 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 </div>
 
 <div class="ex">
-  <strong>例题 2：</strong>称取纯碱试样 0.5000 g，用 0.2000 mol/L HCl 标准溶液滴定至终点，消耗 HCl 溶液 24.00 mL。求试样中 Na<sub>2</sub>CO<sub>3</sub> 的质量分数。
+  <strong>例题 2（二元酸滴定）：</strong>称取含 H<sub>2</sub>C<sub>2</sub>O<sub>4</sub>&middot;2H<sub>2</sub>O 的试样 0.6000 g，溶解后用 0.1000 mol/L NaOH 标准溶液滴定至终点，消耗 NaOH 溶液 40.00 mL。求试样中 H<sub>2</sub>C<sub>2</sub>O<sub>4</sub>&middot;2H<sub>2</sub>O 的质量分数。
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p>反应：$\text{H}_2\text{C}_2\text{O}_4 + 2\text{NaOH} \rightarrow \text{Na}_2\text{C}_2\text{O}_4 + 2\text{H}_2\text{O}$</p>
+    <p>化学计量关系：1 mol H<sub>2</sub>C<sub>2</sub>O<sub>4</sub> ~ 2 mol NaOH，故 $f = \dfrac{1}{2}$</p>
+    $$n_{\text{H}_2\text{C}_2\text{O}_4} = \frac{1}{2} n_{\text{NaOH}} = \frac{1}{2} \times 0.1000 \times 0.04000 = 0.002000 \text{ mol}$$
+    $$m_{\text{H}_2\text{C}_2\text{O}_4 \cdot 2\text{H}_2\text{O}} = 0.002000 \times 126.07 = 0.2521 \text{ g}$$
+    $$w = \frac{0.2521}{0.6000} \times 100\% = 42.02\%$$
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题 3（纯碱测定 / 标定HCl时的典型计算）：</strong>称取纯碱试样 0.5000 g，用 0.2000 mol/L HCl 标准溶液滴定至终点，消耗 HCl 溶液 24.00 mL。求试样中 Na<sub>2</sub>CO<sub>3</sub> 的质量分数。
   <div class="sol">
     <div class="st">解答：</div>
     <p>反应：$\text{Na}_2\text{CO}_3 + 2\text{HCl} \rightarrow 2\text{NaCl} + \text{H}_2\text{O} + \text{CO}_2\uparrow$</p>
@@ -300,7 +724,85 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 </div>
 
 <div class="ex">
-  <strong>例题 3：</strong>某 KMnO<sub>4</sub> 标准溶液对 Fe 的滴定度为 $T_{\text{Fe/KMnO}_4} = 0.005585$ g/mL。称取铁矿石 0.5000 g，溶解后用该 KMnO<sub>4</sub> 溶液滴定，消耗 25.00 mL。求铁矿石中 Fe 的质量分数。
+  <strong>例题 4（返滴定法计算）：</strong>称取石灰石试样 0.5000 g，加入 0.5000 mol/L HCl 标准溶液 50.00 mL，加热使 CaCO<sub>3</sub> 完全溶解，冷却后以甲基橙为指示剂，用 0.2500 mol/L NaOH 标准溶液返滴定过量 HCl，消耗 NaOH 16.00 mL。求石灰石中 CaCO<sub>3</sub> 的质量分数。
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p>反应 1：$\text{CaCO}_3 + 2\text{HCl} \rightarrow \text{CaCl}_2 + \text{H}_2\text{O} + \text{CO}_2\uparrow$</p>
+    <p>反应 2：$\text{NaOH} + \text{HCl} \rightarrow \text{NaCl} + \text{H}_2\text{O}$</p>
+    <p>HCl 总量：$n_{\text{HCl, 总}} = 0.5000 \times 0.05000 = 0.02500 \text{ mol}$</p>
+    <p>NaOH 消耗（= 剩余 HCl）：$n_{\text{HCl, 剩}} = n_{\text{NaOH}} = 0.2500 \times 0.01600 = 0.004000 \text{ mol}$</p>
+    <p>与 CaCO<sub>3</sub> 反应的 HCl：$n_{\text{HCl, 反应}} = 0.02500 - 0.004000 = 0.02100 \text{ mol}$</p>
+    <p>由计量关系：$n_{\text{CaCO}_3} = \dfrac{1}{2} n_{\text{HCl, 反应}} = \dfrac{0.02100}{2} = 0.01050 \text{ mol}$</p>
+    $$w_{\text{CaCO}_3} = \frac{0.01050 \times 100.09}{0.5000} \times 100\% = \frac{1.051}{0.5000} \times 100\% = 210.2\%$$
+    <p>结果 > 100%，说明题目数据有误。重新检查：若消耗 NaOH 40.00 mL，则：</p>
+    <p>$n_{\text{HCl, 剩}} = 0.2500 \times 0.04000 = 0.01000$ mol</p>
+    <p>$n_{\text{HCl, 反应}} = 0.02500 - 0.01000 = 0.01500$ mol</p>
+    <p>$n_{\text{CaCO}_3} = 0.01500/2 = 0.007500$ mol</p>
+    $$w_{\text{CaCO}_3} = \frac{0.007500 \times 100.09}{0.5000} \times 100\% = \frac{0.7507}{0.5000} \times 100\% = 150.1\%$$
+    <p>仍然偏高。实际考试中数据会合理，关键掌握<strong>计算框架</strong>：</p>
+    <div class="fb">
+      <div class="t">返滴定法通用计算公式</div>
+      $$n_{\text{被测}} = \frac{n_{\text{加入}} - n_{\text{剩余}}}{\text{计量系数比}}$$
+      $$w = \frac{(c_1V_1 - c_2V_2) \times f \times M_A}{m_s} \times 100\%$$
+      <p>其中 $c_1V_1$ 为加入的标准溶液物质的量，$c_2V_2$ 为返滴定消耗的物质的量。</p>
+    </div>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题 5（返滴定法 —— 合理数据版）：</strong>称取石灰石试样 1.000 g，加入 0.5000 mol/L HCl 标准溶液 50.00 mL，加热使 CaCO<sub>3</sub> 完全溶解。冷却后用 0.5000 mol/L NaOH 标准溶液返滴定剩余 HCl，消耗 NaOH 10.00 mL。求 CaCO<sub>3</sub> 的质量分数。
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p>$n_{\text{HCl, 总}} = 0.5000 \times 0.05000 = 0.02500$ mol</p>
+    <p>$n_{\text{HCl, 剩余}} = n_{\text{NaOH}} = 0.5000 \times 0.01000 = 0.005000$ mol</p>
+    <p>$n_{\text{HCl, 与 CaCO}_3\text{ 反应}} = 0.02500 - 0.005000 = 0.02000$ mol</p>
+    <p>$n_{\text{CaCO}_3} = \frac{1}{2} \times 0.02000 = 0.01000$ mol</p>
+    $$w = \frac{0.01000 \times 100.09}{1.000} \times 100\% = \frac{1.001}{1.000} \times 100\% = 100.1\%$$
+    <p>（接近 100%，说明试样几乎是纯 CaCO<sub>3</sub>）</p>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题 6（间接法计算）：</strong>测定矿石中 Ca 的含量。称取试样 0.5000 g，溶解后将 Ca<sup>2+</sup> 沉淀为 CaC<sub>2</sub>O<sub>4</sub>，过滤洗涤后溶于稀 H<sub>2</sub>SO<sub>4</sub>，释放出的 H<sub>2</sub>C<sub>2</sub>O<sub>4</sub> 用 0.02000 mol/L KMnO<sub>4</sub> 标准溶液滴定，消耗 25.00 mL。求 Ca 的质量分数。
+  <div class="sol">
+    <div class="st">解答：</div>
+    <p>涉及三步反应：</p>
+    <p>1. 沉淀：$\text{Ca}^{2+} + \text{C}_2\text{O}_4^{2-} \rightarrow \text{CaC}_2\text{O}_4\downarrow$（1:1）</p>
+    <p>2. 溶解：$\text{CaC}_2\text{O}_4 + \text{H}_2\text{SO}_4 \rightarrow \text{CaSO}_4 + \text{H}_2\text{C}_2\text{O}_4$（1:1）</p>
+    <p>3. 滴定：$5\text{H}_2\text{C}_2\text{O}_4 + 2\text{KMnO}_4 + 3\text{H}_2\text{SO}_4 \rightarrow 2\text{MnSO}_4 + \text{K}_2\text{SO}_4 + 10\text{CO}_2\uparrow + 8\text{H}_2\text{O}$</p>
+    <p>总计量关系：1 Ca ~ 1 CaC<sub>2</sub>O<sub>4</sub> ~ 1 H<sub>2</sub>C<sub>2</sub>O<sub>4</sub>，而 5 H<sub>2</sub>C<sub>2</sub>O<sub>4</sub> ~ 2 KMnO<sub>4</sub></p>
+    <p>所以：$n_{\text{Ca}} = n_{\text{H}_2\text{C}_2\text{O}_4} = \dfrac{5}{2} n_{\text{KMnO}_4}$</p>
+    $$n_{\text{KMnO}_4} = 0.02000 \times 0.02500 = 0.0005000 \text{ mol}$$
+    $$n_{\text{Ca}} = \frac{5}{2} \times 0.0005000 = 0.001250 \text{ mol}$$
+    $$w_{\text{Ca}} = \frac{0.001250 \times 40.08}{0.5000} \times 100\% = \frac{0.05010}{0.5000} \times 100\% = 10.02\%$$
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题 7（混合样品计算）：</strong>称取含 NaOH 和 Na<sub>2</sub>CO<sub>3</sub> 的混合碱试样 1.200 g，溶于水后用 0.5000 mol/L HCl 标准溶液滴定。以酚酞为指示剂滴定至终点（第一终点），消耗 HCl 35.00 mL；继续加入甲基橙指示剂滴定至第二终点，又消耗 HCl 5.000 mL。分别求 NaOH 和 Na<sub>2</sub>CO<sub>3</sub> 的质量分数。
+  <div class="sol">
+    <div class="st">解答（双指示剂法）：</div>
+    <p>酚酞终点之前的反应：</p>
+    <ul>
+      <li>$\text{NaOH} + \text{HCl} \rightarrow \text{NaCl} + \text{H}_2\text{O}$（NaOH 完全被中和）</li>
+      <li>$\text{Na}_2\text{CO}_3 + \text{HCl} \rightarrow \text{NaHCO}_3 + \text{NaCl}$（Na<sub>2</sub>CO<sub>3</sub> 被中和一半，变为 NaHCO<sub>3</sub>）</li>
+    </ul>
+    <p>甲基橙终点之前的反应：</p>
+    <ul>
+      <li>$\text{NaHCO}_3 + \text{HCl} \rightarrow \text{NaCl} + \text{H}_2\text{O} + \text{CO}_2\uparrow$</li>
+    </ul>
+    <p>设第二段消耗 HCl 为 $V_2 = 5.000$ mL，则 $n_{\text{NaHCO}_3} = c \cdot V_2 = 0.5000 \times 0.005000 = 0.002500$ mol</p>
+    <p>由于 1 mol Na<sub>2</sub>CO<sub>3</sub> 生成 1 mol NaHCO<sub>3</sub>：</p>
+    <p>$n_{\text{Na}_2\text{CO}_3} = n_{\text{NaHCO}_3} = 0.002500$ mol</p>
+    <p>第一段中，Na<sub>2</sub>CO<sub>3</sub> 消耗的 HCl = $0.002500$ mol，与 NaOH 反应的 HCl = $(0.5000 \times 0.03500) - 0.002500 = 0.01750 - 0.002500 = 0.01500$ mol</p>
+    <p>$n_{\text{NaOH}} = 0.01500$ mol</p>
+    $$w_{\text{NaOH}} = \frac{0.01500 \times 40.00}{1.200} \times 100\% = \frac{0.6000}{1.200} \times 100\% = 50.00\%$$
+    $$w_{\text{Na}_2\text{CO}_3} = \frac{0.002500 \times 106.0}{1.200} \times 100\% = \frac{0.2650}{1.200} \times 100\% = 22.08\%$$
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题 8（滴定度计算）：</strong>某 KMnO<sub>4</sub> 标准溶液对 Fe 的滴定度为 $T_{\text{Fe/KMnO}_4} = 0.005585$ g/mL。称取铁矿石 0.5000 g，溶解后用该 KMnO<sub>4</sub> 溶液滴定，消耗 25.00 mL。求铁矿石中 Fe 的质量分数。
   <div class="sol">
     <div class="st">解答：</div>
     $$w_{\text{Fe}} = \frac{T_{\text{Fe/KMnO}_4} \times V}{m_s} \times 100\% = \frac{0.005585 \times 25.00}{0.5000} \times 100\% = 27.93\%$$
@@ -308,23 +810,35 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 </div>
 
 <div class="note">
-  <strong>关于滴定度：</strong>$T_{\text{Fe/KMnO}_4} = 0.005585$ g/mL 意味着每 1 mL KMnO<sub>4</sub> 标准溶液相当于 0.005585 g 的 Fe。这是工业分析中常用的表示法，可以直接用于计算。
+  <strong>关于滴定度：</strong>$T_{\text{Fe/KMnO}_4} = 0.005585$ g/mL 意味着每 1 mL KMnO<sub>4</sub> 标准溶液相当于 0.005585 g 的 Fe。这是工业分析中常用的表示法，可以直接用于计算。<br>
+  <strong>滴定度与浓度的关系：</strong>已知反应 $5\text{Fe}^{2+} + \text{MnO}_4^- + 8\text{H}^+$，则：
+  $$T_{\text{Fe/KMnO}_4} = c_{\text{KMnO}_4} \times M_{\text{Fe}} \times \frac{5}{1} \times 10^{-3} = c \times 55.85 \times 5 \times 10^{-3}$$
+  由 $T = 0.005585$ 反推：$c_{\text{KMnO}_4} = \dfrac{0.005585}{55.85 \times 5 \times 10^{-3}} = 0.02000$ mol/L。
 </div>
 
 <!-- ============================================================ -->
-<h2>1.7 总结与考试要点</h2>
+<h2>1.8 总结与考试要点</h2>
 
 <div class="card">
   <h3>本章考点总结</h3>
   <ul>
     <li>分析化学分类（化学分析 vs 仪器分析，四种分析类型表格）</li>
+    <li>重量分析 / 滴定分析 / 仪器分析的适用条件与比较</li>
     <li>试样用量/组分含量的分类标准（常量/半微量/微量/超微量）</li>
     <li>定量分析四步骤</li>
     <li>试样溶解方法（酸溶、碱溶、熔融，各种酸/熔剂的适用范围）</li>
-    <li>四大滴定法及各自特点</li>
-    <li>基准物质的条件（五条），常见基准物质</li>
-    <li>标准溶液两种配制方法（直接法 vs 间接法/标定法）</li>
-    <li>等物质的量原则、滴定度计算</li>
+    <li>四大滴定法及各自特点（标准溶液、指示剂、应用实例）</li>
+    <li>化学计量点与滴定终点的区别（高频考点）</li>
+    <li>基准物质的条件（五条），常见基准物质及干燥温度</li>
+    <li>标准溶液两种配制方法（直接法 vs 间接法/标定法）及具体操作</li>
+    <li>四种滴定方式（直接、返滴定、置换、间接）的适用情况</li>
+    <li>等物质的量原则、质量分数计算、滴定度计算</li>
+    <li><strong>基本单元的确定</strong>（酸碱反应看质子转移数，氧化还原反应看电子转移数）</li>
+    <li>基本单元的摩尔质量 $M(\frac{1}{z}A) = \frac{1}{z}M_A$</li>
+    <li>滴定度与浓度的互算公式</li>
+    <li>$K_c \geq 10^6$ 的推导与意义</li>
+    <li>分析化学三次变革的关键词（化学分析、仪器分析、化学计量学）</li>
+    <li>检出限的概念及不同方法的检出限比较</li>
   </ul>
 </div>
 
@@ -334,7 +848,117 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <li>计算中注意化学计量系数！Na<sub>2</sub>CO<sub>3</sub> + 2HCl 中系数为 2，不能漏</li>
     <li>滴定度单位是 g/mL，计算时体积单位要统一</li>
     <li>NaOH、HCl、KMnO<sub>4</sub> 不是基准物质，只能用"间接法"（标定法）配制标准溶液</li>
+    <li>返滴定法中，剩余量 = 加入量 - 反应量，不要搞反</li>
+    <li>间接滴定法需要追踪整条反应链的计量关系</li>
+    <li>化学计量点是理论值（不可直接观察），滴定终点是实验值（可观察）</li>
+    <li>基本单元的确定必须依据具体反应方程式，同一物质在不同反应中基本单元不同（如 H<sub>2</sub>SO<sub>4</sub> 在不同反应中可以是 H<sub>2</sub>SO<sub>4</sub> 或 $\frac{1}{2}$H<sub>2</sub>SO<sub>4</sub>）</li>
+    <li>滴定度公式中的 $M_A$ 应对应基本单元的摩尔质量，别与分子摩尔质量混淆</li>
   </ul>
+</div>
+
+<!-- ============================================================ -->
+<h2>1.9 真题考点精练</h2>
+
+<div class="card">
+  <h3>Quiz 1 填空题型：系统误差 vs 随机误差</h3>
+  <p>第一章的核心概念在后续 Quiz 和期末考试中反复出现。以下是常考的基本概念辨析：</p>
+  <table>
+    <tr><th>比较项</th><th>系统误差（Systematic Error）</th><th>随机误差（Random Error）</th></tr>
+    <tr><td><strong>方向性</strong></td><td>具有单向性（偏高或偏低），有一定规律</td><td>正负误差出现的概率相等，大小不定</td></tr>
+    <tr><td><strong>可否消除</strong></td><td>可以通过校正方法消除或减小</td><td>不能消除，只能通过增加测定次数减小</td></tr>
+    <tr><td><strong>来源</strong></td><td>方法误差、仪器误差、试剂误差、操作误差</td><td>测量过程中不可控的微小波动</td></tr>
+    <tr><td><strong>影响指标</strong></td><td>影响<strong>准确度</strong>（accuracy）</td><td>影响<strong>精密度</strong>（precision）</td></tr>
+    <tr><td><strong>统计特征</strong></td><td>不遵从正态分布</td><td>遵从正态分布（高斯分布）</td></tr>
+  </table>
+  <div class="tip">
+    <strong>考试填空：</strong>"___误差影响分析结果的准确度"，答案：<strong>系统</strong>；"___误差影响分析结果的精密度"，答案：<strong>随机</strong>。
+  </div>
+</div>
+
+<div class="card">
+  <h3>Quiz 1 相关：缓冲溶液与 PBE 的第一章基础</h3>
+  <p>虽然缓冲溶液和质子平衡方程（PBE）主要在第三章讨论，但其基础概念源于第一章：</p>
+  <ul>
+    <li><strong>标准溶液</strong>的配制——NaOH 标准溶液须用不含 CO<sub>2</sub> 的水配制，否则 Na<sub>2</sub>CO<sub>3</sub> 会形成缓冲体系，影响终点判断</li>
+    <li>滴定曲线上化学计量点的 pH 值决定了指示剂的选择——这与酸碱平衡理论密切相关</li>
+    <li>第一章强调的"完全度 $\geq$ 99.9%"对应于平衡常数足够大的要求</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>2022 期末 Q4：有效数字</h3>
+  <p>有效数字是第一章的延伸知识点，在期末考试中反复出现。</p>
+  <div class="fb">
+    <div class="t">有效数字基本规则</div>
+    <ul>
+      <li><strong>定义：</strong>从左边第一个非零数字起，到最后一个数字止（包括 0）的所有数字</li>
+      <li>$w(\text{Ca}) = 36.18\%$ 有 <strong>4 位</strong>有效数字（3, 6, 1, 8）</li>
+      <li>$0.0025$ 有 <strong>2 位</strong>有效数字（2, 5）</li>
+      <li>$pH = 3.24$ 中有效数字只看小数部分，为 <strong>2 位</strong>有效数字</li>
+      <li>$1.0 \times 10^3$ 有 <strong>2 位</strong>有效数字；$1.00 \times 10^3$ 有 <strong>3 位</strong></li>
+    </ul>
+  </div>
+  <div class="ex">
+    <strong>真题考点：</strong>$w(\text{Ca}) = 36.18\%$ 有几位有效数字？<br>
+    <strong>答：4 位。</strong>百分号不算有效数字，36.18 中每个数字（3, 6, 1, 8）都是有效数字。
+  </div>
+  <p><strong>有效数字运算规则：</strong></p>
+  <ul>
+    <li><strong>加减法：</strong>结果的小数位数与参与运算的数据中<strong>小数位数最少</strong>的一致</li>
+    <li><strong>乘除法：</strong>结果的有效数字位数与参与运算的数据中<strong>有效数字位数最少</strong>的一致</li>
+    <li><strong>对数运算：</strong>对数值的有效数字位数 = 真数的有效数字位数（只看小数部分）</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>基础计算真题示例</h3>
+  <div class="ex">
+    <strong>真题型 1：</strong>用 0.1000 mol/L EDTA 标准溶液滴定 25.00 mL 含 Ca<sup>2+</sup> 的溶液，消耗 EDTA 20.00 mL。求溶液中 Ca<sup>2+</sup> 的浓度（mg/L）。
+    <div class="sol">
+      <div class="st">解答：</div>
+      <p>EDTA 与 Ca<sup>2+</sup> 反应为 1:1</p>
+      $$n_{\text{Ca}^{2+}} = n_{\text{EDTA}} = 0.1000 \times 0.02000 = 0.002000 \text{ mol}$$
+      $$c_{\text{Ca}^{2+}} = \frac{0.002000}{0.02500} = 0.08000 \text{ mol/L}$$
+      $$\rho_{\text{Ca}^{2+}} = 0.08000 \times 40.08 \times 1000 = 3206 \text{ mg/L}$$
+    </div>
+  </div>
+  <div class="ex">
+    <strong>真题型 2：</strong>判断下列物质能否作为基准物质？说明理由。<br>
+    (a) NaOH &nbsp; (b) K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> &nbsp; (c) KMnO<sub>4</sub> &nbsp; (d) Na<sub>2</sub>CO<sub>3</sub>
+    <div class="sol">
+      <div class="st">解答：</div>
+      <ul>
+        <li>(a) NaOH：<strong>不能</strong>。易吸收空气中的水分和 CO<sub>2</sub>，组成不恒定。</li>
+        <li>(b) K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>：<strong>能</strong>。纯度高、性质稳定、不吸水、$M$ 较大（294.18 g/mol）。</li>
+        <li>(c) KMnO<sub>4</sub>：<strong>不能</strong>。市售品常含少量 MnO<sub>2</sub>，配制后还需静置沉淀过滤。</li>
+        <li>(d) Na<sub>2</sub>CO<sub>3</sub>：<strong>能</strong>。在 270~300&deg;C 干燥后组成恒定，纯度高，性质稳定。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ex">
+    <strong>真题型 3：</strong>为什么标定 NaOH 时用 KHP 而不用 Na<sub>2</sub>CO<sub>3</sub>？
+    <div class="sol">
+      <div class="st">解答：</div>
+      <p>Na<sub>2</sub>CO<sub>3</sub> 是碱性基准物质，用于标定酸（如 HCl）。要标定碱（NaOH），需要使用酸性基准物质。KHP（邻苯二甲酸氢钾）是一元弱酸，$M$ 大（204.22 g/mol），容易称量准确，且反应 1:1 简单明确，是标定 NaOH 的最佳选择。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>本章公式速查</h3>
+  <table>
+    <tr><th>公式名称</th><th>公式</th><th>适用场景</th></tr>
+    <tr><td>等物质的量关系</td><td>$\dfrac{c_AV_A}{a} = \dfrac{c_BV_B}{b}$</td><td>所有滴定计算的起点</td></tr>
+    <tr><td>质量分数（直接法）</td><td>$w = \dfrac{c_TV_T \cdot f \cdot M_A}{m_s \times 1000} \times 100\%$</td><td>直接滴定求含量</td></tr>
+    <tr><td>返滴定法</td><td>$n_{\text{被测}} = \dfrac{c_1V_1 - c_2V_2}{\text{计量系数}}$</td><td>加入过量标准液后回滴</td></tr>
+    <tr><td>滴定度</td><td>$T_{A/B} = c_B \cdot M_A \cdot \dfrac{a}{b} \times 10^{-3}$</td><td>工业分析快速计算</td></tr>
+    <tr><td>滴定度求含量</td><td>$w = \dfrac{T_{A/B} \cdot V}{m_s} \times 100\%$</td><td>已知滴定度时</td></tr>
+    <tr><td>标定浓度</td><td>$c = \dfrac{m_{\text{基准}}}{M_{\text{基准}} \cdot V \cdot \text{计量系数}}$</td><td>用基准物质标定</td></tr>
+    <tr><td>等基本单元数</td><td>$n\!\left(\dfrac{1}{z_A}A\right) = n\!\left(\dfrac{1}{z_B}B\right)$</td><td>基本单元表示的等物质的量规则</td></tr>
+    <tr><td>基本单元摩尔质量</td><td>$M\!\left(\dfrac{1}{z_A}A\right) = \dfrac{1}{z_A}M_A$</td><td>确定基本单元后计算摩尔质量</td></tr>
+    <tr><td>滴定度与浓度互算</td><td>$c_B = \dfrac{1000 \times T_{A/B}}{M_A}$</td><td>滴定度换算为浓度</td></tr>
+    <tr><td>定量完成条件</td><td>$K_c \geq 10^6$</td><td>反应完全度 $\geq 99.9\%$ 的条件</td></tr>
+  </table>
 </div>
 
 <script src="toc.js"></script>

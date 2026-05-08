@@ -31,20 +31,34 @@ tr:nth-child(even){background:#f9f7f2;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
 details{margin:8px 0;}
 details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+.ppt-img{display:block;max-width:100%;margin:12px auto;border:1px solid #e0d8c8;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ppt-caption{text-align:center;font-size:.82em;color:#888;margin:-6px 0 12px;}
 </style>
 </head><body>
 
 <div class="nav-bar">
   <a href="index.html">首页</a>
-  <a href="ch7.html">&larr; 第七章</a>
+  <a href="ch1.html">第一章</a>
+  <a href="ch3.html">第三章</a>
+  <a href="ch5-1.html">第五章(上)</a>
+  <a href="ch5-2.html">第五章(下)</a>
   <a href="ch6.html">第六章</a>
-  <a href="ch10.html">第十章 &rarr;</a>
+  <a href="ch7.html">第七章</a>
+  <a href="ch9.html" style="background:#1a5276;color:#fff;">第九章</a>
+  <a href="ch10.html">第十章</a>
+  <a href="formulas.html">公式表</a>
+  <a href="exam-review.html">备考</a>
+  <a href="quiz1.html">小测1</a>
+  <a href="quiz2.html">小测2</a>
+  <a href="final2022.html">期末真题</a>
 </div>
 
 <h1>第九章 重量分析法和沉淀滴定法</h1>
 
 <!-- ==================== 9.1 ==================== -->
 <h2>9.1 沉淀的溶解度</h2>
+<img class="ppt-img" src="temp_pages/ch9_p5.png" alt="溶度积与溶解度">
+<p class="ppt-caption">PPT: 溶度积与溶解度的关系</p>
 
 <div class="card">
   <h3>溶度积与溶解度</h3>
@@ -65,6 +79,28 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 </div>
 
+<div class="card">
+  <h3>不同类型沉淀的溶解度计算公式</h3>
+  <div class="fb">
+    <div class="t">由 $K_{sp}$ 推导溶解度 $s$ 的通用方法</div>
+    <p>设沉淀 $\text{M}_m\text{A}_n$ 的溶解度为 $s$，则溶解平衡为：</p>
+    $$\text{M}_m\text{A}_n \rightleftharpoons m\text{M}^{n+} + n\text{A}^{m-}$$
+    <p>各离子浓度：$[\text{M}^{n+}] = ms$，$[\text{A}^{m-}] = ns$</p>
+    $$K_{sp} = (ms)^m \cdot (ns)^n = m^m \cdot n^n \cdot s^{m+n}$$
+    $$\boxed{s = \left(\frac{K_{sp}}{m^m \cdot n^n}\right)^{\frac{1}{m+n}}}$$
+  </div>
+
+  <table>
+    <tr><th>沉淀类型</th><th>举例</th><th>$K_{sp}$ 表达式</th><th>$s$ 的计算</th></tr>
+    <tr><td>MA 型 (1:1)</td><td>$\text{AgCl, BaSO}_4$</td><td>$K_{sp} = s^2$</td><td>$s = \sqrt{K_{sp}}$</td></tr>
+    <tr><td>MA$_2$ 型 (1:2)</td><td>$\text{CaF}_2, \text{PbCl}_2$</td><td>$K_{sp} = s \cdot (2s)^2 = 4s^3$</td><td>$s = \left(\dfrac{K_{sp}}{4}\right)^{1/3}$</td></tr>
+    <tr><td>M$_2$A 型 (2:1)</td><td>$\text{Ag}_2\text{CrO}_4$</td><td>$K_{sp} = (2s)^2 \cdot s = 4s^3$</td><td>$s = \left(\dfrac{K_{sp}}{4}\right)^{1/3}$</td></tr>
+    <tr><td>M$_3$A$_2$ 型 (3:2)</td><td>$\text{Ca}_3(\text{PO}_4)_2$</td><td>$K_{sp} = (3s)^3(2s)^2 = 108s^5$</td><td>$s = \left(\dfrac{K_{sp}}{108}\right)^{1/5}$</td></tr>
+  </table>
+
+  <div class="warn">注意：只有在同类型沉淀之间才能直接用 $K_{sp}$ 比较溶解度大小。不同类型（如 MA 与 MA$_2$）必须先算出 $s$ 再比较！</div>
+</div>
+
 <div class="ex">
   <strong>例题：</strong>计算 $\text{BaSO}_4$ 在纯水中的溶解度（$K_{sp} = 1.1 \times 10^{-10}$，忽略活度系数和固有溶解度）。
   <div class="sol">
@@ -74,8 +110,83 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 </div>
 
+<div class="ex">
+  <strong>例题（Quiz 2 计算原型）：</strong>已知 $\text{CaF}_2$ 的 $K_{sp} = 3.9 \times 10^{-11}$，计算其在纯水中的溶解度。
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$\text{CaF}_2$ 属于 MA$_2$ 型：$\text{CaF}_2 \rightleftharpoons \text{Ca}^{2+} + 2\text{F}^-$</p>
+    <p>设溶解度为 $s$，则 $[\text{Ca}^{2+}] = s$，$[\text{F}^-] = 2s$</p>
+    <p>$K_{sp} = s \cdot (2s)^2 = 4s^3$</p>
+    <p>$s = \left(\dfrac{K_{sp}}{4}\right)^{1/3} = \left(\dfrac{3.9 \times 10^{-11}}{4}\right)^{1/3} = (9.75 \times 10^{-12})^{1/3} = 2.1 \times 10^{-4}\;\text{mol/L}$</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3>pH 对弱酸盐沉淀溶解度的影响</h3>
+  <div class="fb">
+    <div class="t">酸效应对 CaF$_2$ 溶解度的影响（Quiz 2 填空考点）</div>
+    <p>$\text{F}^-$ 是弱酸 HF（$K_a = 6.6 \times 10^{-4}$）的共轭碱。当溶液 pH 降低时，$\text{F}^-$ 被质子化生成 HF：</p>
+    $$\text{F}^- + \text{H}^+ \rightleftharpoons \text{HF}$$
+    <p>酸效应系数 $\alpha_{F^-(\text{H})}$：</p>
+    $$\alpha_{F^-(\text{H})} = 1 + \frac{[\text{H}^+]}{K_a} = 1 + \frac{[\text{H}^+]}{6.6 \times 10^{-4}}$$
+    <p>在 pH = 3 时：$\alpha_{F^-(\text{H})} = 1 + \frac{10^{-3}}{6.6 \times 10^{-4}} = 1 + 1.52 = 2.52$</p>
+    <p>此时条件溶度积大幅增大：$K'_{sp} = K_{sp} \cdot \alpha_{F^-(\text{H})}^2 = 3.9 \times 10^{-11} \times 2.52^2 = 2.5 \times 10^{-10}$</p>
+    <p>溶解度增大为：$s = \left(\dfrac{K'_{sp}}{4}\right)^{1/3} = 4.0 \times 10^{-4}\;\text{mol/L}$（约为纯水中的 2 倍）</p>
+  </div>
+  <div class="tip"><strong>结论：</strong>酸性条件下 $\text{CaF}_2$ 溶解度显著增大。弱酸盐沉淀（如 $\text{CaC}_2\text{O}_4$, $\text{BaCO}_3$, $\text{CaF}_2$）在低 pH 时溶解度均增大，需注意控制酸度。</div>
+</div>
+
+<div class="card">
+  <h3>沉淀完全的判据</h3>
+  <div class="fb">
+    <div class="t">什么叫"沉淀完全"？</div>
+    <p>实际工作中，通常认为被测离子的残留浓度 $\leq 0.2\;\text{mg}$（即沉淀后母液中残留的被测组分质量 $\leq 0.2\;\text{mg}$），沉淀即为<strong>完全</strong>。这对应于分析天平的称量误差范围。</p>
+    <p>判据等价形式：若被测离子初始质量为 $m_0$，溶解损失量 $m_{loss}$，则要求：</p>
+    $$\frac{m_{loss}}{m_0} \times 100\% \leq 0.1\%$$
+    <p>即<strong>溶解损失不超过试样的万分之一</strong>。</p>
+  </div>
+  <div class="tip">要实现沉淀完全，核心手段是利用<strong>同离子效应</strong>（沉淀剂适当过量）降低溶解度，同时避免盐效应等使溶解度回升的因素。</div>
+</div>
+
+<div class="card">
+  <h3>条件溶度积的综合计算（考虑酸效应+配位效应）</h3>
+  <img class="ppt-img" src="temp_pages/ch9_p17.png" alt="酸效应计算">
+  <p class="ppt-caption">PPT: 酸效应对溶解度的影响</p>
+
+  <div class="fb">
+    <div class="t">同时考虑多种副反应</div>
+    <p>当沉淀的阴离子发生酸效应、阳离子发生配位效应时，条件溶度积为：</p>
+    $$K'_{sp} = K_{sp} \cdot \alpha_M \cdot \alpha_A$$
+    <p>其中 $\alpha_M$ 为阳离子的副反应系数（配位效应），$\alpha_A$ 为阴离子的副反应系数（酸效应）。</p>
+    <p>条件溶度积<strong>总是大于</strong>热力学溶度积，副反应越强，$K'_{sp}$ 越大，溶解度越大。</p>
+  </div>
+
+  <div class="ex">
+    <strong>例题：配位效应计算</strong>
+    <p>已知 $K_{sp,\text{AgI}} = 10^{-16.8}$，$\text{Ag(NH}_3)_2^+$ 的 $\lg\beta_1 = 3.4$，$\lg\beta_2 = 7.4$。计算 AgI 在 $[\text{NH}_3] = 0.010\;\text{mol/L}$ 和 $[\text{S}_2\text{O}_3^{2-}] = 0.010\;\text{mol/L}$ 中的溶解度。</p>
+    <div class="sol">
+      <div class="st">解（NH$_3$ 体系）：</div>
+      <p>$\alpha_{\text{Ag}(\text{NH}_3)} = 1 + \beta_1[\text{NH}_3] + \beta_2[\text{NH}_3]^2 = 1 + 10^{3.4} \times 0.010 + 10^{7.4} \times 0.010^2 = 10^{3.40}$</p>
+      <p>$s = \sqrt{K'_{sp}} = \sqrt{K_{sp} \cdot \alpha_{\text{Ag}}} = \sqrt{10^{-16.8} \times 10^{3.40}} = 10^{-6.7} = 6.1 \times 10^{-7}\;\text{mol/L}$</p>
+    </div>
+  </div>
+
+  <div class="ex">
+    <strong>例题：MnS 的酸效应计算</strong>
+    <p>$\text{MnS}$ 的 $K_{sp}$ 较大，$\text{S}^{2-}$ 易发生水解产生 $\text{HS}^-$ 和 $\text{OH}^-$。在 pH = 10.6 时：</p>
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>由于 pH = 10.6 > $pK_{a1}$，$\text{HS}^-$ 为主体形式，酸效应合理近似：</p>
+      <p>$s^3 = [\text{Mn}^{2+}][\text{S}^{2-}][\text{OH}^-] = [\text{Mn}^{2+}] \cdot \dfrac{[\text{HS}^-]}{[\text{H}^+][\text{S}^{2-}]} \cdot [\text{OH}^-] = \dfrac{K_{sp,\text{MnS}} \cdot K_w}{K_{a2(\text{H}_2\text{S})}}$</p>
+      <p>$s = \sqrt[3]{\dfrac{10^{-9.6} \times 10^{-14.0}}{10^{-14.0}}} = 10^{-3.4}\;\text{mol/L}$</p>
+    </div>
+  </div>
+</div>
+
 <!-- ==================== 9.2 ==================== -->
 <h2>9.2 影响溶解度的因素</h2>
+<img class="ppt-img" src="temp_pages/ch9_p9.png" alt="影响溶解度的因素">
+<p class="ppt-caption">PPT: 影响沉淀溶解度的因素</p>
 
 <div class="card">
   <h3>1. 盐效应</h3>
@@ -92,6 +203,14 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <h3>3. 酸效应</h3>
   <p>对弱酸盐沉淀（如 $\text{CaC}_2\text{O}_4$, $\text{BaCO}_3$），溶液酸度增大使阴离子被质子化，溶解度<strong>增大</strong>。</p>
   $$s = \sqrt{K'_{sp} \cdot \alpha_{A}} = \sqrt{K_{sp} \cdot \alpha_A / (\gamma_+\gamma_-)}$$
+  <div class="fb">
+    <div class="t">酸效应的定量计算</div>
+    <p>对于弱酸 $\text{HA}$（$K_a$ 已知），其共轭碱 $\text{A}^-$ 的酸效应系数为：</p>
+    $$\alpha_{A^-(\text{H})} = 1 + \frac{[\text{H}^+]}{K_a}$$
+    <p>对于二元弱酸 $\text{H}_2\text{A}$（如 $\text{H}_2\text{C}_2\text{O}_4$）：</p>
+    $$\alpha_{A^{2-}(\text{H})} = 1 + \frac{[\text{H}^+]}{K_{a2}} + \frac{[\text{H}^+]^2}{K_{a1}K_{a2}}$$
+    <p>条件溶度积：$K'_{sp} = K_{sp} \cdot \alpha_{A^-(\text{H})}$（MA 型）或 $K'_{sp} = K_{sp} \cdot \alpha_{A^-(\text{H})}^n$（MA$_n$ 型）</p>
+  </div>
 
   <h3>4. 配位效应</h3>
   <p>溶液中存在能与构晶阳离子配位的配位剂时，溶解度<strong>增大</strong>。</p>
@@ -104,8 +223,43 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <p>细小颗粒的溶解度大于粗大颗粒。极细颗粒（$< 1\;\mu\text{m}$）溶解度显著升高，这是 Ostwald 陈化的热力学基础。</p>
 </div>
 
+<div class="card">
+  <h3>同离子效应的定量计算（Quiz 2 计算第 4 题考点）</h3>
+  <div class="ex">
+    <strong>例题：</strong>$\text{BaSO}_4$ 的 $K_{sp} = 1.1 \times 10^{-10}$。分别计算：(1) 在纯水中的溶解度及 500 mL 中的溶解损失量；(2) 在 0.10 mol/L $\text{Na}_2\text{SO}_4$ 溶液中的溶解度及 500 mL 中的溶解损失量。
+    <div class="sol">
+      <div class="st">解：</div>
+      <p><strong>(1) 纯水中：</strong></p>
+      <p>$s = \sqrt{K_{sp}} = \sqrt{1.1 \times 10^{-10}} = 1.05 \times 10^{-5}\;\text{mol/L}$</p>
+      <p>500 mL 中的溶解质量：$m = s \times V \times M_{BaSO_4} = 1.05 \times 10^{-5} \times 0.500 \times 233.4 = 1.22 \times 10^{-3}\;\text{g}$</p>
+      <p><strong>(2) 在 0.10 mol/L Na$_2$SO$_4$ 中（同离子效应）：</strong></p>
+      <p>由于 $\text{Na}_2\text{SO}_4$ 提供的 $[\text{SO}_4^{2-}] = 0.10\;\text{mol/L} \gg s$，可近似认为 $[\text{SO}_4^{2-}] \approx 0.10\;\text{mol/L}$</p>
+      <p>$K_{sp} = [\text{Ba}^{2+}][\text{SO}_4^{2-}] = s \times 0.10$</p>
+      <p>$s = \dfrac{K_{sp}}{0.10} = \dfrac{1.1 \times 10^{-10}}{0.10} = 1.1 \times 10^{-9}\;\text{mol/L}$</p>
+      <p>500 mL 中的溶解质量：$m = 1.1 \times 10^{-9} \times 0.500 \times 233.4 = 1.28 \times 10^{-7}\;\text{g}$</p>
+    </div>
+  </div>
+  <div class="tip"><strong>结论：</strong>加入 0.10 mol/L 同离子后，溶解度从 $1.05 \times 10^{-5}$ 降至 $1.1 \times 10^{-9}$ mol/L，降低了约 $\mathbf{10^4}$ 倍！溶解损失从 $1.22 \times 10^{-3}$ g 降至 $1.28 \times 10^{-7}$ g。这就是沉淀剂为什么需要适量过量的原因。</div>
+</div>
+
+<div class="card">
+  <h3>PbSO$_4$ 在 Na$_2$SO$_4$ 中的溶解度变化（Quiz 2 填空考点）</h3>
+  <div class="fb">
+    <div class="t">同离子效应与盐效应的竞争</div>
+    <p>向含有 $\text{PbSO}_4$ 沉淀的溶液中逐渐加入 $\text{Na}_2\text{SO}_4$：</p>
+    <ul>
+      <li><strong>低浓度 $\text{Na}_2\text{SO}_4$</strong>：$\text{SO}_4^{2-}$ 作为构晶离子产生<strong>同离子效应</strong>，溶解度<strong>下降</strong></li>
+      <li><strong>高浓度 $\text{Na}_2\text{SO}_4$</strong>：大量电解质使离子强度急剧增大，<strong>盐效应</strong>占主导，溶解度<strong>回升</strong></li>
+    </ul>
+    <p>因此溶解度曲线呈"V 形"：先降后升，最低点对应同离子效应与盐效应平衡处。</p>
+  </div>
+  <div class="warn"><strong>Quiz 2 填空考点：</strong>$\text{PbSO}_4$ 在 $\text{Na}_2\text{SO}_4$ 溶液中，低浓度时同离子效应使溶解度下降，高浓度时盐效应使溶解度回升。</div>
+</div>
+
 <!-- ==================== 9.3 ==================== -->
 <h2>9.3 沉淀重量法</h2>
+<img class="ppt-img" src="temp_pages/ch9_p21.png" alt="沉淀条件">
+<p class="ppt-caption">PPT: 沉淀类型与沉淀条件</p>
 
 <div class="card">
   <h3>分析流程</h3>
@@ -137,14 +291,51 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <p>$Q$ = 加入沉淀剂瞬间的浓度积，$S$ = 沉淀的溶解度。$(Q-S)/S$ 越大，晶核越多，颗粒越细。</p>
   </div>
 
-  <h3>晶形沉淀 vs 无定形（非晶形）沉淀</h3>
+  <h3>沉淀的三种类型</h3>
+  <img class="ppt-img" src="temp_pages/ch9_p32.png" alt="沉淀类型">
+  <p class="ppt-caption">PPT: 沉淀的类型 — 晶形、凝乳状、无定形</p>
+
   <table>
-    <tr><th>特征</th><th>晶形沉淀</th><th>无定形沉淀</th></tr>
-    <tr><td>颗粒大小</td><td>0.1~1 mm</td><td>< 0.02 $\mu$m（胶体）</td></tr>
-    <tr><td>结构</td><td>离子排列有序</td><td>无序聚集</td></tr>
-    <tr><td>例子</td><td>$\text{BaSO}_4$, $\text{CaC}_2\text{O}_4$</td><td>$\text{Fe(OH)}_3$, $\text{Al(OH)}_3$, $\text{SiO}_2 \cdot x\text{H}_2\text{O}$</td></tr>
-    <tr><td>沉淀条件</td><td>稀溶液、慢加、热溶液、搅拌、陈化</td><td>浓溶液、热溶液、加电解质凝聚、不需陈化</td></tr>
+    <tr><th>特征</th><th>晶形沉淀</th><th>凝乳状沉淀</th><th>无定形沉淀</th></tr>
+    <tr><td>颗粒大小</td><td>0.1~1 $\mu$m</td><td>0.02~0.1 $\mu$m</td><td>< 0.02 $\mu$m（胶体）</td></tr>
+    <tr><td>结构</td><td>离子排列有序</td><td>介于两者之间</td><td>无序聚集</td></tr>
+    <tr><td>例子</td><td>$\text{BaSO}_4$, $\text{MgNH}_4\text{PO}_4$</td><td>$\text{AgCl}$</td><td>$\text{Fe(OH)}_3$, $\text{Al(OH)}_3$, $\text{SiO}_2 \cdot x\text{H}_2\text{O}$</td></tr>
+    <tr><td>沉淀条件</td><td>稀溶液、慢加、热溶液、搅拌、陈化</td><td>条件介于两者之间</td><td>浓溶液、热溶液、加电解质凝聚、不需陈化</td></tr>
+    <tr><td>外观</td><td>沉淀颗粒明显可见</td><td>似凝乳</td><td>疏松、绒毛状</td></tr>
   </table>
+  <div class="tip">沉淀类型取决于沉淀自身性质以及沉淀条件和后续处理。同一物质在不同条件下可能形成不同类型的沉淀。</div>
+
+  <h3>沉淀的形成过程</h3>
+  <img class="ppt-img" src="temp_pages/ch9_p33.png" alt="沉淀形成过程">
+  <p class="ppt-caption">PPT: 晶形沉淀和无定形沉淀的形成</p>
+
+  <div class="fb">
+    <div class="t">成核与长大</div>
+    <p>构晶离子 $\xrightarrow{\text{成核作用}}$ 晶核 $\xrightarrow{\text{长大}}$ 沉淀颗粒</p>
+    <ul>
+      <li><strong>均相成核</strong>：构晶离子在过饱和溶液中通过静电作用自发缔合形成晶核的过程。如 $\text{BaSO}_4$，约 8 个构晶离子形成一个晶核。</li>
+      <li><strong>异相成核</strong>：在沉淀过程中以溶液中已存在的固体微粒为晶核，诱导沉淀形成。</li>
+    </ul>
+  </div>
+  <div class="fb">
+    <div class="t">聚集与定向排列的竞争</div>
+    <p>沉淀颗粒形成后存在两个竞争过程：</p>
+    <ul>
+      <li><strong>聚集</strong>（凝聚）：小颗粒无序聚集 $\to$ 无定形沉淀（与相对过饱和度 $(Q-S)/S$ 有关）</li>
+      <li><strong>定向排列</strong>：离子按有序结构排列 $\to$ 晶形沉淀（与物质的极性有关）</li>
+    </ul>
+  </div>
+
+  <div class="fb">
+    <div class="t">成核类型与沉淀类型的关系</div>
+    <table>
+      <tr><th>成核过程</th><th>长大过程</th><th>沉淀类型</th></tr>
+      <tr><td>异相成核作用</td><td>$V_{\text{聚集}} > V_{\text{定向}}$</td><td>无定形沉淀</td></tr>
+      <tr><td>均相成核作用</td><td>$V_{\text{定向}} > V_{\text{聚集}}$</td><td>晶形沉淀</td></tr>
+    </table>
+  </div>
+
+  <div class="note"><strong>2022 期末 Q15 考点：</strong>当聚集速度 &gt; 定向速度时，生成<strong>无定形（非晶形）沉淀</strong>。当定向速度 &gt; 聚集速度时，生成<strong>晶形沉淀</strong>。</div>
 
   <div class="fb">
     <div class="t">晶形沉淀操作要点</div>
@@ -169,8 +360,64 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 </div>
 
+<div class="card">
+  <h3>均匀沉淀法（2022 期末填空考点）</h3>
+  <div class="fb">
+    <div class="t">均匀沉淀法原理</div>
+    <p>不直接加入沉淀剂，而是通过<strong>化学反应在溶液内部缓慢、均匀地产生沉淀剂</strong>，从而实现<strong>低过饱和度</strong>，获得大颗粒、纯净的晶形沉淀。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">常用均匀沉淀法试剂</div>
+    <table>
+      <tr><th>试剂</th><th>产生的沉淀剂</th><th>反应</th><th>应用</th></tr>
+      <tr><td><strong>尿素</strong> $\text{CO(NH}_2)_2$</td><td>$\text{OH}^-$</td><td>$\text{CO(NH}_2)_2 + 3\text{H}_2\text{O} \xrightarrow{\Delta} 2\text{NH}_4^+ + \text{CO}_2 + 2\text{OH}^-$</td><td>沉淀金属氢氧化物</td></tr>
+      <tr><td>草酸二甲酯</td><td>$\text{C}_2\text{O}_4^{2-}$</td><td>水解缓慢释放草酸根</td><td>沉淀 $\text{CaC}_2\text{O}_4$</td></tr>
+      <tr><td>硫代乙酰胺</td><td>$\text{S}^{2-}$</td><td>水解缓慢释放 $\text{H}_2\text{S}$</td><td>沉淀金属硫化物</td></tr>
+      <tr><td>三甲基磷酸酯</td><td>$\text{PO}_4^{3-}$</td><td>水解缓慢释放磷酸根</td><td>沉淀磷酸盐</td></tr>
+    </table>
+  </div>
+
+  <div class="warn"><strong>2022 期末填空第 7 题：</strong>尿素与醋酸锌（$\text{ZnAc}_2$）加热 -- 尿素缓慢水解产生 $\text{OH}^-$，与 $\text{Zn}^{2+}$ 在溶液中均匀生成 $\text{Zn(OH)}_2$ 沉淀。这就是<strong>均匀沉淀法</strong>。</div>
+
+  <div class="tip">
+    <strong>均匀沉淀法的优点：</strong>
+    <ul>
+      <li>过饱和度低（$Q$ 缓慢增大），沉淀颗粒大</li>
+      <li>沉淀纯净（共沉淀少）</li>
+      <li>适合沉淀重量法的要求</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>8-羟基喹啉铝的重量法测定（2022 期末计算第 2 题）</h3>
+
+  <div class="fb">
+    <div class="t">8-羟基喹啉（$\text{C}_9\text{H}_7\text{NO}$，又名 oxine）法测 Al</div>
+    <p>沉淀反应：$\text{Al}^{3+} + 3\text{HC}_9\text{H}_6\text{NO} \rightarrow \text{Al(C}_9\text{H}_6\text{NO)}_3 + 3\text{H}^+$</p>
+    <p>沉淀形式：$\text{Al(C}_9\text{H}_6\text{NO)}_3$（8-羟基喹啉铝，$M = 459.44\;\text{g/mol}$）</p>
+    <p>称量形式：$\text{Al(C}_9\text{H}_6\text{NO)}_3$（烘干即可）或 $\text{Al}_2\text{O}_3$（灼烧后）</p>
+  </div>
+
+  <div class="ex">
+    <strong>例题（2022 期末计算第 2 题原型）：</strong>称取铝合金试样 0.6000 g，溶解后用 8-羟基喹啉沉淀 Al，得到沉淀 $\text{Al(C}_9\text{H}_6\text{NO)}_3$，烘干后称得 0.3600 g。求：(1) 铝的质量分数 $w(\text{Al})$；(2) 如果灼烧为 $\text{Al}_2\text{O}_3$，称量形式的质量为多少？
+    <div class="sol">
+      <div class="st">解：</div>
+      <p><strong>(1) 求 $w(\text{Al})$：</strong></p>
+      <p>换算因子：$F = \dfrac{M_{\text{Al}}}{M_{\text{Al(C}_9\text{H}_6\text{NO)}_3}} = \dfrac{26.98}{459.44} = 0.05872$</p>
+      <p>$w(\text{Al}) = \dfrac{m_P \times F}{m_s} \times 100\% = \dfrac{0.3600 \times 0.05872}{0.6000} \times 100\% = 3.52\%$</p>
+      <p><strong>(2) 求灼烧为 $\text{Al}_2\text{O}_3$ 的质量：</strong></p>
+      <p>由化学计量关系：$2\text{Al(C}_9\text{H}_6\text{NO)}_3 \xrightarrow{\text{灼烧}} \text{Al}_2\text{O}_3$</p>
+      <p>$m_{\text{Al}_2\text{O}_3} = 0.3600 \times \dfrac{M_{\text{Al}_2\text{O}_3}}{2 \times M_{\text{Al(C}_9\text{H}_6\text{NO)}_3}} = 0.3600 \times \dfrac{101.96}{918.88} = 0.0400\;\text{g}$</p>
+    </div>
+  </div>
+</div>
+
 <!-- ==================== 9.4 ==================== -->
 <h2>9.4 共沉淀与后沉淀</h2>
+<img class="ppt-img" src="temp_pages/ch9_p31.png" alt="共沉淀">
+<p class="ppt-caption">PPT: 共沉淀与后沉淀</p>
 
 <div class="card">
   <h3>共沉淀类型</h3>
@@ -184,9 +431,14 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="fb">
     <div class="t">2. 混晶（固溶体）</div>
-    <p>杂质离子半径和电荷与构晶离子相似，替代进入晶格。</p>
-    <p>例：$\text{BaSO}_4$ 中混入 $\text{PbSO}_4$；$\text{MgNH}_4\text{PO}_4$ 中混入 $\text{MnNH}_4\text{PO}_4$。</p>
-    <div class="warn">混晶共沉淀最难消除，只能通过分离干扰离子或选择其他沉淀方式解决。</div>
+    <img class="ppt-img" src="temp_pages/ch9_p43.png" alt="混晶共沉淀">
+    <p class="ppt-caption">PPT: 混晶（固溶体）的两种类型</p>
+    <p>杂质离子半径和电荷与构晶离子相似，替代进入晶格。分为两类：</p>
+    <ul>
+      <li><strong>同型混晶</strong>：杂质离子的半径与构晶离子半径相似，晶形结构相同，取代构晶离子半径进入沉淀，杂质位于正常晶格位置。生成混晶的选择性比较高，但也比较难避免 -- 因为不论浓度多小，只要构晶离子形成沉淀，杂质就一定会在沉淀过程中取代某一构晶离子而进入沉淀中。</li>
+      <li><strong>异型混晶</strong>：杂质离子与构晶离子的晶形结构不同，杂质位于正常晶格空隙处。例：$\text{BaSO}_4$-$\text{PbSO}_4$，$\text{AgCl}$-$\text{AgBr}$，$\text{KMnO}_4$-$\text{BaSO}_4$。</li>
+    </ul>
+    <div class="warn">混晶共沉淀最难消除。减小或消除的方法是事先将杂质离子分离去除，或选择其他沉淀形式。不能通过洗涤消除。</div>
   </div>
 
   <div class="fb">
@@ -197,20 +449,110 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="fb">
     <div class="t">4. 后沉淀</div>
-    <p>沉淀完成后，放置过程中溶液中原本不满足沉淀条件的组分逐渐沉积在已有沉淀表面。</p>
-    <p>例：$\text{CuS}$ 沉淀放置后，$\text{ZnS}$（本不该沉淀）在其表面沉积。</p>
-    <p>后沉淀随陈化时间增长而加剧。</p>
+    <img class="ppt-img" src="temp_pages/ch9_p44.png" alt="后沉淀">
+    <p class="ppt-caption">PPT: 后沉淀与共沉淀的区别</p>
+    <p>沉淀完成后，溶液中某些本来难以析出沉淀的组分，在已有沉淀表面上继续析出沉淀的现象。这种情况大多发生于该组分的<strong>过饱和</strong>溶液中。</p>
+    <p><strong>经典实例</strong>：在 0.01 mol/L HCl 中沉淀 $\text{Zn}^{2+}$ 时 $\text{Ni}^{2+}$ 的后沉淀：</p>
+    <table>
+      <tr><th>陈化时间 (h)</th><th>ZnS 沉淀中 Ni 的含量 (%)</th><th>无 ZnS 沉淀时形成的 Ni 沉淀比例</th></tr>
+      <tr><td>3</td><td>0</td><td>0</td></tr>
+      <tr><td>12</td><td>3.0</td><td>--</td></tr>
+      <tr><td>24</td><td>33</td><td>--</td></tr>
+      <tr><td>36</td><td>55</td><td>0</td></tr>
+      <tr><td>60</td><td>88</td><td>0</td></tr>
+    </table>
+    <div class="fb">
+      <div class="t">后沉淀与共沉淀的区别</div>
+      <ul>
+        <li>后沉淀引入杂质的量随沉淀在母液中<strong>放置时间的增长而增多</strong>，而共沉淀引入杂质的量受放置时间影响较小</li>
+        <li>不论杂质是在沉淀形成之前就存在的，还是沉淀形成后加入的，后沉淀引入杂质的量<strong>基本上一致</strong></li>
+        <li><strong>温度升高</strong>，后沉淀现象更为严重</li>
+        <li>后沉淀引入杂质的程度可能与被测组分的量<strong>几乎相同</strong></li>
+      </ul>
+    </div>
+    <div class="warn">避免或减少后沉淀的主要方法是<strong>缩短沉淀与母液共置的时间</strong>。这也是无定形沉淀不宜陈化、要趁热过滤的原因之一。</div>
   </div>
 </div>
 
 <div class="card">
-  <h3>减少共沉淀的方法</h3>
+  <h3>减少沉淀玷污的方法</h3>
+  <img class="ppt-img" src="temp_pages/ch9_p45.png" alt="减少沉淀玷污">
+  <p class="ppt-caption">PPT: 减少沉淀玷污的四种途径</p>
+  <table>
+    <tr><th>途径</th><th>具体方法</th><th>举例</th></tr>
+    <tr><td>选择适当的分析步骤</td><td>测定试样少量组分时，不要先沉淀主要组分，以免共沉淀包藏引入误差</td><td>--</td></tr>
+    <tr><td>选择合适的沉淀剂</td><td>选择有机沉淀剂可减少共沉淀（有机沉淀通常表面吸附少）</td><td>沉淀 $\text{BaSO}_4$ 时若有 $\text{Fe(II)}$，可用 EDTA 螯合 $\text{Fe}$</td></tr>
+    <tr><td>改变杂质存在形式</td><td>将杂质转化为不易被吸附的形式</td><td>将 $\text{Fe(II)}$ 氧化为 $\text{Fe(III)}$ 再用 EDTA 掩蔽</td></tr>
+    <tr><td>改善沉淀条件</td><td>控制溶液浓度、实施加入顺序和速率、洗涤、陈化</td><td>用均匀沉淀法降低过饱和度</td></tr>
+  </table>
   <ul>
-    <li><strong>洗涤</strong>：可去除表面吸附的杂质（对包夹无效）</li>
-    <li><strong>陈化</strong>：适用于晶形沉淀（小晶粒溶解重结晶释放包夹杂质）</li>
+    <li><strong>洗涤</strong>：可去除表面吸附的杂质（对包夹和混晶无效）</li>
+    <li><strong>陈化</strong>：适用于晶形沉淀（小晶粒溶解重结晶释放包夹杂质），但无定形沉淀不宜陈化（后沉淀加剧）</li>
     <li><strong>再沉淀（重沉淀）</strong>：溶解沉淀后重新沉淀一次，显著降低杂质含量（最有效的方法）</li>
-    <li><strong>改变沉淀条件</strong>：如改变沉淀剂加入顺序、控制沉淀速度等</li>
   </ul>
+</div>
+
+<div class="card">
+  <h3>沉淀条件的选择（获得沉淀形和称量形的方法）</h3>
+  <img class="ppt-img" src="temp_pages/ch9_p49.png" alt="沉淀条件选择">
+  <p class="ppt-caption">PPT: 沉淀条件的选择与均匀沉淀法的多种实现方式</p>
+
+  <div class="fb">
+    <div class="t">获得适宜沉淀的各种方法</div>
+    <table>
+      <tr><th>方法</th><th>原理</th><th>典型应用</th></tr>
+      <tr><td><strong>控制溶液 pH</strong></td><td>缓慢调节 pH 使沉淀逐步析出</td><td>$\text{Ca}^{2+} + \text{H}_2\text{C}_2\text{O}_4 \to$ 无沉淀（酸性）；$\text{CO(NH}_2)_2$ 水解产生 $\text{NH}_3$ 提高 pH 后沉淀</td></tr>
+      <tr><td><strong>酯类和有机物水解</strong></td><td>有机化合物缓慢水解释放沉淀剂</td><td>8-乙酰喹啉水解沉淀镍；硫代乙酰胺水解产生 $\text{H}_2\text{S}$</td></tr>
+      <tr><td><strong>络合物分解</strong></td><td>先用 EDTA 络合金属离子，再分解络合物释放金属离子</td><td>EDTA 络合阳离子后，加热再分解络合物</td></tr>
+      <tr><td><strong>氧化还原沉淀</strong></td><td>通过氧化还原改变离子价态实现沉淀</td><td>$\text{Ce(III)} \to \text{Ce(IV)}$ 再沉淀</td></tr>
+      <tr><td><strong>合成试剂法</strong></td><td>有机试剂合成进行沉淀</td><td>如丁二酮肟镍的生成</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <h3>沉淀重量法的特点</h3>
+  <img class="ppt-img" src="temp_pages/ch9_p53.png" alt="重量法特点">
+  <p class="ppt-caption">PPT: 沉淀重量法的优缺点和应用</p>
+
+  <div class="fb">
+    <div class="t">优点</div>
+    <ul>
+      <li>直接通过<strong>称量</strong>得到分析结果，准确度高</li>
+      <li><strong>不需要基准物质</strong>或标准试样</li>
+      <li>准确度比其他分析方法高，相对误差为 $0.1\% \sim 0.2\%$</li>
+    </ul>
+  </div>
+  <div class="warn">
+    <strong>缺点：</strong>
+    <ul>
+      <li>操作繁琐（沉淀、过滤、洗涤、灼烧），周期长</li>
+      <li>不适合测定<strong>微量组分</strong>或<strong>痕量组分</strong></li>
+    </ul>
+  </div>
+  <div class="tip">
+    <strong>应用：</strong>主要用于 $\text{S}$, $\text{Si}$, $\text{Ni}$, $\text{P}$ 等元素的精确测定。适用于常量组分的高准确度分析。
+  </div>
+</div>
+
+<div class="card">
+  <h3>混合试样的重量法计算（2022 期末计算思路）</h3>
+  <img class="ppt-img" src="temp_pages/ch9_p57.png" alt="混合试样计算">
+  <p class="ppt-caption">PPT: 混合试样的联立方程计算</p>
+
+  <div class="ex">
+    <strong>例题：</strong>称取 $\text{CaC}_2\text{O}_4$ 和 $\text{MgC}_2\text{O}_4$ 纯混合试样 0.6240 g，在 500$^\circ$C 下加热，定量转化为 $\text{CaCO}_3$ 和 $\text{MgCO}_3$，后重 0.4830 g。计算试样中 $\text{CaC}_2\text{O}_4$ 和 $\text{MgC}_2\text{O}_4$ 的质量分数。若在 900$^\circ$C 下加热转化为 CaO 和 MgO，质量为多少？
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>设 $\text{CaC}_2\text{O}_4$ 质量为 $x$，$\text{MgC}_2\text{O}_4$ 质量为 $y$：</p>
+      <p>$x + y = 0.6240$ ...(1)</p>
+      <p>转化关系：$\text{CaC}_2\text{O}_4 \to \text{CaCO}_3$，$\text{MgC}_2\text{O}_4 \to \text{MgCO}_3$</p>
+      <p>$x \times \dfrac{100.09}{128.10} + y \times \dfrac{84.31}{112.33} = 0.4830$ ...(2)</p>
+      <p>解方程组得：$x = 0.4856\;\text{g}$，$y = 0.1484\;\text{g}$</p>
+      <p>$w(\text{CaC}_2\text{O}_4) = \dfrac{0.4856}{0.6240} \times 100\% = 76.22\%$</p>
+      <p>$w(\text{MgC}_2\text{O}_4) = \dfrac{0.1484}{0.6240} \times 100\% = 23.78\%$</p>
+    </div>
+  </div>
 </div>
 
 <!-- ==================== 9.5 ==================== -->
@@ -224,6 +566,22 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     $$F = \frac{a \times M_{\text{被测物}}}{b \times M_{\text{称量形式}}}$$
     <p>$a/b$ 由称量形式与被测物之间的化学计量关系确定。</p>
   </div>
+</div>
+
+<div class="card">
+  <h3>常见换算因子表（Quiz 2 Q7 / 2022 期末 Q20 考点）</h3>
+  <table>
+    <tr><th>被测物</th><th>沉淀形式</th><th>称量形式</th><th>换算因子 $F$</th><th>数值</th></tr>
+    <tr><td>$\text{Fe}$</td><td>$\text{Fe(OH)}_3$</td><td>$\text{Fe}_2\text{O}_3$</td><td>$\dfrac{2M_{\text{Fe}}}{M_{\text{Fe}_2\text{O}_3}}$</td><td>$\dfrac{2 \times 55.85}{159.7} = 0.6994$</td></tr>
+    <tr><td>$\text{Al}$</td><td>$\text{Al(C}_9\text{H}_6\text{NO)}_3$</td><td>$\text{Al}_2\text{O}_3$</td><td>$\dfrac{M_{\text{Al}_2\text{O}_3}}{2M_{\text{Al(ox)}_3}}$</td><td>$\dfrac{101.96}{918.88} = 0.1110$</td></tr>
+    <tr><td>$\text{SO}_4^{2-}$（以 $\text{SO}_3$ 表示）</td><td>$\text{BaSO}_4$</td><td>$\text{BaSO}_4$</td><td>$\dfrac{M_{\text{SO}_3}}{M_{\text{BaSO}_4}}$</td><td>$\dfrac{80.06}{233.4} = 0.3430$</td></tr>
+    <tr><td>$\text{Cl}^-$</td><td>$\text{AgCl}$</td><td>$\text{AgCl}$</td><td>$\dfrac{M_{\text{Cl}}}{M_{\text{AgCl}}}$</td><td>$\dfrac{35.45}{143.32} = 0.2474$</td></tr>
+    <tr><td>$\text{Ca}$</td><td>$\text{CaC}_2\text{O}_4$</td><td>$\text{CaO}$</td><td>$\dfrac{M_{\text{Ca}}}{M_{\text{CaO}}}$</td><td>$\dfrac{40.08}{56.08} = 0.7147$</td></tr>
+    <tr><td>$\text{Mg}$</td><td>$\text{MgNH}_4\text{PO}_4$</td><td>$\text{Mg}_2\text{P}_2\text{O}_7$</td><td>$\dfrac{2M_{\text{Mg}}}{M_{\text{Mg}_2\text{P}_2\text{O}_7}}$</td><td>$\dfrac{2 \times 24.31}{222.55} = 0.2185$</td></tr>
+    <tr><td>$\text{Fe}_2\text{O}_3$</td><td>$\text{Fe(OH)}_3$</td><td>$\text{Fe}_2\text{O}_3$</td><td>$\dfrac{M_{\text{Fe}_2\text{O}_3}}{M_{\text{Fe}_2\text{O}_3}} = 1$</td><td>$1.000$</td></tr>
+  </table>
+
+  <div class="warn"><strong>Quiz 2 第 7 题 / 2022 期末 Q20：</strong>用重量法测定 Fe，沉淀形式为 $\text{Fe(OH)}_3$，灼烧为 $\text{Fe}_2\text{O}_3$，换算因子 $F = \dfrac{2M(\text{Fe})}{M(\text{Fe}_2\text{O}_3)} = 0.6994$。注意分子上的系数 2！</div>
 </div>
 
 <div class="ex">
@@ -245,8 +603,20 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 </div>
 
+<div class="ex">
+  <strong>例题：</strong>用沉淀法测定水泥中 $\text{Ca}$ 的含量。称取试样 1.0000 g，沉淀为 $\text{CaC}_2\text{O}_4$，灼烧为 $\text{CaO}$，称得 0.2800 g。求 $w(\text{Ca})$ 和 $w(\text{CaO})$。
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$w(\text{CaO}) = \dfrac{0.2800}{1.0000} \times 100\% = 28.00\%$（称量形式就是 CaO，所以 $F = 1$）</p>
+    <p>$w(\text{Ca}) = \dfrac{0.2800 \times F}{1.0000} \times 100\% = \dfrac{0.2800 \times 0.7147}{1.0000} \times 100\% = 20.01\%$</p>
+    <p>其中 $F = \dfrac{M_{\text{Ca}}}{M_{\text{CaO}}} = \dfrac{40.08}{56.08} = 0.7147$</p>
+  </div>
+</div>
+
 <!-- ==================== 9.6 ==================== -->
 <h2>9.6 沉淀滴定法 -- 银量法</h2>
+<img class="ppt-img" src="temp_pages/ch9_p59.png" alt="银量法">
+<p class="ppt-caption">PPT: 银量法 — 莫尔法、佛尔哈德法、法扬司法</p>
 
 <div class="card">
   <p>银量法基于 $\text{Ag}^+$ 与卤素离子的沉淀反应：$\text{Ag}^+ + \text{X}^- \rightarrow \text{AgX}\downarrow$</p>
@@ -254,7 +624,23 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 </div>
 
 <div class="card">
+  <h3>沉淀滴定曲线</h3>
+  <img class="ppt-img" src="temp_pages/ch9_p61.png" alt="滴定曲线">
+  <p class="ppt-caption">PPT: 沉淀滴定曲线</p>
+  <div class="fb">
+    <div class="t">滴定曲线的绘制</div>
+    <p>以金属离子的负对数（pM）或阴离子的负对数（pX）为纵坐标，以滴定剂的用量为横坐标作图。</p>
+    <p>以 0.1000 mol/L $\text{AgNO}_3$ 标准溶液滴定 20.00 mL 同浓度的 NaCl 为例：</p>
+    <p>滴定反应：$\text{Ag}^+ + \text{Cl}^- \to \text{AgCl}\downarrow$，$K_{sp} = 10^{-9.5}$</p>
+    <p>化学计量点时：$[\text{Ag}^+] = [\text{Cl}^-] = \sqrt{K_{sp}} = 10^{-4.75}$，即 $\text{pAg} = \text{pCl} = 4.75$</p>
+    <p>滴定突跃范围约 $\pm 2$ 个 pAg 单位。$K_{sp}$ 越小，突跃越大，终点越明显。</p>
+  </div>
+</div>
+
+<div class="card">
   <h3>1. Mohr 法（莫尔法）</h3>
+<img class="ppt-img" src="temp_pages/ch9_p60.png" alt="莫尔法">
+<p class="ppt-caption">PPT: 莫尔法(Mohr)原理</p>
   <div class="fb">
     <div class="t">原理</div>
     <p>以 $\text{K}_2\text{CrO}_4$ 为指示剂。化学计量点后，过量 $\text{Ag}^+$ 与 $\text{CrO}_4^{2-}$ 生成<strong>砖红色</strong> $\text{Ag}_2\text{CrO}_4$ 沉淀指示终点。</p>
@@ -269,11 +655,35 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <tr><td>滴定方式</td><td>直接滴定（$\text{AgNO}_3$ 滴定 $\text{Cl}^-$）</td></tr>
   </table>
 
+  <div class="fb">
+    <div class="t">Mohr 法指示剂浓度的理论推导</div>
+    <img class="ppt-img" src="temp_pages/ch9_p64.png" alt="Mohr法指示剂浓度">
+    <p class="ppt-caption">PPT: Mohr 法指示剂浓度的计算</p>
+    <p>要求：化学计量点时，$\text{Ag}^+$ 恰好能使 $\text{Ag}_2\text{CrO}_4$ 开始沉淀。</p>
+    <p>由 $K_{sp,\text{Ag}_2\text{CrO}_4} = 10^{-11.3}$，化学计量点时 $[\text{Ag}^+] = \sqrt{K_{sp,\text{AgCl}}} = \sqrt{10^{-9.50}}$</p>
+    $$[\text{CrO}_4^{2-}] = \frac{K_{sp,\text{Ag}_2\text{CrO}_4}}{[\text{Ag}^+]^2} = \frac{10^{-11.3}}{(\sqrt{10^{-9.50}})^2} = 10^{-1.8} \approx 1.6 \times 10^{-2}\;\text{mol/L}$$
+    <p>实验证明，控制 $[\text{CrO}_4^{2-}]$ 约为 $5.0 \times 10^{-3}\;\text{mol/L}$ 即可满足要求。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">Mohr 法的局限性（详细）</div>
+    <img class="ppt-img" src="temp_pages/ch9_p65.png" alt="Mohr法局限性">
+    <p class="ppt-caption">PPT: Mohr 法的局限性</p>
+    <ul>
+      <li>pH 范围 6.5~10.5。含铵盐时应控制在 <strong>6.5~7.2</strong></li>
+      <li>选择性较差：凡是能与 $\text{Ag}^+$、$\text{CrO}_4^{2-}$ 生成沉淀的阴、阳离子都干扰，如 $\text{SO}_4^{2-}$, $\text{PO}_4^{3-}$, $\text{AsO}_4^{3-}$, $\text{C}_2\text{O}_4^{2-}$; $\text{Ba}^{2+}$, $\text{Pb}^{2+}$, $\text{Hg}^{2+}$ 等应事先除去</li>
+      <li>不能在含氨基或其他能与 $\text{Ag}^+$ 生成络合物的物质存在下滴定</li>
+      <li><strong>Mohr 法只适用于测定 $\text{Cl}^-$ 和 $\text{Br}^-$，不能测定 $\text{I}^-$ 和 $\text{SCN}^-$</strong></li>
+    </ul>
+  </div>
+
   <div class="warn">Mohr 法不能用于测 $\text{I}^-$（AgI 沉淀吸附 $\text{I}^-$ 严重，终点不灵敏）和 $\text{SCN}^-$（$\text{Ag}_2\text{CrO}_4$ 转化为 AgSCN 的速度太慢）。</div>
 </div>
 
 <div class="card">
   <h3>2. Volhard 法（佛尔哈德法）</h3>
+<img class="ppt-img" src="temp_pages/ch9_p63.png" alt="佛尔哈德法">
+<p class="ppt-caption">PPT: 佛尔哈德法(Volhard)原理</p>
   <div class="fb">
     <div class="t">原理</div>
     <p>以<strong>铁铵矾</strong>（$\text{NH}_4\text{Fe(SO}_4)_2$）为指示剂，在 $\text{HNO}_3$ 酸性介质中，用 $\text{NH}_4\text{SCN}$（或 KSCN）标准溶液<strong>回滴</strong>过量的 $\text{Ag}^+$。</p>
@@ -290,18 +700,37 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </table>
 
   <div class="warn">
-    <strong>测 $\text{Cl}^-$ 时的特殊问题：</strong>AgCl 的溶解度大于 AgSCN，回滴过程中 $\text{SCN}^-$ 会与 AgCl 发生转化反应（$\text{AgCl} + \text{SCN}^- \rightarrow \text{AgSCN} + \text{Cl}^-$），导致终点偏晚、结果偏低。<br>
-    <strong>解决方法：</strong>
+    <strong>测 $\text{Cl}^-$ 时的特殊问题：</strong>
+    <img class="ppt-img" src="temp_pages/ch9_p68.png" alt="Volhard法测Cl问题">
+    <p class="ppt-caption">PPT: Volhard 法测 Cl$^-$ 的沉淀转化问题及措施</p>
+    <p>$K_{sp,\text{AgSCN}} = 10^{-11.7} < K_{sp,\text{AgCl}} = 10^{-9.5}$，即 AgSCN 比 AgCl 更难溶。回滴过程中 $\text{SCN}^-$ 会与 AgCl 发生沉淀转化反应：</p>
+    $$\text{AgCl} + \text{SCN}^- \rightleftharpoons \text{AgSCN} + \text{Cl}^-$$
+    <p>终点时红色褪去（有沉淀转化现象），导致终点偏晚、结果偏低。</p>
+    <strong>三种解决方法：</strong>
     <ul>
-      <li>加入有机溶剂（硝基苯）包裹 AgCl 沉淀，防止转化</li>
-      <li>过滤除去 AgCl 沉淀后再回滴（Volhard 改进法）</li>
+      <li><strong>过滤除去 AgCl</strong>（煮沸、凝聚、滤、洗），然后回滴滤液</li>
+      <li><strong>加硝基苯或 1,2-二氯乙烷</strong>包裹 AgCl 沉淀表面，防止转化</li>
+      <li><strong>增大铁离子浓度</strong>（$c_{\text{Fe}^{3+}} = 0.2\;\text{mol/L}$），减小 $[\text{SCN}^-]_{ep}$，降低沉淀转化的驱动力</li>
     </ul>
     <p>测 $\text{Br}^-$、$\text{I}^-$ 时无此问题（AgBr、AgI 比 AgSCN 更难溶）。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">Volhard 法的滴定条件</div>
+    <img class="ppt-img" src="temp_pages/ch9_p69.png" alt="Volhard法条件">
+    <p class="ppt-caption">PPT: Volhard 法滴定条件</p>
+    <ul>
+      <li>应当在<strong>酸性介质</strong>中进行，一般酸度大于 $0.3\;\text{mol/L}$ 的硝酸</li>
+      <li>测定碘化物时，<strong>必须先加 $\text{AgNO}_3$ 后加指示剂</strong>，防止 $\text{Fe}^{3+}$ 氧化 $\text{I}^-$，导致指示剂消耗，不能指示终点</li>
+      <li><strong>强氧化剂</strong>和氯的氧化物以及铜盐都与 $\text{SCN}^-$ 作用，会干扰测定，必须事先除去</li>
+    </ul>
   </div>
 </div>
 
 <div class="card">
   <h3>3. Fajans 法（法扬司法）</h3>
+<img class="ppt-img" src="temp_pages/ch9_p67.png" alt="法扬司法">
+<p class="ppt-caption">PPT: 法扬司法(Fajans)原理</p>
   <div class="fb">
     <div class="t">原理</div>
     <p>使用<strong>吸附指示剂</strong>。指示剂为有机阴离子染料，在化学计量点前后，沉淀表面电荷发生变化，指示剂被吸附/脱附导致颜色改变。</p>
@@ -313,32 +742,85 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <li><strong>化学计量点后</strong>：AgCl 表面吸附过量 $\text{Ag}^+$，带正电，吸附 $\text{Fl}^-$，沉淀表面变为<strong>粉红色</strong></li>
   </ul>
 
+  <div class="fb">
+    <div class="t">Fajans 法常用指示剂</div>
+    <img class="ppt-img" src="temp_pages/ch9_p71.png" alt="Fajans法指示剂">
+    <p class="ppt-caption">PPT: Fajans 法常用吸附指示剂一览</p>
+  </div>
   <table>
-    <tr><th>吸附指示剂</th><th>适用</th><th>条件</th></tr>
-    <tr><td>荧光黄</td><td>$\text{Cl}^-$</td><td>pH 7~10，弱酸性指示剂</td></tr>
-    <tr><td>曙红</td><td>$\text{Br}^-$, $\text{I}^-$, $\text{SCN}^-$</td><td>pH 2 即可（强酸性指示剂）</td></tr>
-    <tr><td>二甲基二碘荧光黄</td><td>$\text{Cl}^-$</td><td>弱酸性到中性</td></tr>
+    <tr><th>指示剂</th><th>$pK_a$</th><th>测定对象</th><th>滴定剂</th><th>颜色变化</th><th>滴定条件 (pH)</th></tr>
+    <tr><td>荧光黄</td><td>~7</td><td>$\text{Cl}^-$, $\text{Br}^-$, $\text{I}^-$</td><td>$\text{Ag}^+$</td><td>黄绿 $\to$ 粉红</td><td>7~10</td></tr>
+    <tr><td>二氯荧光黄</td><td>~4</td><td>$\text{Cl}^-$, $\text{Br}^-$, $\text{I}^-$</td><td>$\text{Ag}^+$</td><td>黄绿 $\to$ 粉红</td><td>4~10</td></tr>
+    <tr><td>曙红</td><td>~2</td><td>$\text{Br}^-$, $\text{I}^-$, $\text{SCN}^-$</td><td>$\text{Ag}^+$</td><td>粉红 $\to$ 红紫</td><td>2~10</td></tr>
+    <tr><td>甲基紫</td><td>--</td><td>$\text{Ag}^+$</td><td>$\text{Cl}^-$</td><td>红 $\to$ 紫</td><td>酸性</td></tr>
   </table>
+
+  <div class="fb">
+    <div class="t">胶体沉淀对卤离子及指示剂的吸附能力</div>
+    <p>吸附能力顺序（由强到弱）：</p>
+    $$\text{I}^- > \text{SCN}^- > \text{Br}^- > \underbrace{\text{曙红}}_{\text{(Eosin)}} > \text{Cl}^- > \underbrace{\text{荧光黄}}_{\text{(Fluorescein)}}$$
+    <p>指示剂的吸附能力必须<strong>小于</strong>被测离子，否则在化学计量点前就会被吸附，产生假终点。因此：</p>
+    <ul>
+      <li>荧光黄：可测 $\text{Cl}^-$（荧光黄吸附力弱于 $\text{Cl}^-$）</li>
+      <li>曙红：不能测 $\text{Cl}^-$（曙红吸附力强于 $\text{Cl}^-$，会在 $\text{Cl}^-$ 未消耗完时就被吸附），但可测 $\text{Br}^-$, $\text{I}^-$</li>
+    </ul>
+  </div>
 
   <div class="tip">
     <strong>Fajans 法使用条件：</strong>
+    <img class="ppt-img" src="temp_pages/ch9_p72.png" alt="Fajans法条件">
+    <p class="ppt-caption">PPT: Fajans 法滴定条件</p>
     <ul>
-      <li>沉淀为胶体状态（不宜加电解质凝聚），增大沉淀比表面积</li>
-      <li>控制适当 pH（指示剂需解离为离子态）</li>
-      <li>避免强光（某些吸附指示剂对光敏感）</li>
-      <li>沉淀的胶粒应能吸附指示剂（与构晶离子电荷匹配）</li>
+      <li>使沉淀具有大的比表面积，可加入<strong>糊精</strong>等胶体保护剂，防止胶体聚沉</li>
+      <li>溶液浓度不可太稀</li>
+      <li>滴定<strong>避免在强光照射下</strong>进行（某些吸附指示剂对光敏感）</li>
+      <li>溶液酸度适当（指示剂需解离为离子态）</li>
+      <li>胶体颗粒对指示剂的吸附能力应略<strong>小于</strong>对被测离子的吸附能力</li>
     </ul>
   </div>
 </div>
 
 <div class="card">
-  <h3>三种银量法对比</h3>
+  <h3>三种银量法详细对比（考试重点）</h3>
+  <img class="ppt-img" src="temp_pages/ch9_p73.png" alt="银量法总结">
+  <p class="ppt-caption">PPT: 银量法小结与应用</p>
+
   <table>
-    <tr><th>方法</th><th>指示剂</th><th>介质</th><th>滴定方式</th><th>优势/特点</th></tr>
-    <tr><td>Mohr</td><td>$\text{K}_2\text{CrO}_4$</td><td>中性~弱碱性</td><td>直接法</td><td>操作简单</td></tr>
-    <tr><td>Volhard</td><td>铁铵矾</td><td>$\text{HNO}_3$ 酸性</td><td>回滴法</td><td>适用范围广、酸性介质</td></tr>
-    <tr><td>Fajans</td><td>吸附指示剂</td><td>依指示剂而定</td><td>直接法</td><td>终点敏锐</td></tr>
+    <tr><th>项目</th><th>Mohr 法</th><th>Volhard 法</th><th>Fajans 法</th></tr>
+    <tr><td>标准溶液</td><td>$\text{AgNO}_3$</td><td>$\text{AgNO}_3$ + $\text{KSCN}$</td><td>$\text{AgNO}_3$</td></tr>
+    <tr><td>指示剂</td><td>铬酸钾 $\text{K}_2\text{CrO}_4$</td><td>铁铵矾 $\text{Fe}^{3+}$</td><td>吸附指示剂（荧光黄为例）</td></tr>
+    <tr><td>介质酸度</td><td>pH 6.5~10.5</td><td>强酸性 $[\text{H}^+] = 0.2 \sim 0.5\;\text{mol/L}$</td><td>pH 7~10（荧光黄）</td></tr>
+    <tr><td>滴定方式</td><td>直接法（$\text{Ag}^+$ 滴 $\text{X}^-$）</td><td>回滴法（$\text{SCN}^-$ 滴剩余 $\text{Ag}^+$）</td><td>直接法</td></tr>
+    <tr><td>可测离子</td><td>$\text{Cl}^-, \text{Br}^-$</td><td>$\text{Ag}^+, \text{X}^-, \text{SCN}^-$（最广）</td><td>$\text{Ag}^+, \text{X}^-, \text{SCN}^-$</td></tr>
+    <tr><td>终点颜色变化</td><td>白色 $\to$ <strong>砖红色</strong></td><td>白色 $\to$ <strong>浅红色</strong></td><td>黄绿色 $\to$ <strong>粉红色</strong></td></tr>
+    <tr><td>应用特点</td><td>干扰少的含氯试样</td><td>酸性介质中最广泛</td><td>终点最敏锐</td></tr>
+    <tr><td>缺点</td><td>pH 限制严、不能测 $\text{I}^-$</td><td>测 $\text{Cl}^-$ 需特殊处理</td><td>需胶体状态，避光</td></tr>
   </table>
+
+  <div class="fb">
+    <div class="t">银量法的实际应用</div>
+    <ul>
+      <li><strong>天然水、海水、生理盐水</strong>中卤素含量的测定</li>
+      <li><strong>有机卤化物</strong>中的卤素测定</li>
+      <li><strong>醋类药物、磺胺类药物</strong>（含卤素）的测定</li>
+      <li><strong>银合金</strong>中 $\text{Ag}^+$ 的测定</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>选择银量法的决策思路</h3>
+  <div class="fb">
+    <div class="t">什么情况下用哪种方法？</div>
+    <ul>
+      <li><strong>测 $\text{Cl}^-$（中性溶液）</strong> -- 优先 Mohr 法（最简单）；也可用 Fajans 法（荧光黄指示剂）</li>
+      <li><strong>测 $\text{Cl}^-$（酸性溶液）</strong> -- 只能用 Volhard 法（需加硝基苯或过滤）</li>
+      <li><strong>测 $\text{Br}^-$</strong> -- 三种方法均可；Volhard 法无需特殊处理</li>
+      <li><strong>测 $\text{I}^-$</strong> -- 只能用 Volhard 法或 Fajans 法（曙红指示剂）</li>
+      <li><strong>测 $\text{SCN}^-$</strong> -- 只能用 Volhard 法（直接滴定，无需回滴）</li>
+      <li><strong>酸性介质中测卤素</strong> -- 只能用 Volhard 法</li>
+    </ul>
+  </div>
 </div>
 
 <div class="ex">
@@ -350,6 +832,198 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <p>$n_{Cl^-} = n_{Ag^+} - n_{SCN^-} = 5.000 - 0.500 = 4.500\;\text{mmol}$</p>
     <p>$w_{Cl} = \frac{4.500 \times 10^{-3} \times 35.45}{0.3000} \times 100\% = 53.18\%$</p>
   </div>
+</div>
+
+<div class="ex">
+  <strong>例题：</strong>用 Mohr 法测定自来水中 $\text{Cl}^-$ 含量。取水样 100.0 mL，加入 $\text{K}_2\text{CrO}_4$ 指示剂，用 0.01000 mol/L $\text{AgNO}_3$ 标准溶液滴定至出现砖红色沉淀，消耗 15.20 mL。求水中 $\text{Cl}^-$ 浓度（mg/L）。
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$n_{Cl^-} = n_{Ag^+} = c \times V = 0.01000 \times 15.20 = 0.1520\;\text{mmol}$</p>
+    <p>$\rho_{Cl^-} = \dfrac{n_{Cl^-} \times M_{Cl}}{V_{\text{水样}}} = \dfrac{0.1520 \times 10^{-3} \times 35.45 \times 10^3}{0.1000} = 53.88\;\text{mg/L}$</p>
+  </div>
+</div>
+
+<!-- ==================== 9.7 ==================== -->
+<h2>9.7 常考计算题型总结</h2>
+
+<div class="card">
+  <h3>题型一：由 $K_{sp}$ 计算溶解度（含同离子效应）</h3>
+  <div class="fb">
+    <div class="t">解题步骤</div>
+    <ol>
+      <li>写出沉淀的溶解平衡方程</li>
+      <li>判断沉淀类型（MA, MA$_2$, M$_2$A 等）</li>
+      <li>如有同离子：令公共离子浓度 $\approx$ 外加浓度（忽略沉淀贡献）</li>
+      <li>代入 $K_{sp}$ 表达式求解 $s$</li>
+    </ol>
+  </div>
+
+  <div class="ex">
+    <strong>例题：</strong>已知 $\text{Ag}_2\text{CrO}_4$ 的 $K_{sp} = 1.12 \times 10^{-12}$，求其在 0.010 mol/L $\text{AgNO}_3$ 中的溶解度。
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>$\text{Ag}_2\text{CrO}_4 \rightleftharpoons 2\text{Ag}^+ + \text{CrO}_4^{2-}$</p>
+      <p>设溶解度为 $s$，则 $[\text{CrO}_4^{2-}] = s$，$[\text{Ag}^+] = 2s + 0.010 \approx 0.010$（因 $s$ 很小）</p>
+      <p>$K_{sp} = [\text{Ag}^+]^2[\text{CrO}_4^{2-}] = (0.010)^2 \times s = 1.12 \times 10^{-12}$</p>
+      <p>$s = \dfrac{1.12 \times 10^{-12}}{1.0 \times 10^{-4}} = 1.12 \times 10^{-8}\;\text{mol/L}$</p>
+      <p>对比纯水中：$s_0 = \left(\dfrac{K_{sp}}{4}\right)^{1/3} = \left(\dfrac{1.12 \times 10^{-12}}{4}\right)^{1/3} = 6.5 \times 10^{-5}\;\text{mol/L}$</p>
+      <p>同离子效应使溶解度降低了约 $6000$ 倍。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>题型二：换算因子与质量分数计算</h3>
+  <div class="fb">
+    <div class="t">解题步骤</div>
+    <ol>
+      <li>明确被测物和称量形式</li>
+      <li>写出二者之间的化学计量关系</li>
+      <li>计算换算因子 $F = \dfrac{a \times M_{\text{被测物}}}{b \times M_{\text{称量形式}}}$</li>
+      <li>$w = \dfrac{m_P \times F}{m_s} \times 100\%$</li>
+    </ol>
+  </div>
+  <div class="tip"><strong>做题技巧：</strong>写换算因子时，分子永远是被测物的摩尔质量，分母永远是称量形式的摩尔质量。系数由化学计量关系确定（几个称量形式对应几个被测物）。</div>
+</div>
+
+<div class="card">
+  <h3>题型三：Volhard 回滴法计算</h3>
+  <div class="fb">
+    <div class="t">解题步骤</div>
+    <ol>
+      <li>计算加入的 $\text{Ag}^+$ 总物质的量：$n_{\text{Ag}^+} = c_{\text{Ag}^+} \times V_{\text{Ag}^+}$</li>
+      <li>计算回滴消耗的 $\text{SCN}^-$ 物质的量：$n_{\text{SCN}^-} = c_{\text{SCN}^-} \times V_{\text{SCN}^-}$</li>
+      <li>被测物的物质的量：$n_{\text{X}^-} = n_{\text{Ag}^+} - n_{\text{SCN}^-}$</li>
+      <li>$w = \dfrac{n_{\text{X}^-} \times M_{\text{X}^-}}{m_s} \times 100\%$</li>
+    </ol>
+  </div>
+
+  <div class="ex">
+    <strong>例题：</strong>称取含 $\text{NaCl}$ 的试样 0.2500 g，溶于水后加入 0.1000 mol/L $\text{AgNO}_3$ 标准溶液 25.00 mL（过量），用 0.08000 mol/L $\text{NH}_4\text{SCN}$ 回滴，消耗 5.00 mL。求 $w(\text{NaCl})$。
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>$n_{\text{Ag}^+} = 0.1000 \times 25.00 = 2.500\;\text{mmol}$</p>
+      <p>$n_{\text{SCN}^-} = 0.08000 \times 5.00 = 0.4000\;\text{mmol}$</p>
+      <p>$n_{\text{Cl}^-} = 2.500 - 0.400 = 2.100\;\text{mmol}$</p>
+      <p>$n_{\text{NaCl}} = n_{\text{Cl}^-} = 2.100\;\text{mmol}$</p>
+      <p>$w(\text{NaCl}) = \dfrac{2.100 \times 10^{-3} \times 58.44}{0.2500} \times 100\% = 49.09\%$</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>题型四：Mohr 直接滴定法计算</h3>
+  <div class="fb">
+    <div class="t">解题步骤</div>
+    <ol>
+      <li>直接滴定：$n_{\text{X}^-} = n_{\text{Ag}^+} = c_{\text{Ag}^+} \times V_{\text{Ag}^+}$</li>
+      <li>$w = \dfrac{n_{\text{X}^-} \times M_{\text{X}^-}}{m_s} \times 100\%$</li>
+    </ol>
+    <p>Mohr 法计算最为简洁，因为是直接滴定，化学计量关系为 1:1。</p>
+  </div>
+</div>
+
+<!-- ==================== 真题 ==================== -->
+<h2>9.8 真题考点精讲</h2>
+
+<div class="card">
+  <h3>Quiz 2 考点汇总</h3>
+
+  <div class="fb">
+    <div class="t">Quiz 2 Q5：沉淀剂过量的作用</div>
+    <p><strong>问：</strong>沉淀重量法中加入过量沉淀剂的主要目的是什么？</p>
+    <p><strong>答：</strong>利用<strong>同离子效应</strong>降低沉淀的溶解度，使沉淀更完全。一般过量 50%~100%，但不宜过多（否则盐效应使溶解度回升，且可能引入更多杂质）。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">Quiz 2 Q7：换算因子</div>
+    <p><strong>问：</strong>用重量法测定铁含量，沉淀为 $\text{Fe(OH)}_3$，灼烧为 $\text{Fe}_2\text{O}_3$，求换算因子。</p>
+    <p><strong>答：</strong>$F = \dfrac{2M(\text{Fe})}{M(\text{Fe}_2\text{O}_3)} = \dfrac{2 \times 55.85}{159.7} = 0.6994$</p>
+    <p>注意：一个 $\text{Fe}_2\text{O}_3$ 含有 <strong>2 个</strong> Fe 原子，所以分子上系数为 2。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">Quiz 2 填空 1：PbSO$_4$ 的溶解度变化</div>
+    <p><strong>问：</strong>在 $\text{PbSO}_4$ 沉淀的溶液中逐渐加入 $\text{Na}_2\text{SO}_4$，溶解度如何变化？</p>
+    <p><strong>答：</strong>先<strong>降低</strong>（同离子效应占主导），后<strong>升高</strong>（盐效应占主导）。溶解度曲线呈 V 形。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">Quiz 2 填空：CaF$_2$ 在酸性条件下溶解度增大</div>
+    <p><strong>问：</strong>$\text{CaF}_2$ 在 pH=3 的溶液中溶解度是否大于纯水中？为什么？</p>
+    <p><strong>答：</strong>是。因为 $\text{F}^-$ 是弱酸 HF 的共轭碱，在酸性条件下 $\text{F}^-$ 被质子化生成 HF，降低了 $[\text{F}^-]$，平衡右移，溶解度增大（酸效应）。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">Quiz 2 计算 Q4：BaSO$_4$ 溶解度及同离子效应计算</div>
+    <p>详见 9.2 节中的完整计算例题。核心结论：同离子效应可使溶解度降低 $10^4$ 倍。</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3>2022 期末考点汇总</h3>
+
+  <div class="fb">
+    <div class="t">2022 期末 Q12：AgCl 溶解度 -- 先同离子效应后配位效应</div>
+    <p><strong>问：</strong>向 $\text{AgCl}$ 悬浊液中逐渐加入 $\text{NH}_3$ 溶液，溶解度如何变化？</p>
+    <p><strong>答：</strong></p>
+    <ul>
+      <li>开始加入少量 $\text{NH}_3$：$\text{NH}_3$ 不与 $\text{Ag}^+$ 大量配位，但 $\text{NH}_3 \cdot \text{H}_2\text{O}$ 略微抑制……实际上，加入 $\text{NH}_3$ 后配位效应立即出现：</li>
+      <li>$\text{Ag}^+ + 2\text{NH}_3 \rightleftharpoons \text{Ag(NH}_3)_2^+$</li>
+      <li>配位反应消耗了溶液中的 $\text{Ag}^+$，使 $\text{AgCl}$ 的溶解平衡右移，溶解度<strong>增大</strong></li>
+    </ul>
+    <p>但本题考的是一个更复杂的情景：先向 AgCl 中加入 NaCl（同离子效应，溶解度降低），再加入 $\text{NH}_3$（配位效应，溶解度升高）。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">2022 期末 Q15：聚集速度与定向速度</div>
+    <p><strong>问：</strong>当聚集速度大于定向速度时，生成何种沉淀？</p>
+    <p><strong>答：</strong>生成<strong>无定形沉淀（非晶形沉淀）</strong>。因为离子来不及按有序结构排列就聚集在一起，形成无序结构。</p>
+    <p>反之，定向速度 &gt; 聚集速度时生成晶形沉淀。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">2022 期末 Q20：换算因子 $2M(\text{Fe})/M(\text{Fe}_2\text{O}_3)$</div>
+    <p>与 Quiz 2 Q7 相同考点。$F = \dfrac{2 \times 55.85}{159.7} = 0.6994$。</p>
+    <p>这是高频考点，几乎每次考试都会涉及换算因子的计算。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">2022 期末填空 7：均匀沉淀法</div>
+    <p><strong>问：</strong>尿素与 $\text{ZnAc}_2$ 混合加热，是什么沉淀方法？</p>
+    <p><strong>答：</strong><strong>均匀沉淀法</strong>。尿素在加热条件下缓慢水解，在溶液内部均匀产生 $\text{OH}^-$，与 $\text{Zn}^{2+}$ 缓慢生成 $\text{Zn(OH)}_2$ 沉淀。优点是过饱和度低，沉淀颗粒大且纯净。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">2022 期末计算 Q2：8-羟基喹啉铝法测 Al</div>
+    <p>详见 9.3 节中的完整计算例题。</p>
+    <p>关键数据：$M_{\text{Al(C}_9\text{H}_6\text{NO)}_3} = 459.44$，$F = 26.98/459.44 = 0.05872$</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3>易错点与常见陷阱</h3>
+
+  <div class="warn">
+    <strong>陷阱 1：</strong>比较不同类型沉淀的溶解度时，不能直接比较 $K_{sp}$！
+    <p>例：$K_{sp}(\text{AgCl}) = 1.8 \times 10^{-10}$，$K_{sp}(\text{Ag}_2\text{CrO}_4) = 1.12 \times 10^{-12}$</p>
+    <p>虽然 $K_{sp}(\text{Ag}_2\text{CrO}_4)$ 更小，但 $s(\text{AgCl}) = 1.34 \times 10^{-5}$，$s(\text{Ag}_2\text{CrO}_4) = 6.5 \times 10^{-5}$</p>
+    <p>实际上 $\text{Ag}_2\text{CrO}_4$ 的溶解度更大！</p>
+  </div>
+
+  <div class="warn">
+    <strong>陷阱 2：</strong>换算因子的系数不要搞反。
+    <p>$F = \dfrac{2M(\text{Fe})}{M(\text{Fe}_2\text{O}_3)}$，系数 2 在分子上（因为一个 $\text{Fe}_2\text{O}_3$ 对应 2 个 Fe）。</p>
+    <p>如果测 $\text{Mg}$，称量形式为 $\text{Mg}_2\text{P}_2\text{O}_7$，则 $F = \dfrac{2M(\text{Mg})}{M(\text{Mg}_2\text{P}_2\text{O}_7)}$，系数 2 同样在分子上。</p>
+  </div>
+
+  <div class="warn">
+    <strong>陷阱 3：</strong>Volhard 法测 Cl$^-$ 的回滴计算中，不要忘记扣除 SCN$^-$！
+    <p>$n(\text{Cl}^-) = n(\text{Ag}^+)_{\text{total}} - n(\text{SCN}^-)_{\text{回滴}}$</p>
+  </div>
+
+  <div class="warn">
+    <strong>陷阱 4：</strong>后沉淀与共沉淀的区别 -- 后沉淀发生在沉淀完成<strong>之后</strong>，随陈化时间延长而加剧；共沉淀发生在沉淀<strong>过程中</strong>。对于无定形沉淀，不宜陈化的原因之一就是防止后沉淀。</div>
 </div>
 
 <script src="toc.js"></script>

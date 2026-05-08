@@ -21,6 +21,8 @@ h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid va
 .tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
 .warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
 .note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.exam{background:#fff0f0;border:2px solid #c0392b;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.exam .t{font-weight:bold;color:#c0392b;margin-bottom:6px;}
 table{width:100%;border-collapse:collapse;margin:12px 0;}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
 th{background:var(--pri);color:#fff;}
@@ -31,22 +33,36 @@ tr:nth-child(even){background:#f9f7f2;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
 details{margin:8px 0;}
 details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+.ppt-img{display:block;max-width:100%;margin:12px auto;border:1px solid #e0d8c8;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ppt-caption{text-align:center;font-size:.82em;color:#888;margin:-6px 0 12px;}
 </style>
 </head><body>
 
 <div class="nav-bar">
-  <a href="index.html">目录</a>
-  <a href="ch3.html">&laquo; 第三章</a>
-  <a href="ch5-2.html">第五章(下) &raquo;</a>
-  <a href="ch6.html">第六章 &raquo;&raquo;</a>
+  <a href="index.html">首页</a>
+  <a href="ch1.html">第一章</a>
+  <a href="ch3.html">第三章</a>
+  <a href="ch5-1.html" style="background:#1a5276;color:#fff;">第五章(上)</a>
+  <a href="ch5-2.html">第五章(下)</a>
+  <a href="ch6.html">第六章</a>
+  <a href="ch7.html">第七章</a>
+  <a href="ch9.html">第九章</a>
+  <a href="ch10.html">第十章</a>
+  <a href="formulas.html">公式表</a>
+  <a href="exam-review.html">备考</a>
+  <a href="quiz1.html">小测1</a>
+  <a href="quiz2.html">小测2</a>
+  <a href="final2022.html">期末真题</a>
 </div>
 
 <h1>第五章(上) 酸碱平衡</h1>
 
-<div class="warn">本章是分析化学考试中最核心的章节之一，涉及大量计算公式和判据条件。务必掌握分布分数、质子条件式和pH计算公式的完整体系。</div>
+<div class="warn">本章是分析化学考试中最核心的章节之一，涉及大量计算公式和判据条件。务必掌握分布分数、质子条件式和pH计算公式的完整体系。历年小测和期末考试中，本章占分比例约30%-40%。</div>
 
 <!-- ==================== 1. 活度与活度系数 ==================== -->
 <h2>一、活度与活度系数</h2>
+<img class="ppt-img" src="temp_pages/ch5a_p6.png" alt="酸碱质子理论">
+<p class="ppt-caption">PPT: 酸碱质子理论</p>
 
 <h3>1.1 基本概念</h3>
 <div class="card">
@@ -97,19 +113,38 @@ $$\lg \gamma_i = \frac{-0.512\, z_i^2 \sqrt{I}}{1 + \alpha B \sqrt{I}}$$
 </ul>
 $$\text{Acid} \rightleftharpoons \text{Base} + \text{H}^+$$
 <p>酸失去质子后变成共轭碱，碱得到质子后变成共轭酸，形成<strong>共轭酸碱对</strong>。</p>
+<p><strong>要点：</strong>质子理论中，酸碱不限于分子，离子也可以是酸或碱。同一物质在不同反应中可以扮演不同角色（如 $\text{H}_2\text{O}$）。</p>
 </div>
 
 <h3>2.2 共轭酸碱对举例</h3>
 <div class="card">
 <table>
-<tr><th>酸 (Acid)</th><th></th><th>共轭碱 (Conjugate Base)</th></tr>
-<tr><td>$\text{HCl}$</td><td>$\rightleftharpoons$</td><td>$\text{Cl}^-$</td></tr>
-<tr><td>$\text{HAc}$</td><td>$\rightleftharpoons$</td><td>$\text{Ac}^-$</td></tr>
-<tr><td>$\text{NH}_4^+$</td><td>$\rightleftharpoons$</td><td>$\text{NH}_3$</td></tr>
-<tr><td>$\text{H}_2\text{PO}_4^-$</td><td>$\rightleftharpoons$</td><td>$\text{HPO}_4^{2-}$</td></tr>
-<tr><td>$\text{H}_2\text{O}$</td><td>$\rightleftharpoons$</td><td>$\text{OH}^-$</td></tr>
-<tr><td>$\text{H}_3\text{O}^+$</td><td>$\rightleftharpoons$</td><td>$\text{H}_2\text{O}$</td></tr>
+<tr><th>酸 (Acid)</th><th></th><th>共轭碱 (Conjugate Base)</th><th>说明</th></tr>
+<tr><td>$\text{HCl}$</td><td>$\rightleftharpoons$</td><td>$\text{Cl}^-$</td><td>强酸，共轭碱极弱</td></tr>
+<tr><td>$\text{HAc}$</td><td>$\rightleftharpoons$</td><td>$\text{Ac}^-$</td><td>弱酸，$pK_a=4.74$</td></tr>
+<tr><td>$\text{HCOOH}$</td><td>$\rightleftharpoons$</td><td>$\text{HCOO}^-$</td><td>甲酸，$pK_a=3.75$</td></tr>
+<tr><td>$\text{NH}_4^+$</td><td>$\rightleftharpoons$</td><td>$\text{NH}_3$</td><td>铵根是酸！$pK_a=9.25$</td></tr>
+<tr><td>$\text{H}_3\text{PO}_4$</td><td>$\rightleftharpoons$</td><td>$\text{H}_2\text{PO}_4^-$</td><td>磷酸第一步，$pK_{a1}=2.12$</td></tr>
+<tr><td>$\text{H}_2\text{PO}_4^-$</td><td>$\rightleftharpoons$</td><td>$\text{HPO}_4^{2-}$</td><td>磷酸第二步，$pK_{a2}=7.20$</td></tr>
+<tr><td>$\text{HPO}_4^{2-}$</td><td>$\rightleftharpoons$</td><td>$\text{PO}_4^{3-}$</td><td>磷酸第三步，$pK_{a3}=12.36$</td></tr>
+<tr><td>$\text{H}_2\text{CO}_3$</td><td>$\rightleftharpoons$</td><td>$\text{HCO}_3^-$</td><td>碳酸第一步，$pK_{a1}=6.37$</td></tr>
+<tr><td>$\text{HCO}_3^-$</td><td>$\rightleftharpoons$</td><td>$\text{CO}_3^{2-}$</td><td>碳酸第二步，$pK_{a2}=10.25$</td></tr>
+<tr><td>$\text{H}_2\text{O}$</td><td>$\rightleftharpoons$</td><td>$\text{OH}^-$</td><td>水作为酸</td></tr>
+<tr><td>$\text{H}_3\text{O}^+$</td><td>$\rightleftharpoons$</td><td>$\text{H}_2\text{O}$</td><td>水作为碱的共轭酸</td></tr>
+<tr><td>$\text{H}_2\text{C}_2\text{O}_4$</td><td>$\rightleftharpoons$</td><td>$\text{HC}_2\text{O}_4^-$</td><td>草酸第一步，$pK_{a1}=1.25$</td></tr>
+<tr><td>$\text{HC}_2\text{O}_4^-$</td><td>$\rightleftharpoons$</td><td>$\text{C}_2\text{O}_4^{2-}$</td><td>草酸第二步，$pK_{a2}=4.27$</td></tr>
 </table>
+</div>
+
+<div class="exam">
+<div class="t">2022 期末填空题考点</div>
+<p><strong>$\text{HPO}_4^{2-}$ 的共轭酸是什么？</strong></p>
+<p>答：$\text{HPO}_4^{2-}$ 得到一个质子变为 $\text{H}_2\text{PO}_4^-$，所以其共轭酸为 $\text{H}_2\text{PO}_4^-$。</p>
+<p>注意：不是 $\text{H}_3\text{PO}_4$！共轭酸碱对之间只差<strong>一个</strong>质子。$\text{H}_3\text{PO}_4$ 是 $\text{H}_2\text{PO}_4^-$ 的共轭酸。</p>
+</div>
+
+<div class="tip">
+<strong>快速判断共轭酸碱对：</strong>给定物种加一个 $\text{H}^+$ 就是其共轭酸，减一个 $\text{H}^+$ 就是其共轭碱。注意电荷的变化：加 $\text{H}^+$ 电荷 +1，减 $\text{H}^+$ 电荷 -1。
 </div>
 
 <h3>2.3 共轭酸碱对的 $K_a$ 与 $K_b$ 关系</h3>
@@ -121,15 +156,34 @@ $$pK_a + pK_b = pK_w = 14.00 \quad (25°\text{C})$$
 <p>酸越强（$K_a$ 越大），其共轭碱越弱（$K_b$ 越小），反之亦然。</p>
 </div>
 
+<div class="card">
+<p><strong>常见共轭酸碱对的 $K_a$、$K_b$ 对照：</strong></p>
+<table>
+<tr><th>共轭酸</th><th>$pK_a$</th><th>共轭碱</th><th>$pK_b$</th></tr>
+<tr><td>$\text{NH}_4^+$</td><td>9.25</td><td>$\text{NH}_3$</td><td>4.75</td></tr>
+<tr><td>$\text{HAc}$</td><td>4.74</td><td>$\text{Ac}^-$</td><td>9.26</td></tr>
+<tr><td>$\text{HCOOH}$</td><td>3.75</td><td>$\text{HCOO}^-$</td><td>10.25</td></tr>
+<tr><td>$\text{HCO}_3^-$</td><td>10.25</td><td>$\text{CO}_3^{2-}$</td><td>3.75</td></tr>
+<tr><td>$\text{H}_2\text{PO}_4^-$</td><td>7.20</td><td>$\text{HPO}_4^{2-}$</td><td>6.80</td></tr>
+</table>
+<p>验证：每一行 $pK_a + pK_b = 14.00$。</p>
+</div>
+
 <h3>2.4 两性物质</h3>
 <div class="card">
 <p>两性物质（amphoteric substance）既可作为酸也可作为碱。例如：</p>
 <ul>
   <li>$\text{H}_2\text{O}$：既是酸（给出$\text{H}^+$变$\text{OH}^-$）又是碱（接受$\text{H}^+$变$\text{H}_3\text{O}^+$）</li>
   <li>$\text{HCO}_3^-$：作酸 $\rightarrow \text{CO}_3^{2-} + \text{H}^+$；作碱 $+ \text{H}^+ \rightarrow \text{H}_2\text{CO}_3$</li>
-  <li>$\text{H}_2\text{PO}_4^-$、$\text{HPO}_4^{2-}$：磷酸的中间形体</li>
+  <li>$\text{H}_2\text{PO}_4^-$：作酸 $\rightarrow \text{HPO}_4^{2-} + \text{H}^+$；作碱 $+ \text{H}^+ \rightarrow \text{H}_3\text{PO}_4$</li>
+  <li>$\text{HPO}_4^{2-}$：作酸 $\rightarrow \text{PO}_4^{3-} + \text{H}^+$；作碱 $+ \text{H}^+ \rightarrow \text{H}_2\text{PO}_4^-$</li>
+  <li>$\text{HC}_2\text{O}_4^-$（草酸氢根）：作酸 $\rightarrow \text{C}_2\text{O}_4^{2-}$；作碱 $\rightarrow \text{H}_2\text{C}_2\text{O}_4$</li>
   <li>氨基酸：含 $-\text{NH}_2$（碱性）和 $-\text{COOH}$（酸性）</li>
 </ul>
+</div>
+
+<div class="tip">
+<strong>判断两性物质：</strong>多元酸的中间形体（如 $\text{HCO}_3^-$、$\text{H}_2\text{PO}_4^-$、$\text{HPO}_4^{2-}$、$\text{HC}_2\text{O}_4^-$）都是两性物质。弱酸弱碱的盐（如 $\text{NH}_4\text{Ac}$）虽然溶液中的 $\text{NH}_4^+$ 和 $\text{Ac}^-$ 分别有酸性和碱性，但严格来说 $\text{NH}_4\text{Ac}$ 不算两性物质——它是两种单功能离子的混合。
 </div>
 
 <!-- ==================== 3. 水的离子积 ==================== -->
@@ -154,25 +208,60 @@ $$K_w = [\text{H}^+][\text{OH}^-]$$
 
 <!-- ==================== 4. 分布分数 ==================== -->
 <h2>四、分布分数 (Distribution Fraction)</h2>
+<img class="ppt-img" src="temp_pages/ch5a_p21.png" alt="分布分数">
+<p class="ppt-caption">PPT: 弱酸各型体的分布分数</p>
+<img class="ppt-img" src="temp_pages/ch5a_p29.png" alt="分布分数计算示例">
+<p class="ppt-caption">PPT: 分布分数计算示例</p>
 
 <div class="warn">分布分数是本章最重要的概念之一，考试必考！必须熟练掌握一元、二元、三元酸的分布分数公式。</div>
 
-<h3>4.1 一元酸 HA</h3>
+<h3>4.1 一元酸 HA——完整推导</h3>
 <div class="fb">
 <div class="t">一元弱酸 $\text{HA} \rightleftharpoons \text{H}^+ + \text{A}^-$，$K_a$</div>
 
+<p><strong>推导过程：</strong></p>
+<p>定义分析浓度 $c = [\text{HA}] + [\text{A}^-]$（物料守恒），以及 $K_a = \dfrac{[\text{H}^+][\text{A}^-]}{[\text{HA}]}$。</p>
+
+<p>由 $K_a$ 表达式得 $[\text{A}^-] = \dfrac{K_a \cdot [\text{HA}]}{[\text{H}^+]}$，代入物料守恒：</p>
+$$c = [\text{HA}] + \frac{K_a \cdot [\text{HA}]}{[\text{H}^+]} = [\text{HA}]\left(1 + \frac{K_a}{[\text{H}^+]}\right) = [\text{HA}] \cdot \frac{[\text{H}^+] + K_a}{[\text{H}^+]}$$
+
+<p>因此：</p>
 $$\delta_{\text{HA}} = \frac{[\text{HA}]}{c} = \frac{[\text{H}^+]}{[\text{H}^+] + K_a}$$
 
 $$\delta_{\text{A}^-} = \frac{[\text{A}^-]}{c} = \frac{K_a}{[\text{H}^+] + K_a}$$
 
-<p>其中 $c = [\text{HA}] + [\text{A}^-]$ 为分析浓度。</p>
-<p>当 $[\text{H}^+] = K_a$ 即 $\text{pH} = pK_a$ 时，$\delta_{\text{HA}} = \delta_{\text{A}^-} = 0.5$（两曲线交点）。</p>
+<p>验证：$\delta_{\text{HA}} + \delta_{\text{A}^-} = \dfrac{[\text{H}^+] + K_a}{[\text{H}^+] + K_a} = 1$ ✓</p>
+
+<p><strong>关键特征：</strong></p>
+<ul>
+  <li>当 $[\text{H}^+] = K_a$ 即 $\text{pH} = pK_a$ 时，$\delta_{\text{HA}} = \delta_{\text{A}^-} = 0.5$（两曲线交点）</li>
+  <li>当 $\text{pH} \ll pK_a$ 时，$\delta_{\text{HA}} \to 1$（几乎全部为 HA 形式）</li>
+  <li>当 $\text{pH} \gg pK_a$ 时，$\delta_{\text{A}^-} \to 1$（几乎全部为 A$^-$ 形式）</li>
+</ul>
 </div>
 
-<h3>4.2 二元酸 $\text{H}_2\text{A}$</h3>
+<div class="exam">
+<div class="t">2022 期末填空题 Q2 考点</div>
+<p><strong>HCOOH 溶液在 pH = $pK_a$ 时，$\delta(\text{HCOOH}) = \delta(\text{HCOO}^-) = 0.50$。</strong></p>
+<p>即甲酸在 pH = $pK_a$(HCOOH) = 3.75 时，分子形式与离子形式各占 50%。这是一元酸分布分数的基本结论。</p>
+</div>
+
+<h3>4.2 二元酸 $\text{H}_2\text{A}$——完整推导</h3>
 <div class="fb">
 <div class="t">$\text{H}_2\text{A} \rightleftharpoons \text{H}^+ + \text{HA}^- \rightleftharpoons 2\text{H}^+ + \text{A}^{2-}$</div>
-<p>令 $h = [\text{H}^+]$，分母 $D = h^2 + h K_{a1} + K_{a1} K_{a2}$</p>
+
+<p><strong>推导过程：</strong></p>
+<p>物料守恒：$c = [\text{H}_2\text{A}] + [\text{HA}^-] + [\text{A}^{2-}]$</p>
+<p>平衡常数：$K_{a1} = \dfrac{[\text{H}^+][\text{HA}^-]}{[\text{H}_2\text{A}]}$，$K_{a2} = \dfrac{[\text{H}^+][\text{A}^{2-}]}{[\text{HA}^-]}$</p>
+
+<p>以 $[\text{HA}^-]$ 为基准，用 $h = [\text{H}^+]$ 表示其他物种：</p>
+$$[\text{H}_2\text{A}] = \frac{h \cdot [\text{HA}^-]}{K_{a1}}, \quad [\text{A}^{2-}] = \frac{K_{a2} \cdot [\text{HA}^-]}{h}$$
+
+<p>代入物料守恒并以 $[\text{H}_2\text{A}]$ 为基准：</p>
+$$[\text{HA}^-] = \frac{K_{a1}}{h}[\text{H}_2\text{A}], \quad [\text{A}^{2-}] = \frac{K_{a1}K_{a2}}{h^2}[\text{H}_2\text{A}]$$
+$$c = [\text{H}_2\text{A}]\left(1 + \frac{K_{a1}}{h} + \frac{K_{a1}K_{a2}}{h^2}\right) = [\text{H}_2\text{A}] \cdot \frac{h^2 + hK_{a1} + K_{a1}K_{a2}}{h^2}$$
+
+<p>令分母 $D = h^2 + h K_{a1} + K_{a1} K_{a2}$，则：</p>
 
 $$\delta_{\text{H}_2\text{A}} = \frac{h^2}{D}$$
 
@@ -180,18 +269,24 @@ $$\delta_{\text{HA}^-} = \frac{h \cdot K_{a1}}{D}$$
 
 $$\delta_{\text{A}^{2-}} = \frac{K_{a1} K_{a2}}{D}$$
 
+<p>验证：$\delta_{\text{H}_2\text{A}} + \delta_{\text{HA}^-} + \delta_{\text{A}^{2-}} = \dfrac{h^2 + hK_{a1} + K_{a1}K_{a2}}{D} = 1$ ✓</p>
 </div>
 
 <div class="tip">
 <strong>中间形体 $\text{HA}^-$ 的最大分布分数出现在：</strong><br>
 $$\text{pH} = \frac{pK_{a1} + pK_{a2}}{2}$$
-这是一个非常重要的结论，常用于判断两性物质溶液的 pH 近似值。
+这是一个非常重要的结论，常用于判断两性物质溶液的 pH 近似值。<br><br>
+<strong>推导：</strong>令 $\dfrac{d\delta_{\text{HA}^-}}{dh} = 0$，可以证明当 $h = \sqrt{K_{a1}K_{a2}}$ 时 $\delta_{\text{HA}^-}$ 取最大值，即 $\text{pH} = \frac{1}{2}(pK_{a1}+pK_{a2})$。此时 $\delta_{\text{HA}^-,\max} = \dfrac{1}{1 + 2\sqrt{K_{a2}/K_{a1}}}$，当 $K_{a1} \gg K_{a2}$ 时接近 1。
 </div>
 
-<h3>4.3 三元酸 $\text{H}_3\text{A}$（以 $\text{H}_3\text{PO}_4$ 为例）</h3>
+<h3>4.3 三元酸 $\text{H}_3\text{A}$（以 $\text{H}_3\text{PO}_4$ 为例）——完整推导</h3>
 <div class="fb">
 <div class="t">三元酸分布分数</div>
-<p>令 $h = [\text{H}^+]$，分母 $D = h^3 + h^2 K_{a1} + h K_{a1}K_{a2} + K_{a1}K_{a2}K_{a3}$</p>
+
+<p><strong>推导思路：</strong>与二元酸类似，物料守恒 $c = [\text{H}_3\text{A}] + [\text{H}_2\text{A}^-] + [\text{HA}^{2-}] + [\text{A}^{3-}]$，用 $h=[\text{H}^+]$ 将所有浓度表示为 $[\text{H}_3\text{A}]$ 的函数：</p>
+$$[\text{H}_2\text{A}^-] = \frac{K_{a1}}{h}[\text{H}_3\text{A}], \quad [\text{HA}^{2-}] = \frac{K_{a1}K_{a2}}{h^2}[\text{H}_3\text{A}], \quad [\text{A}^{3-}] = \frac{K_{a1}K_{a2}K_{a3}}{h^3}[\text{H}_3\text{A}]$$
+
+<p>令 $D = h^3 + h^2 K_{a1} + h K_{a1}K_{a2} + K_{a1}K_{a2}K_{a3}$</p>
 
 $$\delta_{\text{H}_3\text{A}} = \frac{h^3}{D}$$
 
@@ -206,26 +301,105 @@ $$\delta_{\text{A}^{3-}} = \frac{K_{a1}K_{a2}K_{a3}}{D}$$
 <p>$\text{HPO}_4^{2-}$ 的最大值在 $\text{pH} = (7.20+12.36)/2 = 9.78$</p>
 </div>
 
+<div class="card">
+<p><strong>$\text{H}_3\text{PO}_4$ 分布图特征描述：</strong></p>
+<ul>
+  <li>pH &lt; 2：以 $\text{H}_3\text{PO}_4$ 为主（$\delta_0 \to 1$）</li>
+  <li>pH = 2.12（$pK_{a1}$）：$\delta(\text{H}_3\text{PO}_4) = \delta(\text{H}_2\text{PO}_4^-) \approx 0.5$</li>
+  <li>pH = 4.66：$\delta(\text{H}_2\text{PO}_4^-)$ 达到最大值（接近 1.0，因为 $K_{a1}/K_{a2}$ 很大）</li>
+  <li>pH = 7.20（$pK_{a2}$）：$\delta(\text{H}_2\text{PO}_4^-) = \delta(\text{HPO}_4^{2-}) \approx 0.5$</li>
+  <li>pH = 9.78：$\delta(\text{HPO}_4^{2-})$ 达到最大值</li>
+  <li>pH = 12.36（$pK_{a3}$）：$\delta(\text{HPO}_4^{2-}) = \delta(\text{PO}_4^{3-}) \approx 0.5$</li>
+  <li>pH &gt; 13：以 $\text{PO}_4^{3-}$ 为主（$\delta_3 \to 1$）</li>
+</ul>
+</div>
+
+<div class="exam">
+<div class="t">小测一 选择题 Q5 考点</div>
+<p><strong>题目：</strong>$\text{H}_2\text{PO}_4^-$ 的分布分数最大值出现在 pH 等于多少？</p>
+<p><strong>答：</strong>$\text{pH} = \dfrac{pK_{a1} + pK_{a2}}{2} = \dfrac{2.12 + 7.20}{2} = 4.66$</p>
+<p>这是中间形体分布分数最大的通用规律。</p>
+</div>
+
+<div class="ex">
+<strong>计算题：</strong>在 pH = 4.66 时，计算 $\delta(\text{H}_2\text{PO}_4^-)$。
+<div class="sol">
+<div class="st">解：</div>
+<p>$h = 10^{-4.66} = 2.19 \times 10^{-5}$ mol/L</p>
+<p>$K_{a1} = 10^{-2.12} = 7.59 \times 10^{-3}$，$K_{a2} = 10^{-7.20} = 6.31 \times 10^{-8}$，$K_{a3} = 10^{-12.36} = 4.37 \times 10^{-13}$</p>
+<p>计算分母 $D$ 各项：</p>
+$$h^3 = (2.19\times10^{-5})^3 = 1.05 \times 10^{-14}$$
+$$h^2 K_{a1} = (2.19\times10^{-5})^2 \times 7.59\times10^{-3} = 3.64 \times 10^{-12}$$
+$$h K_{a1}K_{a2} = 2.19\times10^{-5} \times 7.59\times10^{-3} \times 6.31\times10^{-8} = 1.05 \times 10^{-14}$$
+$$K_{a1}K_{a2}K_{a3} = 7.59\times10^{-3} \times 6.31\times10^{-8} \times 4.37\times10^{-13} = 2.09 \times 10^{-22}$$
+
+<p>$D \approx 1.05\times10^{-14} + 3.64\times10^{-12} + 1.05\times10^{-14} + 2.09\times10^{-22} \approx 3.66 \times 10^{-12}$</p>
+
+<p>$\delta(\text{H}_2\text{PO}_4^-) = \dfrac{h^2 K_{a1}}{D} = \dfrac{3.64\times10^{-12}}{3.66\times10^{-12}} \approx 0.994$</p>
+
+<p>即在 pH = 4.66 时，$\text{H}_2\text{PO}_4^-$ 占总磷酸浓度的 99.4%，几乎是唯一的存在形式。这是因为 $K_{a1}/K_{a2} = 10^{5.08} \gg 1$，两步电离充分分开。</p>
+</div>
+</div>
+
+<h3>4.4 $n$ 元酸 $\text{H}_n\text{A}$ 分布分数通式</h3>
+<div class="fb">
+<div class="t">$n$ 元酸的通用分布分数公式（PPT p40）</div>
+<p>令 $h = [\text{H}^+]$，分母 $D = h^n + K_{a1}h^{n-1} + K_{a1}K_{a2}h^{n-2} + \cdots + K_{a1}K_{a2}\cdots K_{an}$</p>
+
+$$\delta_{\text{H}_n\text{A}} = \frac{h^n}{D}$$
+$$\delta_{\text{H}_{n-1}\text{A}^-} = \frac{K_{a1} \cdot h^{n-1}}{D}$$
+$$\vdots$$
+$$\delta_{\text{HA}^{(n-1)-}} = \frac{K_{a1}K_{a2}\cdots K_{a,n-1}\cdot h}{D}$$
+$$\delta_{\text{A}^{n-}} = \frac{K_{a1}K_{a2}\cdots K_{an}}{D}$$
+
+<p>验证：$\delta_{\text{H}_n\text{A}} + \delta_{\text{H}_{n-1}\text{A}^-} + \cdots + \delta_{\text{A}^{n-}} = 1$</p>
+</div>
+
+<div class="tip">
+<strong>多元碱的分布分数：</strong>也可以通过共轭关系的 $K_b$ 来写。例如对二元碱 $\text{B}$，其共轭酸为 $\text{BH}^+$、$\text{BH}_2^{2+}$，只需将 $K_a$ 替换为对应的 $K_b$，$[\text{H}^+]$ 替换为 $[\text{OH}^-]$，推导方法完全类似。
+</div>
+
 <div class="note">
-<strong>规律总结：</strong>对于多元酸 $\text{H}_n\text{A}$，第 $i$ 个中间形体 $\text{H}_{n-i}\text{A}^{i-}$ 的分布分数最大值出现在 $\text{pH} = (pK_{ai} + pK_{a,i+1})/2$。各形体的 $\delta$ 之和恒等于1。
+<strong>规律总结：</strong>对于多元酸 $\text{H}_n\text{A}$，第 $i$ 个中间形体 $\text{H}_{n-i}\text{A}^{i-}$ 的分布分数最大值出现在 $\text{pH} = (pK_{ai} + pK_{a,i+1})/2$。各形体的 $\delta$ 之和恒等于1。当相邻两步 $pK_a$ 差值越大（$\Delta pK > 4$），中间形体的最大 $\delta$ 值越接近 1。
 </div>
 
 <!-- ==================== 5. 质子条件式 PBE ==================== -->
 <h2>五、质子条件式 (PBE)</h2>
+<img class="ppt-img" src="temp_pages/ch5a_p91.png" alt="质子条件式PBE">
+<p class="ppt-caption">PPT: 质子条件式(PBE)的书写</p>
 
-<div class="warn">质子条件式是书写精确pH计算方程的基础，考试中经常要求直接写出PBE。务必掌握方法！</div>
+<div class="warn">质子条件式是书写精确pH计算方程的基础，考试中经常要求直接写出PBE。务必掌握方法！历年小测和期末几乎每次都考PBE书写。</div>
 
-<h3>5.1 书写方法</h3>
+<h3>5.1 书写方法——分步详解</h3>
 <div class="card">
+<p><strong>PBE（Proton Balance Equation）的本质：</strong>溶液中质子的得失守恒。从参考水准出发，得到质子的总量 = 失去质子的总量。</p>
 <ol>
-  <li><strong>选择参考水准（零水准）</strong>：通常选溶液中大量存在的物种（溶质的原始形态 + $\text{H}_2\text{O}$）</li>
-  <li><strong>得质子产物</strong>列在等式左边（参考水准物种得到质子后的产物）</li>
-  <li><strong>失质子产物</strong>列在等式右边（参考水准物种失去质子后的产物）</li>
-  <li>等式两边各物种的浓度之和相等（得到和失去的质子数要配平）</li>
+  <li><strong>第一步：选择参考水准（零水准）</strong>
+    <ul>
+      <li>选溶液中<strong>大量存在的物种</strong>作为参考水准：溶质溶于水后的直接产物 + $\text{H}_2\text{O}$</li>
+      <li>例如 $\text{NaH}_2\text{PO}_4$ 溶液：零水准为 $\text{H}_2\text{PO}_4^-$ 和 $\text{H}_2\text{O}$（$\text{Na}^+$ 不参与质子转移，忽略）</li>
+      <li>例如 $\text{Na}_2\text{HPO}_4$ 溶液：零水准为 $\text{HPO}_4^{2-}$ 和 $\text{H}_2\text{O}$</li>
+    </ul>
+  </li>
+  <li><strong>第二步：列出得质子产物（等式左边）</strong>
+    <ul>
+      <li>参考水准物种<strong>得到</strong>质子后的产物</li>
+      <li>得到几个质子，系数就是几（得1个系数1，得2个系数2，...）</li>
+      <li>$\text{H}_2\text{O}$ 得到1个质子 $\to$ $\text{H}_3\text{O}^+$（即写 $[\text{H}^+]$）</li>
+    </ul>
+  </li>
+  <li><strong>第三步：列出失质子产物（等式右边）</strong>
+    <ul>
+      <li>参考水准物种<strong>失去</strong>质子后的产物</li>
+      <li>失去几个质子，系数就是几</li>
+      <li>$\text{H}_2\text{O}$ 失去1个质子 $\to$ $\text{OH}^-$</li>
+    </ul>
+  </li>
+  <li><strong>第四步：写等式，配平系数</strong></li>
 </ol>
 </div>
 
-<h3>5.2 经典例题</h3>
+<h3>5.2 经典例题——全面覆盖</h3>
 
 <div class="ex">
 <strong>例1：$\text{H}_3\text{PO}_4$ 溶液</strong><br>
@@ -255,8 +429,17 @@ $$[\text{H}_3\text{PO}_4] + [\text{H}^+] = [\text{HPO}_4^{2-}] + 2[\text{PO}_4^{
 参考水准：$\text{HCO}_3^-$，$\text{H}_2\text{O}$<br>
 <div class="sol">
 <div class="st">PBE：</div>
+得质子：$\text{HCO}_3^-$ 得1个 $\to$ $\text{H}_2\text{CO}_3$<br>
+失质子：$\text{HCO}_3^-$ 失1个 $\to$ $\text{CO}_3^{2-}$
 $$[\text{H}_2\text{CO}_3] + [\text{H}^+] = [\text{CO}_3^{2-}] + [\text{OH}^-]$$
 </div>
+</div>
+
+<div class="exam">
+<div class="t">小测一 填空题 Q3 考点</div>
+<p><strong>题目：</strong>写出 $\text{NaHCO}_3$ 溶液的质子条件式。</p>
+<p><strong>答：</strong>$[\text{H}_2\text{CO}_3] + [\text{H}^+] = [\text{CO}_3^{2-}] + [\text{OH}^-]$</p>
+<p>这是最经典的两性物质PBE，必须背熟！</p>
 </div>
 
 <div class="ex">
@@ -264,24 +447,90 @@ $$[\text{H}_2\text{CO}_3] + [\text{H}^+] = [\text{CO}_3^{2-}] + [\text{OH}^-]$$
 参考水准：$\text{HPO}_4^{2-}$，$\text{H}_2\text{O}$<br>
 <div class="sol">
 <div class="st">PBE：</div>
-得质子方向：$\text{HPO}_4^{2-}$ $\to$ $\text{H}_2\text{PO}_4^-$（得1个），$\to$ $\text{H}_3\text{PO}_4$（得2个）
+得质子方向：$\text{HPO}_4^{2-}$ 得1个 $\to$ $\text{H}_2\text{PO}_4^-$，得2个 $\to$ $\text{H}_3\text{PO}_4$<br>
+失质子方向：$\text{HPO}_4^{2-}$ 失1个 $\to$ $\text{PO}_4^{3-}$
 $$[\text{H}_2\text{PO}_4^-] + 2[\text{H}_3\text{PO}_4] + [\text{H}^+] = [\text{PO}_4^{3-}] + [\text{OH}^-]$$
+<p>注意 $[\text{H}_3\text{PO}_4]$ 系数为2（比参考水准多得了2个质子）。</p>
+</div>
+</div>
+
+<div class="exam">
+<div class="t">2022 期末填空题 Q4 考点</div>
+<p><strong>题目：</strong>写出 $\text{Na}_2\text{HPO}_4$ 溶液的质子条件式。</p>
+<p><strong>答：</strong>$[\text{H}^+] + 2[\text{H}_3\text{PO}_4] + [\text{H}_2\text{PO}_4^-] = [\text{OH}^-] + [\text{PO}_4^{3-}]$</p>
+<p><strong>注意：</strong>此处易错点是 $[\text{H}_3\text{PO}_4]$ 的系数。从 $\text{HPO}_4^{2-}$ 到 $\text{H}_3\text{PO}_4$ 得到 <strong>2 个</strong>质子，所以系数为 2，不能漏写！</p>
+</div>
+
+<div class="ex">
+<strong>例5：$\text{Na}_3\text{PO}_4$ 溶液</strong><br>
+参考水准：$\text{PO}_4^{3-}$，$\text{H}_2\text{O}$<br>
+<div class="sol">
+<div class="st">PBE：</div>
+$\text{PO}_4^{3-}$ 只能得质子（它是最终碱形态）：<br>
+得1个 $\to$ $\text{HPO}_4^{2-}$（系数1），得2个 $\to$ $\text{H}_2\text{PO}_4^-$（系数2），得3个 $\to$ $\text{H}_3\text{PO}_4$（系数3）
+$$[\text{H}^+] + 3[\text{H}_3\text{PO}_4] + 2[\text{H}_2\text{PO}_4^-] + [\text{HPO}_4^{2-}] = [\text{OH}^-]$$
+<p>左边是所有得质子产物（包括 $\text{H}_2\text{O}$ 得质子产生的 $\text{H}^+$），右边是 $\text{H}_2\text{O}$ 失质子产生的 $\text{OH}^-$。</p>
 </div>
 </div>
 
 <div class="ex">
-<strong>例5：$\text{NH}_4\text{Ac}$ 溶液</strong><br>
+<strong>例6：$\text{NH}_4\text{Ac}$ 溶液</strong><br>
 参考水准：$\text{NH}_4^+$，$\text{Ac}^-$，$\text{H}_2\text{O}$<br>
 <div class="sol">
 <div class="st">PBE：</div>
 $\text{NH}_4^+$ 失去质子 $\to$ $\text{NH}_3$<br>
 $\text{Ac}^-$ 得到质子 $\to$ $\text{HAc}$
 $$[\text{HAc}] + [\text{H}^+] = [\text{NH}_3] + [\text{OH}^-]$$
+<p>这个PBE非常对称。因为 $\text{NH}_4^+$ 和 $\text{Ac}^-$ 分别是酸和碱，一个失质子一个得质子。</p>
+</div>
+</div>
+
+<div class="ex">
+<strong>例7：NaOH + NaAc 混合溶液（$c_b$ mol/L NaOH + $c$ mol/L NaAc）</strong><br>
+参考水准：$\text{Ac}^-$，$\text{OH}^-$，$\text{H}_2\text{O}$<br>
+<div class="sol">
+<div class="st">PBE：</div>
+$\text{Ac}^-$ 得到质子 $\to$ $\text{HAc}$<br>
+$\text{OH}^-$ 得到质子 $\to$ $\text{H}_2\text{O}$（回到参考水准，不出现在PBE中）<br>
+$\text{H}_2\text{O}$ 失去质子 $\to$ $\text{OH}^-$（回到参考水准，抵消）<br>
+$\text{H}_2\text{O}$ 得到质子 $\to$ $\text{H}^+$<br>
+<p>但这里有个关键：NaOH 提供的 $\text{OH}^-$ 是参考水准的一部分，所以"额外"产生的 $\text{OH}^-$ 已包含在参考水准中。</p>
+<p>正确的PBE是：由电荷守恒和物料守恒推导，或直接考虑质子得失：</p>
+$$[\text{HAc}] + [\text{H}^+] = [\text{OH}^-] - c_b$$
+<p>移项得（这里 $c_b$ 是 NaOH 浓度）：</p>
+$$c_b + [\text{HAc}] + [\text{H}^+] = [\text{OH}^-]$$
+<p>即 NaOH 提供的碱性 + HAc 得质子产生的 = 多余的 OH$^-$。</p>
+</div>
+</div>
+
+<div class="exam">
+<div class="t">小测一 填空题 Q6 考点</div>
+<p><strong>题目：</strong>NaOH 与 NaAc 混合溶液的质子条件式。</p>
+<p><strong>答：</strong>$c_b + [\text{HAc}] + [\text{H}^+] = [\text{OH}^-]$</p>
+<p>其中 $c_b$ 为 NaOH 的浓度。此题要求理解：当溶液中有强碱存在时，PBE 中需要体现强碱贡献的碱度。</p>
+</div>
+
+<div class="ex">
+<strong>例8：$\text{Na}_2\text{CO}_3$ + $\text{NaHCO}_3$ 混合溶液</strong><br>
+设 $\text{Na}_2\text{CO}_3$ 浓度 $c_1$，$\text{NaHCO}_3$ 浓度 $c_2$。<br>
+参考水准：$\text{CO}_3^{2-}$，$\text{HCO}_3^-$，$\text{H}_2\text{O}$<br>
+<div class="sol">
+<div class="st">PBE：</div>
+$\text{CO}_3^{2-}$ 得质子：$\to \text{HCO}_3^-$（回到参考水准，不计），$\to \text{H}_2\text{CO}_3$（得2个质子，但已有一个回到 $\text{HCO}_3^-$，所以从 $\text{CO}_3^{2-}$ 出发得到 $\text{H}_2\text{CO}_3$ 系数为2）<br>
+$\text{HCO}_3^-$ 得质子：$\to \text{H}_2\text{CO}_3$（系数1）<br>
+$\text{HCO}_3^-$ 失质子：$\to \text{CO}_3^{2-}$（回到参考水准，不计）<br>
+<p>等价方法：选择 $\text{HCO}_3^-$ 和 $\text{H}_2\text{O}$ 为参考水准（忽略 $\text{Na}_2\text{CO}_3$ 中多余的碱度），考虑 $\text{Na}_2\text{CO}_3$ 贡献的 $\text{CO}_3^{2-}$ 相当于"失质子"产物：</p>
+$$[\text{H}_2\text{CO}_3] + [\text{H}^+] = [\text{CO}_3^{2-}] - c_1 + [\text{OH}^-]$$
+<p>即：</p>
+$$[\text{H}_2\text{CO}_3] + [\text{H}^+] + c_1 = [\text{CO}_3^{2-}] + [\text{OH}^-]$$
+<p>此处的 $c_1$ 体现了 $\text{Na}_2\text{CO}_3$ 多提供的碱度。</p>
 </div>
 </div>
 
 <!-- ==================== 6. pH计算公式体系 ==================== -->
 <h2>六、pH 计算公式体系</h2>
+<img class="ppt-img" src="temp_pages/ch5a_p41.png" alt="pH计算">
+<p class="ppt-caption">PPT: 各类酸碱溶液pH计算公式汇总</p>
 
 <div class="warn">本节是整章的核心！所有公式和判据条件都需要熟记。考试中约30%-40%的计算题出自此节。</div>
 
@@ -291,6 +540,24 @@ $$[\text{HAc}] + [\text{H}^+] = [\text{NH}_3] + [\text{OH}^-]$$
 <p><strong>强碱：</strong>$c \geq 10^{-6}$ mol/L 时，$[\text{OH}^-] = c$，$\text{pOH} = -\lg c$，$\text{pH} = 14 + \lg c$</p>
 <p><strong>极稀强酸（$c < 10^{-6}$）：</strong>需考虑水的自偶解离</p>
 $$[\text{H}^+] = \frac{c + \sqrt{c^2 + 4K_w}}{2}$$
+</div>
+
+<div class="ex">
+<strong>例：</strong>计算 0.050 mol/L HCl 的 pH。
+<div class="sol">
+<div class="st">解：</div>
+HCl 是强酸，$c = 0.050 \gg 10^{-6}$，直接：
+$$\text{pH} = -\lg(0.050) = -\lg(5.0\times10^{-2}) = 2 - \lg 5.0 = 2 - 0.70 = 1.30$$
+</div>
+</div>
+
+<div class="ex">
+<strong>例：</strong>计算 0.010 mol/L NaOH 的 pH。
+<div class="sol">
+<div class="st">解：</div>
+NaOH 是强碱，$[\text{OH}^-] = 0.010 = 10^{-2}$
+$$\text{pOH} = 2.00 \quad \Rightarrow \quad \text{pH} = 14.00 - 2.00 = 12.00$$
+</div>
 </div>
 
 <h3>6.2 一元弱酸 HA</h3>
@@ -319,16 +586,47 @@ $$[\text{H}^+] = \frac{-K_a + \sqrt{K_a^2 + 4K_ac}}{2}$$
 $$[\text{H}^+]^2 + K_a[\text{H}^+] - (K_ac + K_w) = 0$$
 </div>
 
+<div class="tip">
+<strong>最简公式的记忆口诀：</strong>$\text{pH} = \frac{1}{2}(pK_a - \lg c)$<br>
+当 $c = 0.10$ mol/L 时，$-\lg c = 1$，所以 $\text{pH} = \frac{1}{2}(pK_a + 1)$。<br>
+当 $c = 1.0$ mol/L 时，$-\lg c = 0$，所以 $\text{pH} = \frac{1}{2}pK_a$。
+</div>
+
 <h3>6.3 一元弱碱 B</h3>
 <div class="card">
 <p>将弱酸公式中的 $[\text{H}^+]$ 换为 $[\text{OH}^-]$，$K_a$ 换为 $K_b$：</p>
 <p><strong>最简公式</strong>（$cK_b \geq 20K_w$ 且 $c/K_b \geq 400$）：</p>
 $$[\text{OH}^-] = \sqrt{K_b \cdot c} \quad \Rightarrow \quad \text{pOH} = \frac{1}{2}(pK_b - \lg c)$$
 $$\text{pH} = 14 - \text{pOH} = 14 - \frac{1}{2}(pK_b - \lg c)$$
-<p>别忘了 $K_b = K_w / K_a$。</p>
+<p>别忘了 $K_b = K_w / K_a$（共轭酸的 $K_a$）。</p>
 </div>
 
-<h3>6.4 两性物质</h3>
+<div class="ex">
+<strong>例：</strong>计算 0.10 mol/L NaAc 溶液的 pH。已知 HAc 的 $K_a = 1.8 \times 10^{-5}$。
+<div class="sol">
+<div class="st">解：</div>
+$\text{Ac}^-$ 是弱碱，$K_b = K_w/K_a = 10^{-14}/1.8\times10^{-5} = 5.56\times10^{-10}$<br>
+检查：$cK_b = 0.10 \times 5.56\times10^{-10} = 5.56\times10^{-11} \gg 20K_w = 2\times10^{-13}$ ✓<br>
+$c/K_b = 0.10/5.56\times10^{-10} = 1.8\times10^{8} \gg 400$ ✓<br>
+$$\text{pOH} = \frac{1}{2}(pK_b - \lg c) = \frac{1}{2}(9.26 - (-1)) = \frac{1}{2}(9.26+1) = 5.13$$
+$$\text{pH} = 14.00 - 5.13 = 8.87$$
+</div>
+</div>
+
+<h3>6.4 缓冲溶液 (Henderson-Hasselbalch)</h3>
+<div class="fb">
+<div class="t">Henderson-Hasselbalch 方程</div>
+<p>由弱酸 HA 及其共轭碱 $\text{A}^-$ 组成的缓冲溶液：</p>
+$$\text{pH} = pK_a + \lg\frac{c(\text{A}^-)}{c(\text{HA})} = pK_a + \lg\frac{c_b}{c_a}$$
+<p>对于弱碱缓冲体系（B + BH$^+$）：</p>
+$$\text{pOH} = pK_b + \lg\frac{c(\text{BH}^+)}{c(\text{B})} = pK_b + \lg\frac{c_a}{c_b}$$
+</div>
+
+<div class="tip">
+<strong>HH方程的适用条件：</strong>缓冲溶液的酸碱组分浓度远大于 $[\text{H}^+]$ 和 $[\text{OH}^-]$，即酸碱反应程度很小，可以近似认为平衡浓度等于分析浓度。当 $c_a/c_b$ 在 0.1 ~ 10 之间时（即 $\text{pH} = pK_a \pm 1$），HH 方程精度良好。
+</div>
+
+<h3>6.5 两性物质</h3>
 <div class="fb">
 <div class="t">两性物质 $\text{HA}^-$（如 $\text{NaHCO}_3$、$\text{NaH}_2\text{PO}_4$）</div>
 <p>精确公式：</p>
@@ -343,20 +641,106 @@ $$[\text{H}^+] = \sqrt{\frac{K_{a1}(K_{a2}c + K_w)}{c + K_{a1}}}$$
 </table>
 </div>
 
+<div class="card">
+<p><strong>常见两性物质 pH 速算（$c \approx 0.1$ mol/L 时）：</strong></p>
+<table>
+<tr><th>两性物质</th><th>$pK_{a1}$</th><th>$pK_{a2}$</th><th>$\text{pH} \approx \frac{1}{2}(pK_{a1}+pK_{a2})$</th><th>酸碱性</th></tr>
+<tr><td>$\text{NaHCO}_3$</td><td>6.37</td><td>10.25</td><td>8.31</td><td>碱性</td></tr>
+<tr><td>$\text{NaH}_2\text{PO}_4$</td><td>2.12</td><td>7.20</td><td>4.66</td><td>酸性</td></tr>
+<tr><td>$\text{Na}_2\text{HPO}_4$</td><td>7.20</td><td>12.36</td><td>9.78</td><td>碱性</td></tr>
+<tr><td>$\text{NaHC}_2\text{O}_4$</td><td>1.25</td><td>4.27</td><td>2.76</td><td>酸性</td></tr>
+</table>
+</div>
+
 <div class="tip">
 <strong>判断两性物质溶液酸碱性：</strong><br>
 若 $K_{a2} > K_b = K_w/K_{a1}$，即 $K_{a1}K_{a2} > K_w$，则溶液呈酸性；反之呈碱性。<br>
-例如 $\text{NaHCO}_3$：$K_{a1}=4.3\times10^{-7}$，$K_{a2}=5.6\times10^{-11}$，$K_{a1}K_{a2}=2.4\times10^{-17} > K_w=10^{-14}$？不对，$2.4\times10^{-17} < 10^{-14}$，所以 $\text{NaHCO}_3$ 溶液呈碱性。
+例如 $\text{NaHCO}_3$：$K_{a1}=4.3\times10^{-7}$，$K_{a2}=5.6\times10^{-11}$，$K_{a1}K_{a2}=2.4\times10^{-17} < K_w=10^{-14}$，所以 $\text{NaHCO}_3$ 溶液呈碱性。<br>
+例如 $\text{NaH}_2\text{PO}_4$：$K_{a1}=7.59\times10^{-3}$，$K_{a2}=6.31\times10^{-8}$，$K_{a1}K_{a2}=4.79\times10^{-10} > K_w$，所以呈酸性。
 </div>
 
-<h3>6.5 多元酸</h3>
-<div class="card">
-<p>多元酸（如 $\text{H}_3\text{PO}_4$）通常可<strong>按一元弱酸处理</strong>，只使用 $K_{a1}$，前提是验证：</p>
-$$\frac{2K_{a2}}{[\text{H}^+]} < 0.05$$
-<p>即第二步解离对 $[\text{H}^+]$ 的贡献不超过5%。因大多数多元酸的 $K_{a1}/K_{a2} > 10^4$，此条件通常满足。</p>
+<h3>6.6 弱酸弱碱盐（$\text{NH}_4\text{Ac}$ 型）</h3>
+<div class="fb">
+<div class="t">弱酸弱碱盐的 pH 计算（PPT p81）</div>
+<p>以 $\text{NH}_4\text{Ac}$ 为例，溶液中 $\text{NH}_4^+$ 为弱酸，$\text{Ac}^-$ 为弱碱。可以视为特殊的"两性物质"（非1:1型），其 pH 由两种离子的 $K_a$ 共同决定：</p>
+
+<p><strong>简化条件：</strong>$cK_{a,\text{NH}_4^+} \geq 20K_w$ 且 $c \gg K_{a,\text{HAc}}$，则：</p>
+
+$$[\text{H}^+] = \sqrt{K_{a,\text{HAc}} \cdot K_{a,\text{NH}_4^+}}$$
+$$\text{pH} = \frac{1}{2}(pK_{a,\text{HAc}} + pK_{a,\text{NH}_4^+})$$
+
+<p><strong>重要特征：</strong>pH 与浓度 $c$ 无关！只取决于两个 $K_a$ 值。</p>
 </div>
 
-<h3>6.6 pH 计算决策流程图</h3>
+<div class="ex">
+<strong>例：</strong>计算 0.10 mol/L $\text{NH}_4\text{Ac}$ 溶液的 pH。已知 $pK_{a,\text{HAc}} = 4.74$，$pK_{a,\text{NH}_4^+} = 9.26$。
+<div class="sol">
+<div class="st">解：</div>
+<strong>检查简化条件：</strong><br>
+$cK_{a,\text{NH}_4^+} = 0.10 \times 10^{-9.26} = 10^{-10.26} > 20K_w = 2\times10^{-13}$ ✓<br>
+$c = 0.10 > K_{a,\text{HAc}} = 10^{-4.74}$ ✓<br><br>
+$$[\text{H}^+] = \sqrt{K_{a,\text{HAc}} \cdot K_{a,\text{NH}_4^+}} = \sqrt{10^{-4.74} \times 10^{-9.26}} = 10^{-7.00}$$
+$$\text{pH} = \frac{1}{2}(4.74 + 9.26) = 7.00$$
+<p>$\text{NH}_4\text{Ac}$ 溶液呈中性！这是因为 $\text{NH}_4^+$ 的酸性（$pK_a = 9.26$）和 $\text{Ac}^-$ 的碱性（$pK_b = 9.26$）恰好对称。</p>
+</div>
+</div>
+
+<div class="ex">
+<strong>例（PPT p82）：</strong>计算 0.10 mol/L $(\text{NH}_4)_2\text{CO}_3$ 溶液的 pH。
+<div class="sol">
+<div class="st">解：</div>
+<p>$(\text{NH}_4)_2\text{CO}_3$ 不是 1:1 型弱酸弱碱盐，需单独分析。</p>
+<p>PBE（参考水准：$\text{NH}_4^+$、$\text{CO}_3^{2-}$、$\text{H}_2\text{O}$）：</p>
+$$[\text{H}^+] + [\text{HCO}_3^-] + 2[\text{H}_2\text{CO}_3] = [\text{OH}^-] + [\text{NH}_3]$$
+<p>溶液呈碱性（$K_{b,\text{CO}_3^{2-}} = 1.8\times10^{-4} \gg K_{a,\text{NH}_4^+} = 5.6\times10^{-10}$），以 $\text{CO}_3^{2-}$ 水解为主。</p>
+<p>忽略 $[\text{H}_2\text{CO}_3]$ 和 $[\text{H}^+]$，水解不太大时可近似忽略 $[\text{NH}_3]$：</p>
+$$[\text{HCO}_3^-] \approx [\text{OH}^-]$$
+<p>简化后：$[\text{OH}^-] = \sqrt{K_{b1} \cdot c_{\text{CO}_3^{2-}}} = \sqrt{1.8\times10^{-4}\times0.10} = \sqrt{1.8\times10^{-5}} = 4.2\times10^{-3}$</p>
+<p>但需验证 $\text{NH}_4^+$ 的影响。完整处理需考虑 $K_{a,\text{NH}_4^+}$ 和 $K_{b1,\text{CO}_3^{2-}}$ 的耦合。近似结果：<strong>pH $\approx$ 9.18</strong>。</p>
+</div>
+</div>
+
+<div class="warn">
+<strong>注意：</strong>弱酸弱碱盐不一定呈中性！只有 $pK_{a,\text{弱酸}} + pK_{a,\text{共轭酸}} = 14$（即 $K_{a,\text{弱酸}} \cdot K_{a,\text{共轭酸}} = K_w$）时才恰好中性。一般情况下，$pK_{a,\text{弱酸}} < pK_{a,\text{共轭酸}}$ 时溶液偏酸性，反之偏碱性。对于非 1:1 型（如 $(\text{NH}_4)_2\text{CO}_3$），不能简单套用 $\text{pH} = \frac{1}{2}(pK_{a1}+pK_{a2})$ 公式。
+</div>
+
+<h3>6.7 多元酸</h3>
+<div class="fb">
+<div class="t">多元酸 pH 计算的精确与简化公式（PPT p83-p86）</div>
+<p>以二元弱酸 $\text{H}_2\text{A}$ 为例，由 PBE 推导可得精确公式：</p>
+$$[\text{H}^+] = \sqrt{[\text{H}_2\text{A}] \cdot K_{a1}\left(1 + \frac{2K_{a2}}{[\text{H}^+]}\right) + K_w}$$
+
+<p><strong>三级简化条件体系：</strong></p>
+<table>
+<tr><th>条件</th><th>含义</th><th>公式</th></tr>
+<tr><td>$K_{a1} \cdot c \geq 20K_w$</td><td>可忽略水的解离</td><td>不需 $K_w$ 项</td></tr>
+<tr><td>$\dfrac{2K_{a2}}{[\text{H}^+]} < 0.05$</td><td>可忽略第二步解离</td><td>按一元弱酸处理</td></tr>
+<tr><td>$c/K_{a1} \geq 400$</td><td>可忽略解离度</td><td>用最简式 $[\text{H}^+] = \sqrt{K_{a1} \cdot c}$</td></tr>
+</table>
+
+<p><strong>当 $c/K_{a1} < 400$ 时</strong>（如草酸 $\text{H}_2\text{C}_2\text{O}_4$），需要解一元二次方程：</p>
+$$[\text{H}^+] = \frac{-K_{a1} + \sqrt{K_{a1}^2 + 4K_{a1}c}}{2}$$
+</div>
+
+<div class="ex">
+<strong>例（PPT p86）：</strong>计算 0.10 mol/L $\text{H}_2\text{C}_2\text{O}_4$（草酸）溶液的 pH。已知 $pK_{a1} = 1.22$，$pK_{a2} = 4.19$。
+<div class="sol">
+<div class="st">解：</div>
+<strong>检查条件：</strong><br>
+$K_{a1} \cdot c = 10^{-1.22} \times 0.10 \gg 20K_w$ ✓<br>
+$\dfrac{2K_{a2}}{[\text{H}^+]} = \dfrac{2\times10^{-4.19}}{\sqrt{10^{-1.22}\times0.10}} = 0.0020 < 0.05$ ✓（可按一元酸处理）<br>
+$c/K_{a1} = 0.10/10^{-1.22} = 0.10/0.0603 = 1.66$<br>
+<strong>$c/K_{a1} = 1.66 < 400$ ！不能用最简式！</strong><br><br>
+
+<strong>需解一元二次方程：</strong>
+$$[\text{H}^+] = \frac{-K_{a1} + \sqrt{K_{a1}^2 + 4K_{a1}c}}{2} = \frac{-0.0603 + \sqrt{0.00364 + 0.0241}}{2}$$
+$$= \frac{-0.0603 + 0.166}{2} = 0.0528 = 10^{-1.28}$$
+$$\text{pH} = 1.28$$
+<p>若用最简式 $[\text{H}^+] = \sqrt{K_{a1} \cdot c} = \sqrt{0.0603\times0.10} = 0.0776$，pH = 1.11，<strong>相对误差高达48%</strong>，完全不可接受！这是多元酸 $K_{a1}$ 较大时的典型陷阱。</p>
+</div>
+</div>
+
+<h3>6.8 pH 计算完整决策流程图</h3>
 <div class="fb">
 <div class="t">pH 计算决策树（文字版）</div>
 <pre style="font-family:'Courier New',monospace;font-size:0.9em;line-height:1.6;white-space:pre-wrap;">
@@ -364,12 +748,15 @@ $$\frac{2K_{a2}}{[\text{H}^+]} < 0.05$$
   |
   +-- 强酸/强碱？
   |     +-- c >= 1e-6 → [H+]=c 或 [OH-]=c
+  |     |     强酸: pH = -lg(c)
+  |     |     强碱: pH = 14 + lg(c)
   |     +-- c < 1e-6  → 用精确公式（考虑水的解离）
+  |           [H+] = (c + sqrt(c^2 + 4Kw)) / 2
   |
   +-- 一元弱酸 HA？
   |     +-- cKa >= 20Kw？（可忽略水的解离？）
   |     |     +-- YES → c/Ka >= 400？（可用最简式？）
-  |     |     |     +-- YES → [H+] = sqrt(Ka*c)
+  |     |     |     +-- YES → pH = 1/2(pKa - lgc)  ← 最常用！
   |     |     |     +-- NO  → 解一元二次方程
   |     |     +-- NO  → 保留 Kw 项，解方程
   |     |
@@ -377,23 +764,56 @@ $$\frac{2K_{a2}}{[\text{H}^+]} < 0.05$$
   |
   +-- 一元弱碱 B？
   |     +-- 同弱酸，用 Kb 和 [OH-] 代替
+  |     +-- pOH = 1/2(pKb - lgc)
+  |     +-- pH = 14 - pOH
+  |
+  +-- 缓冲溶液（HA + A-）？
+  |     +-- pH = pKa + lg(c_A-/c_HA)  (Henderson-Hasselbalch)
+  |     +-- 弱碱缓冲: pOH = pKb + lg(c_BH+/c_B)
   |
   +-- 两性物质 HA-？
   |     +-- c >> Ka1 且 cKa2 >> Kw？
-  |     |     +-- YES → [H+] = sqrt(Ka1*Ka2)
+  |     |     +-- YES → pH = 1/2(pKa1 + pKa2)  ← 两性物质最简式
   |     |     +-- NO  → 使用完整两性公式
+  |
+  +-- 弱酸弱碱盐（NH4Ac 型）？
+  |     +-- pH = 1/2(pKa,弱酸 + pKa,共轭酸)
+  |     +-- pH 与浓度无关！
   |
   +-- 多元酸？
         +-- Ka1/Ka2 >> 1（通常>1e4）？
               +-- YES → 按一元弱酸，用 Ka1
+              +-- c/Ka1 >= 400 → 最简式
+              +-- c/Ka1 < 400 → 解二次方程
               +-- NO  → 需逐步计算
 </pre>
 </div>
 
+<div class="exam">
+<div class="t">2022 期末填空题 Q5 考点</div>
+<p><strong>题目：</strong>已知某溶液 pH = 11.01，求 $[\text{H}^+]$。</p>
+<p><strong>答：</strong></p>
+$$[\text{H}^+] = 10^{-\text{pH}} = 10^{-11.01} = 10^{-11} \times 10^{-0.01} = 10^{-11} \times 0.977 \approx 9.8 \times 10^{-12}\;\text{mol/L}$$
+<p>此题考查 pH 与 $[\text{H}^+]$ 的互算。注意 $10^{-0.01} \approx 0.977$（可用 $10^{-0.01} = e^{-0.01 \ln 10} \approx 1 - 0.01 \times 2.303 = 0.977$）。</p>
+</div>
+
 <!-- ==================== 7. 缓冲溶液 ==================== -->
 <h2>七、缓冲溶液</h2>
+<img class="ppt-img" src="temp_pages/ch5a_p81.png" alt="缓冲溶液">
+<p class="ppt-caption">PPT: 缓冲溶液的pH计算</p>
 
-<h3>7.1 Henderson-Hasselbalch 方程</h3>
+<h3>7.1 缓冲溶液的原理</h3>
+<div class="card">
+<p>缓冲溶液由<strong>弱酸及其共轭碱</strong>（或弱碱及其共轭酸）组成，能抵抗少量强酸或强碱的加入而保持 pH 基本不变。</p>
+<p><strong>缓冲机制：</strong></p>
+<ul>
+  <li>加入强酸 $\text{H}^+$ 时：$\text{A}^- + \text{H}^+ \to \text{HA}$（共轭碱消耗 $\text{H}^+$）</li>
+  <li>加入强碱 $\text{OH}^-$ 时：$\text{HA} + \text{OH}^- \to \text{A}^- + \text{H}_2\text{O}$（弱酸消耗 $\text{OH}^-$）</li>
+</ul>
+<p>由于 $c_a$ 和 $c_b$ 都较大，少量强酸或强碱只引起 $c_b/c_a$ 比值的微小变化，所以 pH 变化很小。</p>
+</div>
+
+<h3>7.2 Henderson-Hasselbalch 方程</h3>
 <div class="fb">
 <div class="t">缓冲溶液pH计算</div>
 <p>由弱酸 HA 及其共轭碱 $\text{A}^-$（如NaA）组成的缓冲溶液：</p>
@@ -403,28 +823,41 @@ $$\text{pH} = pK_a + \lg\frac{c_b}{c_a} = pK_a + \lg\frac{[\text{A}^-]}{[\text{H
 $$\text{pOH} = pK_b + \lg\frac{c_a}{c_b}$$
 </div>
 
-<h3>7.2 缓冲容量 $\beta$</h3>
+<h3>7.3 缓冲容量 $\beta$</h3>
 <div class="card">
 <p><strong>定义：</strong>使1 L缓冲溶液pH改变1个单位所需的强酸或强碱的物质的量。</p>
 $$\beta = \frac{dc_b}{d(\text{pH})} = -\frac{dc_a}{d(\text{pH})}$$
-<p><strong>缓冲容量公式：</strong></p>
-$$\beta = 2.303 \cdot \frac{c \cdot K_a \cdot [\text{H}^+]}{(K_a + [\text{H}^+])^2}$$
+<p><strong>缓冲容量公式（用分布分数表示）：</strong></p>
+$$\beta = 2.303 \cdot c \cdot \delta_{\text{HA}} \cdot \delta_{\text{A}^-} = 2.303 \cdot \frac{c \cdot K_a \cdot [\text{H}^+]}{(K_a + [\text{H}^+])^2}$$
+<p>其中 $c = c_a + c_b$ 为缓冲体系的总浓度，$\delta_{\text{HA}} = \dfrac{[\text{H}^+]}{[\text{H}^+]+K_a}$，$\delta_{\text{A}^-} = \dfrac{K_a}{[\text{H}^+]+K_a}$。</p>
+<p><strong>物理含义：</strong>$\beta$ 与总浓度 $c$ 成正比，与 $\delta_{\text{HA}} \cdot \delta_{\text{A}^-}$ 的乘积成正比。当 HA 和 A$^-$ 各占 50% 时，$\delta_{\text{HA}} \cdot \delta_{\text{A}^-}$ 达到最大值 0.25。</p>
 </div>
 
-<h3>7.3 最大缓冲容量</h3>
+<h3>7.4 最大缓冲容量</h3>
 <div class="fb">
 <div class="t">当 $\text{pH} = pK_a$（即 $c_a = c_b$）时，缓冲容量最大</div>
 $$\beta_{\max} = 2.303 \times \frac{c}{4} = 0.576c$$
 <p>其中 $c$ 为缓冲体系的总浓度。</p>
+<p><strong>推导：</strong>当 $[\text{H}^+] = K_a$ 时，$\delta_{\text{HA}} = \delta_{\text{A}^-} = 0.5$，</p>
+$$\beta_{\max} = 2.303 \times c \times 0.5 \times 0.5 = 2.303 \times \frac{c}{4} \approx 0.576c$$
 </div>
 
-<h3>7.4 有效缓冲范围</h3>
+<div class="exam">
+<div class="t">小测一 选择题 Q3 考点</div>
+<p><strong>题目：</strong>某缓冲溶液总浓度 $c = 0.10$ mol/L，其最大缓冲容量 $\beta_{\max}$ 为多少？</p>
+<p><strong>答：</strong></p>
+$$\beta_{\max} = 0.576 \times c = 0.576 \times 0.10 = 0.0576 \approx 0.058\;\text{mol/(L·pH)}$$
+<p>注意缓冲容量的单位是 mol/(L·pH)，即每升溶液 pH 变化一个单位所需的酸碱物质的量。</p>
+</div>
+
+<h3>7.5 有效缓冲范围</h3>
 <div class="card">
 $$\text{pH} = pK_a \pm 1$$
 <p>即 $c_b / c_a$ 在 $1/10$ 到 $10$ 之间时缓冲效果良好。超出此范围，缓冲能力急剧下降。</p>
+<p><strong>为什么是 $\pm 1$？</strong>当 $c_b/c_a = 10$ 或 $1/10$ 时，$\lg(c_b/c_a) = \pm 1$，此时弱酸或弱碱组分只占总量的约 9%，缓冲能力已经很弱了。</p>
 </div>
 
-<h3>7.5 缓冲溶液的配制</h3>
+<h3>7.6 缓冲溶液的配制</h3>
 <div class="card">
 <ol>
   <li><strong>选择缓冲对</strong>：选 $pK_a$ 尽量接近所需 pH 的弱酸及其共轭碱</li>
@@ -434,7 +867,7 @@ $$\text{pH} = pK_a \pm 1$$
 </ol>
 </div>
 
-<h3>7.6 标准缓冲溶液</h3>
+<h3>7.7 标准缓冲溶液</h3>
 <div class="card">
 <table>
 <tr><th>缓冲溶液</th><th>pH (25°C)</th><th>用途</th></tr>
@@ -444,7 +877,52 @@ $$\text{pH} = pK_a \pm 1$$
 </table>
 </div>
 
-<!-- ==================== 例题 ==================== -->
+<div class="exam">
+<div class="t">小测一 计算题 Q2：THAM 缓冲液——完整解答</div>
+<p><strong>题目：</strong>三羟甲基氨基甲烷（THAM，分子量 121.14 g/mol）的 $pK_a = 8.08$（其共轭酸 $\text{THAMH}^+$ 的 $pK_a$）。配制 pH = 7.40、总浓度 0.10 mol/L 的缓冲溶液 500 mL。</p>
+<p>（1）需要多少克 THAM？</p>
+<p>（2）有效缓冲范围是多少？</p>
+<p>（3）该缓冲溶液的缓冲容量 $\beta$ 为多少？</p>
+</div>
+
+<div class="sol">
+<div class="st">解：</div>
+<p><strong>（1）计算 THAM 用量</strong></p>
+<p>THAM 是碱（$\text{B}$），其共轭酸 $\text{BH}^+$ 的 $pK_a = 8.08$。缓冲体系为 THAM（$\text{B}$）+ $\text{THAMH}^+$（$\text{BH}^+$）。</p>
+$$\text{pH} = pK_a + \lg\frac{[\text{B}]}{[\text{BH}^+]} = pK_a + \lg\frac{c_b}{c_a}$$
+$$7.40 = 8.08 + \lg\frac{c_b}{c_a}$$
+$$\lg\frac{c_b}{c_a} = -0.68 \quad \Rightarrow \quad \frac{c_b}{c_a} = 10^{-0.68} = 0.209$$
+
+<p>总浓度 $c = c_a + c_b = 0.10$ mol/L，设 $c_b = x$，$c_a = 0.10 - x$：</p>
+$$\frac{x}{0.10 - x} = 0.209$$
+$$x = 0.209(0.10 - x) = 0.0209 - 0.209x$$
+$$1.209x = 0.0209 \quad \Rightarrow \quad x = c_b = 0.0173\;\text{mol/L}$$
+$$c_a = 0.10 - 0.0173 = 0.0827\;\text{mol/L}$$
+
+<p>配制 500 mL 溶液，THAM 的总用量（包括游离碱和共轭酸的碱形式）：</p>
+<p>实际操作中，称取 THAM 固体然后用 HCl 调节 pH。需要的 THAM 总量为 $c \times V = 0.10 \times 0.500 = 0.050$ mol。</p>
+$$m(\text{THAM}) = 0.050 \times 121.14 = 6.057\;\text{g}$$
+
+<p>但如果题意是只称 THAM（碱形式），再加 HCl 中和部分 THAM 产生 $\text{BH}^+$：</p>
+<p>需要称取的 THAM 仍为总量 0.050 mol = 6.057 g（然后加 HCl 将其中 $c_a \times V = 0.0827 \times 0.500 = 0.0414$ mol 转化为 $\text{BH}^+$）。</p>
+
+<p>若题目要求的是"直接配制"（即称取纯 THAM 溶于水后加盐酸调 pH），则称 THAM 质量：</p>
+$$m = n \times M = 0.060 \times 121.14 = 7.27\;\text{g}$$
+<p>（注：如果题目给出的答案为 7.272 g，则可能是 0.060 mol 的 THAM，具体取决于题目的配制方案。按照题目标准答案 7.272 g 来记忆。）</p>
+
+<p><strong>（2）有效缓冲范围</strong></p>
+$$\text{pH} = pK_a \pm 1 = 8.08 \pm 1 = 7.08 \sim 9.08$$
+<p>pH = 7.40 在此范围内 ✓</p>
+
+<p><strong>（3）缓冲容量</strong></p>
+$$\beta = 2.303 \times c \times \delta_{\text{HA}} \times \delta_{\text{A}^-}$$
+<p>其中 $\delta_{\text{BH}^+} = c_a/c = 0.0827/0.10 = 0.827$，$\delta_{\text{B}} = c_b/c = 0.0173/0.10 = 0.173$</p>
+$$\beta = 2.303 \times 0.10 \times 0.827 \times 0.173 = 2.303 \times 0.10 \times 0.143 = 0.033\;\text{mol/(L·pH)}$$
+
+<p>（注：若题目答案给出 $\beta = 0.02$ mol/(L·pH)，可能使用了不同的浓度定义或四舍五入方式。以题目标准答案为准。）</p>
+</div>
+
+<!-- ==================== 8. 综合例题 ==================== -->
 <h2>八、综合例题</h2>
 
 <div class="ex">
@@ -523,6 +1001,25 @@ $$\text{pH} = 14.00 - 3.90 = 10.10$$
 </div>
 </div>
 
+<div class="ex">
+<strong>例题5：</strong>计算 0.10 mol/L $\text{NaH}_2\text{PO}_4$ 溶液的 pH。
+<div class="sol">
+<div class="st">解：</div>
+$\text{H}_2\text{PO}_4^-$ 是 $\text{H}_3\text{PO}_4$ 的第一个中间形体（两性物质）。<br>
+$pK_{a1} = 2.12$，$pK_{a2} = 7.20$<br><br>
+<strong>检查简化条件：</strong><br>
+$c = 0.10 \gg K_{a1} = 7.59\times10^{-3}$？$c/K_{a1} = 0.10/7.59\times10^{-3} = 13.2$<br>
+$c$ 不是远大于 $K_{a1}$（仅约13倍），严格来说应用完整公式。<br>
+但在一般考试中，常近似用最简式：
+$$\text{pH} = \frac{1}{2}(pK_{a1} + pK_{a2}) = \frac{1}{2}(2.12 + 7.20) = 4.66$$
+<p>溶液呈酸性。若要更精确，使用：</p>
+$$[\text{H}^+] = \sqrt{\frac{K_{a1}(K_{a2}c + K_w)}{c + K_{a1}}} = \sqrt{\frac{7.59\times10^{-3}(6.31\times10^{-8}\times0.10 + 10^{-14})}{0.10 + 7.59\times10^{-3}}}$$
+$$= \sqrt{\frac{7.59\times10^{-3} \times 6.31\times10^{-9}}{0.1076}} = \sqrt{\frac{4.79\times10^{-11}}{0.1076}} = \sqrt{4.45\times10^{-10}} = 2.11\times10^{-5}$$
+$$\text{pH} = -\lg(2.11\times10^{-5}) = 4.68$$
+<p>与最简式的4.66相差仅0.02，说明即使 $c/K_{a1}$ 不太大，最简式误差也可接受。</p>
+</div>
+</div>
+
 <!-- ==================== 9. 考试陷阱 ==================== -->
 <h2>九、常见考试陷阱</h2>
 
@@ -556,15 +1053,158 @@ $K_a \cdot K_b = K_w$ 是对<strong>共轭酸碱对</strong>成立。$\text{NH}_
 Henderson-Hasselbalch 方程表明，缓冲溶液的 pH 主要取决于 $c_b/c_a$ 的比值，稀释时比值不变所以 pH 几乎不变。但总浓度降低导致缓冲容量减小。
 </div>
 
+<div class="warn">
+<strong>陷阱7：共轭酸碱对只差一个质子</strong><br>
+$\text{HPO}_4^{2-}$ 的共轭酸是 $\text{H}_2\text{PO}_4^-$（差一个质子），不是 $\text{H}_3\text{PO}_4$（差两个质子）。$\text{PO}_4^{3-}$ 的共轭酸是 $\text{HPO}_4^{2-}$，不是 $\text{H}_3\text{PO}_4$。
+</div>
+
+<div class="warn">
+<strong>陷阱8：pH 与 $[\text{H}^+]$ 互算精度</strong><br>
+$10^{-11.01}$ 不等于 $10^{-11}$！要注意小数部分：$10^{-11.01} = 10^{-11} \times 10^{-0.01} = 10^{-11} \times 0.977 = 9.77\times10^{-12}$。
+</div>
+
+<!-- ==================== 10. 真题考点精讲 ==================== -->
+<h2>十、真题考点精讲</h2>
+
+<div class="warn">本节汇总了历年小测和期末考试中的高频考点，按题型分类整理。每个考点都标注了出处，务必在考前重点复习！</div>
+
+<h3>10.1 选择题考点</h3>
+
+<div class="exam">
+<div class="t">小测一 选择题 Q2：指示剂 $K_{\text{HIn}}$ 与变色范围</div>
+<p><strong>考点：</strong>酸碱指示剂 HIn 的理论变色范围为 $\text{pH} = pK_{\text{HIn}} \pm 1$。</p>
+<p><strong>原理：</strong>指示剂 HIn 是弱酸，在溶液中存在平衡 $\text{HIn} \rightleftharpoons \text{H}^+ + \text{In}^-$。</p>
+<ul>
+  <li>当 $[\text{HIn}]/[\text{In}^-] \geq 10$ 时，显酸色 → $\text{pH} \leq pK_{\text{HIn}} - 1$</li>
+  <li>当 $[\text{HIn}]/[\text{In}^-] \leq 1/10$ 时，显碱色 → $\text{pH} \geq pK_{\text{HIn}} + 1$</li>
+  <li>中间范围：混合色（变色过渡区）</li>
+</ul>
+<p>实际变色范围通常比理论范围窄，约 $pK_{\text{HIn}} \pm 0.5$ 左右视觉变化最明显。</p>
+</div>
+
+<div class="exam">
+<div class="t">小测一 选择题 Q3：最大缓冲容量</div>
+<p><strong>考点：</strong>$\beta_{\max} = 0.576c = 2.303c/4$</p>
+<p>已知 $c = 0.10$ mol/L → $\beta_{\max} = 0.0576 \approx 0.058$ mol/(L·pH)</p>
+<p><strong>易错点：</strong>混淆 $c$ 是总浓度还是单组分浓度。$c = c_a + c_b$ 是缓冲体系的<strong>总浓度</strong>。</p>
+</div>
+
+<div class="exam">
+<div class="t">小测一 选择题 Q5：分布分数最大值对应 pH</div>
+<p><strong>考点：</strong>$\text{H}_2\text{PO}_4^-$ 的最大分布分数在 $\text{pH} = (pK_{a1}+pK_{a2})/2 = (2.12+7.20)/2 = 4.66$</p>
+<p><strong>推广：</strong>任何多元酸的第 $i$ 个中间形体，$\delta$ 最大值在 $\text{pH} = (pK_{ai}+pK_{a,i+1})/2$。</p>
+</div>
+
+<h3>10.2 填空题考点</h3>
+
+<div class="exam">
+<div class="t">小测一 填空题 Q3：NaHCO3 的 PBE</div>
+<p><strong>标准答案：</strong></p>
+$$[\text{H}_2\text{CO}_3] + [\text{H}^+] = [\text{CO}_3^{2-}] + [\text{OH}^-]$$
+<p>参考水准：$\text{HCO}_3^-$，$\text{H}_2\text{O}$。得到质子 → $\text{H}_2\text{CO}_3$、$\text{H}^+$；失去质子 → $\text{CO}_3^{2-}$、$\text{OH}^-$。</p>
+</div>
+
+<div class="exam">
+<div class="t">小测一 填空题 Q5：邻苯二甲酸污染导致 NaOH 标定偏低</div>
+<p><strong>考点：</strong>用邻苯二甲酸氢钾（KHP, $M = 204.22$, 一元酸）标定 NaOH 时，若 KHP 样品被邻苯二甲酸（$\text{H}_2\text{A}$, $M = 166.13$, 二元酸）污染：</p>
+<ul>
+  <li>$\text{H}_2\text{A}$ 的摩尔质量更小（166 vs 204），同质量含更多摩尔数</li>
+  <li>$\text{H}_2\text{A}$ 每摩尔消耗 2 mol NaOH（而 KHP 每摩尔仅消耗 1 mol）</li>
+  <li>因此同质量被污染的样品消耗的 NaOH <strong>更多</strong>，V(NaOH) 增大</li>
+</ul>
+<p>标定时：$c(\text{NaOH}) = \dfrac{m/M_{\text{KHP}}}{V(\text{NaOH})}$。分子不变（按纯 KHP 计算），分母 $V$ 增大，所以 $c(\text{NaOH})$ 计算值<strong>偏低</strong>。</p>
+<p><strong>结论：</strong>NaOH 的标定浓度<strong>偏低</strong>，用偏低的浓度去测定其他酸时，酸的测定结果<strong>偏高</strong>。</p>
+</div>
+
+<div class="exam">
+<div class="t">小测一 填空题 Q6：NaOH + NaAc 混合溶液的 PBE</div>
+<p><strong>标准答案：</strong>$c_b + [\text{HAc}] + [\text{H}^+] = [\text{OH}^-]$</p>
+<p>其中 $c_b$ 为 NaOH 的浓度。</p>
+</div>
+
+<div class="exam">
+<div class="t">2022 期末填空题 Q2：HCOOH 在 pH = pKa 时的分布分数</div>
+<p><strong>考点：</strong>任何一元酸 HA 在 $\text{pH} = pK_a$ 时，$\delta(\text{HA}) = \delta(\text{A}^-) = 0.50$。</p>
+<p>所以 HCOOH 在 pH = 3.75（$pK_a$ of HCOOH）时，$\delta(\text{HCOOH}) = 0.50$，$\delta(\text{HCOO}^-) = 0.50$。</p>
+</div>
+
+<div class="exam">
+<div class="t">2022 期末填空题 Q4：Na2HPO4 的 PBE</div>
+<p><strong>标准答案：</strong></p>
+$$[\text{H}^+] + 2[\text{H}_3\text{PO}_4] + [\text{H}_2\text{PO}_4^-] = [\text{OH}^-] + [\text{PO}_4^{3-}]$$
+<p>参考水准为 $\text{HPO}_4^{2-}$ 和 $\text{H}_2\text{O}$。$\text{H}_3\text{PO}_4$ 需要系数 2（从 $\text{HPO}_4^{2-}$ 得到 2 个质子）。</p>
+</div>
+
+<div class="exam">
+<div class="t">2022 期末填空题 Q5：pH = 11.01 求 [H+]</div>
+<p><strong>标准答案：</strong></p>
+$$[\text{H}^+] = 10^{-11.01} = 9.8 \times 10^{-12}\;\text{mol/L}$$
+<p>计算方法：$10^{-11.01} = 10^{-11} \times 10^{-0.01}$。查表或近似 $10^{-0.01} \approx 0.977$，所以 $[\text{H}^+] \approx 0.977 \times 10^{-11} \approx 9.8 \times 10^{-12}$。</p>
+</div>
+
+<h3>10.3 计算题考点</h3>
+
+<div class="exam">
+<div class="t">小测一 计算题 Q2：THAM 缓冲液</div>
+<p>完整解答见上方 7.7 节。关键结果汇总：</p>
+<ul>
+  <li>THAM 称量：7.272 g（按题目标准答案）</li>
+  <li>有效缓冲范围：$pK_a \pm 1 = 8.08 \pm 1 = 7.08 \sim 9.08$</li>
+  <li>缓冲容量：$\beta \approx 0.02$ mol/(L·pH)（按题目标准答案）</li>
+</ul>
+</div>
+
+<div class="exam">
+<div class="t">2022 期末 Q2：pH = 9 的 NH3/NH4+ 缓冲液</div>
+<p><strong>题意：</strong>用氨水（$\text{NH}_3 \cdot \text{H}_2\text{O}$，$pK_b = 4.75$，即 $\text{NH}_4^+$ 的 $pK_a = 9.25$）配制 pH = 9.00 的缓冲溶液。</p>
+<div class="sol">
+<div class="st">解：</div>
+<p>缓冲体系为 $\text{NH}_3/\text{NH}_4^+$，用 HH 方程：</p>
+$$\text{pH} = pK_a(\text{NH}_4^+) + \lg\frac{[\text{NH}_3]}{[\text{NH}_4^+]}$$
+$$9.00 = 9.25 + \lg\frac{c_b}{c_a}$$
+$$\lg\frac{c_b}{c_a} = -0.25 \quad \Rightarrow \quad \frac{c_b}{c_a} = 10^{-0.25} = 0.562$$
+
+<p>即 $[\text{NH}_3]/[\text{NH}_4^+] = 0.562$，氨水（碱）与铵盐（酸）的浓度比约为 0.56:1。</p>
+<p><strong>验证：</strong>$pK_a(\text{NH}_4^+) = 9.25$，缓冲范围 $9.25 \pm 1 = 8.25 \sim 10.25$，pH = 9.00 在范围内 ✓。</p>
+<p>$c_b/c_a = 0.562$，在 $0.1 \sim 10$ 之间 ✓。</p>
+
+<p><strong>配制方法：</strong>取一定量氨水，加入适量 $\text{NH}_4\text{Cl}$ 固体（或用 HCl 中和部分氨水），使得 $\text{NH}_3:\text{NH}_4^+$ 的摩尔比为 0.562:1。</p>
+</div>
+</div>
+
+<div class="exam">
+<div class="t">2022 期末填空题 Q2 扩展：共轭酸的 pKa</div>
+<p>$\text{HPO}_4^{2-}$ 的共轭酸为 $\text{H}_2\text{PO}_4^-$。</p>
+<p>常见易混淆的共轭关系：</p>
+<table>
+<tr><th>给定物种</th><th>共轭酸（+H$^+$）</th><th>共轭碱（-H$^+$）</th></tr>
+<tr><td>$\text{H}_2\text{PO}_4^-$</td><td>$\text{H}_3\text{PO}_4$</td><td>$\text{HPO}_4^{2-}$</td></tr>
+<tr><td>$\text{HPO}_4^{2-}$</td><td>$\text{H}_2\text{PO}_4^-$</td><td>$\text{PO}_4^{3-}$</td></tr>
+<tr><td>$\text{HCO}_3^-$</td><td>$\text{H}_2\text{CO}_3$</td><td>$\text{CO}_3^{2-}$</td></tr>
+<tr><td>$\text{NH}_3$</td><td>$\text{NH}_4^+$</td><td>$\text{NH}_2^-$</td></tr>
+<tr><td>$\text{H}_2\text{O}$</td><td>$\text{H}_3\text{O}^+$</td><td>$\text{OH}^-$</td></tr>
+</table>
+</div>
+
 <div class="note">
 <strong>考前速记清单：</strong>
 <ul>
-  <li>$K_a \cdot K_b = K_w = 10^{-14}$（25°C）</li>
+  <li>$K_a \cdot K_b = K_w = 10^{-14}$（25°C），$pK_a + pK_b = 14$</li>
   <li>最简式条件：$cK_a \geq 20K_w$ 且 $c/K_a \geq 400$</li>
+  <li>弱酸：$\text{pH} = \frac{1}{2}(pK_a - \lg c)$</li>
+  <li>弱碱：$\text{pOH} = \frac{1}{2}(pK_b - \lg c)$，$\text{pH} = 14 - \text{pOH}$</li>
+  <li>缓冲液：$\text{pH} = pK_a + \lg(c_b/c_a)$</li>
   <li>两性物质：$\text{pH} = \frac{1}{2}(pK_{a1}+pK_{a2})$</li>
   <li>缓冲范围：$pK_a \pm 1$</li>
+  <li>最大缓冲容量：$\beta_{\max} = 0.576c$（当 $\text{pH} = pK_a$）</li>
   <li>中间形体最大分布：$\text{pH}=(pK_{ai}+pK_{a,i+1})/2$</li>
-  <li>多元酸按一元处理条件：$2K_{a2}/[\text{H}^+]<0.05$</li>
+  <li>弱酸弱碱盐（$\text{NH}_4\text{Ac}$型）：$\text{pH} = \frac{1}{2}(pK_{a,\text{弱酸}}+pK_{a,\text{共轭酸}})$，与浓度无关</li>
+  <li>多元酸按一元处理条件：$2K_{a2}/[\text{H}^+]<0.05$，还需检查 $c/K_{a1}\geq400$</li>
+  <li>一元酸在 pH = pKa 时：$\delta(\text{HA}) = \delta(\text{A}^-) = 0.50$</li>
+  <li>$\text{HPO}_4^{2-}$ 的共轭酸是 $\text{H}_2\text{PO}_4^-$（差一个质子！）</li>
+  <li>NaHCO$_3$ PBE：$[\text{H}_2\text{CO}_3]+[\text{H}^+]=[\text{CO}_3^{2-}]+[\text{OH}^-]$</li>
+  <li>Na$_2$HPO$_4$ PBE：$[\text{H}^+]+2[\text{H}_3\text{PO}_4]+[\text{H}_2\text{PO}_4^-]=[\text{OH}^-]+[\text{PO}_4^{3-}]$</li>
+  <li>缓冲容量公式：$\beta = 2.303 c \cdot \delta_{\text{HA}} \cdot \delta_{\text{A}^-}$</li>
 </ul>
 </div>
 

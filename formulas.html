@@ -27,17 +27,15 @@ body {
 }
 .nav-bar {
   position: sticky; top: 0; z-index: 100;
-  background: linear-gradient(135deg, var(--pri), #2980b9);
-  padding: 10px 24px;
-  display: flex; align-items: center; gap: 18px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  background: #fffef9; padding: 10px 15px;
+  border-bottom: 2px solid #e0d8c8;
+  font-size: .9em; display: flex; gap: 12px; flex-wrap: wrap;
 }
 .nav-bar a {
-  color: #fff; text-decoration: none; font-size: 14px;
-  padding: 4px 12px; border-radius: 4px; transition: background .2s;
+  color: #1a5276; text-decoration: none; font-weight: bold;
+  padding: 3px 8px; border-radius: 4px;
 }
-.nav-bar a:hover { background: rgba(255,255,255,.18); }
-.nav-bar .brand { font-weight: 700; font-size: 16px; letter-spacing: .5px; }
+.nav-bar a:hover { background: #1a5276; color: #fff; }
 .container { max-width: 960px; margin: 0 auto; padding: 24px 20px; }
 h1 {
   text-align: center; color: var(--pri); font-size: 2em;
@@ -81,15 +79,28 @@ tr:hover { background: #eaf2f8; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
 .katex-display { margin: .6em 0 !important; }
+.ppt-img{display:block;max-width:100%;margin:12px auto;border:1px solid #e0d8c8;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ppt-caption{text-align:center;font-size:.82em;color:#888;margin:-6px 0 12px;}
 </style>
 </head>
 <body>
 
-<nav class="nav-bar">
-  <a href="index.html" class="brand">分析化学1</a>
+<div class="nav-bar">
   <a href="index.html">首页</a>
-  <a href="formulas.html">公式速查</a>
-</nav>
+  <a href="ch1.html">第一章</a>
+  <a href="ch3.html">第三章</a>
+  <a href="ch5-1.html">第五章(上)</a>
+  <a href="ch5-2.html">第五章(下)</a>
+  <a href="ch6.html">第六章</a>
+  <a href="ch7.html">第七章</a>
+  <a href="ch9.html">第九章</a>
+  <a href="ch10.html">第十章</a>
+  <a href="formulas.html">公式表</a>
+  <a href="exam-review.html">备考</a>
+  <a href="quiz1.html">小测1</a>
+  <a href="quiz2.html">小测2</a>
+  <a href="final2022.html">期末真题</a>
+</div>
 
 <div class="container">
 
@@ -97,6 +108,22 @@ tr:hover { background: #eaf2f8; }
 
 <!-- ==================== Chapter 3 ==================== -->
 <h2 id="ch3">第三章 &middot; 误差与统计处理</h2>
+
+<h3 id="ch3-error">误差基本概念</h3>
+
+<div class="fb">
+<div class="fb-title">绝对误差与相对误差</div>
+$$E_a = x_i - x_T$$
+$$E_r = \frac{x_i - x_T}{x_T} \times 100\%$$
+<p>$x_T$ 为真实值，$x_i$ 为测量值。绝对误差有正负，相对误差反映误差的相对大小。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">绝对偏差与相对偏差</div>
+$$d_i = x_i - \bar{x}, \qquad d_r = \frac{x_i - \bar{x}}{\bar{x}} \times 100\%$$
+<p>平均偏差：</p>
+$$\bar{d} = \frac{1}{n}\sum_{i=1}^{n}|x_i - \bar{x}|$$
+</div>
 
 <h3 id="ch3-basic">基本统计量</h3>
 
@@ -106,29 +133,49 @@ $$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$$
 </div>
 
 <div class="fb">
+<div class="fb-title">中位数</div>
+<p>将数据从小到大排列，$n$ 为奇数取中间值，$n$ 为偶数取中间两个值的平均。中位数对离群值不敏感。</p>
+</div>
+
+<div class="fb">
 <div class="fb-title">样本标准偏差 (Bessel 校正)</div>
 $$s = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}}$$
+<p>自由度 $f = n - 1$。分母用 $n-1$ 而非 $n$ 是因为 $\bar{x}$ 已消耗一个自由度。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">总体标准偏差 ($\sigma$)</div>
+$$\sigma = \sqrt{\frac{\sum_{i=1}^{N}(x_i - \mu)^2}{N}}$$
+<p>$\mu$ 为总体均值，$N$ 为总体大小。实际分析中通常只能用 $s$ 估计 $\sigma$。</p>
 </div>
 
 <div class="fb">
 <div class="fb-title">相对标准偏差 (RSD / CV)</div>
-$$s_r = \frac{s}{\bar{x}} \times 100\%$$
+$$\text{RSD} = s_r = \frac{s}{\bar{x}} \times 100\%$$
+<p>也称变异系数 (CV)。用于比较不同量级数据的精密度，越小越好。</p>
 </div>
 
-<div class="tip">RSD 用于比较不同量级数据的精密度，越小越好。</div>
+<div class="fb">
+<div class="fb-title">合并标准偏差 (Pooled Standard Deviation)</div>
+$$s_p = \sqrt{\frac{\sum_{j=1}^{k}(n_j - 1)s_j^2}{\sum_{j=1}^{k}(n_j - 1)}} = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2 + \cdots}{n_1 + n_2 + \cdots - k}}$$
+<p>$k$ 组数据合并，总自由度 $f = \sum(n_j - 1)$。用于 $t$-检验中两组均值比较。</p>
+</div>
+
+<div class="tip">RSD 用于比较不同量级数据的精密度，越小越好。$s$ 衡量一组数据的分散程度，$s_r$ 衡量相对分散程度。</div>
 
 <h3 id="ch3-ci">置信区间与显著性检验</h3>
 
 <div class="fb">
 <div class="fb-title">置信区间</div>
 $$\mu = \bar{x} \pm \frac{t_{\alpha,f} \cdot s}{\sqrt{n}}$$
-<p>其中 $f = n - 1$ 为自由度，$t_{\alpha,f}$ 查 $t$ 分布表。</p>
+<p>其中 $f = n - 1$ 为自由度，$t_{\alpha,f}$ 查 $t$ 分布表。置信水平 = $1-\alpha$，常取 95%（$\alpha=0.05$）。</p>
+<p>含义：在 $1-\alpha$ 的概率下，真值 $\mu$ 落在此区间内。$n$ 越大或 $s$ 越小，区间越窄。</p>
 </div>
 
 <div class="fb">
 <div class="fb-title">$t$-检验 (与标准值比较)</div>
-$$t = \frac{|\bar{x} - \mu|}{s}\sqrt{n}$$
-<p>若 $t > t_{\alpha,f}$ 则差异显著。</p>
+$$t = \frac{|\bar{x} - \mu_0|}{s}\sqrt{n}$$
+<p>若 $t > t_{\alpha,f}$ 则差异显著，说明存在系统误差。$f = n-1$。</p>
 </div>
 
 <div class="fb">
@@ -136,12 +183,14 @@ $$t = \frac{|\bar{x} - \mu|}{s}\sqrt{n}$$
 $$t = \frac{|\bar{x}_1 - \bar{x}_2|}{s_p}\sqrt{\frac{n_1 n_2}{n_1 + n_2}}$$
 <p>合并标准偏差：</p>
 $$s_p = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1 + n_2 - 2}}$$
+<p>自由度 $f = n_1 + n_2 - 2$。先做 $F$-检验确认两组方差无显著差异后方可使用。</p>
 </div>
 
 <div class="fb">
 <div class="fb-title">$F$-检验 (精密度比较)</div>
 $$F = \frac{s_1^2}{s_2^2} \quad (s_1 > s_2)$$
 <p>自由度 $f_1 = n_1 - 1$，$f_2 = n_2 - 1$。若 $F > F_{\alpha}(f_1,f_2)$ 则两组精密度有显著差异。</p>
+<p>$F$-检验是 $t$-检验的前提步骤，先比较方差再比较均值。</p>
 </div>
 
 <h3 id="ch3-outlier">可疑值检验</h3>
@@ -149,31 +198,43 @@ $$F = \frac{s_1^2}{s_2^2} \quad (s_1 > s_2)$$
 <div class="two-col">
 <div class="fb">
 <div class="fb-title">$Q$-检验 (Dixon)</div>
-$$Q = \frac{x_{\text{suspect}} - x_{\text{adjacent}}}{x_{\max} - x_{\min}}$$
+$$Q = \frac{|x_{\text{suspect}} - x_{\text{nearest}}|}{R}$$
+<p>$R = x_{\max} - x_{\min}$ 为极差。将数据排序后，可疑值在两端，$x_{\text{nearest}}$ 为与可疑值相邻的值。</p>
+<p>若 $Q > Q_{\alpha,n}$ 则舍弃。适用于小样本 ($n \le 10$)。</p>
 </div>
 <div class="fb">
 <div class="fb-title">Grubbs 检验</div>
 $$G = \frac{|x_{\text{suspect}} - \bar{x}|}{s}$$
+<p>若 $G > G_{\alpha,n}$ 则舍弃。</p>
+<p>适用范围比 $Q$-检验更广，对样本量要求不严格。</p>
 </div>
 </div>
 
-<div class="tip">$Q$-检验适用于小样本 ($n \le 10$)，Grubbs 检验适用范围更广。先排序数据再操作。</div>
+<div class="tip">$Q$-检验适用于小样本 ($n \le 10$)，Grubbs 检验适用范围更广。先排序数据再操作。注意：检验前不能先剔除再检验，必须用原始数据。</div>
 
 <h3 id="ch3-prop">误差传递</h3>
 
 <div class="fb">
-<div class="fb-title">加减法误差传递</div>
+<div class="fb-title">加减法误差传递（绝对误差）</div>
 <p>若 $R = aA + bB + \cdots$，则</p>
 $$s_R^2 = a^2 s_A^2 + b^2 s_B^2 + \cdots$$
+<p>或用极值误差：$\Delta R = |a|\Delta A + |b|\Delta B + \cdots$</p>
 </div>
 
 <div class="fb">
-<div class="fb-title">乘除法误差传递</div>
+<div class="fb-title">乘除法误差传递（相对误差）</div>
 <p>若 $R = A^a \cdot B^b \cdots$，则</p>
 $$\left(\frac{s_R}{R}\right)^2 = a^2\left(\frac{s_A}{A}\right)^2 + b^2\left(\frac{s_B}{B}\right)^2 + \cdots$$
 </div>
 
-<div class="warn">加减看绝对误差，乘除看相对误差 &mdash; 这是选择有效数字保留位数的依据。</div>
+<div class="fb">
+<div class="fb-title">对数与指数的误差传递</div>
+<p>若 $R = \lg A$，则 $s_R = \dfrac{0.434 \cdot s_A}{A}$</p>
+<p>若 $R = \ln A$，则 $s_R = \dfrac{s_A}{A}$</p>
+<p>若 $R = 10^A$，则 $\dfrac{s_R}{R} = 2.303 \cdot s_A$</p>
+</div>
+
+<div class="warn">加减看绝对误差，乘除看相对误差 &mdash; 这是选择有效数字保留位数的依据。最终结果的有效位数由误差最大的那项决定。</div>
 
 <h3 id="ch3-reg">线性回归</h3>
 
@@ -181,9 +242,30 @@ $$\left(\frac{s_R}{R}\right)^2 = a^2\left(\frac{s_A}{A}\right)^2 + b^2\left(\fra
 <div class="fb-title">最小二乘法</div>
 $$m = \frac{S_{xy}}{S_{xx}}, \qquad b = \bar{y} - m\bar{x}$$
 <p>其中 $S_{xy} = \sum(x_i - \bar{x})(y_i - \bar{y})$，$S_{xx} = \sum(x_i - \bar{x})^2$，$S_{yy} = \sum(y_i - \bar{y})^2$</p>
-$$r = m\sqrt{\frac{S_{xx}}{S_{yy}}}$$
-<p>$|r|$ 越接近 1，线性关系越好。</p>
+$$r = m\sqrt{\frac{S_{xx}}{S_{yy}}} = \frac{S_{xy}}{\sqrt{S_{xx} \cdot S_{yy}}}$$
+<p>$|r|$ 越接近 1，线性关系越好。一般要求 $|r| \geq 0.999$。</p>
 </div>
+
+<h3 id="ch3-table-t">$t$-分布表 (双侧，$\alpha = 0.05$)</h3>
+
+<table>
+<tr><th>$f$</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>15</th><th>20</th><th>$\infty$</th></tr>
+<tr><td>$t_{0.05,f}$</td><td>12.71</td><td>4.30</td><td>3.18</td><td>2.78</td><td>2.57</td><td>2.45</td><td>2.37</td><td>2.31</td><td>2.26</td><td>2.23</td><td>2.13</td><td>2.09</td><td>1.96</td></tr>
+</table>
+
+<h3 id="ch3-table-q">$Q$-检验临界值表 ($\alpha = 0.05$)</h3>
+
+<table>
+<tr><th>$n$</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
+<tr><td>$Q_{0.05}$</td><td>0.970</td><td>0.829</td><td>0.710</td><td>0.625</td><td>0.568</td><td>0.526</td><td>0.493</td><td>0.466</td></tr>
+</table>
+
+<h3 id="ch3-table-g">Grubbs 检验临界值表 ($\alpha = 0.05$)</h3>
+
+<table>
+<tr><th>$n$</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
+<tr><td>$G_{0.05}$</td><td>1.15</td><td>1.46</td><td>1.67</td><td>1.82</td><td>1.94</td><td>2.03</td><td>2.11</td><td>2.18</td></tr>
+</table>
 
 <!-- ==================== Chapter 5 ==================== -->
 <h2 id="ch5">第五章 &middot; 酸碱平衡与滴定</h2>
@@ -193,12 +275,21 @@ $$r = m\sqrt{\frac{S_{xx}}{S_{yy}}}$$
 <div class="fb">
 <div class="fb-title">一元弱酸 HA</div>
 $$\delta_{\text{HA}} = \frac{[\text{H}^+]}{[\text{H}^+] + K_a}, \qquad \delta_{A^-} = \frac{K_a}{[\text{H}^+] + K_a}$$
+<p>$\delta_{\text{HA}} + \delta_{A^-} = 1$，当 $\text{pH} = \text{p}K_a$ 时 $\delta_{\text{HA}} = \delta_{A^-} = 0.5$。</p>
 </div>
 
 <div class="fb">
 <div class="fb-title">二元弱酸 $\text{H}_2\text{A}$</div>
 <p>令 $D = [\text{H}^+]^2 + [\text{H}^+]K_{a1} + K_{a1}K_{a2}$，则</p>
 $$\delta_{\text{H}_2\text{A}} = \frac{[\text{H}^+]^2}{D}, \quad \delta_{\text{HA}^-} = \frac{[\text{H}^+]K_{a1}}{D}, \quad \delta_{A^{2-}} = \frac{K_{a1}K_{a2}}{D}$$
+</div>
+
+<div class="fb">
+<div class="fb-title">三元弱酸 $\text{H}_3\text{A}$</div>
+<p>令 $D = [\text{H}^+]^3 + [\text{H}^+]^2 K_{a1} + [\text{H}^+]K_{a1}K_{a2} + K_{a1}K_{a2}K_{a3}$，则</p>
+$$\delta_{\text{H}_3\text{A}} = \frac{[\text{H}^+]^3}{D}, \quad \delta_{\text{H}_2\text{A}^-} = \frac{[\text{H}^+]^2 K_{a1}}{D}$$
+$$\delta_{\text{HA}^{2-}} = \frac{[\text{H}^+]K_{a1}K_{a2}}{D}, \quad \delta_{A^{3-}} = \frac{K_{a1}K_{a2}K_{a3}}{D}$$
+<p>典型三元酸：$\text{H}_3\text{PO}_4$（$\text{p}K_{a1}=2.12$, $\text{p}K_{a2}=7.20$, $\text{p}K_{a3}=12.36$）。</p>
 </div>
 
 <h3 id="ch5-ph">pH 计算</h3>
@@ -211,8 +302,13 @@ $$\delta_{\text{H}_2\text{A}} = \frac{[\text{H}^+]^2}{D}, \quad \delta_{\text{HA
   <td>$c \geq 10^{-6}$ mol/L</td>
 </tr>
 <tr>
+  <td>强酸（极稀）</td>
+  <td>$[\text{H}^+] = \frac{c + \sqrt{c^2 + 4K_w}}{2}$</td>
+  <td>$c < 10^{-6}$ mol/L</td>
+</tr>
+<tr>
   <td rowspan="3">弱酸 HA</td>
-  <td>$[\text{H}^+] = \sqrt{K_a c}$</td>
+  <td>$[\text{H}^+] = \sqrt{K_a c}$，即 $\text{pH} = \frac{1}{2}(\text{p}K_a - \lg c) = \frac{1}{2}(\text{p}K_a + \text{p}c)$</td>
   <td>$cK_a \geq 20K_w$ 且 $c/K_a \geq 400$</td>
 </tr>
 <tr>
@@ -225,7 +321,7 @@ $$\delta_{\text{H}_2\text{A}} = \frac{[\text{H}^+]^2}{D}, \quad \delta_{\text{HA
 </tr>
 <tr>
   <td rowspan="3">弱碱 B</td>
-  <td>$[\text{OH}^-] = \sqrt{K_b c}$</td>
+  <td>$[\text{OH}^-] = \sqrt{K_b c}$，即 $\text{pOH} = \frac{1}{2}(\text{p}K_b + \text{p}c)$</td>
   <td>$cK_b \geq 20K_w$ 且 $c/K_b \geq 400$</td>
 </tr>
 <tr>
@@ -236,20 +332,34 @@ $$\delta_{\text{H}_2\text{A}} = \frac{[\text{H}^+]^2}{D}, \quad \delta_{\text{HA
   <td>完整三次方程（类比弱酸）</td>
   <td>$cK_b < 20K_w$</td>
 </tr>
+<tr>
+  <td>多元弱酸（第一步）</td>
+  <td>$[\text{H}^+] = \sqrt{K_{a1} c}$（按一元弱酸处理）</td>
+  <td>$K_{a1}/K_{a2} > 20$，$c/K_{a1} \geq 400$</td>
+</tr>
 </table>
 
-<div class="tip">记忆口诀："400 判二次，20$K_w$ 判三次"。先用最简公式，不满足条件再升级。</div>
+<div class="tip">记忆口诀："400 判二次，20$K_w$ 判三次"。先用最简公式，不满足条件再升级。pH 计算流程：先判断酸碱强弱 &rarr; 再判断浓度条件 &rarr; 选择公式。</div>
+
+<div class="fb">
+<div class="fb-title">pH 计算决策树</div>
+<p>1. 强酸/强碱 &rarr; $\text{pH} = -\lg c$（或 $14 + \lg c$）</p>
+<p>2. 弱酸 &rarr; 检查 $c/K_a \geq 400$? &rarr; 是：$\text{pH} = \frac{1}{2}(\text{p}K_a + \text{p}c)$ &rarr; 否：解二次方程</p>
+<p>3. 检查 $cK_a \geq 20K_w$? &rarr; 否：解三次方程（极稀极弱）</p>
+<p>4. 缓冲溶液 &rarr; Henderson-Hasselbalch</p>
+<p>5. 两性物质 &rarr; $\text{pH} = \frac{1}{2}(\text{p}K_{a1} + \text{p}K_{a2})$</p>
+</div>
 
 <h3 id="ch5-ampho">两性物质</h3>
 
 <div class="fb">
 <div class="fb-title">两性物质（如 $\text{NaHA}$）的 pH</div>
 <p>最简式（$c \gg K_{a1}$ 且 $K_{a2}c \gg K_w$）：</p>
-$$[\text{H}^+] = \sqrt{K_{a1} K_{a2}}$$
+$$[\text{H}^+] = \sqrt{K_{a1} K_{a2}}, \qquad \text{pH} = \frac{1}{2}(\text{p}K_{a1} + \text{p}K_{a2})$$
 <p>较精确式：</p>
 $$[\text{H}^+] = \sqrt{\frac{c K_{a1} K_{a2}}{K_{a1} + c}}$$
 <p>更精确式（考虑 $K_w$）：</p>
-$$[\text{H}^+] = \sqrt{\frac{K_{a1}(K_{a2}c + K_w)}{c}}$$
+$$[\text{H}^+] = \sqrt{\frac{K_{a1}(K_{a2}c + K_w)}{c + K_{a1}}}$$
 </div>
 
 <div class="warn">两性物质 pH 通常与浓度关系不大（最简式），但当 $c$ 较小或 $K_{a1}$ 与 $K_{a2}$ 差距不大时需用精确式。</div>
@@ -258,17 +368,25 @@ $$[\text{H}^+] = \sqrt{\frac{K_{a1}(K_{a2}c + K_w)}{c}}$$
 
 <div class="fb">
 <div class="fb-title">Henderson-Hasselbalch 方程</div>
-$$\text{pH} = \text{p}K_a + \lg\frac{c_b}{c_a}$$
-<p>$c_b$ 为共轭碱浓度，$c_a$ 为共轭酸浓度。</p>
+$$\text{pH} = \text{p}K_a + \lg\frac{c_{A^-}}{c_{HA}} = \text{p}K_a + \lg\frac{c_b}{c_a}$$
+<p>$c_b$ 为共轭碱浓度，$c_a$ 为共轭酸浓度。碱缓冲体系：$\text{pOH} = \text{p}K_b + \lg\dfrac{c_{B^+}}{c_B}$。</p>
 </div>
 
 <div class="fb">
 <div class="fb-title">缓冲容量</div>
 $$\beta = 2.303 \cdot \frac{c K_a [\text{H}^+]}{([\text{H}^+] + K_a)^2}$$
-<p>当 $\text{pH} = \text{p}K_a$（即 $c_a = c_b$）时，$\beta$ 最大。</p>
+<p>当 $\text{pH} = \text{p}K_a$（即 $c_a = c_b$）时，$\beta$ 最大：</p>
+$$\beta_{\max} = 2.303 \cdot \frac{c}{4} = 0.576c$$
+<p>其中 $c = c_a + c_b$ 为缓冲液总浓度。</p>
 </div>
 
-<div class="tip">选择缓冲液：$\text{p}K_a$ 与目标 pH 相差不超过 $\pm 1$，总浓度 0.01&ndash;1 mol/L。</div>
+<div class="fb">
+<div class="fb-title">缓冲范围</div>
+<p>有效缓冲范围：$\text{pH} = \text{p}K_a \pm 1$（即 $c_b/c_a$ 在 0.1&ndash;10 之间）。</p>
+<p>选择缓冲液原则：$\text{p}K_a$ 尽量接近目标 pH；总浓度 0.01&ndash;1 mol/L。</p>
+</div>
+
+<div class="tip">选择缓冲液：$\text{p}K_a$ 与目标 pH 相差不超过 $\pm 1$，总浓度 0.01&ndash;1 mol/L。$\beta_{\max}$ 正比于总浓度。</div>
 
 <h3 id="ch5-titr">酸碱滴定判据与误差</h3>
 
@@ -276,19 +394,44 @@ $$\beta = 2.303 \cdot \frac{c K_a [\text{H}^+]}{([\text{H}^+] + K_a)^2}$$
 <div class="fb-title">滴定常数与可行性判据</div>
 <p>滴定常数：$K_t = K_a / K_w$（滴定弱酸），$K_t = K_b / K_w$（滴定弱碱）</p>
 $$\text{直接滴定判据：} \quad cK_a \geq 10^{-8} \quad (\text{或 } cK_b \geq 10^{-8})$$
-$$\text{分步滴定判据：} \quad \frac{K_{a1}}{K_{a2}} > 10^5$$
+$$\text{分步滴定判据：} \quad \frac{K_{a1}}{K_{a2}} \geq 10^4 \sim 10^5$$
+<p>当 $K_{a1}/K_{a2} \geq 10^4$ 时分步滴定误差约 $\leq 0.3\%$；当 $K_{a1}/K_{a2} \geq 10^5$ 时误差约 $\leq 0.1\%$。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">滴定突跃</div>
+<p>强酸&ndash;强碱：突跃约 $\pm 2$ 个 pH 单位；浓度每增大/减小 10 倍，突跃增大/减小约 2 个 pH 单位。</p>
+<p>弱酸&ndash;强碱：突跃约 $\pm 1$ 个 pH 单位（较强酸小）；浓度每增大 10 倍，突跃增大约 1 个 pH 单位；$K_a$ 每增大 10 倍，突跃增大约 1 个 pH 单位。</p>
 </div>
 
 <div class="fb">
 <div class="fb-title">终点误差 (林邦公式)</div>
 <p>强酸&ndash;强碱滴定：</p>
-$$E_t = \frac{[\text{H}^+]_{ep} - [\text{OH}^-]_{ep}}{c_{sp}}$$
-<p>弱酸&ndash;强碱滴定（林邦误差公式）：</p>
-$$E_t = \frac{10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}}{\sqrt{K_t} \cdot c_{sp}}$$
-<p>其中 $\Delta\text{pH} = \text{pH}_{ep} - \text{pH}_{sp}$，$c_{sp}$ 为化学计量点浓度。</p>
+$$E_t = \frac{[\text{H}^+]_{ep} - [\text{OH}^-]_{ep}}{c_{sp}} \times 100\%$$
+<p>弱酸&ndash;强碱滴定：</p>
+$$E_t = \frac{10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}}{\sqrt{K_t} \cdot c_{sp}} \times 100\%$$
+<p>强酸&ndash;弱碱滴定：</p>
+$$E_t = \frac{10^{\Delta\text{pH}} - 10^{-\Delta\text{pH}}}{\sqrt{K_t} \cdot c_{sp}} \times 100\%$$
+<p>其中 $\Delta\text{pH} = \text{pH}_{ep} - \text{pH}_{sp}$，$c_{sp}$ 为化学计量点浓度，$K_t = K_a/K_w$ 或 $K_b/K_w$。</p>
 </div>
 
-<div class="warn">$E_t$ 为正表示过量滴定（过碱），为负表示不足（欠碱）。$|\Delta\text{pH}| \leq 0.5$ 时误差通常可接受。</div>
+<div class="warn">$E_t$ 为正表示过量滴定（过碱），为负表示不足（欠碱）。$|\Delta\text{pH}| \leq 0.5$ 时误差通常可接受（$|E_t| \leq 0.1\%$）。</div>
+
+<h3 id="ch5-indicator">常用酸碱指示剂</h3>
+
+<table>
+<tr><th>指示剂</th><th>变色范围 (pH)</th><th>酸色</th><th>碱色</th><th>常用滴定</th></tr>
+<tr><td>甲基橙</td><td>3.1 &ndash; 4.4</td><td>红</td><td>黄</td><td>强碱滴强酸</td></tr>
+<tr><td>甲基红</td><td>4.4 &ndash; 6.2</td><td>红</td><td>黄</td><td>强碱滴中强酸</td></tr>
+<tr><td>溴甲酚绿</td><td>3.8 &ndash; 5.4</td><td>黄</td><td>蓝</td><td>-</td></tr>
+<tr><td>溴甲酚紫</td><td>5.2 &ndash; 6.8</td><td>黄</td><td>紫</td><td>-</td></tr>
+<tr><td>溴百里酚蓝</td><td>6.0 &ndash; 7.6</td><td>黄</td><td>蓝</td><td>-</td></tr>
+<tr><td>酚酞</td><td>8.0 &ndash; 10.0</td><td>无色</td><td>粉红</td><td>强酸滴强碱 / 弱酸-强碱</td></tr>
+<tr><td>百里酚酞</td><td>9.4 &ndash; 10.6</td><td>无色</td><td>蓝</td><td>极弱酸-强碱</td></tr>
+<tr><td>百里酚蓝（碱性）</td><td>8.0 &ndash; 9.6</td><td>黄</td><td>蓝</td><td>-</td></tr>
+</table>
+
+<div class="tip">指示剂选择原则：变色范围应落在滴定突跃范围之内。对称滴定优先选变色点在 pH 7 附近的指示剂；不对称滴定选变色点在化学计量点 pH 附近的指示剂。</div>
 
 <!-- ==================== Chapter 6 ==================== -->
 <h2 id="ch6">第六章 &middot; 配位滴定</h2>
@@ -298,21 +441,39 @@ $$E_t = \frac{10^{-\Delta\text{pH}} - 10^{\Delta\text{pH}}}{\sqrt{K_t} \cdot c_{
 <div class="fb">
 <div class="fb-title">酸效应系数</div>
 $$\alpha_{\text{Y(H)}} = \frac{[\text{Y}']}{[\text{Y}^{4-}]} = 1 + \frac{[\text{H}^+]}{K_{a6}} + \frac{[\text{H}^+]^2}{K_{a6}K_{a5}} + \cdots + \frac{[\text{H}^+]^6}{\prod K_{ai}}$$
-<p>简写为 $\lg\alpha_{\text{Y(H)}}$，可查表。</p>
+<p>简写为 $\lg\alpha_{\text{Y(H)}}$，可查表。pH 越低，$\alpha_{\text{Y(H)}}$ 越大，$\text{Y}^{4-}$ 的有效浓度越低。</p>
 </div>
 
 <div class="fb">
 <div class="fb-title">金属离子副反应系数</div>
-$$\alpha_M = \frac{[\text{M}']}{[\text{M}]} = 1 + \sum \beta_i [\text{L}]^i$$
-<p>常见干扰配体：$\text{OH}^-$、$\text{NH}_3$ 等。</p>
+$$\alpha_M = \frac{[\text{M}']}{[\text{M}]} = 1 + \sum_{i=1}^{N} \beta_i [\text{L}]^i$$
+<p>常见干扰配体：$\text{OH}^-$、$\text{NH}_3$、$\text{F}^-$、$\text{CN}^-$、酒石酸等。</p>
+<p>若存在多种配体：$\alpha_M = \alpha_{M(L_1)} + \alpha_{M(L_2)} + \cdots - (k-1)$，$k$ 为配体种类数。</p>
 </div>
+
+<div class="fb">
+<div class="fb-title">EDTA 总副反应系数</div>
+$$\alpha_Y = \alpha_{\text{Y(H)}} + \alpha_{\text{Y(N)}} - 1$$
+<p>$\alpha_{\text{Y(N)}}$ 为共存金属离子 N 与 Y 配位引起的副反应。若无共存金属干扰：$\alpha_Y \approx \alpha_{\text{Y(H)}}$。</p>
+</div>
+
+<h3 id="ch6-alphaYH">$\lg\alpha_{\text{Y(H)}}$ 常用值</h3>
+
+<table>
+<tr><th>pH</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr>
+<tr><td>$\lg\alpha_{\text{Y(H)}}$</td><td>24.0</td><td>18.3</td><td>13.8</td><td>10.8</td><td>8.6</td><td>6.6</td><td>4.8</td><td>3.4</td><td>2.3</td><td>1.4</td><td>0.5</td><td>0.1</td><td>0.00</td></tr>
+</table>
+
+<div class="tip">pH $\geq 12$ 时 $\alpha_{\text{Y(H)}} \approx 1$，酸效应可忽略。低 pH 时酸效应很大，EDTA 有效浓度极低。</div>
 
 <h3 id="ch6-cond">条件稳定常数</h3>
 
 <div class="fb">
 <div class="fb-title">条件稳定常数</div>
+$$K'_{MY} = \frac{K_{MY}}{\alpha_M \cdot \alpha_Y}$$
 $$\lg K'_{MY} = \lg K_{MY} - \lg\alpha_M - \lg\alpha_Y$$
-<p>$K'_{MY}$ 反映实际溶液条件下配位反应的完全程度。</p>
+<p>$K'_{MY}$ 反映实际溶液条件下配位反应的完全程度。若只考虑酸效应且无其他配体干扰：</p>
+$$\lg K'_{MY} = \lg K_{MY} - \lg\alpha_{\text{Y(H)}}$$
 </div>
 
 <h3 id="ch6-ep">滴定判据与终点</h3>
@@ -320,18 +481,25 @@ $$\lg K'_{MY} = \lg K_{MY} - \lg\alpha_M - \lg\alpha_Y$$
 <div class="fb">
 <div class="fb-title">化学计量点 pM'</div>
 $$\text{p}M'_{sp} = \frac{1}{2}(\lg K'_{MY} + \text{p}c_{sp})$$
-<p>其中 $\text{p}c_{sp} = -\lg c_{sp}$。</p>
+<p>其中 $\text{p}c_{sp} = -\lg c_{sp}$。这是金属指示剂选择的依据。</p>
 </div>
 
 <div class="fb">
 <div class="fb-title">准确滴定判据</div>
-$$\lg c_{sp} K'_{MY} \geq 6$$
+$$\lg (c_{sp} \cdot K'_{MY}) \geq 6$$
+<p>等价于 $\text{p}M'_{sp} \geq 3$，即终点处游离金属离子浓度足够低（$\leq 0.1\%$ 误差）。</p>
 </div>
 
 <div class="fb">
 <div class="fb-title">选择性滴定判据</div>
 $$\Delta\lg cK' = \lg c_{M_1}K'_{M_1Y} - \lg c_{M_2}K'_{M_2Y} \geq 6$$
-<p>满足此条件时可在 $M_2$ 共存下准确滴定 $M_1$。</p>
+<p>满足此条件时可在 $M_2$ 共存下准确滴定 $M_1$（$M_1$ 与 EDTA 配位能力更强）。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">配位滴定终点误差</div>
+$$E_t = \frac{10^{\Delta\text{p}M'} - 10^{-\Delta\text{p}M'}}{c_{sp} \cdot K'_{MY}} \times 100\%$$
+<p>其中 $\Delta\text{p}M' = \text{p}M'_{ep} - \text{p}M'_{sp}$。要求指示剂的 $\text{p}M_t$ 尽量接近 $\text{p}M'_{sp}$。</p>
 </div>
 
 <table>
@@ -339,9 +507,33 @@ $$\Delta\lg cK' = \lg c_{M_1}K'_{M_1Y} - \lg c_{M_2}K'_{M_2Y} \geq 6$$
 <tr><td>控制 pH</td><td>选择合适酸度</td><td>增大 $\alpha_{\text{Y(H)}}$ 使干扰离子不被滴定</td></tr>
 <tr><td>加掩蔽剂</td><td>如加 $\text{F}^-$、$\text{CN}^-$、三乙醇胺</td><td>增大干扰离子的 $\alpha_M$</td></tr>
 <tr><td>选择指示剂</td><td>金属指示剂 pM 转变范围</td><td>终点颜色变化明显</td></tr>
+<tr><td>返滴定</td><td>过量 EDTA + 另一金属标液回滴</td><td>反应慢或无合适指示剂时使用</td></tr>
+<tr><td>置换滴定</td><td>待测物置换出另一金属再滴定</td><td>无法直接滴定时使用</td></tr>
 </table>
 
-<div class="tip">记忆："$\lg cK' \geq 6$ 能滴，$\Delta\lg cK' \geq 6$ 能分"。</div>
+<div class="tip">记忆："$\lg cK' \geq 6$ 能滴，$\Delta\lg cK' \geq 6$ 能分"。控制酸度是提高选择性最简单的方法。</div>
+
+<h3 id="ch6-lgK">常见金属-EDTA 稳定常数 ($\lg K_{MY}$)</h3>
+
+<table>
+<tr><th>金属离子</th><th>$\lg K_{MY}$</th><th>金属离子</th><th>$\lg K_{MY}$</th><th>金属离子</th><th>$\lg K_{MY}$</th></tr>
+<tr><td>$\text{Mg}^{2+}$</td><td>8.69</td><td>$\text{Ca}^{2+}$</td><td>10.69</td><td>$\text{Sr}^{2+}$</td><td>8.63</td></tr>
+<tr><td>$\text{Ba}^{2+}$</td><td>7.76</td><td>$\text{Mn}^{2+}$</td><td>13.87</td><td>$\text{Fe}^{2+}$</td><td>14.33</td></tr>
+<tr><td>$\text{Co}^{2+}$</td><td>16.31</td><td>$\text{Ni}^{2+}$</td><td>18.62</td><td>$\text{Cu}^{2+}$</td><td>18.80</td></tr>
+<tr><td>$\text{Zn}^{2+}$</td><td>16.50</td><td>$\text{Cd}^{2+}$</td><td>16.46</td><td>$\text{Pb}^{2+}$</td><td>18.04</td></tr>
+<tr><td>$\text{Al}^{3+}$</td><td>16.13</td><td>$\text{Fe}^{3+}$</td><td>25.10</td><td>$\text{Bi}^{3+}$</td><td>27.94</td></tr>
+<tr><td>$\text{Th}^{4+}$</td><td>23.20</td><td>$\text{Hg}^{2+}$</td><td>21.80</td><td>$\text{Ag}^{+}$</td><td>7.32</td></tr>
+</table>
+
+<h3 id="ch6-indicator">常用金属指示剂</h3>
+
+<table>
+<tr><th>指示剂</th><th>缩写</th><th>适用 pH</th><th>游离色</th><th>配合色</th><th>常用滴定</th></tr>
+<tr><td>铬黑 T</td><td>EBT</td><td>9 &ndash; 11</td><td>蓝</td><td>紫红</td><td>$\text{Mg}^{2+}$, $\text{Zn}^{2+}$, $\text{Ca}^{2+}$+$\text{Mg}^{2+}$</td></tr>
+<tr><td>二甲酚橙</td><td>XO</td><td>$< 6.3$</td><td>黄</td><td>紫红</td><td>$\text{Bi}^{3+}$, $\text{Pb}^{2+}$, $\text{Zn}^{2+}$, $\text{Fe}^{3+}$</td></tr>
+<tr><td>钙指示剂</td><td>NN</td><td>12 &ndash; 13</td><td>蓝</td><td>酒红</td><td>$\text{Ca}^{2+}$</td></tr>
+<tr><td>PAN</td><td>PAN</td><td>2 &ndash; 12</td><td>黄</td><td>红</td><td>$\text{Cu}^{2+}$, $\text{Ni}^{2+}$, $\text{Zn}^{2+}$</td></tr>
+</table>
 
 <!-- ==================== Chapter 7 ==================== -->
 <h2 id="ch7">第七章 &middot; 氧化还原滴定</h2>
@@ -349,17 +541,34 @@ $$\Delta\lg cK' = \lg c_{M_1}K'_{M_1Y} - \lg c_{M_2}K'_{M_2Y} \geq 6$$
 <h3 id="ch7-nernst">Nernst 方程</h3>
 
 <div class="fb">
-<div class="fb-title">条件电位形式</div>
+<div class="fb-title">标准 Nernst 方程</div>
+$$\varphi = \varphi^{\circ} + \frac{0.0592}{n}\lg\frac{[\text{Ox}]}{[\text{Red}]}$$
+<p>25 &#8451; 下，$\frac{RT}{nF}\ln = \frac{0.0592}{n}\lg$。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">条件电位</div>
+$$\varphi^{0'} = \varphi^{\circ} + \frac{0.0592}{n}\lg\frac{\alpha_{\text{Red}}}{\alpha_{\text{Ox}}} + \frac{0.0592}{n}\lg\frac{\gamma_{\text{Ox}}}{\gamma_{\text{Red}}}$$
+<p>条件电位考虑了副反应（配位、酸度等）和离子强度的影响。实际计算中：</p>
 $$\varphi = \varphi^{0'} + \frac{0.0592}{n}\lg\frac{c_{\text{Ox}}}{c_{\text{Red}}}$$
-<p>$\varphi^{0'}$ 为条件电位（考虑离子强度、副反应等）。</p>
+<p>副反应使 $\varphi^{0'}$ 偏离 $\varphi^{\circ}$。若 Ox 态副反应大（$\alpha_{\text{Ox}}$ 大），$\varphi^{0'}$ 降低；若 Red 态副反应大，$\varphi^{0'}$ 升高。</p>
 </div>
 
 <h3 id="ch7-eq">平衡常数</h3>
 
 <div class="fb">
 <div class="fb-title">氧化还原反应平衡常数</div>
-$$\lg K = \frac{n(\varphi_1^{0'} - \varphi_2^{0'})}{0.0592}$$
-<p>$n$ 为转移电子数。$\lg K$ 越大，反应越完全。</p>
+$$\lg K = \frac{n(\varphi_1^{0'} - \varphi_2^{0'})}{0.0592} = \frac{n\Delta\varphi^{0'}}{0.0592}$$
+<p>$n$ 为转移电子数。$\lg K$ 越大，反应越完全。当 $n_1 \neq n_2$ 时：</p>
+$$\lg K = \frac{n_1 n_2 (\varphi_1^{0'} - \varphi_2^{0'})}{0.0592}$$
+<p>其中 $n = n_1 n_2 / \gcd(n_1, n_2)$（LCM 法）或直接用上式。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">准确滴定判据</div>
+$$\Delta\varphi^{0'} = \varphi_1^{0'} - \varphi_2^{0'} \geq 0.4\;\text{V} \quad (\text{对 } n_1 = n_2 = 1)$$
+<p>更一般的判据：$\lg K \geq 6$，即 $\Delta\varphi^{0'} \geq 0.0592 \times 6 / n \approx 0.36/n$ V。</p>
+<p>$n=1$: $\Delta\varphi' \geq 0.36$ V &emsp; $n=2$: $\Delta\varphi' \geq 0.18$ V</p>
 </div>
 
 <h3 id="ch7-sp">化学计量点电位</h3>
@@ -367,22 +576,65 @@ $$\lg K = \frac{n(\varphi_1^{0'} - \varphi_2^{0'})}{0.0592}$$
 <div class="fb">
 <div class="fb-title">等当点电位</div>
 $$\varphi_{sp} = \frac{n_1 \varphi_1^{0'} + n_2 \varphi_2^{0'}}{n_1 + n_2}$$
-<p>$n_1$、$n_2$ 为两个半反应各自转移的电子数。</p>
+<p>$n_1$、$n_2$ 为两个半反应各自转移的电子数。对称反应 ($n_1 = n_2$) 时，$\varphi_{sp}$ 恰为两条件电位的平均值。</p>
 </div>
 
 <div class="fb">
-<div class="fb-title">准确滴定判据</div>
-$$\Delta\varphi^{0'} = \varphi_1^{0'} - \varphi_2^{0'} \geq 0.4\;\text{V}$$
+<div class="fb-title">滴定曲线特征</div>
+<p>滴定 50% 处：$\varphi = \varphi_2^{0'}$（被测物的条件电位）</p>
+<p>滴定 200% 处：$\varphi = \varphi_1^{0'}$（滴定剂的条件电位）</p>
+<p>突跃范围：$\varphi_2^{0'} \pm \frac{0.0592}{n_2} \times 2$ 到 $\varphi_1^{0'} \pm \frac{0.0592}{n_1} \times 2$</p>
 </div>
 
-<div class="tip">$\Delta\varphi^{0'} \geq 0.4$ V 对应 $\lg K \approx 6.8n$，反应完全度极高。对称反应 ($n_1 = n_2$) 时，$\varphi_{sp}$ 恰为两条件电位的平均值。</div>
+<h3 id="ch7-indicator">氧化还原指示剂</h3>
+
+<div class="fb">
+<div class="fb-title">指示剂变色范围</div>
+$$\varphi = \varphi^{0'}_{\text{In}} \pm \frac{0.0592}{n_{\text{In}}} \;\text{V}$$
+<p>$n_{\text{In}}$ 为指示剂反应转移电子数（通常 $n_{\text{In}} = 1$ 或 $2$）。选择指示剂使 $\varphi^{0'}_{\text{In}}$ 尽量接近 $\varphi_{sp}$。</p>
+</div>
 
 <table>
-<tr><th>滴定剂</th><th>$\varphi^{0'}$ / V (约)</th><th>常见被测物</th><th>指示剂</th></tr>
-<tr><td>$\text{KMnO}_4$</td><td>+1.51</td><td>$\text{Fe}^{2+}$, $\text{C}_2\text{O}_4^{2-}$</td><td>自身指示剂</td></tr>
-<tr><td>$\text{K}_2\text{Cr}_2\text{O}_7$</td><td>+1.33</td><td>$\text{Fe}^{2+}$</td><td>二苯胺磺酸钠</td></tr>
-<tr><td>$\text{Ce}^{4+}$</td><td>+1.44 (H$_2$SO$_4$)</td><td>$\text{Fe}^{2+}$</td><td>邻二氮菲亚铁</td></tr>
-<tr><td>$\text{I}_2 / \text{Na}_2\text{S}_2\text{O}_3$</td><td>+0.54</td><td>间接法测多种物质</td><td>淀粉</td></tr>
+<tr><th>指示剂</th><th>$\varphi^{0'}$ / V</th><th>变色</th><th>$n$</th><th>常用体系</th></tr>
+<tr><td>二苯胺磺酸钠</td><td>+0.84</td><td>无色 &rarr; 紫</td><td>2</td><td>$\text{K}_2\text{Cr}_2\text{O}_7$ 法</td></tr>
+<tr><td>邻二氮菲亚铁 (ferroin)</td><td>+1.06</td><td>红 &rarr; 浅蓝</td><td>1</td><td>$\text{Ce}^{4+}$ 法</td></tr>
+<tr><td>淀粉 ($\text{I}_2$)</td><td>&mdash;</td><td>蓝 &harr; 无色</td><td>&mdash;</td><td>碘量法</td></tr>
+<tr><td>$\text{KMnO}_4$（自身指示剂）</td><td>+1.51</td><td>无色 &rarr; 粉红</td><td>5</td><td>高锰酸钾法</td></tr>
+</table>
+
+<h3 id="ch7-reagent">常用氧化还原滴定体系</h3>
+
+<table>
+<tr><th>滴定剂</th><th>$\varphi^{0'}$ / V (约)</th><th>常见被测物</th><th>指示剂</th><th>介质</th></tr>
+<tr><td>$\text{KMnO}_4$</td><td>+1.51</td><td>$\text{Fe}^{2+}$, $\text{C}_2\text{O}_4^{2-}$, $\text{H}_2\text{O}_2$</td><td>自身指示剂</td><td>$\text{H}_2\text{SO}_4$</td></tr>
+<tr><td>$\text{K}_2\text{Cr}_2\text{O}_7$</td><td>+1.33</td><td>$\text{Fe}^{2+}$</td><td>二苯胺磺酸钠</td><td>$\text{HCl}$ / $\text{H}_2\text{SO}_4$</td></tr>
+<tr><td>$\text{Ce}^{4+}$</td><td>+1.44 ($\text{H}_2\text{SO}_4$)</td><td>$\text{Fe}^{2+}$</td><td>邻二氮菲亚铁</td><td>$\text{H}_2\text{SO}_4$</td></tr>
+<tr><td>$\text{I}_2 / \text{Na}_2\text{S}_2\text{O}_3$</td><td>+0.54</td><td>间接法测多种物质</td><td>淀粉</td><td>弱酸/中性</td></tr>
+<tr><td>$\text{Na}_2\text{S}_2\text{O}_3$</td><td>+0.08</td><td>$\text{I}_2$（碘量法）</td><td>淀粉</td><td>弱酸/中性</td></tr>
+</table>
+
+<div class="fb">
+<div class="fb-title">碘量法要点</div>
+<p>直接碘量法：$\text{I}_2$ 作滴定剂，测定还原性物质（如 $\text{As}_2\text{O}_3$, $\text{SO}_3^{2-}$, $\text{Sn}^{2+}$）</p>
+<p>间接碘量法（返滴定）：过量 $\text{KI}$ + 氧化剂 &rarr; 析出 $\text{I}_2$ &rarr; 用 $\text{Na}_2\text{S}_2\text{O}_3$ 滴定</p>
+$$2\text{S}_2\text{O}_3^{2-} + \text{I}_2 \rightarrow \text{S}_4\text{O}_6^{2-} + 2\text{I}^-$$
+<p>注意：淀粉指示剂应在近终点时加入（间接碘量法），避免 $\text{I}_2$ 被淀粉强烈吸附难以释放。</p>
+</div>
+
+<h3 id="ch7-potential">常见标准电极电位</h3>
+
+<table>
+<tr><th>半反应</th><th>$\varphi^{\circ}$ / V</th></tr>
+<tr><td>$\text{MnO}_4^- + 8\text{H}^+ + 5e^- \rightleftharpoons \text{Mn}^{2+} + 4\text{H}_2\text{O}$</td><td>+1.51</td></tr>
+<tr><td>$\text{Cr}_2\text{O}_7^{2-} + 14\text{H}^+ + 6e^- \rightleftharpoons 2\text{Cr}^{3+} + 7\text{H}_2\text{O}$</td><td>+1.33</td></tr>
+<tr><td>$\text{Ce}^{4+} + e^- \rightleftharpoons \text{Ce}^{3+}$</td><td>+1.70 (HClO$_4$); +1.44 (H$_2$SO$_4$)</td></tr>
+<tr><td>$\text{Fe}^{3+} + e^- \rightleftharpoons \text{Fe}^{2+}$</td><td>+0.771</td></tr>
+<tr><td>$\text{I}_2 + 2e^- \rightleftharpoons 2\text{I}^-$</td><td>+0.535</td></tr>
+<tr><td>$\text{S}_4\text{O}_6^{2-} + 2e^- \rightleftharpoons 2\text{S}_2\text{O}_3^{2-}$</td><td>+0.08</td></tr>
+<tr><td>$\text{Cu}^{2+} + 2e^- \rightleftharpoons \text{Cu}$</td><td>+0.337</td></tr>
+<tr><td>$\text{Ag}^+ + e^- \rightleftharpoons \text{Ag}$</td><td>+0.799</td></tr>
+<tr><td>$\text{Sn}^{4+} + 2e^- \rightleftharpoons \text{Sn}^{2+}$</td><td>+0.15</td></tr>
+<tr><td>$\text{As(V)} + 2\text{H}^+ + 2e^- \rightleftharpoons \text{As(III)} + \text{H}_2\text{O}$</td><td>+0.559</td></tr>
 </table>
 
 <!-- ==================== Chapter 9 ==================== -->
@@ -391,31 +643,85 @@ $$\Delta\varphi^{0'} = \varphi_1^{0'} - \varphi_2^{0'} \geq 0.4\;\text{V}$$
 <h3 id="ch9-ksp">溶度积与溶解度</h3>
 
 <div class="fb">
+<div class="fb-title">溶度积</div>
+<p>对于沉淀 $\text{M}_m\text{A}_n$：</p>
+$$K_{sp} = [\text{M}]^m [\text{A}]^n$$
+</div>
+
+<div class="fb">
 <div class="fb-title">条件溶度积</div>
-$$K'_{sp} = K_{sp} \cdot \alpha_M \cdot \alpha_A$$
-<p>$\alpha_M$、$\alpha_A$ 为金属离子和阴离子的副反应系数。</p>
+$$K'_{sp} = K_{sp} \cdot \alpha_M^{\,m} \cdot \alpha_A^{\,n}$$
+<p>对沉淀 $\text{M}_m\text{A}_n$，$\alpha_M$、$\alpha_A$ 为金属离子和阴离子的副反应系数。实际溶解度由 $K'_{sp}$ 决定。</p>
 </div>
 
 <div class="fb">
 <div class="fb-title">溶解度计算</div>
 <table>
 <tr><th>沉淀类型</th><th>溶解平衡</th><th>溶解度 $s$</th></tr>
-<tr><td>MA 型 (如 AgCl)</td><td>$\text{MA} \rightleftharpoons \text{M}^+ + \text{A}^-$</td><td>$s = \sqrt{K'_{sp}}$</td></tr>
-<tr><td>MA$_2$ 型 (如 CaF$_2$)</td><td>$\text{MA}_2 \rightleftharpoons \text{M}^{2+} + 2\text{A}^-$</td><td>$s = \left(\dfrac{K'_{sp}}{4}\right)^{1/3}$</td></tr>
-<tr><td>M$_2$A 型</td><td>$\text{M}_2\text{A} \rightleftharpoons 2\text{M}^+ + \text{A}^{2-}$</td><td>$s = \left(\dfrac{K'_{sp}}{4}\right)^{1/3}$</td></tr>
+<tr><td>MA 型 (如 AgCl, BaSO$_4$)</td><td>$\text{MA} \rightleftharpoons \text{M}^+ + \text{A}^-$</td><td>$s = \sqrt{K'_{sp}}$</td></tr>
+<tr><td>MA$_2$ 型 (如 CaF$_2$, PbCl$_2$)</td><td>$\text{MA}_2 \rightleftharpoons \text{M}^{2+} + 2\text{A}^-$</td><td>$s = \left(\dfrac{K'_{sp}}{4}\right)^{1/3}$</td></tr>
+<tr><td>M$_2$A 型 (如 Ag$_2$CrO$_4$)</td><td>$\text{M}_2\text{A} \rightleftharpoons 2\text{M}^+ + \text{A}^{2-}$</td><td>$s = \left(\dfrac{K'_{sp}}{4}\right)^{1/3}$</td></tr>
+<tr><td>M$_2$A$_3$ 型</td><td>$\text{M}_2\text{A}_3 \rightleftharpoons 2\text{M}^{3+} + 3\text{A}^{2-}$</td><td>$s = \left(\dfrac{K'_{sp}}{108}\right)^{1/5}$</td></tr>
 </table>
+<p>一般公式：$\text{M}_m\text{A}_n$ 型，$s = \left(\dfrac{K'_{sp}}{m^m \cdot n^n}\right)^{1/(m+n)}$。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">分步沉淀与沉淀分离</div>
+<p>沉淀开始条件：$Q > K_{sp}$（离子积 $Q$ 大于溶度积）</p>
+<p>沉淀完全条件：残留离子浓度 $\leq 0.1$ mg/L（通常 $[\text{M}] \leq 10^{-5}$ mol/L）</p>
+<p>分步沉淀：先沉淀 $K_{sp}$ 小的，后沉淀 $K_{sp}$ 大的。要求两者 $K_{sp}$ 差异足够大。</p>
 </div>
 
 <h3 id="ch9-grav">重量分析</h3>
 
 <div class="fb">
-<div class="fb-title">换算因数 (重量因数)</div>
+<div class="fb-title">换算因数 (重量因数 / 重力因数)</div>
 $$F = \frac{a \cdot M_X}{b \cdot M_P}$$
 <p>$X$ 为待测组分，$P$ 为称量形式。$a$、$b$ 使 $X$ 与 $P$ 中目标原子的物质的量相等。</p>
 $$w_X = \frac{m_P \cdot F}{m_s} \times 100\%$$
+<p>$m_P$ 为称量形式质量，$m_s$ 为试样质量。</p>
 </div>
 
 <div class="tip">$F$ 越小，称量误差的影响越大，应选择 $M_P$ 尽可能大的称量形式。</div>
+
+<div class="fb">
+<div class="fb-title">Von Weimarn 公式（沉淀颗粒大小）</div>
+$$\text{分散度} \propto \frac{Q - S}{S} = \frac{\text{相对过饱和度}}{S}$$
+<p>$Q$ 为加入试剂瞬间的浓度，$S$ 为沉淀的溶解度。</p>
+<p>$(Q-S)/S$ 越大 &rarr; 晶核多 &rarr; 颗粒小（胶体/无定形沉淀）</p>
+<p>$(Q-S)/S$ 越小 &rarr; 晶核少 &rarr; 颗粒大（晶形沉淀）</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">获得大颗粒晶形沉淀的条件</div>
+<p>降低 $Q$：稀溶液、慢加试剂、搅拌</p>
+<p>增大 $S$：热溶液、适当酸度</p>
+<p>陈化：沉淀后静置/加热陈化，小晶粒溶解大晶粒长大（Ostwald 熟化）</p>
+</div>
+
+<h3 id="ch9-mohr">沉淀滴定法</h3>
+
+<div class="fb">
+<div class="fb-title">Mohr 法（莫尔法）</div>
+<p>$\text{AgNO}_3$ 滴定 $\text{Cl}^-$（或 $\text{Br}^-$），以 $\text{K}_2\text{CrO}_4$ 为指示剂。</p>
+<p>终点：白色 AgCl 沉淀完全后，过量 $\text{Ag}^+$ 与 $\text{CrO}_4^{2-}$ 生成砖红色 $\text{Ag}_2\text{CrO}_4$ 沉淀。</p>
+<p>条件：中性或弱碱性（pH 6.5&ndash;10.5）。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">Volhard 法（佛尔哈德法）</div>
+<p>返滴定法：$\text{AgNO}_3$（过量）+ $\text{Cl}^-$ &rarr; 以 $\text{KSCN}$ 回滴 + $\text{Fe}^{3+}$ 指示剂。</p>
+<p>终点：过量 $\text{SCN}^-$ 与 $\text{Fe}^{3+}$ 生成红色 $\text{Fe(SCN)}^{2+}$。</p>
+<p>条件：酸性溶液（$\text{HNO}_3$ 介质）。测 $\text{Cl}^-$ 需先过滤 AgCl 或加有机溶剂覆盖。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">Fajans 法（法扬司法）</div>
+<p>$\text{AgNO}_3$ 滴定 $\text{Cl}^-$，以荧光黄等吸附指示剂。</p>
+<p>终点：化学计量点前 AgCl 胶体吸附 $\text{Cl}^-$（带负电），过量 $\text{Ag}^+$ 使胶体吸附 $\text{Ag}^+$（带正电），进而吸附阴离子型指示剂，颜色突变。</p>
+<p>条件：避免强光，胶体需分散良好（加糊精保护）。</p>
+</div>
 
 <!-- ==================== Chapter 10 ==================== -->
 <h2 id="ch10">第十章 &middot; 分光光度法</h2>
@@ -424,20 +730,25 @@ $$w_X = \frac{m_P \cdot F}{m_s} \times 100\%$$
 
 <div class="fb">
 <div class="fb-title">Lambert-Beer 定律</div>
-$$A = \kappa b c = -\lg T$$
-<p>$A$: 吸光度；$\kappa$: 摩尔吸光系数 (L&middot;mol$^{-1}$&middot;cm$^{-1}$)；$b$: 光程 (cm)；$c$: 浓度 (mol/L)；$T$: 透射比。</p>
+$$A = \varepsilon b c = -\lg T$$
+<p>$A$: 吸光度；$\varepsilon$: 摩尔吸光系数 (L&middot;mol$^{-1}$&middot;cm$^{-1}$)；$b$: 光程 (cm)；$c$: 浓度 (mol/L)；$T$: 透射比。</p>
+<p>$T = I/I_0$，$A = -\lg T = \lg(I_0/I)$。</p>
 </div>
 
 <div class="fb">
 <div class="fb-title">Sandell 灵敏度</div>
-$$S = \frac{M}{\kappa} \quad (\mu\text{g/cm}^2)$$
-<p>$S$ 越小，方法越灵敏。$M$ 为摩尔质量。</p>
+$$S = \frac{M}{\varepsilon} \quad (\mu\text{g/cm}^2)$$
+<p>$S$ 越小，方法越灵敏。$M$ 为摩尔质量 (g/mol)，$\varepsilon$ 为摩尔吸光系数。</p>
+<p>物理含义：当吸光度 $A = 0.001$ 时，光程为 1 cm 的溶液中每平方厘米光截面上吸光物质的质量。</p>
 </div>
 
 <div class="fb">
-<div class="fb-title">吸光度加和性</div>
-$$A_{\text{total}} = A_1 + A_2 + \cdots = \kappa_1 bc_1 + \kappa_2 bc_2 + \cdots$$
-<p>这是多组分同时测定的基础。</p>
+<div class="fb-title">吸光度加和性（多组分体系）</div>
+$$A_{\text{total},\lambda} = \sum_{j=1}^{n} \varepsilon_{j,\lambda} \cdot b \cdot c_j = \varepsilon_{1,\lambda}bc_1 + \varepsilon_{2,\lambda}bc_2 + \cdots$$
+<p>这是多组分同时测定的基础。在 $n$ 个波长处测量 $A$，联立 $n$ 个方程求解 $n$ 个组分浓度。</p>
+<p>双组分体系（$\lambda_1$, $\lambda_2$）：</p>
+$$A_{\lambda_1} = \varepsilon_{1,\lambda_1}bc_1 + \varepsilon_{2,\lambda_1}bc_2$$
+$$A_{\lambda_2} = \varepsilon_{1,\lambda_2}bc_1 + \varepsilon_{2,\lambda_2}bc_2$$
 </div>
 
 <h3 id="ch10-opt">测量条件选择</h3>
@@ -445,27 +756,166 @@ $$A_{\text{total}} = A_1 + A_2 + \cdots = \kappa_1 bc_1 + \kappa_2 bc_2 + \cdots
 <table>
 <tr><th>参数</th><th>最佳范围</th><th>说明</th></tr>
 <tr><td>吸光度 $A$</td><td>0.2 &ndash; 0.8</td><td>相对误差最小</td></tr>
-<tr><td>最佳 $A$</td><td>0.434</td><td>$\frac{dT}{T\ln T}$ 最小时 $T = 36.8\%$</td></tr>
+<tr><td>最佳 $A$</td><td>0.434</td><td>$\frac{dT}{T\ln T}$ 最小时 $T = 36.8\%$，即 $A = 0.434$</td></tr>
 <tr><td>测量波长</td><td>$\lambda_{\max}$</td><td>灵敏度高、Beer 定律偏离小</td></tr>
 <tr><td>参比溶液</td><td>空白 / 试剂 / 试样</td><td>消除背景干扰</td></tr>
+<tr><td>显色剂用量</td><td>适当过量</td><td>确保显色反应完全</td></tr>
+<tr><td>显色时间</td><td>吸光度稳定后</td><td>确保反应达到平衡</td></tr>
 </table>
 
-<div class="warn">Beer 定律偏离原因：非单色光、浓度过高（分子间作用）、化学平衡移动、杂散光。</div>
+<div class="fb">
+<div class="fb-title">光度测量误差</div>
+<p>透射比测量误差 $\Delta T$ 不变时，浓度相对误差为：</p>
+$$\frac{|\Delta c|}{c} = \frac{0.434 \cdot \Delta T}{-T \cdot \lg T} = \frac{0.434 \cdot \Delta T}{T \cdot A}$$
+<p>当 $T = 36.8\%$（$A = 0.434$）时，$\Delta c/c$ 最小。</p>
+<p>实际可用范围：$T = 15\%$&ndash;$65\%$，即 $A = 0.2$&ndash;$0.8$。</p>
+</div>
+
+<div class="warn">Beer 定律偏离原因：非单色光、浓度过高（分子间作用）、化学平衡移动、杂散光、胶体/悬浊液散射。</div>
+
+<h3 id="ch10-method">分析方法</h3>
+
+<div class="fb">
+<div class="fb-title">标准曲线法</div>
+<p>配制一系列标准溶液，测 $A$ 作 $A$-$c$ 工作曲线，再由未知样品的 $A$ 值从曲线上读取浓度。</p>
+<p>要求：标准溶液与样品溶液的测量条件完全一致（显色剂、酸度、温度、光程等）。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">标准加入法</div>
+<p>适用于基体效应显著的情况。取等体积试样 $V_0$，分别加入不同量的标准液 $V_s$：</p>
+$$A_x = \varepsilon b c_x, \qquad A_{x+s} = \varepsilon b \left(c_x + c_s \cdot \frac{V_s}{V_0 + V_s}\right)$$
+<p>简化（$V_s \ll V_0$）：</p>
+$$c_x = \frac{A_x \cdot c_s}{A_{x+s} - A_x}$$
+<p>或作 $A$ vs. $c_s$ 直线外推法，$x$ 轴截距绝对值即为 $c_x$。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">等摩尔连续变化法 (Job 法)</div>
+<p>保持 $c_M + c_L = \text{const}$，改变 $x = c_L/(c_M + c_L)$，测 $A$。</p>
+<p>$A$ 最大处对应的 $x_{\max}$ 给出配位比：</p>
+$$n = \frac{x_{\max}}{1 - x_{\max}}$$
+<p>例：$x_{\max} = 0.5 \Rightarrow n = 1$（ML 型）；$x_{\max} = 0.667 \Rightarrow n = 2$（ML$_2$ 型）。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">摩尔比法</div>
+<p>保持 $c_M$ 不变，改变 $c_L/c_M$ 比值，测 $A$。</p>
+<p>$A$-$c_L/c_M$ 曲线出现转折点处的 $c_L/c_M$ 即为配位比 $n$。</p>
+</div>
+
+<div class="fb">
+<div class="fb-title">示差光度法 (高浓度精密测量)</div>
+<p>用浓度较低的标准液作参比（$T_s \neq 100\%$），扩大标尺，提高精密度。</p>
+$$A' = -\lg\frac{T_x}{T_s} = A_x - A_s$$
+</div>
 
 <div class="tip">最优吸光度 $A = 0.434$ 对应透射比 $T = 36.8\%$，此时浓度测量的相对误差最小。实际操作中 $A$ 在 0.2&ndash;0.8 范围内均可接受。</div>
+
+<!-- ==================== Reference Tables ==================== -->
+<h2 id="ref-tables">参考数据表</h2>
+
+<h3 id="ref-Ka">常见弱酸弱碱 $\text{p}K_a$ / $\text{p}K_b$ 值</h3>
+
+<table>
+<tr><th>酸/碱</th><th>$\text{p}K_{a1}$</th><th>$\text{p}K_{a2}$</th><th>$\text{p}K_{a3}$</th><th>说明</th></tr>
+<tr><td>$\text{HF}$</td><td>3.18</td><td>&mdash;</td><td>&mdash;</td><td>中强酸</td></tr>
+<tr><td>$\text{HAc}$ (醋酸)</td><td>4.74</td><td>&mdash;</td><td>&mdash;</td><td>典型弱酸</td></tr>
+<tr><td>$\text{HCN}$</td><td>9.21</td><td>&mdash;</td><td>&mdash;</td><td>极弱酸</td></tr>
+<tr><td>$\text{H}_2\text{CO}_3$</td><td>6.35</td><td>10.33</td><td>&mdash;</td><td>二元弱酸</td></tr>
+<tr><td>$\text{H}_2\text{S}$</td><td>7.02</td><td>14.0</td><td>&mdash;</td><td>二元弱酸</td></tr>
+<tr><td>$\text{H}_2\text{C}_2\text{O}_4$ (草酸)</td><td>1.25</td><td>4.27</td><td>&mdash;</td><td>二元酸</td></tr>
+<tr><td>$\text{H}_3\text{PO}_4$</td><td>2.12</td><td>7.20</td><td>12.36</td><td>三元弱酸</td></tr>
+<tr><td>$\text{H}_3\text{BO}_3$</td><td>9.24</td><td>&mdash;</td><td>&mdash;</td><td>一元弱酸（特殊）</td></tr>
+<tr><td>$\text{NH}_3$ ($K_b$)</td><td colspan="3">$\text{p}K_b = 4.74$, $\text{p}K_a(\text{NH}_4^+) = 9.26$</td><td>弱碱</td></tr>
+<tr><td>$\text{NaOH}$</td><td colspan="3">强碱</td><td>&mdash;</td></tr>
+</table>
+
+<h3 id="ref-Ksp">常见沉淀 $K_{sp}$ 值</h3>
+
+<table>
+<tr><th>沉淀</th><th>$K_{sp}$</th><th>$\text{p}K_{sp}$</th><th>沉淀</th><th>$K_{sp}$</th><th>$\text{p}K_{sp}$</th></tr>
+<tr><td>$\text{AgCl}$</td><td>$1.8 \times 10^{-10}$</td><td>9.74</td><td>$\text{AgBr}$</td><td>$5.0 \times 10^{-13}$</td><td>12.30</td></tr>
+<tr><td>$\text{AgI}$</td><td>$8.3 \times 10^{-17}$</td><td>16.08</td><td>$\text{AgSCN}$</td><td>$1.0 \times 10^{-12}$</td><td>12.00</td></tr>
+<tr><td>$\text{Ag}_2\text{CrO}_4$</td><td>$1.1 \times 10^{-12}$</td><td>11.95</td><td>$\text{BaSO}_4$</td><td>$1.1 \times 10^{-10}$</td><td>9.97</td></tr>
+<tr><td>$\text{CaF}_2$</td><td>$3.9 \times 10^{-11}$</td><td>10.41</td><td>$\text{CaCO}_3$</td><td>$3.3 \times 10^{-9}$</td><td>8.48</td></tr>
+<tr><td>$\text{PbSO}_4$</td><td>$1.6 \times 10^{-8}$</td><td>7.80</td><td>$\text{PbCrO}_4$</td><td>$1.8 \times 10^{-14}$</td><td>13.75</td></tr>
+<tr><td>$\text{Fe(OH)}_3$</td><td>$4.0 \times 10^{-38}$</td><td>37.40</td><td>$\text{Al(OH)}_3$</td><td>$1.3 \times 10^{-33}$</td><td>32.89</td></tr>
+</table>
 
 <!-- ==================== Summary ==================== -->
 <h2 id="summary">速记总结</h2>
 
 <table>
 <tr><th>章节</th><th>核心判据 / 关键数字</th></tr>
-<tr><td>Ch3 误差</td><td>$t$-检验、$F$-检验查表比较；$|r| \to 1$ 线性好</td></tr>
-<tr><td>Ch5 酸碱</td><td>400 判二次，$20K_w$ 判三次；$cK_a \geq 10^{-8}$ 可滴；$K_{a1}/K_{a2} > 10^5$ 可分步</td></tr>
-<tr><td>Ch6 配位</td><td>$\lg cK' \geq 6$ 准确滴定；$\Delta\lg cK' \geq 6$ 选择性滴定</td></tr>
-<tr><td>Ch7 氧化还原</td><td>$\Delta\varphi^{0'} \geq 0.4$ V 反应完全</td></tr>
-<tr><td>Ch9 沉淀/重量</td><td>$F = aM_X / bM_P$；$K'_{sp} = K_{sp}\cdot\alpha_M\cdot\alpha_A$</td></tr>
-<tr><td>Ch10 光度</td><td>$A = \kappa bc$；最佳 $A$: 0.2&ndash;0.8</td></tr>
+<tr><td>Ch3 误差</td><td>$t$-检验：$t = |\bar{x}-\mu_0| \cdot \sqrt{n}/s$，$F$-检验：$F = s_1^2/s_2^2$；$|r| \to 1$ 线性好</td></tr>
+<tr><td>Ch5 酸碱</td><td>400 判二次，$20K_w$ 判三次；$cK_a \geq 10^{-8}$ 可滴；$K_{a1}/K_{a2} \geq 10^4$ 可分步；$\beta_{\max} = 0.576c$</td></tr>
+<tr><td>Ch6 配位</td><td>$\lg cK' \geq 6$ 准确滴定；$\Delta\lg cK' \geq 6$ 选择性滴定；$\text{p}M'_{sp} = \frac{1}{2}(\lg K' + \text{p}c)$</td></tr>
+<tr><td>Ch7 氧化还原</td><td>$\Delta\varphi^{0'} \geq 0.4$ V ($n=1$)；$\lg K = n\Delta\varphi'/0.0592$；$\varphi_{sp} = (n_1\varphi_1' + n_2\varphi_2')/(n_1+n_2)$</td></tr>
+<tr><td>Ch9 沉淀/重量</td><td>$F = aM_X / bM_P$；$K'_{sp} = K_{sp}\cdot\alpha_M\cdot\alpha_A$；分散度 $\propto (Q-S)/S$</td></tr>
+<tr><td>Ch10 光度</td><td>$A = \varepsilon bc$；最佳 $A$: 0.2&ndash;0.8（最优 0.434）；$S = M/\varepsilon$；Job 法 $n = x/(1-x)$</td></tr>
 </table>
+
+<h3 id="summary-criteria">全章判据一览</h3>
+
+<table>
+<tr><th>判据</th><th>公式</th><th>数值要求</th><th>含义</th></tr>
+<tr><td>弱酸能否直接滴定</td><td>$cK_a$</td><td>$\geq 10^{-8}$</td><td>滴定突跃足够大</td></tr>
+<tr><td>弱酸能否分步滴定</td><td>$K_{a1}/K_{a2}$</td><td>$\geq 10^4$</td><td>两个突跃可分辨</td></tr>
+<tr><td>配位滴定准确度</td><td>$\lg cK'_{MY}$</td><td>$\geq 6$</td><td>终点误差 $\leq 0.1\%$</td></tr>
+<tr><td>配位滴定选择性</td><td>$\Delta\lg cK'$</td><td>$\geq 6$</td><td>两种金属可分别滴定</td></tr>
+<tr><td>氧化还原定量完全</td><td>$\Delta\varphi^{0'}$</td><td>$\geq 0.4$ V ($n=1$)</td><td>$\lg K \geq 6$</td></tr>
+<tr><td>光度法最佳测量</td><td>$A$</td><td>0.2 &ndash; 0.8</td><td>浓度相对误差最小</td></tr>
+<tr><td>pH 简化公式条件1</td><td>$c/K_a$</td><td>$\geq 400$</td><td>可用最简式</td></tr>
+<tr><td>pH 简化公式条件2</td><td>$cK_a$</td><td>$\geq 20K_w$</td><td>可忽略水的解离</td></tr>
+</table>
+
+<h3 id="summary-formulas">核心公式速记卡</h3>
+
+<div class="two-col">
+<div class="fb">
+<div class="fb-title">统计</div>
+<p>$s = \sqrt{\Sigma(x_i-\bar{x})^2/(n-1)}$</p>
+<p>$\mu = \bar{x} \pm t_{\alpha,f} \cdot s/\sqrt{n}$</p>
+<p>$t = |\bar{x}-\mu_0|\sqrt{n}/s$</p>
+<p>$F = s_{\text{大}}^2 / s_{\text{小}}^2$</p>
+</div>
+<div class="fb">
+<div class="fb-title">酸碱</div>
+<p>$\text{pH} = \frac{1}{2}(\text{p}K_a + \text{p}c)$</p>
+<p>$\text{pH} = \text{p}K_a + \lg(c_b/c_a)$</p>
+<p>$\text{pH}_{\text{两性}} = \frac{1}{2}(\text{p}K_{a1}+\text{p}K_{a2})$</p>
+<p>$\beta_{\max} = 0.576c$</p>
+</div>
+<div class="fb">
+<div class="fb-title">配位</div>
+<p>$\lg K' = \lg K - \lg\alpha_M - \lg\alpha_Y$</p>
+<p>$\text{p}M'_{sp} = \frac{1}{2}(\lg K' + \text{p}c)$</p>
+<p>$\lg cK' \geq 6$ 能滴</p>
+<p>$\Delta\lg cK' \geq 6$ 能分</p>
+</div>
+<div class="fb">
+<div class="fb-title">氧化还原</div>
+<p>$\lg K = n\Delta\varphi'/0.0592$</p>
+<p>$\varphi_{sp} = (n_1\varphi_1'+n_2\varphi_2')/(n_1+n_2)$</p>
+<p>$\Delta\varphi' \geq 0.4$ V 可滴</p>
+<p>指示剂：$\varphi'_{\text{In}} \pm 0.0592/n$</p>
+</div>
+<div class="fb">
+<div class="fb-title">沉淀/重量</div>
+<p>$K'_{sp} = K_{sp}\alpha_M\alpha_A$</p>
+<p>$s_{\text{MA}} = \sqrt{K'_{sp}}$</p>
+<p>$F = aM_X/(bM_P)$</p>
+<p>$w = m_P F/m_s \times 100\%$</p>
+</div>
+<div class="fb">
+<div class="fb-title">光度</div>
+<p>$A = \varepsilon bc = -\lg T$</p>
+<p>$S = M/\varepsilon$</p>
+<p>最佳 $A = 0.434$</p>
+<p>Job: $n = x_{\max}/(1-x_{\max})$</p>
+</div>
+</div>
 
 </div><!-- /container -->
 
