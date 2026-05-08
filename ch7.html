@@ -12,10 +12,10 @@ body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);co
 h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
 h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
 h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
-.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;content-visibility:auto;contain-intrinsic-size:auto 500px;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 300px;}
 .fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
-.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 400px;}
 .sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
 .sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
 .tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
@@ -25,7 +25,7 @@ table{width:100%;border-collapse:collapse;margin:12px 0;}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
 th{background:var(--pri);color:#fff;}
 tr:nth-child(even){background:#f9f7f2;}
-.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;backface-visibility:hidden;transform:translateZ(0);}
 .nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
 .nav-bar a:hover{background:#1a5276;color:#fff;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
@@ -57,9 +57,9 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 7.1 ==================== -->
 <h2>7.1 条件电位与Nernst方程</h2>
-<img class="ppt-img" src="temp_pages/ch7_p5.png" alt="不可逆电对">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch7_p5.png" alt="不可逆电对">
 <p class="ppt-caption">PPT: 可逆电对与不可逆电对</p>
-<img class="ppt-img" src="temp_pages/ch7_p9.png" alt="条件电位">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch7_p9.png" alt="条件电位">
 <p class="ppt-caption">PPT: 条件电位的概念</p>
 
 <div class="card">
@@ -128,7 +128,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>酸度对条件电位的影响 -- 含 $\text{H}^+$ 参与的电对</h3>
-  <img class="ppt-img" src="temp_pages/ch7_p17.png" alt="酸度影响条件电位">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch7_p17.png" alt="酸度影响条件电位">
   <p class="ppt-caption">PPT: 酸度对条件电位的影响 -- As(V)/As(III)</p>
   <p>对于 $\text{H}^+$ 直接参与的电对，如 $\text{H}_3\text{AsO}_4/\text{H}_3\text{AsO}_3$（$\varphi^0 = 0.559$ V），条件电位与 pH 密切相关。</p>
   <div class="fb">
@@ -269,7 +269,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 7.3 ==================== -->
 <h2>7.3 氧化还原滴定曲线</h2>
-<img class="ppt-img" src="temp_pages/ch7_p21.png" alt="氧化还原滴定曲线">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch7_p21.png" alt="氧化还原滴定曲线">
 <p class="ppt-caption">PPT: 氧化还原滴定曲线</p>
 
 <div class="card">
@@ -359,9 +359,9 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>氧化还原滴定的终点误差公式</h3>
-  <img class="ppt-img" src="temp_pages/ch7_p35.png" alt="终点误差公式">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch7_p35.png" alt="终点误差公式">
   <p class="ppt-caption">PPT: 氧化还原滴定终点误差</p>
-  <img class="ppt-img" src="temp_pages/ch7_p37.png" alt="终点误差详细">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch7_p37.png" alt="终点误差详细">
   <p class="ppt-caption">PPT: 终点误差的详细推导</p>
 
   <div class="fb">
@@ -489,7 +489,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 7.7 ==================== -->
 <h2>7.7 高锰酸钾法</h2>
-<img class="ppt-img" src="temp_pages/ch7_p35.png" alt="KMnO4法">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch7_p35.png" alt="KMnO4法">
 <p class="ppt-caption">PPT: 高锰酸钾法</p>
 
 <div class="card">
@@ -577,7 +577,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="ex">
   <strong>例题（PPT）：$\text{KMnO}_4$ 法测定软锰矿中 $\text{MnO}_2$ 含量</strong>
-  <img class="ppt-img" src="temp_pages/ch7_p49.png" alt="KMnO4法测MnO2">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch7_p49.png" alt="KMnO4法测MnO2">
   <p class="ppt-caption">PPT: KMnO4法测软锰矿</p>
   <p>称取软锰矿 0.3216 g，分析纯 $\text{Na}_2\text{C}_2\text{O}_4$ 0.3685 g，共置于同一烧杯中，加入 $\text{H}_2\text{SO}_4$，加热使反应完全，用 0.02400 mol/L $\text{KMnO}_4$ 溶液滴定剩余 $\text{Na}_2\text{C}_2\text{O}_4$，消耗 11.26 mL。求软锰矿中 $\text{MnO}_2$ 的质量分数。</p>
   <div class="sol">
@@ -596,7 +596,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 7.8 ==================== -->
 <h2>7.8 重铬酸钾法</h2>
-<img class="ppt-img" src="temp_pages/ch7_p36.png" alt="K2Cr2O7法">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch7_p36.png" alt="K2Cr2O7法">
 <p class="ppt-caption">PPT: 重铬酸钾法</p>
 
 <div class="card">
@@ -650,7 +650,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="ex">
   <strong>例题（PPT）：$\text{K}_2\text{Cr}_2\text{O}_7$ 法测白兰地酒精含量</strong>
-  <img class="ppt-img" src="temp_pages/ch7_p53.png" alt="K2Cr2O7法测白兰地">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch7_p53.png" alt="K2Cr2O7法测白兰地">
   <p class="ppt-caption">PPT: K2Cr2O7法应用实例</p>
   <p>取白兰地样品 5.00 mL，稀释至 1.000 L。取稀释液 25.00 mL 蒸馏至 50.00 mL $\text{K}_2\text{Cr}_2\text{O}_7$ 标准溶液（0.02000 mol/L）中。加热氧化乙醇为乙酸：</p>
   $$3\text{C}_2\text{H}_5\text{OH} + 2\text{Cr}_2\text{O}_7^{2-} + 16\text{H}^+ \rightarrow 4\text{Cr}^{3+} + 3\text{CH}_3\text{COOH} + 11\text{H}_2\text{O}$$
@@ -668,7 +668,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 7.9 ==================== -->
 <h2>7.9 碘量法</h2>
-<img class="ppt-img" src="temp_pages/ch7_p41.png" alt="碘量法">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch7_p41.png" alt="碘量法">
 <p class="ppt-caption">PPT: 碘量法的原理与分类</p>
 
 <div class="card">

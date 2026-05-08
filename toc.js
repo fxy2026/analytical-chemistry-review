@@ -41,22 +41,26 @@
     toggle.addEventListener('click', function(){ isOpen = !isOpen; listWrap.style.display = isOpen ? 'block' : 'none'; toggle.innerHTML = isOpen ? '&#10005;' : '&#9776;'; });
     var progressBar = document.getElementById('toc-progress-bar');
     var progressText = document.getElementById('toc-progress-text');
-    var lastCurrent = -1, scrollTimer = 0;
+    var lastCurrent = -1, ticking = false;
     function onScroll(){
-      var now = Date.now(); if(now - scrollTimer < 66) return; scrollTimer = now;
-      var scrollTop = window.pageYOffset;
-      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      var progress = docHeight > 0 ? Math.min(100, Math.round(scrollTop / docHeight * 100)) : 0;
-      progressBar.style.width = progress + '%'; progressText.textContent = progress + '%';
-      var threshold = scrollTop + 120, current = -1;
-      for(var i = headingOffsets.length - 1; i >= 0; i--){ if(headingOffsets[i] <= threshold){ current = i; break; } }
-      if(current !== lastCurrent){
-        if(lastCurrent >= 0 && lastCurrent < tocLinks.length) tocLinks[lastCurrent].classList.remove('toc-active');
-        if(current >= 0){ tocLinks[current].classList.add('toc-active');
-          if(isOpen){ var li = tocLinks[current].parentElement; var liTop = li.offsetTop - tocList.offsetTop; var listH = tocList.clientHeight;
-            if(liTop < tocList.scrollTop || liTop > tocList.scrollTop + listH - 30) tocList.scrollTop = liTop - listH / 3; }
-        } lastCurrent = current;
-      }
+      if(ticking) return;
+      ticking = true;
+      requestAnimationFrame(function(){
+        ticking = false;
+        var scrollTop = window.pageYOffset;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var progress = docHeight > 0 ? Math.min(100, Math.round(scrollTop / docHeight * 100)) : 0;
+        progressBar.style.width = progress + '%'; progressText.textContent = progress + '%';
+        var threshold = scrollTop + 120, current = -1;
+        for(var i = headingOffsets.length - 1; i >= 0; i--){ if(headingOffsets[i] <= threshold){ current = i; break; } }
+        if(current !== lastCurrent){
+          if(lastCurrent >= 0 && lastCurrent < tocLinks.length) tocLinks[lastCurrent].classList.remove('toc-active');
+          if(current >= 0){ tocLinks[current].classList.add('toc-active');
+            if(isOpen){ var li = tocLinks[current].parentElement; var liTop = li.offsetTop - tocList.offsetTop; var listH = tocList.clientHeight;
+              if(liTop < tocList.scrollTop || liTop > tocList.scrollTop + listH - 30) tocList.scrollTop = liTop - listH / 3; }
+          } lastCurrent = current;
+        }
+      });
     }
     window.addEventListener('scroll', onScroll, {passive: true}); onScroll();
   }

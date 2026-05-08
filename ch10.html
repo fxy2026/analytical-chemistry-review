@@ -12,10 +12,10 @@ body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);co
 h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
 h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
 h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
-.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;content-visibility:auto;contain-intrinsic-size:auto 500px;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 300px;}
 .fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
-.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 400px;}
 .sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
 .sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
 .tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
@@ -25,7 +25,7 @@ table{width:100%;border-collapse:collapse;margin:12px 0;}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
 th{background:var(--pri);color:#fff;}
 tr:nth-child(even){background:#f9f7f2;}
-.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;backface-visibility:hidden;transform:translateZ(0);}
 .nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
 .nav-bar a:hover{background:#1a5276;color:#fff;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
@@ -57,7 +57,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 10.1 ==================== -->
 <h2>10.1 光的吸收基础</h2>
-<img class="ppt-img" src="temp_pages/ch10_p5.png" alt="分光光度法基本原理">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p5.png" alt="分光光度法基本原理">
 <p class="ppt-caption">PPT: 分光光度法基本原理 — 分子光谱</p>
 
 <div class="card">
@@ -75,7 +75,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>吸收光谱的产生</h3>
-  <img class="ppt-img" src="temp_pages/ch10_p5.png" alt="吸收光谱产生">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p5.png" alt="吸收光谱产生">
   <p class="ppt-caption">PPT: 分子光谱 — 电子跃迁与带状光谱</p>
   <div class="fb">
     <div class="t">分子光谱</div>
@@ -86,7 +86,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>物质对光的选择性吸收</h3>
-  <img class="ppt-img" src="temp_pages/ch10_p6.png" alt="光的选择性吸收">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p6.png" alt="光的选择性吸收">
   <p class="ppt-caption">PPT: 单色光、复合光与互补色光</p>
   <div class="fb">
     <div class="t">基本概念</div>
@@ -102,7 +102,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>物质颜色与光的关系</h3>
-  <img class="ppt-img" src="temp_pages/ch10_p8.png" alt="物质颜色与光">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p8.png" alt="物质颜色与光">
   <p class="ppt-caption">PPT: 物质对光的选择性吸收与颜色</p>
   <p>物质的颜色是由于它们对不同波长的光具有选择性吸收：</p>
   <ul>
@@ -156,12 +156,12 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 10.2 ==================== -->
 <h2>10.2 Lambert-Beer 定律</h2>
-<img class="ppt-img" src="temp_pages/ch10_p10.png" alt="Lambert-Beer定律">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p10.png" alt="Lambert-Beer定律">
 <p class="ppt-caption">PPT: Lambert-Beer定律</p>
 
 <div class="card">
   <h3>光通过溶液时的光强分配</h3>
-  <img class="ppt-img" src="temp_pages/ch10_p11.png" alt="光强分配">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p11.png" alt="光强分配">
   <p class="ppt-caption">PPT: 入射光通过溶液的光强分配</p>
   <div class="fb">
     <div class="t">光强关系</div>
@@ -175,7 +175,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>定律的推导</h3>
-  <img class="ppt-img" src="temp_pages/ch10_p12.png" alt="T和A的定义">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p12.png" alt="T和A的定义">
   <p class="ppt-caption">PPT: 透射比与吸光度的定义</p>
   <p><strong>Lambert 定律</strong>（1760年）：当一束单色光通过均匀的透明介质时，吸光度与光程长度 $b$ 成正比：</p>
   $$A \propto b$$
@@ -227,7 +227,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="fb">
     <div class="t">Beer 定律的各种表达形式</div>
-    <img class="ppt-img" src="temp_pages/ch10_p13.png" alt="Beer定律各形式">
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p13.png" alt="Beer定律各形式">
     <p class="ppt-caption">PPT: Beer 定律的不同表达形式</p>
     <table>
       <tr><th>表达式</th><th>比例系数</th><th>单位</th><th>浓度单位</th></tr>
@@ -302,7 +302,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 10.4 ==================== -->
 <h2>10.4 准确度与Beer定律的偏离</h2>
-<img class="ppt-img" src="temp_pages/ch10_p15.png" alt="偏离Beer定律的因素">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p15.png" alt="偏离Beer定律的因素">
 <p class="ppt-caption">PPT: 偏离Beer定律的因素</p>
 
 <div class="card">
@@ -323,7 +323,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <h3>Beer 定律偏离的原因</h3>
 
   <h3>化学因素（真偏离）</h3>
-  <img class="ppt-img" src="temp_pages/ch10_p18.png" alt="化学偏离因素">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p18.png" alt="化学偏离因素">
   <p class="ppt-caption">PPT: 化学因素引起的偏离</p>
   <p>某些有色化合物在溶液中发生<strong>离解、缔合、产生互变异构及光化分解</strong>，与溶剂反应等现象，导致其吸收光谱曲线的形状、最大吸收波长、吸光度等发生变化，引起对 Beer 定律的偏离。</p>
   <ul>
@@ -375,7 +375,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 10.5 ==================== -->
 <h2>10.5 显色反应与显色条件</h2>
-<img class="ppt-img" src="temp_pages/ch10_p20.png" alt="显色反应">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p20.png" alt="显色反应">
 <p class="ppt-caption">PPT: 显色反应条件的选择</p>
 
 <div class="card">
@@ -392,7 +392,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <p>显色剂颜色与有色化合物之间的颜色差别要大，即 $\Delta\lambda > 60\;\text{nm}$（测量波长与试剂最大吸收波长之差）。</p>
 
   <h3>有机显色剂的优势</h3>
-  <img class="ppt-img" src="temp_pages/ch10_p21.png" alt="有机显色剂">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p21.png" alt="有机显色剂">
   <p class="ppt-caption">PPT: 有机显色剂的特点</p>
   <div class="fb">
     <div class="t">有机显色剂（螯合剂）的五大优点</div>
@@ -420,12 +420,12 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>重要有机显色剂详解</h3>
-  <img class="ppt-img" src="temp_pages/ch10_p22.png" alt="邻菲罗啉和双硫腙">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p22.png" alt="邻菲罗啉和双硫腙">
   <p class="ppt-caption">PPT: 邻二氮菲与双硫腙</p>
 
   <div class="fb">
     <div class="t">偶氮胂 III</div>
-    <img class="ppt-img" src="temp_pages/ch10_p23.png" alt="偶氮胂III和铬天青S">
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p23.png" alt="偶氮胂III和铬天青S">
     <p class="ppt-caption">PPT: 偶氮胂 III 和铬天青 S</p>
     <ul>
       <li>也称铀试剂 III，是变色酸的双偶氮衍生物</li>
@@ -565,7 +565,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <div class="warn">标准加入法要求 Beer 定律严格成立（$A$-$c$ 为直线），且不能消除由空白引起的系统误差。</div>
 
   <h3>3. 示差分光光度法（差示法）</h3>
-<img class="ppt-img" src="temp_pages/ch10_p27.png" alt="示差光度法">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p27.png" alt="示差光度法">
 <p class="ppt-caption">PPT: 示差光度法原理</p>
   <p>用<strong>标准溶液</strong>（而非空白）作参比，测量试样与标准之间吸光度的差值，扩大了可测量的浓度范围，提高了高浓度样品的测量精度。</p>
   <p>适用于常规方法中吸光度超出最佳范围（$A > 0.8$）的高浓度样品。</p>
@@ -643,7 +643,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 10.8 ==================== -->
 <h2>10.8 络合物组成的测定</h2>
-<img class="ppt-img" src="temp_pages/ch10_p30.png" alt="络合物组成测定">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch10_p30.png" alt="络合物组成测定">
 <p class="ppt-caption">PPT: 络合物组成测定 — 等摩尔连续变化法与摩尔比法</p>
 
 <div class="card">

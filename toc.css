@@ -6,7 +6,7 @@
   z-index: 200;
   font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
   max-width: 260px;
-  will-change: transform;
+  contain: layout style;
 }
 #toc-toggle {
   position: absolute;
@@ -22,7 +22,7 @@
   line-height: 36px;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  transition: all 0.2s;
+  transition: background 0.2s, transform 0.2s;
   user-select: none;
 }
 #toc-toggle:hover { background: #2980b9; transform: scale(1.1); }
@@ -34,6 +34,7 @@
   box-shadow: 0 4px 20px rgba(0,0,0,0.12);
   padding: 0;
   overflow: hidden;
+  contain: content;
 }
 #toc-title {
   padding: 10px 14px 8px;
@@ -50,6 +51,7 @@
   max-height: calc(100vh - 200px);
   overflow-y: auto;
   scrollbar-width: thin;
+  overscroll-behavior: contain;
 }
 #toc-list::-webkit-scrollbar { width: 4px; }
 #toc-list::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
@@ -61,7 +63,7 @@
   color: #555;
   text-decoration: none;
   border-left: 3px solid transparent;
-  transition: all 0.15s;
+  transition: background 0.15s, color 0.15s, border-left-color 0.15s;
   line-height: 1.5;
   white-space: nowrap;
   overflow: hidden;
@@ -75,13 +77,13 @@
 }
 #toc-progress-bar {
   height: 4px; background: linear-gradient(90deg, #1a5276, #2980b9);
-  border-radius: 2px; width: 0%; transition: width 0.1s; flex: 1; min-width: 0;
+  border-radius: 2px; width: 0%; transition: width 0.3s; flex: 1; min-width: 0;
 }
 #toc-progress-text { font-size: 11px; color: #888; min-width: 30px; text-align: right; }
 #reading-progress-top {
   position: fixed; top: 0; left: 0; height: 3px;
   background: linear-gradient(90deg, #1a5276, #c0392b);
-  z-index: 9999; width: 0%; transition: width 0.1s; will-change: width;
+  z-index: 9999; width: 0%; transition: width 0.3s; will-change: width;
 }
 @media (max-width: 1100px) {
   #floating-toc { right: 8px; top: 88px; max-width: 240px; }

@@ -12,10 +12,10 @@ body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);co
 h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
 h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
 h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
-.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;content-visibility:auto;contain-intrinsic-size:auto 500px;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 300px;}
 .fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
-.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 400px;}
 .sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
 .sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
 .tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
@@ -25,7 +25,7 @@ table{width:100%;border-collapse:collapse;margin:12px 0;}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
 th{background:var(--pri);color:#fff;}
 tr:nth-child(even){background:#f9f7f2;}
-.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;backface-visibility:hidden;transform:translateZ(0);}
 .nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
 .nav-bar a:hover{background:#1a5276;color:#fff;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
@@ -57,7 +57,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 9.1 ==================== -->
 <h2>9.1 沉淀的溶解度</h2>
-<img class="ppt-img" src="temp_pages/ch9_p5.png" alt="溶度积与溶解度">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p5.png" alt="溶度积与溶解度">
 <p class="ppt-caption">PPT: 溶度积与溶解度的关系</p>
 
 <div class="card">
@@ -150,7 +150,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>条件溶度积的综合计算（考虑酸效应+配位效应）</h3>
-  <img class="ppt-img" src="temp_pages/ch9_p17.png" alt="酸效应计算">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p17.png" alt="酸效应计算">
   <p class="ppt-caption">PPT: 酸效应对溶解度的影响</p>
 
   <div class="fb">
@@ -185,7 +185,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 9.2 ==================== -->
 <h2>9.2 影响溶解度的因素</h2>
-<img class="ppt-img" src="temp_pages/ch9_p9.png" alt="影响溶解度的因素">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p9.png" alt="影响溶解度的因素">
 <p class="ppt-caption">PPT: 影响沉淀溶解度的因素</p>
 
 <div class="card">
@@ -258,7 +258,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 9.3 ==================== -->
 <h2>9.3 沉淀重量法</h2>
-<img class="ppt-img" src="temp_pages/ch9_p21.png" alt="沉淀条件">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p21.png" alt="沉淀条件">
 <p class="ppt-caption">PPT: 沉淀类型与沉淀条件</p>
 
 <div class="card">
@@ -292,7 +292,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 
   <h3>沉淀的三种类型</h3>
-  <img class="ppt-img" src="temp_pages/ch9_p32.png" alt="沉淀类型">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p32.png" alt="沉淀类型">
   <p class="ppt-caption">PPT: 沉淀的类型 — 晶形、凝乳状、无定形</p>
 
   <table>
@@ -306,7 +306,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <div class="tip">沉淀类型取决于沉淀自身性质以及沉淀条件和后续处理。同一物质在不同条件下可能形成不同类型的沉淀。</div>
 
   <h3>沉淀的形成过程</h3>
-  <img class="ppt-img" src="temp_pages/ch9_p33.png" alt="沉淀形成过程">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p33.png" alt="沉淀形成过程">
   <p class="ppt-caption">PPT: 晶形沉淀和无定形沉淀的形成</p>
 
   <div class="fb">
@@ -416,7 +416,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 9.4 ==================== -->
 <h2>9.4 共沉淀与后沉淀</h2>
-<img class="ppt-img" src="temp_pages/ch9_p31.png" alt="共沉淀">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p31.png" alt="共沉淀">
 <p class="ppt-caption">PPT: 共沉淀与后沉淀</p>
 
 <div class="card">
@@ -431,7 +431,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="fb">
     <div class="t">2. 混晶（固溶体）</div>
-    <img class="ppt-img" src="temp_pages/ch9_p43.png" alt="混晶共沉淀">
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p43.png" alt="混晶共沉淀">
     <p class="ppt-caption">PPT: 混晶（固溶体）的两种类型</p>
     <p>杂质离子半径和电荷与构晶离子相似，替代进入晶格。分为两类：</p>
     <ul>
@@ -449,7 +449,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="fb">
     <div class="t">4. 后沉淀</div>
-    <img class="ppt-img" src="temp_pages/ch9_p44.png" alt="后沉淀">
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p44.png" alt="后沉淀">
     <p class="ppt-caption">PPT: 后沉淀与共沉淀的区别</p>
     <p>沉淀完成后，溶液中某些本来难以析出沉淀的组分，在已有沉淀表面上继续析出沉淀的现象。这种情况大多发生于该组分的<strong>过饱和</strong>溶液中。</p>
     <p><strong>经典实例</strong>：在 0.01 mol/L HCl 中沉淀 $\text{Zn}^{2+}$ 时 $\text{Ni}^{2+}$ 的后沉淀：</p>
@@ -476,7 +476,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>减少沉淀玷污的方法</h3>
-  <img class="ppt-img" src="temp_pages/ch9_p45.png" alt="减少沉淀玷污">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p45.png" alt="减少沉淀玷污">
   <p class="ppt-caption">PPT: 减少沉淀玷污的四种途径</p>
   <table>
     <tr><th>途径</th><th>具体方法</th><th>举例</th></tr>
@@ -494,7 +494,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>沉淀条件的选择（获得沉淀形和称量形的方法）</h3>
-  <img class="ppt-img" src="temp_pages/ch9_p49.png" alt="沉淀条件选择">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p49.png" alt="沉淀条件选择">
   <p class="ppt-caption">PPT: 沉淀条件的选择与均匀沉淀法的多种实现方式</p>
 
   <div class="fb">
@@ -512,7 +512,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>沉淀重量法的特点</h3>
-  <img class="ppt-img" src="temp_pages/ch9_p53.png" alt="重量法特点">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p53.png" alt="重量法特点">
   <p class="ppt-caption">PPT: 沉淀重量法的优缺点和应用</p>
 
   <div class="fb">
@@ -537,7 +537,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>混合试样的重量法计算（2022 期末计算思路）</h3>
-  <img class="ppt-img" src="temp_pages/ch9_p57.png" alt="混合试样计算">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p57.png" alt="混合试样计算">
   <p class="ppt-caption">PPT: 混合试样的联立方程计算</p>
 
   <div class="ex">
@@ -615,7 +615,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 9.6 ==================== -->
 <h2>9.6 沉淀滴定法 -- 银量法</h2>
-<img class="ppt-img" src="temp_pages/ch9_p59.png" alt="银量法">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p59.png" alt="银量法">
 <p class="ppt-caption">PPT: 银量法 — 莫尔法、佛尔哈德法、法扬司法</p>
 
 <div class="card">
@@ -625,7 +625,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>沉淀滴定曲线</h3>
-  <img class="ppt-img" src="temp_pages/ch9_p61.png" alt="滴定曲线">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p61.png" alt="滴定曲线">
   <p class="ppt-caption">PPT: 沉淀滴定曲线</p>
   <div class="fb">
     <div class="t">滴定曲线的绘制</div>
@@ -639,7 +639,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>1. Mohr 法（莫尔法）</h3>
-<img class="ppt-img" src="temp_pages/ch9_p60.png" alt="莫尔法">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p60.png" alt="莫尔法">
 <p class="ppt-caption">PPT: 莫尔法(Mohr)原理</p>
   <div class="fb">
     <div class="t">原理</div>
@@ -657,7 +657,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="fb">
     <div class="t">Mohr 法指示剂浓度的理论推导</div>
-    <img class="ppt-img" src="temp_pages/ch9_p64.png" alt="Mohr法指示剂浓度">
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p64.png" alt="Mohr法指示剂浓度">
     <p class="ppt-caption">PPT: Mohr 法指示剂浓度的计算</p>
     <p>要求：化学计量点时，$\text{Ag}^+$ 恰好能使 $\text{Ag}_2\text{CrO}_4$ 开始沉淀。</p>
     <p>由 $K_{sp,\text{Ag}_2\text{CrO}_4} = 10^{-11.3}$，化学计量点时 $[\text{Ag}^+] = \sqrt{K_{sp,\text{AgCl}}} = \sqrt{10^{-9.50}}$</p>
@@ -667,7 +667,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="fb">
     <div class="t">Mohr 法的局限性（详细）</div>
-    <img class="ppt-img" src="temp_pages/ch9_p65.png" alt="Mohr法局限性">
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p65.png" alt="Mohr法局限性">
     <p class="ppt-caption">PPT: Mohr 法的局限性</p>
     <ul>
       <li>pH 范围 6.5~10.5。含铵盐时应控制在 <strong>6.5~7.2</strong></li>
@@ -682,7 +682,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>2. Volhard 法（佛尔哈德法）</h3>
-<img class="ppt-img" src="temp_pages/ch9_p63.png" alt="佛尔哈德法">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p63.png" alt="佛尔哈德法">
 <p class="ppt-caption">PPT: 佛尔哈德法(Volhard)原理</p>
   <div class="fb">
     <div class="t">原理</div>
@@ -701,7 +701,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="warn">
     <strong>测 $\text{Cl}^-$ 时的特殊问题：</strong>
-    <img class="ppt-img" src="temp_pages/ch9_p68.png" alt="Volhard法测Cl问题">
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p68.png" alt="Volhard法测Cl问题">
     <p class="ppt-caption">PPT: Volhard 法测 Cl$^-$ 的沉淀转化问题及措施</p>
     <p>$K_{sp,\text{AgSCN}} = 10^{-11.7} < K_{sp,\text{AgCl}} = 10^{-9.5}$，即 AgSCN 比 AgCl 更难溶。回滴过程中 $\text{SCN}^-$ 会与 AgCl 发生沉淀转化反应：</p>
     $$\text{AgCl} + \text{SCN}^- \rightleftharpoons \text{AgSCN} + \text{Cl}^-$$
@@ -717,7 +717,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="fb">
     <div class="t">Volhard 法的滴定条件</div>
-    <img class="ppt-img" src="temp_pages/ch9_p69.png" alt="Volhard法条件">
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p69.png" alt="Volhard法条件">
     <p class="ppt-caption">PPT: Volhard 法滴定条件</p>
     <ul>
       <li>应当在<strong>酸性介质</strong>中进行，一般酸度大于 $0.3\;\text{mol/L}$ 的硝酸</li>
@@ -729,7 +729,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>3. Fajans 法（法扬司法）</h3>
-<img class="ppt-img" src="temp_pages/ch9_p67.png" alt="法扬司法">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p67.png" alt="法扬司法">
 <p class="ppt-caption">PPT: 法扬司法(Fajans)原理</p>
   <div class="fb">
     <div class="t">原理</div>
@@ -744,7 +744,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="fb">
     <div class="t">Fajans 法常用指示剂</div>
-    <img class="ppt-img" src="temp_pages/ch9_p71.png" alt="Fajans法指示剂">
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p71.png" alt="Fajans法指示剂">
     <p class="ppt-caption">PPT: Fajans 法常用吸附指示剂一览</p>
   </div>
   <table>
@@ -768,7 +768,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="tip">
     <strong>Fajans 法使用条件：</strong>
-    <img class="ppt-img" src="temp_pages/ch9_p72.png" alt="Fajans法条件">
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p72.png" alt="Fajans法条件">
     <p class="ppt-caption">PPT: Fajans 法滴定条件</p>
     <ul>
       <li>使沉淀具有大的比表面积，可加入<strong>糊精</strong>等胶体保护剂，防止胶体聚沉</li>
@@ -782,7 +782,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>三种银量法详细对比（考试重点）</h3>
-  <img class="ppt-img" src="temp_pages/ch9_p73.png" alt="银量法总结">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch9_p73.png" alt="银量法总结">
   <p class="ppt-caption">PPT: 银量法小结与应用</p>
 
   <table>

@@ -12,10 +12,10 @@ body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);co
 h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
 h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
 h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
-.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;content-visibility:auto;contain-intrinsic-size:auto 500px;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 300px;}
 .fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
-.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 400px;}
 .sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
 .sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
 .tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
@@ -25,7 +25,7 @@ table{width:100%;border-collapse:collapse;margin:12px 0;}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
 th{background:var(--pri);color:#fff;}
 tr:nth-child(even){background:#f9f7f2;}
-.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;backface-visibility:hidden;transform:translateZ(0);}
 .nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
 .nav-bar a:hover{background:#1a5276;color:#fff;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
@@ -58,7 +58,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ============================================================ -->
 <h2>1.1 分析化学的任务和分类</h2>
-<img class="ppt-img" src="temp_pages/ch1_p15.png" alt="分析化学的任务和作用">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch1_p15.png" alt="分析化学的任务和作用">
 <p class="ppt-caption">PPT: 分析化学的任务和作用 — 学科交叉示意</p>
 
 <div class="card">
@@ -200,7 +200,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ============================================================ -->
 <h2>1.2 定量分析过程</h2>
-<img class="ppt-img" src="temp_pages/ch1_p44.png" alt="定量分析测定流程图">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch1_p44.png" alt="定量分析测定流程图">
 <p class="ppt-caption">PPT: 定量分析测定流程图</p>
 
 <div class="card">
@@ -229,7 +229,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 </div>
 <div class="card">
   <h3>固体取样布点方法</h3>
-  <img class="ppt-img" src="temp_pages/ch1_p37.png" alt="固体取样布点方法">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch1_p37.png" alt="固体取样布点方法">
   <p class="ppt-caption">PPT: 固体取样布点方法 — 对角线法/梅花形/棋盘式/蛇形</p>
   <table>
     <tr><th>布点方法</th><th>适用条件</th><th>采样点数</th></tr>
@@ -331,7 +331,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ============================================================ -->
 <h2>1.4 滴定分析概述</h2>
-<img class="ppt-img" src="temp_pages/ch1_p52.png" alt="滴定分析法化学反应必须的条件">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch1_p52.png" alt="滴定分析法化学反应必须的条件">
 <p class="ppt-caption">PPT: 滴定反应条件 — K<sub>c</sub> ≥ 10<sup>6</sup></p>
 
 <div class="card">
@@ -393,7 +393,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <tr><td><strong>沉淀滴定法</strong></td><td>生成难溶沉淀</td><td>AgNO<sub>3</sub></td><td>K<sub>2</sub>CrO<sub>4</sub>（莫尔法）、铁铵矾（佛尔哈德法）、荧光黄（法扬司法）</td><td>测定 NaCl 含量；测定自来水中 Cl<sup>&minus;</sup>；测定银合金中 Ag</td></tr>
   </table>
 </div>
-<img class="ppt-img" src="temp_pages/ch1_p54.png" alt="滴定反应分类">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch1_p54.png" alt="滴定反应分类">
 <p class="ppt-caption">PPT: 四大滴定反应分类</p>
 
 <!-- ============================================================ -->
@@ -475,7 +475,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ============================================================ -->
 <h2>1.6 基准物质与标准溶液</h2>
-<img class="ppt-img" src="temp_pages/ch1_p60.png" alt="滴定度与物质的量浓度关系">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch1_p60.png" alt="滴定度与物质的量浓度关系">
 <p class="ppt-caption">PPT: 滴定度与物质的量浓度关系</p>
 
 <div class="card">
@@ -576,9 +576,9 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ============================================================ -->
 <h2>1.7 滴定分析计算</h2>
-<img class="ppt-img" src="temp_pages/ch1_p66.png" alt="基本单元的确定">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch1_p66.png" alt="基本单元的确定">
 <p class="ppt-caption">PPT: 基本单元的确定 — 酸碱反应与氧化还原反应</p>
-<img class="ppt-img" src="temp_pages/ch1_p68.png" alt="滴定分析计算的基本公式">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch1_p68.png" alt="滴定分析计算的基本公式">
 <p class="ppt-caption">PPT: 滴定分析计算基本公式 — 等物质的量原则</p>
 
 <div class="card">

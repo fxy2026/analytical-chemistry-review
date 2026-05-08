@@ -12,10 +12,10 @@ body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);co
 h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
 h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
 h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
-.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;content-visibility:auto;contain-intrinsic-size:auto 500px;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 300px;}
 .fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
-.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 400px;}
 .sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
 .sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
 .tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
@@ -27,7 +27,7 @@ table{width:100%;border-collapse:collapse;margin:12px 0;}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
 th{background:var(--pri);color:#fff;}
 tr:nth-child(even){background:#f9f7f2;}
-.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;backface-visibility:hidden;transform:translateZ(0);}
 .nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
 .nav-bar a:hover{background:#1a5276;color:#fff;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
@@ -61,7 +61,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 1. 活度与活度系数 ==================== -->
 <h2>一、活度与活度系数</h2>
-<img class="ppt-img" src="temp_pages/ch5a_p6.png" alt="酸碱质子理论">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5a_p6.png" alt="酸碱质子理论">
 <p class="ppt-caption">PPT: 酸碱质子理论</p>
 
 <h3>1.1 基本概念</h3>
@@ -208,9 +208,9 @@ $$K_w = [\text{H}^+][\text{OH}^-]$$
 
 <!-- ==================== 4. 分布分数 ==================== -->
 <h2>四、分布分数 (Distribution Fraction)</h2>
-<img class="ppt-img" src="temp_pages/ch5a_p21.png" alt="分布分数">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5a_p21.png" alt="分布分数">
 <p class="ppt-caption">PPT: 弱酸各型体的分布分数</p>
-<img class="ppt-img" src="temp_pages/ch5a_p29.png" alt="分布分数计算示例">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5a_p29.png" alt="分布分数计算示例">
 <p class="ppt-caption">PPT: 分布分数计算示例</p>
 
 <div class="warn">分布分数是本章最重要的概念之一，考试必考！必须熟练掌握一元、二元、三元酸的分布分数公式。</div>
@@ -365,7 +365,7 @@ $$\delta_{\text{A}^{n-}} = \frac{K_{a1}K_{a2}\cdots K_{an}}{D}$$
 
 <!-- ==================== 5. 质子条件式 PBE ==================== -->
 <h2>五、质子条件式 (PBE)</h2>
-<img class="ppt-img" src="temp_pages/ch5a_p91.png" alt="质子条件式PBE">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5a_p91.png" alt="质子条件式PBE">
 <p class="ppt-caption">PPT: 质子条件式(PBE)的书写</p>
 
 <div class="warn">质子条件式是书写精确pH计算方程的基础，考试中经常要求直接写出PBE。务必掌握方法！历年小测和期末几乎每次都考PBE书写。</div>
@@ -529,7 +529,7 @@ $$[\text{H}_2\text{CO}_3] + [\text{H}^+] + c_1 = [\text{CO}_3^{2-}] + [\text{OH}
 
 <!-- ==================== 6. pH计算公式体系 ==================== -->
 <h2>六、pH 计算公式体系</h2>
-<img class="ppt-img" src="temp_pages/ch5a_p41.png" alt="pH计算">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5a_p41.png" alt="pH计算">
 <p class="ppt-caption">PPT: 各类酸碱溶液pH计算公式汇总</p>
 
 <div class="warn">本节是整章的核心！所有公式和判据条件都需要熟记。考试中约30%-40%的计算题出自此节。</div>
@@ -799,7 +799,7 @@ $$[\text{H}^+] = 10^{-\text{pH}} = 10^{-11.01} = 10^{-11} \times 10^{-0.01} = 10
 
 <!-- ==================== 7. 缓冲溶液 ==================== -->
 <h2>七、缓冲溶液</h2>
-<img class="ppt-img" src="temp_pages/ch5a_p81.png" alt="缓冲溶液">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5a_p81.png" alt="缓冲溶液">
 <p class="ppt-caption">PPT: 缓冲溶液的pH计算</p>
 
 <h3>7.1 缓冲溶液的原理</h3>

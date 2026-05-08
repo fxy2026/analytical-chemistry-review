@@ -12,10 +12,10 @@ body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);co
 h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
 h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
 h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
-.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;content-visibility:auto;contain-intrinsic-size:auto 500px;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 300px;}
 .fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
-.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 400px;}
 .sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
 .sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
 .tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
@@ -25,7 +25,7 @@ table{width:100%;border-collapse:collapse;margin:12px 0;}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
 th{background:var(--pri);color:#fff;}
 tr:nth-child(even){background:#f9f7f2;}
-.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;backface-visibility:hidden;transform:translateZ(0);}
 .nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
 .nav-bar a:hover{background:#1a5276;color:#fff;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
@@ -57,7 +57,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 6.1 ==================== -->
 <h2>6.1 EDTA的性质与配位特点</h2>
-<img class="ppt-img" src="temp_pages/ch6_p7.png" alt="EDTA结构">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p7.png" alt="EDTA结构">
 <p class="ppt-caption">PPT: EDTA的结构与配位特点</p>
 
 <div class="card">
@@ -111,7 +111,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 6.1b ==================== -->
 <h2>6.1b 逐级稳定常数与累积稳定常数</h2>
-<img class="ppt-img" src="temp_pages/ch6_p13.png" alt="逐级稳定常数与累积稳定常数">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p13.png" alt="逐级稳定常数与累积稳定常数">
 <p class="ppt-caption">PPT: 逐级稳定常数与累积稳定常数</p>
 
 <div class="card">
@@ -138,7 +138,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>各级配合物的分布分数 $\delta$</h3>
-  <img class="ppt-img" src="temp_pages/ch6_p16.png" alt="分布分数">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p16.png" alt="分布分数">
   <p class="ppt-caption">PPT: 各级配合物的分布</p>
   <p>金属离子的分析总浓度 $c_M$ 为各种形态之和：</p>
   $$c_M = [\text{M}] + [\text{ML}] + [\text{ML}_2] + \cdots + [\text{ML}_n] = [\text{M}](1 + \beta_1[\text{L}] + \beta_2[\text{L}]^2 + \cdots + \beta_n[\text{L}]^n)$$
@@ -150,7 +150,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>酸碱平衡与配位平衡的统一</h3>
-  <img class="ppt-img" src="temp_pages/ch6_p14.png" alt="酸碱与配位平衡统一">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p14.png" alt="酸碱与配位平衡统一">
   <p class="ppt-caption">PPT: 酸碱平衡与络合平衡的统一</p>
   <p>质子化反应可视为以 $\text{H}^+$ 为"配位体"的配位反应。质子化常数 $K^H$ 与酸离解常数 $K_a$ 的关系：</p>
   $$K_1^H = \frac{1}{K_{a,n}}, \quad K_2^H = \frac{1}{K_{a,n-1}}, \quad \ldots$$
@@ -160,11 +160,11 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 6.2 ==================== -->
 <h2>6.2 副反应系数</h2>
-<img class="ppt-img" src="temp_pages/ch6_p18.png" alt="副反应系数总览">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p18.png" alt="副反应系数总览">
 <p class="ppt-caption">PPT: 副反应系数的定义与分类</p>
-<img class="ppt-img" src="temp_pages/ch6_p25.png" alt="副反应系数">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p25.png" alt="副反应系数">
 <p class="ppt-caption">PPT: 副反应系数的计算</p>
-<img class="ppt-img" src="temp_pages/ch6_p26.png" alt="条件稳定常数">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p26.png" alt="条件稳定常数">
 <p class="ppt-caption">PPT: 条件稳定常数</p>
 
 <div class="card">
@@ -289,7 +289,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 6.3 ==================== -->
 <h2>6.3 条件稳定常数</h2>
-<img class="ppt-img" src="temp_pages/ch6_p13.png" alt="络合平衡">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p13.png" alt="络合平衡">
 <p class="ppt-caption">PPT: 逐级稳定常数与累积稳定常数</p>
 
 <div class="card">
@@ -354,7 +354,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 6.4 ==================== -->
 <h2>6.4 配位滴定曲线</h2>
-<img class="ppt-img" src="temp_pages/ch6_p43.png" alt="EDTA滴定曲线">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p43.png" alt="EDTA滴定曲线">
 <p class="ppt-caption">PPT: EDTA配位滴定曲线</p>
 
 <div class="card">
@@ -373,7 +373,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
   <div class="fb">
     <div class="t">突跃范围 $\Delta pM'$ 的估算公式</div>
-    <img class="ppt-img" src="temp_pages/ch6_p50.png" alt="突跃范围">
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p50.png" alt="突跃范围">
     <p class="ppt-caption">PPT: 滴定曲线与突跃范围</p>
     <p>突跃范围（化学计量点前后 $\pm 0.1\%$ 所对应的 $pM'$ 变化）的近似公式：</p>
     $$\Delta pM' = (-\lg c_{sp,M} + 3) - (\lg K'_{MY} - 3)$$
@@ -381,7 +381,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 
   <h3>影响突跃大小的因素</h3>
-  <img class="ppt-img" src="temp_pages/ch6_p51.png" alt="影响突跃因素">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p51.png" alt="影响突跃因素">
   <p class="ppt-caption">PPT: 影响pM突跃的主要因素</p>
   <ul>
     <li><strong>$K'_{MY}$ 越大</strong>，突跃越大（$K'$ 增大 10 倍，$pM'$ 突跃增大约 1 个单位）</li>
@@ -441,7 +441,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 6.5 ==================== -->
 <h2>6.5 金属指示剂</h2>
-<img class="ppt-img" src="temp_pages/ch6_p48.png" alt="金属指示剂">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p48.png" alt="金属指示剂">
 <p class="ppt-caption">PPT: 金属指示剂的作用原理</p>
 
 <div class="card">
@@ -618,7 +618,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>最佳 pH 值的确定</h3>
-  <img class="ppt-img" src="temp_pages/ch6_p85.png" alt="最佳pH值">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p85.png" alt="最佳pH值">
   <p class="ppt-caption">PPT: 最佳pH值的获取方法</p>
   <p>最佳 pH 值是使 $pM'_{sp}$ 与 $pM'_t$（指示剂变色点）恰好相等（即 $\Delta pM' = 0$、$E_t = 0$）的 pH 值。具体求法：</p>
   <ol>
@@ -631,7 +631,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="card">
   <h3>缓冲溶液的作用（重要！）</h3>
-  <img class="ppt-img" src="temp_pages/ch6_p88.png" alt="缓冲溶液作用">
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p88.png" alt="缓冲溶液作用">
   <p class="ppt-caption">PPT: 配位滴定中缓冲溶液的作用</p>
   <p>EDTA 与金属离子反应时会释放 $\text{H}^+$（因为 EDTA 以 $\text{H}_2\text{Y}^{2-}$ 等质子化形态存在）：</p>
   $$M^{n+} + H_2Y^{2-} \rightarrow MY^{(n-4)} + 2H^+$$
@@ -669,7 +669,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 6.8 ==================== -->
 <h2>6.8 混合离子的选择性滴定</h2>
-<img class="ppt-img" src="temp_pages/ch6_p83.png" alt="选择性滴定">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p83.png" alt="选择性滴定">
 <p class="ppt-caption">PPT: 提高配位滴定选择性的方法</p>
 
 <div class="card">

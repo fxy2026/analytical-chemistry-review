@@ -12,10 +12,10 @@ body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);co
 h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
 h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
 h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
-.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;content-visibility:auto;contain-intrinsic-size:auto 500px;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 300px;}
 .fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
-.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 400px;}
 .sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
 .sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
 .tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
@@ -27,7 +27,7 @@ table{width:100%;border-collapse:collapse;margin:12px 0;}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
 th{background:var(--pri);color:#fff;}
 tr:nth-child(even){background:#f9f7f2;}
-.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;backface-visibility:hidden;transform:translateZ(0);}
 .nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
 .nav-bar a:hover{background:#1a5276;color:#fff;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
@@ -59,7 +59,7 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 1. 酸碱指示剂 ==================== -->
 <h2>一、酸碱指示剂</h2>
-<img class="ppt-img" src="temp_pages/ch5b_p2.png" alt="酸碱指示剂">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p2.png" alt="酸碱指示剂">
 <p class="ppt-caption">PPT: 酸碱指示剂原理</p>
 
 <h3>1.1 指示剂变色原理</h3>
@@ -123,9 +123,9 @@ $$\text{pH} = pK_{\text{HIn}} \pm 1$$
 
 <!-- ==================== 2. 强酸-强碱滴定曲线 ==================== -->
 <h2>二、强酸-强碱滴定曲线</h2>
-<img class="ppt-img" src="temp_pages/ch5b_p15.png" alt="酸碱滴定曲线">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p15.png" alt="酸碱滴定曲线">
 <p class="ppt-caption">PPT: 酸碱滴定曲线和指示剂的选择</p>
-<img class="ppt-img" src="temp_pages/ch5b_p22.png" alt="强酸滴定强碱">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p22.png" alt="强酸滴定强碱">
 <p class="ppt-caption">PPT: 强酸-强碱滴定曲线</p>
 
 <h3>2.1 以 NaOH 滴定 HCl 为例（完整计算）</h3>
@@ -355,7 +355,7 @@ $cK_a = 0.1 \times 5.8\times10^{-10} = 5.8\times10^{-11} < 10^{-8}$<br>
 
 <!-- ==================== 5. 多元酸滴定 ==================== -->
 <h2>五、多元酸的滴定</h2>
-<img class="ppt-img" src="temp_pages/ch5b_p56.png" alt="多元酸滴定">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p56.png" alt="多元酸滴定">
 <p class="ppt-caption">PPT: 多元酸分步滴定的判据</p>
 
 <h3>5.1 分步滴定判据</h3>
@@ -450,7 +450,7 @@ $$n(\text{Na}_2\text{HPO}_4)_{\text{原有}} = c_{\text{HCl}} \cdot V_2 - c_{\te
 
 <!-- ==================== 6. 终点误差 ==================== -->
 <h2>六、终点误差</h2>
-<img class="ppt-img" src="temp_pages/ch5b_p44.png" alt="终点误差">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p44.png" alt="终点误差">
 <p class="ppt-caption">PPT: 滴定终点误差计算</p>
 
 <div class="warn">终点误差是考试重点！务必掌握强酸-强碱和弱酸-强碱两种情况的公式。</div>
@@ -590,7 +590,7 @@ $$E_t = \frac{91.19}{4.57\times10^4} \times 100\% = 0.20\%$$
 
 <!-- ==================== 7. 双指示剂法 ==================== -->
 <h2>七、双指示剂法</h2>
-<img class="ppt-img" src="temp_pages/ch5b_p80.png" alt="双指示剂法流程图">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p80.png" alt="双指示剂法流程图">
 <p class="ppt-caption">PPT: NaOH + Na2CO3 双指示剂法滴定流程图</p>
 
 <h3>7.1 NaOH + Na$_2$CO$_3$ 混合物</h3>
@@ -897,7 +897,7 @@ $$\text{H}_3\text{BO}_3 + 2\text{C}_3\text{H}_5(\text{OH})_3 \to \text{配合酸
 
 <!-- ==================== 10A. 非水滴定 ==================== -->
 <h2>十A、非水滴定法简介（PPT p95-p98）</h2>
-<img class="ppt-img" src="temp_pages/ch5b_p95.png" alt="非水滴定法简介">
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p95.png" alt="非水滴定法简介">
 <p class="ppt-caption">PPT: 非水滴定法简介 -- 拉平效应与区分效应</p>
 
 <div class="warn">非水滴定是本章的拓展内容，考试中可能以概念题或选择题形式出现。需掌握拉平效应和区分效应的概念。</div>
