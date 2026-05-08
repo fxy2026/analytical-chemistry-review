@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="700" height="1000">
+  <path stroke="currentColor" fill="none" stroke-width="7" d="m 540,741 -46,-63 m 33,73 -49,-66 m -206,259 26,-87 m -46,84 26,-87 m -95,-248 -23,140 124,115 108,-35 M 528,346 586,297 M 508,339 573,283 M 246,402 331,339 h 190 l 79,63 M 262,59 285,143 M 265,147 242,63 M 393,203 275,140 164,259 210,385"/>
+  <path stroke="red" stroke-width="7" stroke-dasharray="5,2" d="m 452,486 147,-42 m -385,126 177,-59 m 62,-4 147,59 m -346,-133 138,52 m 28,45 v 255 m -1,-535 v 220"/>
+  <path d="m 209.59305,601.39862 85.14718,94.40559 203.04328,-3.49652 101.52163,-90.90907 -3.27489,-6.99302 -117.89609,80.41959 -170.29437,10.48951 -94.97185,-90.9091 z M 193.2186,412.58741 58.948046,423.07692 6.549783,562.93706 153.9199,580.41959 V 562.93706 L 32.748915,548.95105 65.49783,433.56643 193.2186,419.58043"/>
+  <g font-family="Times New Roman" font-size="64px">
+    <text id="O" x="223" y="56">O</text>
+    <use transform="translate(10, 937)" xlink:href="#O"/>
+    <use transform="translate(305, 738)" xlink:href="#O"/>
+    <use transform="translate(357, 238)" xlink:href="#O"/>
+    <text id="O-" x="396" y="245">O<tspan dy="-24">−</tspan></text>
+    <use transform="translate(203, 203)" xlink:href="#O-"/>
+    <use transform="translate(0, 601)" xlink:href="#O-"/>
+    <use transform="translate(210, 360)" xlink:href="#O-"/>
+    <text id="N" x="196" y="441">N</text>
+    <use transform="translate(-36, 157)" xlink:href="#N"/>
+    <text x="393" y="522" fill="red">M</text>
+  </g>
+</svg>
