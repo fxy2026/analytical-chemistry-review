@@ -1,0 +1,11 @@
+{
+  "name": "analytical-chemistry-review",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "katex": "^0.16.11"
+  }
+}
