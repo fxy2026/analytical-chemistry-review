@@ -127,6 +127,9 @@ function cleanScripts(html) {
   html = html.replace(/<script[^>]*auto-render\.min\.js[^>]*><\/script>\s*/g, '');
   // Remove katex-lazy.js script
   html = html.replace(/<script[^>]*katex-lazy\.js[^>]*><\/script>\s*/g, '');
+  // Remove content-visibility and contain-intrinsic-size (causes layout bugs with pre-rendered KaTeX)
+  html = html.replace(/content-visibility:\s*auto\s*;/g, '');
+  html = html.replace(/contain-intrinsic-size:\s*auto\s+\d+px\s*;/g, '');
   return html;
 }
 
