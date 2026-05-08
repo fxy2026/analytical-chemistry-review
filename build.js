@@ -44,7 +44,9 @@ function copyRecursive(src, dest) {
 function renderMath(html) {
   // Split HTML into segments: tags vs text
   // We only process text segments (outside of tags)
-  const TAG_RE = /<(?:script|style|code|pre)[^>]*>[\s\S]*?<\/(?:script|style|code|pre)>|<[^>]+>/gi;
+  // Match real HTML tags: <tag...>, </tag>, <!-- -->, <!DOCTYPE>
+  // IMPORTANT: require [a-zA-Z/!] after < to avoid matching math operators like "< 0.05"
+  const TAG_RE = /<(?:script|style|code|pre)\b[^>]*>[\s\S]*?<\/(?:script|style|code|pre)>|<[a-zA-Z\/!][^>]*>/gi;
 
   let result = '';
   let lastIndex = 0;
