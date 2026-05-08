@@ -88,8 +88,6 @@ function renderMathInText(text) {
   // Inline math: $...$ but not \\$ (escaped) or standalone $
   // Match $...$ where content is non-empty and doesn't start/end with space
   text = text.replace(/(?<![\\])\$([^\$\n]+?)\$/g, (full, tex) => {
-    // Skip if it looks like a currency amount
-    if (/^\d+[.,]?\d*$/.test(tex.trim())) return full;
     return renderKaTeX(tex.trim(), false);
   });
 
