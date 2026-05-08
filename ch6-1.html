@@ -1,0 +1,523 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第六章 配位滴定法（上） | 分析化学1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+<link rel="stylesheet" href="toc.css">
+<style>
+:root{--pri:#1a5276;--acc:#c0392b;--bg:#fffef9;--card:#fff;--border:#e0d8c8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);color:#333;line-height:1.9;padding:20px;max-width:1000px;margin:0 auto;}
+h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
+h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
+h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;content-visibility:auto;contain-intrinsic-size:auto 500px;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 300px;}
+.fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 400px;}
+.sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
+.sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
+.tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+table{width:100%;border-collapse:collapse;margin:12px 0;}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
+th{background:var(--pri);color:#fff;}
+tr:nth-child(even){background:#f9f7f2;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;backface-visibility:hidden;transform:translateZ(0);}
+.nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
+.nav-bar a:hover{background:#1a5276;color:#fff;}
+ul,ol{margin-left:20px;margin-bottom:8px;}
+details{margin:8px 0;}
+details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+.ppt-img{display:block;max-width:100%;margin:12px auto;border:1px solid #e0d8c8;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ppt-caption{text-align:center;font-size:.82em;color:#888;margin:-6px 0 12px;}
+</style>
+</head><body>
+
+<div class="nav-bar">
+  <a href="index.html">首页</a>
+  <a href="ch1.html">第一章</a>
+  <a href="ch3-1.html">第三章(上)</a>
+  <a href="ch3-2.html">第三章(下)</a>
+  <a href="ch5-1.html">第五章(上)</a>
+  <a href="ch5-2.html">第五章(下)</a>
+  <a href="ch6-1.html" style="background:#1a5276;color:#fff;">第六章(上)</a>
+  <a href="ch6-2.html">第六章(下)</a>
+  <a href="ch7.html">第七章</a>
+  <a href="ch9-1.html">第九章(上)</a>
+  <a href="ch9-2.html">第九章(下)</a>
+  <a href="ch10.html">第十章</a>
+  <a href="formulas.html">公式表</a>
+  <a href="exam-review.html">备考</a>
+  <a href="quiz1.html">小测1</a>
+  <a href="quiz2.html">小测2</a>
+  <a href="final2022.html">期末真题</a>
+</div>
+
+<h1>第六章 配位滴定法（上）</h1>
+
+<!-- ==================== 6.1 ==================== -->
+<h2>6.1 EDTA的性质与配位特点</h2>
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p7.png" alt="EDTA结构">
+<p class="ppt-caption">PPT: EDTA的结构与配位特点</p>
+
+<div class="card">
+  <h3>EDTA的结构</h3>
+  <p>EDTA（乙二胺四乙酸）是一种<strong>六元酸</strong>（$\text{H}_6\text{Y}^{2+}$），含有 2 个氨基氮和 4 个羧基氧，共提供 <strong>6 个配位原子</strong>。通常使用其二钠盐 $\text{Na}_2\text{H}_2\text{Y}\cdot 2\text{H}_2\text{O}$（$M = 372.24$）。</p>
+
+  <div class="tip">EDTA 的六个质子的酸性：前两个质子来自氨基 $\text{NH}^+$（$\text{p}K_{a1}=0.9$, $\text{p}K_{a2}=1.6$），后四个来自羧基（$\text{p}K_{a3}=2.07$, $\text{p}K_{a4}=2.75$, $\text{p}K_{a5}=6.24$, $\text{p}K_{a6}=10.34$）。</div>
+</div>
+
+<div class="card">
+  <h3>EDTA配合物的特点</h3>
+  <ul>
+    <li><strong>广泛性</strong>：能与几乎所有金属离子形成配合物</li>
+    <li><strong>1:1 配位</strong>：无论金属离子电荷或半径如何，均形成 $\text{MY}^{n-4}$ 型 1:1 配合物</li>
+    <li><strong>稳定性高</strong>：多数 $\lg K_{MY}$ 在 15 以上</li>
+    <li><strong>水溶性好</strong>：配合物均可溶于水</li>
+    <li><strong>反应速率快</strong>：配位反应速度一般较快</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>EDTA在不同 pH 下的存在形态</h3>
+  <p>EDTA 是六元酸，在不同 pH 下以不同形态存在。由 $\text{p}K_a$ 值可以判断各 pH 区间的主要存在形态：</p>
+  <table>
+    <tr><th>pH 范围</th><th>主要形态</th><th>说明</th></tr>
+    <tr><td>$< 0.9$</td><td>$\text{H}_6\text{Y}^{2+}$</td><td>完全质子化</td></tr>
+    <tr><td>$0.9 \sim 1.6$</td><td>$\text{H}_5\text{Y}^{+}$</td><td>失去一个氨基质子</td></tr>
+    <tr><td>$1.6 \sim 2.07$</td><td>$\text{H}_4\text{Y}$</td><td>两个氨基质子全部失去</td></tr>
+    <tr><td>$2.07 \sim 2.75$</td><td>$\text{H}_3\text{Y}^{-}$</td><td>失去一个羧基质子</td></tr>
+    <tr><td>$2.75 \sim 6.24$</td><td>$\text{H}_2\text{Y}^{2-}$</td><td>二钠盐溶解后的主要形态</td></tr>
+    <tr><td>$6.24 \sim 10.34$</td><td>$\text{HY}^{3-}$</td><td>pH 6.24 ~ 10.34 之间占主导</td></tr>
+    <tr><td>$> 10.34$</td><td>$\text{Y}^{4-}$</td><td>完全去质子化，配位能力最强</td></tr>
+  </table>
+  <div class="note"><strong>考点 (Quiz 2 Q2)：</strong>在 pH = 6.16 ~ 10.26（即 $\text{p}K_{a5}$ 到 $\text{p}K_{a6}$ 附近）范围内，$\text{HY}^{3-}$ 是主要存在形态。注意：只有 $\text{Y}^{4-}$ 才能直接与金属离子配位，其余形态必须先解离出质子。</div>
+</div>
+
+<div class="card">
+  <h3>常见金属-EDTA配合物的稳定常数</h3>
+  <table>
+    <tr><th>金属离子</th><th>$\lg K_{MY}$</th><th>金属离子</th><th>$\lg K_{MY}$</th></tr>
+    <tr><td>$\text{Mg}^{2+}$</td><td>8.7</td><td>$\text{Pb}^{2+}$</td><td>18.0</td></tr>
+    <tr><td>$\text{Ca}^{2+}$</td><td>10.7</td><td>$\text{Cu}^{2+}$</td><td>18.8</td></tr>
+    <tr><td>$\text{Mn}^{2+}$</td><td>13.8</td><td>$\text{Ni}^{2+}$</td><td>18.6</td></tr>
+    <tr><td>$\text{Fe}^{2+}$</td><td>14.3</td><td>$\text{Hg}^{2+}$</td><td>21.8</td></tr>
+    <tr><td>$\text{Co}^{2+}$</td><td>16.3</td><td>$\text{Al}^{3+}$</td><td>16.1</td></tr>
+    <tr><td>$\text{Zn}^{2+}$</td><td>16.5</td><td>$\text{Fe}^{3+}$</td><td>25.1</td></tr>
+    <tr><td>$\text{Cd}^{2+}$</td><td>16.5</td><td>$\text{Bi}^{3+}$</td><td>27.9</td></tr>
+  </table>
+  <div class="tip"><strong>记忆技巧：</strong>三价离子（$\text{Fe}^{3+}$、$\text{Bi}^{3+}$）的 $\lg K$ 普遍很大（$>25$），因此可在强酸（低 pH）下滴定；碱土金属（$\text{Mg}^{2+}$、$\text{Ca}^{2+}$）$\lg K$ 较小，需在碱性（高 pH）下滴定。</div>
+</div>
+
+<!-- ==================== 6.1b ==================== -->
+<h2>6.1b 逐级稳定常数与累积稳定常数</h2>
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p13.png" alt="逐级稳定常数与累积稳定常数">
+<p class="ppt-caption">PPT: 逐级稳定常数与累积稳定常数</p>
+
+<div class="card">
+  <h3>逐级稳定常数 $K_i$</h3>
+  <p>对于金属离子 M 与配位体 L 的逐级配位反应：</p>
+  $$M + L \rightleftharpoons ML \quad K_1 = \frac{[\text{ML}]}{[\text{M}][\text{L}]}$$
+  $$ML + L \rightleftharpoons ML_2 \quad K_2 = \frac{[\text{ML}_2]}{[\text{ML}][\text{L}]}$$
+  $$\vdots$$
+  $$ML_{n-1} + L \rightleftharpoons ML_n \quad K_n = \frac{[\text{ML}_n]}{[\text{ML}_{n-1}][\text{L}]}$$
+  <p>$K_i$ 表示<strong>相邻配合物</strong>之间的平衡关系，一般 $K_1 > K_2 > \cdots > K_n$。</p>
+</div>
+
+<div class="card">
+  <h3>累积稳定常数 $\beta_n$</h3>
+  <div class="fb">
+    <div class="t">累积稳定常数的定义</div>
+    <p>$\beta_n$ 表示配合物 $ML_n$ 与游离 M、L 之间的总平衡关系：</p>
+    $$\beta_n = K_1 \cdot K_2 \cdots K_n = \frac{[\text{ML}_n]}{[\text{M}][\text{L}]^n}$$
+    <p>即 $\beta_1 = K_1$，$\beta_2 = K_1 K_2$，$\beta_n = \prod_{i=1}^{n}K_i$。</p>
+  </div>
+  <p>由此可得各级配合物浓度：$[\text{ML}_n] = \beta_n[\text{M}][\text{L}]^n$。</p>
+  <div class="tip"><strong>$K$ 与 $\beta$ 的区别：</strong>$K_i$ 描述相邻两级配合物的关系，$\beta_n$ 描述第 $n$ 级配合物与最初游离态的关系。考试中注意辨别题目给出的是 $K$ 还是 $\beta$。</div>
+</div>
+
+<div class="card">
+  <h3>各级配合物的分布分数 $\delta$</h3>
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p16.png" alt="分布分数">
+  <p class="ppt-caption">PPT: 各级配合物的分布</p>
+  <p>金属离子的分析总浓度 $c_M$ 为各种形态之和：</p>
+  $$c_M = [\text{M}] + [\text{ML}] + [\text{ML}_2] + \cdots + [\text{ML}_n] = [\text{M}](1 + \beta_1[\text{L}] + \beta_2[\text{L}]^2 + \cdots + \beta_n[\text{L}]^n)$$
+  <p>各级配合物的分布分数：</p>
+  $$\delta_M = \frac{[\text{M}]}{c_M} = \frac{1}{1 + \beta_1[\text{L}] + \beta_2[\text{L}]^2 + \cdots + \beta_n[\text{L}]^n}$$
+  $$\delta_{ML_i} = \frac{[\text{ML}_i]}{c_M} = \frac{\beta_i[\text{L}]^i}{1 + \beta_1[\text{L}] + \beta_2[\text{L}]^2 + \cdots + \beta_n[\text{L}]^n} = \delta_M \cdot \beta_i[\text{L}]^i$$
+  <div class="note"><strong>与酸碱分布分数的类比：</strong>配合物的分布分数公式与多元酸的分布分数 $\delta$ 完全类似。酸碱平衡中用 $[\text{H}^+]$ 和 $K_a$ 计算分布，配位平衡中用 $[\text{L}]$ 和 $\beta_i$ 计算分布。</div>
+</div>
+
+<div class="card">
+  <h3>酸碱平衡与配位平衡的统一</h3>
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p14.png" alt="酸碱与配位平衡统一">
+  <p class="ppt-caption">PPT: 酸碱平衡与络合平衡的统一</p>
+  <p>质子化反应可视为以 $\text{H}^+$ 为"配位体"的配位反应。质子化常数 $K^H$ 与酸离解常数 $K_a$ 的关系：</p>
+  $$K_1^H = \frac{1}{K_{a,n}}, \quad K_2^H = \frac{1}{K_{a,n-1}}, \quad \ldots$$
+  <p>例如 $\text{NH}_3 + \text{H}^+ \rightleftharpoons \text{NH}_4^+$，其 $K^H_{\text{NH}_3} = \frac{1}{K_a} = \frac{K_b}{K_w} = 10^{9.37}$。</p>
+  <div class="tip">这种统一观点使得酸效应系数 $\alpha_{Y(H)}$ 的公式形式与金属副反应系数 $\alpha_{M(L)}$ 完全一致，只是"配位体"换成了 $\text{H}^+$，"稳定常数"换成了质子化常数 $\beta^H_i$。</div>
+</div>
+
+<!-- ==================== 6.2 ==================== -->
+<h2>6.2 副反应系数</h2>
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p18.png" alt="副反应系数总览">
+<p class="ppt-caption">PPT: 副反应系数的定义与分类</p>
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p25.png" alt="副反应系数">
+<p class="ppt-caption">PPT: 副反应系数的计算</p>
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p26.png" alt="条件稳定常数">
+<p class="ppt-caption">PPT: 条件稳定常数</p>
+
+<div class="card">
+  <h3>EDTA的副反应系数</h3>
+  <p>在配位滴定中，EDTA 参与的副反应主要有两类：</p>
+
+  <div class="fb">
+    <div class="t">酸效应系数 $\alpha_{Y(H)}$</div>
+    <p>反映 H$^+$ 对 EDTA 配位能力的影响：</p>
+    $$\alpha_{Y(H)} = \frac{[\text{Y}']}{[\text{Y}^{4-}]} = 1 + \frac{[\text{H}^+]}{K_{a6}} + \frac{[\text{H}^+]^2}{K_{a6}K_{a5}} + \cdots$$
+    <p>酸度越大，$\alpha_{Y(H)}$ 越大，EDTA 配位能力越弱。</p>
+  </div>
+
+  <div class="fb">
+    <div class="t">共存离子效应系数 $\alpha_{Y(N)}$</div>
+    <p>溶液中共存金属离子 N 与 EDTA 形成配合物，消耗 Y：</p>
+    $$\alpha_{Y(N)} = 1 + K_{NY}[\text{N}]$$
+    <p>若多种共存离子：$\alpha_Y = \alpha_{Y(H)} + \alpha_{Y(N_1)} + \alpha_{Y(N_2)} + \cdots - (k-1)$，其中 $k$ 为副反应总数。通常简化为 $\alpha_Y \approx \alpha_{Y(H)} \cdot \alpha_{Y(N)}$（当各项远大于 1 时）。</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3>$\lg\alpha_{Y(H)}$ 与 pH 对照表（重要！）</h3>
+  <p>该表是配位滴定计算的基础，考试务必熟记关键数值：</p>
+  <table>
+    <tr><th>pH</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr>
+    <tr><td>$\lg\alpha_{Y(H)}$</td><td>24.0</td><td>18.3</td><td>13.5</td><td>10.8</td><td>8.6</td><td>6.6</td><td>4.8</td><td>3.4</td><td>2.3</td><td>1.4</td><td>0.5</td><td>0.1</td><td>$\approx 0$</td></tr>
+  </table>
+  <div class="tip"><strong>速记口诀：</strong>pH = 5 时 $\lg\alpha_{Y(H)} \approx 6.6$，是很常用的数值。pH 每升高 1，$\lg\alpha_{Y(H)}$ 大约降低 1.5~2。pH $\geq$ 12 时，$\alpha_{Y(H)} \approx 1$（酸效应可忽略）。</div>
+</div>
+
+<div class="ex">
+  <strong>例题：手动计算 pH = 5 时的 $\alpha_{Y(H)}$</strong>
+  <div class="sol">
+    <div class="st">解：逐项计算法</div>
+    <p>已知 $\text{p}K_{a1}=0.9$, $\text{p}K_{a2}=1.6$, $\text{p}K_{a3}=2.07$, $\text{p}K_{a4}=2.75$, $\text{p}K_{a5}=6.24$, $\text{p}K_{a6}=10.34$。</p>
+    <p>pH = 5，即 $[\text{H}^+] = 10^{-5}$。</p>
+    <p>$$\alpha_{Y(H)} = 1 + \frac{[\text{H}^+]}{K_{a6}} + \frac{[\text{H}^+]^2}{K_{a6}K_{a5}} + \frac{[\text{H}^+]^3}{K_{a6}K_{a5}K_{a4}} + \cdots$$</p>
+    <p>逐项计算：</p>
+    <ul>
+      <li>第 1 项：$\frac{10^{-5}}{10^{-10.34}} = 10^{5.34} = 2.19 \times 10^5$</li>
+      <li>第 2 项：$\frac{(10^{-5})^2}{10^{-10.34} \times 10^{-6.24}} = 10^{10-10+16.58} = 10^{6.58} = 3.80 \times 10^6$</li>
+      <li>第 3 项：$10^{-15 + 10.34 + 6.24 + 2.75} = 10^{4.33}$（相对于第 2 项较小）</li>
+    </ul>
+    <p>实际上第 2 项最大，$\alpha_{Y(H)} \approx 10^{6.58} + 10^{5.34} + \cdots$</p>
+    <p>取对数：$\lg\alpha_{Y(H)} \approx 6.6$（查表值一致）</p>
+    <div class="tip">实际计算时直接查表即可。只需在特殊情况（如小数 pH、或非标准温度）下才需手动计算。</div>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题：考虑多种副反应时的 $\alpha_Y$ 计算</strong>
+  <p>溶液 pH = 10，含 $\text{Mg}^{2+}$（$c = 0.01$ mol/L）作为共存离子，$\lg K_{\text{MgY}} = 8.7$。求 $\alpha_Y$。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>pH = 10 时，$\lg\alpha_{Y(H)} = 0.5$，即 $\alpha_{Y(H)} = 10^{0.5} = 3.16$</p>
+    <p>$\alpha_{Y(N)} = 1 + K_{\text{MgY}}[\text{Mg}^{2+}] = 1 + 10^{8.7} \times 0.01 = 1 + 10^{6.7} \approx 10^{6.7}$</p>
+    <p>总副反应系数（严格公式）：</p>
+    $$\alpha_Y = \alpha_{Y(H)} + \alpha_{Y(N)} - 1 = 3.16 + 10^{6.7} - 1 \approx 10^{6.7}$$
+    <p>此时共存离子效应远大于酸效应，$\lg\alpha_Y \approx 6.7$。</p>
+    <div class="warn"><strong>注意：</strong>当某一项副反应远大于其他项时，$\alpha_Y$ 近似等于最大的那一项。但在考试中应写出完整的加法公式 $\alpha_Y = \alpha_{Y(H)} + \alpha_{Y(N)} - 1$，而不是乘法！乘法近似 $\alpha_Y \approx \alpha_{Y(H)} \cdot \alpha_{Y(N)}$ 仅在各项都远大于 1 时使用。</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>金属离子的副反应系数</h3>
+
+  <div class="fb">
+    <div class="t">辅助配位效应 $\alpha_{M(L)}$</div>
+    <p>金属离子 M 与辅助配位体 L（如 $\text{NH}_3$）反应：</p>
+    $$\alpha_{M(L)} = 1 + \beta_1[\text{L}] + \beta_2[\text{L}]^2 + \cdots + \beta_n[\text{L}]^n$$
+  </div>
+
+  <div class="fb">
+    <div class="t">羟基效应 $\alpha_{M(OH)}$</div>
+    <p>金属离子水解导致参与配位反应的游离金属减少：</p>
+    $$\alpha_{M(OH)} = 1 + \beta_1^{OH}\frac{K_w}{[\text{H}^+]} + \beta_2^{OH}\left(\frac{K_w}{[\text{H}^+]}\right)^2 + \cdots$$
+    <p>pH 越高，$\alpha_{M(OH)}$ 越大。</p>
+  </div>
+
+  <div class="warn">注意：$\alpha_{M(OH)}$ 通常在 pH 较高时才显著，且对不同金属影响差异很大。某些金属离子（如 $\text{Fe}^{3+}$, $\text{Al}^{3+}$）在较低 pH 下即开始水解。</div>
+
+  <div class="fb">
+    <div class="t">金属总副反应系数 $\alpha_M$</div>
+    <p>若同时存在辅助配位效应和羟基效应：</p>
+    $$\alpha_M = \alpha_{M(L)} + \alpha_{M(OH)} - 1$$
+    <p>当某一项远大于另一项时，取较大值近似。</p>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题（PPT）：$\text{Zn}^{2+}$ 在 $\text{NH}_3$ 缓冲液中的综合副反应系数</strong>
+  <p>在 0.01000 mol/L $\text{Zn(NH}_3)_4^{2+}$ 溶液中，游离氨浓度为 0.10 mol/L，已知 pH = 10，$\lg\alpha_{\text{Zn(OH)}} = 2.4$，$\lg\alpha_{Y(H)} = 0.5$。$\text{Zn-NH}_3$ 的各级累积稳定常数：$\lg\beta_1 = 2.27$, $\lg\beta_2 = 4.61$, $\lg\beta_3 = 7.01$, $\lg\beta_4 = 9.06$。计算 pH = 10 时的 $\alpha_{\text{Zn}}$。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p><strong>第一步</strong>：计算 $\alpha_{\text{Zn(NH}_3)}$</p>
+    $$\alpha_{\text{Zn(NH}_3)} = 1 + \beta_1[\text{NH}_3] + \beta_2[\text{NH}_3]^2 + \beta_3[\text{NH}_3]^3 + \beta_4[\text{NH}_3]^4$$
+    $$= 1 + 10^{2.27}\times 0.10 + 10^{4.61}\times 0.01 + 10^{7.01}\times 0.001 + 10^{9.06}\times 0.0001$$
+    $$= 1 + 10^{1.27} + 10^{2.61} + 10^{4.01} + 10^{5.06} \approx 10^{5.10}$$
+    <p><strong>第二步</strong>：已知 $\alpha_{\text{Zn(OH)}} = 10^{2.4}$</p>
+    <p><strong>第三步</strong>：金属总副反应系数</p>
+    $$\alpha_{\text{Zn}} = \alpha_{\text{Zn(NH}_3)} + \alpha_{\text{Zn(OH)}} - 1 = 10^{5.10} + 10^{2.4} - 1 \approx 10^{5.10}$$
+    <p>（$\alpha_{\text{Zn(NH}_3)}$ 远大于 $\alpha_{\text{Zn(OH)}}$，后者可忽略）</p>
+    <p><strong>第四步</strong>：条件稳定常数</p>
+    $$\lg K'_{\text{ZnY}} = \lg K_{\text{ZnY}} - \lg\alpha_{\text{Zn}} - \lg\alpha_{Y(H)} = 16.50 - 5.10 - 0.5 = 10.9$$
+    <div class="tip">此例强调：在 $\text{NH}_3$-$\text{NH}_4\text{Cl}$ 缓冲液中滴定 $\text{Zn}^{2+}$ 时，必须同时考虑 $\alpha_{\text{Zn(NH}_3)}$ 和 $\alpha_{\text{Zn(OH)}}$，不能只考虑 $\alpha_{Y(H)}$。但通常 $\alpha_{\text{Zn(NH}_3)}$ 占主导。</div>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题 (Quiz 2 Q4)：求 $\alpha_{Y(\text{HCN})}$</strong>
+  <p>EDTA 溶液中含有 HCN（$K_a = 6.2 \times 10^{-10}$），HCN 对 Y 有副反应。已知 $[\text{HCN}] = 0.1$ mol/L，pH = 10.0。计算 $\alpha_{Y(\text{CN})}$。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>首先求 $[\text{CN}^-]$ 的浓度：</p>
+    $$[\text{CN}^-] = \frac{K_a \cdot [\text{HCN}]}{[\text{H}^+]} = \frac{6.2\times 10^{-10} \times 0.1}{10^{-10}} = 0.62\;\text{mol/L}$$
+    <p>实际上，pH = 10 时 HCN 基本解离（$K_a / [\text{H}^+] = 6.2$），所以大部分以 $\text{CN}^-$ 形式存在。</p>
+    <p>CN$^-$ 与金属的副反应系数：$\alpha_{M(\text{CN})} = 1 + \beta_1[\text{CN}^-] + \beta_2[\text{CN}^-]^2 + \cdots$</p>
+    <div class="note">这道题考查的是对副反应系数概念的灵活运用。CN$^-$ 作为辅助配位剂，主要影响的是金属离子一侧的副反应（$\alpha_{M(\text{CN})}$），而不是 Y 一侧。审题时要注意区分副反应影响的是 M 还是 Y。</div>
+  </div>
+</div>
+
+<!-- ==================== 6.3 ==================== -->
+<h2>6.3 条件稳定常数</h2>
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p13.png" alt="络合平衡">
+<p class="ppt-caption">PPT: 逐级稳定常数与累积稳定常数</p>
+
+<div class="card">
+  <div class="fb">
+    <div class="t">条件稳定常数的定义</div>
+    $$K'_{MY} = \frac{[\text{MY}]}{[\text{M}'][\text{Y}']} = \frac{K_{MY}}{\alpha_M \cdot \alpha_Y}$$
+    <p>取对数形式：</p>
+    $$\boxed{\lg K'_{MY} = \lg K_{MY} - \lg\alpha_M - \lg\alpha_Y}$$
+    <p>其中 $\lg\alpha_M = \lg\alpha_{M(L)} + \lg\alpha_{M(OH)}$（若两者都显著），$\lg\alpha_Y = \lg\alpha_{Y(H)} + \lg\alpha_{Y(N)}$（通常 $\alpha_{Y(H)}$ 占主导）。</p>
+  </div>
+
+  <div class="tip">条件稳定常数是在<strong>特定实验条件</strong>下（特定 pH、辅助配位体浓度等）的有效稳定常数，它综合反映了各种副反应对配位平衡的影响。</div>
+</div>
+
+<div class="ex">
+  <strong>例题：</strong>在 pH = 5.0 时，$\lg\alpha_{Y(H)} = 6.6$，计算 $\text{Zn}^{2+}$-EDTA 的条件稳定常数（忽略其他副反应）。
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$\lg K_{ZnY} = 16.5$</p>
+    <p>$\lg K'_{ZnY} = \lg K_{ZnY} - \lg\alpha_{Y(H)} = 16.5 - 6.6 = 9.9$</p>
+    <p>条件稳定常数足够大，可以准确滴定。</p>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题：pH = 5 时能否准确滴定 $\text{Pb}^{2+}$？</strong>（$c = 0.01$ mol/L）
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>查表：pH = 5 时，$\lg\alpha_{Y(H)} = 6.6$</p>
+    <p>$\lg K_{\text{PbY}} = 18.0$</p>
+    <p>$\lg K'_{\text{PbY}} = 18.0 - 6.6 = 11.4$</p>
+    <p>判据：$\lg c_{sp} K'_{\text{PbY}} = \lg(0.01) + 11.4 = -2 + 11.4 = 9.4$</p>
+    <p>$9.4 \geq 6$ ，满足准确滴定条件。</p>
+    <div class="tip">pH = 5 时可以准确滴定 $\text{Pb}^{2+}$，且突跃较大（$\lg cK' = 9.4$），终点敏锐。</div>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题：pH = 2 时能否准确滴定 $\text{Zn}^{2+}$？</strong>（$c = 0.01$ mol/L）
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>查表：pH = 2 时，$\lg\alpha_{Y(H)} = 13.5$</p>
+    <p>$\lg K_{\text{ZnY}} = 16.5$</p>
+    <p>$\lg K'_{\text{ZnY}} = 16.5 - 13.5 = 3.0$</p>
+    <p>判据：$\lg c_{sp} K'_{\text{ZnY}} = -2 + 3.0 = 1.0$</p>
+    <p>$1.0 < 6$，<strong>不能</strong>准确滴定。</p>
+    <div class="warn">pH 过低时，EDTA 被大量质子化，有效配位能力极差。$\text{Zn}^{2+}$ 的 $\lg K$ 不够大，无法在 pH = 2 下滴定。需要将 pH 提高到至少 4~5 才可以。</div>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题：求 $\text{Zn}^{2+}$ 可被准确滴定的最低 pH</strong>（$c = 0.02$ mol/L）
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>由 $\lg c_{sp}K'_{MY} \geq 6$ 得：</p>
+    $$\lg K_{MY} - \lg\alpha_{Y(H)} + \lg c \geq 6$$
+    $$\lg\alpha_{Y(H)} \leq \lg K_{MY} + \lg c - 6 = 16.5 + \lg(0.02) - 6 = 16.5 - 1.7 - 6 = 8.8$$
+    <p>查表：$\lg\alpha_{Y(H)} = 8.8$ 对应 pH 约在 3.5 ~ 4 之间。</p>
+    <p>因此 $\text{Zn}^{2+}$ 的最低滴定 pH 约为 3.5 ~ 4。</p>
+  </div>
+</div>
+
+<!-- ==================== 6.4 ==================== -->
+<h2>6.4 配位滴定曲线</h2>
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p43.png" alt="EDTA滴定曲线">
+<p class="ppt-caption">PPT: EDTA配位滴定曲线</p>
+
+<div class="card">
+  <p>配位滴定曲线以 $pM'$（$pM' = -\lg[\text{M}']$）为纵轴，滴定剂加入体积（或滴定百分数）为横轴。</p>
+
+  <h3>滴定曲线的关键点</h3>
+  <ul>
+    <li><strong>化学计量点：</strong>
+      $$\boxed{pM'_{sp} = \frac{1}{2}(\lg K'_{MY} + pc_{sp})}$$
+      其中 $pc_{sp} = -\lg c_{sp}$，$c_{sp}$ 为化学计量点时 MY 的浓度。
+    </li>
+    <li><strong>滴定突跃</strong>：$\lg c_{sp} K'_{MY}$ 越大，突跃越大。</li>
+    <li><strong>化学计量点前</strong>（如 50%）：$pM' = -\lg\frac{c_M}{2}$（简单稀释计算）</li>
+    <li><strong>化学计量点后</strong>（如 200%）：根据过量 Y 的浓度计算</li>
+  </ul>
+
+  <div class="fb">
+    <div class="t">突跃范围 $\Delta pM'$ 的估算公式</div>
+    <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p50.png" alt="突跃范围">
+    <p class="ppt-caption">PPT: 滴定曲线与突跃范围</p>
+    <p>突跃范围（化学计量点前后 $\pm 0.1\%$ 所对应的 $pM'$ 变化）的近似公式：</p>
+    $$\Delta pM' = (-\lg c_{sp,M} + 3) - (\lg K'_{MY} - 3)$$
+    <p>即突跃下限 $pM'_{99.9\%} \approx -\lg c_{sp,M} + 3 = pc_{sp} + 3$，突跃上限 $pM'_{100.1\%} \approx \lg K'_{MY} - 3$。</p>
+  </div>
+
+  <h3>影响突跃大小的因素</h3>
+  <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p51.png" alt="影响突跃因素">
+  <p class="ppt-caption">PPT: 影响pM突跃的主要因素</p>
+  <ul>
+    <li><strong>$K'_{MY}$ 越大</strong>，突跃越大（$K'$ 增大 10 倍，$pM'$ 突跃增大约 1 个单位）</li>
+    <li><strong>浓度 $c$ 越大</strong>，突跃前半段（化学计量点前）$pM'$ 起始值越小，突跃越大</li>
+    <li><strong>化学计量点后的突跃</strong>还与酸度有关：$pM'_{后} = \lg K_{MY} - \lg\alpha_{Y(H)}$ 左右</li>
+  </ul>
+
+  <h3>滴定曲线各段计算公式</h3>
+  <div class="fb">
+    <div class="t">化学计量点前（滴定分数 $\phi < 1$）</div>
+    <p>此时金属离子过量，溶液中 M' 浓度由未反应的金属离子决定：</p>
+    $$[\text{M}'] = c_M \cdot \frac{1-\phi}{1+\phi/(V_0/V_0)} \approx c_M(1-\phi) \cdot \frac{V_0}{V_0+V}$$
+    <p>当 $\phi = 0.5$（即加入一半 EDTA）时，约一半金属被配位：$[\text{M}'] \approx c_M / 2$（稀释因子近似忽略或精确考虑）。</p>
+  </div>
+  <div class="fb">
+    <div class="t">化学计量点后（滴定分数 $\phi > 1$）</div>
+    <p>此时 EDTA 过量：</p>
+    $$[\text{Y}'] = c_{EDTA} \cdot \frac{(\phi - 1)V_{eq}}{V_0 + V}$$
+    $$[\text{M}'] = \frac{[\text{MY}]}{K'_{MY} \cdot [\text{Y}']}$$
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题：</strong>用 0.020 mol/L EDTA 滴定 20.00 mL 0.020 mol/L $\text{Zn}^{2+}$，pH = 5.0，$\lg K'_{ZnY} = 10.05$，求化学计量点的 $pZn'$。
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$c_{sp} = \frac{0.020 \times 20.00}{40.00} = 0.010\;\text{mol/L}$，故 $pc_{sp} = 2.00$</p>
+    <p>$pZn'_{sp} = \frac{1}{2}(10.05 + 2.00) = 6.03$</p>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>例题：接上题，计算滴定 50%、99.9%、100.1%、200% 时的 $pZn'$</strong>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p><strong>50% 处 ($\phi = 0.5$)：</strong></p>
+    <p>$[\text{Zn}'] = \frac{0.020 \times 20.00 - 0.020 \times 10.00}{30.00} = \frac{0.200}{30.00} = 6.67 \times 10^{-3}$</p>
+    <p>$pZn' = -\lg(6.67 \times 10^{-3}) = 2.18$</p>
+
+    <p><strong>99.9% 处 ($\phi = 0.999$)：</strong></p>
+    <p>$[\text{Zn}'] = \frac{0.020 \times (1-0.999) \times 20.00}{39.98} = \frac{0.020 \times 0.001 \times 20.00}{39.98} = 1.0 \times 10^{-5}$</p>
+    <p>$pZn' = 5.0$</p>
+
+    <p><strong>100.1% 处 ($\phi = 1.001$)：</strong></p>
+    <p>$[\text{Y}'] = \frac{0.020 \times 0.001 \times 20.00}{40.02} = 1.0 \times 10^{-5}$</p>
+    <p>$[\text{Zn}'] = \frac{c_{sp}}{K'_{ZnY} \cdot [\text{Y}']} = \frac{0.010}{10^{10.05} \times 10^{-5}} = \frac{0.010}{10^{5.05}} = 10^{-7.05}$</p>
+    <p>$pZn' = 7.05$</p>
+
+    <p><strong>200% 处 ($\phi = 2$)：</strong></p>
+    <p>$[\text{Y}'] = \frac{0.020 \times 20.00}{60.00} = 6.67 \times 10^{-3}$</p>
+    <p>$[\text{Zn}'] = \frac{0.010}{10^{10.05} \times 6.67 \times 10^{-3}} = \frac{0.010}{10^{7.87}} = 10^{-9.87}$</p>
+    <p>$pZn' = 9.87$</p>
+
+    <p><strong>滴定突跃范围：</strong>$pZn' = 5.0 \sim 7.1$（99.9% ~ 100.1%），突跃 $\Delta pZn' \approx 2.1$。</p>
+  </div>
+</div>
+
+<!-- ==================== 6.5 ==================== -->
+<h2>6.5 金属指示剂</h2>
+<img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p48.png" alt="金属指示剂">
+<p class="ppt-caption">PPT: 金属指示剂的作用原理</p>
+
+<div class="card">
+  <h3>原理</h3>
+  <p>金属指示剂（In）本身是一种有机配位剂，在游离态（$\text{In}$）和与金属配合态（$\text{MIn}$）颜色不同。</p>
+  <p>滴定终点：$\text{MIn} + \text{Y} \rightarrow \text{MY} + \text{In}$（颜色由 MIn 的颜色变为 In 的颜色）。</p>
+
+  <h3>EBT（铬黑 T）与 $\text{Mg}^{2+}$ 的变色机理</h3>
+  <div class="fb">
+    <div class="t">详细变色过程</div>
+    <p>EBT 是一种偶氮染料，含有酚羟基和偶氮基作为配位基团。在 pH 8~11 范围内：</p>
+    <ul>
+      <li>游离态 $\text{In}^{3-}$（$\text{HIn}^{2-}$）呈<strong>蓝色</strong></li>
+      <li>与 $\text{Mg}^{2+}$ 配位形成 $\text{MgIn}^-$ 呈<strong>紫红（酒红）色</strong></li>
+    </ul>
+    <p>滴定过程：</p>
+    <ol>
+      <li><strong>滴定前：</strong>溶液含 $\text{Mg}^{2+}$，加入少量 EBT，部分 $\text{Mg}^{2+}$ 与 EBT 结合为 $\text{MgIn}^-$（紫红色），溶液呈紫红色。</li>
+      <li><strong>滴定中：</strong>EDTA 优先与游离 $\text{Mg}^{2+}$ 反应（因为 $K_{\text{MgY}} \gg K_{\text{MgIn}}$），溶液仍为紫红色。</li>
+      <li><strong>化学计量点附近：</strong>游离 $\text{Mg}^{2+}$ 基本耗尽，EDTA 开始夺取 $\text{MgIn}^-$ 中的 $\text{Mg}^{2+}$：</li>
+    </ol>
+    $$\text{MgIn}^-(\text{紫红}) + \text{Y}^{4-} \rightarrow \text{MgY}^{2-} + \text{In}^{3-}(\text{蓝})$$
+    <p>溶液从紫红色变为<strong>纯蓝色</strong>，即为终点。</p>
+  </div>
+
+  <h3>常用金属指示剂</h3>
+  <table>
+    <tr><th>指示剂</th><th>缩写</th><th>适用 pH</th><th>颜色变化（M-In &rarr; In）</th><th>常测金属</th></tr>
+    <tr><td>铬黑 T</td><td>EBT</td><td>8~11</td><td>紫红 &rarr; 蓝</td><td>Ca, Mg, Zn</td></tr>
+    <tr><td>二甲酚橙</td><td>XO</td><td>< 6.3</td><td>紫红 &rarr; 黄</td><td>Bi, Pb, Zn, Fe</td></tr>
+    <tr><td>PAN</td><td>PAN</td><td>2~12</td><td>红 &rarr; 黄绿</td><td>Cu, Ni, Zn</td></tr>
+    <tr><td>钙指示剂</td><td>NN</td><td>12~13</td><td>酒红 &rarr; 蓝</td><td>Ca</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>指示剂变色点 $pM_t$ 的计算</h3>
+  <div class="fb">
+    <div class="t">$pM_t$ 的理论公式</div>
+    <p>指示剂的变色点定义为 $[\text{MIn}] = [\text{In}']$ 时对应的 $pM'$ 值：</p>
+    $$\boxed{pM_t = \lg K_{\text{MIn}} - \lg\alpha_{\text{In}(H)}}$$
+    <p>其中 $K_{\text{MIn}}$ 是金属-指示剂配合物的稳定常数，$\alpha_{\text{In}(H)}$ 是指示剂的酸效应系数。</p>
+    <p>当 $[\text{MIn}] / [\text{In}'] = 1$ 时，恰好是颜色转变的中间点。实际观察到的变色范围为 $pM_t \pm 1$。</p>
+  </div>
+
+  <div class="tip"><strong>指示剂选择原则：</strong>选择 $pM_t$ 落在滴定突跃范围内的指示剂，且 $pM_t$ 尽量接近 $pM'_{sp}$。若 $pM_t$ 偏离 $pM'_{sp}$ 太多，终点误差会增大。</div>
+</div>
+
+<div class="ex">
+  <strong>例题：EBT 指示剂测定 $\text{Zn}^{2+}$，pH = 10 时的 $pM_t$</strong>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>已知：$\lg K_{\text{ZnIn}} = 12.9$（EBT 与 Zn 的稳定常数），pH = 10 时 $\lg\alpha_{\text{In}(H)} = 5.0$。</p>
+    $$pM_t = \lg K_{\text{ZnIn}} - \lg\alpha_{\text{In}(H)} = 12.9 - 5.0 = 7.9$$
+    <p>而 pH = 10 时，$\lg\alpha_{Y(H)} = 0.5$，$\lg K'_{\text{ZnY}} = 16.5 - 0.5 = 16.0$</p>
+    <p>若 $c = 0.01$ mol/L，$pZn'_{sp} = \frac{1}{2}(16.0 + 2.0) = 9.0$</p>
+    <p>$pM_t = 7.9$ 落在突跃范围内，EBT 可以用于指示 $\text{Zn}^{2+}$ 的滴定终点。</p>
+    <p>但 $pM_t (7.9) < pM'_{sp} (9.0)$，终点偏早，滴定结果略偏低。</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3>指示剂使用中的问题</h3>
+
+  <div class="warn"><strong>封闭现象（僵化）：</strong>某些金属（如 $\text{Al}^{3+}$, $\text{Fe}^{3+}$, $\text{Ni}^{2+}$, $\text{Co}^{2+}$）与指示剂形成的配合物过于稳定（$K_{MIn} \gg K_{MY}$），EDTA 无法将其从 MIn 中夺取，导致终点变色不灵敏甚至不变色。<br><strong>解决</strong>：加入掩蔽剂除去干扰离子，或选用其他指示剂。</div>
+
+  <div class="warn"><strong>僵化现象：</strong>MIn 配合物与 EDTA 的置换反应速度太慢，导致终点拖后。<br><strong>解决</strong>：加热滴定或加入有机溶剂。</div>
+
+  <div class="tip"><strong>指示剂选择原则：</strong>$pM'_t$（指示剂变色点对应的 pM'）应尽量接近 $pM'_{sp}$（化学计量点），即 $pM'_t \approx pM'_{sp}$，且落在滴定突跃范围内。</div>
+</div>
+
+
+<script src="toc.js"></script>
+<script src="auth.js"></script>
+<script src="progress.js"></script>
+</body></html>
