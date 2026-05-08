@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" viewBox="0 0 1550 1250" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="c" x1="696.9" x2="696.9" y1="339.5" y2="412.1" gradientTransform="matrix(1.2892 0 0 1.3024 -75.438 -246.33)" gradientUnits="userSpaceOnUse"><stop stop-color="#e085ff" offset="0"/><stop stop-color="#e085ff" stop-opacity="0" offset="1"/></linearGradient>
+<linearGradient id="d" x1="686.9" x2="686.9" y1="704.8" y2="566.4" gradientTransform="matrix(1.2892 0 0 .624 -74.976 220.88)" gradientUnits="userSpaceOnUse"><stop stop-color="#ffb329" offset="0"/><stop stop-color="#ffb129" stop-opacity="0" offset="1"/></linearGradient>
+</defs>
+<g transform="translate(27.928 159.6)"><path fill="#f4f0d7" d="M-28-159.6h1550v1250H-28z"/><path fill="#fff" stroke="#000" stroke-width="5.3" d="M261.8-93.4h1190.4V857H261.8z"/><path d="M264.3 302.6H490v246H264.3z" fill="none"/><path d="M264.3 311.6H507v210H264.3z" fill="none"/>
+<g><text font-family="Liberation Sans" x="0" y="1027.8" font-size="68">Volume of NaOH added in aqueous solution（mL）</text>
+<g font-family="Liberation Serif"><text transform="scale(1.041 .9606)" x="155.9" y="206.4"><tspan x="155.9" y="206.4" font-size="80">10</tspan></text><text x="192.7" y="402.6" ><tspan x="192.7" y="402.6" font-size="80">7</tspan></text><text x="191.2" y="601.8"><tspan x="191.2" y="601.8" font-size="80">4</tspan></text><text x="200.7" y="892"><tspan x="200.7" y="892" font-size="80">0</tspan></text><text x="821.7" y="932.8"><tspan x="821.7" y="932.8" font-family="Liberation Serif" font-size="80">10</tspan></text><text transform="scale(1.041 .9606)" x="30.6" y="362"><tspan x="30.6" y="362" font-size="90">pH</tspan></text></g></g>
+<path fill="url(#c)" d="M261 196h1194v94.5H261z"/>
+<text x="1390.2" y="934.8" fill="#000" font-family="Liberation Serif"><tspan x="1390.2" y="934.8" font-family="Liberation Serif" font-size="80">20</tspan></text>
+<path fill="url(#d)" d="M261.3 574.3h1190.5v86.4H261.3z"/>
+<g fill="none"><path d="M261.2 660.8h1192.6" stroke="#ffb32b" stroke-width="6"/>
+<path d="M261 193h1191" stroke="#b600f1" stroke-width="6"/>
+<g stroke="#000"><path d="M857 857V-93.3" stroke-dasharray="14.2,7.1" stroke-width="3.5"/><path d="M1361.6 732.6l-20.7-99" stroke-width="3.5"/><path d="M261 791.8h29m-29.6-69.3h29M260 653h29m-29.7-69h29M260 514.5h29m-28.6-69.3h29M261 376h29m-29-63h29m-29-69h29m-29-68.8h29m-29.6 69.5h29M261 175.4h29M261.3 106h29m-29-63h29m-29-68.8h29m-29-68.8h29" stroke-width="2.7"/></g>
+</g>
+<text transform="scale(1.041 .9606)" x="151.5" y="-74.5" fill="#000" font-family="Liberation Serif"><tspan x="151.5" y="-74.5" font-size="80">14</tspan></text>
+<path fill="#fff" d="M322-19.7h697.3v154H322z"/>
+<text x="323.2" y="-106.9" fill="#000" font-family="Liberation Serif" font-size="60"><tspan x="323.2" y="50.8">phenolphthalein</tspan><tspan x="323.2" y="123.9">Discoloration area</tspan></text>
+<path fill="#fff" d="M361.4 719.3h675.3v98H361.3z"/>
+<text x="700" y="780" fill="#000" font-family="Liberation Serif" font-size="60">Methyl orange change in color</text>
+<g fill="none"><path d="M386.8 236l-17-100.4m-108-229V857m1190.4 0V-93.3" stroke="#000" stroke-width="3.5"/><path d="M1452.2 1.8c-87 0-208 7.3-304.4 24.3-65.2 7-142.5 26-201 55-55.8 28-88.5 35-89.8 105 .8 90-.8 158-3.2 232-9 74-89.6 75-151.3 97-78.5 28-239.2 45-336.3 75-72.2 23-93 54-104.4 99" stroke="navy" stroke-width="7.1"/><path d="M290 376h1160.4" stroke="#000" stroke-dasharray="14.2,7.1" stroke-width="3.5"/></g>
+<text x="950" y="370" font-family="Liberation Sans" font-size="60">equivalence point</text>
+<path d="M856 274l98 64" fill="none" stroke="#000" stroke-width="3.5"/>
+<circle cx="855.4" cy="277.9" r="13.8" fill="#13136d"/>
+</g>
+</svg>
