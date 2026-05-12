@@ -65,6 +65,8 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 <!-- ==================== 1. 酸碱指示剂 ==================== -->
 <h2>一、酸碱指示剂</h2>
 <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p2.png" alt="酸碱指示剂">
+<img class="ppt-img" loading="lazy" src="img/ch5_indicator_principle.png" alt="指示剂HIn平衡">
+<p class="ppt-caption">PPT：指示剂 HIn ⇌ H⁺ + In⁻ 平衡原理</p>
 <p class="ppt-caption">PPT: 酸碱指示剂原理</p>
 
 <h3>1.1 指示剂变色原理</h3>
@@ -130,8 +132,14 @@ $$\text{pH} = pK_{\text{HIn}} \pm 1$$
 <h2>二、强酸-强碱滴定曲线</h2>
 <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p15.png" alt="酸碱滴定曲线">
 <p class="ppt-caption">PPT: 酸碱滴定曲线和指示剂的选择</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_strong_curve_calc.png" alt="强酸强碱各段pH计算">
+<p class="ppt-caption">PPT：滴定曲线各段 pH 计算方法（滴定分数 f 法）</p>
 <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p22.png" alt="强酸滴定强碱">
 <p class="ppt-caption">PPT: 强酸-强碱滴定曲线</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_strong_curve_all.png" alt="强酸强碱完整计算">
+<p class="ppt-caption">PPT：强酸-强碱滴定完整计算过程</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_strong_curve_graph.png" alt="不同浓度突跃对比">
+<p class="ppt-caption">PPT：不同浓度下强酸-强碱滴定突跃对比（c 越大突跃越大）</p>
 
 <h3>2.1 以 NaOH 滴定 HCl 为例（完整计算）</h3>
 <div class="card">
@@ -201,7 +209,25 @@ $$\text{pH} = pK_{\text{HIn}} \pm 1$$
 </div>
 
 <!-- ==================== 3. 强碱滴定弱酸 ==================== -->
+<div class="ex">
+<strong>例题：强酸-强碱终点误差计算</strong>
+<div class="sol">
+<div class="st">解：</div>
+用 0.1000 mol/L NaOH 滴定 20.00 mL 0.1000 mol/L HCl，以甲基橙为指示剂（终点 pH=4.0）<br>
+$c_{sp} = 0.1000 \times 20.00/(20.00+20.00) = 0.0500$ mol/L<br>
+化学计量点 pH = 7.00，终点 pH = 4.0<br>
+$$E_t = \frac{[\text{H}^+]_{ep} - [\text{OH}^-]_{ep}}{c_{sp}} \times 100\%$$
+$[\text{H}^+]_{ep} = 10^{-4.0} = 1.0\times10^{-4}$，$[\text{OH}^-]_{ep} = 10^{-10.0} = 1.0\times10^{-10}$<br>
+$$E_t = \frac{1.0\times10^{-4} - 1.0\times10^{-10}}{0.0500}\times100\% = -0.20\%$$
+<strong>负值表示欠滴定（甲基橙终点偏酸→少加了NaOH）</strong>。$|E_t| = 0.20\%$，略超0.1%。
+</div>
+</div>
+
 <h2>三、强碱滴定弱酸</h2>
+<img class="ppt-img" loading="lazy" src="img/ch5_weak_curve_stages.png" alt="弱酸滴定四阶段">
+<p class="ppt-caption">PPT：强碱滴定弱酸四个阶段的计算方法</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_weak_curve_compare.png" alt="不同pKa弱酸曲线对比">
+<p class="ppt-caption">PPT：不同 pK<sub>a</sub> 弱酸滴定曲线对比</p>
 
 <div class="card">
 <p style="text-align:center;font-weight:bold;color:var(--pri);margin-bottom:6px;">NaOH 滴定 CH₃COOH 的 pH 曲线</p>
@@ -457,6 +483,12 @@ $cK_a = 0.1 \times 5.8\times10^{-10} = 5.8\times10^{-11} < 10^{-8}$<br>
 <h2>五、多元酸的滴定</h2>
 <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p56.png" alt="多元酸滴定">
 <p class="ppt-caption">PPT: 多元酸分步滴定的判据</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_polyprotic_judge.png" alt="分步滴定判据">
+<p class="ppt-caption">PPT：多元酸分步滴定可行性判据详解</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_H3PO4_curve.png" alt="H3PO4滴定曲线">
+<p class="ppt-caption">PPT：H₃PO₄ 被 NaOH 滴定的完整曲线（两个突跃）</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_H3PO4_calc.png" alt="H3PO4各计量点pH">
+<p class="ppt-caption">PPT：H₃PO₄ 各计量点 pH 计算</p>
 
 <div class="card">
 <p style="text-align:center;font-weight:bold;color:var(--pri);margin-bottom:6px;">二元酸滴定曲线示例</p>
@@ -556,7 +588,19 @@ $$n(\text{Na}_2\text{HPO}_4)_{\text{原有}} = c_{\text{HCl}} \cdot V_2 - c_{\te
 
 <!-- ==================== 6. 终点误差 ==================== -->
 <h2>六、终点误差</h2>
+<img class="ppt-img" loading="lazy" src="img/ch5_Et_definition.png" alt="终点误差定义">
+<p class="ppt-caption">PPT：终点误差的精确定义</p>
 <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5b_p44.png" alt="终点误差">
+<img class="ppt-img" loading="lazy" src="img/ch5_Et_strong_derive.png" alt="强酸强碱Et推导">
+<p class="ppt-caption">PPT：强酸-强碱终点误差推导</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_Et_weak_derive.png" alt="弱酸Et推导">
+<p class="ppt-caption">PPT：弱酸-强碱终点误差（林邦公式）完整推导</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_Et_graph.png" alt="Et图">
+<p class="ppt-caption">PPT：终点误差图——lg(cK<sub>t</sub>) vs E<sub>t</sub>（不同ΔpH的曲线）</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_Et_usage.png" alt="Et应用">
+<p class="ppt-caption">PPT：终点误差的应用——计算突跃范围</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_Et_complete.png" alt="Et总结">
+<p class="ppt-caption">PPT：终点误差计算要点总结</p>
 <p class="ppt-caption">PPT: 滴定终点误差计算</p>
 
 <div class="warn">终点误差是考试重点！务必掌握强酸-强碱和弱酸-强碱两种情况的公式。</div>
