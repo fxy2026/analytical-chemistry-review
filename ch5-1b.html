@@ -66,6 +66,8 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 <h2>六、pH 计算公式体系</h2>
 <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5a_p41.png" alt="pH计算">
 <p class="ppt-caption">PPT: 各类酸碱溶液pH计算公式汇总</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_calc_flowchart.png" alt="pH计算流程">
+<p class="ppt-caption">PPT：pH 计算的代数法思路（精确式→近似→最简）</p>
 
 <div class="warn">本节是整章的核心！所有公式和判据条件都需要熟记。考试中约30%-40%的计算题出自此节。</div>
 
@@ -76,6 +78,8 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 </div>
 
 <h3>6.1 强酸/强碱</h3>
+<img class="ppt-img" loading="lazy" src="img/ch5_strong_acid_formula.png" alt="强酸精确式">
+<p class="ppt-caption">PPT：强酸 pH 精确式推导（从PBE出发）</p>
 <div class="card">
 <p><strong>强酸：</strong>$c \geq 10^{-6}$ mol/L 时，$[\text{H}^+] = c$，$\text{pH} = -\lg c$</p>
 <p><strong>强碱：</strong>$c \geq 10^{-6}$ mol/L 时，$[\text{OH}^-] = c$，$\text{pOH} = -\lg c$，$\text{pH} = 14 + \lg c$</p>
@@ -102,6 +106,14 @@ $$\text{pOH} = 2.00 \quad \Rightarrow \quad \text{pH} = 14.00 - 2.00 = 12.00$$
 </div>
 
 <h3>6.2 一元弱酸 HA</h3>
+<img class="ppt-img" loading="lazy" src="img/ch5_weak_acid_precise.png" alt="弱酸精确式">
+<p class="ppt-caption">PPT：弱酸精确式（从PBE推导）</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_weak_acid_derive.png" alt="近似处理">
+<p class="ppt-caption">PPT：近似处理——忽略 K<sub>w</sub> 项</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_weak_acid_simplest.png" alt="最简式条件">
+<p class="ppt-caption">PPT：最简式——条件 c/K<sub>a</sub> ≥ 400</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_weak_acid_Kw.png" alt="含Kw式">
+<p class="ppt-caption">PPT：考虑水解离的近似式（极弱酸/极稀时用）</p>
 <div class="fb">
 <div class="t">精确公式（由PBE推导）</div>
 $$[\text{H}^+] = \sqrt{K_a(c - [\text{H}^+] + [\text{OH}^-]) + K_w}$$
@@ -133,7 +145,14 @@ $$[\text{H}^+]^2 + K_a[\text{H}^+] - (K_ac + K_w) = 0$$
 当 $c = 1.0$ mol/L 时，$-\lg c = 0$，所以 $\text{pH} = \frac{1}{2}pK_a$。
 </div>
 
+<img class="ppt-img" loading="lazy" src="img/ch5_HCN_example.png" alt="HCN例题">
+<p class="ppt-caption">PPT例题：HCN（极弱酸，需考虑 K<sub>w</sub>）</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_HF_example.png" alt="HF例题">
+<p class="ppt-caption">PPT例题：0.010 mol/L HF（不能用最简式！c/K<sub>a</sub>=15&lt;400）</p>
+
 <h3>6.3 一元弱碱 B</h3>
+<img class="ppt-img" loading="lazy" src="img/ch5_weak_base_formulas.png" alt="弱碱三公式">
+<p class="ppt-caption">PPT：弱碱三级公式（将 [H⁺]→[OH⁻]，K<sub>a</sub>→K<sub>b</sub>）</p>
 <div class="card">
 <p>将弱酸公式中的 $[\text{H}^+]$ 换为 $[\text{OH}^-]$，$K_a$ 换为 $K_b$：</p>
 <p><strong>最简公式</strong>（$cK_b \geq 20K_w$ 且 $c/K_b \geq 400$）：</p>
@@ -168,6 +187,14 @@ $$\text{pOH} = pK_b + \lg\frac{c(\text{BH}^+)}{c(\text{B})} = pK_b + \lg\frac{c_
 </div>
 
 <h3>6.5 两性物质</h3>
+<img class="ppt-img" loading="lazy" src="img/ch5_amphoteric_precise.png" alt="两性物质精确式">
+<p class="ppt-caption">PPT：两性物质（酸式盐 NaHA）精确式推导</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_amphoteric_approx.png" alt="两性物质近似式">
+<p class="ppt-caption">PPT：两性物质近似式</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_amphoteric_simplest.png" alt="两性物质最简式">
+<p class="ppt-caption">PPT：两性物质最简式及其严格使用条件</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_NaHCO3_example.png" alt="NaHCO3例题">
+<p class="ppt-caption">PPT例题：0.010 mol/L NaHCO₃ 的 pH 计算</p>
 <div class="fb">
 <div class="t">两性物质 $\text{HA}^-$（如 $\text{NaHCO}_3$、$\text{NaH}_2\text{PO}_4$）</div>
 <p>精确公式：</p>
@@ -246,6 +273,12 @@ $$[\text{HCO}_3^-] \approx [\text{OH}^-]$$
 </div>
 
 <h3>6.7 多元酸</h3>
+<img class="ppt-img" loading="lazy" src="img/ch5_polyprotic_precise.png" alt="多元酸精确式">
+<p class="ppt-caption">PPT：二元弱酸精确式（从PBE推导）</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_polyprotic_simplest.png" alt="多元酸最简式">
+<p class="ppt-caption">PPT：多元酸按一元处理的条件（K<sub>a1</sub>/K<sub>a2</sub>≥500）</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_polyprotic_example.png" alt="草酸例题">
+<p class="ppt-caption">PPT例题：H₂C₂O₄（草酸）——不能用最简式的经典陷阱</p>
 <div class="fb">
 <div class="t">多元酸 pH 计算的精确与简化公式（PPT p83-p86）</div>
 <p>以二元弱酸 $\text{H}_2\text{A}$ 为例，由 PBE 推导可得精确公式：</p>
@@ -342,6 +375,12 @@ $$[\text{H}^+] = 10^{-\text{pH}} = 10^{-11.01} = 10^{-11} \times 10^{-0.01} = 10
 <h2>七、缓冲溶液</h2>
 <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch5a_p81.png" alt="缓冲溶液">
 <p class="ppt-caption">PPT: 缓冲溶液的pH计算</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_buffer_Henderson.png" alt="Henderson方程">
+<p class="ppt-caption">PPT：Henderson-Hasselbalch 方程推导</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_buffer_capacity.png" alt="缓冲容量">
+<p class="ppt-caption">PPT：缓冲容量 β 的定义与公式（β<sub>max</sub>=0.576c）</p>
+<img class="ppt-img" loading="lazy" src="img/ch5_buffer_example2.png" alt="缓冲液计算例">
+<p class="ppt-caption">PPT：缓冲液 pH 计算示例</p>
 
 <div class="card" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;align-items:start;">
   <div style="flex:1;min-width:240px;max-width:280px;">

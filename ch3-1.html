@@ -655,6 +655,73 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 </div>
 
 
+<h2>补充练习题</h2>
+
+<div class="ex">
+<strong>练习1：有效数字运算</strong><br>
+计算 $\frac{0.0121 \times 25.00 \times 1.057}{0.5000}$，保留正确有效数字。
+<div class="sol">
+<div class="st">解：</div>
+乘除法按最少有效数字位数：0.0121(3位)、25.00(4位)、1.057(4位)、0.5000(4位)<br>
+结果保留<strong>3位</strong>有效数字。<br>
+$= 0.0121 \times 25.00 \times 1.057 / 0.5000 = 0.6394... \approx \boxed{0.639}$
+</div>
+</div>
+
+<div class="ex">
+<strong>练习2：正态分布概率</strong><br>
+某方法测定 Cl⁻ 含量，$\mu=35.21\%$，$\sigma=0.08\%$。求单次测定值落在 35.10%~35.30% 范围内的概率。
+<div class="sol">
+<div class="st">解：</div>
+$u_1 = (35.10-35.21)/0.08 = -1.375$<br>
+$u_2 = (35.30-35.21)/0.08 = +1.125$<br>
+$P = P(-1.375 < u < 1.125) = P(0\sim1.375) + P(0\sim1.125)$<br>
+查正态分布表：$\approx 0.4154 + 0.3697 = 0.7851$<br>
+<strong>约 78.5%</strong>
+</div>
+</div>
+
+<div class="ex">
+<strong>练习3：置信区间与测定次数</strong><br>
+某分析方法 $s=0.10\%$，要求 95% 置信区间半宽度不超过 0.05%。至少需要测定几次？
+<div class="sol">
+<div class="st">解：</div>
+要求：$t_{0.05,f} \cdot s/\sqrt{n} \leq 0.05$<br>
+即 $t_{0.05,f}/\sqrt{n} \leq 0.05/0.10 = 0.5$<br>
+逐级试算：<br>
+$n=4$: $t_{0.05,3}/\sqrt{4} = 3.182/2 = 1.59 > 0.5$ ✗<br>
+$n=10$: $t_{0.05,9}/\sqrt{10} = 2.262/3.162 = 0.715 > 0.5$ ✗<br>
+$n=20$: $t_{0.05,19}/\sqrt{20} = 2.093/4.472 = 0.468 < 0.5$ ✓<br>
+<strong>至少需要 20 次测定。</strong>
+</div>
+</div>
+
+<div class="ex">
+<strong>练习4：误差来源判断</strong><br>
+判断以下各项属于系统误差还是随机误差：<br>
+(a) 分析天平零点漂移 (b) 滴定管读数的最后一位估读不准 (c) 蒸馏水含微量杂质 (d) 操作者对颜色变化的个人判断偏差 (e) 天气变化引起的温度波动
+<div class="sol">
+<div class="st">解：</div>
+(a) <strong>系统误差</strong>（仪器误差，单方向偏移）<br>
+(b) <strong>随机误差</strong>（时高时低，服从正态分布）<br>
+(c) <strong>系统误差</strong>（试剂误差，恒正偏）<br>
+(d) <strong>系统误差</strong>（操作误差，个人恒定偏差）<br>
+(e) <strong>随机误差</strong>（不可控因素，无固定方向）
+</div>
+</div>
+
+<div class="ex">
+<strong>练习5：RSD 计算</strong><br>
+5 次测定值：12.42, 12.38, 12.45, 12.36, 12.44。求 $\bar{x}$、$s$、RSD。
+<div class="sol">
+<div class="st">解：</div>
+$\bar{x} = (12.42+12.38+12.45+12.36+12.44)/5 = 62.05/5 = 12.41$<br>
+$\sum(x_i-\bar{x})^2 = 0.01^2+0.03^2+0.04^2+0.05^2+0.03^2 = 0.0001+0.0009+0.0016+0.0025+0.0009 = 0.0060$<br>
+$s = \sqrt{0.0060/4} = \sqrt{0.0015} = 0.039$<br>
+$\text{RSD} = s/\bar{x} \times 100\% = 0.039/12.41 \times 100\% = \boxed{0.31\%}$
+</div>
+</div>
+
 <script src="katex-lazy.js"></script>
 <script src="toc.js"></script>
 <script src="auth.js"></script>

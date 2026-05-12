@@ -455,6 +455,51 @@ $$c_{\text{H}^+} = \frac{0.1\times20}{40} = 0.05, \quad \text{pH} = 1.30$$
 </ul>
 </div>
 
+<div class="ex">
+<strong>练习1：</strong>计算 0.1000 mol/L NaOH 滴定 20.00 mL 0.1000 mol/L HAc（pK$_a$=4.74）时，滴加 19.98 mL NaOH 后溶液的 pH。
+<div class="sol">
+<div class="st">解：</div>
+滴定分数 $f = 19.98/20.00 = 0.999$（99.9%，接近计量点）<br>
+剩余 HAc：$0.1000\times0.02/39.98 = 5.00\times10^{-5}$ mol/L<br>
+生成 NaAc：$0.1000\times19.98/39.98 \approx 0.0500$ mol/L<br>
+用 Henderson 方程：$\text{pH} = 4.74 + \lg\frac{0.0500}{5.00\times10^{-5}} = 4.74 + 3.00 = \boxed{7.74}$<br>
+这就是突跃下限附近的 pH！
+</div>
+</div>
+
+<div class="ex">
+<strong>练习2：</strong>用 0.1000 mol/L NaOH 滴定 0.1000 mol/L HAc，半当量点（滴加 10.00 mL）时 pH = ?
+<div class="sol">
+<div class="st">解：</div>
+半当量点：HAc 和 NaAc 等量 → 缓冲比 = 1<br>
+$\text{pH} = \text{p}K_a + \lg(1) = \text{p}K_a = \boxed{4.74}$<br>
+<strong>半当量点 pH = pK$_a$</strong>——这是实验测定 pK$_a$ 的经典方法！
+</div>
+</div>
+
+<div class="ex">
+<strong>练习3：</strong>判断以下弱酸能否被 0.1 mol/L NaOH 直接准确滴定？<br>
+(a) 苯甲酸 $K_a=6.3\times10^{-5}$ (b) 苯酚 $K_a=1.0\times10^{-10}$ (c) 水杨酸 $K_a=1.1\times10^{-3}$
+<div class="sol">
+<div class="st">解：</div>
+判据：$cK_a \geq 10^{-8}$<br>
+(a) $0.1\times6.3\times10^{-5} = 6.3\times10^{-6} \geq 10^{-8}$ ✓ <strong>能滴定</strong><br>
+(b) $0.1\times1.0\times10^{-10} = 1.0\times10^{-11} < 10^{-8}$ ✗ <strong>不能滴定</strong><br>
+(c) $0.1\times1.1\times10^{-3} = 1.1\times10^{-4} \geq 10^{-8}$ ✓ <strong>能滴定</strong>
+</div>
+</div>
+
+<div class="ex">
+<strong>练习4：</strong>0.1 mol/L H₃PO₄ 被 NaOH 滴定，第一计量点和第二计量点的 pH 各是多少？能否滴定第三步？<br>
+已知 pK$_{a1}$=2.12，pK$_{a2}$=7.20，pK$_{a3}$=12.36。
+<div class="sol">
+<div class="st">解：</div>
+第一计量点：生成 NaH₂PO₄（两性），pH = $\frac{1}{2}$(pK$_{a1}$+pK$_{a2}$) = $\frac{1}{2}$(2.12+7.20) = <strong>4.66</strong>（选甲基橙/甲基红）<br>
+第二计量点：生成 Na₂HPO₄（两性），pH = $\frac{1}{2}$(pK$_{a2}$+pK$_{a3}$) = $\frac{1}{2}$(7.20+12.36) = <strong>9.78</strong>（选酚酞/百里酚酞）<br>
+第三步：$cK_{a3} = 0.033\times10^{-12.36} = 10^{-13.8} < 10^{-8}$ → <strong>不能滴定第三步！</strong>
+</div>
+</div>
+
 <!-- ==================== 4. 直接滴定判据 ==================== -->
 <h2>四、直接滴定判据</h2>
 
