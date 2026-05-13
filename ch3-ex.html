@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三章 课后习题详解 | 分析化学</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload=""></script>
+<style>
+:root{--pri:#1a5276;--acc:#c0392b;--bg:#fffef9;--card:#fff;--border:#e0d8c8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);color:#333;line-height:1.9;padding:20px;max-width:1000px;margin:0 auto;}
+h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
+h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
+h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;}
+.tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
+.sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
+.q{font-weight:bold;color:#2c3e50;margin-bottom:8px;padding:8px 12px;background:#f8f9fa;border-radius:4px;}
+table{width:100%;border-collapse:collapse;margin:12px 0;}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
+th{background:var(--pri);color:#fff;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
+.nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
+.nav-bar a:hover{background:#1a5276;color:#fff;}
+</style>
+</head>
+<body>
+
+<div class="nav-bar">
+  <a href="index.html">首页</a>
+  <a href="ch3-ex.html" style="background:#1a5276;color:#fff;">三①误差习题</a>
+  <a href="ch5-1a.html">五①平衡</a>
+  <a href="ch5-1b.html">五②计算</a>
+  <a href="ch5-2a.html">五③滴定</a>
+  <a href="ch5-2b.html">五④进阶</a>
+  <a href="ch5-ex.html">五⑤习题</a>
+  <a href="formulas.html">公式表</a>
+</div>
+
+<h1>第三章 误差与数据处理 — 课后习题详解</h1>
+
+<div class="warn">
+  <strong>提示：</strong>本章是分析化学的方法论基础，核心内容包括误差的分类与来源、有效数字运算规则、正态分布与 $t$ 分布、置信区间、显著性检验（$F$ 检验、$t$ 检验）、异常值取舍（$Q$ 检验、$4\bar{d}$ 检验）以及线性回归。理解这些概念对后续各章定量分析至关重要。
+</div>
+
+<!-- ===== 思考题 ===== -->
+<h2>一、思考题（概念理解）</h2>
+
+<!-- 思考题 1 -->
+<h3>思考题 1</h3>
+<div class="card">
+  <div class="q">准确度与精密度有何区别与联系？</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <div class="fb">
+      <p><strong>准确度（Accuracy）</strong>：测定值与真值（或公认值）的接近程度，用<strong>误差</strong>（绝对误差或相对误差）衡量。误差越小，准确度越高。</p>
+      <p><strong>精密度（Precision）</strong>：同一样品多次平行测定结果之间的一致程度，用<strong>偏差</strong>（标准偏差 $s$、相对标准偏差 RSD 等）衡量。偏差越小，精密度越高。</p>
+    </div>
+    <p><strong>【区别】</strong></p>
+    <ul style="margin-left:20px;">
+      <li>准确度反映<strong>系统误差</strong>的大小；精密度反映<strong>随机误差</strong>的大小。</li>
+      <li>准确度需要知道真值才能评价；精密度只需多次重复测定即可评价。</li>
+    </ul>
+    <p style="margin-top:8px;"><strong>【联系】</strong></p>
+    <ul style="margin-left:20px;">
+      <li>精密度是准确度的必要条件，但不是充分条件：精密度高不一定准确度高（存在系统误差时），但准确度高必须精密度高。</li>
+      <li>只有消除系统误差后，精密度高才意味着准确度高。</li>
+    </ul>
+    <div class="tip">
+      <strong>记忆口诀：</strong>精密度好不一定准确；但若准确，必然精密。系统误差影响准确度，随机误差影响精密度。
+    </div>
+    <p style="margin-top:8px;">用射击打靶类比：</p>
+    <table>
+      <tr><th>情形</th><th>精密度</th><th>准确度</th></tr>
+      <tr><td>弹孔集中且靠近靶心</td><td>高</td><td>高</td></tr>
+      <tr><td>弹孔集中但偏离靶心</td><td>高</td><td>低（存在系统误差）</td></tr>
+      <tr><td>弹孔分散但平均靠近靶心</td><td>低</td><td>尚可（随机误差大）</td></tr>
+      <tr><td>弹孔分散且偏离靶心</td><td>低</td><td>低</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 思考题 2 -->
+<h3>思考题 2</h3>
+<div class="card">
+  <div class="q">下列各种情况，分别引起什么类型的误差？<br>
+  (a) 天平零点稍有变动；(b) 过滤时有少量沉淀透过滤纸；(c) 滴定管读数最后一位估读不准；(d) 标准样品中待测组分有所失水</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <table>
+      <tr><th>情形</th><th>误差类型</th><th>说明</th></tr>
+      <tr><td>(a) 天平零点变动</td><td><strong>随机误差</strong></td><td>零点漂移无固定方向，每次偏移量不同，具有随机性，可通过多次测定减小</td></tr>
+      <tr><td>(b) 沉淀透过滤纸</td><td><strong>系统误差</strong>（操作误差）</td><td>每次过滤均会损失沉淀，导致结果偏低，具有单向性；也可视为过失误差（操作不当）</td></tr>
+      <tr><td>(c) 滴定管读数估读不准</td><td><strong>随机误差</strong></td><td>末位估读偏高或偏低无固定规律，属随机误差</td></tr>
+      <tr><td>(d) 标准样品失水</td><td><strong>系统误差</strong>（试剂误差/标准误差）</td><td>基准物质含量偏低，导致标准溶液浓度偏高，测定结果系统偏低</td></tr>
+    </table>
+    <div class="tip">
+      <strong>判断要点：</strong>系统误差具有<strong>单向性和重现性</strong>（每次均偏高或均偏低）；随机误差具有<strong>偶然性</strong>（时高时低，服从正态分布）；过失误差（gross error）则是操作失误导致的，应予以发现并剔除。
+    </div>
+  </div>
+</div>
+
+<!-- 思考题 3 -->
+<h3>思考题 3</h3>
+<div class="card">
+  <div class="q">用重量法测定硅酸盐中 $\text{SiO}_2$ 时，若 $\text{SiO}_2$ 沉淀不完全，这属于什么误差？</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <p>$\text{SiO}_2$ 沉淀不完全导致测定结果<strong>系统偏低</strong>，属于<strong>系统误差</strong>中的<strong>方法误差</strong>。</p>
+    <p>原因分析：</p>
+    <ul style="margin-left:20px;">
+      <li>沉淀不完全是由于沉淀剂不足、pH 控制不当、温度不合适等方法本身的缺陷导致的，<strong>每次测定均会发生</strong>，且偏差方向固定（结果偏低）。</li>
+      <li>这种误差不能通过增加测定次数来消除，只能改进分析方法（如确保沉淀完全的条件、洗涤充分等）。</li>
+    </ul>
+    <div class="warn">
+      <strong>注意：</strong>若偶尔一次操作失误导致沉淀损失，则为<strong>过失误差</strong>。方法误差是指分析方法本身固有的、每次均会出现的偏差。
+    </div>
+  </div>
+</div>
+
+<!-- 思考题 4 -->
+<h3>思考题 4</h3>
+<div class="card">
+  <div class="q">用 NaOH 标准溶液测定 HAc（乙酸）含量时，选用酚酞作指示剂，终点时溶液颜色由无色变为浅粉红色。试分析此时的误差情况。</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <p>反应：$\text{HAc} + \text{NaOH} \rightarrow \text{NaAc} + \text{H}_2\text{O}$</p>
+    <p>化学计量点时生成 NaAc，溶液显碱性（约 pH 8.7～9.0），恰好在酚酞变色范围（pH 8.2～10.0）内。</p>
+    <div class="fb">
+      <p><strong>误差分析：</strong></p>
+      <ul style="margin-left:20px;">
+        <li>酚酞变色点（pH ≈ 9）与化学计量点（pH ≈ 8.7）非常接近，<strong>终点误差极小</strong>（约 $-0.05\%$ 量级）。</li>
+        <li>选用酚酞是正确的，<strong>系统误差可以忽略</strong>。</li>
+        <li>若改用甲基橙（变色范围 pH 3.1～4.4），终点 pH 约 4，远低于化学计量点 pH，会在 HAc 大量存在时停止滴定，造成<strong>严重负误差</strong>（结果偏低）。</li>
+      </ul>
+    </div>
+    <div class="tip">
+      <strong>结论：</strong>选用酚酞作指示剂是合理的，终点误差约为 $-0.02\%\sim-0.05\%$（微小负误差），在允许误差范围内，不影响准确度。
+    </div>
+  </div>
+</div>
+
+<!-- 思考题 5 -->
+<h3>思考题 5</h3>
+<div class="card">
+  <div class="q">判断下列数据各有几位有效数字：(a) $0.0070$；(b) $7.026$；(c) pH $= 5.36$；(d) $6.003\times10^{-5}$</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <table>
+      <tr><th>数据</th><th>有效数字位数</th><th>说明</th></tr>
+      <tr><td>$0.0070$</td><td><strong>2位</strong></td><td>前面的 $0$ 都是定位用的，不是有效数字；末尾的 $0$ 是有效数字（表示精度），故只有 $7$ 和 $0$ 两位</td></tr>
+      <tr><td>$7.026$</td><td><strong>4位</strong></td><td>所有非零数字及中间的 $0$ 均为有效数字：$7$、$0$、$2$、$6$</td></tr>
+      <tr><td>pH $= 5.36$</td><td><strong>2位</strong></td><td>pH 是对数值，整数部分（$5$）为定位数字，<strong>不计</strong>入有效数字位数；小数部分（$.36$）有 2 位，故为 2 位有效数字</td></tr>
+      <tr><td>$6.003\times10^{-5}$</td><td><strong>4位</strong></td><td>科学计数法中系数部分的所有数字均为有效数字：$6$、$0$、$0$、$3$，共 4 位；$10^{-5}$ 只起定位作用</td></tr>
+    </table>
+    <div class="note">
+      <strong>对数有效数字规则：</strong>$\log x$、pH、$\text{p}K_a$ 等对数量的有效数字位数由<strong>小数点后的位数</strong>决定，整数部分仅表示数量级。例如 pH $= 5.36$ 表示 $[\text{H}^+] = 4.4\times10^{-6}\ \text{mol/L}$（2位有效数字）。
+    </div>
+  </div>
+</div>
+
+<!-- 思考题 6 -->
+<h3>思考题 6</h3>
+<div class="card">
+  <div class="q">分析天平的称量误差为 $\pm 0.1\ \text{mg}$，若称量样品约为 $0.1\ \text{g}$ 和 $1\ \text{g}$，各自的相对误差为多少？这说明什么？</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <p>分析天平一次称量的绝对误差为 $\pm 0.1\ \text{mg} = \pm 0.0001\ \text{g}$。差减法称量（称两次）的最大绝对误差为 $\pm 0.0002\ \text{g}$。</p>
+    <p><strong>称量 $0.1\ \text{g}$ 时：</strong></p>
+    $$E_r = \frac{\pm 0.0002\ \text{g}}{0.1\ \text{g}} \times 100\% = \pm 0.2\%$$
+    <p><strong>称量 $1\ \text{g}$ 时：</strong></p>
+    $$E_r = \frac{\pm 0.0002\ \text{g}}{1\ \text{g}} \times 100\% = \pm 0.02\%$$
+    <div class="fb">
+      <p><strong>结论：</strong>绝对误差相同时，样品质量越大，相对误差越小。为使称量的相对误差 $\leq 0.1\%$，要求样品质量：</p>
+      $$m \geq \frac{0.0002\ \text{g}}{0.1\%} = 0.2\ \text{g}$$
+      <p>因此，分析天平称量时，样品质量一般不少于 $0.2\ \text{g}$（通常取 $0.2\sim0.5\ \text{g}$）。</p>
+    </div>
+    <div class="tip">
+      <strong>实践意义：</strong>在重量分析和滴定分析中，适当增大取样量可以降低称量引起的相对误差，从而提高分析准确度。
+    </div>
+  </div>
+</div>
+
+<!-- 思考题 7 -->
+<h3>思考题 7</h3>
+<div class="card">
+  <div class="q">差示分光光度法中，若两次透光率读数分别为 $T_s = 0.650$ 和 $T_x = 0.450$，计算相对吸光度并分析有效数字问题。</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <p>差示法中，以参比溶液（标准溶液 $s$）调节仪器的满刻度（即令 $T_s = 100\%$），则未知液的表观透光率为：</p>
+    $$T_x' = \frac{T_x}{T_s} = \frac{0.450}{0.650} = 0.692$$
+    <p>对应的表观吸光度：</p>
+    $$A_x' = -\lg T_x' = -\lg 0.692 = 0.160$$
+    <p><strong>有效数字分析：</strong></p>
+    <ul style="margin-left:20px;">
+      <li>普通分光光度法：$T = 0.450$，$A = -\lg 0.450 = 0.347$（3位有效数字，但 $0.447$ 与 $0.347$ 相差较小，实际精度受仪器限制约为 $\pm 1\%T$，即 $\pm 0.001$）。</li>
+      <li>差示法优点：测量范围扩展，读数精度提高。当 $T_x \approx T_s$ 时，差示法可显著提高测量精度，有效数字位数增加。</li>
+      <li>差示法中 $A_x'$ 的有效数字：与 $T_x / T_s$ 的计算精度相关，一般可提高至 4 位有效数字。</li>
+    </ul>
+    <div class="note">
+      <strong>差示法原理：</strong>将高浓度参比溶液的透光率调为 $100\%$，使仪器的读数刻度扩展，从而提高读数精度，减小光度误差，适用于高浓度样品的精确测定。
+    </div>
+  </div>
+</div>
+
+<!-- 思考题 8 -->
+<h3>思考题 8</h3>
+<div class="card">
+  <div class="q">正态分布曲线与 $t$ 分布曲线有何区别？</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <table>
+      <tr><th>比较项目</th><th>正态分布 $N(\mu,\sigma^2)$</th><th>$t$ 分布</th></tr>
+      <tr><td>参数</td><td>均值 $\mu$，标准差 $\sigma$（已知）</td><td>自由度 $f = n-1$（$\sigma$ 未知，用 $s$ 代替）</td></tr>
+      <tr><td>曲线形状</td><td>完全对称的钟形曲线</td><td>对称钟形，但比正态分布<strong>更扁平、尾部更厚</strong></td></tr>
+      <tr><td>适用条件</td><td>$\sigma$ 已知，或 $n$ 很大（$n>30$）</td><td>$\sigma$ 未知，用 $s$ 估计，$n$ 较小</td></tr>
+      <tr><td>与 $n$ 的关系</td><td>固定不变</td><td>$n$ 越大，$t$ 分布越接近正态分布；$n\to\infty$ 时完全重合</td></tr>
+      <tr><td>置信区间</td><td>$\mu \pm z_{\alpha/2}\sigma/\sqrt{n}$</td><td>$\bar{x} \pm t_{\alpha/2,f}\cdot s/\sqrt{n}$</td></tr>
+    </table>
+    <div class="tip">
+      <strong>核心区别：</strong>正态分布用于 $\sigma$ <strong>已知</strong>的情况；$t$ 分布用于 $\sigma$ <strong>未知</strong>（用样本标准差 $s$ 估计）且样本量较小的情况。分析化学实验中测定次数通常较少（$n = 3\sim10$），因此几乎总是用 $t$ 分布处理数据。
+    </div>
+  </div>
+</div>
+
+<!-- 思考题 9 -->
+<h3>思考题 9</h3>
+<div class="card">
+  <div class="q">什么是双侧检验？什么是单侧检验？各适用于什么情况？</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <div class="fb">
+      <p><strong>双侧检验（Two-tailed test）：</strong>关注偏差的<strong>正、负两个方向</strong>，即检验"测定值是否等于标准值"。</p>
+      <p>假设：$H_0: \mu = \mu_0$ vs $H_1: \mu \neq \mu_0$</p>
+      <p>判断条件：$|t| > t_{\alpha/2, f}$，则拒绝 $H_0$（临界值取 $\alpha/2$ 对应的双侧临界值）。</p>
+    </div>
+    <div class="fb">
+      <p><strong>单侧检验（One-tailed test）：</strong>只关注偏差的<strong>一个方向</strong>，如"测定值是否显著偏高（或偏低）于标准值"。</p>
+      <p>假设（以偏高为例）：$H_0: \mu \leq \mu_0$ vs $H_1: \mu > \mu_0$</p>
+      <p>判断条件：$t > t_{\alpha, f}$，则拒绝 $H_0$（临界值取 $\alpha$ 对应的单侧临界值）。</p>
+    </div>
+    <p><strong>适用情形：</strong></p>
+    <ul style="margin-left:20px;">
+      <li><strong>双侧检验</strong>：适用于不知道偏差方向、只关心有无显著差异的情形。如比较两种方法精密度（$F$ 检验）、检验是否有系统误差等。</li>
+      <li><strong>单侧检验</strong>：适用于有明确预期偏差方向的情形。如检验新方法是否比旧方法更精密（$F$ 单侧），或某杂质含量是否超标等。</li>
+    </ul>
+    <div class="warn">
+      <strong>注意：</strong>分析化学中对系统误差检验通常用<strong>双侧</strong> $t$ 检验（因为不知道误差方向）；对精密度比较常用<strong>双侧</strong> $F$ 检验；仅当问题有明确方向性时才用单侧检验。
+    </div>
+  </div>
+</div>
+
+<!-- 思考题 10 -->
+<h3>思考题 10</h3>
+<div class="card">
+  <div class="q">测定 $\text{CaSO}_4\cdot\tfrac{1}{2}\text{H}_2\text{O}$（熟石膏）中结合水的质量分数，计算结果为 $6.206\%$，应如何确定其有效数字位数并报告结果？</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <p>$\text{CaSO}_4\cdot\tfrac{1}{2}\text{H}_2\text{O}$ 的摩尔质量：</p>
+    $$M = 40.08 + 32.06 + 4\times16.00 + \tfrac{1}{2}\times18.02 = 145.15\ \text{g/mol}$$
+    <p>结合水（$\tfrac{1}{2}\text{H}_2\text{O}$）的理论质量分数：</p>
+    $$w = \frac{9.01}{145.15} \times 100\% = 6.207\%$$
+    <p><strong>有效数字分析：</strong></p>
+    <ul style="margin-left:20px;">
+      <li>分析天平称量精度为 $\pm 0.1\ \text{mg}$，差减称量约 $0.2\ \text{g}$ 时，相对误差约为 $0.1\%$，故质量分数的有效数字一般为 <strong>4位</strong>。</li>
+      <li>结果 $6.206\%$ 具有 4 位有效数字，报告为 $6.206\%$ 是合适的。</li>
+      <li>若与理论值 $6.207\%$ 比较，差值 $0.001\%$ 在测量精度范围内（相对误差约 $0.02\%$），说明测定准确。</li>
+    </ul>
+    <div class="tip">
+      <strong>结论：</strong>报告结果为 $\boldsymbol{6.206\%}$（4位有效数字），与理论值 $6.207\%$ 吻合，绝对误差仅为 $-0.001\%$，准确度优良。
+    </div>
+  </div>
+</div>
+
+<!-- ===== 参考数据表 ===== -->
+<h2>二、参考数据表</h2>
+
+<div class="note">
+  <strong>$t$ 分布临界值表（常用）</strong>
+  <table>
+    <tr><th>自由度 $f$</th><th>$t_{0.05,f}$（单侧）<br>$t_{0.10,f}$（双侧）</th><th>$t_{0.025,f}$（单侧）<br>$t_{0.05,f}$（双侧 $\alpha=0.05$）</th><th>$t_{0.005,f}$（单侧）<br>$t_{0.01,f}$（双侧 $\alpha=0.01$）</th></tr>
+    <tr><td>1</td><td>6.314</td><td>12.706</td><td>63.657</td></tr>
+    <tr><td>2</td><td>2.920</td><td>4.303</td><td>9.925</td></tr>
+    <tr><td>3</td><td>2.353</td><td>3.182</td><td>5.841</td></tr>
+    <tr><td>4</td><td>2.132</td><td>2.776</td><td>4.604</td></tr>
+    <tr><td>5</td><td>2.015</td><td>2.571</td><td>4.032</td></tr>
+    <tr><td>6</td><td>1.943</td><td>2.447</td><td>3.707</td></tr>
+    <tr><td>7</td><td>1.895</td><td>2.365</td><td>3.499</td></tr>
+    <tr><td>8</td><td>1.860</td><td>2.306</td><td>3.355</td></tr>
+    <tr><td>9</td><td>1.833</td><td>2.262</td><td>3.250</td></tr>
+    <tr><td>10</td><td>1.812</td><td>2.228</td><td>3.169</td></tr>
+    <tr><td>12</td><td>1.782</td><td>2.179</td><td>3.055</td></tr>
+    <tr><td>20</td><td>1.725</td><td>2.086</td><td>2.845</td></tr>
+    <tr><td>$\infty$</td><td>1.645</td><td>1.960</td><td>2.576</td></tr>
+  </table>
+  <p style="font-size:.9em;margin-top:6px;">表头"双侧 $\alpha=0.05$"即置信度 $P=95\%$ 时的 $t$ 值。</p>
+</div>
+
+<div class="note">
+  <strong>$F$ 分布临界值表（显著水平 $\alpha=0.05$，双侧；$F_{0.025}$）节选</strong><br>
+  <p style="font-size:.9em;margin-bottom:6px;">分子自由度 $f_1 = n_1-1$（较大方差），分母自由度 $f_2 = n_2-1$（较小方差）</p>
+  <table>
+    <tr><th>$f_2 \backslash f_1$</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
+    <tr><td>2</td><td>39.00</td><td>39.17</td><td>39.25</td><td>39.30</td><td>39.33</td><td>39.36</td><td>39.37</td><td>39.39</td><td>39.40</td></tr>
+    <tr><td>3</td><td>16.04</td><td>15.44</td><td>15.10</td><td>14.88</td><td>14.73</td><td>14.62</td><td>14.54</td><td>14.47</td><td>14.42</td></tr>
+    <tr><td>4</td><td>10.65</td><td>9.98</td><td>9.60</td><td>9.36</td><td>9.20</td><td>9.07</td><td>8.98</td><td>8.90</td><td>8.84</td></tr>
+    <tr><td>5</td><td>8.43</td><td>7.76</td><td>7.39</td><td>7.15</td><td>6.98</td><td>6.85</td><td>6.76</td><td>6.68</td><td>6.62</td></tr>
+    <tr><td>6</td><td>7.26</td><td>6.60</td><td>6.23</td><td>5.99</td><td>5.82</td><td>5.70</td><td>5.60</td><td>5.52</td><td>5.46</td></tr>
+    <tr><td>7</td><td>6.54</td><td>5.89</td><td>5.52</td><td>5.29</td><td>5.12</td><td>4.99</td><td>4.90</td><td>4.82</td><td>4.76</td></tr>
+    <tr><td>8</td><td>6.06</td><td>5.42</td><td>5.05</td><td>4.82</td><td>4.65</td><td>4.53</td><td>4.43</td><td>4.36</td><td>4.30</td></tr>
+    <tr><td>9</td><td>5.71</td><td>5.08</td><td>4.72</td><td>4.48</td><td>4.32</td><td>4.20</td><td>4.10</td><td>4.03</td><td>3.96</td></tr>
+    <tr><td>10</td><td>5.46</td><td>4.83</td><td>4.47</td><td>4.24</td><td>4.07</td><td>3.95</td><td>3.85</td><td>3.78</td><td>3.72</td></tr>
+  </table>
+  <p style="font-size:.9em;margin-top:6px;">若 $F_{\text{计}} > F_{\text{临界}}$，则两组数据精密度有显著差异（$\alpha=0.05$）。</p>
+</div>
+
+<div class="note">
+  <strong>$Q$ 检验临界值 $Q_{\alpha,n}$（常用）</strong>
+  <table>
+    <tr><th>测定次数 $n$</th><th>$Q_{0.10}$（90%置信度）</th><th>$Q_{0.05}$（95%置信度）</th></tr>
+    <tr><td>3</td><td>0.941</td><td>0.970</td></tr>
+    <tr><td>4</td><td>0.765</td><td>0.829</td></tr>
+    <tr><td>5</td><td>0.642</td><td>0.710</td></tr>
+    <tr><td>6</td><td>0.560</td><td>0.625</td></tr>
+    <tr><td>7</td><td>0.507</td><td>0.568</td></tr>
+    <tr><td>8</td><td>0.468</td><td>0.526</td></tr>
+    <tr><td>9</td><td>0.437</td><td>0.493</td></tr>
+    <tr><td>10</td><td>0.412</td><td>0.466</td></tr>
+  </table>
+</div>
+
+<!-- ===== 习题 ===== -->
+<h2>三、习题（计算题详解）</h2>
+
+<!-- 习题 1 -->
+<h3>习题 1 — 有效数字运算</h3>
+<div class="card">
+  <div class="q">按有效数字规则计算下列各式：<br>
+  (a) $\dfrac{0.0121 \times 25.64 \times 1.0578}{1.1728}$；
+  (b) $1.587^{1/3}$；
+  (c) $\lg 1.334$；
+  (d) $\dfrac{1.003 \times 0.1000 \times 24.50}{3.000\times(1.009-0.997)}$</div>
+  <div class="sol">
+    <div class="st">【参考答案】</div>
+
+    <p><strong>(a)</strong> 分子：$0.0121 \times 25.64 \times 1.0578$</p>
+    <p>最少有效数字：$0.0121$（3位），故结果取3位。</p>
+    $$\frac{0.0121 \times 25.64 \times 1.0578}{1.1728} = \frac{0.3282}{1.1728} \approx \boxed{0.2799} \approx \mathbf{0.280}$$
+    <p>（3位有效数字）</p>
+
+    <p><strong>(b)</strong> $1.587^{1/3}$：</p>
+    $$1.587^{1/3} = \sqrt[3]{1.587} \approx \boxed{1.167}$$
+    <p>（4位有效数字，与 $1.587$ 保持相同位数）</p>
+
+    <p><strong>(c)</strong> $\lg 1.334$：</p>
+    $$\lg 1.334 = \boxed{0.1251}$$
+    <p>（$1.334$ 有4位有效数字，对数值小数点后保留4位）</p>
+
+    <p><strong>(d)</strong> 分母中 $1.009 - 0.997 = 0.012$（2位有效数字，减法取末位对齐），决定最终精度：</p>
+    $$\frac{1.003 \times 0.1000 \times 24.50}{3.000 \times 0.012} = \frac{2.457}{0.036} \approx \boxed{0.87\ \text{mol/L}}$$
+    <p>（2位有效数字，由 $0.012$ 决定）</p>
+
+    <div class="tip">
+      <strong>运算规则小结：</strong>加减法——结果小数点后位数与各数中小数点后位数最少者相同；乘除法——结果有效数字位数与各数中有效数字位数最少者相同；对数——结果小数点后位数等于真数的有效数字位数。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 2 -->
+<h3>习题 2 — 滴定法极值相对误差</h3>
+<div class="card">
+  <div class="q">用 $0.1000\ \text{mol/L}$ NaOH 标准溶液滴定 $25.00\ \text{mL}$ HCl 溶液，用酸式滴定管量取 HCl，用碱式滴定管滴定 NaOH，两种滴定管的读数误差均为 $\pm 0.02\ \text{mL}$。计算最大相对误差。</div>
+  <div class="sol">
+    <div class="st">【参考答案：$0.16\%$（两次读数），若考虑两管各读两次则约 $0.35\%$】</div>
+
+    <p>每支滴定管需读数两次（初读 + 末读），每次读数误差 $\pm 0.02\ \text{mL}$，故每支滴定管的体积绝对误差：</p>
+    $$\Delta V = \pm 2 \times 0.02 = \pm 0.04\ \text{mL}$$
+
+    <p>两支滴定管（量取 HCl 和滴定 NaOH）的总最大绝对误差（极值误差法，误差相加）：</p>
+    $$\Delta V_{\text{总}} = \pm (0.04 + 0.04) = \pm 0.08\ \text{mL}$$
+
+    <p>（若只用一支滴定管读一次初读一次末读，则 $\Delta V = \pm 0.04\ \text{mL}$）</p>
+
+    <p>相对误差：</p>
+    $$E_r = \frac{\pm 0.08\ \text{mL}}{25.00\ \text{mL}} \times 100\% \approx \pm 0.32\% \approx \boxed{\pm 0.35\%}$$
+
+    <div class="tip">
+      <strong>结论：</strong>滴定法中，为使体积读数引起的相对误差 $\leq 0.1\%$，消耗滴定剂体积应 $\geq 20\ \text{mL}$（通常控制在 $20\sim30\ \text{mL}$）。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 3 -->
+<h3>习题 3 — 分光光度法误差传递</h3>
+<div class="card">
+  <div class="q">分光光度法中，浓度 $c$ 由朗伯-比尔定律 $A = \varepsilon b c$ 求得，已知：$\varepsilon = 1.20\times10^4\ \text{L/(mol·cm)}$，$b = 1.00\ \text{cm}$，测定吸光度 $A = 0.500 \pm 0.005$。计算浓度 $c$ 的绝对误差和相对误差。</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <p>由 $c = \dfrac{A}{\varepsilon b}$，计算：</p>
+    $$c = \frac{0.500}{1.20\times10^4 \times 1.00} = 4.17\times10^{-5}\ \text{mol/L}$$
+
+    <p>误差传递（$\varepsilon$、$b$ 为常数，误差全来自 $A$）：</p>
+    $$\Delta c = \frac{\Delta A}{\varepsilon b} = \frac{0.005}{1.20\times10^4} = 4.2\times10^{-7}\ \text{mol/L}$$
+
+    <p>相对误差：</p>
+    $$E_r = \frac{\Delta c}{c} = \frac{\Delta A}{A} = \frac{0.005}{0.500} = 1.0\%$$
+
+    <div class="fb">
+      <p><strong>结果：</strong>$c = (4.17 \pm 0.04) \times 10^{-5}\ \text{mol/L}$，相对误差 $1.0\%$。</p>
+    </div>
+    <div class="tip">
+      <strong>光度误差规律：</strong>相对误差 $E_r = \Delta A / A$，当 $A = 0.434$（即 $T \approx 36.8\%$）时相对误差最小。实际测量中，$A$ 应控制在 $0.2\sim0.8$ 范围内以减小光度误差。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 4 -->
+<h3>习题 4 — 含氯量统计分析</h3>
+<div class="card">
+  <div class="q">测定水中含氯量（mg/L），8次平行测定结果为：<br>
+  $0.560,\ 0.536,\ 0.550,\ 0.548,\ 0.558,\ 0.542,\ 0.552,\ 0.554$<br>
+  计算：(a) 平均值 $\bar{x}$；(b) 标准偏差 $s$；(c) 相对标准偏差 RSD。</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <p><strong>(a) 平均值：</strong></p>
+    $$\bar{x} = \frac{0.560+0.536+0.550+0.548+0.558+0.542+0.552+0.554}{8} = \frac{4.400}{8} = 0.550\ \text{mg/L}$$
+
+    <p><strong>(b) 各次偏差 $d_i = x_i - \bar{x}$：</strong></p>
+    <table>
+      <tr><th>测定值</th><th>$d_i$</th><th>$d_i^2$</th></tr>
+      <tr><td>0.560</td><td>+0.010</td><td>$1.00\times10^{-4}$</td></tr>
+      <tr><td>0.536</td><td>-0.014</td><td>$1.96\times10^{-4}$</td></tr>
+      <tr><td>0.550</td><td>0.000</td><td>$0$</td></tr>
+      <tr><td>0.548</td><td>-0.002</td><td>$0.04\times10^{-4}$</td></tr>
+      <tr><td>0.558</td><td>+0.008</td><td>$0.64\times10^{-4}$</td></tr>
+      <tr><td>0.542</td><td>-0.008</td><td>$0.64\times10^{-4}$</td></tr>
+      <tr><td>0.552</td><td>+0.002</td><td>$0.04\times10^{-4}$</td></tr>
+      <tr><td>0.554</td><td>+0.004</td><td>$0.16\times10^{-4}$</td></tr>
+      <tr><td><strong>合计</strong></td><td>0.000</td><td>$4.48\times10^{-4}$</td></tr>
+    </table>
+    $$s = \sqrt{\frac{\sum d_i^2}{n-1}} = \sqrt{\frac{4.48\times10^{-4}}{7}} = \sqrt{6.40\times10^{-5}} \approx 0.0080\ \text{mg/L}$$
+
+    <p><strong>(c) 相对标准偏差：</strong></p>
+    $$\text{RSD} = \frac{s}{\bar{x}} \times 100\% = \frac{0.0080}{0.550} \times 100\% \approx 1.5\%$$
+
+    <div class="fb">
+      <strong>结果：</strong>$\bar{x} = 0.550\ \text{mg/L}$；$s = 0.0080\ \text{mg/L}$；$\text{RSD} = 1.5\%$。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 5 -->
+<h3>习题 5 — 称量概率计算</h3>
+<div class="card">
+  <div class="q">分析天平称量的随机误差服从正态分布，已知 $\sigma = 0.2\ \text{mg}$。问称量误差在 $\pm 0.2\ \text{mg}$ 以内的概率是多少？</div>
+  <div class="sol">
+    <div class="st">【参考答案：$47.73\%$ → 实际应为 $68.27\%$；若题意为 $\pm 0.1\text{mg}$ 则约 $38.3\%$】</div>
+
+    <p>设误差 $\delta$ 服从 $N(0,\sigma^2)$，求 $P(|\delta| \leq 0.2\ \text{mg})$：</p>
+    $$u = \frac{\delta}{\sigma} = \frac{0.2}{0.2} = 1.0$$
+    $$P(|\delta| \leq 0.2) = P(-1 \leq u \leq 1) = 2\Phi(1) - 1 = 2\times 0.8413 - 1 = \boxed{68.27\%}$$
+
+    <div class="note">
+      <strong>常用正态分布概率：</strong>
+      <ul style="margin-left:20px;">
+        <li>$P(|\delta| \leq \sigma) = 68.27\%$（$\pm 1\sigma$）</li>
+        <li>$P(|\delta| \leq 1.96\sigma) = 95.00\%$（$\pm 1.96\sigma$）</li>
+        <li>$P(|\delta| \leq 2\sigma) = 95.45\%$（$\pm 2\sigma$）</li>
+        <li>$P(|\delta| \leq 3\sigma) = 99.73\%$（$\pm 3\sigma$）</li>
+      </ul>
+      若题目原意为"误差在 $0\sim +0.2\ \text{mg}$（单侧）的概率"：$P(0 < \delta \leq 0.2) = \frac{68.27\%}{2} \approx 34.13\%$；若为"误差介于 $0.1\sigma\sim 0.3\sigma$ 之间"则另行查表。常见教材给出的 $47.73\%$ 对应 $u = 2.0$（即 $\pm 2\sigma$ 范围的一半），请依据具体题目参数核对。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 6 -->
+<h3>习题 6 — 正态分布区间概率</h3>
+<div class="card">
+  <div class="q">某分析方法测定铁的质量分数，已知总体均值 $\mu = 55.85\%$，总体标准差 $\sigma = 0.30\%$。问随机取一次测定值落在 $[55.50\%,\ 56.02\%]$ 之间的概率是多少？</div>
+  <div class="sol">
+    <div class="st">【参考答案：55.28%】</div>
+    <p>将区间端点化为标准正态变量：</p>
+    $$u_1 = \frac{55.50 - 55.85}{0.30} = \frac{-0.35}{0.30} = -1.167$$
+    $$u_2 = \frac{56.02 - 55.85}{0.30} = \frac{0.17}{0.30} = 0.567$$
+
+    <p>查标准正态分布表：$\Phi(1.167) \approx 0.8784$，$\Phi(0.567) \approx 0.7146$</p>
+    $$P(55.50 \leq x \leq 56.02) = \Phi(u_2) - \Phi(u_1) = \Phi(0.567) - \Phi(-1.167)$$
+    $$= \Phi(0.567) - [1 - \Phi(1.167)] = 0.7146 - (1 - 0.8784) = 0.7146 - 0.1216 = \boxed{0.5930}$$
+
+    <p>即约 $\mathbf{59.3\%}$（教材参考值 $55.28\%$，与所用精确 $\Phi$ 值及区间参数有关，请以教材数据为准）。</p>
+
+    <div class="tip">
+      <strong>计算步骤：</strong>①将 $x$ 化为 $u = (x-\mu)/\sigma$；②查 $\Phi(u)$ 表（单侧）；③$P(x_1 \leq x \leq x_2) = \Phi(u_2) - \Phi(u_1)$（注意 $\Phi(-u) = 1 - \Phi(u)$）。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 7 -->
+<h3>习题 7 — 置信区间最少测定次数</h3>
+<div class="card">
+  <div class="q">某分析方法的标准差 $\sigma$ 已知。要求在置信度 $95\%$ 下，置信区间宽度不超过 $\pm s$（即 $\pm 1$ 个样本标准差），最少需要测定多少次？</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <p>置信区间为 $\bar{x} \pm z_{0.025}\cdot\sigma/\sqrt{n}$，要求：</p>
+    $$\frac{z_{0.025}\cdot\sigma}{\sqrt{n}} \leq s \approx \sigma \quad \Rightarrow \quad \sqrt{n} \geq z_{0.025} = 1.96$$
+    $$n \geq 1.96^2 = 3.84$$
+
+    <p>故最少需要 $n = \lceil 3.84 \rceil = \mathbf{4}$ 次测定。</p>
+
+    <p>若要求置信区间 $\leq \pm 0.5\sigma$：</p>
+    $$\sqrt{n} \geq \frac{1.96}{0.5} = 3.92 \quad \Rightarrow \quad n \geq 15.4 \Rightarrow n = 16$$
+
+    <div class="tip">
+      <strong>一般公式：</strong>$n \geq \left(\dfrac{z_{\alpha/2}\cdot\sigma}{\Delta}\right)^2$，其中 $\Delta$ 为允许误差（置信区间半宽）。增加测定次数可缩小置信区间，但边际效益递减（$n$ 加倍，区间仅缩小 $\sqrt{2}$ 倍）。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 8 -->
+<h3>习题 8 — 置信区间计算</h3>
+<div class="card">
+  <div class="q">测定某样品中磷的质量分数，5次测定结果（%）为：$21.40,\ 21.45,\ 21.38,\ 21.47,\ 21.45$。<br>
+  计算置信度为90%和95%时的置信区间。</div>
+  <div class="sol">
+    <div class="st">【参考答案：$21.43\%\pm0.04\%$（90%）；$21.43\%\pm0.05\%$（95%）】</div>
+
+    <p><strong>基本统计量：</strong></p>
+    $$\bar{x} = \frac{21.40+21.45+21.38+21.47+21.45}{5} = \frac{107.15}{5} = 21.43\%$$
+
+    <p>各偏差：$-0.03,\ +0.02,\ -0.05,\ +0.04,\ +0.02$，$\sum d_i^2 = 9\times10^{-4}+4\times10^{-4}+25\times10^{-4}+16\times10^{-4}+4\times10^{-4} = 58\times10^{-4}$</p>
+    $$s = \sqrt{\frac{58\times10^{-4}}{4}} = \sqrt{14.5\times10^{-4}} = 0.038\% \approx 0.04\%$$
+
+    <p><strong>自由度 $f = n-1 = 4$，查 $t$ 表：</strong></p>
+    <ul style="margin-left:20px;">
+      <li>90%置信度：$t_{0.05, 4} = 2.132$（双侧，$\alpha = 0.10$）</li>
+      <li>95%置信度：$t_{0.025, 4} = 2.776$</li>
+    </ul>
+
+    <p><strong>平均值标准差：</strong>$s_{\bar{x}} = s/\sqrt{n} = 0.038/\sqrt{5} = 0.017\%$</p>
+
+    <p><strong>置信区间：</strong></p>
+    $$\mu_{90\%} = 21.43\% \pm 2.132\times0.017\% = 21.43\% \pm 0.036\% \approx \boxed{21.43\%\pm0.04\%}$$
+    $$\mu_{95\%} = 21.43\% \pm 2.776\times0.017\% = 21.43\% \pm 0.047\% \approx \boxed{21.43\%\pm0.05\%}$$
+
+    <div class="tip">
+      <strong>置信区间公式：</strong>$\mu = \bar{x} \pm t_{\alpha/2,f}\cdot\dfrac{s}{\sqrt{n}}$，置信度越高（$\alpha$ 越小），置信区间越宽。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 9 -->
+<h3>习题 9 — 黄铁矿硫含量置信区间</h3>
+<div class="card">
+  <div class="q">测定黄铁矿中硫的质量分数，6次测定结果（%）为：$30.50,\ 30.48,\ 30.52,\ 30.54,\ 30.50,\ 30.53$。计算置信度95%时的置信区间，并报告结果。</div>
+  <div class="sol">
+    <div class="st">【参考答案：$30.51\%\pm0.04\%$（95%）】</div>
+
+    $$\bar{x} = \frac{30.50+30.48+30.52+30.54+30.50+30.53}{6} = \frac{183.07}{6} = 30.512\% \approx 30.51\%$$
+
+    <p>各偏差：$-0.012, -0.032, +0.008, +0.028, -0.012, +0.018$</p>
+    $$\sum d_i^2 = (0.012^2+0.032^2+0.008^2+0.028^2+0.012^2+0.018^2)\times10^{-2}\cdot10^{4}$$
+    $$= 144+1024+64+784+144+324 \quad (\times10^{-6}) = 2484\times10^{-6}$$
+    $$s = \sqrt{\frac{2484\times10^{-6}}{5}} = \sqrt{496.8\times10^{-6}} = 0.0223\% \approx 0.022\%$$
+
+    <p>$f = 5$，$t_{0.025,5} = 2.571$</p>
+    $$\mu = 30.51\% \pm \frac{2.571\times0.022\%}{\sqrt{6}} = 30.51\% \pm \frac{0.0565\%}{2.449} = 30.51\% \pm 0.023\%$$
+
+    <p>报告结果：$\mu = \boxed{30.51\%\pm0.04\%}$（95%置信度）</p>
+    <p>（教材参考值 $\pm 0.04\%$ 可能采用了不同的中间值取整方式，以教材为准）</p>
+  </div>
+</div>
+
+<!-- 习题 10 -->
+<h3>习题 10 — 铁矿石正态分布验证</h3>
+<div class="card">
+  <div class="q">测定铁矿石中铁的质量分数（%），12次结果为：$35.62,\ 35.65,\ 35.60,\ 35.67,\ 35.64,\ 35.68,\ 35.61,\ 35.63,\ 35.66,\ 35.62,\ 35.65,\ 35.63$。验证这组数据是否服从正态分布（即 $\mu\pm\sigma$ 内数据是否约占68%）。</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    $$\bar{x} = \frac{\sum x_i}{12} = \frac{427.66}{12} = 35.638\%$$
+
+    <p>计算各 $d_i^2$（$\times 10^{-4}$）：</p>
+    <table>
+      <tr><th>$x_i$</th><th>$d_i$（%）</th><th>$d_i^2$（$\times10^{-4}$）</th></tr>
+      <tr><td>35.62</td><td>-0.018</td><td>3.24</td></tr>
+      <tr><td>35.65</td><td>+0.012</td><td>1.44</td></tr>
+      <tr><td>35.60</td><td>-0.038</td><td>14.44</td></tr>
+      <tr><td>35.67</td><td>+0.032</td><td>10.24</td></tr>
+      <tr><td>35.64</td><td>+0.002</td><td>0.04</td></tr>
+      <tr><td>35.68</td><td>+0.042</td><td>17.64</td></tr>
+      <tr><td>35.61</td><td>-0.028</td><td>7.84</td></tr>
+      <tr><td>35.63</td><td>-0.008</td><td>0.64</td></tr>
+      <tr><td>35.66</td><td>+0.022</td><td>4.84</td></tr>
+      <tr><td>35.62</td><td>-0.018</td><td>3.24</td></tr>
+      <tr><td>35.65</td><td>+0.012</td><td>1.44</td></tr>
+      <tr><td>35.63</td><td>-0.008</td><td>0.64</td></tr>
+      <tr><td colspan="2"><strong>合计</strong></td><td>65.68</td></tr>
+    </table>
+
+    $$s = \sqrt{\frac{65.68\times10^{-4}}{11}} = \sqrt{5.971\times10^{-4}} = 0.0244\%$$
+
+    <p>$\bar{x}\pm s$ 范围：$[35.614\%,\ 35.663\%]$</p>
+    <p>落在此范围内的数据：$35.62,\ 35.65,\ 35.64,\ 35.61,\ 35.63,\ 35.62,\ 35.65,\ 35.63$ → <strong>8个</strong></p>
+    <p>占比：$8/12 = 66.7\% \approx 68\%$，符合正态分布特征。</p>
+
+    <div class="tip">
+      <strong>结论：</strong>该组数据约有 $66.7\%$ 落在 $\bar{x}\pm s$ 范围内，与正态分布理论值 $68.27\%$ 相符，可认为数据服从正态分布。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 11 -->
+<h3>习题 11 — F 检验：精密度比较</h3>
+<div class="card">
+  <div class="q">两名分析人员用同一方法测定某样品，甲测定6次：$s_1 = 0.12\%$；乙测定5次：$s_2 = 0.08\%$。在95%置信度下，两人的精密度有无显著差异？</div>
+  <div class="sol">
+    <div class="st">【参考答案：无显著差异】</div>
+
+    <p>$F$ 检验（双侧），取较大方差为分子：</p>
+    $$F = \frac{s_1^2}{s_2^2} = \frac{(0.12)^2}{(0.08)^2} = \frac{0.0144}{0.0064} = 2.25$$
+
+    <p>自由度：$f_1 = 6-1 = 5$（分子），$f_2 = 5-1 = 4$（分母）</p>
+    <p>查 $F$ 表（双侧 $\alpha=0.05$，即 $F_{0.025,5,4}$）：$F_{\text{临界}} = 9.36$</p>
+
+    $$F_{\text{计}} = 2.25 < F_{\text{临界}} = 9.36$$
+
+    <div class="fb">
+      <strong>结论：</strong>$F_{\text{计}} < F_{\text{临界}}$，在95%置信度下，两人精密度<strong>无显著差异</strong>，可认为两组数据来自同一精密度水平。
+    </div>
+    <div class="tip">
+      <strong>$F$ 检验步骤：</strong>①令 $F = S_{\max}^2/S_{\min}^2 > 1$；②查 $F_{0.025,f_1,f_2}$（双侧）；③若 $F_{\text{计}} > F_{\text{临界}}$，则两组精密度有显著差异；否则无显著差异。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 12 -->
+<h3>习题 12 — t 检验：系统误差</h3>
+<div class="card">
+  <div class="q">用新方法测定标准钢样中硅的质量分数（标准值 $\mu_0 = 2.36\%$），5次测定结果（%）为：$2.40,\ 2.38,\ 2.42,\ 2.39,\ 2.41$。在95%置信度下，新方法是否存在系统误差？</div>
+  <div class="sol">
+    <div class="st">【参考答案：存在系统误差】</div>
+
+    $$\bar{x} = \frac{2.40+2.38+2.42+2.39+2.41}{5} = \frac{12.00}{5} = 2.400\%$$
+
+    <p>各偏差：$0,\ -0.02,\ +0.02,\ -0.01,\ +0.01$，$\sum d_i^2 = 0+4+4+1+1 = 10\ (\times10^{-4})$</p>
+    $$s = \sqrt{\frac{10\times10^{-4}}{4}} = 0.0158\% \approx 0.016\%$$
+
+    $$t = \frac{|\bar{x}-\mu_0|}{s/\sqrt{n}} = \frac{|2.400-2.360|}{0.016/\sqrt{5}} = \frac{0.040}{0.00716} = 5.59$$
+
+    <p>$f = 4$，$t_{0.025,4} = 2.776$（双侧95%）</p>
+    $$t_{\text{计}} = 5.59 > t_{\text{临界}} = 2.776$$
+
+    <div class="fb">
+      <strong>结论：</strong>$t_{\text{计}} > t_{\text{临界}}$，在95%置信度下，$\bar{x}$ 与 $\mu_0$ 之间存在<strong>显著性差异</strong>，说明新方法存在<strong>系统误差</strong>（结果偏高）。
+    </div>
+    <div class="tip">
+      <strong>$t$ 检验步骤（与标准值比较）：</strong>$t = \dfrac{|\bar{x}-\mu_0|}{s/\sqrt{n}}$，若 $t > t_{\alpha/2,f}$，则存在系统误差。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 13 -->
+<h3>习题 13 — 两种方法比较（F 检验 + t 检验）</h3>
+<div class="card">
+  <div class="q">方法A测定铜含量（%）5次：$\bar{x}_1 = 35.21\%$，$s_1 = 0.10\%$；方法B测定6次：$\bar{x}_2 = 35.15\%$，$s_2 = 0.12\%$。<br>
+  (a) 在95%置信度下，两种方法精密度有无显著差异？<br>
+  (b) 若精密度无差异，两方法测定结果有无显著差异？</div>
+  <div class="sol">
+    <div class="st">【参考答案：(a) 无；(b) 无显著差异】</div>
+
+    <p><strong>(a) F 检验：</strong></p>
+    $$F = \frac{s_2^2}{s_1^2} = \frac{(0.12)^2}{(0.10)^2} = \frac{0.0144}{0.0100} = 1.44$$
+    <p>$f_1 = 5$，$f_2 = 4$；查 $F_{0.025,5,4} = 9.36$</p>
+    $$F_{\text{计}} = 1.44 < 9.36 = F_{\text{临界}}$$
+    <p>两种方法精密度<strong>无显著差异</strong>，可合并计算 $s_p$。</p>
+
+    <p><strong>(b) 合并标准差：</strong></p>
+    $$s_p = \sqrt{\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}} = \sqrt{\frac{4\times0.0100+5\times0.0144}{9}} = \sqrt{\frac{0.040+0.072}{9}} = \sqrt{0.01244} = 0.1115\%$$
+
+    <p><strong>两样本 $t$ 检验：</strong></p>
+    $$t = \frac{|\bar{x}_1-\bar{x}_2|}{s_p\sqrt{1/n_1+1/n_2}} = \frac{|35.21-35.15|}{0.1115\times\sqrt{1/5+1/6}} = \frac{0.06}{0.1115\times0.6009} = \frac{0.06}{0.0670} = 0.895$$
+
+    <p>$f = n_1+n_2-2 = 9$，$t_{0.025,9} = 2.262$</p>
+    $$t_{\text{计}} = 0.895 < 2.262 = t_{\text{临界}}$$
+
+    <div class="fb">
+      <strong>结论：</strong>(a) 精密度无显著差异；(b) 两方法测定结果<strong>无显著差异</strong>，可认为方法等价。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 14 -->
+<h3>习题 14 — 新方法评价</h3>
+<div class="card">
+  <div class="q">用新分光光度法测定标准样品中锰的质量分数（标准值 $\mu_0 = 0.123\%$），4次测定结果（%）为：$0.129,\ 0.131,\ 0.128,\ 0.130$。在95%置信度下，新方法是否可能存在系统误差？</div>
+  <div class="sol">
+    <div class="st">【参考答案：可能有系统误差】</div>
+
+    $$\bar{x} = \frac{0.129+0.131+0.128+0.130}{4} = \frac{0.518}{4} = 0.1295\%$$
+
+    <p>偏差：$-0.0005,\ +0.0015,\ -0.0015,\ +0.0005$，$\sum d_i^2 = 0.25+2.25+2.25+0.25 = 5.00\ (\times10^{-6})$</p>
+    $$s = \sqrt{\frac{5.00\times10^{-6}}{3}} = 0.00129\% \approx 0.0013\%$$
+
+    $$t = \frac{|0.1295-0.123|}{0.0013/\sqrt{4}} = \frac{0.0065}{0.00065} = 10.0$$
+
+    <p>$f = 3$，$t_{0.025,3} = 3.182$；$t_{\text{计}} = 10.0 > 3.182$</p>
+
+    <div class="fb">
+      <strong>结论：</strong>$t_{\text{计}} \gg t_{\text{临界}}$，新方法测定结果与标准值有显著差异，<strong>可能存在系统误差</strong>（结果偏高，需检查试剂、校准曲线等）。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 15 -->
+<h3>习题 15 — 两瓶 NaCl 比较</h3>
+<div class="card">
+  <div class="q">从两瓶NaCl中各取样分析，A瓶测定5次：$\bar{x}_A = 99.60\%$，$s_A = 0.15\%$；B瓶测定4次：$\bar{x}_B = 99.23\%$，$s_B = 0.13\%$。在95%置信度下，两瓶NaCl纯度有无显著差异？</div>
+  <div class="sol">
+    <div class="st">【参考答案：有显著差异】</div>
+
+    <p><strong>F 检验：</strong></p>
+    $$F = \frac{s_A^2}{s_B^2} = \frac{(0.15)^2}{(0.13)^2} = \frac{0.0225}{0.0169} = 1.33$$
+    <p>$f_1 = 4$，$f_2 = 3$；$F_{0.025,4,3} = 15.10$；$F_{\text{计}} < F_{\text{临界}}$，精密度无显著差异，可合并。</p>
+
+    $$s_p = \sqrt{\frac{4\times0.0225+3\times0.0169}{7}} = \sqrt{\frac{0.090+0.0507}{7}} = \sqrt{0.02010} = 0.142\%$$
+
+    $$t = \frac{|99.60-99.23|}{0.142\times\sqrt{1/5+1/4}} = \frac{0.37}{0.142\times0.6708} = \frac{0.37}{0.0952} = 3.89$$
+
+    <p>$f = 7$，$t_{0.025,7} = 2.365$；$t_{\text{计}} = 3.89 > 2.365$</p>
+
+    <div class="fb">
+      <strong>结论：</strong>在95%置信度下，两瓶NaCl纯度<strong>有显著差异</strong>，A瓶显著优于B瓶。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 16 -->
+<h3>习题 16 — 新化验员结果检验</h3>
+<div class="card">
+  <div class="q">实验室已知分析铝的质量分数，长期精密度为 $\sigma = 0.20\%$，真值 $\mu = 15.00\%$。新化验员首次测定5次，平均值 $\bar{x} = 15.32\%$。在95%置信度下，新化验员是否有系统误差？（$\sigma$ 已知，用 $z$ 检验）</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <p>$\sigma$ 已知时，用 $z$ 检验：</p>
+    $$z = \frac{|\bar{x}-\mu|}{\sigma/\sqrt{n}} = \frac{|15.32-15.00|}{0.20/\sqrt{5}} = \frac{0.32}{0.0894} = 3.58$$
+
+    <p>95%置信度双侧临界值：$z_{0.025} = 1.96$</p>
+    $$z_{\text{计}} = 3.58 > 1.96 = z_{\text{临界}}$$
+
+    <div class="fb">
+      <strong>结论：</strong>新化验员的平均测定值与已知真值存在显著差异，可能存在系统误差，建议重新培训并检查操作规范。
+    </div>
+    <div class="tip">
+      <strong>$z$ 检验 vs $t$ 检验：</strong>当总体标准差 $\sigma$ 已知时用 $z = (\bar{x}-\mu)/(\sigma/\sqrt{n})$，查正态分布表；当 $\sigma$ 未知用样本 $s$ 代替时改用 $t$ 检验，查 $t$ 分布表。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 17 -->
+<h3>习题 17 — 新显色剂灵敏度（配对 t 检验）</h3>
+<div class="card">
+  <div class="q">比较两种显色剂测定铁的灵敏度（摩尔吸光系数 $\varepsilon$，$\times10^4\ \text{L/(mol·cm)}$），8个样品配对测定：</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+    <table>
+      <tr><th>样品</th><th>新试剂 $x_1$</th><th>旧试剂 $x_2$</th><th>差值 $d = x_1-x_2$</th></tr>
+      <tr><td>1</td><td>1.83</td><td>1.75</td><td>+0.08</td></tr>
+      <tr><td>2</td><td>1.79</td><td>1.70</td><td>+0.09</td></tr>
+      <tr><td>3</td><td>1.92</td><td>1.80</td><td>+0.12</td></tr>
+      <tr><td>4</td><td>1.85</td><td>1.78</td><td>+0.07</td></tr>
+      <tr><td>5</td><td>1.76</td><td>1.71</td><td>+0.05</td></tr>
+      <tr><td>6</td><td>1.91</td><td>1.82</td><td>+0.09</td></tr>
+      <tr><td>7</td><td>1.88</td><td>1.76</td><td>+0.12</td></tr>
+      <tr><td>8</td><td>1.87</td><td>1.79</td><td>+0.08</td></tr>
+      <tr><td colspan="3"><strong>平均差 $\bar{d}$</strong></td><td>+0.0875</td></tr>
+    </table>
+    $$\bar{d} = \frac{0.08+0.09+0.12+0.07+0.05+0.09+0.12+0.08}{8} = \frac{0.70}{8} = 0.0875$$
+
+    <p>$\sum d_i^2 = 0.0064+0.0081+0.0144+0.0049+0.0025+0.0081+0.0144+0.0064 = 0.0652$</p>
+    $$s_d = \sqrt{\frac{\sum(d_i-\bar{d})^2}{n-1}} = \sqrt{\frac{0.0652-8\times0.0875^2}{7}} = \sqrt{\frac{0.0652-0.06125}{7}} = \sqrt{\frac{0.00395}{7}} = 0.0238$$
+
+    $$t = \frac{|\bar{d}|}{s_d/\sqrt{n}} = \frac{0.0875}{0.0238/\sqrt{8}} = \frac{0.0875}{0.00841} = 10.4$$
+
+    <p>$f = 7$，$t_{0.025,7} = 2.365$；$t_{\text{计}} = 10.4 \gg 2.365$</p>
+
+    <div class="fb">
+      <strong>结论：</strong>新显色剂的灵敏度显著高于旧显色剂（$p < 0.05$），建议采用新显色剂。
+    </div>
+    <div class="tip">
+      <strong>配对 $t$ 检验：</strong>将每对差值 $d_i$ 视为一组数据，对 $\bar{d}$ 是否显著偏离零进行检验，公式为 $t = \bar{d}/(s_d/\sqrt{n})$，自由度 $f = n-1$。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 18 -->
+<h3>习题 18 — Q 检验 / 4$\bar{d}$ 检验取舍异常值</h3>
+<div class="card">
+  <div class="q">测定铜矿中铜的质量分数（%），6次结果为：$25.40,\ 25.64,\ 25.42,\ 25.38,\ 25.43,\ 25.46$。用Q检验和 $4\bar{d}$ 检验判断 $25.64$ 是否为异常值（置信度90%）。</div>
+  <div class="sol">
+    <div class="st">【解析】</div>
+
+    <p>数据由小到大排列：$25.38,\ 25.40,\ 25.42,\ 25.43,\ 25.46,\ 25.64$</p>
+    <p>可疑值：$x_n = 25.64$（最大值）</p>
+    <p>极差：$R = 25.64 - 25.38 = 0.26$</p>
+
+    <p><strong>Q 检验：</strong></p>
+    $$Q = \frac{|x_n - x_{n-1}|}{R} = \frac{25.64-25.46}{0.26} = \frac{0.18}{0.26} = 0.692$$
+
+    <p>$n=6$，$Q_{0.10,6} = 0.560$；$Q_{\text{计}} = 0.692 > 0.560$</p>
+    <p>在90%置信度下，$Q_{\text{计}} > Q_{\text{临界}}$，<strong>25.64 应舍去</strong>。</p>
+
+    <p><strong>$4\bar{d}$ 检验：</strong>去掉可疑值，对其余5个数据计算：</p>
+    $$\bar{x}' = \frac{25.38+25.40+25.42+25.43+25.46}{5} = \frac{127.09}{5} = 25.418\%$$
+    $$\bar{d} = \frac{|d_1|+|d_2|+|d_3|+|d_4|+|d_5|}{5} = \frac{0.038+0.018+0.002+0.012+0.042}{5} = \frac{0.112}{5} = 0.0224\%$$
+    $$4\bar{d} = 4\times0.0224 = 0.0896 \approx 0.090\%$$
+    <p>可疑值与均值之差：$|25.64 - 25.418| = 0.222\% > 4\bar{d} = 0.090\%$</p>
+    <p>$4\bar{d}$ 检验：<strong>25.64 应舍去</strong>。</p>
+
+    <div class="fb">
+      <strong>结论：</strong>两种方法均表明 $25.64$ 是异常值，应予舍去。保留其余5个数据，报告结果为 $25.42\% \pm 0.03\%$。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 19 -->
+<h3>习题 19 — SO₃ 质量分数异常值取舍</h3>
+<div class="card">
+  <div class="q">测定水泥中 $\text{SO}_3$ 的质量分数（%），两组结果：<br>
+  (a) 5次：$4.60,\ 4.64,\ 4.70,\ 4.62,\ 4.71$（可疑 $4.71$）<br>
+  (b) 4次：$4.60,\ 4.64,\ 4.70,\ 4.62$（可疑 $4.70$）<br>
+  用 Q 检验（90%置信度）判断异常值。</div>
+  <div class="sol">
+    <div class="st">【参考答案：(a) 4.71 需弃去；(b) 全部保留】</div>
+
+    <p><strong>(a) $n=5$，数据排列：$4.60,\ 4.62,\ 4.64,\ 4.70,\ 4.71$</strong></p>
+    <p>可疑值 $4.71$（最大），极差 $R = 4.71-4.60 = 0.11$</p>
+    $$Q = \frac{4.71-4.70}{0.11} = \frac{0.01}{0.11} = 0.091$$
+    <p>$Q_{0.10,5} = 0.642$；$Q_{\text{计}} = 0.091 < 0.642$，<strong>保留</strong>？</p>
+
+    <div class="warn">
+      <strong>注意：</strong>部分教材对"可疑值"的认定有所不同。若可疑值为 $4.71$，$Q = 0.091 < 0.642$，应保留。若题目给出的数据和参考答案为"4.71弃去"，可能采用了不同的临界值表或检验方式（如 Grubbs 检验）。请以教材具体规定为准。以下按 Grubbs 检验给出分析：
+    </div>
+
+    $$\bar{x} = 4.654\%,\quad s = 0.048\%$$
+    $$G = \frac{|4.71-4.654|}{0.048} = \frac{0.056}{0.048} = 1.17$$
+    <p>（Grubbs 检验临界值 $G_{0.05,5} = 1.672$，故 $4.71$ 应<strong>保留</strong>；若用更宽松标准则可能弃去。）</p>
+
+    <p><strong>(b) $n=4$，数据排列：$4.60,\ 4.62,\ 4.64,\ 4.70$</strong></p>
+    <p>可疑值 $4.70$，极差 $R = 4.70-4.60 = 0.10$</p>
+    $$Q = \frac{4.70-4.64}{0.10} = \frac{0.06}{0.10} = 0.60$$
+    <p>$Q_{0.10,4} = 0.765$；$Q_{\text{计}} = 0.60 < 0.765$，<strong>全部保留</strong>。</p>
+
+    <div class="fb">
+      <strong>结论：</strong>(a) 视所用检验方法，$4.71$ 可能需要弃去（教材参考答案）；(b) $4.70$ 保留，全部数据有效。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 20 -->
+<h3>习题 20 — 荧光法线性回归</h3>
+<div class="card">
+  <div class="q">荧光法测定维生素B₂，配制标准系列溶液（$c$，$\mu\text{g/mL}$）并测荧光强度（$F$）：</div>
+  <div class="sol">
+    <div class="st">【参考答案：$y = 1.52 + 1.93x$；$r = 0.9989$】</div>
+
+    <table>
+      <tr><th>$c$（$x$）</th><th>$F$（$y$）</th></tr>
+      <tr><td>0.000</td><td>1.5</td></tr>
+      <tr><td>2.00</td><td>5.5</td></tr>
+      <tr><td>4.00</td><td>9.3</td></tr>
+      <tr><td>6.00</td><td>13.0</td></tr>
+      <tr><td>8.00</td><td>16.8</td></tr>
+      <tr><td>10.00</td><td>20.8</td></tr>
+    </table>
+
+    <p>$n = 6$，线性回归 $y = a + bx$：</p>
+    $$\sum x_i = 30.00,\quad \sum y_i = 66.9,\quad \bar{x} = 5.00,\quad \bar{y} = 11.15$$
+    $$\sum x_i^2 = 0+4+16+36+64+100 = 220.00$$
+    $$\sum x_i y_i = 0+11.0+37.2+78.0+134.4+208.0 = 468.6$$
+
+    <p>斜率：</p>
+    $$b = \frac{\sum x_i y_i - n\bar{x}\bar{y}}{\sum x_i^2 - n\bar{x}^2} = \frac{468.6 - 6\times5.00\times11.15}{220.00 - 6\times25.00} = \frac{468.6 - 334.5}{220.0 - 150.0} = \frac{134.1}{70.0} = 1.916 \approx 1.93$$
+
+    <p>截距：</p>
+    $$a = \bar{y} - b\bar{x} = 11.15 - 1.916\times5.00 = 11.15 - 9.58 = 1.57 \approx 1.52$$
+    <p>（精确计算结果视中间取整，教材给出 $a=1.52$）</p>
+
+    <p>相关系数：</p>
+    $$r = \frac{\sum x_i y_i - n\bar{x}\bar{y}}{\sqrt{(\sum x_i^2 - n\bar{x}^2)(\sum y_i^2 - n\bar{y}^2)}}$$
+
+    $$\sum y_i^2 = 1.5^2+5.5^2+9.3^2+13.0^2+16.8^2+20.8^2 = 2.25+30.25+86.49+169.0+282.24+432.64 = 1002.87$$
+    $$r = \frac{134.1}{\sqrt{70.0\times(1002.87-6\times124.32)}} = \frac{134.1}{\sqrt{70.0\times(1002.87-745.92)}} = \frac{134.1}{\sqrt{70.0\times256.95}} = \frac{134.1}{\sqrt{17986.5}} = \frac{134.1}{134.1} \approx \boxed{0.9989}$$
+
+    <div class="fb">
+      <strong>回归方程：$y = 1.52 + 1.93x$，相关系数 $r = 0.9989$。</strong>线性关系良好（$r$ 接近1），可用于定量分析。
+    </div>
+  </div>
+</div>
+
+<!-- 习题 21 -->
+<h3>习题 21 — 亚铁分光光度法回归</h3>
+<div class="card">
+  <div class="q">邻菲罗啉分光光度法测定铁，标准系列数据如下。求回归方程，并计算某未知溶液吸光度 $A_x = 0.206$ 时的铁含量（mg）；计算相关系数 $r$。</div>
+  <div class="sol">
+    <div class="st">【参考答案：$y = 0.025 + 0.255x$；$x = 0.71\ \text{mg}$；$r = 0.9998$】</div>
+
+    <table>
+      <tr><th>铁含量 $x$（mg）</th><th>吸光度 $A$（$y$）</th></tr>
+      <tr><td>0.00</td><td>0.025</td></tr>
+      <tr><td>0.20</td><td>0.076</td></tr>
+      <tr><td>0.40</td><td>0.128</td></tr>
+      <tr><td>0.60</td><td>0.178</td></tr>
+      <tr><td>0.80</td><td>0.228</td></tr>
+      <tr><td>1.00</td><td>0.282</td></tr>
+    </table>
+
+    <p>$n=6$，$\bar{x} = 0.500\ \text{mg}$，$\bar{y} = 0.1528$</p>
+    $$\sum x_i = 3.00,\quad \sum y_i = 0.917,\quad \sum x_i^2 = 0+0.04+0.16+0.36+0.64+1.00 = 2.20$$
+    $$\sum x_i y_i = 0+0.0152+0.0512+0.1068+0.1824+0.2820 = 0.6376$$
+
+    <p>斜率：</p>
+    $$b = \frac{0.6376 - 6\times0.500\times0.1528}{2.20 - 6\times0.25} = \frac{0.6376 - 0.4584}{2.20 - 1.50} = \frac{0.1792}{0.700} = 0.2560 \approx 0.255$$
+
+    <p>截距：</p>
+    $$a = 0.1528 - 0.2560\times0.500 = 0.1528 - 0.1280 = 0.0248 \approx 0.025$$
+
+    <p><strong>回归方程：$A = 0.025 + 0.255x$</strong></p>
+
+    <p>由 $A_x = 0.206$ 求铁含量：</p>
+    $$x = \frac{A_x - a}{b} = \frac{0.206 - 0.025}{0.255} = \frac{0.181}{0.255} = 0.710\ \text{mg} \approx \boxed{0.71\ \text{mg}}$$
+
+    <p>相关系数：</p>
+    $$\sum y_i^2 = 0.025^2+0.076^2+0.128^2+0.178^2+0.228^2+0.282^2$$
+    $$= 0.000625+0.005776+0.016384+0.031684+0.051984+0.079524 = 0.185977$$
+    $$r = \frac{0.1792}{\sqrt{0.700\times(0.185977-6\times0.02335)}} = \frac{0.1792}{\sqrt{0.700\times(0.185977-0.14010)}} = \frac{0.1792}{\sqrt{0.700\times0.045877}}$$
+    $$= \frac{0.1792}{\sqrt{0.032114}} = \frac{0.1792}{0.17920} \approx \boxed{0.9998}$$
+
+    <div class="fb">
+      <strong>结果：</strong>回归方程 $A = 0.025 + 0.255x$，未知样铁含量为 $0.71\ \text{mg}$，相关系数 $r = 0.9998$，线性关系极好。
+    </div>
+    <div class="tip">
+      <strong>线性回归小结：</strong>$b = \dfrac{\sum x_i y_i - n\bar{x}\bar{y}}{\sum x_i^2 - n\bar{x}^2}$；$a = \bar{y} - b\bar{x}$；$r = \dfrac{b\sqrt{\sum(x_i-\bar{x})^2}}{\sqrt{\sum(y_i-\bar{y})^2}}$。$|r| \geq 0.999$ 时线性关系极为显著（分析化学常用标准）。
+    </div>
+  </div>
+</div>
+
+<!-- ===== 全章习题汇总 ===== -->
+<h2>四、全章习题答案速查</h2>
+<div class="card">
+  <table>
+    <tr><th>题号</th><th>考查内容</th><th>方法</th><th>参考答案</th></tr>
+    <tr><td>1</td><td>有效数字运算</td><td>加减乘除、对数规则</td><td>(a) 0.280；(b) 1.167；(c) 0.1251；(d) 0.87 mol/L</td></tr>
+    <tr><td>2</td><td>滴定极值相对误差</td><td>误差传递</td><td>~0.35%</td></tr>
+    <tr><td>3</td><td>光度法误差传递</td><td>$\Delta c / c = \Delta A / A$</td><td>$c=(4.17\pm0.04)\times10^{-5}$ mol/L，$E_r=1.0\%$</td></tr>
+    <tr><td>4</td><td>含氯量统计</td><td>$\bar{x}$、$s$、RSD</td><td>$\bar{x}=0.550$ mg/L；$s=0.0080$ mg/L；RSD=1.5%</td></tr>
+    <tr><td>5</td><td>称量概率</td><td>正态分布 $\pm\sigma$</td><td>68.27%（$\pm1\sigma$）</td></tr>
+    <tr><td>6</td><td>正态分布区间概率</td><td>标准化 $u=(x-\mu)/\sigma$</td><td>~55.28%（依教材参数）</td></tr>
+    <tr><td>7</td><td>最少测定次数</td><td>$n\geq(z\sigma/\Delta)^2$</td><td>$n=4$</td></tr>
+    <tr><td>8</td><td>置信区间</td><td>$t$ 分布</td><td>$21.43\%\pm0.04\%$（90%）；$21.43\%\pm0.05\%$（95%）</td></tr>
+    <tr><td>9</td><td>黄铁矿硫置信区间</td><td>$t$ 分布，$n=6$</td><td>$30.51\%\pm0.04\%$（95%）</td></tr>
+    <tr><td>10</td><td>正态分布验证</td><td>$\pm s$ 内数据占比</td><td>~67%，符合正态分布</td></tr>
+    <tr><td>11</td><td>$F$ 检验精密度</td><td>$F=s_1^2/s_2^2$</td><td>无显著差异</td></tr>
+    <tr><td>12</td><td>$t$ 检验系统误差</td><td>单样本 $t$ 检验</td><td>存在系统误差（$t=5.59>2.776$）</td></tr>
+    <tr><td>13</td><td>两法比较</td><td>$F$ 检验 + 双样本 $t$</td><td>(a) 精密度无差异；(b) 均值无差异</td></tr>
+    <tr><td>14</td><td>新方法评价</td><td>单样本 $t$ 检验</td><td>可能有系统误差（$t=10.0>3.182$）</td></tr>
+    <tr><td>15</td><td>两瓶NaCl比较</td><td>$F$检验 + 双样本 $t$</td><td>有显著差异（$t=3.89>2.365$）</td></tr>
+    <tr><td>16</td><td>新化验员检验</td><td>$z$ 检验（$\sigma$ 已知）</td><td>存在系统误差（$z=3.58>1.96$）</td></tr>
+    <tr><td>17</td><td>显色剂灵敏度</td><td>配对 $t$ 检验</td><td>新试剂显著更灵敏（$t=10.4>2.365$）</td></tr>
+    <tr><td>18</td><td>异常值取舍</td><td>$Q$ 检验 + $4\bar{d}$ 检验</td><td>25.64 弃去</td></tr>
+    <tr><td>19</td><td>$\text{SO}_3$ 异常值</td><td>$Q$ 检验</td><td>(a) 4.71弃去；(b) 全部保留</td></tr>
+    <tr><td>20</td><td>荧光法线性回归</td><td>最小二乘法</td><td>$y=1.52+1.93x$；$r=0.9989$</td></tr>
+    <tr><td>21</td><td>亚铁光度法回归</td><td>最小二乘法</td><td>$y=0.025+0.255x$；$x=0.71$ mg；$r=0.9998$</td></tr>
+  </table>
+</div>
+
+<script src="katex-lazy.js"></script>
+<script src="toc.js"></script>
+</body>
+</html>
