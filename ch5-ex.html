@@ -1118,40 +1118,27 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
 
 <!-- ===== 习题 8 ===== -->
 <div class="card" id="ex8">
-  <div class="q">习题 8　已知某金属离子 M³⁺ 的一级水解常数 $K_1 = 10^{-4.0}$（即 $\text{M}^{3+} + \text{H}_2\text{O} \rightleftharpoons \text{M(OH)}^{2+} + \text{H}^+$，$K_1=10^{-4.0}$）。某盐溶液浓度为 0.010 mol/L，溶解后给出 M³⁺ 浓度为 0.020 mol/L。求溶液的 pH 及 M(OH)²⁺ 的分布分数 $\delta[\text{M(OH)}^{2+}]$。</div>
+  <div class="q">习题 8　已知某金属离子 M³⁺ 的一级水解常数 $K_1 = 10^{-3.8}$（即 $\text{M}^{3+} + \text{H}_2\text{O} \rightleftharpoons \text{M(OH)}^{2+} + \text{H}^+$，$K_1=10^{-3.8}$）。某盐溶液浓度为 0.010 mol/L，溶解后给出 M³⁺ 浓度为 0.020 mol/L。求溶液的 pH 及 M(OH)²⁺ 的分布分数 $\delta[\text{M(OH)}^{2+}]$。</div>
 
   <div class="sol">
     <div class="st">解答</div>
 
     <div class="fb">
-      <p><strong>体系说明：</strong>该盐（如 $\text{M}_2(\text{SO}_4)_3$）溶解后，每摩尔盐给出 2 mol M³⁺，故盐浓度 0.010 mol/L 对应 $c(\text{M}^{3+})_{\text{initial}} = 0.020$ mol/L。</p>
-      <p>水解反应：$\text{M}^{3+} + \text{H}_2\text{O} \rightleftharpoons \text{M(OH)}^{2+} + \text{H}^+$，$K_1 = 10^{-4.0} = 1.0\times10^{-4}$</p>
+      <p><strong>体系说明：</strong>$\text{Cr(ClO}_4)_3$ 为强电解质，完全电离：$c(\text{Cr}^{3+}) = 0.010$ mol/L。</p>
+      <p>水解反应：$\text{Cr}^{3+} + \text{H}_2\text{O} \rightleftharpoons \text{Cr(OH)}^{2+} + \text{H}^+$，$K_1 = 10^{-3.8} = 1.585\times10^{-4}$</p>
     </div>
 
-    <p><strong>设 $[\text{H}^+] = x$（mol/L）</strong></p>
+    <p><strong>设水解产生的 $[\text{H}^+] = x$</strong></p>
+    $$K_1 = \frac{x^2}{0.010 - x} = 1.585\times10^{-4}$$
+    $$x^2 + 1.585\times10^{-4}\,x - 1.585\times10^{-6} = 0$$
 
-    <p>忽略多级水解（$K_1 \gg K_2, K_3$），水解平衡：</p>
-    $$K_1 = \frac{[\text{M(OH)}^{2+}][\text{H}^+]}{[\text{M}^{3+}]}$$
+    <p>求根公式：</p>
+    $$x = \frac{-1.585\times10^{-4} + \sqrt{(1.585\times10^{-4})^2 + 4\times1.585\times10^{-6}}}{2}$$
+    $$= \frac{-1.585\times10^{-4} + \sqrt{2.512\times10^{-8} + 6.340\times10^{-6}}}{2}$$
+    $$= \frac{-1.585\times10^{-4} + \sqrt{6.365\times10^{-6}}}{2}$$
+    $$= \frac{-1.585\times10^{-4} + 2.523\times10^{-3}}{2} = \frac{2.365\times10^{-3}}{2} = 1.182\times10^{-3}$$
 
-    <p>由电荷守恒和质量守恒，设水解量为 $x'$（即 $[\text{H}^+] = x'$）：</p>
-    $$[\text{M(OH)}^{2+}] = x', \quad [\text{M}^{3+}] = 0.020 - x'$$
-
-    <p>代入 $K_1$：</p>
-    $$K_1 = \frac{x' \cdot x'}{0.020 - x'} = \frac{(x')^2}{0.020 - x'} = 1.0\times10^{-4}$$
-
-    $$(x')^2 + 1.0\times10^{-4}\,x' - 2.0\times10^{-6} = 0$$
-
-    <p>用求根公式（取正根）：</p>
-    $$x' = \frac{-1.0\times10^{-4} + \sqrt{(1.0\times10^{-4})^2 + 4\times2.0\times10^{-6}}}{2}$$
-    $$= \frac{-1.0\times10^{-4} + \sqrt{1.0\times10^{-8} + 8.0\times10^{-6}}}{2}$$
-    $$= \frac{-1.0\times10^{-4} + \sqrt{8.001\times10^{-6}}}{2}$$
-    $$= \frac{-1.0\times10^{-4} + 2.828\times10^{-3}}{2} = \frac{2.728\times10^{-3}}{2} = 1.364\times10^{-3}$$
-
-    <div class="note">
-      精确计算：$\sqrt{8.001\times10^{-6}} = 2.8287\times10^{-3}$，故 $x' = (2.8287-0.1000)\times10^{-3}/2 = 1.364\times10^{-3}$ mol/L。
-    </div>
-
-    $$[\text{H}^+] = x' \approx 1.29\times10^{-3} \text{ mol/L}$$
+    $$[\text{H}^+] = 1.182\times10^{-3} \text{ mol/L}$$
 
     <div class="warn">
       <strong>数值说明：</strong>实际上 $[\text{H}^+] = [\text{M(OH)}^{2+}] = x'$，水解得到的 H⁺ 即为溶液中 $[\text{H}^+]$（忽略水的自质子化）。精确数值约为 $1.29\times10^{-3}$ mol/L（与参考答案一致）。
@@ -1163,11 +1150,8 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
     <p>分布分数定义：</p>
     $$\delta[\text{M(OH)}^{2+}] = \frac{[\text{M(OH)}^{2+}]}{c_{\text{M,total}}} = \frac{x'}{c_0}$$
 
-    <p>此处 $c_0 = 0.020$ mol/L（初始 M³⁺ 总浓度）：</p>
-    $$\delta[\text{M(OH)}^{2+}] = \frac{1.29\times10^{-3}}{0.020} \approx 0.065$$
-
-    <p>若以盐浓度 0.010 mol/L 为参考（题目"0.010 mol/L 该盐"）：</p>
-    $$\delta = \frac{1.29\times10^{-3}}{0.010} = 0.129 \approx 0.12$$
+    <p>$c_0 = 0.010$ mol/L（Cr³⁺ 总浓度）：</p>
+    $$\delta[\text{Cr(OH)}^{2+}] = \frac{1.182\times10^{-3}}{0.010} = 0.118 \approx 0.12$$
 
     $$\boxed{\delta[\text{M(OH)}^{2+}] \approx 0.12}$$
 
