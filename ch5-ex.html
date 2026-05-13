@@ -100,7 +100,7 @@ th{background:var(--pri);color:#fff;}
     <p><strong>【溶于乙醇后碱性增强的原因——区分效应】</strong></p>
     <div class="fb">
       <p>水是一种<strong>拉平溶剂（leveling solvent）</strong>，其本身具有较强的质子自递常数（$K_w = 10^{-14}$），对弱碱有"拉平"作用，使弱碱的相对碱性差异变小。</p>
-      <p>乙醇的酸性弱于水（$pK_a \approx 16$，水为14），接受质子能力更弱，是<strong>区分溶剂（differentiating solvent）</strong>。在乙醇中，溶剂竞争质子的能力下降，氨基酸的 $-\text{NH}_2$（或 $-\text{NH}_3^+$）基团的碱性相对突显，$K_b$ 值（相对于乙醇）明显增大。</p>
+      <p>乙醇的质子自递常数远小于水（$pK_s(\text{EtOH}) \approx 19.1$，$pK_s(\text{H}_2\text{O}) = 14$），拉平效应远弱于水，是<strong>区分溶剂（differentiating solvent）</strong>。在乙醇中，溶剂竞争质子的能力下降，氨基酸的 $-\text{NH}_2$（或 $-\text{NH}_3^+$）基团的碱性相对突显，$K_b$ 值（相对于乙醇）明显增大。</p>
     </div>
 
     <p><strong>【非水滴定原理】</strong></p>
@@ -127,10 +127,10 @@ th{background:var(--pri);color:#fff;}
 
     <p><strong>【在DMF（二甲基甲酰胺）中酸性增强的原因】</strong></p>
     <div class="fb">
-      <p>DMF是一种<strong>碱性非质子溶剂</strong>，其接受质子的能力较强，但给出质子的能力极弱（$pK_a \gg 14$）。</p>
-      <p>当磷酰胺溶于DMF中，DMF分子主动"拉取"磷酰胺上 $-\text{NH}$ 基团的质子，相当于提供了一个更有利于质子解离的环境：</p>
-      $$\text{R}_2\text{P(O)NH}_2 + \text{DMF} \rightleftharpoons \text{R}_2\text{P(O)NH}^- + [\text{DMFH}]^+$$
-      <p>由于DMF的拉平效应远弱于水（DMF的质子自递常数远小于 $K_w$），弱酸之间的酸性差异被<strong>区分</strong>出来，磷酰胺的 $-\text{NH}$ 酸性相对显著增强。</p>
+      <p>DMF是一种<strong>极性非质子溶剂</strong>，其质子自递常数极小（远小于水的 $K_w$），几乎没有拉平效应。DMF本身接受质子的能力很弱（$[\text{DMFH}]^+$ 的 $pK_a \approx -1$），不会主动夺取弱酸的质子。</p>
+      <p>磷酰胺在DMF中酸性增强的原因是：DMF消除了水溶液中的拉平效应，使弱酸之间的酸性差异被充分<strong>区分</strong>出来。加入碱标准液（如 $\text{NaOCH}_3$）可直接滴定磷酰胺的 $-\text{NH}$ 基团：</p>
+      $$\text{R}_2\text{P(O)NH}_2 + \text{NaOCH}_3 \rightleftharpoons \text{R}_2\text{P(O)NH}^-\text{Na}^+ + \text{CH}_3\text{OH}$$
+      <p>在DMF中，弱酸之间的酸性差异被区分出来，磷酰胺的 $-\text{NH}$ 酸性相对显著增强，产生明显的滴定突跃。</p>
     </div>
 
     <p><strong>【实际滴定操作】</strong></p>
@@ -359,7 +359,7 @@ th{background:var(--pri);color:#fff;}
     <p><em>① 甲基橙 + 靛蓝二磺酸钠（蓝色背景）</em></p>
     <p>靛蓝（蓝色惰性染料）+ 甲基橙（红色↔黄色）：酸性时蓝+红=紫色，终点时蓝+黄=绿色，突变明显，变色点约 $\text{pH} = 4.0$。</p>
 
-    <p><em>② 溴甲酚绿 + 甲基红（BPB-MR）</em></p>
+    <p><em>② 溴甲酚绿 + 甲基红（BCG-MR）</em></p>
     <p>溴甲酚绿（$pK_a = 4.7$，黄↔蓝）与甲基红（$pK_a = 5.1$，红↔黄）混合，变色点 $\text{pH} \approx 5.1$：</p>
     <ul style="margin-left:20px;">
       <li>$\text{pH} < 5.1$：溴甲酚绿偏黄 + 甲基红偏红 → 呈<strong>酒红色</strong></li>
@@ -532,7 +532,7 @@ a. $\mathrm{H_2SO_3 + H_3PO_4}$ &nbsp; b. $\mathrm{HCl + H_3BO_3}$ &nbsp; c. $\m
   <li><strong>第一步：</strong>NaOH（强碱）被先滴定，形成<strong>第 1 个突跃</strong>（$\mathrm{OH^- + H^+ \to H_2O}$）。</li>
   <li><strong>第二步：</strong>$\mathrm{PO_4^{3-} + H^+ \to HPO_4^{2-}}$，$K_{b1}$ 较大，$c \cdot K_{b1} \gg 10^{-8}$，形成<strong>第 2 个突跃</strong>。</li>
   <li><strong>第三步：</strong>$\mathrm{HPO_4^{2-} + H^+ \to H_2PO_4^-}$，$K_{b2}=1.6\times10^{-7}$，$c \cdot K_{b2} \approx 1.6\times10^{-8} \approx 10^{-8}$，勉强能被滴定，但突跃不明显，通常认为<strong>有不明显的第 3 个突跃</strong>，或实际应用中只利用前两个突跃。</li>
-  <li>NaOH 第一级与 $\mathrm{PO_4^{3-}}$ 第一级的 $K_b$ 差异很大（强碱 vs $K_{b1}=0.045$），但 HCl 滴定强碱的突跃在 pH≈7 附近，$\mathrm{PO_4^{3-} \to HPO_4^{2-}}$ 的突跃在 pH≈9.7 附近，两者能分开。</li>
+  <li>NaOH 第一级与 $\mathrm{PO_4^{3-}}$ 第一级的 $K_b$ 差异很大（强碱 vs $K_{b1}=0.045$），在含有 $\mathrm{Na_3PO_4}$ 的混合体系中，NaOH 等当点 pH 远高于纯 NaOH 的情况（因为 $\mathrm{PO_4^{3-}}$ 的缓冲作用，pH≈12–13），而 $\mathrm{PO_4^{3-} \to HPO_4^{2-}}$ 的突跃在 pH≈9.7 附近，两者能分开。</li>
 </ul>
 <p><strong>结论：2 个明显突跃（NaOH 对应 1 个，$\mathrm{PO_4^{3-} \to HPO_4^{2-}}$ 对应 1 个）。</strong></p>
 
@@ -596,7 +596,7 @@ a. $\mathrm{HCl + H_3BO_3}$ &nbsp; b. $\mathrm{H_2SO_3 + H_3PO_4}$ &nbsp; c. $\m
   <li><strong>第一步（直接滴定 HCl）：</strong>用 NaOH 标准溶液，以<strong>甲基红</strong>为指示剂（终点 pH≈6），只中和强酸 $\mathrm{HCl}$（$\mathrm{NH_4^+}$ 的 $K_a=5.6\times10^{-10}$ 太弱，不在此步被滴定），消耗 $V_1$。
   $$n(\mathrm{HCl}) = c(\mathrm{NaOH}) \cdot V_1$$</li>
   <li><strong>第二步（测定 $\mathrm{NH_4Cl}$）：</strong>方法一——加入过量 NaOH，蒸馏出 $\mathrm{NH_3}$，用标准 $\mathrm{HCl}$ 吸收后反滴定；方法二——甲醛法：加入甲醛与 $\mathrm{NH_4^+}$ 反应生成六次甲基四胺（$\mathrm{(CH_2)_6N_4}$）并释放 $\mathrm{H^+}$，使 $\mathrm{NH_4^+}$ 转化为等当量的强酸，再用 NaOH 以酚酞为指示剂滴定，消耗 $V_2$。
-  $$\mathrm{4NH_4^+ + 6HCHO \to (CH_2)_6N_4H^+ + 3H_2O + 4H^+} \quad (\text{等效})$$
+  $$\mathrm{4NH_4^+ + 6HCHO \to (CH_2)_6N_4 + 6H_2O + 4H^+}$$
   $$n(\mathrm{NH_4Cl}) = c(\mathrm{NaOH}) \cdot V_2$$</li>
 </ol>
 
@@ -726,9 +726,8 @@ $$K_a = [\mathrm{H}^+] \implies \mathrm{pH} = \mathrm{p}K_a(\mathrm{NH_4^+}) = 9
 $$[\mathrm{OH^-}] = [\mathrm{NH_4^+}] + [\mathrm{H^+}]$$
 
 <p>近似计算（忽略 $[\mathrm{H^+}]$）：</p>
-$$[\mathrm{OH}^-] \approx \sqrt{K_b \cdot C} = \sqrt{\frac{K_w}{K_a} \cdot C} = \sqrt{\frac{10^{-14}}{1.8\times10^{-5}} \times 0.10}$$
-$$= \sqrt{5.56\times10^{-16}} \approx 7.5\times10^{-4}\ \mathrm{mol/L}$$
-$$\mathrm{pOH} = -\lg(7.5\times10^{-4}) \approx 3.12 \implies \mathrm{pH} = 14 - 3.12 = 10.88 \approx 11.1$$
+$$[\mathrm{OH}^-] \approx \sqrt{K_b \cdot C} = \sqrt{1.8\times10^{-5} \times 0.10} = \sqrt{1.8\times10^{-6}} \approx 1.34\times10^{-3}\ \mathrm{mol/L}$$
+$$\mathrm{pOH} = -\lg(1.34\times10^{-3}) \approx 2.87 \implies \mathrm{pH} = 14 - 2.87 = 11.13$$
 
 <p>实际 pH≈11.1（约 11.13），远高于交点 S 的 pH=9.25。</p>
 
@@ -737,7 +736,7 @@ $$\mathrm{pOH} = -\lg(7.5\times10^{-4}) \approx 3.12 \implies \mathrm{pH} = 14 -
   <li><strong>交点 S（pH=9.25）</strong>是一个纯粹的<strong>几何条件</strong>：在图中，$\lg[\mathrm{NH_3}]$ 曲线和 $\lg[\mathrm{NH_4^+}]$ 曲线的交叉点。它的含义是"当 pH 等于 $\mathrm{p}K_a$ 时，两种形态浓度相等"，这是热力学平衡的必然结果，与溶液的总浓度无关。</li>
   <li><strong>实际 pH（约 11.1）</strong>是由<strong>质子守恒方程</strong>（电荷守恒）决定的，考虑了溶液中实际的质子转移情况。在 pH=11.1 时，$[\mathrm{NH_3}] \gg [\mathrm{NH_4^+}]$，大部分 NH₃ 保持未质子化状态。</li>
   <li>在 $\lg c$-pH 图上，交点 S 可用于<strong>快速寻找质子条件式的近似解</strong>（系统点法），但实际 pH 必须通过质子条件式严格求解，不能直接读交点。</li>
-  <li>$0.10\ \mathrm{mol/L}\ \mathrm{NH_3}$ 溶液的实际状态点在 pH=11.1 处，此时 $\lg[\mathrm{NH_3}] \approx -1.00$，$\lg[\mathrm{NH_4^+}] \approx -4.75$，两者相差很大（$[\mathrm{NH_3}]/[\mathrm{NH_4^+}] \approx 10^{1.85}$），说明溶液中绝大多数是 $\mathrm{NH_3}$ 形式，只有极少量转化为 $\mathrm{NH_4^+}$。</li>
+  <li>$0.10\ \mathrm{mol/L}\ \mathrm{NH_3}$ 溶液的实际状态点在 pH=11.1 处，此时 $\lg[\mathrm{NH_3}] \approx -1.00$，$\lg[\mathrm{NH_4^+}] \approx -2.86$，两者相差较大（$[\mathrm{NH_3}]/[\mathrm{NH_4^+}] \approx 10^{1.88}$），说明溶液中绝大多数是 $\mathrm{NH_3}$ 形式，只有极少量转化为 $\mathrm{NH_4^+}$。</li>
 </ul>
 </div>
 </div>
@@ -1099,12 +1098,12 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
     $$\text{pOH} = -\lg(7.21\times10^{-3}) = 3 - \lg 7.21 = 3 - 0.858 = 2.14$$
 
     <div class="fb">
-      $$\text{pH} = 14 - \text{pOH} = 14 - 2.14 = \boxed{10.38} \quad (25°C)$$
+      $$\text{pH} = 14 - \text{pOH} = 14 - 2.14 = \boxed{11.86} \quad (25°C)$$
     </div>
 
     <div class="tip">
       <strong>验证（最简公式）：</strong>若用最简公式：$x \approx \sqrt{0.10 \times 5.6\times10^{-4}} = \sqrt{5.6\times10^{-5}} = 7.48\times10^{-3}$，$\text{pOH} = 2.13$，$\text{pH} = 11.87$。
-      这与精确解 pH=10.38 相差明显，说明 $c/K_b < 400$ 时确实需要精确公式。
+      这与精确解 pH=11.86 非常接近（仅差0.01），说明此处最简公式近似足够好。但严格来讲 $c/K_b = 179 < 400$，使用精确公式更规范。
     </div>
 
     <hr style="margin:14px 0; border-color:#e0d8c8;">
@@ -1219,15 +1218,13 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
       $$\text{pH} = -\lg(5.27\times10^{-6}) = 5.28$$
     </div>
 
-    <p><em>用公式 $\text{pH} = 7 - \dfrac{1}{2}(pK_b - \lg c) = 7 - \dfrac{1}{2}(4.74 + 1.30) = 7 - 3.02 = 4.98$</em></p>
-
-    <div class="warn">
-      注意：$\text{pOH}$ 公式中使用 $pK_b = -\lg K_b(\text{NH}_3) = -\lg(1.8\times10^{-5}) = 4.74$；<br>
-      $\text{pH} = 7 - \dfrac{1}{2}(pK_b - \lg c)$，代入 $c=0.050$，$\lg c = -1.30$：<br>
-      $\text{pH} = 7 - \dfrac{1}{2}(4.74-(-1.30)) = 7 - \dfrac{6.04}{2} = 7 - 3.02 = \mathbf{3.98}$
+    <div class="fb">
+      <p>强酸弱碱盐最简公式：$\text{pH} = \dfrac{1}{2}(pK_a - \lg c)$，其中 $pK_a = pK_a(\text{NH}_4^+) = 14 - pK_b(\text{NH}_3) = 14 - 4.74 = 9.26$</p>
+      $$\text{pH} = \dfrac{1}{2}(9.26 - \lg 0.050) = \dfrac{1}{2}(9.26 + 1.30) = \dfrac{10.56}{2} = \boxed{5.28}$$
     </div>
-
-    <p>更准确用最简公式结果：$\text{pH} = \dfrac{1}{2}(pK_a - \lg c) = \dfrac{1}{2}(9.26 + 1.30) = \dfrac{10.56}{2} = \boxed{5.28}$</p>
+    <div class="warn">
+      <strong>易错点：</strong>不要混淆 $pK_a$ 和 $pK_b$。此处用的是共轭酸 $\text{NH}_4^+$ 的 $pK_a = 9.26$，不是 $\text{NH}_3$ 的 $pK_b = 4.74$。
+    </div>
 
     <hr style="margin:14px 0; border-color:#e0d8c8;">
 
@@ -1239,19 +1236,14 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
       <li>$\text{CN}^-$：弱碱，$K_b(\text{CN}^-) = K_w/K_a(\text{HCN}) = 1.0\times10^{-14}/6.2\times10^{-10} = 1.61\times10^{-5}$，$pK_a(\text{HCN}) = 9.21$</li>
     </ul>
 
-    <p>对于双水解盐，精确 pH 使用近似公式：</p>
-    $$\text{pH} \approx 7 + \frac{1}{2}(pK_a(\text{HCN}) - pK_a(\text{NH}_4^+))$$
-    $$= 7 + \frac{1}{2}(9.21 - 9.26) = 7 + \frac{-0.05}{2} = 7 - 0.025 \approx 7.00$$
+    <p>$\text{NH}_4\text{CN}$ 是弱酸弱碱盐（双水解盐），使用标准公式：</p>
 
     <div class="note">
-      <strong>精确推导：</strong>对 $\text{NH}_4\text{CN}$ 溶液，两个水解反应为：<br>
-      $\text{NH}_4^+ \rightleftharpoons \text{NH}_3 + \text{H}^+$，$K_{a1} = 5.56\times10^{-10}$<br>
-      $\text{CN}^- + \text{H}_2\text{O} \rightleftharpoons \text{HCN} + \text{OH}^-$，$K_{b2} = 1.61\times10^{-5}$<br>
-      净反应：$\text{NH}_4^+ + \text{CN}^- \rightleftharpoons \text{NH}_3 + \text{HCN}$，$K = K_{a1}\cdot K_{b2}/K_w = 5.56\times10^{-10}\times1.61\times10^{-5}/10^{-14} = 8.95$（相当大，水解程度较大）<br>
-      用更严格的质子平衡分析：$[\text{H}^+] = \sqrt{\dfrac{K_w \cdot K_a(\text{NH}_4^+)}{K_b(\text{CN}^-)}\cdot\dfrac{K_b(\text{CN}^-)c + K_w}{K_a(\text{NH}_4^+)c + K_w}}$，近似时给出 $\approx \sqrt{K_w \cdot K_a(\text{HCN})/K_b(\text{CN}^-)} = \sqrt{10^{-14} \times 6.2\times10^{-10}/1.61\times10^{-5}} = \sqrt{3.85\times10^{-19}} = 6.2\times10^{-10}$，pH = 9.21？
+      <strong>推导：</strong>$\text{NH}_4^+$ 水解呈酸性（$K_a = 5.56\times10^{-10}$），$\text{CN}^-$ 水解呈碱性（$K_b = K_w/K_a(\text{HCN}) = 1.61\times10^{-5}$）。<br>
+      当 $c \gg K_a$ 时，$[\text{H}^+]^2 \approx K_a(\text{NH}_4^+) \cdot K_a(\text{HCN})$，故 pH 与浓度无关。
     </div>
 
-    <p>更常用的近似公式（两性物种标准公式）：</p>
+    <p>双水解盐标准公式：</p>
     $$\text{pH} = \frac{1}{2}(pK_{a}(\text{NH}_4^+) + pK_{a}(\text{HCN}))= \frac{1}{2}(9.26 + 9.21) = \frac{18.47}{2}$$
 
     <div class="fb">
@@ -1360,20 +1352,19 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
     <p>因此等摩尔量的 $\text{CH}_3\text{NH}_2$（0.050 mol/L）与 $\text{NH}_4^+$（0.050 mol/L）几乎完全反应：</p>
     $$0.050\;\text{CH}_3\text{NH}_2 + 0.050\;\text{NH}_4^+ \rightarrow 0.050\;\text{CH}_3\text{NH}_3^+ + 0.050\;\text{NH}_3$$
 
-    <p>反应后溶液相当于 0.050 mol/L $\text{CH}_3\text{NH}_3^+$ + 0.050 mol/L $\text{NH}_3$ 的混合物，即一个由 $\text{NH}_3/\text{NH}_4^+$ 组成的缓冲液（近似）：</p>
+    <p>反应后溶液相当于 ~0.050 mol/L $\text{CH}_3\text{NH}_3^+$ + ~0.050 mol/L $\text{NH}_3$ 的混合物。</p>
 
-    <p>用 Henderson-Hasselbalch 公式对 NH₃/NH₄⁺ 缓冲：</p>
-    $$\text{pH} = pK_a(\text{NH}_4^+) + \lg\frac{[\text{NH}_3]}{[\text{NH}_4^+]}$$
+    <p><strong>关键：</strong>体系中的酸是 $\text{CH}_3\text{NH}_3^+$（$pK_a = 10.62$），碱是 $\text{NH}_3$（$pK_b = 4.74$，即其共轭酸 $\text{NH}_4^+$ 的 $pK_a = 9.26$）。这是一个<strong>弱酸-弱碱</strong>共存体系。</p>
 
-    <p>但此时还有 $\text{CH}_3\text{NH}_3^+$（$pK_a = 10.62$）存在，更严格地应对整体质子平衡求解。</p>
-
-    <div class="tip">
-      <strong>近似处理：</strong>体系中有 NH₃（0.050 M）/ NH₄⁺（来自 CH₃NH₂ 取 NH₄⁺ 质子）和 CH₃NH₃⁺。溶液 pH 由最强的碱/酸对控制，即 NH₃（$pK_b=4.74$）/ NH₄⁺（$pK_a=9.26$）缓冲对，且 $[\text{NH}_3]/[\text{NH}_4^+] = 0.050/0.050 = 1$：
-      $$\text{pH} \approx pK_a(\text{NH}_4^+) + \lg 1 = 9.26 + 0 = \boxed{9.26}$$
+    <div class="fb">
+      <p>弱酸弱碱混合体系的 pH 近似公式：</p>
+      $$\text{pH} = \frac{1}{2}(pK_{a,\text{acid}} + pK_{a,\text{conjugate acid of base}})$$
+      <p>这里"酸"= $\text{CH}_3\text{NH}_3^+$（$pK_a = 10.62$），"碱的共轭酸"= $\text{NH}_4^+$（$pK_a = 9.26$）：</p>
+      $$\text{pH} = \frac{1}{2}(10.62 + 9.26) = \frac{19.88}{2} = \boxed{9.94}$$
     </div>
 
     <div class="warn">
-      此计算有一定近似，实际因甲胺未完全与 NH₄⁺ 反应（K=23.3，约 98%），还有少量甲胺和 NH₄⁺ 残余，结果偏差不大，pH ≈ 9.26~9.7。教材参考答案视具体 Kb 值而定。
+      <strong>注意：</strong>不要误认为 pH 由 NH₃/NH₄⁺ 缓冲对决定（那样会得到 pH=9.26）。实际上体系中没有 NH₄⁺ 存在——$\text{NH}_4^+$ 已经被 $\text{CH}_3\text{NH}_2$ 夺去了质子。酸性组分是 $\text{CH}_3\text{NH}_3^+$，而不是 $\text{NH}_4^+$。
     </div>
 
   </div>
@@ -3701,22 +3692,24 @@ $$E_t = \frac{r}{1+r} \times 100\% = \frac{0.00955}{1.00955} \times 100\% = 0.94
     $$= 2.000 \times 10^{-3} - 1.500 \times 10^{-3} = 5.00 \times 10^{-4}\,\text{mol}$$
 
     <p><strong>第四步：计算磷的物质的量</strong></p>
-    <p>由反应式，1 mol 磷钼酸铵消耗 23 mol NaOH，且每个沉淀含 1 个 P 原子：</p>
-    $$n(\text{P}) = \frac{n(\text{NaOH})_{\text{消耗}}}{23} = \frac{5.00 \times 10^{-4}}{23} = 2.174 \times 10^{-5}\,\text{mol}$$
+    <p>磷钼酸铵沉淀与 NaOH 的反应（配平后）：</p>
+    $$(\text{NH}_4)_3\text{PO}_4 \cdot 12\text{MoO}_3 + 26\text{NaOH} \to \text{Na}_2\text{HPO}_4 + 12\text{Na}_2\text{MoO}_4 + 3\text{NH}_3\!\uparrow + 14\text{H}_2\text{O}$$
+    <p>1 mol 磷钼酸铵消耗 <strong>26</strong> mol NaOH，且每个沉淀含 1 个 P 原子：</p>
+    $$n(\text{P}) = \frac{n(\text{NaOH})_{\text{消耗}}}{26} = \frac{5.00 \times 10^{-4}}{26} = 1.923 \times 10^{-5}\,\text{mol}$$
 
     <p><strong>第五步：计算 $\text{P}_2\text{O}_5$ 的物质的量</strong></p>
     <p>每摩尔 $\text{P}_2\text{O}_5$ 含 2 个 P 原子：</p>
-    $$n(\text{P}_2\text{O}_5) = \frac{n(\text{P})}{2} = \frac{2.174 \times 10^{-5}}{2} = 1.087 \times 10^{-5}\,\text{mol}$$
+    $$n(\text{P}_2\text{O}_5) = \frac{n(\text{P})}{2} = \frac{1.923 \times 10^{-5}}{2} = 9.615 \times 10^{-6}\,\text{mol}$$
 
     <p><strong>第六步：计算 $\text{P}_2\text{O}_5$ 的质量</strong></p>
     $$M(\text{P}_2\text{O}_5) = 2 \times 30.97 + 5 \times 16.00 = 61.94 + 80.00 = 141.94\,\text{g/mol}$$
-    $$m(\text{P}_2\text{O}_5) = 1.087 \times 10^{-5} \times 141.94 = 1.543 \times 10^{-3}\,\text{g}$$
+    $$m(\text{P}_2\text{O}_5) = 9.615 \times 10^{-6} \times 141.94 = 1.365 \times 10^{-3}\,\text{g}$$
 
     <p><strong>第七步：计算质量分数</strong></p>
-    $$w(\text{P}_2\text{O}_5) = \frac{1.543 \times 10^{-3}\,\text{g}}{1.000\,\text{g}} = 1.543 \times 10^{-3} = 0.154\%$$
+    $$w(\text{P}_2\text{O}_5) = \frac{1.365 \times 10^{-3}\,\text{g}}{1.000\,\text{g}} = 1.365 \times 10^{-3} = 0.137\%$$
 
     <div class="warn">
-      若参考答案取 $0.105\%$，则磷的摩尔数对应 $n(\text{P})=\frac{0.105\%\times2\times1.000}{141.94}=1.48\times10^{-5}$ mol，消耗 NaOH = $23\times1.48\times10^{-5}\times2=6.81\times10^{-4}$ mol，所需返滴定 $n(\text{HNO}_3)=2.000\times10^{-3}-6.81\times10^{-4}=1.319\times10^{-3}$ mol，对应 $V=6.60$ mL。本题实际给出 $7.50$ mL HNO₃，按以上计算得 $w=0.154\%$。题目数据版本不同可能导致参考答案差异。本计算过程和方法完全正确。
+      参考答案 $0.105\%$ 与本题数据存在差异，可能源于教材不同版本的数据。按本题给出的数据（20.00 mL × 0.100 mol/L NaOH，返滴定 7.50 mL × 0.200 mol/L HNO₃），采用正确的化学计量系数（26 mol NaOH / mol 沉淀），得 $w = 0.137\%$。计算方法完全正确。
     </div>
 
     <div class="tip">
@@ -3947,7 +3940,7 @@ $$E_t = \frac{r}{1+r} \times 100\% = \frac{0.00955}{1.00955} \times 100\% = 0.94
       <ul>
         <li>$\text{HgO}$ 在 KI 溶液中溶解完全，$\text{Hg}^{2+}$ 与 $\text{I}^-$ 形成极稳定的 $[\text{HgI}_4]^{2-}$，使反应定量进行。</li>
         <li>关键计量关系：$n(\text{HgO}) = \frac{1}{2}n(\text{HCl})$。</li>
-        <li>$M(\text{HgO}) = 216.59$ g/mol（注意 HgO 为一价汞的氧化物，不是 $\text{Hg}_2\text{O}$）。</li>
+        <li>$M(\text{HgO}) = 216.59$ g/mol（HgO 为二价汞（$\text{Hg}^{2+}$）的氧化物，不是一价汞的 $\text{Hg}_2\text{O}$）。</li>
       </ul>
     </div>
     <div class="note">
