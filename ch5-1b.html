@@ -77,6 +77,25 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <div class="warn">本节是整章的核心！所有公式和判据条件都需要熟记。考试中约30%-40%的计算题出自此节。</div>
 
+<!-- ===== FXY 专属：头号弱点强化区 ===== -->
+<div class="exam">
+  <div class="t">⚠️ 你在这反复卡（全科目最持久弱点 · 5/11~5/16 连问 5 次）</div>
+  <p>你 5/11、5/12、5/13 <strong>三天连问同一句</strong>"总结判别式和公式"，5/14 学习回顾标 ❌，原话「<strong>感觉各种公式把我脑子搞炸了</strong>」，5/16 仍 ⚠️「仅记口诀，未实际应用计算」。<strong>根源是你把两套完全不同的判别式搞混了</strong>——一套问"能不能滴"，一套问"算 pH 用哪个式子"。下面两张图就是专门破这个卡点的，先看透再往下学。</p>
+  <p style="margin-top:6px;"><strong>怎么破：</strong>做 pH 题强制先写出两个数 $cK_a=?$、$c/K_a=?$，再照"判别地图"选式——不要凭感觉直接套最简式。配套看 <a href="我的薄弱点.html">我的薄弱点</a> 弱点②。</p>
+</div>
+
+<div class="card">
+  <p style="text-align:center;font-weight:bold;color:var(--acc);margin-bottom:6px;">两套判别式对比（务必区分）</p>
+  <img loading="lazy" decoding="async" src="img/fxy_two_criteria.png" alt="可行性判别 vs pH公式选择判别" style="display:block;max-width:100%;margin:0 auto;border:1px solid #e0d8c8;border-radius:6px;">
+  <p style="text-align:center;font-size:.82em;color:#888;margin-top:4px;">判别式①（可行性 $cK_a\geq10^{-8}$）是<strong>化学反应完全度</strong>判据，决定"这道滴定有没有意义"；判别式②（公式选择 $20K_w$/500）是<strong>数学近似误差</strong>判据，决定"算 pH 用哪条式子"。Gemini 当时专门警告"$cK_a\geq10^{-8}$ 与 $c/K_a\geq500$ 完全不同，切勿混淆"——这正是你的卡点。</p>
+</div>
+
+<div class="card">
+  <p style="text-align:center;font-weight:bold;color:var(--pri);margin-bottom:6px;">一元弱酸 pH 公式选择判别地图（默写它）</p>
+  <img loading="lazy" decoding="async" src="img/fxy_ph_decision_map.png" alt="一元弱酸pH公式选择判别地图" style="display:block;max-width:100%;margin:0 auto;border:1px solid #e0d8c8;border-radius:6px;">
+  <p style="text-align:center;font-size:.82em;color:#888;margin-top:4px;">口诀"$20K_w$ 管水、500 管自己"。两条都满足→最简式；只过闸门①→近似式（一元二次）；闸门①不过→极弱酸式。弱碱整套照搬（$H^+\to OH^-$、$K_a\to K_b$，最后 $14-pOH$）。⚠️ 阈值 $c/K_a\geq$ 500 还是 400 以你课件/老师口径为准（本站正文取 400，与作战手册一致）。</p>
+</div>
+
 <div class="card">
 <p style="text-align:center;font-weight:bold;color:var(--pri);margin-bottom:6px;">一元弱酸的对数浓度图（lgc-pH 图）</p>
 <img loading="lazy" decoding="async" src="img/diagrams/log_concentration_weak_acid.svg" alt="弱酸对数浓度图 lgc-pH" style="display:block;max-width:500px;margin:0 auto;border:1px solid #e0d8c8;border-radius:6px;">
@@ -622,6 +641,27 @@ $$= \sqrt{\frac{7.59\times10^{-3} \times 6.31\times10^{-9}}{0.1076}} = \sqrt{\fr
 $$\text{pH} = -\lg(2.11\times10^{-5}) = 4.68$$
 <p>与最简式的4.66相差仅0.02，说明即使 $c/K_{a1}$ 不太大，最简式误差也可接受。</p>
 </div>
+</div>
+
+<div class="exam">
+<div class="t">真题原型（2022 期末三-4，14 分，占分最高）— H-H 反推 $pK_a$ + 计量点 + 选指示剂</div>
+<p><strong>题目：</strong>用 0.1000 mol/L NaOH 滴 20.00 mL 同浓度一元弱酸 HA，加入 18.00 mL 时 pH=5.82。(1) 写滴定反应方程；(2) 求 $pK_a$；(3) 算计量点 pH + 选指示剂（百里酚酞 9.4~10.6 / 酚酞 8.0~9.8 / 甲基橙 3.1~4.4 / 甲基红 4.4~6.2）；(4) 画曲线标计量点；(5) 酚酞 pH=9.1 为终点，求终点误差。</p>
+<div class="sol">
+<div class="st">解（5 连问标准套路）：</div>
+<p><strong>(1)</strong> $\text{HA}+\text{NaOH}\to\text{NaA}+\text{H}_2\text{O}$。</p>
+<p><strong>(2) 这一问就是用本节的 H-H 方程反推：</strong>加 18.00 mL 时是缓冲区（HA 剩余 + 已生成 A⁻）。剩 HA $=2.000-1.800=0.200$ mmol，生成 $A^-=1.800$ mmol。</p>
+$$5.82=pK_a+\lg\frac{[A^-]}{[\text{HA}]}=pK_a+\lg\frac{1.800}{0.200}=pK_a+0.954\;\Rightarrow\;\boxed{pK_a=4.87}$$
+<p><strong>(3) 计量点</strong>全部变共轭碱 NaA（一元弱碱）：$c(\text{NaA})=\dfrac{2.000}{40.00}=0.0500$ mol/L，$K_b=\dfrac{K_w}{K_a}=\dfrac{10^{-14}}{10^{-4.87}}=10^{-9.13}$。验最简式条件后：$[OH^-]=\sqrt{c_{sp}K_b}=\sqrt{0.0500\times10^{-9.13}}=6.1\times10^{-6}$，pOH=5.22，<strong>pH=8.78</strong>（偏碱侧）→ 选<strong>酚酞</strong>（8.0~9.8，变色点最接近 8.78）。</p>
+<p><strong>(4)</strong> 见下图 S 形曲线。</p>
+<p><strong>(5) 终点误差（林邦弱酸式）：</strong>$\Delta pH=pH_{ep}-pH_{sp}=9.1-8.78=0.32$，$K_t=\dfrac{K_a}{K_w}=10^{9.13}$，$c_{sp}=0.0500$。</p>
+$$E_t=\frac{10^{\Delta pH}-10^{-\Delta pH}}{\sqrt{K_t\,c_{sp}}}\times100\%=\frac{10^{0.32}-10^{-0.32}}{\sqrt{10^{9.13}\times0.0500}}\times100\%\approx +0.02\%$$
+<p>误差极小可接受（按 $\sqrt{K_t c_{sp}}$ 口径）。</p>
+</div>
+<div class="card" style="margin-top:10px;">
+  <img loading="lazy" decoding="async" src="img/fxy_weak_acid_curve.png" alt="强碱滴定弱酸曲线 pKa=4.87" style="display:block;max-width:100%;margin:0 auto;border:1px solid #e0d8c8;border-radius:6px;">
+  <p style="text-align:center;font-size:.82em;color:#888;margin-top:4px;">滴定曲线三个标志点：起点 pH≈2.94（$\sqrt{cK_a}$）；半当量点（50%，V=10 mL）<strong>$pH=pK_a=4.87$</strong> 是缓冲区拐点；计量点（V=20 mL）pH=8.78 在突跃中段偏碱侧，故选酚酞。</p>
+</div>
+<div class="warn"><strong>易错提醒：</strong>① 计量点忘了 $c_{sp}=c_0/2$ 稀释（等浓等体积混合后浓度减半）；② 半当量点是 $pH=pK_a$（一元酸），别写成 pH=pKb；③ 弱碱滴定时计量点是<strong>共轭酸</strong>（酸性，pH&lt;7），选指示剂方向相反。</div>
 </div>
 
 <!-- ==================== 9. 考试陷阱 ==================== -->

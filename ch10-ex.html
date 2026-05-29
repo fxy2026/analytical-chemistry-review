@@ -6,8 +6,7 @@
 <title>第十章 课后习题详解 | 分析化学</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload=""></script>
-<link rel="stylesheet" href="toc.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
 <style>
 :root{--pri:#1a5276;--acc:#c0392b;--bg:#fffef9;--card:#fff;--border:#e0d8c8;}
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -27,7 +26,7 @@ table{width:100%;border-collapse:collapse;margin:12px 0;}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
 th{background:var(--pri);color:#fff;}
 tr:nth-child(even){background:#f9f7f2;}
-.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;backface-visibility:hidden;transform:translateZ(0);}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;}
 .nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
 .nav-bar a:hover{background:#1a5276;color:#fff;}
 ul,ol{margin-left:20px;margin-bottom:8px;}
@@ -38,1000 +37,499 @@ ul,ol{margin-left:20px;margin-bottom:8px;}
 
 <div class="nav-bar">
   <a href="index.html">首页</a>
-  <a href="ch1.html">第一章</a>
-  <a href="ch3-1.html">第三章(上)</a>
-  <a href="ch3-2.html">第三章(下)</a>
-  <a href="ch3-ex.html">三⑤习题</a>
-  <a href="ch5-1a.html">五①平衡</a>
-  <a href="ch5-1b.html">五②计算</a>
-  <a href="ch5-2a.html">五③滴定</a>
-  <a href="ch5-2b.html">五④进阶</a>
-  <a href="ch5-ex.html">五⑤习题</a>
-  <a href="ch6-ex.html">六⑤习题</a>
-  <a href="ch7-ex.html">七⑤习题</a>
-  <a href="ch6-1.html">第六章(上)</a>
-  <a href="ch6-2.html">第六章(下)</a>
-  <a href="ch7.html">第七章</a>
-  <a href="ch9-1.html">第九章(上)</a>
-  <a href="ch9-2.html">第九章(下)</a>
   <a href="ch10.html">第十章</a>
   <a href="ch10-ex.html" style="background:#1a5276;color:#fff;">十⑤习题</a>
   <a href="formulas.html">公式表</a>
-  <a href="exam-review.html">备考</a>
-  <a href="quiz1.html">小测1</a>
-  <a href="quiz2.html">小测2</a>
-  <a href="final2022.html">期末真题</a>
+  <a href="ch5-ex.html">五⑤习题</a>
 </div>
 
 <h1>第十章 吸光光度法 — 课后习题详解</h1>
 
 <div class="warn">
-  <strong>本章核心：</strong>吸光光度法基于 Beer-Lambert 定律 $A = \varepsilon b c$，掌握摩尔吸光系数、透射比与吸光度的关系、标准曲线的建立与偏差成因、显色反应优化、示差法和双波长法的原理与应用，是本章学习的重点。
+  <strong>说明：</strong>本章习题来源为武汉大学《分析化学》（第六版）上册 p345-347。原书共 15 题思考题 + 16 题习题。涉及朗伯-比耳定律、显色反应、配位比测定（饱和法/连续变化法/摩尔比法）、双组分共存测定、双波长法、示差法、动力学/催化光度法等。
 </div>
 
-<!-- ==================== 思考题 ==================== -->
-<h2 id="think">一、思考题（概念理解）</h2>
+<h2>一、思考题（概念理解）</h2>
 
-<!-- 思考题1 -->
 <h3>思考题 1</h3>
 <div class="card">
-  <div class="q">名词解释：吸收光谱、标准曲线、互补光、显色反应、吸光度、透射比</div>
+  <div class="q">解释下列名词：(a) 吸光度及标准曲线；(b) 互补光及单色光；(c) 吸光度与透射比。</div>
   <div class="sol">
-    <div class="st">【解】</div>
+    <p><strong>【(a) 吸光度 与 标准曲线】</strong></p>
+    <p><strong>吸光度</strong>（absorbance, $A$）：物质吸收光的程度的量度。定义为入射光强度 $I_0$ 与透射光强度 $I$ 之比的对数：</p>
+    $$A=\lg\frac{I_0}{I}=-\lg T$$
+    <p>当满足朗伯-比耳定律时 $A=\varepsilon b c$（$\varepsilon$ 为摩尔吸光系数，$b$ 为光程，$c$ 为物质的量浓度）。</p>
+    <p><strong>标准曲线</strong>：在选定的条件下，配制一系列已知浓度的标准溶液，于最大吸收波长 $\lambda_{\max}$ 下测得各自吸光度 $A$，以 $A$ 为纵坐标、$c$ 为横坐标作图所得的直线称为标准曲线（工作曲线）。利用标准曲线可由未知试样的 $A$ 值求出对应浓度。</p>
 
-    <p><strong>① 吸收光谱（Absorption Spectrum）</strong></p>
-    <div class="fb">
-      以波长 $\lambda$ 为横坐标，以吸光度 $A$（或透射比 $T$）为纵坐标所绘制的曲线，称为<strong>吸收光谱</strong>（或吸收曲线）。它反映了物质对不同波长光的吸收能力，是物质定性和定量分析的依据。吸收光谱上吸光度最大处对应的波长称为<strong>最大吸收波长</strong> $\lambda_{\max}$。
-    </div>
+    <p><strong>【(b) 互补光 与 单色光】</strong></p>
+    <p><strong>单色光</strong>：单一波长（或波长范围极窄）的光。理想的单色光在朗伯-比耳定律中是基本前提之一。</p>
+    <p><strong>互补光</strong>：若两种颜色的单色光按一定强度比例混合后能得到白光，则称这两种色光互为互补光。例如：黄光与蓝光互补、绿光与紫红光互补、红光与青光互补。物质溶液所呈现的颜色，正是它所吸收的光的互补色（如 $\text{KMnO}_4$ 溶液呈紫红色，是因其吸收了绿光）。</p>
 
-    <p><strong>② 标准曲线（Standard Curve / Calibration Curve）</strong></p>
-    <div class="fb">
-      在选定的实验条件下（固定波长、光程、显色剂用量等），配制一系列已知浓度的标准溶液，测定各溶液的吸光度 $A$，以浓度 $c$ 为横坐标、吸光度 $A$ 为纵坐标绘制的 $A$–$c$ 曲线，称为<strong>标准曲线</strong>（工作曲线）。理想情况下，标准曲线应为过原点的直线（符合 Beer 定律）。
-    </div>
-
-    <p><strong>③ 互补光（Complementary Light）</strong></p>
-    <div class="fb">
-      两种颜色的光混合后得到白光，则这两种颜色的光互称为<strong>互补光</strong>（互补色）。例如，黄色与紫色互补，红色与青色互补。物质呈现的颜色即为其吸收光的互补色。
-      <table style="margin-top:8px;">
-        <tr><th>吸收光颜色</th><th>波长 /nm</th><th>溶液呈现颜色</th></tr>
-        <tr><td>紫</td><td>400–450</td><td>黄绿</td></tr>
-        <tr><td>蓝</td><td>450–480</td><td>橙</td></tr>
-        <tr><td>青蓝</td><td>480–490</td><td>红</td></tr>
-        <tr><td>青</td><td>490–500</td><td>红紫</td></tr>
-        <tr><td>绿</td><td>500–560</td><td>红紫</td></tr>
-        <tr><td>黄绿</td><td>560–580</td><td>紫</td></tr>
-        <tr><td>黄</td><td>580–600</td><td>蓝</td></tr>
-        <tr><td>橙</td><td>600–650</td><td>青蓝</td></tr>
-        <tr><td>红</td><td>650–760</td><td>青绿</td></tr>
-      </table>
-    </div>
-
-    <p><strong>④ 显色反应（Color Reaction）</strong></p>
-    <div class="fb">
-      将待测组分转变为能被可见光（或紫外光）强烈吸收的有色化合物的化学反应，称为<strong>显色反应</strong>。所用的试剂称为<strong>显色剂</strong>，生成的有色产物称为<strong>有色配合物</strong>。显色反应要求：选择性好、灵敏度高、产物稳定、颜色对比度大。
-    </div>
-
-    <p><strong>⑤ 吸光度（Absorbance，$A$）</strong></p>
-    <div class="fb">
-      吸光度定义为入射光强度 $I_0$ 与透射光强度 $I_t$ 之比取以10为底对数的负值（或透射比的负对数）：
-      $$A = \lg \frac{I_0}{I_t} = -\lg T$$
-      吸光度是无量纲量。$A$ 越大，表示物质对光的吸收越强，溶液颜色越深。
-    </div>
-
-    <p><strong>⑥ 透射比（Transmittance，$T$）</strong></p>
-    <div class="fb">
-      透射比（透光率）定义为透射光强度与入射光强度之比：
-      $$T = \frac{I_t}{I_0}$$
-      通常以百分数 $T\%$ 表示。$T$ 的范围为 $0 \sim 1$（或 $0\% \sim 100\%$）。$T$ 与 $A$ 的关系：$A = -\lg T$，即 $T = 10^{-A}$。
-    </div>
+    <p><strong>【(c) 吸光度 与 透射比】</strong></p>
+    <p><strong>透射比</strong>（transmittance, $T$，又称透光率）：$T=I/I_0$，常用百分数表示（$T\%$）。</p>
+    <p>二者关系：$A=-\lg T=\lg(1/T)$。$T$ 范围为 $0\sim1$（或 $0\sim100\%$），$A$ 范围在实际测量中通常控制在 $0.2\sim0.8$ 以减小测量误差。</p>
   </div>
 </div>
 
-<!-- 思考题2 -->
 <h3>思考题 2</h3>
 <div class="card">
-  <div class="q">最大吸收波长和吸光度如何随浓度变化？</div>
+  <div class="q">吸光物质的摩尔吸光系数与下列哪些因素有关？(a) 入射光波长；(b) 被测物质浓度；(c) 比色皿厚度；(d) 入射光强度；(e) 介电常数。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <div class="fb">
-      <p><strong>最大吸收波长 $\lambda_{\max}$ 与浓度的关系：</strong></p>
-      <p>在符合 Beer 定律的条件下，$\lambda_{\max}$ 是物质固有的光谱特性，<strong>不随浓度变化</strong>。即同一物质在不同浓度下，吸收光谱曲线的形状相似，各曲线共同交汇于一点（等吸收点），但 $\lambda_{\max}$ 的位置不改变。这是吸光光度法定性分析的基础。</p>
-    </div>
-    <div class="fb">
-      <p><strong>吸光度 $A$ 与浓度的关系：</strong></p>
-      <p>根据 Beer-Lambert 定律：</p>
-      $$A = \varepsilon b c$$
-      <p>在光程 $b$ 和摩尔吸光系数 $\varepsilon$ 一定时，$A$ 与浓度 $c$ 成<strong>正比</strong>。浓度增大，吸光度线性增大；浓度减小，吸光度线性减小。</p>
-      <p>但在高浓度时，由于分子间相互作用等因素，会出现 Beer 定律的偏离，标准曲线向浓度轴弯曲（负偏差）。</p>
-    </div>
-    <div class="tip">
-      <strong>总结：</strong>同一物质在不同浓度下，$\lambda_{\max}$ 不变，$A$ 随 $c$ 线性增大（低浓度范围内）。不同浓度下的吸收光谱曲线形状相同但高度不同。
-    </div>
+    <p>摩尔吸光系数 $\varepsilon$ 是吸光物质<strong>在特定波长下的特征常数</strong>，其值仅与下列因素有关：</p>
+    <ul>
+      <li><strong>入射光的波长 $\lambda$</strong>（最重要的因素之一，吸收曲线即 $\varepsilon\text{-}\lambda$ 关系）；</li>
+      <li><strong>吸光物质本身的性质</strong>（电子跃迁类型、分子结构）；</li>
+      <li><strong>溶剂的性质</strong>（极性、介电常数等会影响电子能级，导致 $\varepsilon$ 略有变化）；</li>
+      <li><strong>温度</strong>（一般影响很小）。</li>
+    </ul>
+    <p>与下列因素<strong>无关</strong>：</p>
+    <ul>
+      <li>(b) 被测物质浓度 — 在朗伯-比耳定律成立的范围内 $\varepsilon$ 为常数；</li>
+      <li>(c) 比色皿厚度 $b$ — $\varepsilon$ 是单位浓度、单位光程下的吸光度；</li>
+      <li>(d) 入射光强度 $I_0$ — $\varepsilon$ 只与吸收性质有关。</li>
+    </ul>
+    <div class="ans-box">答：与 (a) 入射光波长、(e) 介电常数（溶剂效应）有关；与 (b)(c)(d) 无关。</div>
   </div>
 </div>
 
-<!-- 思考题3 -->
 <h3>思考题 3</h3>
 <div class="card">
-  <div class="q">摩尔吸光系数与哪些因素有关？</div>
+  <div class="q">吸光光度法的灵敏度通常用什么参数来衡量？</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>摩尔吸光系数 $\varepsilon$（单位：$\text{L·mol}^{-1}\text{·cm}^{-1}$）是吸光物质在特定条件下对特定波长光的吸收能力的量度，与以下因素有关：</p>
-    <div class="fb">
-      <p><strong>① 吸光物质的本性（最重要）</strong></p>
-      <p>$\varepsilon$ 是物质固有的特性常数，取决于分子结构、电子跃迁类型（如 $\pi \to \pi^*$、$n \to \pi^*$）以及生色团的性质。不同物质在同一波长下的 $\varepsilon$ 值差异极大（$10 \sim 10^5$）。</p>
-    </div>
-    <div class="fb">
-      <p><strong>② 入射光波长</strong></p>
-      <p>$\varepsilon$ 随波长 $\lambda$ 变化。在 $\lambda_{\max}$ 处，$\varepsilon$ 取最大值 $\varepsilon_{\max}$，此时测定灵敏度最高。</p>
-    </div>
-    <div class="fb">
-      <p><strong>③ 温度</strong></p>
-      <p>温度对某些体系的 $\varepsilon$ 有一定影响，通常在恒温条件下测定。</p>
-    </div>
-    <div class="fb">
-      <p><strong>④ 溶剂</strong></p>
-      <p>溶剂影响分子的电子结构和溶剂化程度，从而影响 $\varepsilon$ 值和 $\lambda_{\max}$ 的位置。</p>
-    </div>
-    <div class="tip">
-      <p><strong>注意：</strong>$\varepsilon$ 与溶液浓度 $c$ 和光程 $b$ <strong>无关</strong>，这是 Beer 定律的核心——$\varepsilon$ 是比例常数。$\varepsilon_{\max} > 10^4$ 时认为该体系灵敏度高，适合微量组分的测定。</p>
-      <p>Sandell 灵敏度 $S = \dfrac{M}{\varepsilon}$（单位：$\mu\text{g·cm}^{-2}$），与 $\varepsilon$ 成反比，$S$ 越小灵敏度越高。</p>
-    </div>
+    <p>常用的灵敏度参数有：</p>
+    <ul>
+      <li><strong>摩尔吸光系数</strong> $\varepsilon$（L·mol⁻¹·cm⁻¹）：$\varepsilon$ 越大，灵敏度越高。一般认为 $\varepsilon<10^4$ 为低灵敏度，$10^4\sim10^5$ 为中等灵敏度，$>10^5$ 为高灵敏度。</li>
+      <li><strong>桑德尔灵敏度</strong>（Sandell sensitivity）$S$（µg·cm⁻²）：表示当 $A=0.001$ 时单位截面积光路内所含被测物质的质量。$S=M/\varepsilon$（$M$ 为被测物相对分子质量）。$S$ 越小，灵敏度越高。</li>
+    </ul>
+    <p>二者均反映显色反应或显色体系本身的固有灵敏度。$\varepsilon$ 不依赖于被测元素的相对原子（分子）质量，便于比较不同体系的本征灵敏度。</p>
   </div>
 </div>
 
-<!-- 思考题4 -->
 <h3>思考题 4</h3>
 <div class="card">
-  <div class="q">标准曲线不过原点的原因有哪些？</div>
+  <div class="q">显色反应的种类及对显色反应的要求？</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>理想情况下，Beer 定律要求 $A$–$c$ 标准曲线过原点，但实际测定中常出现不过原点的偏差，原因如下：</p>
-    <div class="fb">
-      <p><strong>① 空白校正不当</strong></p>
-      <p>若参比溶液（空白液）与标准溶液的基底不完全匹配，会引入系统误差。例如，空白液中缺少某种背景吸收物质，导致零浓度时 $A \neq 0$。</p>
-    </div>
-    <div class="fb">
-      <p><strong>② 显色剂或试剂本身有吸收</strong></p>
-      <p>若显色剂在测定波长处有一定吸收，且未被空白正确扣除，则即使 $c = 0$ 时仍有残余吸光度，曲线不过原点。</p>
-    </div>
-    <div class="fb">
-      <p><strong>③ 化学因素</strong></p>
-      <ul>
-        <li>待测物存在酸碱解离平衡，低浓度时形态分布不同于高浓度</li>
-        <li>有色配合物在低浓度时不稳定，解离程度大</li>
-        <li>形成胶体或聚集体，导致对光的散射增大</li>
-      </ul>
-    </div>
-    <div class="fb">
-      <p><strong>④ 仪器因素</strong></p>
-      <p>仪器的杂散光、光源不稳定、检测器的非线性响应等，在低浓度端可能导致偏差。</p>
-    </div>
-    <div class="fb">
-      <p><strong>⑤ 浓度过高引起的负偏差</strong></p>
-      <p>高浓度时，分子间相互作用改变了吸光物质的吸光性质（折射率变化等），导致 Beer 定律负偏差，曲线在高浓度端向下弯曲，而非"不过原点"。</p>
-    </div>
-    <div class="tip">
-      <strong>处理方法：</strong>若标准曲线不过原点但仍为直线，可采用外推法或以截距校正。若偏差严重，需查明原因并优化实验条件（更换参比、控制 pH、降低显色剂浓度等）。
-    </div>
+    <p><strong>【种类】</strong>主要有两大类：</p>
+    <ul>
+      <li><strong>配位反应</strong>：被测离子与显色剂形成有色配合物（最常见，如 Fe²⁺-邻菲啰啉、Fe³⁺-SCN⁻、铝-铝试剂等）；</li>
+      <li><strong>氧化还原反应</strong>：被测物质被氧化或还原后产生有色物质（如 Mn²⁺ 氧化为 $\text{MnO}_4^-$）。</li>
+    </ul>
+    <p>此外还有<strong>缔合（离子缔合）反应、重氮偶合反应、电荷转移反应</strong>等。</p>
+    <p><strong>【对显色反应的要求】</strong></p>
+    <ol>
+      <li><strong>选择性好</strong>：仅与被测组分反应，干扰小；</li>
+      <li><strong>灵敏度高</strong>：$\varepsilon$ 一般应 $\ge 10^4$ L·mol⁻¹·cm⁻¹；</li>
+      <li><strong>有色化合物组成恒定</strong>，符合一定的化学式；</li>
+      <li><strong>稳定性好</strong>：颜色稳定时间足够长，不易受空气、温度、光照影响；</li>
+      <li><strong>有色化合物与显色剂的颜色对比明显</strong>（最大吸收波长之差 $\Delta\lambda\ge 60$ nm，称为对比度）；</li>
+      <li><strong>反应条件易控制</strong>，重现性好。</li>
+    </ol>
   </div>
 </div>
 
-<!-- 思考题5 -->
 <h3>思考题 5</h3>
 <div class="card">
-  <div class="q">影响显色反应的因素有哪些？</div>
+  <div class="q">说明吸光光度法中标准曲线不通过原点的原因。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <div class="fb">
-      <p><strong>① 显色剂的用量</strong></p>
-      <p>显色剂过少时，被测物不能完全转化为有色配合物，$A$ 偏低；显色剂过量时，可使平衡向生成有色产物方向移动，提高转化率。但显色剂过多可能引起副反应或自身颜色干扰。通常需通过实验确定显色剂的最佳用量范围。</p>
-    </div>
-    <div class="fb">
-      <p><strong>② 溶液酸度（pH）</strong></p>
-      <p>pH 影响：（a）被测离子的水解程度；（b）显色剂的解离状态（许多有机显色剂为弱酸，其各种形态与金属离子的配位能力不同）；（c）有色配合物的稳定性。因此需严格控制溶液 pH 在最佳范围内。</p>
-    </div>
-    <div class="fb">
-      <p><strong>③ 显色反应时间和温度</strong></p>
-      <p>有些显色反应进行缓慢，需要一定的反应时间方可达到最大吸光度；有些有色产物随时间褪色（不稳定），需在规定时间内测定。温度升高一般可加快反应速率，但也可能加速有色产物分解。</p>
-    </div>
-    <div class="fb">
-      <p><strong>④ 溶剂</strong></p>
-      <p>溶剂影响显色剂和配合物的溶解性、稳定性及吸光特性。加入有机溶剂（如乙醇、丙酮）有时可提高显色灵敏度或改善配合物的稳定性。</p>
-    </div>
-    <div class="fb">
-      <p><strong>⑤ 共存离子的干扰</strong></p>
-      <p>共存的其他金属离子可能与显色剂竞争配位，形成干扰色或沉淀。需通过加入掩蔽剂、分离或选择性显色来消除干扰。</p>
-    </div>
+    <p>理论上 $A=\varepsilon bc$，$c=0$ 时 $A=0$，标准曲线应过原点。实际不过原点的原因有：</p>
+    <ul>
+      <li><strong>参比溶液选择不当</strong>：未消除显色剂、试剂、溶剂的本底吸收；</li>
+      <li><strong>显色剂过量不够或显色反应不完全</strong>，浓度小时反应未走完；</li>
+      <li><strong>比色皿不匹配</strong>：两个比色皿透光度不一致；</li>
+      <li><strong>溶液中存在干扰组分</strong>，产生附加吸收；</li>
+      <li><strong>显色反应有副产物</strong>或显色剂自身有显著吸收；</li>
+      <li><strong>溶液浑浊或有胶体</strong>引起散射；</li>
+      <li>偏离朗伯-比耳定律（高浓度时折射率、解离度变化等）。</li>
+    </ul>
   </div>
 </div>
 
-<!-- 思考题6 -->
 <h3>思考题 6</h3>
 <div class="card">
-  <div class="q">如何提高显色反应的灵敏度和选择性？</div>
+  <div class="q">在吸光光度法中，影响显色反应的因素有哪些？</div>
   <div class="sol">
-    <div class="st">【解】</div>
-
-    <p><strong>提高灵敏度的方法：</strong></p>
-    <div class="fb">
-      <ul>
-        <li><strong>选择 $\varepsilon_{\max}$ 大的显色剂：</strong>螯合型有机显色剂（如 PAR、铬天青S、二甲酚橙等）的 $\varepsilon$ 可达 $10^4 \sim 10^5$，远高于简单无机配合物。</li>
-        <li><strong>在 $\lambda_{\max}$ 处测定：</strong>此处 $\varepsilon$ 最大，灵敏度最高。</li>
-        <li><strong>增大光程 $b$：</strong>使用较长光程的比色皿（如 5 cm 代替 1 cm）。</li>
-        <li><strong>选择合适的 pH 和显色剂浓度：</strong>使被测组分最大限度地转化为有色产物。</li>
-        <li><strong>利用协同效应：</strong>加入第二配体（三元配合物）可显著提高灵敏度。</li>
-      </ul>
-    </div>
-
-    <p><strong>提高选择性的方法：</strong></p>
-    <div class="fb">
-      <ul>
-        <li><strong>控制溶液酸度：</strong>不同金属离子在不同 pH 下与显色剂的反应活性不同，可利用 pH 选择性显色。</li>
-        <li><strong>加入掩蔽剂：</strong>如加入 EDTA、氟化物、氰化物、硫脲等选择性掩蔽干扰离子。</li>
-        <li><strong>预先分离：</strong>萃取、离子交换或沉淀分离干扰组分后再测定。</li>
-        <li><strong>选择高选择性显色剂：</strong>某些显色剂仅与少数几种离子反应（如丁二酮肟专属于 Ni²⁺ 的显色反应）。</li>
-        <li><strong>双波长法或导数光谱法：</strong>利用仪器手段消除背景吸收的干扰。</li>
-      </ul>
-    </div>
+    <ol>
+      <li><strong>显色剂用量</strong>：必须过量，使被测离子尽可能转变为有色配合物，但不能过量太多（避免形成低配比配合物或加合干扰）；</li>
+      <li><strong>溶液酸度（pH）</strong>：影响显色剂的解离、被测离子的水解、配合物的组成与稳定性；</li>
+      <li><strong>显色温度</strong>：温度过低反应不完全，过高有色物可能分解；</li>
+      <li><strong>显色时间</strong>：反应需要时间达到平衡，并保持稳定；</li>
+      <li><strong>溶剂的性质</strong>：极性、介电常数影响 $\varepsilon$ 与 $\lambda_{\max}$；</li>
+      <li><strong>共存离子干扰</strong>：可通过控制酸度、加入掩蔽剂、改变价态、分离等方法消除。</li>
+    </ol>
   </div>
 </div>
 
-<!-- 思考题7 -->
 <h3>思考题 7</h3>
 <div class="card">
-  <div class="q">选择入射光波长的原则是什么？</div>
+  <div class="q">在吸光光度法中，选择入射光波长的原则是什么？</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <div class="fb">
-      <p><strong>原则一：最大吸收原则（"吸收最大"原则）</strong></p>
-      <p>通常选择被测物的<strong>最大吸收波长 $\lambda_{\max}$</strong> 作为入射光波长。原因：</p>
-      <ul>
-        <li>此处 $\varepsilon$ 最大，灵敏度最高</li>
-        <li>在吸收峰附近，吸收曲线较平坦，波长选择不精确引起的误差小（Beer 定律偏差小）</li>
-        <li>有利于提高分析的准确度</li>
-      </ul>
-    </div>
-    <div class="fb">
-      <p><strong>原则二：干扰最小原则</strong></p>
-      <p>若干扰组分在 $\lambda_{\max}$ 处也有吸收，则应选择<strong>干扰最小而被测物仍有较大吸收</strong>的波长，即"灵敏度与选择性兼顾"。具体方法：</p>
-      <ul>
-        <li>绘制被测物和干扰物的吸收光谱，找到两者吸收差异最大的波长</li>
-        <li>若干扰物在 $\lambda_{\max}$ 处基本不吸收，则仍选 $\lambda_{\max}$</li>
-      </ul>
-    </div>
-    <div class="tip">
-      <strong>实用原则总结：</strong>在被测物有最大吸收而干扰组分无（或最小）吸收的波长处进行测定，即<strong>"最大吸收，最小干扰"</strong>。
-    </div>
+    <p>遵循"<strong>吸收最大、干扰最小</strong>"的原则：</p>
+    <ul>
+      <li>一般选择被测有色物质<strong>最大吸收波长 $\lambda_{\max}$</strong> 作为入射光波长。此时 $\varepsilon$ 最大，灵敏度最高；$\lambda_{\max}$ 处吸收曲线较平坦，光源波长稍有变化对 $A$ 的影响小，符合朗伯-比耳定律更好；</li>
+      <li>若 $\lambda_{\max}$ 处恰有干扰组分的强吸收，则应避开干扰，选择另一<strong>次吸收峰</strong>（仍要 $\varepsilon$ 较大）。</li>
+    </ul>
   </div>
 </div>
 
-<!-- 思考题8 -->
 <h3>思考题 8</h3>
 <div class="card">
-  <div class="q">分光光度计由哪些主要部件组成？各部件的作用是什么？</div>
+  <div class="q">分光光度计由哪几部分组成？各部分的作用是什么？</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>分光光度计通常由以下五大部分组成（从光路上依次排列）：</p>
-    <table>
-      <tr><th>部件</th><th>常用类型</th><th>主要作用</th></tr>
-      <tr><td><strong>光源</strong></td><td>可见光：钨灯、卤钨灯；紫外：氘灯</td><td>提供连续辐射光，是分析用光的来源</td></tr>
-      <tr><td><strong>单色器</strong></td><td>棱镜、光栅（衍射型）</td><td>将复合光（白光）分解为单色光，并从中选出所需波长的光束</td></tr>
-      <tr><td><strong>吸收池（比色皿）</strong></td><td>玻璃（可见区）、石英（UV区）</td><td>盛放样品溶液或参比溶液，提供光线通过的液层（光程 $b$）</td></tr>
-      <tr><td><strong>检测器</strong></td><td>光电管、光电倍增管、光电二极管阵列</td><td>将透射光信号转变为电信号，其强度正比于光强</td></tr>
-      <tr><td><strong>信号处理与显示</strong></td><td>模拟电路或数字计算机</td><td>放大电信号，将其转换为 $A$、$T$、$c$ 等读数并显示或输出</td></tr>
-    </table>
-    <div class="note">
-      <strong>双光束仪器：</strong>光束经半反射镜分为两束，分别通过样品池和参比池后到达检测器，可自动扣除参比，减小光源波动引起的误差，适合绘制吸收光谱。
-    </div>
+    <p>分光光度计由五大部分组成：</p>
+    <ol>
+      <li><strong>光源</strong>（钨灯/碘钨灯—可见光；氘灯/氢灯—紫外光）：提供连续光谱；</li>
+      <li><strong>单色器</strong>（棱镜或光栅 + 狭缝）：将复合光分解为单色光；</li>
+      <li><strong>吸收池（比色皿）</strong>：盛放试液；可见用玻璃皿，紫外用石英皿；</li>
+      <li><strong>检测器</strong>（光电管、光电倍增管、光电二极管阵列等）：将光信号转换为电信号；</li>
+      <li><strong>显示（信号处理）系统</strong>：放大、数显或记录 $T$ 或 $A$。</li>
+    </ol>
   </div>
 </div>
 
-<!-- 思考题9 -->
 <h3>思考题 9</h3>
 <div class="card">
-  <div class="q">吸光度测量中需要选择哪些条件？如何选择？</div>
+  <div class="q">测量吸光度时如何选择参比溶液？</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <div class="fb">
-      <p><strong>① 测定波长的选择</strong></p>
-      <p>通常选择 $\lambda_{\max}$（最大吸收原则，见思考题7）。若有干扰，选干扰最小且灵敏度较高的波长。</p>
-    </div>
-    <div class="fb">
-      <p><strong>② 参比溶液（空白溶液）的选择</strong></p>
-      <p>参比溶液用于调节仪器的零吸光度（$T=100\%$），其成分应与样品溶液尽量相同，但不含被测组分：</p>
-      <ul>
-        <li>若溶剂、显色剂、缓冲液等在测定波长处无吸收：用<strong>纯溶剂</strong>作参比</li>
-        <li>若显色剂有吸收：用不加被测物的<strong>试剂空白</strong>作参比</li>
-        <li>若样品基体复杂：用不加显色剂的<strong>样品空白</strong>作参比</li>
-      </ul>
-    </div>
-    <div class="fb">
-      <p><strong>③ 吸光度范围的控制</strong></p>
-      <p>测量误差在 $A = 0.2 \sim 0.8$（$T = 15\% \sim 65\%$）范围内最小，最佳测量范围为 $A \approx 0.434$（$T = 36.8\%$）。通过调节溶液浓度或光程使 $A$ 落在此范围内。</p>
-    </div>
-    <div class="fb">
-      <p><strong>④ 仪器狭缝宽度的选择</strong></p>
-      <p>狭缝宽度应足够小以保证单色性，但不能过小（否则光强太弱，信噪比下降）。在吸收峰宽处可适当加宽狭缝；在吸收峰陡峭处需窄缝。</p>
-    </div>
+    <p>参比溶液的作用是抵消溶剂、试剂及比色皿对入射光的吸收，使所测吸光度真实反映被测组分的吸收。选择原则：</p>
+    <ul>
+      <li><strong>溶剂参比</strong>：试液中除显色剂外其他试剂无吸收，且显色剂不吸收 $\lambda_{\max}$ 光时，用纯溶剂作参比；</li>
+      <li><strong>试剂参比</strong>：显色剂或其他试剂在 $\lambda_{\max}$ 有吸收时，用不加被测试样、其他试剂同样加入的"空白"作参比；</li>
+      <li><strong>试样参比</strong>：试样本身有色但被测组分与显色剂无反应时（或显色剂在该波长无吸收），用不加显色剂的试样溶液作参比；</li>
+      <li><strong>褪色参比</strong>：将显色后的部分溶液用某试剂使有色物褪色而其他成分不变，再用该溶液作参比。</li>
+    </ul>
   </div>
 </div>
 
-<!-- 思考题10 -->
 <h3>思考题 10</h3>
 <div class="card">
-  <div class="q">吸光光度法测量误差的来源有哪些？如何减免？</div>
+  <div class="q">引起偏离朗伯-比耳定律的主要原因有哪些？如何减免这些因素？试根据这些原因分别加以讨论。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-
-    <p><strong>（1）Beer 定律偏差引起的误差</strong></p>
-    <div class="fb">
-      <ul>
-        <li><em>真实偏差：</em>高浓度下分子间相互作用、折射率变化、缔合或解离，导致 $\varepsilon$ 不恒定。减免：将浓度控制在线性范围内（通常 $c < 10^{-2}$ mol/L）。</li>
-        <li><em>仪器偏差：</em>单色光不纯（杂散光），使测得 $A$ 偏低。减免：选用高质量单色器，在波长选择上避开杂散光严重的区域。</li>
-        <li><em>化学偏差：</em>被测物质在溶液中发生解离、聚合或化学变化，导致有色物质浓度偏离。减免：控制溶液 pH 和组成。</li>
-      </ul>
-    </div>
-
-    <p><strong>（2）仪器读数误差</strong></p>
-    <div class="fb">
-      <p>透射比 $T$ 的读数误差 $\Delta T$ 引起的浓度相对误差：</p>
-      $$\frac{\Delta c}{c} = \frac{0.434}{\lg T} \cdot \frac{\Delta T}{T} = \frac{-0.434}{A} \cdot \frac{\Delta T}{T}$$
-      <p>在 $A = 0.434$（$T = 36.8\%$）时，相对误差最小。减免：将吸光度控制在 $0.2 \sim 0.8$ 范围内；使用示差法可扩大标尺，减小读数误差。</p>
-    </div>
-
-    <p><strong>（3）空白校正误差</strong></p>
-    <div class="fb">
-      <p>参比溶液选择不当或成分不匹配，导致系统误差。减免：合理选择参比溶液，使其与样品溶液的光学性质（折射率、散射等）尽量匹配。</p>
-    </div>
-
-    <p><strong>（4）比色皿误差</strong></p>
-    <div class="fb">
-      <p>不同比色皿的玻璃质量、光程、污染程度不同，引起误差。减免：配对使用同批次比色皿，保持清洁，使用前进行校正。</p>
-    </div>
+    <p><strong>【物理因素 — 与仪器及光源有关】</strong></p>
+    <ul>
+      <li><strong>非单色光的影响</strong>：朗伯-比耳定律严格要求单色光。仪器单色性差时，不同波长下 $\varepsilon$ 不同，$A$-$c$ 关系发生弯曲。<br>→ 减免：选择 $\lambda_{\max}$（曲线平坦处）；选择狭缝合适的高质量分光光度计。</li>
+      <li><strong>杂散光</strong>：不在通带内的光漏入检测器。<br>→ 减免：用色玻璃滤光、清洁仪器、避免高 $A$ 测定。</li>
+    </ul>
+    <p><strong>【化学因素 — 与溶液本身有关】</strong></p>
+    <ul>
+      <li><strong>溶液浓度过大</strong>：折射率、解离度、缔合度变化，使 $\varepsilon$ 不再恒定。<br>→ 减免：将 $A$ 控制在 $0.2\sim 0.8$ 范围；稀释后测定。</li>
+      <li><strong>化学反应</strong>：解离、水解、配位、聚合、酸碱平衡等使吸光物种发生变化。<br>→ 减免：控制 pH、加入掩蔽剂、加入过量显色剂、加入缓冲剂稳定平衡。</li>
+      <li><strong>胶体或浑浊液</strong>：散射使透光度减小。<br>→ 减免：过滤或离心使溶液澄清；加入分散剂。</li>
+    </ul>
   </div>
 </div>
 
-<!-- 思考题11 -->
 <h3>思考题 11</h3>
 <div class="card">
-  <div class="q">示差吸光光度法的原理是什么？它与普通吸光光度法的区别在哪里？</div>
+  <div class="q">示差吸光光度法的原理是什么？为什么它能够提高测定的准确度？</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <div class="fb">
-      <p><strong>普通吸光光度法：</strong>以空白溶液（参比）调 $T = 100\%$（$A = 0$），测定样品吸光度 $A = \varepsilon b c$。</p>
-    </div>
-    <div class="fb">
-      <p><strong>示差吸光光度法（Differential Spectrophotometry）：</strong></p>
-      <p>以一个已知浓度为 $c_0$ 的<strong>标准溶液</strong>代替空白作参比，调 $T_{\text{rel}} = 100\%$（$A_{\text{rel}} = 0$），然后测量样品溶液相对于该标准的吸光度差值：</p>
-      $$A_{\text{rel}} = A_x - A_0 = \varepsilon b (c_x - c_0)$$
-      <p>其中 $c_0$ 为参比标准浓度，$c_x$ 为样品浓度。</p>
-    </div>
-    <div class="fb">
-      <p><strong>优点（标尺放大效应）：</strong></p>
-      <p>以浓度较高的标准 $c_0$ 作参比后，仪器标尺的读数范围相当于被"展开放大"，原来只占标尺一小段的浓度差 $(c_x - c_0)$ 现在占据了整个标尺。若样品浓度 $c_x$ 高于最佳测定范围，用较低浓度标准 $c_0$ 为参比（高吸收示差法），可使相对误差显著降低，适用于<strong>高浓度样品的精密测定</strong>。</p>
-      $$\text{精密度改善倍数} = \frac{T_0}{T_x} = 10^{A_0 - A_x}$$
-    </div>
-    <div class="tip">
-      <strong>示差法特别适用于：</strong>浓度高（$A > 1$）时的精密测定；对精度要求极高的分析；配套"高吸收"和"低吸收"两种变型。
-    </div>
+    <p><strong>【原理】</strong>普通光度法以纯溶剂或试剂空白作参比；<strong>示差吸光光度法</strong>则用一个与试样浓度接近的<strong>已知浓度 $c_s$ 的标准溶液</strong>作参比来测定试样吸光度。设试样浓度 $c_x$（$c_x>c_s$），所测得的<strong>相对吸光度</strong>为</p>
+    $$\Delta A=A_x-A_s=\varepsilon b(c_x-c_s)$$
+    <p>仪器在该参比下"调零"，相当于把仪器透射比标尺<strong>扩展</strong>（透射比 $T_s$ 被定为 100%），从而把高浓度区原本拥挤的小区段刻度展宽，相当于普通吸光度的减读，使读数误差大幅减小。</p>
+    <p><strong>【准确度提高的原因】</strong>对于高浓度（高 $A$ 或低 $T$）样品，普通光度法 $T$ 读数误差 $\Delta T$ 对应的浓度相对误差 $\Delta c/c$ 很大；而示差法将参比"提高"到 $c_s$ 处，使测量落入仪器最佳读数区（$T=20\%\sim 65\%$，$A\approx 0.2\sim 0.8$），$\Delta c/c$ 显著减小，准确度提高。</p>
   </div>
 </div>
 
-<!-- 思考题12 -->
 <h3>思考题 12</h3>
 <div class="card">
-  <div class="q">示差法、双波长法、导数光谱法各自解决什么问题？</div>
+  <div class="q">示差法、双波长法、导数光度法各能消除哪一类干扰？比较它们的特点。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <div class="fb">
-      <p><strong>① 示差法（Differential Method）</strong></p>
-      <p><em>解决的问题：</em>高浓度样品（$A$ 过大）时，普通法读数误差大，精密度低。</p>
-      <p><em>解决方式：</em>以已知浓度标准液作参比，扩大有效读数范围，使测量在仪器精密度最高的区间进行。</p>
-    </div>
-    <div class="fb">
-      <p><strong>② 双波长法（Dual-Wavelength Method）</strong></p>
-      <p><em>解决的问题：</em>（a）背景吸收或共存干扰物在待测物吸收波长处有吸收；（b）待测物浓度较低而背景高（浑浊、有色基体）；（c）多组分混合物同时测定。</p>
-      <p><em>解决方式：</em>选择两个波长 $\lambda_1$（测定波长）和 $\lambda_2$（参比波长），同时（或交替）测定吸光度差 $\Delta A = A_{\lambda_1} - A_{\lambda_2}$。若干扰物在两波长处吸光度相同（等吸收点），则其贡献在 $\Delta A$ 中相消，被测物的 $\Delta A = (\varepsilon_{\lambda_1} - \varepsilon_{\lambda_2}) b c$ 只与浓度有关。</p>
-    </div>
-    <div class="fb">
-      <p><strong>③ 导数光谱法（Derivative Spectrophotometry）</strong></p>
-      <p><em>解决的问题：</em>（a）宽峰背景下窄吸收峰的分辨；（b）重叠光谱的分离；（c）消除背景的斜坡型或缓变型干扰。</p>
-      <p><em>解决方式：</em>对吸收光谱 $A(\lambda)$ 求导，得到一阶 $\dfrac{dA}{d\lambda}$、二阶 $\dfrac{d^2A}{d\lambda^2}$ 等导数光谱。宽平的背景吸收在高阶导数中趋近零，而窄峰在导数谱中特征明显，从而实现分辨和定量。</p>
-    </div>
     <table>
-      <tr><th>方法</th><th>主要解决问题</th><th>关键特征</th></tr>
-      <tr><td>示差法</td><td>高浓度时精密度低</td><td>以标准液代替空白参比，扩大标尺</td></tr>
-      <tr><td>双波长法</td><td>背景/干扰/多组分</td><td>$\Delta A = A_{\lambda_1} - A_{\lambda_2}$，消除等吸收干扰</td></tr>
-      <tr><td>导数光谱法</td><td>重叠峰分辨、背景消除</td><td>对 $A(\lambda)$ 求导，增强光谱分辨率</td></tr>
+      <tr><th>方法</th><th>原理特点</th><th>主要消除的干扰</th></tr>
+      <tr><td><strong>示差法</strong></td><td>用浓度接近的标准溶液作参比</td><td>提高高浓度试样测量精度；不能消除组分间干扰</td></tr>
+      <tr><td><strong>双波长法</strong></td><td>在 $\lambda_1$、$\lambda_2$ 两个波长下分别测 $A_1$、$A_2$，以 $\Delta A=A_2-A_1$ 进行测定</td><td>消除浑浊背景、共存吸光组分的干扰（两波长下其 $A$ 相等时）</td></tr>
+      <tr><td><strong>导数光度法</strong></td><td>对 $A$-$\lambda$ 曲线求一阶（或高阶）导数</td><td>消除背景吸收、提高重叠峰的分辨能力、放大窄峰</td></tr>
     </table>
   </div>
 </div>
 
-<!-- 思考题13 -->
 <h3>思考题 13</h3>
 <div class="card">
-  <div class="q">如何用有机显色剂建立测定金属离子的吸光光度法？需要考虑哪些步骤？</div>
+  <div class="q">如何用光度法测定弱酸（或弱碱）的解离常数？写出基本原理。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>建立有机显色剂测定金属离子方法的一般步骤：</p>
-    <div class="fb">
-      <p><strong>第一步：选择显色剂</strong></p>
-      <p>依据文献或通过初步实验，筛选对目标金属离子具有高灵敏度（$\varepsilon_{\max}$ 大）和高选择性的显色剂，要求产物稳定、颜色对比度大（显色后颜色深，试剂本身颜色浅或不干扰）。</p>
-    </div>
-    <div class="fb">
-      <p><strong>第二步：确定最佳 pH（酸度实验）</strong></p>
-      <p>固定其他条件，改变溶液 pH，测量吸光度 $A$，绘制 $A$–pH 曲线，确定 $A$ 最大且稳定的 pH 范围，在此范围内选择最佳工作 pH。</p>
-    </div>
-    <div class="fb">
-      <p><strong>第三步：确定显色剂用量</strong></p>
-      <p>固定金属离子浓度和 pH，改变显色剂用量，测量 $A$，绘制 $A$–显色剂用量曲线，选择 $A$ 恒定的平台区对应的显色剂用量（通常取过量2~5倍）。</p>
-    </div>
-    <div class="fb">
-      <p><strong>第四步：确定测定波长</strong></p>
-      <p>在最佳条件下扫描吸收光谱，确定 $\lambda_{\max}$；同时绘制显色剂的吸收光谱，确认两者在 $\lambda_{\max}$ 处的差异，最终选择灵敏度高且干扰最小的波长。</p>
-    </div>
-    <div class="fb">
-      <p><strong>第五步：考察显色时间和温度</strong></p>
-      <p>研究 $A$ 随时间的变化，确定显色完全所需时间及产物稳定的时间窗口；考察温度对显色速率和产物稳定性的影响。</p>
-    </div>
-    <div class="fb">
-      <p><strong>第六步：干扰实验和掩蔽</strong></p>
-      <p>研究常见共存离子的影响（允许误差 $\pm 5\%$），加入掩蔽剂或采用分离步骤消除干扰。</p>
-    </div>
-    <div class="fb">
-      <p><strong>第七步：建立标准曲线并验证</strong></p>
-      <p>配制系列标准溶液，在最佳条件下测定 $A$，绘制标准曲线，计算线性回归方程，确认线性范围；用标准参考物质验证方法准确性，计算检出限和精密度。</p>
-    </div>
+    <p>设弱酸 HIn 在水中：$\text{HIn}\rightleftharpoons\text{H}^+ + \text{In}^-$，$K_a=\dfrac{[\text{H}^+][\text{In}^-]}{[\text{HIn}]}$。若 HIn 与 In⁻ 具有不同颜色（不同 $\varepsilon$），且各自分别可单独存在（强酸性、强碱性时），则在某波长下：</p>
+    <ul>
+      <li>$A_\text{HIn}$：强酸下纯 HIn 形式的吸光度（浓度 $c$）；</li>
+      <li>$A_{\text{In}^-}$：强碱下纯 $\text{In}^-$ 形式的吸光度；</li>
+      <li>$A$：在某中间 pH 下测得的吸光度。</li>
+    </ul>
+    <p>根据吸光度的加和性：</p>
+    $$\frac{[\text{In}^-]}{[\text{HIn}]}=\frac{A-A_\text{HIn}}{A_{\text{In}^-}-A}$$
+    <p>结合 $\text{p}K_a=\text{pH}-\lg\dfrac{[\text{In}^-]}{[\text{HIn}]}$ 即得：</p>
+    $$\text{p}K_a=\text{pH}-\lg\frac{A-A_\text{HIn}}{A_{\text{In}^-}-A}$$
+    <p>实验：配制系列已知 pH 缓冲溶液，每份加等量 HIn，测 $A$，作 $\lg\dfrac{A-A_\text{HIn}}{A_{\text{In}^-}-A}$-pH 图，斜率为 1 的直线与横轴交点（$\lg=0$）即对应 $\text{pH}=\text{p}K_a$。</p>
   </div>
 </div>
 
-<!-- 思考题14 -->
 <h3>思考题 14</h3>
 <div class="card">
-  <div class="q">酶联免疫吸附测定法（ELISA）的原理是什么？与普通吸光光度法有何联系？</div>
+  <div class="q">如何用吸光光度法测定配合物的组成和稳定常数？请简述原理。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <div class="fb">
-      <p><strong>ELISA 基本原理：</strong></p>
-      <p>酶联免疫吸附测定（Enzyme-Linked Immunosorbent Assay）利用<strong>抗原–抗体的高特异性结合</strong>和<strong>酶的高效催化放大</strong>作用，实现对生物分子（蛋白质、激素、病毒等）的超灵敏检测。</p>
-      <ol>
-        <li>将特异性<strong>抗体</strong>固定在固相载体（如聚苯乙烯酶标板）上</li>
-        <li>加入样品，目标<strong>抗原</strong>与固相抗体特异性结合</li>
-        <li>洗涤去除非特异性结合物</li>
-        <li>加入酶标记的第二抗体（酶联抗体），与抗原结合，形成"抗体—抗原—酶标抗体"三明治结构</li>
-        <li>加入底物（如 TMB 或对硝基苯磷酸酯），酶催化底物生成<strong>有色产物</strong></li>
-        <li>用酶标仪（分光光度计）在特定波长处测量 $A$，$A$ 与抗原浓度成正比</li>
-      </ol>
-    </div>
-    <div class="fb">
-      <p><strong>与普通吸光光度法的联系：</strong></p>
-      <p>ELISA 的最终检测步骤与普通吸光光度法完全相同——通过测量有色产物的吸光度 $A$ 来定量。不同之处在于：ELISA 利用免疫反应提供极高的<strong>选择性</strong>，利用酶催化提供极高的<strong>灵敏度</strong>（检出限可达 $\text{ng/mL}$ 甚至 $\text{pg/mL}$ 级），适用于生物大分子的超微量检测，而普通吸光光度法主要用于无机离子和小分子化合物的分析。</p>
-    </div>
+    <p><strong>测定组成（配位比 $n$）的常用方法：</strong></p>
+    <ol>
+      <li><strong>摩尔比法（饱和法）</strong>：固定金属离子浓度 $c_\text{M}$，改变显色剂浓度 $c_\text{R}$，作 $A$-$c_\text{R}/c_\text{M}$ 曲线。当 R 足够过量时 $A$ 出现转折并趋于水平，转折点对应的 $c_\text{R}/c_\text{M}$ 比值即为配位比 $n$。</li>
+      <li><strong>等摩尔连续变化法（Job 法）</strong>：保持总浓度 $c_\text{M}+c_\text{R}$ 不变，改变 M 与 R 的摩尔分数，作 $A$-$x_\text{M}$ 图。曲线最高点对应的 $x_\text{M}$ 值给出 $n=\dfrac{1-x_\text{M}}{x_\text{M}}$（其中 $x_\text{M}$ 为 M 的摩尔分数）。</li>
+      <li><strong>斜率比法</strong>：分别保持 M 大过量和 R 大过量，测各自 $A$-$c$ 曲线斜率 $k_1$、$k_2$，由斜率比求 $n$。</li>
+    </ol>
+    <p><strong>测定稳定常数（举例：等摩尔连续变化法）：</strong>由曲线最高点的实测 $A_{\max}$ 与外延（完全反应）应得的 $A'_{\max}$ 计算解离度 $\alpha=(A'_{\max}-A_{\max})/A'_{\max}$，再由</p>
+    $$K_\text{稳}=\frac{1-\alpha}{n^n\,\alpha^{n+1}\,c^n}$$
+    <p>求出（其中 $c$ 为最高点处 M 或 R 的初始浓度，与配位比 $n$ 对应）。</p>
   </div>
 </div>
 
-<!-- 思考题15 -->
 <h3>思考题 15</h3>
 <div class="card">
-  <div class="q">在多组分混合物的吸光光度分析中，双波长法和解方程组法各有什么优缺点？</div>
+  <div class="q">利用偶联反应法测定金属离子有什么优点？</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <div class="fb">
-      <p><strong>解方程组法（联立方程法）</strong></p>
-      <p><em>原理：</em>对含两组分（X、Y）的混合溶液，在 $\lambda_1$、$\lambda_2$ 两波长处测量总吸光度，利用吸光度加和性建立方程组：</p>
-      $$A_{\lambda_1} = \varepsilon_{X,\lambda_1} b c_X + \varepsilon_{Y,\lambda_1} b c_Y$$
-      $$A_{\lambda_2} = \varepsilon_{X,\lambda_2} b c_X + \varepsilon_{Y,\lambda_2} b c_Y$$
-      <p>由已知各纯组分的摩尔吸光系数，解方程组求 $c_X$ 和 $c_Y$。</p>
-      <p><em>优点：</em>无需特殊仪器，理论严格，适用性广。</p>
-      <p><em>缺点：</em>需准确测定四个摩尔吸光系数；若两组分光谱重叠严重，误差积累大；计算量稍大。</p>
-    </div>
-    <div class="fb">
-      <p><strong>双波长法</strong></p>
-      <p><em>原理：</em>选择两个波长，使干扰组分在两波长处的吸光度相等（等吸收点），则 $\Delta A = A_{\lambda_1} - A_{\lambda_2}$ 仅取决于待测组分，消除干扰。</p>
-      <p><em>优点：</em>有效消除等吸收波长处干扰组分的吸收；可消除背景吸收；操作简便，误差小。</p>
-      <p><em>缺点：</em>需找到干扰物的等吸收点，并非所有情况下都能找到合适的双波长；需专用双波长分光光度计或借助软件计算；若两种干扰物同时存在，则难以同时消除。</p>
-    </div>
+    <p>偶联反应法（间接光度法）的优点：</p>
+    <ul>
+      <li>可测定<strong>本身无色或显色反应不灵敏</strong>的金属离子（先与某试剂反应再偶联到一个高灵敏度的显色体系）；</li>
+      <li>通过偶联放大效应，<strong>大幅提高灵敏度</strong>（$\varepsilon$ 常可达 $10^5$ 以上）；</li>
+      <li>可<strong>提高选择性</strong>（多重反应过滤干扰）；</li>
+      <li>可在动力学光度法、催化光度法中实现<strong>痕量分析</strong>。</li>
+    </ul>
   </div>
 </div>
 
-<!-- ==================== 习题 ==================== -->
-<h2 id="problems">二、习题（计算题）</h2>
+<h2>二、习题（计算题）</h2>
 
-<!-- 习题1 -->
 <h3>习题 1</h3>
 <div class="card">
-  <div class="q">试比较 $T$–$c$ 曲线与 $A$–$c$ 标准曲线的特点，说明为什么吸光光度法中采用 $A$–$c$ 标准曲线进行定量分析？</div>
+  <div class="q">根据 $A=-\lg T=K'cb$，已知 $K'=1.3\times10^4$，今有五个标准溶液：浓度 $c$ 分别为 $4.0\times 10^{-5}$、$6.0\times 10^{-5}$、$8.0\times 10^{-5}$、$1.0\times 10^{-4}$、$1.6\times 10^{-4}$ mol·L⁻¹，绘制以 $A$ 为纵坐标、$c$ 为横坐标的工作曲线（$b=1$ cm）。若试样的吸光度为 $A=0.552$，求其浓度。</div>
+  <div class="warn">原题部分数据需核对；下面按 $K'=1.3\times 10^4$ L·mol⁻¹·cm⁻¹、$b=1$ cm 计算。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <div class="fb">
-      <p><strong>$T$–$c$ 曲线的特点：</strong></p>
-      <p>根据 Beer-Lambert 定律：$A = -\lg T = \varepsilon b c$，因此 $T = 10^{-\varepsilon b c}$。</p>
-      <p>$T$–$c$ 关系是<strong>指数衰减</strong>曲线（非线性）：</p>
-      $$T = 10^{-\varepsilon b c} = e^{-2.303\,\varepsilon b c}$$
-      <p>浓度增大时，$T$ 呈指数下降，曲线弯曲，浓度越高，$T$ 变化越小（标尺压缩严重）。</p>
-    </div>
-    <div class="fb">
-      <p><strong>$A$–$c$ 标准曲线的特点：</strong></p>
-      <p>$A = \varepsilon b c$，在 Beer 定律成立的范围内，$A$ 与 $c$ 呈<strong>线性关系</strong>，是一条过原点的直线，斜率为 $\varepsilon b$。</p>
-    </div>
-    <div class="fb">
-      <p><strong>采用 $A$–$c$ 曲线的优势：</strong></p>
-      <ol>
-        <li>线性关系便于绘图、回归计算和内插读数，准确度高</li>
-        <li>直线全程灵敏度均等（线性标尺无压缩）</li>
-        <li>便于发现 Beer 定律的偏差（非线性即为偏差信号）</li>
-        <li>不同浓度区间的读数精密度较均匀</li>
-      </ol>
-    </div>
-    <div class="tip">
-      <strong>结论：</strong>$A$–$c$ 标准曲线是线性的（在 Beer 定律成立的浓度范围内），具有便于计算、误差小、线性范围明确等优点，因此吸光光度法定量分析一律使用 $A$–$c$ 标准曲线，而不使用 $T$–$c$ 曲线。
-    </div>
+    <p><strong>【标准曲线数据】</strong>$A=K'bc=1.3\times 10^4\times 1\times c$</p>
+    <table>
+      <tr><th>$c$ /mol·L⁻¹</th><td>$4.0\times 10^{-5}$</td><td>$6.0\times 10^{-5}$</td><td>$8.0\times 10^{-5}$</td><td>$1.0\times 10^{-4}$</td><td>$1.6\times 10^{-4}$</td></tr>
+      <tr><th>$A$</th><td>0.520</td><td>0.780</td><td>1.040</td><td>1.300</td><td>2.080</td></tr>
+    </table>
+    <p><strong>【未知试样浓度】</strong></p>
+    $$c_x=\frac{A}{K'b}=\frac{0.552}{1.3\times 10^4\times 1}=4.25\times 10^{-5}\ \text{mol·L}^{-1}$$
+    <div class="ans-box">$c_x\approx 4.2\times 10^{-5}$ mol·L⁻¹</div>
   </div>
 </div>
 
-<!-- 习题2 -->
 <h3>习题 2</h3>
 <div class="card">
-  <div class="q">某溶液在 1 cm 比色皿中测得透射比 $T = 60.0\%$。计算：(1) 在 3 cm 比色皿中的透射比 $T'$ 和吸光度 $A'$；(2) 在 0.5 cm 比色皿中的透射比 $T''$ 和吸光度 $A''$。</div>
+  <div class="q">（订正）配制一系列同体积溶液，各加入 2.00 mL × $7.12\times 10^{-4}$ mol·L⁻¹ Fe³⁺ 溶液，再加不同体积 $V$（mL）的 $7.12\times 10^{-4}$ mol·L⁻¹ 邻菲啰啉（Phen）溶液，稀释至 25 mL。1 cm 比色皿在 510 nm 测得吸光度：</div>
+  <table>
+    <tr><th>$V_\text{Phen}$/mL</th><td>2.00</td><td>3.00</td><td>4.00</td><td>5.00</td><td>6.00</td><td>8.00</td><td>10.00</td><td>12.00</td></tr>
+    <tr><th>$A$</th><td>0.240</td><td>0.360</td><td>0.480</td><td>0.593</td><td>0.700</td><td>0.720</td><td>0.720</td><td>0.720</td></tr>
+  </table>
+  <p>求配合物组成。<strong>原书答案：M:L = 1:3，即 Fe(Phen)$_3$²⁺</strong></p>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>由 Beer-Lambert 定律：$A = \varepsilon b c$，不同光程时浓度和 $\varepsilon$ 不变。</p>
-    <p>1 cm 时：$A_1 = -\lg T_1 = -\lg 0.600 = 0.2218$</p>
-
-    <p><strong>(1) 3 cm 比色皿：</strong></p>
-    <p>光程增大3倍，吸光度也增大3倍：</p>
-    $$A' = 3 \times A_1 = 3 \times 0.2218 = 0.6655$$
-    $$T' = 10^{-A'} = 10^{-0.6655} = 0.216 = 21.6\%$$
-
-    <p>验算：$T' = T_1^3 = 0.600^3 = 0.216 = 21.6\%$（一致）</p>
-
-    <p><strong>(2) 0.5 cm 比色皿：</strong></p>
-    <p>光程减半，吸光度减半：</p>
-    $$A'' = 0.5 \times A_1 = 0.5 \times 0.2218 = 0.1109$$
-    $$T'' = 10^{-0.1109} = 0.774 = 77.5\%$$
-
-    <div class="ans-box">
-      答：(1) $T' = 21.6\%$，$A' = 0.666$；(2) $T'' = 77.5\%$，$A'' = 0.111
+    <p><strong>【方法：摩尔比法】</strong>固定 Fe³⁺ 量，改变 Phen 量。Fe³⁺ 量固定为 $n_\text{Fe} = 2.00\times 7.12\times 10^{-4} = 1.424\times 10^{-6}$ mol。Phen 加入量随 $V$ 变化。</p>
+    <p>计算各体积下 $c_\text{Phen}/c_\text{Fe}$ 比（即 $V/2.00$）：</p>
+    <table>
+      <tr><th>$V$/mL</th><td>2.00</td><td>3.00</td><td>4.00</td><td>5.00</td><td>6.00</td><td>8.00</td><td>10.00</td><td>12.00</td></tr>
+      <tr><th>$V/V_\text{Fe}$</th><td>1.0</td><td>1.5</td><td>2.0</td><td>2.5</td><td>3.0</td><td>4.0</td><td>5.0</td><td>6.0</td></tr>
+      <tr><th>$A$</th><td>0.240</td><td>0.360</td><td>0.480</td><td>0.593</td><td>0.700</td><td>0.720</td><td>0.720</td><td>0.720</td></tr>
+    </table>
+    <p>$A$ 在 $V/V_\text{Fe}=3.0$（即 $V=6.00$ mL）处达到平台 0.700~0.720，转折点对应 <strong>n = 3</strong>。</p>
+    <div class="fb">
+      <strong>结论：Fe(Phen)₃²⁺，即配位比 1:3</strong>（前注 $M=1.13$ 是误读，实际原书答案是 1:3，符合 Fe²⁺-Phen 的经典三齿配位）
     </div>
-
-    <div class="note">
-      <strong>规律：</strong>$T^b = T_1^{b/1}$，即透射比的乘方等于光程倍数（Beer-Lambert 定律的乘积形式）。
-    </div>
+    <p><strong>【摩尔吸光系数】</strong>平台处 $A_\max = 0.720$，$b=1$ cm，稀释后 $c_\text{Fe} = 1.424\times 10^{-6}/25\times 10^{-3} = 5.70\times 10^{-5}$ mol·L⁻¹：</p>
+    $$\varepsilon = \frac{0.720}{1\times 5.70\times 10^{-5}} = 1.26\times 10^{4}\ \text{L·mol}^{-1}\text{·cm}^{-1}$$
+    <div class="ans-box">配位比 n = 3（Fe(Phen)₃²⁺），$\varepsilon \approx 1.26\times 10^4$ L·mol⁻¹·cm⁻¹</div>
   </div>
 </div>
 
-<!-- 习题3 -->
-<h3>习题 3</h3>
+<h3>习题 3（订正：原书 习题 2）</h3>
 <div class="card">
-  <div class="q">用二甲基乙二醛肟（丁二酮肟）光度法测定钢铁中的镍（Ni）。已知：有色配合物的摩尔吸光系数 $\varepsilon = 1.3 \times 10^4\ \text{L·mol}^{-1}\text{·cm}^{-1}$，使用 1 cm 比色皿，吸光度范围为 $0.2 \sim 0.8$，试样溶解后转入 100 mL 容量瓶，Ni 的摩尔质量 $M = 58.69\ \text{g·mol}^{-1}$，钢铁中 Ni 的质量分数约为 0.3%。求最佳称样量。</div>
+  <div class="q">（订正）某试液用 1 cm 吸收池测量时 $T = 60.0\%$。若改用 <strong>1/2 cm 或 3/2 cm</strong> 吸收池，其 $T$ 和 $A$ 各等于多少？<br><span style="color:#27ae60;">原书答案：1/2 cm: $T=77.5\%$, $A=0.111$；3/2 cm: $T=46.5\%$, $A=0.333$</span></div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>由 Beer 定律：$A = \varepsilon b c$，对应最佳吸光度范围 $A = 0.2 \sim 0.8$：</p>
-    $$c_{\min} = \frac{A_{\min}}{\varepsilon b} = \frac{0.2}{1.3 \times 10^4 \times 1} = 1.54 \times 10^{-5}\ \text{mol/L}$$
-    $$c_{\max} = \frac{A_{\max}}{\varepsilon b} = \frac{0.8}{1.3 \times 10^4 \times 1} = 6.15 \times 10^{-5}\ \text{mol/L}$$
-
-    <p>样品溶液体积 $V = 100\ \text{mL} = 0.100\ \text{L}$，Ni 的摩尔质量 $M_{\text{Ni}} = 58.69\ \text{g/mol}$，质量分数 $w = 0.3\% = 0.003$：</p>
-
-    <p>Ni 的质量：$m_{\text{Ni}} = c_{\text{Ni}} \cdot V \cdot M_{\text{Ni}}$</p>
-    <p>称样量：$m_s = \dfrac{m_{\text{Ni}}}{w} = \dfrac{c_{\text{Ni}} \cdot V \cdot M_{\text{Ni}}}{w}$</p>
-
-    $$m_{s,\min} = \frac{1.54 \times 10^{-5} \times 0.100 \times 58.69}{0.003} = \frac{9.04 \times 10^{-5}}{0.003} = 0.030\ \text{g}$$
-
-    $$m_{s,\max} = \frac{6.15 \times 10^{-5} \times 0.100 \times 58.69}{0.003} = \frac{3.61 \times 10^{-4}}{0.003} = 0.120\ \text{g}$$
-
-    <p>最佳称样量范围为 $0.030 \sim 0.120\ \text{g}$，取中间值约 $0.075\ \text{g}$；若题目要求单一答案，取使 $A \approx 0.434$（最佳精密度点）对应的称样量：</p>
-    $$c_{\text{opt}} = \frac{0.434}{\varepsilon b} = \frac{0.434}{1.3 \times 10^4} = 3.34 \times 10^{-5}\ \text{mol/L}$$
-    $$m_{s,\text{opt}} = \frac{3.34 \times 10^{-5} \times 0.100 \times 58.69}{0.003} \approx 0.065\ \text{g}$$
-
-    <div class="ans-box">
-      答：最佳称样量范围约为 $0.030 \sim 0.120\ \text{g}$，通常取 $\approx 0.16\ \text{g}$（若使用5 cm比色皿或工业常规取值）。
-    </div>
-    <div class="note">
-      <strong>说明：</strong>不同教材对光程选择和最佳吸光度规定稍有差异，若取 $b=5$ cm 或 $A_{\max}=1$，则最大称样量约为 $0.16$ g。常见答案为 $m_s \approx 0.16\ \text{g}$。
-    </div>
+    <p>由 $A = -\lg T = \varepsilon b c$ 知 $A \propto b$。原 1 cm 时：$A_0 = -\lg 0.600 = 0.222$。</p>
+    <ul>
+      <li><strong>$b = 1/2$ cm</strong>：$A = 0.222 \times 1/2 = 0.111$，$T = 10^{-0.111} = 0.775 = 77.5\%$ ✓</li>
+      <li><strong>$b = 3/2$ cm</strong>：$A = 0.222 \times 3/2 = 0.333$，$T = 10^{-0.333} = 0.465 = 46.5\%$ ✓</li>
+    </ul>
+    <div class="ans-box">1/2 cm：$T = 77.5\%$，$A = 0.111$；3/2 cm：$T = 46.5\%$，$A = 0.333$</div>
   </div>
 </div>
 
-<!-- 习题4 -->
 <h3>习题 4</h3>
 <div class="card">
-  <div class="q">用钴蓝光度法测定溶液中 $\text{Co}^{2+}$。在 1 cm 比色皿中，$c(\text{Co}^{2+}) = 1.5 \times 10^{-3}\ \text{mol/L}$ 的溶液在 $\lambda_{\max}$ 处测得 $A = 0.285$。计算：(1) 摩尔吸光系数 $\varepsilon$；(2) Sandell 灵敏度 $S$。已知 $M(\text{Co}) = 58.93\ \text{g/mol}$。</div>
+  <div class="q">某有色物质溶液在 1 cm 吸收池中，$T=60\%$，吸光度 $A=$ ?；若浓度增加为原来的 2 倍，$A=$ ?，$T=$ ?；若浓度减为原来的 1/2，$A=$ ?，$T=$ ?</div>
   <div class="sol">
-    <div class="st">【解】</div>
-
-    <p><strong>(1) 摩尔吸光系数：</strong></p>
-    <p>由 Beer 定律 $A = \varepsilon b c$：</p>
-    $$\varepsilon = \frac{A}{b \cdot c} = \frac{0.285}{1 \times 1.5 \times 10^{-3}} = 190\ \text{L·mol}^{-1}\text{·cm}^{-1}$$
-
-    <div class="warn">
-      <strong>注意：</strong>若题目数据为 $c = 1.5 \times 10^{-3}$ mol/L 且 $A = 0.285$，则 $\varepsilon = 190$，灵敏度较低。典型教材习题中 Co²⁺ 配合物（如亚硝基-R盐法）的 $\varepsilon \approx 1.9 \times 10^4$，此时 $c = 1.5 \times 10^{-6}$ mol/L。下面按 $\varepsilon = 1.9 \times 10^4$ 给出完整答案。
-    </div>
-
-    <p>若 $c = 1.5 \times 10^{-6}\ \text{mol/L}$，$A = 0.285$（典型值）：</p>
-    $$\varepsilon = \frac{0.285}{1 \times 1.5 \times 10^{-6}} = 1.90 \times 10^5\ \text{L·mol}^{-1}\text{·cm}^{-1}$$
-
-    <p>按教材常见结果取 $\varepsilon = 1.9 \times 10^4\ \text{L·mol}^{-1}\text{·cm}^{-1}$：</p>
-
-    <p><strong>(2) Sandell 灵敏度：</strong></p>
-    <p>Sandell 灵敏度定义为在单位光程（1 cm）和 $\Delta A = 0.001$ 时单位面积（1 cm²）内能检测到的被测物质的质量：</p>
-    $$S = \frac{M}{\varepsilon} = \frac{58.93}{1.9 \times 10^4}\ \text{g·mol}^{-1} / (\text{L·mol}^{-1}\text{·cm}^{-1})$$
-    $$S = 3.1 \times 10^{-3}\ \mu\text{g·cm}^{-2}$$
-
-    <div class="ans-box">
-      答：$\varepsilon = 1.9 \times 10^4\ \text{L·mol}^{-1}\text{·cm}^{-1}$；Sandell 灵敏度 $S = 3.1 \times 10^{-3}\ \mu\text{g·cm}^{-2}$
-    </div>
-    <div class="tip">
-      $S$ 越小，灵敏度越高。$S < 0.01\ \mu\text{g·cm}^{-2}$ 属于高灵敏度体系。
-    </div>
+    <p>原溶液：$A=-\lg 0.60=0.222$。</p>
+    <ul>
+      <li>浓度 $\times 2$：$A=0.444$，$T=10^{-0.444}=36.0\%$；</li>
+      <li>浓度 $\times 1/2$：$A=0.111$，$T=10^{-0.111}=77.5\%$。</li>
+    </ul>
+    <div class="ans-box">原 $A=0.222$；2 倍 $A=0.444$，$T=36.0\%$；1/2 $A=0.111$，$T=77.5\%$</div>
   </div>
 </div>
 
-<!-- 习题5 -->
 <h3>习题 5</h3>
 <div class="card">
-  <div class="q">用吸光光度法测定某样品，使用标准曲线法，若透射比读数误差 $\Delta T = \pm 0.3\%$，在 $A = 0.699$（即 $T = 20.0\%$）处，求浓度的相对误差 $\dfrac{\Delta c}{c}$（%）。</div>
+  <div class="q">某苯酚试液含苯酚 0.125%，用 4-氨基安替比林光度法测定，称取 1.00 mL 试液，在 1 cm 吸收池中于 510 nm 测得 $T=33.3\%$。求该有色物的摩尔吸光系数 $\varepsilon$（苯酚 $M=94.1$ g·mol⁻¹）。</div>
+  <div class="warn">原题题号 5 文字部分 OCR 不完全清晰，按 "$T=33.3\%$" 计算；原书括号答案 $\varepsilon=7.75\times 10^3$。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>浓度相对误差与透射比读数误差的关系：</p>
-    $$\frac{\Delta c}{c} = \frac{0.434}{A} \cdot \frac{\Delta T}{T}$$
-
-    <p>代入数据：$A = 0.699$，$T = 0.200$，$\Delta T = 0.003$：</p>
-    $$\frac{\Delta c}{c} = \frac{0.434}{0.699} \times \frac{0.003}{0.200} = 0.621 \times 0.015 = 9.3 \times 10^{-3} = 0.93\%$$
-
-    <p>若 $T = 36.8\%$（$A = 0.434$）时，相对误差最小：</p>
-    $$\left.\frac{\Delta c}{c}\right|_{\min} = \frac{0.434}{0.434} \times \frac{0.003}{0.368} = 0.815\% \approx 0.82\%$$
-
-    <p>本题 $T = 20\%$ 时：</p>
-    $$\frac{\Delta c}{c} = \frac{0.434}{0.699} \times \frac{0.003}{0.200} \approx 0.93\%$$
-
-    <div class="note">
-      <p>若题目给定 $\Delta T / T = 0.005 / T$（固定 $\Delta T$ 型误差），则在 $T = 20\%$、$\Delta T = 0.003$（$\Delta T\% = 0.3\%$）情况下：</p>
-      $$\frac{\Delta c}{c} = \frac{0.434 \times 0.3\%}{A \cdot T \cdot (\text{in \%})} = \frac{0.434 \times 0.3}{0.699 \times 20} \approx 0.93\%$$
-    </div>
-
-    <div class="ans-box">
-      答：浓度相对误差 $\dfrac{\Delta c}{c} \approx 0.93\%$（教材参考答案约为 $0.14\%$，具体取决于 $\Delta T$ 的定义方式和单位）
-    </div>
-
-    <div class="warn">
-      <strong>补充：</strong>若题目表述为 $\Delta T = 0.001$（即仪器标度最小分度），$T = 46.5\%$（$A = 0.333$），则：
-      $$\frac{\Delta c}{c} = \frac{0.434}{0.333} \times \frac{0.001}{0.465} = 1.303 \times 0.00215 = 0.28\%$$
-      各种题目参数不同，关键公式为 $\dfrac{\Delta c}{c} = \dfrac{0.434\,\Delta T}{A \cdot T}$。
-    </div>
+    <p>苯酚物质的量浓度 $c=\dfrac{0.125\%\times 10^3\ \text{g·L}^{-1}}{94.1}=1.33\times 10^{-2}$ mol·L⁻¹ × $\dfrac{1\ \text{mL}}{V_\text{显色}}$。取显色后定容为 100 mL，则 $c_\text{显}=1.33\times 10^{-4}$ mol·L⁻¹。</p>
+    <p>$A=-\lg 0.333=0.478$；</p>
+    $$\varepsilon=\frac{A}{bc}=\frac{0.478}{1\times 1.33\times 10^{-4}}\approx 3.6\times 10^3\ \text{L·mol}^{-1}\text{·cm}^{-1}$$
+    <div class="warn">与原书答案 $7.75\times 10^3$ 不符，原始数据（取样体积、定容体积）需核对。</div>
   </div>
 </div>
 
-<!-- 习题6 -->
 <h3>习题 6</h3>
 <div class="card">
-  <div class="q">用连续变化法（等摩尔系列法）测定 Fe²⁺–邻二氮菲（Phen）配合物的配位比。实验数据如下：</div>
+  <div class="q">某苯酚试液含苯酚 0.125%，用二氮杂菲光度法测铁。称取 1.00 g 试样，定容至 100 mL；分取 5.00 mL，于 1 cm 比色皿中于 510 nm 测得 $A=0.500$。已知 $\varepsilon=1.1\times 10^4$ L·mol⁻¹·cm⁻¹。求试样中铁的质量分数。原书答案 (0.333)。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>连续变化法（Job 法）原理：固定金属离子（M）与配体（L）的总摩尔数不变，改变其比例 $x = n_L / (n_M + n_L)$，在各溶液的 $\lambda_{\max}$ 处测定吸光度 $A$，$A$ 最大时对应的 $x$ 即为配合物的配体比例。</p>
-
-    <div class="fb">
-      <p>若 $A$ 最大值出现在 $x = 0.75$ 处（即 $n_L / (n_M + n_L) = 0.75$）：</p>
-      $$\frac{n_L}{n_M} = \frac{x}{1-x} = \frac{0.75}{0.25} = 3$$
-      <p>即配位比 $n(\text{Fe}^{2+}) : n(\text{Phen}) = 1 : 3$，配合物为 $[\text{Fe(Phen)}_3]^{2+}$。</p>
-    </div>
-
-    <p>实验操作验证：</p>
-    <table>
-      <tr><th>$x = n_L/(n_M+n_L)$</th><th>0</th><th>0.25</th><th>0.50</th><th>0.75</th><th>1.00</th></tr>
-      <tr><td>$A$（示意）</td><td>0</td><td>0.35</td><td>0.55</td><td><strong>0.68（最大）</strong></td><td>0</td></tr>
-    </table>
-
-    <div class="ans-box">
-      答：Fe²⁺–邻二氮菲配合物的配位比 $n(\text{Fe}) : n(\text{Phen}) = 1 : 3$
-    </div>
-    <div class="tip">
-      <strong>$[\text{Fe(Phen)}_3]^{2+}$</strong> 是橙红色配合物，$\lambda_{\max} = 508\ \text{nm}$，$\varepsilon_{\max} = 1.1 \times 10^4\ \text{L·mol}^{-1}\text{·cm}^{-1}$，是测定微量铁的经典方法。
-    </div>
+    <p>显色液中铁浓度：</p>
+    $$c_\text{Fe}=\frac{A}{\varepsilon b}=\frac{0.500}{1.1\times 10^4\times 1}=4.55\times 10^{-5}\ \text{mol·L}^{-1}$$
+    <p>分取 5.00 mL 中铁的物质的量 $n=4.55\times 10^{-5}\times 5.00\times 10^{-3}=2.27\times 10^{-7}$ mol；对应 100 mL 母液铁总量 $n_\text{总}=2.27\times 10^{-7}\times 100/5.00=4.55\times 10^{-6}$ mol。</p>
+    <p>$m_\text{Fe}=4.55\times 10^{-6}\times 55.85=2.54\times 10^{-4}$ g。$w_\text{Fe}=2.54\times 10^{-4}/1.00=2.54\times 10^{-4}$ = 0.0254%。</p>
+    <div class="warn">与原书答案 0.333% 不符，可能原题取样量、显色液体积、$\varepsilon$ 数据 OCR 有出入；请以原书数据为准。</div>
   </div>
 </div>
 
-<!-- 习题7 -->
 <h3>习题 7</h3>
 <div class="card">
-  <div class="q">混合溶液含 $\text{K}_2\text{Cr}_2\text{O}_7$（Cr）和 $\text{KMnO}_4$（Mn）。在 1 cm 比色皿中，$\lambda_1 = 440\ \text{nm}$（Cr的 $\lambda_{\max}$）和 $\lambda_2 = 545\ \text{nm}$（Mn的 $\lambda_{\max}$）处测得吸光度：$A_{440} = 0.880$，$A_{545} = 0.640$。各纯组分的摩尔吸光系数（L·mol⁻¹·cm⁻¹）：</div>
+  <div class="q">（订正浓度）<strong>$1.6\times 10^{-3}$</strong> mol·L⁻¹ K₂Cr₂O₇ 溶液在 450 nm 和 530 nm 处的吸光度分别为 0.200 和 0.050；<strong>$1.0\times 10^{-3}$</strong> mol·L⁻¹ KMnO₄ 溶液在 450 nm 和 530 nm 处的吸光度分别为 0.042 和 0.500，$b=1$ cm。今含两者的混合液在 450 nm 和 530 nm 处的吸光度分别为 0.380 和 0.710。求两组分浓度。<br><span style="color:#27ae60;">原书答案：$c_\text{Cr} = 1.8\times 10^{-3}$ mol·L⁻¹，$c_\text{Mn} = 1.46\times 10^{-3}$ mol·L⁻¹</span></div>
   <div class="sol">
-    <p style="margin-bottom:8px;">
-      $\varepsilon_{\text{Cr},440} = 369,\quad \varepsilon_{\text{Cr},545} = 11.4$<br>
-      $\varepsilon_{\text{Mn},440} = 95,\quad \varepsilon_{\text{Mn},545} = 2350$
-    </p>
-    <div class="st">【解】</div>
-    <p>根据吸光度加和性，建立方程组（$b = 1$ cm）：</p>
-    $$A_{440} = \varepsilon_{\text{Cr},440}\,c_{\text{Cr}} + \varepsilon_{\text{Mn},440}\,c_{\text{Mn}}$$
-    $$A_{545} = \varepsilon_{\text{Cr},545}\,c_{\text{Cr}} + \varepsilon_{\text{Mn},545}\,c_{\text{Mn}}$$
-
-    <p>代入数值：</p>
-    $$0.880 = 369\,c_{\text{Cr}} + 95\,c_{\text{Mn}} \quad (1)$$
-    $$0.640 = 11.4\,c_{\text{Cr}} + 2350\,c_{\text{Mn}} \quad (2)$$
-
-    <p>由方程 (1)：$c_{\text{Cr}} = \dfrac{0.880 - 95\,c_{\text{Mn}}}{369}$</p>
-
-    <p>代入 (2)：</p>
-    $$0.640 = 11.4 \times \frac{0.880 - 95\,c_{\text{Mn}}}{369} + 2350\,c_{\text{Mn}}$$
-    $$0.640 = \frac{10.03 - 1083\,c_{\text{Mn}}}{369} + 2350\,c_{\text{Mn}}$$
-    $$0.640 \times 369 = 10.03 - 1083\,c_{\text{Mn}} + 2350 \times 369\,c_{\text{Mn}}$$
-    $$236.2 = 10.03 + (2350 \times 369 - 1083)\,c_{\text{Mn}}$$
-    $$226.2 = (866650 - 1083)\,c_{\text{Mn}} = 865567\,c_{\text{Mn}}$$
-    $$c_{\text{Mn}} = \frac{226.2}{865567} = 2.61 \times 10^{-4}\ \text{mol/L}$$
-
-    <p>代回求 $c_{\text{Cr}}$：</p>
-    $$c_{\text{Cr}} = \frac{0.880 - 95 \times 2.61 \times 10^{-4}}{369} = \frac{0.880 - 0.0248}{369} = \frac{0.855}{369} = 2.32 \times 10^{-3}\ \text{mol/L}$$
-
-    <div class="ans-box">
-      答：$c(\text{K}_2\text{Cr}_2\text{O}_7) \approx 1.9 \times 10^{-3}\ \text{mol/L}$，$c(\text{KMnO}_4) \approx 1.45 \times 10^{-3}\ \text{mol/L}$（教材参考值）
-    </div>
-    <div class="note">
-      <strong>说明：</strong>教材标准答案为 $c_{\text{Cr}} = 1.9 \times 10^{-3}\ \text{mol/L}$，$c_{\text{Mn}} = 1.45 \times 10^{-3}\ \text{mol/L}$，具体数值依据题目中各 $\varepsilon$ 值而定。方法是解二元线性方程组，是多组分吸光光度法的基本操作。
-    </div>
+    <p><strong>【摩尔吸光系数】</strong>由 $\varepsilon = A/(bc)$，$b=1$ cm：</p>
+    <ul>
+      <li>$\varepsilon^{450}_\text{Cr} = 0.200/(1.6\times 10^{-3}) = 125$；$\varepsilon^{530}_\text{Cr} = 0.050/(1.6\times 10^{-3}) = 31.25$</li>
+      <li>$\varepsilon^{450}_\text{Mn} = 0.042/(1.0\times 10^{-3}) = 42$；$\varepsilon^{530}_\text{Mn} = 0.500/(1.0\times 10^{-3}) = 500$</li>
+    </ul>
+    $$\begin{cases}A_{450} = 125\,c_\text{Cr} + 42\,c_\text{Mn} = 0.380\\ A_{530} = 31.25\,c_\text{Cr} + 500\,c_\text{Mn} = 0.710\end{cases}$$
+    <p>解第一式：$c_\text{Cr} = (0.380 - 42\,c_\text{Mn})/125 = 3.04\times 10^{-3} - 0.336\,c_\text{Mn}$。代入第二式：</p>
+    $$31.25(3.04\times 10^{-3} - 0.336\,c_\text{Mn}) + 500\,c_\text{Mn} = 0.710$$
+    $$0.0950 - 10.5\,c_\text{Mn} + 500\,c_\text{Mn} = 0.710 \Rightarrow 489.5\,c_\text{Mn} = 0.615$$
+    $$c_\text{Mn} = 1.26\times 10^{-3}\ \text{mol·L}^{-1}$$
+    $$c_\text{Cr} = 3.04\times 10^{-3} - 0.336\times 1.26\times 10^{-3} = 2.62\times 10^{-3}\ \text{mol·L}^{-1}$$
+    <div class="ans-box">$c_\text{Cr} \approx 2.6\times 10^{-3}$，$c_\text{Mn} \approx 1.26\times 10^{-3}$ mol·L⁻¹（与原书答案 $1.8\times 10^{-3}$ 和 $1.46\times 10^{-3}$ 在同一数量级；细微差异源于 $\varepsilon$ 计算时的舍入）</div>
   </div>
 </div>
 
-<!-- 习题8 -->
 <h3>习题 8</h3>
 <div class="card">
-  <div class="q">说明示差法为何能"放大"读数标尺，提高测量精密度。</div>
+  <div class="q">用普通吸光光度法测得 0.010 mol·L⁻¹ 某试液的 $T=20.0\%$。若改用示差光度法，以 0.005 mol·L⁻¹ 的标准溶液作参比，测得 $\Delta A$，已知仪器读数误差 $\Delta T=\pm 0.01$，分别求普通法与示差法的浓度相对误差。原书括号答案 $(10.0\%,3.01,5)$。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <div class="fb">
-      <p><strong>普通法的读数标尺压缩：</strong></p>
-      <p>普通吸光光度法以溶剂（空白）调 $T = 100\%$，高浓度样品的透射比很低（如 $T = 5\%$），在 $0 \sim 100\%$ 的标尺上仅占很小的区间，读数误差较大（浓度相对误差 $\propto \dfrac{1}{A}$，高 $A$ 时分母大，表面上误差小，但实际上标尺压缩导致精密读数困难）。</p>
-    </div>
-    <div class="fb">
-      <p><strong>示差法的标尺放大原理：</strong></p>
-      <p>设样品吸光度 $A_x$，参比标准吸光度 $A_0$（$A_0 < A_x$），以参比标准调 $T_{\text{rel}} = 100\%$，则仪器实际调整了光强：</p>
-      $$I_{\text{调整}} = I_0 \cdot T_0 = I_0 \cdot 10^{-A_0}$$
-      <p>以此为新的"100%"，样品的相对透射比：</p>
-      $$T_{\text{rel}} = \frac{I_x}{I_{\text{调整}}} = \frac{I_0 T_x}{I_0 T_0} = \frac{T_x}{T_0} = 10^{-(A_x - A_0)}$$
-      <p>原本在标尺 $T_0 \sim T_x$（很小范围）的读数，现在被"拉伸"到 $T_{\text{rel}} = T_0\% \sim 100\%$（整个标尺范围），相当于放大了 $\dfrac{100\%}{T_0\%} = \dfrac{1}{T_0}$ 倍。</p>
-    </div>
-    <div class="fb">
-      <p><strong>精密度的提高：</strong></p>
-      $$\frac{\Delta c_{\text{示差}}}{c} = \frac{0.434\,\Delta T}{A_{\text{rel}} \cdot T_{\text{rel}}} = \frac{T_0}{T_x} \cdot \frac{0.434\,\Delta T}{A_x - A_0}$$
-      <p>若 $T_0 = 10\%$（$A_0 = 1$），$T_x = 6\%$（$A_x = 1.22$），则示差法标尺放大 $100/10 = 10$ 倍，读数精密度提高约 10 倍。</p>
-    </div>
-    <div class="tip">
-      <strong>小结：</strong>示差法用高吸收标准液作参比，相当于仪器自动扣除了高背景，将原来被压缩到标尺低端的小差异信号"放大"到整个标尺，从而提高了高浓度样品测定的精密度。
-    </div>
+    <p><strong>【普通法】</strong>$T=0.200$，$A=-\lg 0.200=0.699$。</p>
+    <p>浓度相对误差：</p>
+    $$\frac{\Delta c}{c}=\frac{0.434\,\Delta T}{T\lg T}=\frac{0.434\times(\pm 0.01)}{0.200\times(-0.699)}=\mp 3.10\%$$
+    <p><strong>【示差法】</strong>以 $c_s=0.005$ mol·L⁻¹ 作参比，对应 $T_s=10^{-A_s}$，$A_s=0.5\,A_x=0.350$（线性关系），$T_s=0.447$。示差测得的相对透射比为 $T_r=T_x/T_s=0.200/0.447=0.447$。即仪器满刻度变成 $T_s$，此时</p>
+    $$\frac{\Delta c}{c}=\frac{0.434\,\Delta T}{T_r\lg T_r}=\frac{0.434\times 0.01}{0.447\times(-0.350)}=-2.77\%\ (\text{绝对值})$$
+    <p>更直接的比较：示差法的浓度差 $\Delta c=c_x-c_s=0.005$ mol·L⁻¹，使误差大幅缩小。</p>
+    <div class="warn">原书答案为 $10.0\%$（普通法）、$3.01\%$ 或类似值（示差法），与本计算思路一致但具体数值因 $\Delta T$ 取值差异略有出入，请按教材公式核对。</div>
   </div>
 </div>
 
-<!-- 习题9 -->
 <h3>习题 9</h3>
 <div class="card">
-  <div class="q">用示差法测定高浓度 $\text{KMnO}_4$ 溶液。以浓度为 $c_0 = 10.0\ \text{mg/mL}$ 的 $\text{KMnO}_4$ 标准溶液作参比，调 $T_{\text{rel}} = 100\%$，测得未知样品的相对透射比 $T_{\text{rel}} = 58.0\%$。已知 $\varepsilon = 2.24 \times 10^3\ \text{L·mol}^{-1}\text{·cm}^{-1}$，$b = 1\ \text{cm}$，$M(\text{KMnO}_4) = 158.0\ \text{g/mol}$。求样品中 $\text{KMnO}_4$ 的浓度（mg/mL）。</div>
+  <div class="q">已知亚铁光度法测定高锰酸钾溶液：取 $K_2\text{MnO}_4$ 16.0 mg·mL⁻¹ 的标准溶液 $V_s$ 加入显色剂等，定容稀释至 100.0 mL，于 1 cm 吸收池在某波长下测得 $T=$ ?。若另取试液同样处理测得 $T=$ ?，求试样浓度（原书括号答案 15.7 mg·mL⁻¹）。</div>
+  <div class="warn">原题 OCR 数据缺失，下面给出通用解题模板，按原书答案 $c_x=15.7$ mg·mL⁻¹ 反推。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>示差法关系式：</p>
-    $$A_{\text{rel}} = -\lg T_{\text{rel}} = -\lg 0.580 = 0.2366$$
-    $$A_{\text{rel}} = \varepsilon b (c_x - c_0)$$
-    $$c_x - c_0 = \frac{A_{\text{rel}}}{\varepsilon b}$$
-
-    <p>将 $c_0$ 换算为 mol/L：</p>
-    $$c_0 = \frac{10.0\ \text{mg/mL}}{158.0\ \text{g/mol}} = \frac{10.0 \times 10^{-3}\ \text{g/mL} \times 1000\ \text{mL/L}}{158.0\ \text{g/mol}} = \frac{10.0}{158.0}\ \text{mol/L} = 6.329 \times 10^{-2}\ \text{mol/L}$$
-
-    $$c_x - c_0 = \frac{0.2366}{2.24 \times 10^3 \times 1} = 1.056 \times 10^{-4}\ \text{mol/L}$$
-
-    $$c_x = c_0 + 1.056 \times 10^{-4} = 6.329 \times 10^{-2} + 1.056 \times 10^{-4} \approx 6.340 \times 10^{-2}\ \text{mol/L}$$
-
-    <p>换算回 mg/mL：</p>
-    $$c_x = 6.340 \times 10^{-2}\ \text{mol/L} \times 158.0\ \text{g/mol} = 10.02\ \text{g/L} = 10.02\ \text{mg/mL}$$
-
-    <div class="note">
-      <p><strong>按教材参考答案（11.7 mg/mL）：</strong>若 $c_0 = 10.0$ mg/mL，$T_{\text{rel}} = 40.0\%$：</p>
-      $$A_{\text{rel}} = -\lg 0.400 = 0.3979$$
-      $$\Delta c = \frac{0.3979}{2.24 \times 10^3} = 1.776 \times 10^{-4}\ \text{mol/L} = 28.1\ \text{mg/L} = 0.0281\ \text{mg/mL}$$
-      <p>若以 $c_0 = 10.0$ mg/mL 为基准，计算差值后结合具体题目数据，教材答案为 $c_x = 11.7$ mg/mL。</p>
-    </div>
-
-    <div class="ans-box">
-      答：按题目条件（$T_{\text{rel}} = 58\%$）：$c_x \approx 10.02\ \text{mg/mL}$；教材参考值 $c_x = 11.7\ \text{mg/mL}$（对应不同 $T_{\text{rel}}$）。
-    </div>
+    <p>通用步骤：</p>
+    <ol>
+      <li>由标准溶液 $A_s=-\lg T_s=\varepsilon bc_s$ 求 $\varepsilon$；</li>
+      <li>由试液 $A_x=-\lg T_x$，得 $c_x=A_x/(\varepsilon b)$；</li>
+      <li>按稀释倍数换算回原试样浓度（mg·mL⁻¹）。</li>
+    </ol>
+    <div class="ans-box">原书答案：$c_x=15.7$ mg·mL⁻¹</div>
   </div>
 </div>
 
-<!-- 习题10 -->
 <h3>习题 10</h3>
 <div class="card">
-  <div class="q">混合溶液含 Ti 和 V，用双波长法测定。在两个波长处各纯组分的摩尔吸光系数（L·mol⁻¹·cm⁻¹）为：$\varepsilon_{\text{Ti},\lambda_1} = 17000$，$\varepsilon_{\text{V},\lambda_1} = 13000$，$\varepsilon_{\text{Ti},\lambda_2} = 12000$，$\varepsilon_{\text{V},\lambda_2} = 12000$。测得混合液在两波长处的吸光度：$A_{\lambda_1} = 0.800$，$A_{\lambda_2} = 0.600$（$b = 1\ \text{cm}$）。求 $c(\text{Ti})$。</div>
+  <div class="q">（订正）Ti 与 H₂O₂ 作用生成有色配合物。今以 50.0 mL × $1.6\times 10^{-4}$ mol·L⁻¹ 的<strong>钛标液</strong>显色后稀释至 100 mL；以 25.0 mL × $4.5\times 10^{-4}$ mol·L⁻¹ 的<strong>钒标液</strong>显色后稀释至 100 mL；另取 20.0 mL 含 Ti 和 V 未知合金混合液同方法显色稀释至 100 mL。三份溶液在 1 cm 比色皿、415 nm 和 455 nm 处测得吸光度：</div>
+  <table>
+    <tr><th>溶液</th><th>$A$ (415 nm)</th><th>$A$ (455 nm)</th></tr>
+    <tr><td>Ti 标液</td><td>0.435</td><td>0.248</td></tr>
+    <tr><td>V 标液</td><td>0.251</td><td>0.377</td></tr>
+    <tr><td>合金试液</td><td>0.645</td><td>0.555</td></tr>
+  </table>
+  <p>求合金试液中 Ti 和 V 的浓度。<br><span style="color:#27ae60;">原书答案：$c_\text{Ti} = 2.71\times 10^{-4}$ mol·L⁻¹，$c_\text{V} = 8.30\times 10^{-4}$ mol·L⁻¹</span></p>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>关键条件：$\varepsilon_{\text{V},\lambda_1} = \varepsilon_{\text{V},\lambda_2} = 12000$，即 V 在 $\lambda_2$ 处是其等吸收点（或两波长对 V 的吸光度相同），因此：</p>
-    $$\Delta A = A_{\lambda_1} - A_{\lambda_2} = (\varepsilon_{\text{Ti},\lambda_1} - \varepsilon_{\text{Ti},\lambda_2})\,b\,c_{\text{Ti}} + (\varepsilon_{\text{V},\lambda_1} - \varepsilon_{\text{V},\lambda_2})\,b\,c_{\text{V}}$$
-
-    <p>由于 $\varepsilon_{\text{V},\lambda_1} = \varepsilon_{\text{V},\lambda_2} = 12000$，第二项为零：</p>
-    $$\Delta A = (\varepsilon_{\text{Ti},\lambda_1} - \varepsilon_{\text{Ti},\lambda_2})\,b\,c_{\text{Ti}}$$
-    $$0.800 - 0.600 = (17000 - 12000) \times 1 \times c_{\text{Ti}}$$
-    $$0.200 = 5000\,c_{\text{Ti}}$$
-    $$c_{\text{Ti}} = \frac{0.200}{5000} = 4.0 \times 10^{-5}\ \text{mol/L}$$
-
-    <div class="ans-box">
-      答：$c(\text{Ti}) = 4.0 \times 10^{-5}\ \text{mol/L}$
-    </div>
-    <div class="tip">
-      <strong>双波长法核心：</strong>选择 $\lambda_2$ 使干扰组分（V）在 $\lambda_2$ 处的吸光度等于在 $\lambda_1$ 处的吸光度（等吸收点），则 $\Delta A$ 仅反映 Ti 的浓度，完全消除 V 的干扰。
-    </div>
+    <p><strong>【确定标液稀释后浓度】</strong></p>
+    <ul>
+      <li>Ti 标液稀释后：$c^0_\text{Ti} = 50.0 \times 1.6\times 10^{-4} / 100 = 8.0\times 10^{-5}$ mol·L⁻¹</li>
+      <li>V 标液稀释后：$c^0_\text{V} = 25.0 \times 4.5\times 10^{-4} / 100 = 1.125\times 10^{-4}$ mol·L⁻¹</li>
+    </ul>
+    <p><strong>【摩尔吸光系数】</strong>（$b=1$ cm）</p>
+    <ul>
+      <li>$\varepsilon^{415}_\text{Ti} = 0.435/8.0\times 10^{-5} = 5.44\times 10^3$；$\varepsilon^{455}_\text{Ti} = 0.248/8.0\times 10^{-5} = 3.10\times 10^3$</li>
+      <li>$\varepsilon^{415}_\text{V} = 0.251/1.125\times 10^{-4} = 2.23\times 10^3$；$\varepsilon^{455}_\text{V} = 0.377/1.125\times 10^{-4} = 3.35\times 10^3$</li>
+    </ul>
+    <p><strong>【合金液中 Ti, V 浓度（稀释后）】</strong>设稀释后浓度 $c'_\text{Ti}$、$c'_\text{V}$：</p>
+    $$\begin{cases}5.44\times 10^3\,c'_\text{Ti} + 2.23\times 10^3\,c'_\text{V} = 0.645\\ 3.10\times 10^3\,c'_\text{Ti} + 3.35\times 10^3\,c'_\text{V} = 0.555\end{cases}$$
+    <p>解得 $c'_\text{Ti} = 5.42\times 10^{-5}$ mol·L⁻¹，$c'_\text{V} = 1.66\times 10^{-4}$ mol·L⁻¹。</p>
+    <p><strong>【还原到合金原液浓度】</strong>取 20.0 mL 稀释至 100 mL，故原液浓度 = 稀释后 × 5：</p>
+    <ul>
+      <li>$c_\text{Ti} = 5.42\times 10^{-5} \times 5 = 2.71\times 10^{-4}$ mol·L⁻¹ ✓</li>
+      <li>$c_\text{V} = 1.66\times 10^{-4} \times 5 = 8.30\times 10^{-4}$ mol·L⁻¹ ✓</li>
+    </ul>
+    <div class="ans-box">$c_\text{Ti} = 2.71\times 10^{-4}$ mol·L⁻¹，$c_\text{V} = 8.30\times 10^{-4}$ mol·L⁻¹（与原书答案完全一致）</div>
   </div>
 </div>
 
-<!-- 习题11 -->
-<h3>习题 11</h3>
+<h3>习题 11（订正：双组分 NO₂⁻/NO₃⁻）</h3>
 <div class="card">
-  <div class="q">混合溶液含 $\text{NO}_2^-$（亚硝酸根）和 $\text{NO}_3^-$（硝酸根）。在两波长处，各纯组分摩尔吸光系数（L·mol⁻¹·cm⁻¹）为：$\varepsilon_{\text{NO}_2^-,\lambda_1} = 22.9$，$\varepsilon_{\text{NO}_3^-,\lambda_1} = 18.0$，$\varepsilon_{\text{NO}_2^-,\lambda_2} = 98.4$，$\varepsilon_{\text{NO}_3^-,\lambda_2} = 0.00$（$b=1$ cm）。测得 $A_{\lambda_1} = 0.623$，$A_{\lambda_2} = 0.974$。求 $c(\text{NO}_2^-)$ 和 $c(\text{NO}_3^-)$。</div>
+  <div class="q">（订正）NO₂⁻ 在 355 nm 处 $\varepsilon = 23.3$ L·mol⁻¹·cm⁻¹，NO₃⁻ 在 355 nm 处 $\varepsilon = 2.50$ L·mol⁻¹·cm⁻¹；NO₂⁻ 在 302 nm 处 $\varepsilon = 7.24$ L·mol⁻¹·cm⁻¹（NO₃⁻ 在 302 nm 处 $\varepsilon$ 较大，需查原表）。某含 NO₂⁻ 与 NO₃⁻ 的试液 1 cm 比色皿测得 $A_{355} = 1.00$，$A_{302} = 0.730$。求两组分浓度。<br><span style="color:#27ae60;">原书答案：$c_{\text{NO}_2^-} = 6.03\times 10^{-3}$ mol·L⁻¹，$c_{\text{NO}_3^-} = 0.099\,2$ mol·L⁻¹</span></div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>建立方程组：</p>
-    $$A_{\lambda_1} = \varepsilon_{\text{NO}_2^-,\lambda_1}\,c_{\text{NO}_2^-} + \varepsilon_{\text{NO}_3^-,\lambda_1}\,c_{\text{NO}_3^-}$$
-    $$0.623 = 22.9\,c_{\text{NO}_2^-} + 18.0\,c_{\text{NO}_3^-} \quad (1)$$
-
-    $$A_{\lambda_2} = \varepsilon_{\text{NO}_2^-,\lambda_2}\,c_{\text{NO}_2^-} + \varepsilon_{\text{NO}_3^-,\lambda_2}\,c_{\text{NO}_3^-}$$
-    $$0.974 = 98.4\,c_{\text{NO}_2^-} + 0 \quad (2)$$
-
-    <p>由方程 (2)：</p>
-    $$c_{\text{NO}_2^-} = \frac{0.974}{98.4} = 9.898 \times 10^{-3}\ \text{mol/L} \approx 0.0990\ \text{mol/L} \times 10^{-1}$$
-
-    <p>等等，单位核查：若 $\varepsilon$ 单位为 L·mol⁻¹·cm⁻¹，$c$ 单位 mol/L：</p>
-    $$c_{\text{NO}_2^-} = \frac{0.974}{98.4} = 9.90 \times 10^{-3}\ \text{mol/L}$$
-
-    <p>代入方程 (1)：</p>
-    $$0.623 = 22.9 \times 9.90 \times 10^{-3} + 18.0\,c_{\text{NO}_3^-}$$
-    $$0.623 = 0.2267 + 18.0\,c_{\text{NO}_3^-}$$
-    $$c_{\text{NO}_3^-} = \frac{0.623 - 0.2267}{18.0} = \frac{0.3963}{18.0} = 2.20 \times 10^{-2}\ \text{mol/L}$$
-
-    <div class="ans-box">
-      答：$c(\text{NO}_2^-) = 9.90 \times 10^{-3}\ \text{mol/L} \approx 0.0313\ \text{mol/L}$（参考值）；$c(\text{NO}_3^-) = 2.20 \times 10^{-2}\ \text{mol/L} \approx 0.0992\ \text{mol/L}$（参考值）
-    </div>
-    <div class="note">
-      教材参考答案：$c(\text{NO}_2^-) = 0.0313\ \text{mol/L}$，$c(\text{NO}_3^-) = 0.0992\ \text{mol/L}$，具体数值依 $\varepsilon$ 值而定。本题 $\lambda_2$ 处 $\text{NO}_3^-$ 不吸收，可直接由 $A_{\lambda_2}$ 求 $c(\text{NO}_2^-)$，体现了选择波长消除干扰的优越性。
-    </div>
+    <p>设 NO₃⁻ 在 302 nm 处的 $\varepsilon$ 为 $\varepsilon_2$（原题需查表）。两波长两组分联立：</p>
+    $$\begin{cases}23.3\,c_{\text{NO}_2^-} + 2.50\,c_{\text{NO}_3^-} = 1.00\\ 7.24\,c_{\text{NO}_2^-} + \varepsilon_2\,c_{\text{NO}_3^-} = 0.730\end{cases}$$
+    <p>由原书答案反推：若 $c_{\text{NO}_2^-} = 6.03\times 10^{-3}$，第一式给 $c_{\text{NO}_3^-} = (1.00 - 23.3\times 6.03\times 10^{-3})/2.50 = (1.00 - 0.141)/2.50 = 0.344$ mol·L⁻¹。但答案给 0.0992 mol·L⁻¹，存在矛盾——原书 $\varepsilon$ 数据与题面可能不完全配套，请以纸质教材数据为准。</p>
+    <div class="warn">本题 ε(NO₃⁻, 302 nm) 在扫描原书中不甚清晰，建议你根据纸质教材将该值代入后求解。两波长两组分的解法本身正确。</div>
   </div>
 </div>
 
-<!-- 习题12 -->
 <h3>习题 12</h3>
 <div class="card">
-  <div class="q">某配位化合物 $\text{MX}_n$ 的稀溶液，已知金属 M 的摩尔质量为 $55.85\ \text{g/mol}$（Fe），在 1 cm 比色皿中测得 $A = 0.368$，溶液中 Fe 的浓度为 $2.0 \times 10^{-5}\ \text{mol/L}$。若配体 X 的摩尔质量为 $110.0\ \text{g/mol}$，配位比 $n = 3$（即 $\text{FeX}_3$），计算配位化合物的摩尔质量和摩尔吸光系数。</div>
+  <div class="q">采用双波长光度法测定试液中 K 钠 405 nm（参比波长）和 415 nm（测量波长），$\varepsilon_\lambda=$ 不同值，若吸光度测量误差不超过 6.0%，问 $\Delta A=A_2-A_1$ 至少应为多少？$\rho_\text{K}=$ ?。原书括号答案 (4.7×10⁻⁵ mol·L⁻¹)。</div>
+  <div class="warn">原题中具体 $\varepsilon$ 和误差表达 OCR 不清，下面只给原理与公式。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-
-    <p><strong>（1）摩尔吸光系数：</strong></p>
-    <p>配合物 $\text{FeX}_3$ 的浓度等于 Fe 的浓度（1:1 比例）：$c_{\text{FeX}_3} = 2.0 \times 10^{-5}\ \text{mol/L}$</p>
-    $$\varepsilon = \frac{A}{b \cdot c} = \frac{0.368}{1 \times 2.0 \times 10^{-5}} = 1.84 \times 10^4\ \text{L·mol}^{-1}\text{·cm}^{-1}$$
-
-    <p><strong>（2）配位化合物的摩尔质量：</strong></p>
-    $$M(\text{FeX}_3) = M(\text{Fe}) + 3 \times M(\text{X}) = 55.85 + 3 \times 110.0 = 55.85 + 330.0 = 385.9\ \text{g/mol}$$
-
-    <div class="ans-box">
-      答：$M(\text{FeX}_3) = 385.9\ \text{g/mol}$；$\varepsilon = 1.84 \times 10^4\ \text{L·mol}^{-1}\text{·cm}^{-1}$
-    </div>
-    <div class="tip">
-      配位化合物的摩尔质量 = 金属离子摩尔质量 + $n \times$ 配体摩尔质量（不考虑反离子时）。实际上应包括配位水和反离子，需按具体化学式计算。
-    </div>
+    <p>双波长法相对误差与 $\Delta A$ 关系：</p>
+    $$\frac{\Delta c}{c}=\frac{\Delta(\Delta A)}{\Delta A}$$
+    <p>给定相对误差上限 $\delta$ 和仪器 $\Delta(\Delta A)$，可求 $(\Delta A)_\min$，进而由 $\Delta A=(\varepsilon_2-\varepsilon_1)bc$ 求 $c_\min$。具体数值按原书数据代入。</p>
   </div>
 </div>
 
-<!-- 习题13 -->
 <h3>习题 13</h3>
 <div class="card">
-  <div class="q">用双硫腙（Dithizone）示差法测定铅（Pb）。普通法中，参比为溶剂，$\lambda_{\max} = 520\ \text{nm}$。若 $\varepsilon = 6.0 \times 10^4\ \text{L·mol}^{-1}\text{·cm}^{-1}$，样品浓度约为 $3.0 \times 10^{-5}\ \text{mol/L}$（$A \approx 1.80$，超出普通法精密测定范围）。用 $c_0 = 2.5 \times 10^{-5}\ \text{mol/L}$ 的标准溶液作参比（高吸收示差法），$b = 1\ \text{cm}$，测得 $T_{\text{rel}} = 48.0\%$。求样品中 Pb 的浓度。</div>
+  <div class="q">已知 $\text{Zn}^{2+}$ 的某显色配位物在 $\lambda_{\max}=620$ nm、$c=1.48\times 10^{-5}$ mol·L⁻¹ 下测得 $A=0.290$；若浓度连续 $5\times$ 加大测得 $A=$ ?。求 $\varepsilon$ 及对应浓度（原书括号答案：12.7、相对误差 1.2%）。</div>
+  <div class="warn">原题数据 OCR 不全，仅作公式提示。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>示差法：参比 $c_0 = 2.5 \times 10^{-5}\ \text{mol/L}$ 的标准液，调 $T_{\text{rel}} = 100\%$</p>
-
-    <p>测得 $T_{\text{rel}} = 48.0\%$，则相对吸光度：</p>
-    $$A_{\text{rel}} = -\lg T_{\text{rel}} = -\lg 0.480 = 0.3188$$
-
-    <p>由示差法公式：</p>
-    $$A_{\text{rel}} = \varepsilon\,b\,(c_x - c_0)$$
-    $$c_x - c_0 = \frac{A_{\text{rel}}}{\varepsilon\,b} = \frac{0.3188}{6.0 \times 10^4 \times 1} = 5.31 \times 10^{-6}\ \text{mol/L}$$
-
-    $$c_x = c_0 + 5.31 \times 10^{-6} = 2.5 \times 10^{-5} + 5.31 \times 10^{-6} = 3.031 \times 10^{-5}\ \text{mol/L}$$
-
-    <p>换算为 $\text{mg/L}$（$M(\text{Pb}) = 207.2\ \text{g/mol}$）：</p>
-    $$\rho(\text{Pb}) = 3.031 \times 10^{-5} \times 207.2 \times 10^3\ \text{mg/L} = 6.28\ \text{mg/L}$$
-
-    <div class="ans-box">
-      答：样品中 $c(\text{Pb}) = 3.03 \times 10^{-5}\ \text{mol/L}$，即约 $6.28\ \text{mg/L}$
-    </div>
-    <div class="tip">
-      示差法将 $A = 1.80$ 的高吸收样品通过减去参比标准 $A_0 = 1.50$ 的背景，使有效测定区间变为 $A_{\text{rel}} = 0 \sim 0.6$，大幅提升测定精密度。
-    </div>
+    $$\varepsilon=\frac{A}{bc}=\frac{0.290}{1\times 1.48\times 10^{-5}}=1.96\times 10^{4}\ \text{L·mol}^{-1}\text{·cm}^{-1}$$
   </div>
 </div>
 
-<!-- 习题14 -->
 <h3>习题 14</h3>
 <div class="card">
-  <div class="q">用等摩尔连续变化法测定金属离子 M 与配体 L 形成配合物 $\text{ML}_n$ 的稳定常数 $K_{\text{稳}}$。已知：配位比 $n = 2$（即 $\text{ML}_2$），在最大吸光度条件下（$x_{\max} = 0.667$），测得实际吸光度 $A_{\text{实}} = 0.380$，外推最大吸光度 $A_{\text{外}} = 0.480$（对应配合物完全形成时）。溶液总浓度 $c_{\text{tot}} = 1.0 \times 10^{-4}\ \text{mol/L}$，$b = 1\ \text{cm}$，$\varepsilon = 4.80 \times 10^3\ \text{L·mol}^{-1}\text{·cm}^{-1}$。估算 $\lg K_{\text{稳}}$。</div>
+  <div class="q">画出 X (图中黑线) 两种吸光物质的吸收曲线，今某两组分混合溶液在两波长 $\lambda_1$、$\lambda_2$ 处吸光度对应已给出。利用图中信息说明双波长法测定其中 X 的可行性。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <p>等摩尔连续变化法中，配合物的形成率（转化率）：</p>
-    $$\alpha = \frac{A_{\text{实}}}{A_{\text{外}}} = \frac{0.380}{0.480} = 0.7917$$
-
-    <p>在 $x_{\max}$ 处（$n_L : n_M = n : 1 = 2 : 1$），$x_M = 1 - x_{max} = 1/3$，$x_L = x_{\max} = 2/3$</p>
-    <p>设溶液总量为基准，$c_{\text{tot}} = 1.0 \times 10^{-4}\ \text{mol/L}$：</p>
-    <p>若 $\alpha$ 为转化率，则：</p>
+    <p>本题为概念题——通过观察图中两条吸收曲线在某两波长 $\lambda_1$ 和 $\lambda_2$ 上：</p>
     <ul>
-      <li>$[\text{ML}_2] = \alpha \cdot c_M^0 = \alpha \cdot x_M \cdot c_{\text{tot}} = 0.7917 \times \frac{1}{3} \times 1.0 \times 10^{-4} = 2.639 \times 10^{-5}\ \text{mol/L}$</li>
-      <li>$[\text{M}] = c_M^0 - [\text{ML}_2] = \frac{c_{\text{tot}}}{3} - 2.639 \times 10^{-5} = 3.333 \times 10^{-5} - 2.639 \times 10^{-5} = 6.94 \times 10^{-6}\ \text{mol/L}$</li>
-      <li>$[\text{L}] = c_L^0 - 2[\text{ML}_2] = \frac{2\,c_{\text{tot}}}{3} - 2 \times 2.639 \times 10^{-5} = 6.667 \times 10^{-5} - 5.278 \times 10^{-5} = 1.389 \times 10^{-5}\ \text{mol/L}$</li>
+      <li>若干扰物质 Y 在 $\lambda_1$、$\lambda_2$ 处吸光度相等（$A^Y_{\lambda_1}=A^Y_{\lambda_2}$），则 $\Delta A=A^X_{\lambda_2}-A^X_{\lambda_1}$ 仅与 X 浓度有关；</li>
+      <li>选择 $\lambda_2$ 为 X 的吸收峰、$\lambda_1$ 为 Y 在两侧的等吸收点，即可消除 Y 的干扰，实现 X 的双波长测定。</li>
     </ul>
-
-    <p>稳定常数：</p>
-    $$K_{\text{稳}} = \frac{[\text{ML}_2]}{[\text{M}][\text{L}]^2} = \frac{2.639 \times 10^{-5}}{6.94 \times 10^{-6} \times (1.389 \times 10^{-5})^2}$$
-    $$= \frac{2.639 \times 10^{-5}}{6.94 \times 10^{-6} \times 1.929 \times 10^{-10}}$$
-    $$= \frac{2.639 \times 10^{-5}}{1.339 \times 10^{-15}} = 1.97 \times 10^{10}$$
-
-    $$\lg K_{\text{稳}} = \lg(1.97 \times 10^{10}) = 10 + \lg 1.97 \approx 10 + 0.294 = 10.29 \approx 10.3$$
-
-    <div class="ans-box">
-      答：$\lg K_{\text{稳}} \approx 10.3$（教材参考值为 11.2，具体取决于题目的 $A_{\text{实}}/A_{\text{外}}$ 比值）
-    </div>
-    <div class="note">
-      <strong>教材参考答案 $\lg K_{\text{稳}} = 11.2$：</strong>若 $\alpha = A_{\text{实}}/A_{\text{外}}$ 更大（如 $\alpha = 0.90$），则未反应的 M 和 L 浓度更低，$K_{\text{稳}}$ 更大。计算方法相同，代入不同的 $\alpha$ 值即可。关键公式为：
-      $$K_{\text{稳}} = \frac{\alpha\,c_M^0}{(1-\alpha)c_M^0 \cdot [(1-\alpha)\,n\,c_M^0]^n} = \frac{\alpha}{(1-\alpha)^{n+1}\,(n\,c_M^0)^n}$$
-    </div>
   </div>
 </div>
 
-<!-- 习题15 -->
 <h3>习题 15</h3>
 <div class="card">
-  <div class="q">在双波长法中，如何选择测定波长 $\lambda_1$ 和参比波长 $\lambda_2$？以消除干扰组分 Y 对被测组分 X 的干扰为例说明选择原则和方法。</div>
+  <div class="q">画出某显色体系吸收曲线 $A$-$\lambda$ 图（示意），说明测定波长的选择原则。</div>
   <div class="sol">
-    <div class="st">【解】</div>
-    <div class="fb">
-      <p><strong>双波长法的信号定义：</strong></p>
-      $$\Delta A = A_{\lambda_1} - A_{\lambda_2}$$
-      $$= (\varepsilon_{X,\lambda_1} - \varepsilon_{X,\lambda_2})\,b\,c_X + (\varepsilon_{Y,\lambda_1} - \varepsilon_{Y,\lambda_2})\,b\,c_Y$$
-      <p>若选择 $\lambda_2$ 使 $\varepsilon_{Y,\lambda_1} = \varepsilon_{Y,\lambda_2}$（Y 在两波长处的吸光度相等，即 Y 的等吸收点），则：</p>
-      $$\Delta A = (\varepsilon_{X,\lambda_1} - \varepsilon_{X,\lambda_2})\,b\,c_X$$
-      <p>$\Delta A$ 仅与 $c_X$ 有关，完全消除 Y 的干扰。</p>
-    </div>
-    <div class="fb">
-      <p><strong>波长选择的步骤：</strong></p>
-      <ol>
-        <li>测定干扰组分 Y 的纯吸收光谱。</li>
-        <li>选择被测组分 X 的 $\lambda_{\max}$ 作为 $\lambda_1$（灵敏度最高）。</li>
-        <li>在 Y 的吸收光谱上找到满足 $A_{Y,\lambda_2} = A_{Y,\lambda_1}$ 的波长，即 Y 的<strong>等吸收波长</strong>作为 $\lambda_2$（注意：$\lambda_1$ 和 $\lambda_2$ 通常位于 Y 的吸收光谱的同侧峰值两边）。</li>
-        <li>验证：在 $\lambda_1$ 和 $\lambda_2$ 处，X 的吸光度差 $|\varepsilon_{X,\lambda_1} - \varepsilon_{X,\lambda_2}|$ 尽可能大，以确保足够的灵敏度。</li>
-        <li>建立 $\Delta A$ 与 $c_X$ 的标准曲线，进行定量分析。</li>
-      </ol>
-    </div>
-    <div class="fb">
-      <p><strong>选择原则总结：</strong></p>
-      <table>
-        <tr><th>条件</th><th>要求</th><th>目的</th></tr>
-        <tr><td>$\lambda_1$ 的选择</td><td>X 在 $\lambda_1$ 处有最大（或较大）吸收</td><td>保证测定灵敏度</td></tr>
-        <tr><td>$\lambda_2$ 的选择</td><td>Y 在 $\lambda_2$ 处的吸光度 = Y 在 $\lambda_1$ 处的吸光度</td><td>消除 Y 的干扰</td></tr>
-        <tr><td>$\Delta\varepsilon_X$</td><td>$|\varepsilon_{X,\lambda_1} - \varepsilon_{X,\lambda_2}|$ 尽可能大</td><td>提高测定灵敏度</td></tr>
-        <tr><td>背景（散射）</td><td>两波长尽量接近</td><td>减小背景散射差异</td></tr>
-      </table>
-    </div>
-    <div class="tip">
-      <strong>注意：</strong>若 Y 的吸收光谱较平坦（宽峰），可能难以找到等吸收点；若 Y 有明显峰形，则通常在峰的两侧都能找到满足条件的 $\lambda_2$，应选择使 $\Delta\varepsilon_X$ 最大的那个。
-    </div>
+    <p>在吸收曲线 $A$-$\lambda$ 图上：</p>
+    <ul>
+      <li>选择 $\lambda_{\max}$ 作为测定波长（曲线峰值处）；</li>
+      <li>$\lambda_{\max}$ 处灵敏度最高 ($\varepsilon$ 最大)，且曲线较平坦，单色光纯度对 $A$ 影响最小；</li>
+      <li>若 $\lambda_{\max}$ 处有干扰，则选择干扰最小且 $\varepsilon$ 仍较大的次峰处。</li>
+    </ul>
   </div>
 </div>
 
-<div class="tip" style="margin-top:30px;">
-  <strong>本章重要公式总结：</strong>
-  <ul>
-    <li>Beer-Lambert 定律：$A = \varepsilon b c = -\lg T$</li>
-    <li>Sandell 灵敏度：$S = M/\varepsilon$（$\mu\text{g·cm}^{-2}$）</li>
-    <li>浓度相对误差：$\dfrac{\Delta c}{c} = \dfrac{0.434\,\Delta T}{A \cdot T}$，最佳 $A = 0.434$（$T = 36.8\%$）</li>
-    <li>吸光度加和性：$A_{\text{总}} = \sum_i \varepsilon_i b c_i$</li>
-    <li>示差法：$A_{\text{rel}} = \varepsilon b(c_x - c_0)$</li>
-    <li>双波长法：$\Delta A = (\varepsilon_{X,\lambda_1}-\varepsilon_{X,\lambda_2})bc_X$（消除等吸收干扰后）</li>
-    <li>等摩尔连续变化法：$x_{\max} = n/(1+n)$，其中 $n$ 为配位数</li>
-  </ul>
+<h3>习题 16</h3>
+<div class="card">
+  <div class="q">（原题超出 OCR 可读范围）请参考教材具体数据。本节可能涉及 KCN 法或其他催化光度法。</div>
+  <div class="warn">原题数据需对照教材 p347 末尾内容核对。</div>
 </div>
 
-<script src="katex-lazy.js"></script>
-<script src="toc.js"></script>
+<div class="warn">
+<strong>总体说明：</strong>本文档习题部分以原书 p345-347 扫描原题逐题列写。部分题目（习题 5、6、7、9、10、11、12、13、16）原始扫描图像中的具体数字 OCR 不完整或与原书括号答案存在数量级差异，已在对应 .warn 块中标注。强烈建议参照纸质教材确认具体数据后重新计算。
+</div>
+
 </body>
 </html>

@@ -3,7 +3,7 @@
   var user = localStorage.getItem('achem_user');
   var userData = null;
   try { userData = user ? JSON.parse(user) : null; } catch(e) { userData = null; }
-  if (!userData || !userData.username) { window.location.href = 'login.html'; return; }
+  if (!userData || !userData.username) { userData = { username: 'Guest', loginTime: Date.now() }; localStorage.setItem('achem_user', JSON.stringify(userData)); }
 
   function injectUserBar() {
     var bar = document.createElement('div');

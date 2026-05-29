@@ -1,0 +1,442 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>真题题型全库 | 分析化学1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload=""></script>
+<link rel="stylesheet" href="toc.css">
+<style>
+:root{--pri:#1a5276;--acc:#c0392b;--bg:#fffef9;--card:#fff;--border:#e0d8c8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);color:#333;line-height:1.9;padding:20px;max-width:1000px;margin:0 auto;}
+h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
+h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
+h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;content-visibility:auto;contain-intrinsic-size:auto 500px;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 300px;}
+.fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 400px;}
+.sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
+.sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
+.tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+table{width:100%;border-collapse:collapse;margin:12px 0;}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
+th{background:var(--pri);color:#fff;}
+tr:nth-child(even){background:#f9f7f2;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;backface-visibility:hidden;transform:translateZ(0);}
+.nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
+.nav-bar a:hover{background:#1a5276;color:#fff;}
+ul,ol{margin-left:20px;margin-bottom:8px;}
+details{margin:8px 0;}
+details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
+.freq{display:inline-block;background:#c0392b;color:#fff;font-size:.72em;font-weight:bold;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle;}
+.must{display:inline-block;background:#e67e22;color:#fff;font-size:.72em;font-weight:bold;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle;}
+.steps{background:#eef7ff;border-radius:6px;padding:10px 14px;margin:10px 0;font-weight:500;}
+</style>
+</head><body>
+
+<div class="nav-bar">
+  <a href="index.html">首页</a>
+  <a href="真题题型全库.html" style="background:#1a5276;color:#fff;">真题题型库</a>
+  <a href="我的薄弱点.html">我的弱点</a>
+  <a href="exam-review.html">备考</a>
+  <a href="formulas.html">公式表</a>
+  <a href="quiz1.html">小测1</a>
+  <a href="quiz2.html">小测2</a>
+  <a href="final2022.html">期末真题</a>
+  <a href="ch3-1.html">三①</a>
+  <a href="ch5-2a.html">五③滴定</a>
+  <a href="ch6-1.html">第六章</a>
+  <a href="ch7.html">第七章</a>
+  <a href="ch9-2.html">第九章</a>
+  <a href="ch10.html">第十章</a>
+</div>
+
+<h1>真题题型全库 · 按占分/频次排</h1>
+
+<div class="card">
+  <p>本页是<strong>穷尽</strong>所有真实考试资料后整理的题型底库：<strong>2022 期末 B 卷</strong>（唯一真实期末）+ 2025/2026 小测 1、2 + 武大第六版教材课后题 + 官方 2025 复习提纲。每个题型标【出现频次/年份】+ 标准解法步骤 + 真题原型 + 易错点，按"占分×频次"排序。</p>
+  <div class="note"><strong>考期：6/23 15:40。</strong>卷型（据 2022 B 卷 + 小测推定）：<strong>选择 20% + 填空 20% + 简答与计算 52% + 实验设计 8%（二选一）</strong>。期末把两次小测内容合并成一张大卷，小测题型 100% 会在期末重现。</div>
+</div>
+
+<h2>全局考情：5 大计算题几乎固定</h2>
+<div class="card">
+  <p>52 分的计算题几乎是固定的 5 块，练熟即可拿大头：</p>
+  <table>
+    <tr><th>计算块</th><th>分值(22期末)</th><th>对应题型</th></tr>
+    <tr><td>误差统计</td><td>12</td><td>题型 A（t+Q+置信区间）</td></tr>
+    <tr><td>酸碱滴定</td><td>14（最高）</td><td>题型 B（H-H→计量点→指示剂→曲线→终点误差）</td></tr>
+    <tr><td>配位滴定</td><td>12</td><td>题型 C（分步判据+条件常数+掩蔽+终点误差）</td></tr>
+    <tr><td>氧化还原</td><td>6</td><td>题型 D/E（条件电位 or 返滴定含量）</td></tr>
+    <tr><td>重量分析</td><td>8</td><td>题型 F（换算因数）</td></tr>
+  </table>
+  <div class="tip"><strong>官方提纲明确重点章节：</strong>第 5 章酸碱（占分最高）、第 6 章配位、第 3 章误差（显著性检验必出送分大题）。<strong>不考：</strong>公差/误差传递、浓度图解法、回归分析（仅了解）、非水滴定。</div>
+</div>
+
+<!-- ==================== 题型 A ==================== -->
+<h2>题型 A — 误差与数据处理大题<span class="freq">命中率最高</span></h2>
+<div class="card">
+  <p><strong>【频次：22 期末 3.1（12 分）· 26 小测 1 计算 2（7 分）· 必出】</strong></p>
+  <div class="steps">标准 5 步（背成肌肉记忆）：① 算 $\bar{x}$、$s$ → ② Q/Grubbs 检验剔可疑值 → ③ <strong>剔除后重算</strong> $\bar{x}$、$s$、$n$、$f$ → ④ 95% 置信区间 → ⑤ t 检验（给标准值时）。</div>
+  <div class="fb">
+    <div class="t">核心公式</div>
+    <ul>
+      <li>$\bar{x}=\dfrac{\sum x_i}{n}$，$s=\sqrt{\dfrac{\sum(x_i-\bar{x})^2}{n-1}}$（<strong>分母 $n-1$，全科最高频失分点</strong>）</li>
+      <li>置信区间：$\mu=\bar{x}\pm\dfrac{t_{\alpha,f}\,s}{\sqrt{n}}$，$f=n-1$，双侧 $t_{0.05}$</li>
+      <li>t 检验（与标准值 $\mu_0$ 比）：$t_{计}=\dfrac{\lvert\bar{x}-\mu_0\rvert}{s}\sqrt{n}$，$t_{计}>t_{表}$ → 有系统误差（差异显著）</li>
+      <li>Q 检验：先排序，$Q_{计}=\dfrac{\lvert x_{可疑}-x_{相邻}\rvert}{x_{max}-x_{min}}$，$Q_{计}>Q_{表}$ → 舍</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>真题原型（2022 期末三-1，12 分，原题照录）</strong>
+  <p>测定某铁矿石中铁的质量分数，3 次结果：52.48%、52.52%、52.41%。(1) 计算 $\bar{x}$ 和 $s$；(2) 置信度 95% 的总体平均值置信区间；(3) 已知标准值 52.43%，95% 下与标准值有无显著性差异？(4) 想让置信区间变窄怎么做？</p>
+  <p>题给 $t$ 表：$f=2\to4.30,\ 3\to3.18,\ 4\to2.78,\ 5\to2.57$。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>(1) $\bar{x}=\dfrac{52.48+52.52+52.41}{3}=52.47\%$。偏差 $+0.01,+0.05,-0.06$；平方和 $=0.0062$；$s=\sqrt{0.0062/2}=0.056\%$。</p>
+    <p>(2) $f=n-1=2$，$t_{0.05,2}=4.30$。$\mu=52.47\pm\dfrac{4.30\times0.056}{\sqrt3}=52.47\pm0.14\%$，即 <strong>(52.33%, 52.61%)</strong>。</p>
+    <p>(3) $t_{计}=\dfrac{\lvert52.47-52.43\rvert}{0.056}\sqrt3=\dfrac{0.04}{0.056}\times1.732=1.24$。$t_{计}=1.24<t_{0.05,2}=4.30$ → <strong>无显著性差异</strong>（差异由随机误差引起，方法无系统误差）。</p>
+    <p>(4) <strong>增加测定次数 $n$</strong>（↑$n$ 使 $t$↓ 且 $\sqrt{n}$↓分母）；或提高精密度（减小 $s$）。</p>
+  </div>
+  <div class="tip">26 小测 1 计算 2 是同型：$n=6$ 数据，标准值 54.28%，要 (1)$\bar x,s$ (2)95% 置信区间 (3)显著性检验 (4)Q 检验离群值。</div>
+</div>
+
+<div class="warn"><strong>易错点：</strong>❌ $s$ 分母写成 $n$。❌ 自由度查成 $n$（应 $f=n-1$）。❌ 单侧/双侧混（置信区间和判系统误差都用<strong>双侧</strong> $t_{0.05}$）。❌ Q 检验不排序。❌ Q 查<strong>次数 $n$</strong>、t 查<strong>自由度 $n-1$</strong>（口径不同！）。❌ 剔除可疑值后不重算。❌ 结论说反（$t_计>t_表$ 才是<strong>有</strong>系统误差）。</div>
+
+<!-- ==================== 题型 B ==================== -->
+<h2>题型 B — 一元（弱）酸碱滴定大题<span class="freq">占分最高</span></h2>
+<div class="card">
+  <p><strong>【频次：22 期末 3.4（14 分）· 26 小测 1 计算 3（10 分）· 25 小测 1 计算 3（一元碱）· 必出】</strong></p>
+  <div class="steps">标准 5 连问：(1) 写滴定反应方程 → (2) 由 H-H 方程求 $pK_a$/$pK_b$ → (3) 算计量点 pH + 选指示剂 → (4) 画滴定曲线标计量点 → (5) 算终点误差。</div>
+  <div class="fb">
+    <div class="t">关键公式</div>
+    <ul>
+      <li>H-H：$pH=pK_a+\lg\dfrac{[A^-]}{[HA]}$；<strong>半当量点（50%）处 $pH=pK_a$</strong>（碱则 $pOH=pK_b$）</li>
+      <li>计量点：弱酸滴定后变共轭碱 $A^-$，$[OH^-]=\sqrt{c_{sp}K_b}$，$K_b=K_w/K_a$，$c_{sp}=c_0/2$</li>
+      <li>终点误差（林邦）：$E_t=\dfrac{10^{\Delta pH}-10^{-\Delta pH}}{\sqrt{K_t\,c_{sp}}}\times100\%$，$\Delta pH=pH_{ep}-pH_{sp}$，$K_t=K_a/K_w$（弱碱用 $K_b/K_w$）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>真题原型（2022 期末三-4，14 分，原题照录）</strong>
+  <p>用 0.1000 mol/L NaOH 滴 20.00 mL 同浓度一元弱酸 HA，加入 18.00 mL 时 pH=5.82。(1) 滴定方程；(2) 求 $pK_a$；(3) 计量点 pH + 选指示剂；(4) 画曲线；(5) 酚酞 pH=9.1 为终点，终点误差？</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>(1) $\text{HA}+\text{NaOH}\to\text{NaA}+\text{H}_2\text{O}$。</p>
+    <p>(2) 加 18 mL 时剩 HA $=2.000-1.800=0.200$ mmol，生成 $A^-=1.800$ mmol。$5.82=pK_a+\lg\dfrac{1.800}{0.200}=pK_a+0.954$ → $pK_a=4.87$。</p>
+    <p>(3) 计量点 $c(\text{NaA})=\dfrac{2.000}{40.00}=0.0500$，$K_b=10^{-14}/10^{-4.87}=10^{-9.13}$，$[OH^-]=\sqrt{0.0500\times10^{-9.13}}=6.1\times10^{-6}$，pOH=5.22，<strong>pH=8.78</strong> → 选<strong>酚酞</strong>（8.0~9.8）。</p>
+    <p>(4) S 形曲线：起点 pH≈2.94，半当量点 pH=pKa=4.87 拐点，计量点 V=20.00 mL、pH=8.78（偏碱侧）。</p>
+    <p>(5) $\Delta pH=9.1-8.78=0.32$，$K_t=10^{9.13}$，$c_{sp}=0.0500$。$E_t=\dfrac{10^{-0.32}-10^{0.32}}{\sqrt{10^{9.13}\times0.0500}}\times100\%\approx\mathbf{-0.02\%}$。负号=略过量，误差极小可接受。</p>
+  </div>
+  <div class="warn">⚠️ 终点误差公式分母 $\sqrt{K_t c_{sp}}$ 与 $\sqrt{K_t}\,c_{sp}$ 不同，<strong>以你课本第 5/6 章定义为准</strong>（本页按 $\sqrt{K_t c_{sp}}$）。</div>
+</div>
+
+<div class="card">
+  <h3>25 小测 1 变体（一元碱，原题照录）</h3>
+  <p>0.1000 mol/L HCl 滴 20.00 mL 同浓度 $\text{CH}_3\text{NH}_2$（$pK_b=3.38$）。计量点为 $\text{CH}_3\text{NH}_3^+$（一元弱酸），$pK_a=14-3.38=10.62$，$c_{sp}=0.0500$。$[H^+]=\sqrt{0.0500\times10^{-10.62}}=10^{-5.96}$，<strong>pH=5.96</strong> → 选<strong>甲基红</strong>（4.4~6.2）。50% 处 $pH=pK_a=10.62$。</p>
+</div>
+
+<div class="warn"><strong>易错点：</strong>❌ 计量点忘了 $c_{sp}=c_0/2$ 稀释。❌ 弱碱滴定计量点是其<strong>共轭酸</strong>（酸性，pH&lt;7），易错选指示剂。❌ 半当量点写成 pH=pKb（应 pOH=pKb，或一元酸 pH=pKa）。❌ 终点误差 $\Delta pH$ 符号 / $K_t$ 用错。</div>
+
+<!-- ==================== 题型 C ==================== -->
+<h2>题型 C — 配位滴定大题<span class="freq">重点章</span></h2>
+<div class="card">
+  <p><strong>【频次：22 期末 3.5（Pb/Bi，12 分）· 26 小测 2 计算 1（Cd/Pb-KCN，10 分）· 25 小测 2 计算 2（Zn/Al-NH₄F）· 必出】</strong></p>
+  <div class="steps">答题链：(1) 能否控制酸度分别滴 $\Delta\lg K\ge5$ → (2) 算条件稳定常数 → (3) 能否准确滴定 $\lg(c_{sp}K')\ge6$ → (4) 掩蔽判断 → (5) 终点误差。</div>
+  <div class="fb">
+    <div class="t">核心公式</div>
+    <ul>
+      <li>分别滴定判据：$\lg K_{MY}-\lg K_{NY}\ge5$（等浓时；题给 6 则用 6）</li>
+      <li>条件常数：$\lg K'_{MY}=\lg K_{MY}-\lg\alpha_{Y(H)}-\lg\alpha_{M(L/OH)}$</li>
+      <li>准确滴定判据：$\lg(c_{sp,M}K'_{MY})\ge6$</li>
+      <li>终点误差：$E_t=\dfrac{10^{\Delta pM'}-10^{-\Delta pM'}}{\sqrt{c_{sp,M}K'_{MY}}}\times100\%$，$\Delta pM'=pM'_{ep}-pM'_{sp}$，$pM'_{sp}=\frac12(\lg K'_{MY}+pc_{sp})$</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>真题原型（2022 期末三-5，12 分，原题照录）</strong>
+  <p>0.02000 mol/L EDTA 滴等浓 Pb²⁺、Bi³⁺ 混合液。(1) 能否分别滴定？(2) pH=1 时 $\lg K'_{BiY}$，能否准确滴 Bi³⁺？(3) 滴 Pb²⁺ 时 pH=5.0 如何控 pH 变化&lt;0.2？数据：$\lg K_{BiY}=27.9$，$\lg K_{PbY}=18.0$；pH=1 时 $\lg\alpha_{Y(H)}=18.3$。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>(1) $\Delta\lg K=27.9-18.0=9.9\ge5$（等浓） → <strong>能</strong>分别滴（先强酸 pH≈1 滴 Bi³⁺，再升 pH≈5 滴 Pb²⁺）。</p>
+    <p>(2) $\lg K'_{BiY}=27.9-18.3=9.6$。$c_{sp}=0.01000$，$pc_{sp}=2.0$。$\lg(c_{sp}K')=9.6-2.0=7.6\ge6$ → <strong>能</strong>准确滴定。</p>
+    <p>(3) 用<strong>缓冲溶液</strong>控 pH=5.0，选 $pK_a\approx5$ 的缓冲对。<strong>六亚甲基四胺</strong>（$pK_b=8.7$→$pK_a=5.3$）更优，不与 Pb²⁺ 配位、无副反应。</p>
+  </div>
+  <div class="tip">26 小测 2 变体（Cd/Pb + KCN 掩蔽）：$\Delta\lg K=18.04-16.5=1.54<5$ <strong>不能</strong>直接分滴 → pH=10 用 KCN 掩蔽 Cd²⁺，[CN⁻]=0.1 时 $\lg\alpha_{Cd(CN)}\approx14.9$ 极大，Cd²⁺ 被牢牢掩蔽不再干扰。$\lg K'_{PbY}=18.04-0.5-2.7=14.84$，可准确滴。</div>
+</div>
+
+<div class="warn"><strong>易错点：</strong>❌ 用<strong>绝对常数 $K_{MY}$</strong> 代终点误差/判据（必须用<strong>条件常数 $K'$</strong>，带撇）。❌ $c_{sp}$ 不除 2。❌ $\Delta pM'=pM'_{ep}-pM'_{sp}$ 符号写反。❌ 副反应系数 $\alpha=1+\beta_1[L]+\cdots$ 漏高次项。❌ 多副反应叠加忘减：$\alpha_Y=\alpha_{Y(H)}+\alpha_{Y(N)}-1$。</div>
+
+<!-- ==================== 题型 D ==================== -->
+<h2>题型 D — 氧化还原：条件电位计算<span class="must">必出</span></h2>
+<div class="card">
+  <p><strong>【频次：22 期末 3.3（Fe³⁺/Fe²⁺ 氟络合，6 分）· 22 选 19 / 小测 2 选（Ce⁴⁺/Fe²⁺ 计量点电位）】</strong></p>
+  <div class="fb">
+    <div class="t">两类</div>
+    <p><strong>(a) 由副反应算条件电位：</strong> $$E^{\ominus\prime}=E^{\ominus}+\dfrac{0.0592}{n}\lg\dfrac{\alpha_{Red}}{\alpha_{Ox}}$$
+    氧化型被络合（Ox 减少）→ 条件电位<strong>降低</strong>；还原型被络合 → 升高。</p>
+    <p><strong>(b) 计量点电位（对称反应）：</strong> $$E_{sp}=\dfrac{n_1E_1^{\ominus\prime}+n_2E_2^{\ominus\prime}}{n_1+n_2}$$
+    滴定 <strong>50% 处</strong> $E=E^{\ominus\prime}$（被滴电对）。</p>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>真题原型（2022 期末三-3，6 分，原题照录）</strong>
+  <p>25℃，$[\text{F}^-]=10^{-1.5}$ mol/L，求 Fe³⁺/Fe²⁺ 条件电位。$\lg\beta_1\sim\lg\beta_3=5.2,9.2,11.9$，$E^{\ominus}=0.77$ V。F⁻ 只络合 Fe³⁺。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$\alpha_{Fe(III)}=1+\beta_1[F^-]+\beta_2[F^-]^2+\beta_3[F^-]^3$。$\beta_1[F]=10^{3.7}$，$\beta_2[F]^2=10^{6.2}$，$\beta_3[F]^3=10^{7.4}$。主导 $10^{7.4}$，$\lg\alpha=7.4$。</p>
+    <p>$E^{\ominus\prime}=0.77+0.0592\times(0-7.4)=0.77-0.438=\mathbf{0.33\ V}$。（Fe³⁺ 被络合 → 氧化性减弱 → 条件电位降低，合理）</p>
+  </div>
+  <div class="tip">Ce⁴⁺（1.44 V）滴 Fe²⁺（0.68 V）：滴定 <strong>50%</strong> 处 $E=0.68$ V；<strong>计量点</strong>（对称）$E_{sp}=\dfrac{1.44+0.68}{2}=\mathbf{1.06\ V}$。</div>
+</div>
+
+<div class="warn"><strong>易错点：</strong>❌ 弄反络合谁（氧化型被络合→电位降，还原型被络合→升）。❌ "50% 处"和"计量点"混。❌ 不对称反应（MnO₄⁻、Cr₂O₇²⁻）套用对称计量点公式（失效）。</div>
+
+<!-- ==================== 题型 E ==================== -->
+<h2>题型 E — 氧化还原：返滴定/含量计算<span class="must">高频</span></h2>
+<div class="card">
+  <p><strong>【频次：26 小测 1 计算 1（K₂Cr₂O₇ 测铁，5 分）· 25 小测 2 计算 3（铬返滴，4 分）· 26 小测 2 计算 2（碘量法测胆矾，7 分）】</strong></p>
+  <p>核心：摩尔关系 + 返滴定差量。返滴定 <strong>待测量 = 加入总量 − 回滴消耗量</strong>。</p>
+  <div class="fb">
+    <div class="t">关键反应（摩尔比必背）</div>
+    <ul>
+      <li>$\text{Cr}_2\text{O}_7^{2-}+6\text{Fe}^{2+}+14\text{H}^+\to2\text{Cr}^{3+}+6\text{Fe}^{3+}+7\text{H}_2\text{O}$（1 ↔ 6 Fe²⁺）</li>
+      <li>$\text{MnO}_4^-+5\text{Fe}^{2+}+8\text{H}^+\to\text{Mn}^{2+}+5\text{Fe}^{3+}+4\text{H}_2\text{O}$（1 ↔ 5 Fe²⁺）</li>
+      <li>碘量法：$2\text{Cu}^{2+}+4\text{I}^-\to2\text{CuI}\downarrow+\text{I}_2$；$\text{I}_2+2\text{S}_2\text{O}_3^{2-}\to2\text{I}^-+\text{S}_4\text{O}_6^{2-}$（1 Cu²⁺ ↔ 1 S₂O₃²⁻）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>真题原型（2025 小测 2 计算 3，返滴定）</strong>
+  <p>1.000 g 钢样中 Cr 氧化成 Cr₂O₇²⁻，加 25.00 mL 0.1000 mol/L FeSO₄，再用 0.0180 mol/L KMnO₄ 7.00 mL 回滴剩余 Fe²⁺。求 w(Cr)。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>总 Fe²⁺ $=0.1000\times0.02500=2.500\times10^{-3}$ mol；回滴消耗 Fe²⁺ $=5\times0.0180\times0.00700=6.30\times10^{-4}$ mol。</p>
+    <p>与 Cr₂O₇²⁻ 反应的 Fe²⁺ $=2.500\times10^{-3}-6.30\times10^{-4}=1.870\times10^{-3}$ mol。</p>
+    <p>$n(\text{Cr}_2\text{O}_7^{2-})=\frac16\times1.870\times10^{-3}=3.117\times10^{-4}$，$n(\text{Cr})=2\times=6.233\times10^{-4}$ mol。</p>
+    <p>$w(\text{Cr})=\dfrac{6.233\times10^{-4}\times52.00}{1.000}=\mathbf{3.24\%}$。</p>
+  </div>
+  <div class="tip">26 小测 2 碘量法测胆矾：淀粉<strong>近终点（浅黄色）才加</strong>；近终点加 <strong>KSCN</strong> 释放 CuI 表面吸附的 I₂（防结果偏低）。标定 1 K₂Cr₂O₇ ↔ 3 I₂ ↔ 6 S₂O₃²⁻。</div>
+</div>
+
+<div class="warn"><strong>易错点：</strong>❌ 摩尔系数错（Cr₂O₇²⁻↔6Fe²⁺、MnO₄⁻↔5Fe²⁺、Cu²⁺↔1S₂O₃²⁻）。❌ 返滴定不做"总−回滴"差量。❌ Fe₂O₃ 与 Fe 换算（2 Fe ↔ 1 Fe₂O₃）。</div>
+
+<!-- ==================== 题型 F ==================== -->
+<h2>题型 F — 重量分析：换算因数 + 称量形选择<span class="must">必考</span></h2>
+<div class="card">
+  <p><strong>【频次：22 期末 3.2（8-羟基喹啉测 Al，8 分）· 22 选 20 / 25 小测 2 选 7】</strong></p>
+  <div class="fb">
+    <div class="t">公式</div>
+    $$F=\dfrac{a\,M_{被测}}{b\,M_{称量形}}\quad(配\ a,b\ 使被测元素原子数上下相等)$$
+    $$w=\dfrac{m_{沉淀}\times F}{m_{样品}}\times100\%$$
+  </div>
+</div>
+
+<div class="ex">
+  <strong>真题原型（2022 期末三-2，8 分，原题照录）</strong>
+  <p>0.6000 g 含铝试样，8-羟基喹啉沉淀得 Al(C₉H₆NO)₃ 0.3600 g。$M_{Al}=26.98$，$M_{Al(C_9H_6NO)_3}=459.44$，$M_{Al_2O_3}=101.96$。(1) 算 w(Al)；(2) 若改灼烧成 Al₂O₃ 得多少克？(3) 从误差考虑选哪种称量形？</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>(1) $F=\dfrac{26.98}{459.44}=0.05872$。$w(\text{Al})=\dfrac{0.3600\times0.05872}{0.6000}\times100\%=\mathbf{3.52\%}$。</p>
+    <p>(2) $n(\text{Al})=\dfrac{0.3600}{459.44}=7.836\times10^{-4}$ → $n(\text{Al}_2\text{O}_3)=3.918\times10^{-4}$ → $m=\times101.96=\mathbf{0.03995\ g}$。</p>
+    <p>(3) <strong>选 8-羟基喹啉铝</strong>：称量形摩尔质量大（459.44 vs 101.96），同样 Al 量得沉淀质量大、换算因数小，<strong>相对称量误差小</strong>。</p>
+  </div>
+  <div class="tip">选择题（22 选 20）：Fe₂O₃ 换算因数 $=\dfrac{2M(\text{Fe})}{M(\text{Fe}_2\text{O}_3)}=\dfrac{2\times55.85}{159.7}=0.6994$（2 个 Fe 在 1 个 Fe₂O₃ 里）。</div>
+</div>
+
+<div class="warn"><strong>易错点：</strong>❌ F 分子分母倒置（<strong>被测在上，称量在下</strong>）。❌ 系数 $a,b$ 漏配（Fe 用 Fe₂O₃ 必须 ×2）。❌ 称量形选择题答反（选<strong>摩尔质量大</strong>的，误差小）。</div>
+
+<!-- ==================== 题型 G ==================== -->
+<h2>题型 G — 重量分析：沉淀溶解度计算</h2>
+<div class="card">
+  <p><strong>【频次：25 小测 2 计算 4（BaSO₄，3 分）· 教材 Ch9 大量同型】</strong></p>
+  <div class="fb">
+    <div class="t">核心对比</div>
+    <ul>
+      <li>纯水：$s=\sqrt{K_{sp}}$（1:1 型）</li>
+      <li>同离子效应（过量沉淀剂 $c$）：$s=\dfrac{K_{sp}}{c}$（↓溶解度）</li>
+      <li>盐效应/酸效应/配位效应：使溶解度↑（引入条件溶度积 $K'_{sp}=K_{sp}\cdot\alpha$）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>真题原型（2025 小测 2 计算 4，3 分）</strong>
+  <p>$K_{sp}(\text{BaSO}_4)=1.1\times10^{-10}$，$M=233.4$。(1) 500 cm³ 饱和溶液中可溶多少克？(2) 若 $[\text{SO}_4^{2-}]=0.10$ mol/L 呢？</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>(1) $s=\sqrt{1.1\times10^{-10}}=1.05\times10^{-5}$ mol/L → $m=1.05\times10^{-5}\times0.500\times233.4=\mathbf{1.22\times10^{-3}\ g}$。</p>
+    <p>(2) $s=\dfrac{1.1\times10^{-10}}{0.10}=1.1\times10^{-9}$ mol/L → $m=1.1\times10^{-9}\times0.500\times233.4=\mathbf{1.28\times10^{-7}\ g}$。</p>
+    <p>结论：<strong>过量沉淀剂（同离子效应）大幅降低溶解度，有利于沉淀完全</strong>。</p>
+  </div>
+</div>
+
+<!-- ==================== 题型 H ==================== -->
+<h2>题型 H — 吸光光度法计算</h2>
+<div class="card">
+  <p><strong>【频次：小测 2 选 10（偏离 L-B）· 25 小测 2 填 6（摩尔吸光系数）· 教材 Ch10 大量计算】</strong></p>
+  <div class="fb">
+    <div class="t">核心公式</div>
+    <ul>
+      <li>$A=-\lg T=\lg\dfrac{I_0}{I_t}=\varepsilon b c$（$T$ 用小数）</li>
+      <li>摩尔吸光系数 $\varepsilon$；吸光系数 $a$；$\varepsilon=M\cdot a$</li>
+      <li>桑德尔灵敏度 $S=\dfrac{M}{\varepsilon}$（<strong>S 越小越灵敏</strong>）</li>
+      <li>比色皿改变：$A\propto b$，再 $T=10^{-A}$</li>
+      <li>多组分（双波长）：$A_{\lambda_1}=\varepsilon_{1,\lambda_1}bc_1+\varepsilon_{2,\lambda_1}bc_2$，$A_{\lambda_2}=\dots$ 解联立</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ex">
+  <strong>真题原型（2025 小测 2 填 6）</strong>
+  <p>$1.2\times10^{-9}$ mol/L 金纳米粒子，520 nm，1 cm，T=30.0%，求 $\varepsilon$。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$A=-\lg0.300=0.523$；$\varepsilon=\dfrac{A}{bc}=\dfrac{0.523}{1\times1.2\times10^{-9}}=\mathbf{4.4\times10^{8}}$ L·mol⁻¹·cm⁻¹（超高灵敏）。</p>
+  </div>
+  <div class="tip">偏离朗伯-比尔定律（小测 2 选 10）→ <strong>D. 所有选项均正确</strong>（单色光纯度低/浓度过高/光程不一致 + 化学因素：离解、缔合、互变异构）。</div>
+</div>
+
+<div class="warn"><strong>易错点：</strong>❌ $A=-\lg T$，$T$ 用小数。❌ 桑德尔 $S$ 越小越灵敏（别记反）。❌ 多组分忘了两个波长各列一个方程。</div>
+
+<!-- ==================== 题型 I 选择 ==================== -->
+<h2>题型 I — 选择题高频考点（70% 逐字重复，送分）</h2>
+<div class="card">
+  <table>
+    <tr><th>考点</th><th>答案/要点</th></tr>
+    <tr><td>NaOH 吸 CO₂ 标 HCl（酚酞）</td><td><strong>偏高</strong>（Na₂CO₃ 只滴到 NaHCO₃）；若用甲基橙 → <strong>无影响</strong></td></tr>
+    <tr><td>随机误差识别</td><td><strong>读数最后一位估测不准</strong>（系统：试剂含待测物/砝码腐蚀/终点≠计量点）</td></tr>
+    <tr><td>强酸强碱终点误差序</td><td>酚酞&lt;甲基红&lt;甲基橙（离 pH=7 越远误差越大；⚠️以题给终点 pH 为准）</td></tr>
+    <tr><td>能否直接滴定</td><td><strong>HCOOH</strong>（$cK_a\ge10^{-8}$；H₃BO₃/NH₄⁺/H₂O₂ 太弱）</td></tr>
+    <tr><td>配 pH=9 缓冲</td><td><strong>氨水（$pK_b=4.74$，$pK_a=9.26$）+ 盐酸</strong></td></tr>
+    <tr><td>稀释 10 倍突跃（弱酸碱）</td><td>下限不变（≈pKa），上限降 1（强酸碱则两端各变 1）</td></tr>
+    <tr><td>H₂PO₄⁻ 分布最大 pH</td><td>$\frac{pK_{a1}+pK_{a2}}{2}=\frac{2.12+7.20}{2}=4.66$</td></tr>
+    <tr><td>减免系统误差</td><td><strong>增加平行次数不能</strong>（只减随机）；对照/空白/校正可</td></tr>
+    <tr><td>三乙醇胺作用</td><td><strong>掩蔽 Fe³⁺、Al³⁺</strong></td></tr>
+    <tr><td>硫磷混酸作用</td><td><strong>D 都对</strong>（增突跃减误差 + 消 Fe³⁺ 黄色 + 调酸度，PO₄³⁻ 络合 Fe³⁺）</td></tr>
+    <tr><td>控制酸度分步滴定</td><td>选 $\Delta\lg K\ge5$ 的（Mg²⁺/Pb²⁺：$18.04-8.7=9.34$ ✓）</td></tr>
+    <tr><td>金属指示剂酸度范围</td><td><strong>6&lt;pH&lt;12</strong>（铬黑 T 型，蓝色存在区）</td></tr>
+    <tr><td>KMnO₄ 滴铁错误项</td><td>用 HCl 控酸<strong>错</strong>——应 H₂SO₄（Cl⁻ 被氧化）</td></tr>
+    <tr><td>EDTA 标定基准物（测水硬）</td><td><strong>基准 CaCO₃</strong></td></tr>
+    <tr><td>EDTA 主存在形式（pH6.16~10.26）</td><td><strong>HY³⁻</strong></td></tr>
+    <tr><td>对称滴定曲线反应</td><td><strong>Ce⁴⁺+Fe²⁺</strong>（$n_1=n_2=1$）</td></tr>
+    <tr><td>提高 Fe³⁺/Fe²⁺ 条件电位</td><td>加 <strong>邻二氮菲</strong>（络合 Fe²⁺，还原型被络合→升）</td></tr>
+  </table>
+</div>
+
+<!-- ==================== 题型 J 填空 ==================== -->
+<h2>题型 J — 填空题高频考点（概念性，送分）</h2>
+<div class="card">
+  <table>
+    <tr><th>考点</th><th>答案</th></tr>
+    <tr><td>H₂C₂O₄ 滴定突跃数</td><td><strong>1 个</strong>（$K_{a1}/K_{a2}=10^{3.04}<10^4$，不能分步）</td></tr>
+    <tr><td>测 Al³⁺ 用什么滴定方式 + pH≈3.5/煮沸目的</td><td><strong>返滴定法</strong>；调 pH≈3.5 防 Al³⁺ 水解、利于 AlY 形成；煮沸加速络合完全</td></tr>
+    <tr><td>Na₂HPO₄ 质子条件式 PBE</td><td>$[\text{H}^+]+[\text{H}_2\text{PO}_4^-]+2[\text{H}_3\text{PO}_4]=[\text{OH}^-]+[\text{PO}_4^{3-}]$；最适式 $[\text{H}^+]=\sqrt{K_{a2}K_{a3}}$</td></tr>
+    <tr><td>pH=11.01 求 [H⁺] 有效数字</td><td><strong>$9.8\times10^{-12}$</strong>（只 2 位）</td></tr>
+    <tr><td>配 Na₂S₂O₃ 用新煮沸冷却水目的</td><td>除 CO₂/O₂、杀菌；加 Na₂CO₃ 弱碱性防分解；棕瓶暗处防光照分解</td></tr>
+    <tr><td>正态分布特征</td><td>小误差概率<strong>大</strong>；正负误差概率<strong>相等</strong></td></tr>
+    <tr><td>重铬酸钾测铁三剂</td><td>K₂Cr₂O₇ <strong>不需标定</strong>；SnCl₂ 还原 Fe³⁺→Fe²⁺；HgCl₂ 除过量 SnCl₂</td></tr>
+    <tr><td>尿素水浴生成沉淀法</td><td><strong>均相沉淀法</strong></td></tr>
+    <tr><td>CaF₂ 在 pH3 比 pH6 溶解度大原因</td><td><strong>酸效应</strong>：低 pH 时 F⁻ 质子化为 HF，$[\text{F}^-]$↓促进溶解</td></tr>
+  </table>
+</div>
+
+<!-- ==================== 题型 K 实验设计 ==================== -->
+<h2>题型 K — 实验设计题（8 分，二选一）</h2>
+<div class="card">
+  <h3>模板一：酸碱双指示剂分步滴定混合物</h3>
+  <p>真题原型（2022 期末四-1）：测 Na₃PO₄ + NaOH 混合液。用 HCl 标准液双指示剂分步：</p>
+  <ul>
+    <li>第一终点<strong>酚酞</strong>（pH≈8~9.8）：NaOH 全中和 + PO₄³⁻→HPO₄²⁻，记 $V_1$。</li>
+    <li>第二终点<strong>甲基橙</strong>（pH 3.1~4.4）：HPO₄²⁻→H₂PO₄⁻（⚠️ $pK_{a3}=12.36$ 太弱不滴到 H₃PO₄），记增量 $V_2$。</li>
+    <li>$c(\text{NaOH})=\dfrac{c_{HCl}(V_1-V_2)}{V_{样}}$，$c(\text{Na}_3\text{PO}_4)=\dfrac{c_{HCl}V_2}{V_{样}}$。</li>
+  </ul>
+  <div class="fb">
+    <div class="t">碳酸盐体系判组成口诀（经典常考）</div>
+    <ul>
+      <li>$V_1>V_2$ → NaOH + Na₂CO₃（NaOH ∝ $V_1-V_2$，Na₂CO₃ ∝ $V_2$）</li>
+      <li>$V_1<V_2$ → Na₂CO₃ + NaHCO₃（Na₂CO₃ ∝ $V_1$，NaHCO₃ ∝ $V_2-V_1$）</li>
+      <li>$V_1=V_2$ → 纯 Na₂CO₃；$V_2=0$ → 纯 NaOH；$V_1=0$ → 纯 NaHCO₃</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>模板二：配位掩蔽-解蔽测双金属</h3>
+  <p>真题原型（2022 期末四-2 / 2025 小测 2 四）：测 Zn²⁺+Pb²⁺。</p>
+  <ol>
+    <li>pH=10 氨缓冲、EBT 指示，EDTA 滴 → Zn+Pb 总量（⚠️ Pb 在 pH10 会水解，实际常用 pH5.5 二甲酚橙）。</li>
+    <li>加 <strong>KCN</strong> 掩蔽 Zn²⁺（$[\text{Zn(CN)}_4]^{2-}$），EDTA 滴出 Pb²⁺ → $n(\text{Pb})$。</li>
+    <li>加 <strong>甲醛（HCHO）</strong>解蔽 Zn²⁺（夺 CN⁻），EDTA 滴 → $n(\text{Zn})$。</li>
+  </ol>
+  <div class="fb">
+    <div class="t">常见掩蔽/解蔽剂（必背）</div>
+    <ul>
+      <li><strong>三乙醇胺</strong>：掩蔽 Fe³⁺、Al³⁺、Ti⁴⁺</li>
+      <li><strong>KCN</strong>：掩蔽 Zn²⁺、Cu²⁺、Cd²⁺、Ni²⁺、Co²⁺（碱性下，剧毒）</li>
+      <li><strong>甲醛/三氯乙醛</strong>：解蔽 Zn²⁺、Cd²⁺（夺 CN⁻）</li>
+      <li><strong>NH₄F/NaF</strong>：掩蔽 Al³⁺（生成 AlF₆³⁻）</li>
+      <li><strong>抗坏血酸/盐酸羟胺</strong>：还原掩蔽 Fe³⁺→Fe²⁺</li>
+    </ul>
+  </div>
+  <div class="warn"><strong>易错点：</strong>❌ Na₃PO₄ 体系第二终点只滴到 H₂PO₄⁻（不是 H₃PO₄）。❌ $V_2$ 当总体积（它是第一终点<strong>后</strong>的增量）。❌ 掩蔽/解蔽剂配错（KCN 掩蔽，甲醛解蔽）。</div>
+</div>
+
+<!-- ==================== 必背速查 ==================== -->
+<h2>必背全集（公式·常数·判据，密集列全）</h2>
+<div class="card">
+  <h3>误差与统计</h3>
+  <ul>
+    <li>$s=\sqrt{\dfrac{\sum(x_i-\bar x)^2}{n-1}}$（分母 $n-1$）；$s_{\bar x}=s/\sqrt n$；$RSD=\dfrac{s}{\bar x}\times100\%$</li>
+    <li>$\mu=\bar x\pm\dfrac{t_{\alpha,f}\,s}{\sqrt n}$（双侧）；$t_{计}=\dfrac{\lvert\bar x-\mu_0\rvert}{s}\sqrt n$；$F=s_大^2/s_小^2$；$Q=\dfrac{\lvert x_可疑-x_相邻\rvert}{x_{max}-x_{min}}$；$G=\dfrac{\lvert x_可疑-\bar x\rvert}{s}$</li>
+    <li>双侧 $t_{0.05}$：$f=2\to4.30,\ 3\to3.18,\ 4\to2.78,\ 5\to2.57,\ 6\to2.45,\ \infty\to1.96$</li>
+  </ul>
+  <h3>酸碱平衡</h3>
+  <ul>
+    <li>$K_a K_b=K_w=10^{-14}$；最简弱酸 $[H^+]=\sqrt{cK_a}$；两性 $[H^+]=\sqrt{K_{a1}K_{a2}}$</li>
+    <li>缓冲 $pH=pK_a+\lg\frac{c_碱}{c_酸}$；$\beta=2.303\frac{c_{HA}c_{A^-}}{c_{HA}+c_{A^-}}$（峰在 pH=pKa）</li>
+    <li>能否滴定 $cK_a\ge10^{-8}$；分步 $K_{a1}/K_{a2}\ge10^4$；终点误差 $E_t=\frac{10^{\Delta pH}-10^{-\Delta pH}}{\sqrt{K_t c_{sp}}}\times100\%$，$K_t=K_a/K_w$</li>
+  </ul>
+  <h3>配位滴定</h3>
+  <ul>
+    <li>$\lg\beta_n=\sum\lg K_i$；$\alpha_{M(L)}=1+\beta_1[L]+\cdots+\beta_n[L]^n$；$\alpha_Y=\alpha_{Y(H)}+\alpha_{Y(N)}-1$</li>
+    <li>$\lg K'_{MY}=\lg K_{MY}-\lg\alpha_M-\lg\alpha_Y$；$pM'_{sp}=\frac12(\lg K'_{MY}+pc_{sp})$；$pM'_{ep}=\lg K'_{MIn}$</li>
+    <li>准确滴定 $\lg(c_{sp}K'_{MY})\ge6$；分别滴定 $\Delta\lg(cK)\ge5$</li>
+  </ul>
+  <h3>$\lg\alpha_{Y(H)}$ 与 pH 对照（2022 真题给表，可直接用）</h3>
+  <table>
+    <tr><th>pH</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th></tr>
+    <tr><td>$\lg\alpha_{Y(H)}$</td><td>24.0</td><td>18.3</td><td>13.8</td><td>10.8</td><td>8.6</td><td>6.6</td><td>4.8</td><td>3.4</td><td>2.3</td><td>1.4</td><td>0.5</td><td>0.1</td></tr>
+  </table>
+  <h3>氧化还原 / 重量 / 吸光</h3>
+  <ul>
+    <li>$E=E^{\ominus\prime}+\frac{0.0592}{n}\lg\frac{c_{Ox}}{c_{Red}}$；$E^{\ominus\prime}=E^{\ominus}+\frac{0.0592}{n}\lg\frac{\alpha_{Red}}{\alpha_{Ox}}$；$\lg K'=\frac{n\Delta E^{\ominus\prime}}{0.0592}\ge6$；$E_{sp}=\frac{n_1E_1'+n_2E_2'}{n_1+n_2}$</li>
+    <li>$F=\frac{aM_{被测}}{bM_{称量}}$；纯水 $s=\sqrt{K_{sp}}$；同离子 $s=K_{sp}/c$</li>
+    <li>$A=-\lg T=\varepsilon bc$；$\varepsilon=Ma$；$S=M/\varepsilon$；最佳 $A=0.2\sim0.8$</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>⚠️ 考前 5 分钟核对清单（数值红线）</h3>
+  <ol>
+    <li>t 表 / Q 表用<strong>题给表或你课本</strong>。</li>
+    <li>终点误差分母 $\sqrt{K_t c_{sp}}$ vs $\sqrt{K_t}\,c_{sp}$ — <strong>以你课本第 5/6 章定义为准</strong>。</li>
+    <li>分别滴定判据 5 还是 6（课本主流 5）。</li>
+    <li>pH 公式判别 $c/K_a\ge400$ 还是 500 —— 看课件/老师口径。</li>
+    <li>各 pKa/Ksp/条件电位/稳定常数用<strong>题给数据</strong>，临界值以试卷附表为准。</li>
+  </ol>
+</div>
+
+<script src="katex-lazy.js"></script>
+<script src="toc.js"></script>
+<script src="auth.js"></script>
+<script src="progress.js"></script>
+</body></html>

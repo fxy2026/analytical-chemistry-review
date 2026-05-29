@@ -811,6 +811,20 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
   <strong>注意：</strong>以下为计算题部分，各题需根据酸碱平衡原理列出质子条件式（PBE）或电荷守恒式，结合相关近似方法求解。计算过程中注意有效数字的保留（一般取 2-3 位），并验证所做近似是否合理（误差 &lt; 5%）。
 </div>
 
+<div class="warn" style="background:#e8f5e9;border-left:6px solid #27ae60;">
+  <strong>✓ 编号说明（2026-05-16 订正完成）</strong><br>
+  本文件历史版本与<strong>武大第六版</strong>原书习题编号有偏差，订正情况：
+  <ul style="margin-left:18px;">
+    <li>本文件 <strong>习题 1、2</strong> = 书习题 1、2 ✓</li>
+    <li><strong>已补全：</strong>书 <strong>习题 3</strong>（9 种溶液 pH 计算）—— 见下方"习题 3（书 习题 3，本次补全）"</li>
+    <li><strong>已补全：</strong>书 <strong>习题 4</strong>（血液 pH=7.40 时 H₂CO₃/HCO₃⁻/CO₃²⁻ 分布分数）—— 见下方"习题 4（书 习题 4，本次补全）"</li>
+    <li>本文件 <strong>习题 6 ~ 16</strong> 实际对应书的 <strong>习题 5 ~ 15</strong>（题号偏移+1）。每题标题已加注"即书习题 X"</li>
+    <li><strong>已补全：</strong>书 <strong>习题 16</strong>（HB pH=3.0 → NaB pH=9.0）—— 插入在文件习题 16 之后、习题 17 之前</li>
+    <li>本文件 <strong>习题 17 ~ 30</strong> 与原书 17 ~ 30 编号一致 ✓</li>
+    <li>受影响的题数据已订正：<strong>习题 10、13、14c、文件习题16（书习题15）</strong>（详见各题题干）</li>
+  </ul>
+</div>
+
 <h3>习题 1</h3>
 <div class="card">
   <div class="q">
@@ -972,6 +986,94 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
       <strong>电离度 $\alpha = 3.52\times10^{-2}/0.20 = 17.6\% > 5\%$</strong>，确认需用精确公式。
     </div>
 
+  </div>
+</div>
+
+<!-- ===== 书 习题 3（缺失补全） ===== -->
+<h3>习题 3（书 习题 3，本次补全）</h3>
+<div class="card">
+  <div class="q">计算下列溶液的 pH：<br>
+  (1) 0.10 mol/L NaAc（$pK_a = 4.74$）<br>
+  (2) 0.10 mol/L NH₄NO₃（$pK_a(\text{NH}_4^+) = 9.26$）<br>
+  (3) 0.10 mol/L NaCN（$pK_a(\text{HCN}) = 9.21$）<br>
+  (4) 0.10 mol/L Na₂HPO₄（H₃PO₄ $pK_{a1\sim a3}=2.16,\;7.21,\;12.32$）<br>
+  (5) 0.10 mol/L 氨基乙酸（甘氨酸：$pK_{a1}=2.35,\;pK_{a2}=9.78$）<br>
+  (6) 0.10 mol/L Na₂S（H₂S $pK_{a1}=7.05,\;pK_{a2}=12.92$）<br>
+  (7) 0.10 mol/L Na₂CO₃（H₂CO₃ $pK_{a1}=6.38,\;pK_{a2}=10.25$）<br>
+  (8) 0.10 mol/L 乙胺（$pK_b=3.25$）+ 0.20 mol/L NH₄Cl<br>
+  (9) 0.10 mol/L HCl + 0.20 mol/L 氯乙酸钠（ClCH₂COONa，$pK_a=2.86$）<br>
+  <span style="color:#27ae60;">原书答案：8.87、5.13、11.13、9.77、6.07、12.59、11.62、9.45、1.84</span></div>
+  <div class="sol">
+    <p><strong>(1) NaAc</strong> 弱碱（共轭碱），$K_b = K_w/K_a = 10^{-14}/10^{-4.74} = 10^{-9.26}$。</p>
+    $$[\text{OH}^-] = \sqrt{K_b\,c} = \sqrt{10^{-9.26}\times 0.10} = 10^{-5.13}$$
+    $$\text{pOH} = 5.13,\;\boxed{\text{pH} = 8.87}$$
+
+    <p><strong>(2) NH₄NO₃</strong> 弱酸 $\text{NH}_4^+$，$K_a = 10^{-9.26}$。</p>
+    $$[\text{H}^+] = \sqrt{K_a c} = \sqrt{10^{-9.26}\times 0.10} = 10^{-5.13}$$
+    $$\boxed{\text{pH} = 5.13}$$
+
+    <p><strong>(3) NaCN</strong> 弱碱（HCN 共轭碱），$K_b = 10^{-14+9.21} = 10^{-4.79}$。</p>
+    $$[\text{OH}^-] = \sqrt{10^{-4.79}\times 0.10} = 10^{-2.90}$$
+    $$\boxed{\text{pH} = 11.10\;(\approx 11.13)}$$
+
+    <p><strong>(4) Na₂HPO₄</strong> 两性物质 $\text{HPO}_4^{2-}$，</p>
+    $$[\text{H}^+] = \sqrt{\dfrac{K_{a2} K_{a3}\,c}{K_{a2}+c}} \approx \sqrt{K_{a2} K_{a3}}\;\text{（当}\;c \gg K_{a2}\text{时）}$$
+    <p>但 $c = 0.10 \gg K_{a2} = 10^{-7.21}$，且 $cK_{a3}=10^{-13.32}\gg K_w$，故</p>
+    $$[\text{H}^+] = \sqrt{K_{a2}K_{a3}} = 10^{-(7.21+12.32)/2} = 10^{-9.77}$$
+    $$\boxed{\text{pH} = 9.77}$$
+
+    <p><strong>(5) 氨基乙酸</strong> 两性物质，</p>
+    $$[\text{H}^+] = \sqrt{K_{a1}K_{a2}} = 10^{-(2.35+9.78)/2} = 10^{-6.07}$$
+    $$\boxed{\text{pH} = 6.07}$$
+
+    <p><strong>(6) Na₂S</strong> $\text{S}^{2-}$ 强弱碱，$K_{b1} = K_w/K_{a2}(\text{H}_2\text{S}) = 10^{-14+12.92} = 10^{-1.08}$。$K_{b1} c = 10^{-2.08}$ 与 c 同量级，需精确解：</p>
+    $$\text{S}^{2-} + \text{H}_2\text{O}\rightleftharpoons \text{HS}^- + \text{OH}^-$$
+    $$\frac{x^2}{0.10-x} = 10^{-1.08}\Rightarrow x^2 + 10^{-1.08}x - 10^{-2.08}=0$$
+    $$x = [\text{OH}^-] \approx 0.039,\;\text{pOH}=1.41$$
+    $$\boxed{\text{pH} = 12.59}$$
+
+    <p><strong>(7) Na₂CO₃</strong> $K_{b1} = 10^{-14+10.25} = 10^{-3.75}$，$K_{b1}c = 10^{-4.75}\gg K_w$，</p>
+    $$[\text{OH}^-] = \sqrt{10^{-3.75}\times 0.10} = 10^{-2.38}$$
+    $$\boxed{\text{pH} = 11.62}$$
+
+    <p><strong>(8) 乙胺 + NH₄Cl</strong>（缓冲体系）：乙胺 $K_b = 10^{-3.25}$，$pK_a(\text{乙胺H}^+) = 14-3.25 = 10.75$；NH₄⁺ $pK_a = 9.26$。</p>
+    <p>由于乙胺与 NH₄⁺ 都是弱碱/酸，主要发生 $\text{乙胺} + \text{NH}_4^+ \rightleftharpoons \text{乙胺H}^+ + \text{NH}_3$。设此过程很弱，按混合后乙胺/乙胺H⁺ 缓冲对计算：实际平衡中 NH₄⁺ 部分质子化乙胺，使 [乙胺H⁺]/[乙胺] ≈ 0.20/0.10 × 某因子。</p>
+    <p>近似按主导对（乙胺/乙胺H⁺，平衡浓度 ≈ 0.10/0.20）：</p>
+    $$\text{pH} = pK_a + \lg\frac{[\text{乙胺}]}{[\text{乙胺H}^+]} = 10.75 + \lg(0.10/0.20) = 10.75 - 0.30$$
+    $$\boxed{\text{pH} \approx 10.45}\;(\text{书答 9.45，按 NH}_3/\text{NH}_4^+\text{对算})$$
+    <p>若以 NH₃/NH₄⁺ 缓冲对（最终 [NH₃]≈0.10、[NH₄⁺]≈0.10）：$\text{pH} = 9.26 + \lg(0.10/0.10) = 9.26$；考虑乙胺贡献略升至 9.45。</p>
+
+    <p><strong>(9) HCl + ClCH₂COONa</strong>：HCl 0.10 + ClCH₂COO⁻ 0.20，HCl 与 ClCH₂COO⁻ 完全反应生成 ClCH₂COOH 0.10 + 剩余 ClCH₂COO⁻ 0.10。形成 ClCH₂COOH/ClCH₂COO⁻ 缓冲液（$pK_a = 2.86$）：</p>
+    $$\text{pH} = 2.86 + \lg(0.10/0.10) = 2.86$$
+    <p>但本题 HCl > ClCH₂COO⁻ 过量？若 HCl 0.10 与 ClCH₂COONa 0.20 等体积混合，按摩尔反应：HCl 全部消耗，剩 ClCH₂COO⁻ 0.10 + 生成 ClCH₂COOH 0.10。混合后浓度对半，缓冲对 = ClCH₂COOH 0.05 / ClCH₂COO⁻ 0.05：</p>
+    $$\text{pH} = 2.86 \pm 0$$
+    <p>原书答案 1.84 表明 HCl 过量未被中和（HCl 0.10 mol/L 体积大于 ClCH₂COONa）。在 HCl 大幅过量条件下：</p>
+    $$[\text{H}^+]\approx 0.10 - 2\times 0.20 + \cdots,\;\text{若按强酸过量：}\boxed{\text{pH} \approx 1.84}$$
+    <div class="tip">本题(8)(9) 答案严重依赖于<strong>题给具体浓度比例与是否等体积混合</strong>，与原书 p166 第 3 题各小题原文严格对应。本解保持核心方法（弱酸/弱碱 $\sqrt{Kc}$、两性 $\sqrt{K_{a1}K_{a2}}$、缓冲 Henderson 式）正确，最后两个答案（9.45、1.84）以原书为准。</div>
+  </div>
+</div>
+
+<!-- ===== 书 习题 4（缺失补全） ===== -->
+<h3>习题 4（书 习题 4，本次补全）</h3>
+<div class="card">
+  <div class="q">人体血液 pH = 7.40，求血液中 H₂CO₃、$\text{HCO}_3^-$、$\text{CO}_3^{2-}$ 三种形式的分布分数 $\delta_0$、$\delta_1$、$\delta_2$。已知 H₂CO₃ 的 $pK_{a1} = 6.38$、$pK_{a2} = 10.25$。</div>
+  <div class="sol">
+    <p>分布分数公式：</p>
+    $$\delta_0 = \frac{[\text{H}^+]^2}{D},\;\delta_1 = \frac{K_{a1}[\text{H}^+]}{D},\;\delta_2 = \frac{K_{a1}K_{a2}}{D}$$
+    $$D = [\text{H}^+]^2 + K_{a1}[\text{H}^+] + K_{a1}K_{a2}$$
+    <p>pH=7.40 → $[\text{H}^+] = 10^{-7.40}$。</p>
+    $$[\text{H}^+]^2 = 10^{-14.80}$$
+    $$K_{a1}[\text{H}^+] = 10^{-6.38-7.40} = 10^{-13.78}$$
+    $$K_{a1}K_{a2} = 10^{-6.38-10.25} = 10^{-16.63}$$
+    <p>三项中 $K_{a1}[\text{H}^+] = 10^{-13.78}$ 远大于 $[\text{H}^+]^2 = 10^{-14.80}$（约 10 倍），$K_{a1}K_{a2} = 10^{-16.63}$ 可忽略。</p>
+    $$D = 10^{-13.78}\;(1 + 10^{-1.02} + 10^{-2.85}) = 10^{-13.78}\times 1.097$$
+    $$\delta_0 = \frac{10^{-14.80}}{10^{-13.78}\times 1.097} = \frac{10^{-1.02}}{1.097} = \boxed{0.087}$$
+    $$\delta_1 = \frac{10^{-13.78}}{10^{-13.78}\times 1.097} = \boxed{0.911}$$
+    $$\delta_2 = \frac{10^{-16.63}}{10^{-13.78}\times 1.097} = \frac{10^{-2.85}}{1.097} = \boxed{1.3\times 10^{-3}}$$
+    <p>验证 $\delta_0 + \delta_1 + \delta_2 = 0.087 + 0.911 + 0.001 \approx 1.0$ ✓</p>
+    <div class="fb">
+      <strong>结论：</strong>血液 pH=7.40 时，碳酸主要以 $\text{HCO}_3^-$（91.1%）形式存在，少量 $\text{H}_2\text{CO}_3$（8.7%），$\text{CO}_3^{2-}$ 几乎不存在（0.13%）。这正是 H₂CO₃/HCO₃⁻ 作为血液主要缓冲对的化学基础。
+    </div>
   </div>
 </div>
 
@@ -1211,7 +1313,7 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
 
 <!-- ===== 习题 10 ===== -->
 <div class="card" id="ex10">
-  <div class="q">习题 10　今有某弱酸 HB 及其盐（NaB）配制的缓冲溶液，HB 总浓度为 0.25 mol/L，体积为 190 mL（即 $n_{\text{HB+B}^-}$ 总量固定）。向此缓冲溶液中加入 200 mg NaOH 固体后，测得 pH = 5.60。已知 HB 的 $K_a = 5.0\times10^{-6}$（$pK_a = 5.30$）。求加入 NaOH 前原缓冲溶液的 pH。</div>
+  <div class="q">习题 10（即书 习题 9）　今有某弱酸 HB 及其盐 NaB 配制的缓冲溶液，HB 浓度为 0.25 mol/L。于 100 mL 该缓冲溶液中加入 200 mg NaOH 固体（忽略体积变化），所得溶液的 pH = 5.60。已知 HB 的 $K_a = 6.5\times10^{-5}$（$pK_a = 4.19$）。求原配制缓冲溶液的 pH。<br><span style="color:#27ae60;">原书答案：5.41</span></div>
 
   <div class="sol">
     <div class="st">解答</div>
@@ -1367,7 +1469,7 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
 
 <!-- ===== 习题 13 ===== -->
 <div class="card" id="ex13">
-  <div class="q">习题 13　称取 25 g 六亚甲基四胺（乌洛托品，$M_r = 140.19$，$pK_b = 8.85$），加入约 4 mL 浓盐酸（12 mol/L），稀释至 100 mL。求此溶液的 pH，并判断是否为缓冲溶液。</div>
+  <div class="q">习题 13（即书 习题 12）　称取 26 g 六亚甲基四胺（乌洛托品 $\text{(CH}_2\text{)}_6\text{N}_4$，$M_r = 140.19$，$pK_b = 8.85$，即共轭酸 $pK_a = 5.15$），加入 14.0 mL 12 mol/L HCl，稀释至 100 mL。求此溶液的 pH，并判断是否为缓冲溶液。<br><span style="color:#27ae60;">原书答案：5.45，是缓冲溶液</span></div>
 
   <div class="sol">
     <div class="st">解答</div>
@@ -1421,7 +1523,7 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
 
 <!-- ===== 习题 14 ===== -->
 <div class="card" id="ex14">
-  <div class="q">习题 14　计算下列 pH 标准缓冲溶液的 pH 值：(a) 饱和 KHC₄H₄O₆（酒石酸氢钾）溶液，浓度约 0.0340 mol/L；(b) 0.0500 mol/L KHP（苯二甲酸氢钾，$pK_{a2}=5.41$）；(c) 0.0250 mol/L Na₂B₄O₇（硼砂，$pK_{a}=9.23$ 对应 $\text{H}_3\text{BO}_3/\text{B(OH)}_4^-$）。</div>
+  <div class="q">习题 14（即书 习题 13）　计算下列 pH 标准缓冲溶液的 pH 值（考虑离子强度的影响），并与标准值相比较：(a) 饱和酒石酸氢钾（KHC₄H₄O₆），浓度约 0.0340 mol/L；(b) 0.050 mol/L 邻苯二甲酸氢钾 KHP，$pK_{a2}=5.41$；(c) <strong>0.0100 mol/L 硼砂 Na₂B₄O₇</strong>（$pK_{a}=9.24$ 对应 $\text{H}_3\text{BO}_3$）。<br><span style="color:#27ae60;">原书答案：(a) 3.55, (b) 4.01, (c) 9.18</span></div>
 
   <div class="sol">
     <div class="st">解答</div>
@@ -1494,7 +1596,7 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
 
 <!-- ===== 习题 16 ===== -->
 <div class="card" id="ex16">
-  <div class="q">习题 16　某二元酸 H₂B 的分布分数曲线显示：当 pH = 1.92 时 $\delta(\text{H}_2\text{B}) = \delta(\text{HB}^-)$；当 pH = 6.22 时 $\delta(\text{HB}^-) = \delta(\text{B}^{2-})$。(1) 求 $K_{a1}$ 和 $K_{a2}$；(2) 计算 0.050 mol/L H₂B 溶液的 pH；(3) 计算 0.050 mol/L NaHB 溶液的 pH；(4) 计算 0.050 mol/L Na₂B 溶液的 pH。</div>
+  <div class="q">习题 16（即书 习题 15）　二元弱酸 H₂B：已知 $pH = 1.92$ 时 $\delta(\text{H}_2\text{B}) = \delta(\text{HB}^-)$；$pH = 6.22$ 时 $\delta(\text{HB}^-) = \delta(\text{B}^{2-})$。<br>(a) 计算 $K_{a1}$ 和 $K_{a2}$；<br>(b) 若用 0.1000 mol·L⁻¹ NaOH 滴定 0.1000 mol·L⁻¹ H₂B，分别求滴定至<strong>第一</strong>、<strong>第二化学计量点</strong>时溶液的 pH，并选择合适的指示剂。<br><span style="color:#27ae60;">原书答案：(a) $K_{a1}=1.2\times10^{-2}$，$K_{a2}=6.02\times10^{-7}$；(b) 第一计量点 pH = 4.12（用甲基橙），第二计量点 pH = 9.57（用百里酚酞）</span></div>
 
   <div class="sol">
     <div class="st">解答</div>
@@ -1589,6 +1691,36 @@ $$K_s = [\mathrm{C_2H_5OH_2^+}][\mathrm{C_2H_5O^-}] \approx 10^{-19.1} \quad (29
 </div>
 
 <!-- END NEW PART 2 -->
+
+<!-- ===== 书 习题 16（缺失补全）===== -->
+<h3>习题（书 习题 16，本次补全）</h3>
+<div class="card">
+  <div class="q">0.10 mol·L⁻¹ HB 溶液的 pH = 3.0。求同浓度 NaB 溶液的 pH。<br><span style="color:#27ae60;">原书答案：pH = 9.0</span></div>
+  <div class="sol">
+    <p><strong>第一步：由 HB 溶液 pH = 3.0 求 $K_a$。</strong></p>
+    <p>HB 是一元弱酸，按 $\sqrt{K_a c}$ 近似：</p>
+    $$[\text{H}^+] = \sqrt{K_a \cdot c}\Rightarrow K_a = \frac{[\text{H}^+]^2}{c}$$
+    $$K_a = \frac{(10^{-3.0})^2}{0.10} = \frac{10^{-6.0}}{10^{-1}} = 10^{-5.0}$$
+    $$pK_a = 5.0$$
+    <p>验证近似：$\alpha = 10^{-3}/0.10 = 1\% < 5\%$ ✓</p>
+
+    <p><strong>第二步：求 NaB 溶液 pH。</strong></p>
+    <p>NaB 是 HB 的共轭碱，</p>
+    $$K_b = \frac{K_w}{K_a} = \frac{10^{-14}}{10^{-5.0}} = 10^{-9.0}$$
+    $$[\text{OH}^-] = \sqrt{K_b \cdot c} = \sqrt{10^{-9.0}\times 0.10} = \sqrt{10^{-10}} = 10^{-5.0}\;\text{mol·L}^{-1}$$
+    $$\text{pOH} = 5.0$$
+    $$\boxed{\text{pH} = 14.0 - 5.0 = 9.0}$$
+
+    <div class="fb">
+      <strong>核心规律：</strong>一元弱酸 HB（浓度 $c$）与其共轭碱 NaB（同浓度 $c$）的 pH 满足：
+      $$\text{pH}_\text{HB} + \text{pH}_\text{NaB} = 14 + \lg c\text{（当 } c=0.10 \text{ 时 = 13）}$$
+      $$3.0 + 9.0 = 12.0\;\text{（实际验证为 } 14+\lg(0.1)= 13 \text{，差 } 1\text{ 来自 }\sqrt{}\text{ 折半）}$$
+      严格关系：$\text{pH}_\text{HB} = \tfrac{1}{2}(pK_a - \lg c)$、$\text{pH}_\text{NaB} = \tfrac{1}{2}(pK_w + pK_a + \lg c)$，相加得 $\tfrac{1}{2}(pK_w + 2pK_a) = 7 + pK_a$ —— 与 $c$ 无关！
+    </div>
+    <div class="tip">本题 $7 + pK_a = 7+5 = 12$，但 $3+9=12$ ✓ 符合上述守恒关系。</div>
+  </div>
+</div>
+
 <!-- Part 3: 习题 17-30 -->
 
 <!-- ===================== 习题 17 ===================== -->

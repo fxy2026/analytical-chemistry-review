@@ -66,6 +66,19 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <h1>第六章 配位滴定法（下）</h1>
 
+<!-- ===== FXY 专属：弱点④强化 ===== -->
+<div class="card" style="border:2px solid #c0392b;background:#fdecea;">
+  <p style="font-weight:bold;color:#c0392b;font-size:1.05em;margin-bottom:6px;">⚠️ 你在这反复卡：林邦终点误差公式（两周内问了 2 次，系统判定"反复弱点"）</p>
+  <p>5/15 你问"我是不是只要记公式啊 推导太复杂"，5/16 又问"帮我回顾林邦公式"，系统自动打出「近两周第 2 次问林邦误差公式，可能是反复弱点」。学习回顾标 ⚠️「不理解 $\Delta pM$、$pM_{sp}$ 如何求解，$K'_{MY}$ 如何算」。</p>
+  <p style="margin-top:6px;"><strong>怎么破：</strong>不要把它当一坨整公式硬记——拆成下图<strong>6 步</strong>分步书写，每步标清是在求什么，错也只错一步、好检查。盯死三个易错点：① 用<strong>条件常数 $K'_{MY}$</strong>（带撇）不是 $K_{MY}$；② $c_{sp}=c_0/2$（计量点稀释后）；③ $\Delta pM'=pM'_{ep}-pM'_{sp}$ 符号别反。配套看 <a href="我的薄弱点.html">我的薄弱点</a> 弱点④。</p>
+</div>
+
+<div class="card">
+  <p style="text-align:center;font-weight:bold;color:var(--pri);margin-bottom:6px;">林邦终点误差 $E_t$：6 步分步书写法（练 3 题成肌肉记忆）</p>
+  <img loading="lazy" decoding="async" src="img/fxy_et_6steps.png" alt="林邦终点误差6步分步流程" style="display:block;max-width:100%;margin:0 auto;border:1px solid #e0d8c8;border-radius:6px;">
+  <p style="text-align:center;font-size:.82em;color:#888;margin-top:4px;">① 求 $c_{sp,M}$（=$c_0/2$）→ ② 求 $\lg K'_{MY}$（扣副反应，带撇）→ ③ 求 $pM'_{sp}=\frac12(\lg K'_{MY}+pc_{sp})$ → ④ 求 $pM'_{ep}=\lg K'_{MIn}$（由金属指示剂定）→ ⑤ 求 $\Delta pM'=pM'_{ep}-pM'_{sp}$ → ⑥ 代入公式。考试三种考法：直接算 $E_t$ / 给误差限反推（导出 $\lg(c_{sp}K')\geq6$）/ 选指示剂使 $\Delta pM'$ 最小。</p>
+</div>
+
 <!-- ==================== 6.6 ==================== -->
 <h2>6.6 终点误差与准确滴定判据</h2>
 
@@ -82,9 +95,9 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <h3>终点误差公式（林邦误差公式）</h3>
   <div class="fb">
     <div class="t">林邦公式</div>
-    <p>终点误差 $E_t$ 定量反映了指示剂变色点 $pM'_t$ 与化学计量点 $pM'_{sp}$ 偏差对滴定结果的影响：</p>
-    $$\boxed{E_t = \frac{10^{\Delta pM'} - 10^{-\Delta pM'}}{c_{sp} \cdot K'_{MY}} \times 100\%}$$
-    <p>其中 $\Delta pM' = pM'_t - pM'_{sp}$。</p>
+    <p>终点误差 $E_t$ 定量反映了指示剂变色点 $pM'_t$（即 $pM'_{ep}$）与化学计量点 $pM'_{sp}$ 偏差对滴定结果的影响：</p>
+    $$\boxed{E_t = \frac{10^{\Delta pM'} - 10^{-\Delta pM'}}{\sqrt{c_{sp} \cdot K'_{MY}}} \times 100\%}$$
+    <p>其中 $\Delta pM' = pM'_t - pM'_{sp}$。<strong>⚠️ 注意分母是 $\sqrt{c_{sp}K'_{MY}}$（开根号）</strong>，与可视为"突跃大小指标"的 $c_{sp}K'_{MY}$ 不同；与酸碱终点误差 $E_t=\dfrac{10^{\Delta pH}-10^{-\Delta pH}}{\sqrt{K_t c_{sp}}}$ 同一形式。考前以你课本第 6 章定义为准。</p>
   </div>
 
   <p><strong>公式分析：</strong></p>
@@ -104,9 +117,9 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <div class="sol">
     <div class="st">解：</div>
     <p>$\Delta pM' = +0.5$</p>
-    <p>$c_{sp} \cdot K'_{MY} = 0.010 \times 10^{16.0} = 10^{14.0}$</p>
-    $$E_t = \frac{10^{0.5} - 10^{-0.5}}{10^{14.0}} \times 100\% = \frac{3.16 - 0.316}{10^{14}} \times 100\% = \frac{2.84}{10^{14}} \times 100\%$$
-    <p>$E_t \approx 2.84 \times 10^{-12}\;\%$，终点误差极其微小。</p>
+    <p>$c_{sp} \cdot K'_{MY} = 0.010 \times 10^{16.0} = 10^{14.0}$，故 $\sqrt{c_{sp}K'_{MY}} = 10^{7.0}$</p>
+    $$E_t = \frac{10^{0.5} - 10^{-0.5}}{\sqrt{10^{14.0}}} \times 100\% = \frac{3.16 - 0.316}{10^{7.0}} \times 100\% = \frac{2.84}{10^{7}} \times 100\%$$
+    <p>$E_t \approx 2.84 \times 10^{-5}\;\%$，终点误差极其微小。</p>
     <div class="tip">当 $\lg cK'$ 很大（如 14）时，即使 $\Delta pM'$ 有偏差，终点误差也可忽略。实际问题中，$\lg cK'$ 在 6~8 附近时终点误差才需要认真考虑。</div>
   </div>
 </div>
@@ -116,10 +129,10 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <p>滴定 $\text{Ca}^{2+}$，$c_{sp} = 0.010$ mol/L，pH = 10，$\lg\alpha_{Y(H)} = 0.5$，$\lg K'_{\text{CaY}} = 10.7 - 0.5 = 10.2$。指示剂 $\Delta pM' = -1.0$。</p>
   <div class="sol">
     <div class="st">解：</div>
-    <p>$c_{sp}K' = 10^{-2} \times 10^{10.2} = 10^{8.2}$</p>
-    $$E_t = \frac{10^{-1.0} - 10^{1.0}}{10^{8.2}} \times 100\% = \frac{0.1 - 10}{10^{8.2}} \times 100\% = \frac{-9.9}{10^{8.2}} \times 100\%$$
-    <p>$E_t \approx -6.25 \times 10^{-6}\%$，仍然非常小。</p>
-    <p>$\Delta pM' < 0$ 说明终点偏前（欠滴定），$E_t$ 为负值。</p>
+    <p>$c_{sp}K' = 10^{-2} \times 10^{10.2} = 10^{8.2}$，故 $\sqrt{c_{sp}K'_{MY}} = 10^{4.1} = 1.26\times10^4$</p>
+    $$E_t = \frac{10^{-1.0} - 10^{1.0}}{\sqrt{10^{8.2}}} \times 100\% = \frac{0.1 - 10}{10^{4.1}} \times 100\% = \frac{-9.9}{1.26\times10^4} \times 100\%$$
+    <p>$E_t \approx -0.079\%$（$|E_t|<0.1\%$，满足准确滴定）。</p>
+    <p>$\Delta pM' < 0$ 说明终点偏前（欠滴定），$E_t$ 为负值。此例 $\lg cK'=8.2$ 已偏小，$\Delta pM'=-1.0$ 时误差就接近 0.1% 红线了——这正是为什么 $\Delta pM'$ 要尽量小（选 $pM'_{ep}$ 最接近 $pM'_{sp}$ 的指示剂）。</p>
   </div>
 </div>
 
@@ -141,6 +154,21 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <p>$\lg c_{sp} K'_{CaY} = \lg(0.01) + 10.25 = -2 + 10.25 = 8.25 \geq 6$</p>
     <p>满足判据，可以准确滴定。</p>
   </div>
+</div>
+
+<div class="exam" style="background:#fff0f0;border:2px solid #c0392b;border-radius:8px;padding:14px 18px;margin:12px 0;">
+  <div style="font-weight:bold;color:#c0392b;margin-bottom:6px;">真题原型（2022 期末三-5，12 分，重点章必出）— 配位滴定答题链 + 6 步终点误差</div>
+  <p><strong>题目（原题照录）：</strong>0.02000 mol/L EDTA 滴等浓 Pb²⁺、Bi³⁺ 混合液 25.00 mL。(1) 能否控制酸度分别滴定？(2) pH=1 时算 $\lg K'_{BiY}$，能否准确滴 Bi³⁺？(3) 滴 Pb²⁺ 时 pH=5.0，如何让整个过程 pH 变化&lt;0.2？数据：$\lg K_{BiY}=27.9$，$\lg K_{PbY}=18.0$；pH=1 时 $\lg\alpha_{Y(H)}=18.3$。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p><strong>(1) 能否分别滴定 → 看 $\Delta\lg K$：</strong>$\Delta\lg K=27.9-18.0=9.9\geq5$（等浓度）→ <strong>能</strong>控制酸度分别滴定（先强酸 pH≈1 滴 Bi³⁺，再升 pH≈5 滴 Pb³⁺）。</p>
+    <p><strong>(2) 用 6 步法的②③判准确滴定：</strong></p>
+    <p>② $\lg K'_{BiY}=\lg K_{BiY}-\lg\alpha_{Y(H)}=27.9-18.3=9.6$（带撇，扣酸效应）。</p>
+    <p>① $c_{sp}=\dfrac{0.02000}{2}=0.01000$ mol/L（等浓等体积混合后减半），$pc_{sp}=2.0$。</p>
+    <p>判据：$\lg(c_{sp}K'_{BiY})=9.6-2.0=7.6\geq6$ → <strong>能</strong>准确滴定 Bi³⁺。</p>
+    <p><strong>(3)</strong> 用<strong>缓冲溶液</strong>控 pH=5.0（选 $pK_a\approx5$ 的缓冲对，且缓冲容量足够抵抗滴定中 EDTA 配位释放的 H⁺）。优选<strong>六亚甲基四胺</strong>（$pK_b\approx8.7$ → 共轭酸 $pK_a\approx5.3$，且不与 Pb²⁺ 配位、无副反应）。</p>
+  </div>
+  <div class="warn"><strong>易错红线：</strong>① 判据/误差全用<strong>条件常数 $K'$</strong>（带撇）；② $c_{sp}$ 别忘除 2；③ 若续问终点误差，按 6 步往下走（求 $pM'_{sp}$→由指示剂求 $pM'_{ep}$→$\Delta pM'$→代 $E_t=\dfrac{10^{\Delta pM'}-10^{-\Delta pM'}}{\sqrt{c_{sp}K'_{MY}}}$）。</div>
 </div>
 
 <!-- ==================== 6.7 ==================== -->

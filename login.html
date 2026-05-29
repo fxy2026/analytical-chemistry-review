@@ -26,14 +26,9 @@ body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:#fffef9;disp
 <p class="err" id="errMsg">请输入姓名</p>
 </div>
 <script>
-document.getElementById('loginBtn').addEventListener('click', doLogin);
-document.getElementById('username').addEventListener('keydown', function(e){ if(e.key==='Enter') doLogin(); });
-function doLogin(){
-  var name = document.getElementById('username').value.trim();
-  if(!name){ document.getElementById('errMsg').style.display='block'; return; }
-  localStorage.setItem('achem_user', JSON.stringify({username:name, loginTime:Date.now()}));
-  window.location.href='index.html';
-}
+// Auto-redirect - no login required
+localStorage.setItem('achem_user', JSON.stringify({username:'Guest', loginTime:Date.now()}));
+window.location.href='index.html';
 </script>
 </body>
 </html>

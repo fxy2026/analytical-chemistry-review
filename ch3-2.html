@@ -69,6 +69,42 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <h1>第三章 误差与分析数据处理（下）</h1>
 
+<!-- ===== FXY 专属：盲区强化区 ===== -->
+<div class="exam">
+  <div class="et">⚠️ 你在这反复卡（裸考最危险的盲区 · 命中率最高的送分大题）</div>
+  <p>你的 8 篇 AI 问答 <strong>100% 集中在酸碱/配位</strong>，误差统计这块<strong>一次都没问过、没练过</strong>——你对它是"没碰过"，不是"会了"。但作战手册明确：误差统计（t/Q 检验 + 置信区间）是「计算 52 分」里<strong>命中率最高</strong>的一档，与两大滴定同级，2022 期末三-1（12 分）就是它。这是裸考<strong>最稳的送分大题</strong>，优先级排在所有 AI 弱点之前。</p>
+  <p style="margin-top:6px;"><strong>怎么破：</strong>把下面 5 步流程练成肌肉记忆，从零做 5 题。最易丢分的是<strong>第③步</strong>——剔除可疑值后 $n,\bar{x},s,f$ 全部要重算。配套看 <a href="我的薄弱点.html">我的薄弱点</a> 弱点①。</p>
+</div>
+
+<div class="card">
+  <p style="text-align:center;font-weight:bold;color:var(--pri);margin-bottom:6px;">误差统计大题：固定 5 步流程</p>
+  <img loading="lazy" decoding="async" src="img/fxy_stat_5steps.png" alt="误差统计大题5步流程" style="display:block;max-width:100%;margin:0 auto;border:1px solid #e0d8c8;border-radius:6px;">
+  <p style="text-align:center;font-size:.82em;color:#888;margin-top:4px;">给一组数据 → ① 算 $\bar{x}$、$s$ → ② Q/Grubbs 剔可疑值 → ③ <strong>剔除后重算</strong> $\bar{x},s,n,f$（最易漏！）→ ④ 95% 置信区间 → ⑤ t 检验（给标准值时）。注意查表口径：<strong>Q/Grubbs 查测量次数 $n$</strong>，<strong>t 查自由度 $f=n-1$</strong>。</p>
+</div>
+
+<div class="card">
+  <p style="text-align:center;font-weight:bold;color:var(--pri);margin-bottom:6px;">t 分布 vs 正态分布（为什么小样本用 t）</p>
+  <img loading="lazy" decoding="async" src="img/fxy_t_distribution.png" alt="t分布与正态分布对比" style="display:block;max-width:100%;margin:0 auto;border:1px solid #e0d8c8;border-radius:6px;">
+  <p style="text-align:center;font-size:.82em;color:#888;margin-top:4px;">$\sigma$ 未知用 $s$ 估计时，统计量服从自由度 $f=n-1$ 的 t 分布。$f$ 越小两尾越"肥"→ 临界 $t$ 越大 → 置信区间越宽（小样本结论更不可靠）。$n=3$ 时 $t_{0.05,2}=4.30$ 很大，所以 3 次测定很难检出系统误差。$f\to\infty$ 时 $t\to1.96$（正态）。</p>
+</div>
+
+<div class="exam">
+  <div class="et">真题原型（2022 期末三-1，12 分，必出）— 误差统计大题完整 5 步</div>
+  <p><strong>题目（原题照录）：</strong>测定某铁矿石中铁的质量分数，3 次结果：52.48%、52.52%、52.41%。(1) 计算 $\bar{x}$ 和 $s$；(2) 置信度 95% 的总体平均值置信区间；(3) 已知标准值 52.43%，95% 下结果与标准值有无显著性差异？(4) 想让置信区间变窄怎么做？题给 t 表：$f=2\to4.30,\ 3\to3.18,\ 4\to2.78$。</p>
+  <div class="sol">
+    <div class="st">解（套 5 步，本题 n=3 无明显离群值，②③合并）：</div>
+    <p><strong>① 算 $\bar{x}$、$s$：</strong>$\bar{x}=\dfrac{52.48+52.52+52.41}{3}=52.47\%$。偏差 $+0.01,+0.05,-0.06$，平方和 $=0.0001+0.0025+0.0036=0.0062$。</p>
+    $$s=\sqrt{\frac{0.0062}{n-1}}=\sqrt{\frac{0.0062}{2}}=\sqrt{0.0031}=0.056\%$$
+    <p><strong>④ 95% 置信区间：</strong>$f=n-1=2$，查双侧 $t_{0.05,2}=4.30$。</p>
+    $$\mu=\bar{x}\pm\frac{t_{0.05,2}\,s}{\sqrt{n}}=52.47\pm\frac{4.30\times0.056}{\sqrt3}=52.47\pm0.14\%\;\Rightarrow\;(52.33\%,\,52.61\%)$$
+    <p><strong>⑤ t 检验（与标准值 $\mu_0=52.43\%$）：</strong></p>
+    $$t_{计}=\frac{|\bar{x}-\mu_0|}{s}\sqrt{n}=\frac{|52.47-52.43|}{0.056}\times\sqrt3=\frac{0.04}{0.056}\times1.732=1.24$$
+    <p>$t_{计}=1.24<t_{0.05,2}=4.30$ → <strong>无显著性差异</strong>（差异由随机误差引起，该方法无系统误差）。</p>
+    <p><strong>(4)</strong> 让置信区间变窄：<strong>增加测定次数 $n$</strong>（↑$n$ 使 $t$↓ 且分母 $\sqrt{n}$↑）；或提高精密度（减小 $s$）。</p>
+  </div>
+  <div class="warn"><strong>易错红线：</strong>① $s$ 分母是 $n-1$ 不是 $n$（全科最高频失分）；② 自由度 $f=n-1$，查错一格全错；③ 置信区间与判系统误差都用<strong>双侧</strong> $t_{0.05}$；④ 结论说反——$t_计>t_表$ 才是<strong>有</strong>系统误差。</div>
+</div>
+
 <!-- ============================================================ -->
 <h2>3.7 显著性检验</h2>
 

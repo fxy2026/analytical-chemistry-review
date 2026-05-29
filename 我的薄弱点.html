@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的薄弱点（FXY 专属） | 分析化学1</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload=""></script>
+<link rel="stylesheet" href="toc.css">
+<style>
+:root{--pri:#1a5276;--acc:#c0392b;--bg:#fffef9;--card:#fff;--border:#e0d8c8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;background:var(--bg);color:#333;line-height:1.9;padding:20px;max-width:1000px;margin:0 auto;}
+h1{text-align:center;color:var(--pri);font-size:1.8em;margin:20px 0;border-bottom:3px solid var(--pri);padding-bottom:10px;}
+h2{color:#fff;font-size:1.4em;margin:35px 0 15px;padding:10px 18px;background:linear-gradient(135deg,var(--pri),#2980b9);border-radius:6px;}
+h3{color:var(--pri);font-size:1.15em;margin:20px 0 10px;border-left:4px solid var(--acc);padding-left:12px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin:14px 0;content-visibility:auto;contain-intrinsic-size:auto 500px;}
+.fb{background:#f0f4ff;border:2px solid #3498db;border-radius:8px;padding:14px 18px;margin:12px 0;content-visibility:auto;contain-intrinsic-size:auto 300px;}
+.fb .t{font-weight:bold;color:#2471a3;margin-bottom:6px;}
+.ex{background:#fffbf0;border-left:4px solid #f39c12;border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;}
+.sol{background:#f5f5f5;border:1px dashed #aaa;border-radius:5px;padding:14px;margin-top:8px;}
+.sol .st{font-weight:bold;color:var(--acc);margin-bottom:4px;}
+.tip{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.warn{background:#fff3e0;border-left:4px solid #e67e22;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.note{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:0 8px 8px 0;padding:10px 16px;margin:10px 0;}
+.danger{background:#fdecea;border:2px solid #c0392b;border-radius:8px;padding:16px 20px;margin:16px 0;}
+.danger .t{font-weight:bold;color:#c0392b;font-size:1.05em;margin-bottom:8px;}
+.redcard{background:#fff;border:2px solid #c0392b;border-radius:8px;padding:18px;margin:18px 0;box-shadow:0 2px 10px rgba(192,57,43,.12);}
+.redcard h3{color:#c0392b;border-left-color:#c0392b;}
+table{width:100%;border-collapse:collapse;margin:12px 0;}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:center;}
+th{background:var(--pri);color:#fff;}
+tr:nth-child(even){background:#f9f7f2;}
+.nav-bar{position:sticky;top:0;z-index:100;background:#fffef9;padding:10px 15px;border-bottom:2px solid #e0d8c8;margin:-20px -20px 20px;font-size:.9em;display:flex;gap:12px;flex-wrap:wrap;backface-visibility:hidden;transform:translateZ(0);}
+.nav-bar a{color:#1a5276;text-decoration:none;font-weight:bold;padding:3px 8px;border-radius:4px;}
+.nav-bar a:hover{background:#1a5276;color:#fff;}
+ul,ol{margin-left:20px;margin-bottom:8px;}
+.prio{display:inline-block;font-size:.72em;font-weight:bold;padding:2px 9px;border-radius:10px;color:#fff;margin-left:8px;vertical-align:middle;}
+.p-red{background:#c0392b;}.p-org{background:#e67e22;}.p-yel{background:#f1c40f;color:#333;}
+.factbox{background:#fafafa;border-left:4px solid #95a5a6;padding:8px 14px;margin:8px 0;font-size:.95em;}
+</style>
+</head><body>
+
+<div class="nav-bar">
+  <a href="index.html">首页</a>
+  <a href="我的薄弱点.html" style="background:#c0392b;color:#fff;">我的弱点</a>
+  <a href="真题题型全库.html">真题题型库</a>
+  <a href="exam-review.html">备考</a>
+  <a href="formulas.html">公式表</a>
+  <a href="ch3-1.html">三①误差</a>
+  <a href="ch3-2.html">三②检验</a>
+  <a href="ch5-1b.html">五②pH计算</a>
+  <a href="ch5-2a.html">五③滴定</a>
+  <a href="ch6-1.html">六①配位</a>
+  <a href="ch6-2.html">六②应用</a>
+</div>
+
+<h1>我的薄弱点 · FXY 专属作战图</h1>
+
+<div class="card">
+  <p>本页基于 <strong>8 篇真实 AI 问答（5/11~5/16）+ 学习回顾掌握度标记</strong>自动整理，按"优先级"排序。<strong>先看 🔴，知道先攻什么。</strong>图例：❌未掌握 ⚠️需巩固 🔶部分掌握 ✅已掌握。考期 6/23 15:40。</p>
+</div>
+
+<div class="danger">
+  <div class="t">🔴 一句话诊断</div>
+  <p>你的 8 篇 AI 问答 <strong>100% 集中在「酸碱 pH 计算」+「配位滴定误差（林邦/指示剂）」</strong>两块，且都是反复问、反复 ⚠️。但作战手册明确「<strong>误差统计计算题（t/Q 检验/置信区间）命中率最高、必出</strong>」——而你<strong>一次都没问过、没练过</strong>。这是裸考最危险的盲区，优先级排在所有 AI 弱点之前。</p>
+</div>
+
+<h2>🔴 头号薄弱点（按优先级，从上往下攻）</h2>
+
+<!-- 1 -->
+<div class="redcard">
+  <h3>① 误差统计大题（t/Q 检验·置信区间）<span class="prio p-red">最高 · 盲区</span></h3>
+  <div class="factbox"><strong>你的真实情况：</strong>8 篇 AI 笔记里<strong>完全没有</strong>误差统计的提问；学习回顾里也<strong>从未出现</strong> Ch3 数据处理的复习记录。你对这块是"没碰过"，不是"会了"。</div>
+  <p><strong>为什么是头号：</strong>作战手册写明误差统计是「计算 52 分」里<strong>命中率最高</strong>的一档，与两大滴定同级。这是裸考易掉分科目里<strong>最稳的送分大题</strong>，你却空着。</p>
+  <div class="fb">
+    <div class="t">正确套路（必须形成肌肉记忆）</div>
+    <p>给一组数据 → ① 算 $\bar{x}$、$s=\sqrt{\frac{\sum(x_i-\bar{x})^2}{n-1}}$ → ② Q/Grubbs 检验剔可疑值（$G=\frac{|x_{可疑}-\bar{x}|}{s}$，$G>G_{表}$ 则剔除）→ ③ <strong>剔除后重算</strong> $\bar{x},s$ → ④ 置信区间 $\mu=\bar{x}\pm\frac{t_{\alpha,f}\,s}{\sqrt{n}}$，$f=n-1$ → ⑤ t 检验判系统误差。</p>
+  </div>
+  <div class="warn"><strong>易错提醒：</strong>① $s$ 分母是 $n-1$ 不是 $n$；② 剔除可疑值后 $n$、$\bar{x}$、$s$ 全部要重算再求置信区间；③ t 表自由度 $f=n-1$，查错一格全错；④ 有效数字只看<strong>小数位</strong>（pH/对数值同理）。</div>
+  <div class="tip"><strong>针对动作：</strong>从零练 5 题，"剔除可疑值→重算→置信区间→t 检验"全流程跑通。配套看复习站 <a href="ch3-1.html">ch3-1</a> / <a href="ch3-2.html">ch3-2</a> 与 <a href="真题题型全库.html">真题题型库</a> 题型 A。</div>
+</div>
+
+<!-- 2 -->
+<div class="redcard">
+  <h3>② 酸碱 pH 计算「公式选择判别式」<span class="prio p-red">最高 · 反复 5 次</span></h3>
+  <div class="factbox"><strong>最强信号：</strong>5/11、5/12、5/13 <strong>三天连问同一问题</strong>"总结判别式和公式"；5/14 学习回顾标 ❌ 并引用你原话「<strong>感觉各种公式把我脑子搞炸了</strong>」；5/16 仍标 ⚠️「仅记口诀，未实际应用计算」。轨迹：⚠️→⚠️→❌→⚠️→✅，<strong>5 次标记 4 次未达标</strong>，全科目最持久弱点。</div>
+  <div class="fb">
+    <div class="t">核心症结：你混淆了两套不同的判别式</div>
+    <ul>
+      <li><strong>滴定可行性判别（能不能滴）：</strong>$cK_a\ge10^{-8}$、多元分步 $K_{a1}/K_{a2}\ge10^4$、混合酸 $\frac{c_{HA}K_{a(HA)}}{c_{HB}K_{a(HB)}}\ge10^4$。</li>
+      <li><strong>pH 计算公式选择判别（用哪个式子算）：</strong>先比 $cK_a$ 与 $20K_w$（忽略水？），再比 $c/K_a$ 与 500（忽略酸自身解离？）。</li>
+    </ul>
+    <p>Gemini 当时专门警告：「此判别式与 $c/K_a\ge500$ <strong>完全不同，切勿混淆</strong>」——这正是你的卡点。</p>
+  </div>
+  <div class="card">
+    <div class="t" style="font-weight:bold;color:var(--pri);">判别地图（一元弱酸）</div>
+    <ul>
+      <li>两条件都满足 → <strong>最简式</strong> $[H^+]=\sqrt{K_a c}$</li>
+      <li>只满足 $cK_a\ge20K_w$ → <strong>近似式</strong> $[H^+]=\frac{-K_a+\sqrt{K_a^2+4K_a c}}{2}$</li>
+      <li>只满足 $c/K_a\ge500$ → <strong>极弱酸式</strong> $[H^+]=\sqrt{K_a c+K_w}$</li>
+      <li>多元酸 $K_{a1}/K_{a2}\ge10^4$ → 直接当一元弱酸，$K_a$ 代 $K_{a1}$</li>
+      <li>弱碱 → 跑弱酸式，$H^+\to OH^-$、$K_a\to K_b$，最后 $14-pOH$</li>
+    </ul>
+  </div>
+  <div class="warn"><strong>易错提醒：</strong>作战手册口径是 $c/K_a\ge\mathbf{400}$（AI 笔记多处写 500），<strong>考试以课件/老师口径为准</strong>；记口诀"10 管水、100/500 管自己"。</div>
+  <div class="tip"><strong>针对动作：</strong>默写判别地图；找 5 题强制"先判别再选式"口述。看 <a href="ch5-1b.html">ch5-1b（pH 计算与缓冲）</a>。</div>
+</div>
+
+<!-- 3 -->
+<div class="redcard">
+  <h3>③ 混合酸碱体系「化简」—— 不会判主导反应<span class="prio p-red">高</span></h3>
+  <div class="factbox"><strong>你的原话：</strong>「我感觉第六题我根本想不到怎么化简啊…更别提自己决定忽略什么东西」；学习回顾标 ⚠️「根本想不到怎么化简」。这是"会套公式但不会建模"的典型。</div>
+  <div class="fb">
+    <div class="t">正确思路（化学直觉法，8 字口诀：先算反应，再算平衡）</div>
+    <ol>
+      <li>谁和谁混、谁过量；</li>
+      <li>写出反应后的主导物质（如 Na₂CO₃ 过量 + 草酸 → 实际是 $CO_3^{2-}/HCO_3^-$ 缓冲）；</li>
+      <li>用 $pK_a$ 判形态：<strong>环境 pH 比 $pK_a$ 大 2 个单位以上，该酸 ≈ 100% 脱质子</strong>；</li>
+      <li>识别成最基础体系（缓冲/两性/单酸）直接套式。</li>
+    </ol>
+  </div>
+  <div class="warn"><strong>易错提醒：</strong>不要上来就列质子条件式（PBE），最易卡壳；<strong>比较"量"决定主导物质</strong>才是决定"忽略什么"的依据。</div>
+  <div class="tip"><strong>针对动作：</strong>精做 2 题，"先写反应后主导物 → 识别体系 → 套式"。</div>
+</div>
+
+<!-- 4 -->
+<div class="redcard">
+  <h3>④ 林邦终点误差公式（配位）<span class="prio p-red">高 · 🔁两周问 2 次</span></h3>
+  <div class="factbox"><strong>你的真实情况：</strong>5/15 问"我是不是只要记公式啊，推导太复杂"，5/16 又问"帮我回顾林邦公式"，系统自动打出「近两周第 2 次问林邦误差公式，可能是反复弱点」。学习回顾标 ⚠️「不理解 $\Delta pM$、$pM_{sp}$ 如何求解，$K'_{MY}$ 如何算」。</div>
+  <div class="fb">
+    <div class="t">正确思路</div>
+    <p>$$E_t=\dfrac{10^{\Delta pM}-10^{-\Delta pM}}{\sqrt{c_{sp,M}\cdot K'_{MY}}}\times100\%,\quad \Delta pM=pM_{ep}-pM_{sp}$$</p>
+    <p>考试三种考法：① 直接算 $E_t$；② 给误差限反推（导出准确滴定判据 $\lg(c_{sp}K')\ge6$）；③ 选指示剂使 $pM_{ep}$ 最接近 $pM_{sp}$、$\Delta pM$ 最小。</p>
+  </div>
+  <div class="warn"><strong>易错提醒：</strong>① $\Delta pM>0$ → EDTA <strong>过量</strong>、$E_t>0$（符号别反）；② 用<strong>条件</strong>稳定常数 $K'_{MY}$ 不是 $K_{MY}$；③ $c_{sp,M}$ 是计量点<strong>稀释后</strong>浓度（$c_{sp}=c_0/2$），别用初始浓度。</div>
+  <div class="tip"><strong>针对动作：</strong>6 步分步书写练 3 题：① 求 $c_{sp}$ ② 求 $K'_{MY}$ ③ 求 $pM_{sp}$ ④ 求 $pM_{ep}$ ⑤ 求 $\Delta pM$ ⑥ 代公式，每步标清。</div>
+</div>
+
+<!-- 5 -->
+<div class="redcard">
+  <h3>⑤ 条件常数 vs 绝对常数 + 金属指示剂 $pM'_{ep}$<span class="prio p-org">中高</span></h3>
+  <div class="factbox"><strong>你的原话：</strong>「不会啊 我都不太会 给我讲讲」（对着一整块黑板）；学习回顾标 ⚠️「对条件常数 $K'_{MIn}$ 与绝对常数 $K_{MIn}$ 的区别，以及副反应（酸效应）如何影响计算，理解不清晰」。</div>
+  <div class="fb">
+    <div class="t">正确思路</div>
+    <ul>
+      <li>终点视觉判据 $[MIn]=[In']$ → $pM'_{ep}=\lg K'_{MIn}=\lg K_{MIn}-\lg\alpha_{In}-\lg\alpha_M$。</li>
+      <li>条件常数 $\lg K'_{MY}=\lg K_{MY}-\lg\alpha_M-\lg\alpha_Y$（实际战斗力 = 理论 − M 被削 − Y 被削）。</li>
+      <li>副反应叠加 $\alpha_M=\alpha_{M(OH)}+\alpha_{M(L)}-1$、$\alpha_Y=\alpha_{Y(H)}+\alpha_{Y(N)}-1$（<strong>减 1</strong> 因基础值 1 被算两次）。</li>
+    </ul>
+  </div>
+  <div class="warn"><strong>易错提醒：</strong>① 带撇 = 条件（考虑副反应），不带撇 = 绝对，所有可行性/误差计算用<strong>带撇的</strong>；② 指示剂可用要求 $K_{MY}>K_{MIn}$（EDTA 才能抢走金属），且 $K'_{MIn}$ 不能太大（封闭）也不能太慢（僵化）。</div>
+  <div class="tip"><strong>针对动作：</strong>默写 $\lg K'_{MY}=\lg K_{MY}-\lg\alpha_M-\lg\alpha_Y$ + 选指示剂题。看 <a href="ch6-1.html">ch6-1</a> / <a href="ch6-2.html">ch6-2</a>。</div>
+</div>
+
+<!-- 优先级表 -->
+<h2>🎯 复习优先级表（一眼看清攻击顺序）</h2>
+<div class="card">
+  <table>
+    <tr><th>知识点</th><th>掌握度</th><th>考试权重</th><th>优先级</th><th>针对动作</th></tr>
+    <tr><td>误差统计大题（t/Q/置信区间）</td><td>⚠️盲区</td><td>必拿（命中率最高）</td><td>🔴最高</td><td>从零练 5 题全流程</td></tr>
+    <tr><td>pH 公式选择（两套判别式）</td><td>❌→⚠️（反复5次）</td><td>必拿（大题重灾）</td><td>🔴最高</td><td>默写判别地图，5 题口述</td></tr>
+    <tr><td>混合酸碱化简（化学直觉法）</td><td>⚠️</td><td>重点攻</td><td>🔴高</td><td>精做 2 题：先反应后主导物</td></tr>
+    <tr><td>林邦终点误差 $E_t$</td><td>⚠️🔁</td><td>必拿（必出）</td><td>🔴高</td><td>6 步分步练 3 题</td></tr>
+    <tr><td>条件常数 vs 绝对 + 指示剂 $pM'_{ep}$</td><td>⚠️</td><td>重点攻</td><td>🟠中高</td><td>默写公式 + 选指示剂题</td></tr>
+    <tr><td>两性物质 pH / 滴定突跃</td><td>🔶</td><td>重点攻</td><td>🟠中</td><td>套式确认条件；突跃三点背</td></tr>
+    <tr><td>氧化还原（$E_{sp}$/完全度/Nernst）</td><td>未练</td><td>拉档</td><td>🟠中</td><td>刷 2022 真题；记 KMnO₄ 用 H₂SO₄</td></tr>
+    <tr><td>有效数字</td><td>⚠️</td><td>必拿（送分）</td><td>🟢低但必拿</td><td>记"对数只看小数位"</td></tr>
+    <tr><td>重量/沉淀、吸光光度</td><td>未练</td><td>拉档/低频</td><td>🟢低</td><td>换算因子别倒置；吸光仅过选填</td></tr>
+  </table>
+</div>
+
+<!-- 按章节 -->
+<h2>📚 按章节补充（盲区预警）</h2>
+<div class="card">
+  <h3>Ch3 误差与数据处理（15%，⚠️ 零问答盲区）</h3>
+  <p>t/Q（Grubbs）/置信区间见头号弱点 ①，命中率最高，必从零补练。有效数字：pH/pM/对数值<strong>只看小数位</strong>；乘除看最少有效位，加减看最少小数位。</p>
+  <h3>Ch7 氧化还原（15-18%，未问 ⚠️ 推定需补）</h3>
+  <p>未出现在任何 AI 问答里，属"没练过"。记牢：Nernst、对称反应 $E_{sp}=\frac{n_1E_1'+n_2E_2'}{n_1+n_2}$（<strong>仅对称反应</strong>）、完全度 $\lg K'=\frac{n\Delta E'}{0.0592}\ge6$。易错：KMnO₄ 只能用 H₂SO₄ 酸化；碘量法淀粉<strong>近终点加</strong>。行动：刷 2022 真题对应大题。</p>
+  <h3>Ch9 重量/沉淀（10-14%）、Ch10 吸光光度（10%，可省）</h3>
+  <p>换算因子 $F=\frac{aM_{被测}}{bM_{称量}}$（<strong>别倒置</strong>）；吸光光度作战手册标"可省（仅 1-2 选填）"。</p>
+</div>
+
+<!-- 已掌握 -->
+<h2>✅ 已掌握（确认即可，别花时间）</h2>
+<div class="card">
+  <ul>
+    <li>酸碱滴定可行性 / 分步 / 混合酸判据（5/12 ✅，公式记牢）。</li>
+    <li>混合物酸碱滴定方案设计（双指示剂分步，5/13 ✅，实验设计模板）。</li>
+    <li>pH 计算公式判别式的"口诀层面"（5/15/5/17 标 ✅）——但 <strong>应用层面仍弱</strong>，见头号弱点 ②，不要因这两次 ✅ 放松。</li>
+  </ul>
+  <div class="note"><strong>一句话作战令：</strong>把没碰过的 <strong>误差统计</strong> 从零练熟（最稳送分），同时把反复卡的 <strong>pH 公式判别</strong> 与 <strong>林邦误差</strong> 用分步法练到自动化。这三块吃下，分析化学的大题分基本到手。</div>
+</div>
+
+<script src="katex-lazy.js"></script>
+<script src="toc.js"></script>
+<script src="auth.js"></script>
+<script src="progress.js"></script>
+</body></html>

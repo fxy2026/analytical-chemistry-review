@@ -316,6 +316,20 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
 
 <!-- ==================== 6.3 ==================== -->
 <h2>6.3 条件稳定常数</h2>
+
+<!-- ===== FXY 专属：弱点⑤强化 ===== -->
+<div class="card" style="border:2px solid #c0392b;background:#fdecea;">
+  <p style="font-weight:bold;color:#c0392b;font-size:1.05em;margin-bottom:6px;">⚠️ 你在这反复卡：条件常数 $K'$ vs 绝对常数 $K$ 分不清</p>
+  <p>你 5/15 对着黑板说「不会啊 我都不太会 给我讲讲」，学习回顾标 ⚠️「对条件常数 $K'_{MIn}$ 与绝对常数 $K_{MIn}$ 的区别，以及副反应（酸效应）如何影响计算，理解不清晰」。</p>
+  <p style="margin-top:6px;"><strong>一句话破：带撇 = 条件（已扣掉副反应），不带撇 = 绝对（理论值）。所有可行性判据、终点误差计算，全用带撇的 $K'$。</strong>条件常数就是"理论战斗力 − M 被削 − Y 被削"，下图把这个削减过程画出来了。配套看 <a href="我的薄弱点.html">我的薄弱点</a> 弱点⑤、<a href="ch6-2.html">ch6-2</a> 终点误差。</p>
+</div>
+
+<div class="card">
+  <p style="text-align:center;font-weight:bold;color:var(--pri);margin-bottom:6px;">条件稳定常数 = 理论战斗力 − 副反应削弱（瀑布图）</p>
+  <img loading="lazy" decoding="async" src="img/fxy_condK_waterfall.png" alt="条件稳定常数瀑布图" style="display:block;max-width:100%;margin:0 auto;border:1px solid #e0d8c8;border-radius:6px;">
+  <p style="text-align:center;font-size:.82em;color:#888;margin-top:4px;">$\lg K'_{MY}=\lg K_{MY}-\lg\alpha_M-\lg\alpha_Y$。本例为 2022 真题 Bi/EDTA：pH=1 时酸效应 $\lg\alpha_{Y(H)}=18.3$ 把理论 27.9 削到 9.6；再看 $\lg(c_{sp}K')=9.6-2.0=7.6\geq6$，仍能准确滴定。<strong>金属指示剂同理</strong>：$pM'_{ep}=\lg K'_{MIn}=\lg K_{MIn}-\lg\alpha_{In(H)}$（绝对 $K_{MIn}$ 也要先扣酸效应才得终点 pM）。</p>
+</div>
+
 <img class="ppt-img" loading="lazy" decoding="async" src="temp_pages/ch6_p13.png" alt="络合平衡">
 <p class="ppt-caption">PPT: 逐级稳定常数与累积稳定常数</p>
 
