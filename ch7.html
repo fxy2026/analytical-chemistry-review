@@ -429,6 +429,86 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   <div class="tip">选择指示剂的原则：指示剂的 $\varphi^{0'}_{In}$ 应尽量接近 $\varphi_{sp}$，且落在滴定突跃范围内。</div>
 </div>
 
+<!-- ==================== 标准强化（真题原型·必背·易错） ==================== -->
+<h2>★ 真题原型例题（带年份·完整步骤）</h2>
+
+<div class="fb" style="border:2px solid #e91e63;background:#fce4ec;">
+  <div class="t" style="color:#c2185b;">真题原型 ① — 2022 期末三-3（Fe³⁺/Fe²⁺ 氟络合条件电位，6 分，必出）</div>
+  <p>25℃，溶液 $[\text{F}^-]=10^{-1.5}$ mol/L，求 $\text{Fe}^{3+}/\text{Fe}^{2+}$ 条件电位。已知 Fe(III)-F 络合物 $\lg\beta_1\sim\lg\beta_3=5.2,\ 9.2,\ 11.9$，$\varphi^0(\text{Fe}^{3+}/\text{Fe}^{2+})=0.77$ V，忽略离子强度（$\text{Fe}^{2+}$ 不被 F⁻ 络合）。</p>
+  <div class="sol">
+    <div class="st">完整解法：</div>
+    <p><strong>第一步：算 Fe(III) 副反应系数。</strong>F⁻ 只络合氧化型 $\text{Fe}^{3+}$：</p>
+    $$\alpha_{\text{Fe(III)(F)}}=1+\beta_1[\text{F}^-]+\beta_2[\text{F}^-]^2+\beta_3[\text{F}^-]^3$$
+    <p>$\beta_1[\text{F}]=10^{5.2-1.5}=10^{3.7}$；$\beta_2[\text{F}]^2=10^{9.2-3.0}=10^{6.2}$；$\beta_3[\text{F}]^3=10^{11.9-4.5}=10^{7.4}$。主导项 $10^{7.4}$，故 $\lg\alpha_{\text{Fe(III)}}\approx7.4$。</p>
+    <p><strong>第二步：$\text{Fe}^{2+}$ 不被络合，$\alpha_{\text{Fe(II)}}\approx1$。</strong></p>
+    <p><strong>第三步：代条件电位公式。</strong></p>
+    $$\varphi^{0'}=\varphi^0+\frac{0.0592}{1}\lg\frac{\alpha_{\text{Red}}}{\alpha_{\text{Ox}}}=0.77+0.0592\times(0-7.4)=0.77-0.438=\mathbf{0.33\ V}$$
+    <p>$\text{Fe}^{3+}$（氧化型）被络合 → 氧化能力减弱 → 条件电位<strong>降低</strong>，合理。</p>
+  </div>
+</div>
+
+<div class="fb" style="border:2px solid #e91e63;background:#fce4ec;">
+  <div class="t" style="color:#c2185b;">真题原型 ② — 2022 期末选 19 / 小测 2（Ce⁴⁺ 滴 Fe²⁺，计量点电位 & 50% 处）</div>
+  <p>$\varphi^{0'}(\text{Ce}^{4+}/\text{Ce}^{3+})=1.44$ V，$\varphi^{0'}(\text{Fe}^{3+}/\text{Fe}^{2+})=0.68$ V，$\text{Ce}^{4+}$ 滴 $\text{Fe}^{2+}$（对称，$n_1=n_2=1$）。求 50% 处电位、计量点电位、$\lg K$。</p>
+  <div class="sol">
+    <div class="st">完整解法：</div>
+    <p><strong>50% 处</strong>（半滴定）：此时 $c_{\text{Fe}^{3+}}=c_{\text{Fe}^{2+}}$，电位 $=\varphi^{0'}$（<strong>被滴电对</strong>）$=\mathbf{0.68\ V}$。</p>
+    <p><strong>计量点电位</strong>（对称反应取加权平均）：</p>
+    $$\varphi_{sp}=\frac{n_1\varphi_1^{0'}+n_2\varphi_2^{0'}}{n_1+n_2}=\frac{1\times1.44+1\times0.68}{1+1}=\mathbf{1.06\ V}$$
+    <p><strong>平衡常数：</strong>$\lg K=\dfrac{n(\varphi_1^{0'}-\varphi_2^{0'})}{0.0592}=\dfrac{1\times(1.44-0.68)}{0.0592}=\mathbf{12.8}\gg6$，反应定量完成。选 ferroin（$\varphi^{0'}_{In}=1.06$ V）指示。</p>
+  </div>
+</div>
+
+<div class="fb" style="border:2px solid #e91e63;background:#fce4ec;">
+  <div class="t" style="color:#c2185b;">真题原型 ③ — 2025 小测 2 计算 3（返滴定测钢中 Cr，4 分）</div>
+  <p>1.000 g 钢样中 Cr 氧化成 $\text{Cr}_2\text{O}_7^{2-}$，加 25.00 mL 0.1000 mol/L $\text{FeSO}_4$，再用 0.0180 mol/L $\text{KMnO}_4$ 7.00 mL 回滴剩余 $\text{Fe}^{2+}$。求 $w(\text{Cr})$。</p>
+  <div class="sol">
+    <div class="st">完整解法（返滴 = 总 − 回滴）：</div>
+    <p>反应：① $\text{Cr}_2\text{O}_7^{2-}+6\text{Fe}^{2+}+14\text{H}^+\to2\text{Cr}^{3+}+6\text{Fe}^{3+}+7\text{H}_2\text{O}$；② $\text{MnO}_4^-+5\text{Fe}^{2+}+8\text{H}^+\to\text{Mn}^{2+}+5\text{Fe}^{3+}+4\text{H}_2\text{O}$。</p>
+    <p>总 $\text{Fe}^{2+}=0.1000\times0.02500=2.500\times10^{-3}$ mol；回滴消耗 $\text{Fe}^{2+}=5\times0.0180\times0.00700=6.30\times10^{-4}$ mol。</p>
+    <p>与 $\text{Cr}_2\text{O}_7^{2-}$ 反应的 $\text{Fe}^{2+}=2.500\times10^{-3}-6.30\times10^{-4}=1.870\times10^{-3}$ mol。</p>
+    <p>$n(\text{Cr}_2\text{O}_7^{2-})=\frac16\times1.870\times10^{-3}=3.117\times10^{-4}$ mol，$n(\text{Cr})=2\times=6.233\times10^{-4}$ mol。</p>
+    $$w(\text{Cr})=\frac{6.233\times10^{-4}\times52.00}{1.000}\times100\%=\mathbf{3.24\%}$$
+  </div>
+</div>
+
+<h2>★ 必背块（条件电位 · 计量点 · 三大滴定法 · 试剂）</h2>
+<div class="fb">
+  <div class="t">考前默写线（公式 / 规律 / 反应）</div>
+  <ul>
+    <li><strong>条件电位：</strong>$\varphi^{0'}=\varphi^0+\dfrac{0.0592}{n}\lg\dfrac{\alpha_{\text{Red}}}{\alpha_{\text{Ox}}}$。规律：<strong>配位/沉淀作用于氧化型 → 电位降；作用于还原型 → 电位升</strong>。（F⁻、$\text{H}_3\text{PO}_4$ 络合 $\text{Fe}^{3+}$ → 降；邻二氮菲络合 $\text{Fe}^{2+}$ → 升。）</li>
+    <li><strong>平衡常数与判据：</strong>$\lg K=\dfrac{n(\varphi_1^{0'}-\varphi_2^{0'})}{0.0592}$；定量完成 $\lg K\ge6$（≈完成度 99.9%）；对 $n_1=n_2=1$ 经验判据 $\Delta\varphi^{0'}\ge0.4$ V。</li>
+    <li><strong>计量点电位：</strong>$\varphi_{sp}=\dfrac{n_1\varphi_1^{0'}+n_2\varphi_2^{0'}}{n_1+n_2}$（对称 $n_1=n_2$ 时取简单平均 $\frac{\varphi_1^{0'}+\varphi_2^{0'}}{2}$）。<strong>50% 处 = 被滴电对的 $\varphi^{0'}$。</strong></li>
+    <li><strong>突跃：</strong>下限 $\varphi_2^{0'}+\dfrac{3\times0.0592}{n_2}$，上限 $\varphi_1^{0'}-\dfrac{3\times0.0592}{n_1}$。</li>
+    <li><strong>三大体系核心反应：</strong>$\text{Cr}_2\text{O}_7^{2-}+6\text{Fe}^{2+}+14\text{H}^+\to$（1↔6）；$\text{MnO}_4^-+5\text{Fe}^{2+}+8\text{H}^+\to$（1↔5）；碘量法 $2\text{Cu}^{2+}+4\text{I}^-\to2\text{CuI}\downarrow+\text{I}_2$，$\text{I}_2+2\text{S}_2\text{O}_3^{2-}\to2\text{I}^-+\text{S}_4\text{O}_6^{2-}$（1 Cu²⁺ ↔ 1 S₂O₃²⁻）。</li>
+    <li><strong>关键试剂/操作：</strong>$\text{KMnO}_4$ 用 $\text{H}_2\text{SO}_4$ 酸化（不可用 HCl，Cl⁻ 被氧化）、自身指示剂、$\text{Mn}^{2+}$ 自催化、$\text{Na}_2\text{C}_2\text{O}_4$ 标定加热 75~85℃；碘量法<strong>淀粉近终点（浅黄色）加</strong>；$\text{K}_2\text{Cr}_2\text{O}_7$ 是基准物不需标定；测铁 $\text{SnCl}_2$ 还原 $\text{Fe}^{3+}$、$\text{HgCl}_2$ 除过量 $\text{Sn}^{2+}$（生成白色丝状 $\text{Hg}_2\text{Cl}_2$）。</li>
+  </ul>
+</div>
+
+<h2>★ 易错点（条件电位 / 计量点 / 操作）</h2>
+<div class="warn">
+  <ol>
+    <li><strong>弄反络合谁：</strong>氧化型被络合 → 电位<strong>降</strong>；还原型被络合 → 电位<strong>升</strong>。判断口诀"削谁谁弱"。</li>
+    <li><strong>"50% 处"与"计量点"混淆：</strong>50% → 被滴电对 $\varphi^{0'}$；计量点 → 两电对加权平均。</li>
+    <li><strong>不对称反应套对称公式：</strong>$\text{MnO}_4^-/\text{Fe}^{2+}$（$n_1=5,n_2=1$）计量点偏向高电位侧，$\varphi_{sp}=\frac{5\times1.51+1\times0.68}{6}=1.37$ V，不能用简单平均。对称反应只有 $\text{Ce}^{4+}/\text{Fe}^{2+}$ 这类 $n_1=n_2$。</li>
+    <li><strong>摩尔系数错：</strong>$\text{Cr}_2\text{O}_7^{2-}$↔6$\text{Fe}^{2+}$、$\text{MnO}_4^-$↔5$\text{Fe}^{2+}$、$\text{Cu}^{2+}$↔1$\text{S}_2\text{O}_3^{2-}$；返滴定务必做"总 − 回滴"差量；$\text{Fe}_2\text{O}_3$ 换算记 2 Fe ↔ 1 $\text{Fe}_2\text{O}_3$。</li>
+    <li><strong>$\text{KMnO}_4$ 错用 HCl 控酸：</strong>必须 $\text{H}_2\text{SO}_4$（Cl⁻ 被氧化产生诱导误差）；标定时勿煮沸（$\text{H}_2\text{C}_2\text{O}_4$ 分解致结果偏高）。</li>
+    <li><strong>淀粉加入时机：</strong>碘量法淀粉<strong>近终点</strong>加，过早加 $\text{I}_2$ 被淀粉牢吸附致终点拖后。</li>
+  </ol>
+</div>
+
+<div class="fb" style="border:2px solid #c0392b;background:#fdecea;">
+  <div class="t" style="color:#c0392b;">🔴 你在这卡过（推定盲区）：第七章从未在 AI 问答/学习回顾出现 → 怎么破</div>
+  <p>薄弱点精析判定：Ch7 氧化还原"未出现在任何 AI 问答/学习回顾，属'没练过'，与误差统计同级需补"。这不是难，是<strong>没碰过</strong>，裸考易掉分。</p>
+  <p><strong>怎么破——抓 3 道必出题型刷熟即可：</strong></p>
+  <ul>
+    <li><strong>条件电位</strong>（真题①）：会算 $\alpha$ 取主导项 + 代 $\varphi^{0'}$，记牢"络合氧化型→降"。</li>
+    <li><strong>计量点电位 / 对称判断</strong>（真题②）：背 $\varphi_{sp}$ 加权公式 + "50%=被滴电对 $\varphi^{0'}$"，认清 $\text{Ce}^{4+}/\text{Fe}^{2+}$ 对称、$\text{MnO}_4^-/\text{Fe}^{2+}$ 不对称。</li>
+    <li><strong>返滴定/含量</strong>（真题③）：死记三组摩尔系数 + "总−回滴"，套 $w=\frac{nM}{m}$。</li>
+  </ul>
+  <p>再背填空送分点：$\text{SnCl}_2$-$\text{HgCl}_2$（白色丝状沉淀=成功、无沉淀/灰黑=弃做）、$\text{Na}_2\text{S}_2\text{O}_3$ 配制用新煮沸冷却水（除 CO₂/O₂/杀菌）。配套见 <a href="ch7-ex.html">七⑤习题</a> 与 <a href="我的薄弱点.html">我的薄弱点</a>。</p>
+</div>
+
 <!-- ==================== 7.5 ==================== -->
 <h2>7.5 影响氧化还原反应速率的因素</h2>
 

@@ -789,6 +789,69 @@ $$E_t = \frac{91.19}{4.57\times10^4} \times 100\% = 0.20\%$$
 </div>
 </div>
 
+<!-- ==================== 7. 真题原型例题 ==================== -->
+<h2>七、真题原型例题</h2>
+
+<div class="exam">
+<div class="t">2022 期末 三-4（一元弱酸 5 连问，14 分，原题照录）</div>
+<p>用 0.1000 mol/L NaOH 滴 20.00 mL 同浓度一元弱酸 HA，加入 18.00 mL 时 pH=5.82。</p>
+<p>(1) 滴定反应方程；(2) 求 $pK_a$；(3) 计量点 pH + 选指示剂（备选：百里酚酞 9.4~10.6 / 酚酞 8.0~9.8 / 甲基橙 3.1~4.4 / 甲基红 4.4~6.2）；(4) 画曲线标计量点；(5) 酚酞 pH=9.1 为终点，求终点误差。</p>
+<div class="sol">
+<div class="st">解：</div>
+<p><strong>(1)</strong> $\text{HA}+\text{NaOH}\to\text{NaA}+\text{H}_2\text{O}$。</p>
+<p><strong>(2)</strong> 加 18 mL 时剩 HA $=2.000-1.800=0.200$ mmol，生成 A⁻ $=1.800$ mmol。由 Henderson $5.82=pK_a+\lg\dfrac{1.800}{0.200}=pK_a+0.954$ → $\mathbf{pK_a=4.87}$。</p>
+<p><strong>(3)</strong> 计量点全转为 A⁻，$c(\text{NaA})=\dfrac{2.000}{40.00}=0.0500\;\text{mol/L}$；$K_b=\dfrac{K_w}{K_a}=10^{-14}/10^{-4.87}=10^{-9.13}$；$[\text{OH}^-]=\sqrt{0.0500\times10^{-9.13}}=6.1\times10^{-6}$，$\text{pOH}=5.22$，<strong>pH=8.78</strong> → 选<strong>酚酞</strong>（8.0~9.8，落在计量点附近）。</p>
+<p><strong>(4)</strong> S 形曲线：起点 $\text{pH}\approx2.94$（$=\sqrt{0.1\times10^{-4.87}}$），半当量点 $\text{pH}=pK_a=4.87$ 拐点，计量点 $V=20.00$ mL、pH=8.78（偏碱侧），突跃约 7.7~10。</p>
+<p><strong>(5)</strong> $\Delta\text{pH}=9.1-8.78=+0.32$；$K_t=K_a/K_w=10^{-4.87}/10^{-14}=10^{9.13}$；$c_{\text{sp}}=0.0500$。</p>
+<p>$\sqrt{K_t c_{\text{sp}}}=\sqrt{10^{9.13}\times0.0500}=\sqrt{6.7\times10^{7}}=8.19\times10^{3}$。</p>
+$$E_t=\frac{10^{0.32}-10^{-0.32}}{8.19\times10^{3}}\times100\%=\frac{2.09-0.48}{8190}\times100\%\approx\mathbf{+0.02\%}$$
+<p>正号=略过量，误差极小可接受。（⚠️ 分母用 $\sqrt{K_t c_{sp}}$ 还是 $\sqrt{K_t}\,c_{sp}$ 以你课本终点误差公式定义为准。）</p>
+</div>
+</div>
+
+<div class="exam">
+<div class="t">2025 小测 1 计算 3 变体（一元碱 CH₃NH₂，10 分，原题照录）</div>
+<p>用 0.1000 mol/L HCl 滴 20.00 mL 同浓度 $\text{CH}_3\text{NH}_2$（$pK_b=3.38$），求计量点 pH 并选指示剂。</p>
+<div class="sol">
+<div class="st">解：</div>
+<p>方程 $\text{CH}_3\text{NH}_2+\text{HCl}=\text{CH}_3\text{NH}_3\text{Cl}$。计量点产物为<strong>共轭酸</strong> $\text{CH}_3\text{NH}_3^+$（一元弱酸），$pK_a=14-3.38=10.62$。</p>
+<p>$c_{\text{sp}}=0.1000\times20/40=0.0500$（体积加倍，浓度减半）。</p>
+<p>$[\text{H}^+]=\sqrt{K_a c_{\text{sp}}}=\sqrt{10^{-10.62}\times0.0500}=10^{-5.96}$ → <strong>pH=5.96</strong>（酸性，因为是滴弱碱）→ 选<strong>甲基红</strong>（4.4~6.2）。</p>
+</div>
+</div>
+
+<h2>八、必背块</h2>
+<div class="card">
+<table>
+<tr><th>主题</th><th>必背</th></tr>
+<tr><td>能准确滴定判据</td><td>$cK_a\ge10^{-8}$（弱酸）；$cK_b\ge10^{-8}$（弱碱）</td></tr>
+<tr><td>分步滴定判据</td><td>相邻两级 $\dfrac{K_{a1}}{K_{a2}}\ge10^{4}$（严格 $10^5$），且每级各自满足 $cK_a\ge10^{-8}$</td></tr>
+<tr><td>强滴强突跃</td><td>0.1 mol/L 体系 pH 4.30~9.70（计量点 pH=7.00）；稀 10 倍两端各缩 1</td></tr>
+<tr><td>弱酸计量点 pH</td><td>产物为共轭碱，$[\text{OH}^-]=\sqrt{K_b c_{\text{sp}}}$，$K_b=K_w/K_a$，$c_{\text{sp}}=c_0/2$，pH&gt;7</td></tr>
+<tr><td>半当量点</td><td>$\text{pH}=pK_a$（弱酸）；缓冲比=1，实验测 $pK_a$ 的经典方法</td></tr>
+<tr><td>终点误差（林邦）</td><td>$E_t=\dfrac{10^{\Delta\text{pH}}-10^{-\Delta\text{pH}}}{\sqrt{K_t c_{\text{sp}}}}\times100\%$，$K_t=K_a/K_w$，$\Delta\text{pH}=\text{pH}_{ep}-\text{pH}_{sp}$</td></tr>
+<tr><td>指示剂变色</td><td>甲基橙 3.1~4.4；甲基红 4.4~6.2；酚酞 8.0~9.8；百里酚酞 9.4~10.6</td></tr>
+</table>
+</div>
+
+<h2>九、易错点</h2>
+<div class="card">
+<ul>
+<li><span style="color:#c0392b;font-weight:bold;">⚠ 弱酸滴定选错指示剂：</span>NaOH 滴 HAc 计量点 pH≈8.7（碱性），必须用<strong>酚酞</strong>；用甲基橙会提前到酸性变色，终点严重偏低。弱碱（如 CH₃NH₂）计量点是<strong>酸性</strong>，用甲基红。</li>
+<li><span style="color:#c0392b;font-weight:bold;">⚠ 计量点忘记体积稀释：</span>等浓度滴到计量点体积加倍，产物浓度是原来的<strong>一半</strong>（$c_{\text{sp}}=c_0/2$），代 $\sqrt{K_b c}$ 时务必用稀释后的 $c$。</li>
+<li><span style="color:#c0392b;font-weight:bold;">⚠ 两个判据混用：</span>"能否分步"看 $K_{a1}/K_{a2}$；"能否准确滴定"看 $cK_a$。$\text{H}_3\text{PO}_4$ 第三级满足分步比却因 $cK_{a3}$ 太小而<strong>滴不出</strong>（只 2 个计量点：pH≈4.66 甲基橙、pH≈9.78 酚酞）。</li>
+<li><span style="color:#c0392b;font-weight:bold;">⚠ 突跃与浓度方向：</span>浓度越大突跃越宽、可选指示剂越多；稀释缩窄突跃，可能让原指示剂失效。</li>
+</ul>
+</div>
+
+<div class="warn" style="background:#fdecea;border-left:4px solid #c0392b;">
+  <strong>🔴 你在这卡过（来自薄弱点精析，两周问 2 次的反复弱点）：</strong>林邦终点误差公式——5/15 问"是不是只要记公式"，5/16 又问"帮我回顾林邦公式"，学习回顾标 ⚠️"不理解 $\Delta\text{pH}$、$\text{pH}_{sp}$ 如何求"。
+  <ul>
+    <li><strong>怎么破（6 步分步书写，每步标清）：</strong>① 求 $c_{\text{sp}}=c_0/2$ → ② 求 $\text{pH}_{sp}$（弱酸计量点 $[\text{OH}^-]=\sqrt{K_b c_{\text{sp}}}$）→ ③ 由指示剂定 $\text{pH}_{ep}$ → ④ $\Delta\text{pH}=\text{pH}_{ep}-\text{pH}_{sp}$ → ⑤ $K_t=K_a/K_w$ → ⑥ 代 $E_t=\dfrac{10^{\Delta\text{pH}}-10^{-\Delta\text{pH}}}{\sqrt{K_t c_{\text{sp}}}}\times100\%$。</li>
+    <li>盯死三处：$\Delta\text{pH}>0$ → 过滴定 $E_t>0$（符号别反）；$c_{\text{sp}}$ 用<strong>稀释后</strong>浓度；分母里是<strong>条件量</strong>（配位题用 $K'_{MY}$，不是 $K_{MY}$）。</li>
+  </ul>
+</div>
+
 
 <script src="katex-lazy.js"></script>
 <script src="toc.js"></script>

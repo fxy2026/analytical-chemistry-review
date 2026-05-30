@@ -652,6 +652,61 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </div>
 </div>
 
+<!-- ==================== 标准强化（真题原型·必背·易错） ==================== -->
+<h2>真题原型例题（带年份·完整步骤）</h2>
+
+<div class="exam" style="background:#fce4ec;border:2px solid #e91e63;border-radius:8px;padding:14px 18px;margin:12px 0;">
+  <div class="t" style="font-weight:bold;color:#c2185b;margin-bottom:6px;">真题原型 ① — 2026 小测 2 计算 1（Cd/Pb + KCN 掩蔽，10 分，重点章必出）</div>
+  <p>0.02000 mol/L EDTA 滴等浓 $\text{Cd}^{2+}/\text{Pb}^{2+}$ 混合中的 $\text{Pb}^{2+}$。(1) 能否控制酸度分别滴？(2) pH=10 用 KCN 掩蔽 $\text{Cd}^{2+}$（终点 [CN⁻]=0.1，Cd-CN $\lg\beta_1\sim\beta_4=5.5/10.6/15.3/18.9$），判是否还干扰；(3) 算 $\lg K'_{\text{PbY}}$（pH=10 时 $\lg\alpha_{Y(H)}=0.5$，$\lg\alpha_{\text{Pb(OH)}}=2.7$）；(4) EBT 指示，$pM_t(\text{Pb-EBT})=11.5$，算终点误差。$\lg K_{\text{PbY}}=18.04$，$\lg K_{\text{CdY}}=16.5$。</p>
+  <div class="sol">
+    <div class="st">完整解法（按 6 步链）：</div>
+    <p><strong>(1) 分别滴定判据：</strong>$\Delta\lg K=18.04-16.5=1.54<5$ → <strong>不能</strong>单纯控酸分别滴，必须掩蔽。</p>
+    <p><strong>(2) 掩蔽判定：</strong>$\alpha_{\text{Cd(CN)}}=1+\beta_1[\text{CN}]+\beta_2[\text{CN}]^2+\beta_3[\text{CN}]^3+\beta_4[\text{CN}]^4$。[CN⁻]=0.1=$10^{-1}$，主导项 $\beta_4[\text{CN}]^4=10^{18.9}\times10^{-4}=10^{14.9}$，故 $\lg\alpha_{\text{Cd(CN)}}\approx14.9$，极大 → $\text{Cd}^{2+}$ 被牢牢掩蔽，<strong>不再干扰</strong> $\text{Pb}^{2+}$。</p>
+    <p><strong>(3) 条件常数：</strong>$\lg K'_{\text{PbY}}=\lg K_{\text{PbY}}-\lg\alpha_{Y(H)}-\lg\alpha_{\text{Pb(OH)}}=18.04-0.5-2.7=\mathbf{14.84}$。$c_{sp}=\frac{0.02000}{2}=0.01000$，$pc_{sp}=2.0$，$\lg(c_{sp}K')=14.84-2.0=12.84\ge6$ → 可准确滴定。</p>
+    <p><strong>(4) 终点误差：</strong>$pM'_{sp}=\frac12(\lg K'_{\text{PbY}}+pc_{sp})=\frac12(14.84+2.0)=8.42$；$\Delta pM'=pM'_{ep}-pM'_{sp}=11.5-8.42=3.08$；$\sqrt{c_{sp}K'_{\text{PbY}}}=10^{12.84/2}=10^{6.42}=2.63\times10^{6}$。</p>
+    $$E_t=\frac{10^{3.08}-10^{-3.08}}{2.63\times10^{6}}\times100\%=\frac{1.20\times10^{3}}{2.63\times10^{6}}\times100\%\approx\mathbf{0.046\%}$$
+    <p>$|E_t|<0.1\%$ 可接受（注：$pM'_{ep}$ 偏离较大主因是 EBT 对 Pb 的 $pM_t$ 偏高，但突跃足够陡，误差仍合格）。</p>
+  </div>
+  <div class="warn"><strong>易错红线：</strong>① 判据/误差全用<strong>条件常数 $K'$</strong>（带撇）；② $c_{sp}$ 别忘除 2；③ $\alpha_{\text{Cd(CN)}}$ 取最高次项 $\beta_4[\text{CN}]^4$；④ $\Delta pM'=pM'_{ep}-pM'_{sp}$ 符号别反。</div>
+</div>
+
+<div class="exam" style="background:#fce4ec;border:2px solid #e91e63;border-radius:8px;padding:14px 18px;margin:12px 0;">
+  <div class="t" style="font-weight:bold;color:#c2185b;margin-bottom:6px;">真题原型 ② — 2025 小测 2 计算 2 同型（Zn/Al + NH₄F 掩蔽，pH=5.5）</div>
+  <p>测等浓 $\text{Zn}^{2+}/\text{Al}^{3+}$ 中的 $\text{Zn}^{2+}$。$\lg K_{\text{ZnY}}=16.5$，$\lg K_{\text{AlY}}=16.1$。</p>
+  <div class="sol">
+    <div class="st">解题链：</div>
+    <p><strong>(1)</strong> $\Delta\lg K=16.5-16.1=0.4\ll5$ → 不能控酸分别滴。</p>
+    <p><strong>(2)</strong> 加 $\text{NH}_4\text{F}$：$\text{F}^-$ 与 $\text{Al}^{3+}$ 生成极稳定 $\text{AlF}_6^{3-}$（$\lg\beta_1\sim\beta_6=6.1/11.2/15.0/17.7/19.4/19.7$），典型条件 $\lg\alpha_{\text{Al(F)}}\approx10$，$\lg K'_{\text{AlY}}=16.1-10-\lg\alpha_{Y(H)}\approx6$ 远不达标 → $\text{Al}^{3+}$ 被完全掩蔽。$\text{F}^-$ 对 $\text{Zn}^{2+}$ 掩蔽弱（$\lg\alpha_{\text{Zn(F)}}\approx1$），不影响。</p>
+    <p><strong>(3)</strong> 在 pH 5~6 HAc-NaAc 缓冲、二甲酚橙(XO)指示，EDTA 滴 $\text{Zn}^{2+}$（黄→紫红为终点）。算 $\lg K'_{\text{ZnY}}=16.5-\lg\alpha_{Y(H)}(\text{pH5.5})-\lg\alpha_{\text{Zn(F)}}$，判 $\lg(c_{sp}K')\ge6$。</p>
+  </div>
+</div>
+
+<h2>必背块（条件常数 · 三大判据 · 掩蔽解蔽）</h2>
+<div class="fb">
+  <div class="t">考前默写线（公式 / 判据 / 试剂）</div>
+  <ul>
+    <li><strong>条件稳定常数：</strong>$\lg K'_{\text{MY}}=\lg K_{\text{MY}}-\lg\alpha_{Y(H)}-\lg\alpha_{\text{M(L/OH)}}$（带撇=扣副反应）。</li>
+    <li><strong>三大判据：</strong>准确滴定 $\lg(c_{sp}K'_{\text{MY}})\ge6$；分别滴定 $\Delta\lg cK'\ge6$（等浓时 ≈$\Delta\lg K\ge5$）；最低 pH 由 $\lg\alpha_{Y(H)}\le\lg K_{\text{MY}}+\lg c_{sp}-6$ 反查。</li>
+    <li><strong>林邦终点误差：</strong>$E_t=\dfrac{10^{\Delta pM'}-10^{-\Delta pM'}}{\sqrt{c_{sp}K'_{\text{MY}}}}\times100\%$，$\Delta pM'=pM'_{ep}-pM'_{sp}$，$pM'_{sp}=\frac12(\lg K'_{\text{MY}}+pc_{sp})$，$pM'_{ep}=\lg K'_{\text{MIn}}$。</li>
+    <li><strong>副反应系数叠加：</strong>$\alpha_Y=\alpha_{Y(H)}+\alpha_{Y(N)}-1$，$\alpha_M=\alpha_{\text{M(OH)}}+\alpha_{\text{M(L)}}-1$（减 1 因基础值 1 被算两次）；$\alpha=1+\beta_1[\text{L}]+\beta_2[\text{L}]^2+\cdots$（漏高次项是常见错）。</li>
+    <li><strong>$c_{sp}=c_0/2$</strong>（等浓等体积，计量点稀释一半）。</li>
+    <li><strong>掩蔽/解蔽：</strong>三乙醇胺掩蔽 $\text{Fe}^{3+}/\text{Al}^{3+}/\text{Ti}^{4+}$；KCN 掩蔽 $\text{Zn/Cu/Cd/Ni/Co}$（碱性、剧毒，不掩 Pb/Ca/Mg）；$\text{F}^-$ 掩蔽 $\text{Al}^{3+}/\text{Fe}^{3+}$；甲醛解蔽 $\text{Zn/Cd}$（不解 Cu）；抗坏血酸还原掩蔽 $\text{Fe}^{3+}\to\text{Fe}^{2+}$。</li>
+    <li><strong>EDTA 主形态：</strong>pH 6.24~10.34 间为 $\text{HY}^{3-}$；标定 EDTA 用基准 $\text{CaCO}_3$（pH12~13、钙指示剂 NN）。</li>
+  </ul>
+</div>
+
+<h2>易错点（条件常数 / 判据 / 掩蔽）</h2>
+<div class="warn">
+  <ol>
+    <li><strong>用绝对常数 $K_{\text{MY}}$ 代判据/误差：</strong>所有可行性、终点误差计算必须用<strong>条件常数 $K'$</strong>（带撇）。</li>
+    <li><strong>$c_{sp}$ 不除 2：</strong>等浓等体积滴定计量点浓度是初始的一半，$\lg cK'$ 与 $pM'_{sp}$ 都用 $c_{sp}$。</li>
+    <li><strong>$\Delta pM'$ 符号写反：</strong>$\Delta pM'=pM'_{ep}-pM'_{sp}$；$\Delta pM'>0$ → EDTA 过量、$E_t>0$。</li>
+    <li><strong>副反应系数漏高次项 / 忘"减 1"：</strong>多配体取 $\beta_n[\text{L}]^n$ 主导项；多副反应叠加是"加后减(项数−1)"，不是简单相乘。</li>
+    <li><strong>分别滴定判据混淆：</strong>$\Delta\lg cK'\ge6$ 是两个 $\lg cK'$ 之差，不是两个 $\lg K$ 之差（浓度相同时数值才相等）。</li>
+    <li><strong>掩蔽 vs 解蔽配错：</strong>KCN <strong>掩蔽</strong>、甲醛 <strong>解蔽</strong>；KCN 不掩 Pb（所以 Cd/Pb 体系掩 Cd 测 Pb）。</li>
+  </ol>
+</div>
+
 <script src="katex-lazy.js"></script>
 <script src="toc.js"></script>
 <script src="auth.js"></script>

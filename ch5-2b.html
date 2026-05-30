@@ -655,6 +655,69 @@ $$\text{pH} \approx \frac{pK_{a2} + pK_{a3}}{2} = \frac{7.20 + 12.36}{2} = 9.78$
 </div>
 </div>
 
+<!-- ==================== 标准强化（真题原型·必背·易错） ==================== -->
+<h2>十三、真题原型例题（带年份·完整步骤）</h2>
+
+<div class="exam">
+<div class="t">真题原型 ① — 2022 期末计算题 Q4（一元弱酸 5 连问，14 分同型）</div>
+<p>某一元弱酸 HA（$pK_a=5.0$），$c=0.1$ mol/L，体积 20.00 mL，用 0.1 mol/L NaOH 滴定。(1) 计量点 pH；(2) 选指示剂；(3) 滴定曲线趋势；(4) 以酚酞（终点 pH=9.0）为终点求 $E_t$。</p>
+<div class="sol">
+<div class="st">完整解法：</div>
+<p><strong>(1) 计量点 pH：</strong>计量点产物为共轭碱 $\text{A}^-$，稀释后 $c_{sp}=0.1\times\dfrac{20}{40}=0.0500$ mol/L。$K_b=\dfrac{K_w}{K_a}=\dfrac{10^{-14}}{10^{-5}}=10^{-9}$。$[\text{OH}^-]=\sqrt{K_b\,c_{sp}}=\sqrt{10^{-9}\times0.0500}=7.07\times10^{-6}$，pOH=5.15，<strong>$\text{pH}_{sp}=8.85$</strong>。</p>
+<p><strong>(2) 指示剂：</strong>计量点偏碱（8.85），选<strong>酚酞</strong>（8.0~9.8），禁用甲基橙/甲基红。</p>
+<p><strong>(3) 曲线：</strong>起点 $\text{pH}=\frac12(pK_a-\lg c)=\frac12(5.0+1)=3.0$；半当量点 $\text{pH}=pK_a=5.0$（缓冲平坦段）；计量点 pH=8.85（不在 7！）；突跃约 7.7~9.7，曲线不对称偏碱侧。</p>
+<p><strong>(4) 终点误差（林邦）：</strong>$\Delta\text{pH}=9.0-8.85=+0.15$，$K_t=\dfrac{K_a}{K_w}=\dfrac{10^{-5}}{10^{-14}}=10^{9}$，$\sqrt{K_t\,c_{sp}}=\sqrt{10^{9}\times0.0500}=\sqrt{5\times10^{7}}=7071$。</p>
+$$E_t=\frac{10^{0.15}-10^{-0.15}}{7071}\times100\%=\frac{1.413-0.708}{7071}\times100\%=\mathbf{0.010\%}$$
+<p>$|E_t|=0.010\%\ll0.1\%$，酚酞是极佳选择。</p>
+</div>
+</div>
+
+<div class="exam">
+<div class="t">真题原型 ② — 双指示剂混合碱（2022 期末实验设计 / 综合计算同型）</div>
+<p>取 25.00 mL 含 NaOH + $\text{Na}_2\text{CO}_3$ 废液，用 0.2000 mol/L HCl 滴定：酚酞终点耗 $V_1=26.14$ mL，再加甲基橙继续滴至变色耗 $V_2=5.00$ mL。求两组分浓度。</p>
+<div class="sol">
+<div class="st">完整解法：</div>
+<p><strong>判组成：</strong>$V_1>V_2>0$ → NaOH + $\text{Na}_2\text{CO}_3$。</p>
+<p><strong>$\text{Na}_2\text{CO}_3$：</strong>$V_2$ 对应 $\text{NaHCO}_3\to\text{H}_2\text{CO}_3$ 的那一半，$n(\text{Na}_2\text{CO}_3)=c\,V_2=0.2000\times5.00=1.000$ mmol，$c=\dfrac{1.000}{25.00}=\mathbf{0.04000}$ mol/L。</p>
+<p><strong>NaOH：</strong>$V_1$ 含 NaOH 全部 + $\text{Na}_2\text{CO}_3$ 第一步（与 $V_2$ 等量），NaOH 耗 HCl $=V_1-V_2=21.14$ mL，$n(\text{NaOH})=0.2000\times21.14=4.228$ mmol，$c=\dfrac{4.228}{25.00}=\mathbf{0.1691}$ mol/L。</p>
+<p><strong>验：</strong>$n(\text{NaOH})+2n(\text{Na}_2\text{CO}_3)=4.228+2\times1.000=6.228=0.2000\times(V_1+V_2)$ ✓</p>
+</div>
+</div>
+
+<h2>十四、必背块（双指示剂判组成 · CO$_2$ 干扰 · 间接法）</h2>
+<div class="fb">
+<div class="t">考前默写线（公式 / 判据 / 反应）</div>
+<ul>
+<li><strong>双指示剂判组成（酚酞 $V_1$、甲基橙 $V_2$，极常考）：</strong>$V_2=0$ 纯 NaOH；$V_1>V_2>0$ NaOH+$\text{Na}_2\text{CO}_3$（NaOH ∝ $V_1-V_2$，$\text{Na}_2\text{CO}_3$ ∝ $V_2$）；$V_1=V_2$ 纯 $\text{Na}_2\text{CO}_3$；$0<V_1<V_2$ $\text{Na}_2\text{CO}_3$+$\text{NaHCO}_3$（$\text{Na}_2\text{CO}_3$ ∝ $V_1$，$\text{NaHCO}_3$ ∝ $V_2-V_1$）；$V_1=0$ 纯 $\text{NaHCO}_3$。</li>
+<li><strong>CO$_2$ 干扰 NaOH 标液（高频选择）：</strong>酚酞终点（pH≈9）$\text{Na}_2\text{CO}_3$ 只到 $\text{NaHCO}_3$（耗碱弱）→ 滴 HCl 结果<strong>偏高</strong>；甲基橙终点（pH≈4）$\text{Na}_2\text{CO}_3$ 全到 $\text{H}_2\text{CO}_3$（总量不变）→ <strong>无影响</strong>。</li>
+<li><strong>能否直接滴定判据：</strong>$cK_a\ge10^{-8}$（弱酸）；多元分步 $K_{a1}/K_{a2}\ge10^4$。$\text{H}_3\text{BO}_3$、$\text{NH}_4^+$ 太弱不能直接滴。</li>
+<li><strong>间接法增强酸性：</strong>硼酸 + 甘油/甘露醇 → $K_a'\approx10^{-4}$，$cK_a'\approx10^{-5}\gg10^{-8}$ 可滴（酚酞）；$\text{NH}_4^+$ + 甲醛 → $4\text{NH}_4^++6\text{HCHO}\to(\text{CH}_2)_6\text{N}_4\text{H}^++3\text{H}^++6\text{H}_2\text{O}$，$n(\text{N})=n(\text{NaOH})$。</li>
+<li><strong>凯氏定氮：</strong>$\text{N\%}=\dfrac{(c_1V_1-c_2V_2)\times14.01}{m_s\times1000}\times100\%$（回滴）。</li>
+<li><strong>磷酸盐终点：</strong>$\text{Na}_3\text{PO}_4+\text{NaOH}$ 体系第二终点只到 $\text{NaH}_2\text{PO}_4$（$pK_{a3}=12.36$ 太弱），不会到 $\text{H}_3\text{PO}_4$。</li>
+</ul>
+</div>
+
+<h2>十五、易错点（双指示剂 / CO$_2$ / 间接法）</h2>
+<div class="warn">
+<ol>
+<li><strong>$V_2$ 误当从 0 起算的总体积：</strong>$V_2$ 是<strong>第一终点之后</strong>继续滴入的增量，不是总消耗量。判组成与算量全用增量 $V_2$。</li>
+<li><strong>$\text{Na}_2\text{CO}_3$ 量算错系数：</strong>NaOH+$\text{Na}_2\text{CO}_3$ 体系中 $n(\text{Na}_2\text{CO}_3)=cV_2$（不是 $2cV_2$）；只有写"$\text{Na}_2\text{CO}_3$ 消耗总 HCl"时才是 $2V_2$。</li>
+<li><strong>CO$_2$ 影响方向记反：</strong>记死"<strong>酚酞偏高、甲基橙无影响</strong>"，根源是酚酞终点 $\text{Na}_2\text{CO}_3$ 只发挥一半中和力。</li>
+<li><strong>第二终点产物：</strong>磷酸盐体系第二终点是 $\text{NaH}_2\text{PO}_4$ 不是 $\text{H}_3\text{PO}_4$；碳酸盐体系第二终点才是 $\text{H}_2\text{CO}_3$（$\text{CO}_2$）。</li>
+</ol>
+</div>
+
+<div class="exam" style="background:#fff0f0;border:2px solid #c0392b;">
+<div class="t" style="color:#c0392b;">🔴 你在这卡过：酸碱"能不能滴" vs "用哪个 pH 公式" 两套判别式混淆 → 怎么破</div>
+<p>5/11–5/16 你<strong>连问 5 次</strong>"判别式和公式"，原话"各种公式把我脑子搞炸了"，是全科目最持久弱点。症结：把两套判别式当成一套。</p>
+<p><strong>怎么破——分清楚问的是哪一个：</strong></p>
+<ul>
+<li><strong>问"能否准确滴定"（化学/反应完全度）：</strong>用 $cK_a\ge10^{-8}$；多元分步加 $K_{a1}/K_{a2}\ge10^4$。这是<strong>反应判据</strong>。</li>
+<li><strong>问"算 pH 用哪个式子"（数学/近似误差）：</strong>先比 $cK_a$ 与 $20K_w$（能否丢水），再比 $c/K_a$ 与 500（能否丢酸自身解离）。这是<strong>近似判据</strong>，口诀"$20K_w$ 管水、500 管自己"。</li>
+</ul>
+<p>两者数值阈值完全不同（$10^{-8}$/$10^4$ vs $20K_w$/500），<strong>互不相干</strong>。本进阶章的"间接测定"题问的几乎都是第一套（能不能滴），先看清题干再下手。配套见 <a href="ch5-1b.html">五②计算</a> 与 <a href="我的薄弱点.html">我的薄弱点</a>。</p>
+</div>
+
 <div class="ex">
 <strong>例题5（PPT p59-p60 综合例题）：</strong>用 0.1000 mol/L HCl 滴定 20.00 mL 0.1100 mol/L 的某一元弱碱 B 溶液，当加入 HCl 18.00 mL 时，溶液的 pH = 8.60。求：<br>
 (1) 该一元弱碱的 $pK_b$ 值<br>

@@ -972,6 +972,67 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
   </table>
 </div>
 
+<!-- ============================================================ -->
+<h2>1.10 真题原型例题（误差与有效数字）</h2>
+
+<div class="exam">
+  <div class="t">2022 期末 三-1（误差统计，12 分，原题照录）</div>
+  <p>测定某铁矿石中铁的质量分数，3 次结果：52.48%、52.52%、52.41%。</p>
+  <p>(1) 计算 $\bar{x}$ 和 $s$；(2) 置信度 95% 的总体平均值置信区间；(3) 已知标准值 52.43%，95% 下结果与标准值有无显著性差异？(4) 想让 95% 置信区间变窄该怎么做？</p>
+  <p>题给 $t$ 表：$f=2\to4.30$, $3\to3.18$, $4\to2.78$。</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p><strong>(1)</strong> $\bar{x}=\dfrac{52.48+52.52+52.41}{3}=52.47\%$。偏差 $+0.01,+0.05,-0.06$；平方和 $=0.0001+0.0025+0.0036=0.0062$；$s=\sqrt{\dfrac{0.0062}{3-1}}=\sqrt{0.0031}=0.056\%$（分母 $n-1=2$）。</p>
+    <p><strong>(2)</strong> $f=n-1=2$，双侧 $t_{0.05,2}=4.30$。$\mu=52.47\pm\dfrac{4.30\times0.056}{\sqrt{3}}=52.47\pm\dfrac{0.241}{1.732}=52.47\pm0.14\%$，即 <strong>(52.33%, 52.61%)</strong>。</p>
+    <p><strong>(3)</strong> $t_{计}=\dfrac{|52.47-52.43|}{0.056}\sqrt{3}=\dfrac{0.04}{0.056}\times1.732=1.24$。$t_{计}=1.24<t_{0.05,2}=4.30$ → <strong>无显著性差异</strong>（差异由随机误差引起，无系统误差）。</p>
+    <p><strong>(4)</strong> <strong>增加测定次数 $n$</strong>（$t$↓ 且分母 $\sqrt{n}$↑）；或提高精密度（减小 $s$）。</p>
+  </div>
+</div>
+
+<div class="exam">
+  <div class="t">2022 期末 Q4 型（有效数字，选择/填空）</div>
+  <p>$w(\text{Ca})=36.18\%$ 有几位有效数字？$pH=11.05$ 求 $[\text{H}^+]$，结果几位有效数字？</p>
+  <div class="sol">
+    <div class="st">解：</div>
+    <p>$36.18\%$ → <strong>4 位</strong>（3、6、1、8，百分号不计）。</p>
+    <p>$pH=11.05$ → 对数值只看小数部分 05，是 <strong>2 位</strong>有效数字；$[\text{H}^+]=10^{-11.05}=8.9\times10^{-12}$ 也写 <strong>2 位</strong>。</p>
+  </div>
+</div>
+
+<h2>1.11 必背块（误差与有效数字核心）</h2>
+<div class="card">
+  <table>
+    <tr><th>项目</th><th>必背内容</th></tr>
+    <tr><td>绝对/相对误差</td><td>$E=x-\mu$；$E_r=\dfrac{x-\mu}{\mu}\times100\%$</td></tr>
+    <tr><td>标准偏差（样本）</td><td>$s=\sqrt{\dfrac{\sum(x_i-\bar{x})^2}{n-1}}$（分母 $n-1$，不是 $n$）</td></tr>
+    <tr><td>平均值标准偏差</td><td>$s_{\bar{x}}=\dfrac{s}{\sqrt{n}}$（置信区间里用它）</td></tr>
+    <tr><td>相对标准偏差</td><td>$RSD=\dfrac{s}{\bar{x}}\times100\%$（= 变异系数 CV）</td></tr>
+    <tr><td>置信区间</td><td>$\mu=\bar{x}\pm\dfrac{t_{\alpha,f}\,s}{\sqrt{n}}$，$f=n-1$，双侧 $t_{0.05}$</td></tr>
+    <tr><td>修约规则</td><td>四舍六入五成双；五后有非零数一律进</td></tr>
+    <tr><td>有效数字运算</td><td>加减看小数位数最少者；乘除看有效数字位数最少者</td></tr>
+    <tr><td>对数有效数字</td><td>pH、pK、lgK 只数小数部分位数；整数部分是 10 的幂，不计</td></tr>
+    <tr><td>误差与准/精密度</td><td>系统误差→准确度；随机误差→精密度；精密度高是准确度高的必要不充分条件</td></tr>
+  </table>
+</div>
+
+<h2>1.12 易错点</h2>
+<div class="card">
+  <ul>
+    <li><span style="color:#c0392b;font-weight:bold;">⚠ 标准偏差用错分母：</span>样本计算永远用 $n-1$（自由度）。误用 $n$ 会使 $s$ 系统性偏小，是全科最高频失分点。</li>
+    <li><span style="color:#c0392b;font-weight:bold;">⚠ pH 有效数字数错：</span>$pH=4.75$ 是 <strong>2 位</strong>有效数字（只看小数 75），对应 $[\text{H}^+]=1.8\times10^{-5}$ 也是 2 位；别把整数 4 当有效数字。</li>
+    <li><span style="color:#c0392b;font-weight:bold;">⚠ 置信区间自由度/单双侧错：</span>查 $t$ 用 $f=n-1$（不是 $n$）；95% 置信区间用<strong>双侧</strong> $t_{0.05}$。查错一格全错。</li>
+    <li><span style="color:#c0392b;font-weight:bold;">⚠ 精密度高 ≠ 准确度高：</span>若存在系统误差，平行结果可以很一致（精密度高）却整体偏离真值（准确度低）。</li>
+  </ul>
+</div>
+
+<div class="warn" style="background:#fdecea;border-left:4px solid #c0392b;">
+  <strong>🔴 你在这卡过（来自薄弱点精析 / 头号盲区）：</strong>误差统计大题（$t$ 检验 / $Q$ 检验 / 95% 置信区间）是「计算 52 分」里<strong>命中率最高</strong>的送分题，但你 8 篇 AI 问答里<strong>一次都没碰过</strong>，是裸考最危险的盲区。
+  <ul>
+    <li><strong>怎么破：</strong>背死 5 步流程 → ①算 $\bar{x}$、$s$（分母 $n-1$）→ ② $Q$ 检验剔可疑值（先<strong>排序</strong>，$Q=\dfrac{|x_{可疑}-x_{相邻}|}{x_{max}-x_{min}}$）→ ③<strong>剔除后重算</strong> $\bar{x}$、$s$、$n$、$f$（最易漏！）→ ④置信区间 → ⑤ $t$ 检验。</li>
+    <li>$Q$ / Grubbs 查<strong>次数 $n$</strong>；$t$ 查<strong>自由度 $f=n-1$</strong>——口径不同，别混。</li>
+  </ul>
+</div>
+
 <script src="katex-lazy.js"></script>
 <script src="toc.js"></script>
 <script src="auth.js"></script>

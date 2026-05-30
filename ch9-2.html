@@ -537,6 +537,79 @@ details summary{cursor:pointer;font-weight:bold;color:var(--pri);padding:4px;}
     <strong>陷阱 4：</strong>后沉淀与共沉淀的区别 -- 后沉淀发生在沉淀完成<strong>之后</strong>，随陈化时间延长而加剧；共沉淀发生在沉淀<strong>过程中</strong>。对于无定形沉淀，不宜陈化的原因之一就是防止后沉淀。</div>
 </div>
 
+<!-- ==================== 强化补充（必背 / 易错 / 真题原型） ==================== -->
+<h2>★ 强化补充：必背 · 易错 · 真题原型</h2>
+
+<div class="card">
+  <h3>必背块：重量计算 + 银量法核心</h3>
+  <div class="fb">
+    <div class="t">① 换算因子与质量分数（必背）</div>
+    $$w = \frac{m_P \times F}{m_s}\times100\%,\qquad F = \frac{a \times M_{\text{被测物}}}{b \times M_{\text{称量形式}}}$$
+    <p><strong>分子永远是被测物的 $M$，分母永远是称量形式的 $M$</strong>；系数 $a/b$ 由化学计量配平（一个 Fe$_2$O$_3$ 含 2 个 Fe → $F=\dfrac{2M_{\text{Fe}}}{M_{\text{Fe}_2\text{O}_3}}=0.6994$；Mg$_2$P$_2$O$_7$ 含 2 个 Mg → 系数 2 在分子）。</p>
+  </div>
+  <div class="fb">
+    <div class="t">② 银量法三法速记表（必背）</div>
+    <table>
+      <tr><th></th><th>Mohr</th><th>Volhard</th><th>Fajans</th></tr>
+      <tr><td>指示剂</td><td>K$_2$CrO$_4$</td><td>铁铵矾 Fe$^{3+}$</td><td>吸附指示剂（荧光黄）</td></tr>
+      <tr><td>介质</td><td>pH 6.5~10.5（中/弱碱）</td><td>HNO$_3$ 强酸</td><td>近中性~弱碱</td></tr>
+      <tr><td>方式</td><td>直接（Ag$^+$ 滴 X$^-$）</td><td>回滴（SCN$^-$ 滴剩余 Ag$^+$）</td><td>直接</td></tr>
+      <tr><td>终点色</td><td>白→<strong>砖红</strong>（Ag$_2$CrO$_4$）</td><td>无→<strong>血红</strong>（FeSCN$^{2+}$）</td><td>黄绿→<strong>粉红</strong></td></tr>
+      <tr><td>测</td><td>Cl$^-$,Br$^-$（<strong>不测 I$^-$/SCN$^-$</strong>）</td><td>Cl$^-$,Br$^-$,I$^-$,SCN$^-$（最广）</td><td>Cl$^-$,Br$^-$,I$^-$,SCN$^-$</td></tr>
+    </table>
+  </div>
+  <div class="fb">
+    <div class="t">③ 关键 $K_{sp}$ 与吸附序（必背）</div>
+    <ul>
+      <li>$K_{sp,\text{AgSCN}}=10^{-11.7} < K_{sp,\text{AgCl}}=10^{-9.5}$ → AgSCN 更难溶，故 Volhard 测 Cl$^-$ 有沉淀转化问题。</li>
+      <li>$K_{sp,\text{Ag}_2\text{CrO}_4}=10^{-11.3}$；Mohr 计量点 $[\text{Ag}^+]=\sqrt{K_{sp,\text{AgCl}}}=10^{-4.75}$，pAg=pCl=4.75。</li>
+      <li><strong>吸附能力序</strong>：$\text{I}^- > \text{SCN}^- > \text{Br}^- > \text{曙红} > \text{Cl}^- > \text{荧光黄}$。指示剂吸附力须 <strong>弱于</strong> 被测离子，否则提前变色出假终点。</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>易错点（补充，前文陷阱外）</h3>
+  <div class="warn"><strong>易错 A：</strong>Mohr 法 pH 越界后果要会写：<strong>酸性</strong>下 CrO$_4^{2-}\to$Cr$_2$O$_7^{2-}$（指示剂失效、终点滞后）；<strong>碱性</strong>下 Ag$^+\to$AgOH/Ag$_2$O（沉淀消耗滴定剂、结果偏高）。含铵盐时窗口收窄到 <strong>6.5~7.2</strong>。</div>
+  <div class="warn"><strong>易错 B：</strong>Volhard 测 I$^-$ 时<strong>必须先加 AgNO$_3$、后加指示剂</strong>，否则 Fe$^{3+}$ 会氧化 I$^-$，多消耗、不能正确指示终点。</div>
+  <div class="warn"><strong>易错 C：</strong>Fajans 法选指示剂的判据是"<strong>指示剂吸附力略小于被测离子</strong>"。曙红吸附力 &gt; Cl$^-$，故曙红<strong>不能测 Cl$^-$</strong>（会在 Cl$^-$ 未滴完时提前变色），只能测 Br$^-$/I$^-$/SCN$^-$。</div>
+  <div class="warn"><strong>易错 D：</strong>回滴计算别忘扣减且单位统一用 mmol：$n(\text{X}^-)=c_{\text{Ag}}V_{\text{Ag}}-c_{\text{SCN}}V_{\text{SCN}}$；化学计量恒为 1:1。</div>
+</div>
+
+<div class="card" style="border:2px solid #c0392b;box-shadow:0 2px 10px rgba(192,57,43,.12);">
+  <h3 style="color:#c0392b;border-left-color:#c0392b;">🔴 你在这卡过（FXY 专属）</h3>
+  <div class="warn"><strong>卡点 1 — 换算因子 $F$ 分子分母倒置：</strong>薄弱点精析里这章只点了一句"换算因子 $F=\dfrac{aM_{被测}}{bM_{称量}}$（<strong>别倒置</strong>）"。<br>
+  <strong>怎么破：</strong>记死口诀"<strong>被测在上、称量在下</strong>"；先把被测元素的原子数在分子分母配平（一个 Fe$_2$O$_3$ 里有 2 个 Fe → 分子上 ×2，得 $F=\dfrac{2M_{\text{Fe}}}{M_{\text{Fe}_2\text{O}_3}}=0.6994$）。算完用量纲自检：$F$ 应 &lt; 1（因为称量形式总比单个被测元素重）。</div>
+  <div class="warn"><strong>卡点 2 — Volhard 测 Cl$^-$ 要"过滤 AgCl"这一步漏掉：</strong>薄弱点精析里另一句"Volhard 测 Cl$^-$ 要过滤 AgCl"。<br>
+  <strong>怎么破：</strong>记住根因——$K_{sp,\text{AgSCN}}(10^{-11.7}) < K_{sp,\text{AgCl}}(10^{-9.5})$，AgSCN 更难溶，回滴的 SCN$^-$ 会把 AgCl 转化掉（$\text{AgCl}+\text{SCN}^-\rightleftharpoons\text{AgSCN}+\text{Cl}^-$），使红色褪去、终点偏晚、结果偏低。三种对策选一即可：<strong>① 滤去 AgCl 再回滴；② 加硝基苯包裹 AgCl；③ 提高 $c_{\text{Fe}^{3+}}$ 到 0.2 mol/L</strong>。测 Br$^-$/I$^-$ 无此问题（更难溶），不必过滤。</div>
+  <div class="tip">这章在作战手册里属"拉档/低频（10~14%）"，性价比在于<strong>选填送分 + 换算因子那 8 分计算</strong>，不必深挖；把上面两个卡点和 ★ 必背表过一遍即可。</div>
+</div>
+
+<div class="card">
+  <h3>真题原型例题（银量法计算与判断）</h3>
+
+  <div class="ex">
+    <strong>真题原型 ①（Volhard 直接测 SCN$^-$）：</strong>取含 KSCN 试样 0.4000 g 溶解，于 HNO$_3$ 介质中加铁铵矾指示剂，用 0.1000 mol/L AgNO$_3$ 直接滴定至出现稳定血红色，消耗 28.50 mL。求 $w(\text{KSCN})$（$M_{\text{KSCN}}=97.18$）。
+    <div class="sol">
+      <div class="st">解：</div>
+      <p>SCN$^-$ 可被 Ag$^+$ <strong>直接</strong>滴定（无需回滴）：$\text{Ag}^+ + \text{SCN}^- \to \text{AgSCN}\downarrow$，终点 Fe$^{3+}+$SCN$^-\to$FeSCN$^{2+}$（血红）。</p>
+      <p>$n(\text{SCN}^-)=n(\text{Ag}^+)=0.1000\times28.50=2.850\;\text{mmol}$</p>
+      <p>$w(\text{KSCN})=\dfrac{2.850\times10^{-3}\times97.18}{0.4000}\times100\%=69.24\%$</p>
+      <p><strong>要点：</strong>SCN$^-$ 是 Volhard 法唯一可"直接滴定"的对象（其余卤素须回滴）。</p>
+    </div>
+  </div>
+
+  <div class="ex">
+    <strong>真题原型 ②（方法选择判断题，2022 期末风格）：</strong>下列测定各应选何种银量法，并说明理由：(a) 0.5 mol/L HNO$_3$ 介质中测 Cl$^-$；(b) 中性水样测 Cl$^-$；(c) 测 I$^-$。
+    <div class="sol">
+      <div class="st">解：</div>
+      <p><strong>(a) 酸性测 Cl$^-$ → Volhard 法。</strong>Mohr 法不耐酸（CrO$_4^{2-}$ 被破坏），只有 Volhard 在 HNO$_3$ 中工作；但因 AgSCN 比 AgCl 更难溶，须加硝基苯包裹或过滤 AgCl 后再回滴。</p>
+      <p><strong>(b) 中性测 Cl$^-$ → Mohr 法（最简）</strong>，亦可用 Fajans 法（荧光黄）。</p>
+      <p><strong>(c) 测 I$^-$ → Volhard 法或 Fajans 法（曙红）。</strong>Mohr 法不可（AgI 强烈吸附 I$^-$，终点不灵敏）。</p>
+    </div>
+  </div>
+</div>
+
 <script src="katex-lazy.js"></script>
 <script src="toc.js"></script>
 <script src="auth.js"></script>
